@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { MessageCircle, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
@@ -14,9 +15,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/lovable-uploads/3b066a0e-1bea-4907-b036-3b460d543754.png" 
-                alt="Sixteam.pro Logo" 
+              <img
+                src="/lovable-uploads/3b066a0e-1bea-4907-b036-3b460d543754.png"
+                alt="Sixteam.pro Logo"
                 className="w-8 h-8"
               />
               <span className="text-xl font-poppins font-bold">Sixteam.pro</span>
@@ -66,8 +67,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-gray-200">
-          <p>&copy; 2024 Sixteam.pro. Todos los derechos reservados.</p>
+        <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-200">
+          <p className="mb-4 md:mb-0">&copy; 2024 Sixteam.pro. Todos los derechos reservados.</p>
+          <div className="flex space-x-6 text-sm">
+            <Link to="/politicas" className="hover:text-sixteam-teal transition-colors">
+              Políticas de Privacidad
+            </Link>
+            <Link to="/terminos" className="hover:text-sixteam-teal transition-colors">
+              Términos y Condiciones
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

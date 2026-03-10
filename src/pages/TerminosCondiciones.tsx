@@ -24,6 +24,16 @@ const TerminosCondiciones = () => {
           <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 text-gray-700 leading-relaxed space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
 
             <div>
+              <h2 className="text-2xl font-bold text-sixteam-navy mb-4">Información Legal</h2>
+              <div className="p-4 bg-gray-50 rounded-lg border-l-4 border-sixteam-teal">
+                <p><strong>Sixteam Innovación y Estrategia Digital S.A.S.</strong></p>
+                <p>NIT: 901967849</p>
+                <p>Correo de contacto: <a href="mailto:contacto@sixteam.pro" className="text-sixteam-blue hover:underline">contacto@sixteam.pro</a></p>
+                <p>Sitio web: <a href="https://sixteam.pro" target="_blank" rel="noopener noreferrer" className="text-sixteam-blue hover:underline">https://sixteam.pro</a></p>
+              </div>
+            </div>
+
+            <div>
               <h2 className="text-2xl font-bold text-sixteam-navy mb-4">1. Alcance del Servicio</h2>
               <p className="mb-4">
                 Sixteam Innovación y Estrategia Digital S.A.S. ofrece acceso a la plataforma tecnológica Sixteam.Pro, la cual permite gestionar relaciones con clientes, comunicaciones digitales, automatización de procesos y otras funcionalidades asociadas a la gestión comercial y operativa de organizaciones.

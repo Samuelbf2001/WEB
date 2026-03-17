@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
-import { MessageCircle, Target, Settings, Brain, Headphones, CheckCircle, Star, Zap, Bot } from 'lucide-react';
+import { MessageCircle, Target, Brain, Headphones, CheckCircle, Star, Zap, Bot } from 'lucide-react';
 import Footer from '@/components/Footer';
 import ChatSection from '@/components/ChatSection';
+import Header from '@/components/Header';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -269,24 +271,28 @@ const Index = () => {
   const services = [
     {
       icon: Target,
-      title: 'Consultoría Estratégica',
-      description: 'Analizamos tus procesos con IA para diseñar estrategias personalizadas que optimizen tus operaciones digitales.'
-    },
-    {
-      icon: Settings,
-      title: 'Implementación de CRM',
-      description: 'Configuramos sistemas CRM inteligentes con automatización avanzada y capacidades de IA integradas.'
-    },
-    {
-      icon: Brain,
-      title: 'Soluciones de IA',
-      description: 'Desarrollamos herramientas personalizadas con inteligencia artificial que automatizan y optimizan tus procesos.'
+      title: 'Implementación de módulos de venta en el CRM',
+      description: 'Implementamos tu CRM con pipelines de ventas, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más con menos esfuerzo.',
+      path: '/servicios/crm-ventas',
     },
     {
       icon: Headphones,
-      title: 'Operación y Mantenimiento',
-      description: 'Soporte continuo con monitoreo inteligente, actualizaciones automáticas y capacitación especializada.'
-    }
+      title: 'Implementación de módulos de atención al cliente en el CRM',
+      description: 'Centraliza todos los tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta y mejora la satisfacción del cliente con flujos automatizados.',
+      path: '/servicios/crm-atencion',
+    },
+    {
+      icon: Brain,
+      title: 'Implementación de módulos de marketing en el CRM',
+      description: 'Gestiona campañas multicanal, segmenta audiencias con IA, automatiza secuencias de nurturing y mide el ROI de cada acción de marketing directamente en el CRM.',
+      path: '/servicios/crm-marketing',
+    },
+    {
+      icon: Bot,
+      title: 'Implementación de Chatbot IA para WhatsApp Business',
+      description: 'Desplegamos tu agente IA en WhatsApp Business: responde 24/7, califica leads, agenda citas y actualiza el CRM automáticamente. Sin intervención humana constante.',
+      path: '/servicios/chatbot-ia',
+    },
   ];
 
   const partnerLogos = [
@@ -407,6 +413,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white font-lato">
+      <Header />
 
       {/* Hero Section Profesional */}
       <section className="relative bg-[#0a2342] text-white overflow-hidden pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16">
@@ -684,66 +691,6 @@ const Index = () => {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Nueva sección: Nuestro Ciclo de Servicio */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-gray-50 overflow-hidden">
-        {/* Fondo sutil */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(100, 116, 139, 0.08) 1px, transparent 1px)',
-            backgroundSize: '32px 32px'
-          }}></div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Título de la nueva sección */}
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
-              Nuestro Ciclo de Servicio para tu
-              <br />
-              <span className="text-blue-600">Transformación Digital</span>
-            </h2>
-
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                Entendemos que la verdadera transformación digital no se logra de manera aislada, sino con un socio estratégico que facilite este proceso. Por eso, diseñamos un ciclo de servicio para acompañarte en cada etapa y garantizar el resultado deseado.
-              </p>
-            </div>
-          </div>
-
-          {/* Grid de servicios profesionales */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
-
-            {services.map((service, index) => (
-              <div key={index} className="group relative">
-                <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:border-blue-300 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="flex items-center justify-center mb-6 sm:mb-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded-lg flex items-center justify-center">
-                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base text-center">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Profesional */}
-          <div className="text-center px-4 sm:px-0">
-            <Button
-              onClick={handleWhatsAppClick}
-              className="w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold text-base sm:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
-            >
-              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-              <span className="text-sm sm:text-base lg:text-lg">Conoce más sobre estos servicios</span>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -1043,6 +990,159 @@ const Index = () => {
                 </Button>
               </div>
             </div>
+          </div>
+
+          {/* Pricing escalera */}
+          <div className="mt-16 sm:mt-20 lg:mt-24 max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Planes CRM by Sixteam.pro</h3>
+              <p className="text-gray-300 text-base sm:text-lg">Elige el plan que se adapta al tamaño y necesidades de tu negocio</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+              {/* Plan 1 */}
+              <div className="relative bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300">
+                <div className="mb-6">
+                  <p className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Entrada</p>
+                  <h4 className="text-white text-xl font-bold mb-1">Sixteam Inbox + IA</h4>
+                  <p className="text-gray-400 text-sm">Bandeja unificada con agente IA incluido</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-end gap-1 mb-1">
+                    <span className="text-3xl font-bold text-white">$149</span>
+                    <span className="text-gray-400 text-sm mb-1">USD/mes</span>
+                  </div>
+                  <p className="text-gray-500 text-xs">+ créditos IA | Implementación desde $250 USD | 2 usuarios</p>
+                </div>
+                <ul className="space-y-2 mb-8 text-sm text-gray-300">
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Bandeja unificada (WhatsApp, email, SMS)</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Agente IA WhatsApp 24/7</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Gestión de contactos</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />2 usuarios incluidos</li>
+                </ul>
+                <Button
+                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20Sixteam%20Inbox%20%2B%20IA', '_blank')}
+                  className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
+                >
+                  Empezar con Inbox + IA
+                </Button>
+              </div>
+
+              {/* Plan 2 — Most popular */}
+              <div className="relative bg-gradient-to-b from-blue-600/30 to-blue-900/30 border border-blue-400/50 rounded-2xl p-6 sm:p-8 backdrop-blur-sm shadow-xl shadow-blue-900/20">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-teal-500 text-white text-xs font-bold px-4 py-1 rounded-full">MÁS POPULAR</div>
+                <div className="mb-6">
+                  <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Crecimiento</p>
+                  <h4 className="text-white text-xl font-bold mb-1">CRM Core</h4>
+                  <p className="text-gray-400 text-sm">CRM completo para equipos de ventas</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-end gap-1 mb-1">
+                    <span className="text-3xl font-bold text-white">$200</span>
+                    <span className="text-gray-400 text-sm mb-1">USD/mes</span>
+                  </div>
+                  <p className="text-gray-500 text-xs">Implementación desde $500 USD | 3 usuarios</p>
+                </div>
+                <ul className="space-y-2 mb-8 text-sm text-gray-300">
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Todo lo del plan Inbox + IA</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Pipeline de ventas visual</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Automatizaciones avanzadas</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Landing pages y formularios</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />3 usuarios incluidos</li>
+                </ul>
+                <Button
+                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Core%20de%20Sixteam.pro', '_blank')}
+                  className="w-full bg-blue-500 hover:bg-blue-400 text-white rounded-xl py-3 font-semibold transition-all shadow-lg"
+                >
+                  Empezar con CRM Core
+                </Button>
+              </div>
+
+              {/* Plan 3 */}
+              <div className="relative bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-teal-400/50 transition-all duration-300">
+                <div className="mb-6">
+                  <p className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Escala</p>
+                  <h4 className="text-white text-xl font-bold mb-1">CRM Growth</h4>
+                  <p className="text-gray-400 text-sm">Para equipos en expansión con IA avanzada</p>
+                </div>
+                <div className="mb-6">
+                  <div className="flex items-end gap-1 mb-1">
+                    <span className="text-3xl font-bold text-white">$299</span>
+                    <span className="text-gray-400 text-sm mb-1">USD/mes</span>
+                  </div>
+                  <p className="text-gray-500 text-xs">Implementación desde $800 USD | 5 usuarios</p>
+                </div>
+                <ul className="space-y-2 mb-8 text-sm text-gray-300">
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Todo lo del plan Core</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Agente IA de llamadas 24/7</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Reportes y analytics avanzados</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Membresía y cursos integrados</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />5 usuarios incluidos</li>
+                </ul>
+                <Button
+                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Growth%20de%20Sixteam.pro', '_blank')}
+                  className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
+                >
+                  Empezar con CRM Growth
+                </Button>
+              </div>
+            </div>
+
+            <p className="text-center text-gray-500 text-xs mt-6">Usuarios adicionales desde $12.5 USD/mes. Precios en USD. Implementación cobrada una sola vez.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Nuestro Ciclo de Servicio */}
+      <section className="relative py-12 sm:py-16 lg:py-24 bg-gray-50 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(100, 116, 139, 0.08) 1px, transparent 1px)',
+            backgroundSize: '32px 32px'
+          }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
+              Nuestro Ciclo de Servicio para tu
+              <br />
+              <span className="text-blue-600">Transformación Digital</span>
+            </h2>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                Entendemos que la verdadera transformación digital no se logra de manera aislada, sino con un socio estratégico que facilite este proceso. Por eso, diseñamos un ciclo de servicio para acompañarte en cada etapa y garantizar el resultado deseado.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
+            {services.map((service, index) => (
+              <div key={index} className="group relative">
+                <Link to={service.path} className="block bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:border-blue-300 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="flex items-center justify-center mb-6 sm:mb-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded-lg flex items-center justify-center">
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base text-center mb-4">
+                    {service.description}
+                  </p>
+                  <p className="text-blue-600 text-sm font-semibold text-center group-hover:underline">Ver detalles →</p>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center px-4 sm:px-0">
+            <Button
+              onClick={handleWhatsAppClick}
+              className="w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold text-base sm:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
+            >
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+              <span className="text-sm sm:text-base lg:text-lg">Conoce más sobre estos servicios</span>
+            </Button>
           </div>
         </div>
       </section>

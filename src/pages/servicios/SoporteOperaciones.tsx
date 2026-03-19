@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import {
   MessageCircle, ArrowLeft, CheckCircle, Clock, Zap, Globe,
   Code2, Settings, ChevronDown, ChevronUp, ShieldCheck,
-  BarChart3, RefreshCcw, Wrench, ArrowRight
+  BarChart3, RefreshCcw, Users, TrendingUp, Target,
+  ArrowRight, Layers, AlertCircle, HandshakeIcon
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -20,113 +21,146 @@ const SoporteOperaciones = () => {
 
   const planes = [
     {
-      nombre: 'Plan Starter',
+      nombre: 'RevOps Starter',
       horas: '5 horas/mes',
       precio: '$500.000 COP/mes',
       horaExtra: '$150.000 COP/hora adicional',
-      descripcion: 'Ideal para equipos que ya tienen su plataforma implementada y necesitan ajustes puntuales y acompañamiento básico.',
+      descripcion: 'Para equipos que ya tienen base implementada y necesitan un aliado técnico que mantenga y mejore la operación.',
       incluye: [
-        'Hasta 5 horas de soporte al mes (no acumulables)',
+        'Hasta 5 horas de operación RevOps al mes',
         'SLA de respuesta: 4 horas en días hábiles',
         'Atención de urgencias fines de semana',
-        'Ajustes de configuración en plataforma',
-        'Ejecución operativa y apoyo funcional',
-        'Levantamiento de oportunidades de mejora',
+        'Ajustes y mejoras de configuración en plataforma',
+        'Ejecución operativa y apoyo funcional al equipo',
+        'Diagnóstico mensual de oportunidades de mejora',
       ],
-      waMsg: 'Hola, quiero el Plan Starter de Soporte y Operaciones',
+      waMsg: 'Hola, quiero el plan RevOps Starter de Sixteam.pro',
       highlight: false,
     },
     {
-      nombre: 'Plan Operativo',
+      nombre: 'RevOps Operativo',
       horas: '10 horas/mes',
       precio: 'Desde $1.250.000 COP/mes',
       horaExtra: '$125.000 COP/hora adicional',
-      descripcion: 'Para equipos en crecimiento que necesitan soporte frecuente, ejecución de mejoras y continuidad operativa.',
+      descripcion: 'Para equipos en crecimiento que necesitan un socio técnico activo que opere, automatice y evolucione su stack mensualmente.',
       incluye: [
-        'Hasta 10 horas de soporte al mes',
+        'Hasta 10 horas de operación RevOps al mes',
         'SLA de respuesta: 4 horas en días hábiles',
         'Atención de urgencias fines de semana',
-        'Envío de comunicaciones masivas o apoyo en email marketing',
-        'Ejecución de ajustes en flujos y automatizaciones',
-        'Reporte mensual de actividades ejecutadas',
+        'Ejecución de automatizaciones y mejoras de proceso',
+        'Apoyo en campañas, comunicaciones y reportería',
+        'Reunión mensual de alineación estratégica + reporte',
       ],
-      waMsg: 'Hola, quiero el Plan Operativo de Soporte y Operaciones',
+      waMsg: 'Hola, quiero el plan RevOps Operativo de Sixteam.pro',
       highlight: true,
     },
     {
-      nombre: 'Plan Avanzado',
+      nombre: 'RevOps Avanzado',
       horas: '20–30 horas/mes',
       precio: 'Desde $2.500.000 COP/mes',
       horaExtra: '$99.999 COP/hora adicional',
-      descripcion: 'Para operaciones digitales maduras que requieren un equipo técnico externo dedicado a la evolución continua.',
+      descripcion: 'Sixteam actúa como tu equipo de RevOps externo dedicado: opera, diseña e impulsa la madurez de toda la operación de revenue.',
       incluye: [
-        'Hasta 20–30 horas de soporte al mes',
+        'Hasta 20–30 horas de operación RevOps al mes',
         'SLA prioritario en días hábiles',
         'Atención de urgencias fines de semana',
-        'Ejecución de automatizaciones y mejoras continuas',
-        'Apoyo en campañas, comunicaciones y reportería',
-        'Acompañamiento estratégico mensual',
+        'Diseño y ejecución de iniciativas de mejora continua',
+        'Gestión del stack: CRM, automatizaciones, integraciones',
+        'Acompañamiento estratégico y roadmap de operaciones',
       ],
-      waMsg: 'Hola, quiero el Plan Avanzado de Soporte y Operaciones',
+      waMsg: 'Hola, quiero el plan RevOps Avanzado de Sixteam.pro',
       highlight: false,
     },
   ];
 
-  const serviciosComplementarios = [
+  const quehacemos = [
+    {
+      icon: Settings,
+      titulo: 'Operamos tu stack tecnológico',
+      desc: 'Mantenemos tu CRM, automatizaciones, pipelines y herramientas digitales siempre configurados y alineados con tu proceso real de ventas y atención.',
+    },
     {
       icon: Zap,
-      titulo: 'Automatizaciones avanzadas',
+      titulo: 'Automatizamos procesos de revenue',
+      desc: 'Identificamos cuellos de botella en tu ciclo comercial y los resolvemos con automatizaciones: seguimientos, asignaciones, alertas, flujos de nurturing.',
+    },
+    {
+      icon: BarChart3,
+      titulo: 'Damos visibilidad al negocio',
+      desc: 'Configuramos reportes, dashboards y métricas que le permiten a tu liderazgo tomar decisiones con datos reales: tasas de conversión, tiempo de ciclo, fuentes de ingreso.',
+    },
+    {
+      icon: Users,
+      titulo: 'Alineamos ventas, marketing y servicio',
+      desc: 'Aseguramos que los tres equipos compartan la misma data, los mismos procesos y el mismo CRM — eliminando fricciones que generan pérdida de oportunidades.',
+    },
+    {
+      icon: RefreshCcw,
+      titulo: 'Evolucionamos contigo mes a mes',
+      desc: 'Cada mes revisamos prioridades, ejecutamos mejoras y proponemos iniciativas que impulsen el crecimiento. No somos reactivos — somos proactivos.',
+    },
+    {
+      icon: ShieldCheck,
+      titulo: 'Respondemos cuando más lo necesitas',
+      desc: 'SLA de 4 horas en días hábiles. Urgencias atendidas también los fines de semana. Tu operación no se detiene.',
+    },
+  ];
+
+  const iniciativas = [
+    {
+      icon: Zap,
+      titulo: 'Automatizaciones avanzadas de Revenue',
       precio: '$180.000 COP / hora',
-      desc: 'Diseñamos y construimos workflows complejos, lógica de procesos a medida y automatizaciones que van más allá de la implementación base.',
-      waMsg: 'Hola, quiero cotizar automatizaciones avanzadas sobre CRM',
+      desc: 'Workflows complejos, lógica de procesos a medida y automatizaciones que conectan ventas, marketing y servicio en un solo flujo de ingresos.',
+      waMsg: 'Hola, quiero cotizar automatizaciones avanzadas de RevOps',
     },
     {
       icon: Globe,
-      titulo: 'Integraciones con otros sistemas',
+      titulo: 'Integraciones entre sistemas',
       precio: '$250.000 COP / hora',
-      desc: 'Conectamos tu operación con Shopify, Mailchimp, NetSuite, HubSpot, tu sitio web y cualquier sistema externo vía API, Webhook o automatización.',
-      waMsg: 'Hola, quiero cotizar una integración con otro sistema',
+      desc: 'Conectamos tu CRM con ERP, e-commerce, herramientas de marketing o cualquier sistema externo (Shopify, NetSuite, HubSpot, Mailchimp y más) vía API o Webhook.',
+      waMsg: 'Hola, quiero cotizar una integración de sistemas',
     },
     {
       icon: Code2,
       titulo: 'Website y landing pages',
       precio: 'Sujeto a cotización',
-      desc: 'Creamos o mantenemos tu página web articulada con tu CRM y procesos de captación, desde sitios informativos hasta embudos de conversión.',
-      waMsg: 'Hola, quiero cotizar desarrollo de website o landing page',
+      desc: 'Creamos activos digitales articulados con tu CRM y operación de captación: desde páginas informativas hasta embudos de conversión medibles.',
+      waMsg: 'Hola, quiero cotizar desarrollo web o landing pages',
     },
     {
-      icon: Settings,
-      titulo: 'Desarrollo de plataforma personalizada',
+      icon: Layers,
+      titulo: 'Desarrollo de plataforma a medida',
       precio: '$300.000 COP / hora',
-      desc: 'Levantamiento funcional, diseño, desarrollo e integración de módulos o funcionalidades a la medida de tu operación digital.',
+      desc: 'Diseñamos y construimos módulos o funcionalidades personalizadas que ningún software estándar cubre, alineados a tu flujo operativo único.',
       waMsg: 'Hola, quiero cotizar desarrollo de plataforma personalizada',
     },
   ];
 
   const faqs = [
     {
-      q: '¿Las horas de soporte se acumulan si no las uso?',
-      a: 'No. Las horas de soporte mensual no son acumulables. El plan cubre hasta el número de horas contratado por mes calendario. Esto nos permite garantizar disponibilidad y SLA de respuesta para todos los clientes.',
+      q: '¿Qué es RevOps y por qué necesito un equipo externo?',
+      a: 'Revenue Operations (RevOps) es la función que alinea ventas, marketing y servicio al cliente alrededor de datos, procesos y tecnología compartidos para maximizar los ingresos. La mayoría de las empresas en Latam no pueden costear un equipo RevOps interno — Sixteam lo resuelve como aliado externo a una fracción del costo.',
     },
     {
-      q: '¿Qué cubre el soporte y qué no cubre?',
-      a: 'El soporte cubre configuraciones de plataforma, ajustes funcionales, ejecución operativa y mejoras sobre las herramientas implementadas por Sixteam. No cubre caídas del servicio atribuibles al proveedor de la plataforma (GHL, HubSpot, etc.), que se resuelven directamente con el proveedor.',
+      q: '¿En qué se diferencia esto de un soporte técnico tradicional?',
+      a: 'Un soporte técnico resuelve problemas cuando algo falla. Sixteam como aliado RevOps va más allá: opera proactivamente, propone mejoras, diseña automatizaciones, alinea procesos entre áreas y te acompaña estratégicamente en cómo usar la tecnología para crecer más rápido.',
     },
     {
-      q: '¿Cuál es el tiempo de respuesta?',
-      a: 'El SLA estándar es de 4 horas en días hábiles (lunes a viernes). Los fines de semana atendemos exclusivamente urgencias.',
+      q: '¿Necesito ya tener una plataforma implementada para contratar este servicio?',
+      a: 'Idealmente sí. Este servicio está pensado para organizaciones que ya cuentan con una base de CRM o plataforma digital y quieren operarla y evolucionarla de forma continua. Si aún no tienes implementación, comenzamos con un proyecto de implementación base.',
     },
     {
-      q: '¿Puedo contratar horas adicionales si las necesito?',
-      a: 'Sí. Las horas adicionales tienen un costo según el plan: $150.000 COP/h en Plan Starter, $125.000 COP/h en Plan Operativo y $99.999 COP/h en Plan Avanzado.',
+      q: '¿Las horas de operación se acumulan si no las uso?',
+      a: 'No. Las horas mensuales no son acumulables — el plan garantiza disponibilidad y SLA para todos los clientes. Las horas adicionales se pueden contratar cuando el mes lo requiera.',
     },
     {
-      q: '¿Las integraciones y automatizaciones avanzadas están incluidas en el soporte?',
-      a: 'No. El soporte mensual cubre ajustes operativos y mejoras de configuración. Los proyectos de automatizaciones avanzadas, integraciones o desarrollos personalizados se cotizan por separado según alcance y complejidad.',
+      q: '¿Qué incluye la reunión mensual de alineación estratégica?',
+      a: 'Una sesión de 30–60 minutos con tu equipo donde revisamos lo ejecutado, medimos el impacto de los cambios, identificamos prioridades del siguiente mes y ajustamos el roadmap de RevOps según los objetivos de negocio.',
     },
     {
-      q: '¿Puedo contratar soporte sin haber implementado con Sixteam?',
-      a: 'Depende del caso. Evaluamos el estado de tu plataforma antes de cotizar el soporte, ya que necesitamos conocer la configuración existente para operar sobre ella correctamente.',
+      q: '¿Pueden operar HubSpot además de HighLevel?',
+      a: 'Sí. Sixteam opera sobre las principales plataformas de CRM y automatización del mercado, incluyendo HighLevel y HubSpot. El alcance específico se define en el onboarding según el stack que uses.',
     },
   ];
 
@@ -136,9 +170,9 @@ const SoporteOperaciones = () => {
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative bg-[#0a2342] text-white overflow-hidden py-20 sm:py-28 lg:py-36">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a2342] via-[#0d2d52] to-[#0a2342]" />
-        <div className="absolute top-20 left-10 w-64 h-64 bg-[#1d70a2]/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#00bfa5]/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a2342] via-[#0d2d52] to-[#081c36]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#1d70a2]/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#00bfa5]/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link to="/servicios" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm">
@@ -146,97 +180,118 @@ const SoporteOperaciones = () => {
             Volver a Servicios
           </Link>
 
-          <div className="max-w-4xl space-y-6">
+          <div className="max-w-5xl space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
-              <Wrench className="w-4 h-4 text-[#00bfa5]" />
-              <span className="text-[#00bfa5] font-medium text-sm font-poppins">Soporte · Operaciones · Madurez digital</span>
+              <TrendingUp className="w-4 h-4 text-[#00bfa5]" />
+              <span className="text-[#00bfa5] font-medium text-sm font-poppins">Revenue Operations · Aliado estratégico · Equipo tech externo</span>
             </div>
 
-            <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl leading-tight">
-              Tu operación digital,{' '}
+            <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+              Tu equipo de{' '}
               <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                siempre funcionando
+                RevOps externo
               </span>
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-              Acompañamiento recurrente para mantener, mejorar y escalar tu plataforma. Sixteam opera contigo mes a mes para que tu equipo se enfoque en el negocio, no en la tecnología.
+              Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno, sin el costo de serlo. CRM, automatizaciones, integraciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <Clock className="w-5 h-5 text-[#00bfa5]" />
-                <span className="text-white font-semibold text-sm">SLA 4 horas días hábiles</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <ShieldCheck className="w-5 h-5 text-[#1d70a2]" />
-                <span className="text-white font-semibold text-sm">Urgencias fines de semana</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <RefreshCcw className="w-5 h-5 text-[#00bfa5]" />
-                <span className="text-white font-semibold text-sm">Desde $500.000 COP/mes</span>
-              </div>
+              {[
+                { icon: Target, label: 'Ventas + Marketing + Servicio alineados' },
+                { icon: Clock, label: 'SLA 4 horas en días hábiles' },
+                { icon: TrendingUp, label: 'Mejora continua mes a mes' },
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+                    <Icon className="w-4 h-4 text-[#00bfa5]" />
+                    <span className="text-white font-medium text-sm">{item.label}</span>
+                  </div>
+                );
+              })}
             </div>
 
-            <Button
-              onClick={() => handleWA('Hola, quiero conocer más sobre el servicio de Soporte y Operaciones de Sixteam.pro')}
-              className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Cotizar mi plan de soporte
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button
+                onClick={() => handleWA('Hola, quiero conocer cómo Sixteam puede ser mi equipo de RevOps externo')}
+                className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Habla con un experto RevOps
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+              >
+                Ver planes
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── QUÉ CUBRE EL SOPORTE ─────────────────────────── */}
-      <section className="py-16 sm:py-24 bg-gray-50">
+      {/* ── EL PROBLEMA ──────────────────────────────────── */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
+                Lo que pasa cuando no tienes un equipo RevOps
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                La tecnología sola no genera resultados. Sin alguien que la opere y evolucione, se convierte en un costo sin retorno.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[
+                { problema: 'CRM desactualizado', desc: 'Tu equipo deja de usarlo porque no refleja el proceso real. Los datos se degradan y pierdes visibilidad del pipeline.' },
+                { problema: 'Automatizaciones rotas', desc: 'Los flujos que configuraron hace meses ya no funcionan. Los leads caen al vacío sin seguimiento automático.' },
+                { problema: 'Ventas y marketing desconectados', desc: 'Marketing genera leads que ventas no sabe gestionar. Nadie comparte datos ni mide el mismo embudo.' },
+                { problema: 'Decisiones sin datos', desc: 'Los reportes muestran métricas de vanidad, no las que importan. No hay visibilidad real del ciclo de ingresos.' },
+                { problema: 'Dependencia de un solo técnico', desc: 'Todo el conocimiento del sistema está en una persona. Si sale, la operación se para.' },
+                { problema: 'Tecnología que no escala', desc: 'Tu stack creció de forma desordenada. Hay herramientas duplicadas, sin integrar y sin documentación.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white border border-red-100 rounded-xl p-5 flex items-start gap-4">
+                  <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-poppins font-semibold text-gray-900 mb-1 text-base">{item.problema}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center">
+              <p className="text-gray-700 text-lg font-medium">
+                Sixteam resuelve todo esto actuando como tu <span className="text-[#1d70a2] font-bold">equipo de RevOps externo</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUÉ HACE SIXTEAM COMO TU EQUIPO REVOPS ──────── */}
+      <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
-              ¿Qué hacemos en el soporte mensual?
+              Qué hace Sixteam como tu equipo RevOps
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              No solo resolvemos tickets — operamos, mejoramos y evolucionamos tu plataforma junto a tu equipo.
+              No resolvemos tickets — operamos tu tecnología de revenue de forma proactiva, como parte de tu equipo.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                icon: Settings,
-                titulo: 'Configuración de plataforma',
-                desc: 'Ajustes en campos, vistas, pipelines, usuarios, permisos y cualquier parametrización de tu CRM o herramienta digital.',
-              },
-              {
-                icon: Zap,
-                titulo: 'Ejecución operativa',
-                desc: 'Apoyo en el uso diario de las herramientas: creación de listas, envío de comunicaciones, configuración de flujos y actividades.',
-              },
-              {
-                icon: BarChart3,
-                titulo: 'Mejoras y ajustes de procesos',
-                desc: 'Identificamos oportunidades de mejora en tus automatizaciones, reportes y flujos, y las ejecutamos dentro del tiempo contratado.',
-              },
-              {
-                icon: MessageCircle,
-                titulo: 'Envíos y comunicaciones',
-                desc: 'Apoyo en mensajes masivos, campañas de email marketing y comunicaciones operativas desde tu plataforma.',
-              },
-              {
-                icon: ShieldCheck,
-                titulo: 'SLA garantizado',
-                desc: '4 horas de tiempo de respuesta en días hábiles. Urgencias críticas atendidas también los fines de semana.',
-              },
-              {
-                icon: RefreshCcw,
-                titulo: 'Mejora continua',
-                desc: 'Reporte mensual de actividades ejecutadas y reunión de revisión para priorizar las mejoras del siguiente período.',
-              },
-            ].map((item, i) => {
+            {quehacemos.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="bg-white rounded-xl border border-gray-200 p-6 hover:border-[#1d70a2]/40 hover:shadow-md transition-all duration-300">
+                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
                   <div className="w-10 h-10 bg-[#0a2342] rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5 text-[#00bfa5]" />
                   </div>
@@ -247,23 +302,76 @@ const SoporteOperaciones = () => {
             })}
           </div>
 
-          <div className="max-w-5xl mx-auto mt-8 p-5 bg-amber-50 border border-amber-200 rounded-xl">
-            <p className="text-amber-800 text-sm leading-relaxed">
-              <strong>Importante:</strong> El soporte mensual no cubre caídas del servicio atribuibles al proveedor de la plataforma (HighLevel, HubSpot, etc.). Estas situaciones se gestionan directamente con el proveedor, con acompañamiento de Sixteam en la comunicación cuando aplique.
+          <div className="max-w-5xl mx-auto mt-8 p-5 bg-blue-50 border border-[#1d70a2]/20 rounded-xl">
+            <p className="text-[#0a2342] text-sm leading-relaxed">
+              <strong>Alcance del servicio:</strong> Operamos sobre configuraciones de plataforma (CRM, automatizaciones, flujos, reportería). Las caídas del servicio atribuibles al proveedor (HighLevel, HubSpot, etc.) se gestionan directamente con ellos — Sixteam acompaña la comunicación cuando aplique.
             </p>
           </div>
         </div>
       </section>
 
+      {/* ── LA DIFERENCIA: SOPORTE VS REVOPS ─────────────── */}
+      <section className="py-16 sm:py-20 bg-[#0a2342]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10 space-y-4">
+              <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl">
+                No somos un proveedor de soporte.<br />Somos tu aliado de Revenue Operations.
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="text-gray-500 font-poppins font-bold text-sm uppercase tracking-widest mb-6">Soporte técnico tradicional</div>
+                <ul className="space-y-4">
+                  {[
+                    'Reacciona cuando algo falla',
+                    'Resuelve el problema puntual y cierra el ticket',
+                    'No entiende el proceso de negocio',
+                    'Cobra por incidente o por hora de problema',
+                    'No propone mejoras proactivas',
+                    'No tiene contexto acumulado de tu operación',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-500 text-sm">
+                      <span className="w-5 h-5 rounded-full border border-gray-700 flex items-center justify-center shrink-0 mt-0.5 text-gray-700 text-xs">✕</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#0d2d4f] to-[#0a2342] border-2 border-[#00bfa5]/40 rounded-2xl p-8 shadow-[0_0_30px_rgba(0,191,165,0.1)]">
+                <div className="text-[#00bfa5] font-poppins font-bold text-sm uppercase tracking-widest mb-6">Sixteam como aliado RevOps</div>
+                <ul className="space-y-4">
+                  {[
+                    'Opera proactivamente para que nada falle',
+                    'Entiende tus objetivos de revenue y trabaja hacia ellos',
+                    'Conoce tu proceso comercial, tu CRM y tu equipo',
+                    'Entrega horas de operación mensual predecibles',
+                    'Propone mejoras antes de que sean problemas',
+                    'Acumula contexto y memoria operativa de tu negocio',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-200 text-sm">
+                      <CheckCircle className="w-5 h-5 text-[#00bfa5] shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PLANES ───────────────────────────────────────── */}
-      <section className="py-16 sm:py-24 bg-[#0a2342]">
+      <section id="planes" className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
-            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
-              Planes de soporte mensual
+            <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
+              Planes de RevOps mensual
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Elige según el volumen de operación y la frecuencia de cambios que necesita tu equipo.
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Elige según la madurez de tu operación y el nivel de acompañamiento que necesita tu equipo.
             </p>
           </div>
 
@@ -273,8 +381,8 @@ const SoporteOperaciones = () => {
                 key={i}
                 className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
                   plan.highlight
-                    ? 'bg-gradient-to-br from-[#0d2d4f] to-[#0a2342] border-2 border-[#00bfa5] shadow-[0_0_40px_rgba(0,191,165,0.15)]'
-                    : 'bg-[#0d2d4f] border border-[#1d70a2]/30 hover:border-[#1d70a2]/60'
+                    ? 'bg-[#0a2342] border-2 border-[#00bfa5] shadow-xl'
+                    : 'bg-white border border-gray-200 hover:border-[#1d70a2]/40 hover:shadow-md'
                 }`}
               >
                 {plan.highlight && (
@@ -283,19 +391,19 @@ const SoporteOperaciones = () => {
                   </div>
                 )}
                 <div className="mb-6">
-                  <h3 className="font-poppins font-bold text-white text-xl mb-1">{plan.nombre}</h3>
-                  <p className="text-[#00bfa5] text-sm font-medium mb-1">{plan.horas}</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">{plan.descripcion}</p>
+                  <h3 className={`font-poppins font-bold text-xl mb-1 ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>{plan.nombre}</h3>
+                  <p className="text-[#00bfa5] text-sm font-medium mb-2">{plan.horas}</p>
+                  <p className={`text-sm leading-relaxed ${plan.highlight ? 'text-gray-400' : 'text-gray-500'}`}>{plan.descripcion}</p>
                 </div>
 
-                <div className="mb-6 pb-6 border-b border-white/10">
-                  <div className="font-poppins font-black text-white text-2xl mb-1">{plan.precio}</div>
+                <div className={`mb-6 pb-6 border-b ${plan.highlight ? 'border-white/10' : 'border-gray-100'}`}>
+                  <div className={`font-poppins font-black text-2xl mb-1 ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>{plan.precio}</div>
                   <div className="text-gray-500 text-xs">{plan.horaExtra}</div>
                 </div>
 
                 <ul className="space-y-2.5 flex-1 mb-8">
                   {plan.incluye.map((item, fi) => (
-                    <li key={fi} className="flex items-start gap-2.5 text-sm text-gray-300">
+                    <li key={fi} className={`flex items-start gap-2.5 text-sm ${plan.highlight ? 'text-gray-300' : 'text-gray-600'}`}>
                       <CheckCircle className="w-4 h-4 text-[#00bfa5] shrink-0 mt-0.5" />
                       {item}
                     </li>
@@ -307,7 +415,7 @@ const SoporteOperaciones = () => {
                   className={`w-full font-poppins font-semibold py-3 rounded-lg transition-all duration-300 ${
                     plan.highlight
                       ? 'bg-[#00bfa5] hover:bg-[#00a08a] text-white'
-                      : 'bg-[#1d70a2] hover:bg-[#155a88] text-white'
+                      : 'bg-[#0a2342] hover:bg-[#1d70a2] text-white'
                   }`}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
@@ -316,23 +424,27 @@ const SoporteOperaciones = () => {
               </div>
             ))}
           </div>
+
+          <p className="text-center text-gray-500 text-sm mt-6">
+            Las horas mensuales no son acumulables. Horas adicionales disponibles según el plan contratado.
+          </p>
         </div>
       </section>
 
-      {/* ── SERVICIOS COMPLEMENTARIOS ─────────────────────── */}
+      {/* ── INICIATIVAS ESTRATÉGICAS ──────────────────────── */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
-              Iniciativas avanzadas e integraciones
+              Iniciativas estratégicas
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Para organizaciones que ya tienen base y quieren escalar su madurez digital con desarrollos a medida.
+              Proyectos de mayor alcance que van más allá del retainer mensual — para escalar la madurez de tu operación de revenue.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {serviciosComplementarios.map((item, i) => {
+            {iniciativas.map((item, i) => {
               const Icon = item.icon;
               return (
                 <div key={i} className="border border-gray-200 rounded-xl p-6 hover:border-[#1d70a2]/40 hover:shadow-md transition-all duration-300">
@@ -348,7 +460,7 @@ const SoporteOperaciones = () => {
                         onClick={() => handleWA(item.waMsg)}
                         className="inline-flex items-center gap-1.5 text-[#1d70a2] font-semibold text-sm hover:text-[#00bfa5] transition-colors"
                       >
-                        Cotizar este servicio
+                        Cotizar esta iniciativa
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
@@ -360,21 +472,24 @@ const SoporteOperaciones = () => {
         </div>
       </section>
 
-      {/* ── CÓMO FUNCIONA ────────────────────────────────── */}
+      {/* ── CÓMO NOS INTEGRAMOS ───────────────────────────── */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
-              Cómo funciona el soporte mensual
+              Cómo Sixteam se integra a tu operación
             </h2>
+            <p className="text-gray-600 text-lg max-w-xl mx-auto">
+              Nos incorporamos como un miembro más de tu equipo, sin fricciones y con contexto desde el día uno.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { step: '01', titulo: 'Onboarding', desc: 'Revisamos el estado de tu plataforma y definimos el alcance del soporte según tu operación.' },
-              { step: '02', titulo: 'Canal de soporte', desc: 'Accedes a un canal directo para reportar solicitudes. Respondemos en el SLA acordado.' },
-              { step: '03', titulo: 'Ejecución mensual', desc: 'Ejecutamos ajustes, mejoras y operaciones dentro de las horas contratadas.' },
-              { step: '04', titulo: 'Revisión y cierre', desc: 'Reporte de actividades ejecutadas y priorización de mejoras para el siguiente mes.' },
+              { step: '01', titulo: 'Diagnóstico RevOps', desc: 'Auditamos tu stack, tus procesos y el estado de tus datos para entender el punto de partida y priorizar el impacto.' },
+              { step: '02', titulo: 'Onboarding y accesos', desc: 'Nos integramos a tus plataformas y canales de comunicación. Definimos el roadmap del primer mes.' },
+              { step: '03', titulo: 'Operación continua', desc: 'Ejecutamos cada mes: ajustes, mejoras, automatizaciones, reportes y comunicaciones dentro de las horas contratadas.' },
+              { step: '04', titulo: 'Revisión estratégica', desc: 'Reunión mensual para revisar resultados, ajustar prioridades y planificar la siguiente etapa de madurez digital.' },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
                 <div className="w-14 h-14 bg-[#0a2342] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -426,28 +541,36 @@ const SoporteOperaciones = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,191,165,0.08)_0%,transparent_70%)]" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
+            <div className="w-16 h-16 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-2xl flex items-center justify-center mx-auto">
+              <Users className="w-8 h-8 text-[#00bfa5]" />
+            </div>
             <h2 className="font-poppins font-black text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
-              Deja que Sixteam opere tu plataforma
+              Suma a Sixteam como tu equipo de RevOps
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Tu equipo se enfoca en vender y atender clientes. Nosotros mantenemos la tecnología funcionando y evolucionando.
+              Tu equipo comercial se enfoca en cerrar negocios. Sixteam opera la tecnología que los hace posibles.
+              Hablemos en 30 minutos y diseñamos el plan que se ajusta a tu operación.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => handleWA('Hola, quiero cotizar un plan de Soporte y Operaciones con Sixteam.pro')}
+                onClick={() => handleWA('Hola, quiero una sesión para conocer cómo Sixteam puede ser mi equipo de RevOps externo')}
                 className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-10 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Cotizar plan de soporte
+                Agendar sesión de diagnóstico
               </Button>
               <Button
                 variant="outline"
                 asChild
                 className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
               >
-                <Link to="/contacto">Hablar con un experto</Link>
+                <Link to="/contacto">Ver más información</Link>
               </Button>
             </div>
+            <p className="text-gray-500 text-sm">
+              ¿Prefieres el correo?{' '}
+              <a href="mailto:alpha@sixteam.pro" className="text-[#00bfa5] hover:underline">alpha@sixteam.pro</a>
+            </p>
           </div>
         </div>
       </section>

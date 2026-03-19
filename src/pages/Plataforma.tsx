@@ -1,0 +1,572 @@
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  MessageCircle, CheckCircle, X, Zap, Users, BarChart3, Bot,
+  Mail, Globe, Star, Calendar, FileText, Megaphone, TrendingUp,
+  ChevronDown, ChevronUp, ArrowRight, Shield, Layers, Inbox
+} from 'lucide-react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import { Link } from 'react-router-dom';
+
+const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma%20Sixteam.pro';
+
+const Plataforma = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<'inbox' | 'core' | 'growth'>('inbox');
+
+  const handleWA = (msg = '') => {
+    const text = msg
+      ? `https://wa.me/+573023515392?text=${encodeURIComponent(msg)}`
+      : WA_URL;
+    window.open(text, '_blank');
+  };
+
+  const plans = [
+    {
+      id: 'inbox',
+      name: 'Sixteam Inbox + IA',
+      tagline: 'Tu primer paso hacia la automatización',
+      desc: 'Centraliza todas tus conversaciones en una sola bandeja y deja que la IA atienda, clasifique y haga seguimiento 24/7.',
+      price: '149',
+      impl: '250',
+      users: '2',
+      accent: '#1d70a2',
+      badge: 'Producto gancho',
+      icon: Inbox,
+      features: [
+        'Bandeja omnicanal unificada (WhatsApp, Instagram, Facebook, email, SMS)',
+        'IA conversacional en modo sugerido o piloto automático',
+        'Entrenamiento del bot con tu web, FAQs y documentos',
+        'Handoff automático de IA a asesor humano',
+        'Widget de chat para tu sitio web',
+        'Historial multicanal por contacto en un solo hilo',
+        'Seguimiento y reactivación conversacional con IA',
+        'Capacitación del equipo en uso del inbox',
+      ],
+      notIncluded: ['CRM de contactos completo', 'Pipelines y oportunidades', 'Automatizaciones avanzadas de workflow'],
+      waMsg: 'Hola, quiero conocer más sobre Sixteam Inbox + IA',
+    },
+    {
+      id: 'core',
+      name: 'CRM Sixteam.pro Core',
+      tagline: 'Ordena tu operación, cierra más negocios',
+      desc: 'CRM operativo completo para equipos de ventas o servicio al cliente. Pipelines, seguimientos automáticos y visibilidad total de tu proceso.',
+      price: '200',
+      impl: '500',
+      users: '3',
+      accent: '#00bfa5',
+      badge: 'Más popular',
+      icon: BarChart3,
+      features: [
+        'Todo lo de Inbox + IA incluido',
+        'CRM de contactos con campos estándar y personalizados',
+        'Pipelines y oportunidades con etapas, valor y trazabilidad',
+        'Smart Lists: segmentación dinámica de contactos',
+        'Workflows: automatización con triggers, condiciones y acciones',
+        'Deduplicación y captura estructurada de datos',
+        'Vistas, filtros y listas operativas por equipo',
+        'Roles de trabajo, pruebas de calidad y entrenamiento',
+      ],
+      notIncluded: ['Calendario de agendamiento', 'Email marketing', 'Funnels y sitios web', 'Gestión de reputación'],
+      waMsg: 'Hola, quiero conocer más sobre CRM Sixteam.pro Core',
+    },
+    {
+      id: 'growth',
+      name: 'CRM Sixteam.pro Growth',
+      tagline: 'Capta, nutre, convierte y crece',
+      desc: 'La plataforma completa: CRM + marketing + automatización en una sola operación digital para escalar tu negocio.',
+      price: '299',
+      impl: '800',
+      users: '5',
+      accent: '#00bfa5',
+      badge: 'Plataforma completa',
+      icon: TrendingUp,
+      features: [
+        'Todo lo de CRM Core incluido',
+        'Calendarios y agendamiento automático con recordatorios',
+        'Funnels, websites y landing pages (desde cero o templates)',
+        'Forms & Surveys para captura y calificación de leads',
+        'Blog con SEO, categorías y publicación programada',
+        'Email Marketing con editor drag-and-drop y campañas',
+        'Social Planner: programación y publicación en redes',
+        'Reputation Management: reseñas por SMS/email, centralización de reviews',
+        'Campañas y secuencias con Workflows + Email + canales',
+      ],
+      notIncluded: [],
+      waMsg: 'Hola, quiero conocer más sobre CRM Sixteam.pro Growth',
+    },
+  ];
+
+  const matrix = [
+    { feature: 'Bandeja omnicanal + Chat Widget', inbox: true, core: true, growth: true },
+    { feature: 'IA conversacional (suggestive / autopilot)', inbox: true, core: true, growth: true },
+    { feature: 'Entrenamiento del bot (web, FAQs, docs)', inbox: true, core: true, growth: true },
+    { feature: 'CRM de contactos y campos personalizados', inbox: false, core: true, growth: true },
+    { feature: 'Pipelines / oportunidades / etapas', inbox: false, core: true, growth: true },
+    { feature: 'Workflows y automatización', inbox: false, core: true, growth: true },
+    { feature: 'Smart Lists y segmentación', inbox: false, core: true, growth: true },
+    { feature: 'Calendarios y agendamiento', inbox: false, core: false, growth: true },
+    { feature: 'Formularios y encuestas', inbox: false, core: false, growth: true },
+    { feature: 'Funnels / Websites', inbox: false, core: false, growth: true },
+    { feature: 'Blogs y SEO', inbox: false, core: false, growth: true },
+    { feature: 'Email Marketing', inbox: false, core: false, growth: true },
+    { feature: 'Social Planner', inbox: false, core: false, growth: true },
+    { feature: 'Reputation Management', inbox: false, core: false, growth: true },
+  ];
+
+  const faqs = [
+    {
+      q: '¿Sobre qué tecnología está construida la plataforma?',
+      a: 'La plataforma Sixteam.pro está implementada sobre HighLevel (GHL), la infraestructura tecnológica líder para agencias y negocios digitales en Latinoamérica. Sixteam configura, adapta y opera toda la plataforma bajo tu marca y proceso.',
+    },
+    {
+      q: '¿Puedo empezar con Inbox + IA y escalar después?',
+      a: 'Sí. La propuesta está diseñada como una escalera de valor: comienzas con la bandeja conversacional + IA, y cuando estés listo escalas a CRM Core o Growth sin perder el trabajo previo configurado.',
+    },
+    {
+      q: '¿Qué canales puedo conectar?',
+      a: 'WhatsApp Business, Instagram, Facebook Messenger, email, SMS y Voice AI. La disponibilidad de cada canal depende de las conexiones y aprobaciones del proveedor (Meta, Google, etc.), que Sixteam gestiona contigo.',
+    },
+    {
+      q: '¿La IA tiene costo adicional?',
+      a: 'La capa funcional de IA conversacional está incluida en el plan. Los créditos de consumo de IA se cobran por uso real (volumen y longitud de respuestas) y se facturan aparte del fee mensual del plan.',
+    },
+    {
+      q: '¿Cuántos usuarios adicionales puedo agregar?',
+      a: 'Puedes agregar usuarios operativos adicionales por $25 USD/usuario/mes. Los usuarios administrativos, visores o de marketing tienen un costo de $12.5 USD/usuario/mes según aplique.',
+    },
+    {
+      q: '¿Las integraciones con sistemas externos están incluidas?',
+      a: 'No por defecto. Las integraciones con terceros (ERPs, e-commerce, plataformas de pago, etc.) se cotizan por separado según complejidad. La plataforma cuenta con API y Webhooks para conectar prácticamente cualquier sistema.',
+    },
+    {
+      q: '¿En cuánto tiempo queda operativa la plataforma?',
+      a: 'Depende del plan y la complejidad del proyecto. El proceso incluye configuración, pruebas de calidad, ajustes y capacitación del equipo. Inbox + IA puede estar listo en 2–3 semanas; CRM Core y Growth entre 3–6 semanas.',
+    },
+  ];
+
+  const activePlan = plans.find(p => p.id === activeTab)!;
+
+  return (
+    <div className="min-h-screen bg-white font-lato">
+      <Header />
+
+      {/* ── HERO ─────────────────────────────────────────────── */}
+      <section className="relative bg-[#0a2342] text-white overflow-hidden pt-24 pb-20 sm:pt-32 sm:pb-28">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a2342] via-[#0d2d52] to-[#081c36]" />
+        <div className="absolute top-16 left-8 w-72 h-72 bg-[#1d70a2]/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-8 w-96 h-96 bg-[#00bfa5]/10 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
+              <Layers className="w-4 h-4 text-[#00bfa5]" />
+              <span className="text-[#00bfa5] font-medium text-sm font-poppins">Plataforma sobre HighLevel</span>
+            </div>
+
+            <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+              Una sola plataforma para{' '}
+              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
+                vender, atender y crecer
+              </span>
+            </h1>
+
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Sixteam.pro entrega la tecnología de HighLevel configurada, operativa y lista para tu equipo.
+              CRM, IA conversacional, automatizaciones y marketing en un solo lugar — sin fricción técnica.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+              <Button
+                onClick={() => handleWA()}
+                className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Agenda una demo gratis
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+              >
+                Ver planes y precios
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 max-w-2xl mx-auto">
+              {[
+                { value: '3', label: 'Planes escalables' },
+                { value: '14+', label: 'Módulos integrados' },
+                { value: '100%', label: 'Implementado por Sixteam' },
+              ].map((s, i) => (
+                <div key={i} className="text-center">
+                  <div className="font-poppins font-black text-3xl sm:text-4xl text-[#00bfa5]">{s.value}</div>
+                  <div className="text-gray-400 text-sm mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ESCALERA DE VALOR ─────────────────────────────────── */}
+      <section id="planes" className="py-20 sm:py-28 bg-[#0a2342]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14 space-y-4">
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
+              Elige tu punto de entrada
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Empieza donde tu negocio lo necesita. Escala cuando estés listo. Todo construido sobre la misma base tecnológica.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {plans.map((plan, i) => {
+              const Icon = plan.icon;
+              const isGrowth = plan.id === 'growth';
+              return (
+                <div
+                  key={plan.id}
+                  className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
+                    isGrowth
+                      ? 'bg-gradient-to-br from-[#0d2d4f] to-[#0a2342] border-2 border-[#00bfa5] shadow-[0_0_40px_rgba(0,191,165,0.15)]'
+                      : 'bg-[#0d2d4f] border border-[#1d70a2]/30 hover:border-[#1d70a2]/60'
+                  }`}
+                >
+                  {isGrowth && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00bfa5] text-white text-xs font-poppins font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+                      ★ {plan.badge}
+                    </div>
+                  )}
+                  {!isGrowth && (
+                    <div className="absolute -top-3 left-6 bg-[#1d70a2]/80 text-white text-xs font-poppins font-semibold px-3 py-1 rounded-full">
+                      {plan.badge}
+                    </div>
+                  )}
+
+                  <div className="mb-6">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${isGrowth ? 'bg-[#00bfa5]/20' : 'bg-[#1d70a2]/20'}`}>
+                      <Icon className={`w-6 h-6 ${isGrowth ? 'text-[#00bfa5]' : 'text-[#1d70a2]'}`} />
+                    </div>
+                    <h3 className="font-poppins font-bold text-white text-xl mb-1">{plan.name}</h3>
+                    <p className="text-[#00bfa5] text-sm font-medium mb-3">{plan.tagline}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">{plan.desc}</p>
+                  </div>
+
+                  <div className="mb-6 pb-6 border-b border-white/10">
+                    <div className="flex items-baseline gap-1 mb-1">
+                      <span className="text-gray-400 text-sm">USD</span>
+                      <span className="font-poppins font-black text-white text-4xl">{plan.price}</span>
+                      <span className="text-gray-400 text-sm">/mes</span>
+                    </div>
+                    <div className="text-gray-500 text-sm">Implementación desde USD {plan.impl} · {plan.users} usuarios</div>
+                  </div>
+
+                  <ul className="space-y-2.5 flex-1 mb-8">
+                    {plan.features.map((f, fi) => (
+                      <li key={fi} className="flex items-start gap-2.5 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-[#00bfa5] shrink-0 mt-0.5" />
+                        {f}
+                      </li>
+                    ))}
+                    {plan.notIncluded.map((f, fi) => (
+                      <li key={fi} className="flex items-start gap-2.5 text-sm text-gray-600">
+                        <X className="w-4 h-4 text-gray-700 shrink-0 mt-0.5" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button
+                    onClick={() => handleWA(plan.waMsg)}
+                    className={`w-full font-poppins font-semibold py-3 rounded-lg transition-all duration-300 ${
+                      isGrowth
+                        ? 'bg-[#00bfa5] hover:bg-[#00a08a] text-white'
+                        : 'bg-[#1d70a2] hover:bg-[#155a88] text-white'
+                    }`}
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Quiero este plan
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
+
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Usuario adicional operativo: USD 25/mes · Usuario admin/visor: USD 12.5/mes
+          </p>
+        </div>
+      </section>
+
+      {/* ── MÓDULOS DETALLADOS CON TABS ───────────────────────── */}
+      <section className="py-20 sm:py-28 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
+              ¿Qué implementa Sixteam en cada plan?
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              No solo te entregamos acceso a la plataforma — configuramos, probamos y capacitamos a tu equipo.
+            </p>
+          </div>
+
+          {/* Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {plans.map(plan => (
+              <button
+                key={plan.id}
+                onClick={() => setActiveTab(plan.id as typeof activeTab)}
+                className={`px-6 py-3 rounded-lg font-poppins font-semibold text-sm transition-all duration-200 ${
+                  activeTab === plan.id
+                    ? 'bg-[#0a2342] text-white shadow-lg'
+                    : 'bg-white text-gray-600 border border-gray-200 hover:border-[#1d70a2] hover:text-[#1d70a2]'
+                }`}
+              >
+                {plan.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab content */}
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+            <div className="bg-gradient-to-r from-[#0a2342] to-[#1d70a2] p-8 text-white">
+              <h3 className="font-poppins font-bold text-2xl mb-2">{activePlan.name}</h3>
+              <p className="text-gray-300">{activePlan.desc}</p>
+            </div>
+            <div className="p-8">
+              <h4 className="font-poppins font-semibold text-gray-900 text-lg mb-6">Lo que configuramos e implementamos</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {activePlan.features.map((f, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                    <CheckCircle className="w-5 h-5 text-[#00bfa5] shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
+              {activePlan.notIncluded.length > 0 && (
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <h4 className="font-poppins font-semibold text-gray-500 text-sm mb-3">No incluido en este plan</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {activePlan.notIncluded.map((f, i) => (
+                      <span key={i} className="text-xs text-gray-400 bg-gray-100 px-3 py-1.5 rounded-full">{f}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={() => handleWA(activePlan.waMsg)}
+                  className="bg-[#0a2342] hover:bg-[#1d70a2] text-white font-poppins font-semibold px-8 py-3 rounded-lg transition-all duration-300"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Habla con un experto
+                </Button>
+                {activePlan.id !== 'growth' && (
+                  <Button
+                    variant="outline"
+                    onClick={() => setActiveTab(activePlan.id === 'inbox' ? 'core' : 'growth')}
+                    className="border-[#1d70a2] text-[#1d70a2] hover:bg-[#1d70a2]/5 font-poppins font-semibold px-8 py-3 rounded-lg"
+                  >
+                    Ver plan superior
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MATRIZ DE COMPARACIÓN ─────────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-[#0a2342]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
+              Compara todos los módulos
+            </h2>
+            <p className="text-gray-400 text-lg">Todos los planes sobre la misma base tecnológica de HighLevel.</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-white/10">
+                  <th className="text-left py-4 px-4 text-gray-400 font-poppins font-semibold text-sm w-1/2">Módulo / Capacidad</th>
+                  <th className="text-center py-4 px-4 text-gray-300 font-poppins font-semibold text-sm">Inbox + IA</th>
+                  <th className="text-center py-4 px-4 text-gray-300 font-poppins font-semibold text-sm">CRM Core</th>
+                  <th className="text-center py-4 px-4 text-[#00bfa5] font-poppins font-semibold text-sm">Growth</th>
+                </tr>
+              </thead>
+              <tbody>
+                {matrix.map((row, i) => (
+                  <tr key={i} className={`border-b border-white/5 ${i % 2 === 0 ? '' : 'bg-white/[0.02]'}`}>
+                    <td className="py-3.5 px-4 text-gray-300 text-sm">{row.feature}</td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.inbox
+                        ? <CheckCircle className="w-5 h-5 text-[#1d70a2] mx-auto" />
+                        : <X className="w-4 h-4 text-gray-700 mx-auto" />}
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.core
+                        ? <CheckCircle className="w-5 h-5 text-[#1d70a2] mx-auto" />
+                        : <X className="w-4 h-4 text-gray-700 mx-auto" />}
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      {row.growth
+                        ? <CheckCircle className="w-5 h-5 text-[#00bfa5] mx-auto" />
+                        : <X className="w-4 h-4 text-gray-700 mx-auto" />}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── POR QUÉ SOBRE HIGHLEVEL ───────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0a2342]/5 border border-[#0a2342]/10 rounded-full">
+                  <Shield className="w-4 h-4 text-[#1d70a2]" />
+                  <span className="text-[#1d70a2] font-medium text-sm font-poppins">Tecnología de clase enterprise</span>
+                </div>
+                <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl leading-tight">
+                  ¿Por qué la plataforma de Sixteam está sobre HighLevel?
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  HighLevel es la infraestructura elegida por miles de agencias en el mundo para construir operaciones digitales completas. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo — para que obtengas resultados desde el primer día.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    { icon: Zap, title: 'Todo integrado de origen', desc: 'CRM, IA, marketing, automatizaciones y canales en un solo sistema. Sin integraciones frágiles entre herramientas separadas.' },
+                    { icon: Bot, title: 'IA conversacional nativa', desc: 'Entrenada con tu información, conectada a tus canales, con handoff inteligente a tu equipo.' },
+                    { icon: Globe, title: 'API y conectividad total', desc: 'Se conecta con ERPs, e-commerce y cualquier sistema externo vía API, Webhooks y Marketplace apps.' },
+                    { icon: Star, title: 'Sixteam lo configura por ti', desc: 'No compras acceso a una herramienta — contratas una operación lista para producción.' },
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <li key={i} className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-[#0a2342] rounded-lg flex items-center justify-center shrink-0">
+                          <Icon className="w-5 h-5 text-[#00bfa5]" />
+                        </div>
+                        <div>
+                          <div className="font-poppins font-semibold text-gray-900 mb-1">{item.title}</div>
+                          <div className="text-gray-600 text-sm leading-relaxed">{item.desc}</div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Inbox, label: 'Bandeja omnicanal', color: '#1d70a2' },
+                  { icon: Bot, label: 'IA Conversacional', color: '#00bfa5' },
+                  { icon: BarChart3, label: 'CRM & Pipelines', color: '#1d70a2' },
+                  { icon: Zap, label: 'Automatizaciones', color: '#00bfa5' },
+                  { icon: Mail, label: 'Email Marketing', color: '#1d70a2' },
+                  { icon: Calendar, label: 'Agendamiento', color: '#00bfa5' },
+                  { icon: Globe, label: 'Funnels & Webs', color: '#1d70a2' },
+                  { icon: Star, label: 'Reputación', color: '#00bfa5' },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="bg-gray-50 border border-gray-100 rounded-xl p-5 flex flex-col items-center text-center gap-3 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: item.color + '15' }}>
+                        <Icon className="w-5 h-5" style={{ color: item.color }} />
+                      </div>
+                      <span className="text-gray-700 text-sm font-medium">{item.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ───────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
+                Preguntas frecuentes
+              </h2>
+              <p className="text-gray-600 text-lg">Todo lo que necesitas saber antes de empezar.</p>
+            </div>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <span className="font-poppins font-semibold text-gray-900 pr-4">{faq.q}</span>
+                    {openFaq === i
+                      ? <ChevronUp className="w-5 h-5 text-[#1d70a2] shrink-0" />
+                      : <ChevronDown className="w-5 h-5 text-gray-400 shrink-0" />}
+                  </button>
+                  {openFaq === i && (
+                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA FINAL ─────────────────────────────────────────── */}
+      <section className="py-20 sm:py-28 bg-gradient-to-br from-[#0a2342] via-[#0d2d52] to-[#0a2342] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,191,165,0.08)_0%,transparent_70%)]" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h2 className="font-poppins font-black text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
+              Empieza a operar con la plataforma que tu equipo necesita
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Una demo de 30 minutos es suficiente para ver cómo la plataforma Sixteam.pro se adapta a tu negocio. Sin compromisos.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => handleWA('Hola, quiero agendar una demo de la plataforma Sixteam.pro')}
+                className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-10 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Agenda tu demo gratis
+              </Button>
+              <Button
+                variant="outline"
+                asChild
+                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
+              >
+                <Link to="/contacto">Hablar con un experto</Link>
+              </Button>
+            </div>
+            <p className="text-gray-500 text-sm">
+              También puedes escribirnos a{' '}
+              <a href="mailto:alpha@sixteam.pro" className="text-[#00bfa5] hover:underline">alpha@sixteam.pro</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Plataforma;

@@ -17,6 +17,7 @@ import CrmMarketing from "./pages/servicios/CrmMarketing";
 import ChatbotIA from "./pages/servicios/ChatbotIA";
 import WhatsAppButton from "./components/WhatsAppButton";
 import RadarSixteam from "./pages/RadarSixteam";
+import Plataforma from "./pages/Plataforma";
 import DiagnosticoGratis from "./pages/radar/DiagnosticoGratis";
 import AntesDeInvertir from "./pages/radar/AntesDeInvertir";
 import OportunidadesPerdidas from "./pages/radar/OportunidadesPerdidas";
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/servicios/crm-atencion" element={<CrmAtencion />} />
             <Route path="/servicios/crm-marketing" element={<CrmMarketing />} />
             <Route path="/servicios/chatbot-ia" element={<ChatbotIA />} />
+            <Route path="/plataforma" element={<Plataforma />} />
             <Route path="/radar" element={<RadarSixteam />} />
             <Route path="/radar/diagnostico-gratis" element={<DiagnosticoGratis />} />
             <Route path="/radar/antes-de-invertir" element={<AntesDeInvertir />} />

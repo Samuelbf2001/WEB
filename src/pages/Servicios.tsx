@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { MessageCircle, Target, Headphones, Brain, Bot, CheckCircle, Zap, Clock, Users, ArrowRight } from 'lucide-react';
+import { MessageCircle, Target, Headphones, Brain, Bot, CheckCircle, Zap, Clock, Users, ArrowRight, Wrench } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
@@ -95,6 +95,27 @@ const Servicios = () => {
       ],
       waMessage: 'Hola%2C%20me%20interesa%20el%20servicio%20de%20Chatbot%20IA%20para%20WhatsApp',
       path: '/servicios/chatbot-ia',
+    },
+    {
+      icon: Wrench,
+      color: 'from-[#1d70a2] to-[#0a2342]',
+      iconColor: 'text-[#00bfa5]',
+      borderColor: 'border-[#1d70a2]/40',
+      tag: 'Soporte',
+      title: 'Soporte y Operaciones',
+      price: 'Desde $500.000 COP / mes',
+      time: 'Mensual',
+      description: 'Acompañamiento recurrente para mantener, ajustar y mejorar tu plataforma. Ejecutamos cambios, enviamos comunicaciones y hacemos seguimiento a tu operación para que tu equipo se enfoque en el negocio.',
+      deliverables: [
+        'Hasta 5–30 horas de soporte mensual',
+        'SLA de 4 horas en días hábiles',
+        'Ajustes de configuración en plataforma',
+        'Ejecución de comunicaciones y campañas',
+        'Mejoras en flujos y automatizaciones',
+        'Reporte mensual de actividades',
+      ],
+      waMessage: 'Hola%2C%20me%20interesa%20el%20servicio%20de%20Soporte%20y%20Operaciones',
+      path: '/servicios/soporte-operaciones',
     },
   ];
 

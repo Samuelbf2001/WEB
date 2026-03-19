@@ -15,6 +15,7 @@ import CrmVentas from "./pages/servicios/CrmVentas";
 import CrmAtencion from "./pages/servicios/CrmAtencion";
 import CrmMarketing from "./pages/servicios/CrmMarketing";
 import ChatbotIA from "./pages/servicios/ChatbotIA";
+import SoporteOperaciones from "./pages/servicios/SoporteOperaciones";
 import WhatsAppButton from "./components/WhatsAppButton";
 import RadarSixteam from "./pages/RadarSixteam";
 import Plataforma from "./pages/Plataforma";
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/servicios/crm-atencion" element={<CrmAtencion />} />
             <Route path="/servicios/crm-marketing" element={<CrmMarketing />} />
             <Route path="/servicios/chatbot-ia" element={<ChatbotIA />} />
+            <Route path="/servicios/soporte-operaciones" element={<SoporteOperaciones />} />
             <Route path="/plataforma" element={<Plataforma />} />
             <Route path="/radar" element={<RadarSixteam />} />
             <Route path="/radar/diagnostico-gratis" element={<DiagnosticoGratis />} />

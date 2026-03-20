@@ -448,7 +448,7 @@ const Inmobiliarias = () => {
 
                 <div className="mb-6">
                   <span className="text-xs font-medium px-3 py-1 rounded-full border mb-3 inline-block"
-                    style={{ color: plan.accent, borderColor: `${plan.accent}40`, background: `${plan.accent}10` }}>
+                    style={{ color: 'white', borderColor: `${plan.accent}99`, background: `${plan.accent}60` }}>
                     {plan.tag}
                   </span>
                   <h3 className="font-poppins font-bold text-white text-xl mb-2">{plan.name}</h3>

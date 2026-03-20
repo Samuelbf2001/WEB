@@ -188,7 +188,7 @@ const Plataforma = () => {
               <Button
                 variant="outline"
                 onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
               >
                 Ver planes y precios
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -370,7 +370,7 @@ const Plataforma = () => {
                   <Button
                     variant="outline"
                     onClick={() => setActiveTab(activePlan.id === 'inbox' ? 'core' : 'growth')}
-                    className="border-[#1d70a2] text-[#1d70a2] hover:bg-[#1d70a2]/5 font-poppins font-semibold px-8 py-3 rounded-lg"
+                    className="border-[#1d70a2] bg-transparent text-[#1d70a2] hover:bg-[#1d70a2]/5 hover:text-[#1d70a2] font-poppins font-semibold px-8 py-3 rounded-lg"
                   >
                     Ver plan superior
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -551,7 +551,7 @@ const Plataforma = () => {
               <Button
                 variant="outline"
                 asChild
-                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
               >
                 <Link to="/contacto">Hablar con un experto</Link>
               </Button>

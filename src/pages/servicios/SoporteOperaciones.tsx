@@ -224,7 +224,7 @@ const SoporteOperaciones = () => {
               <Button
                 variant="outline"
                 onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
               >
                 Ver planes
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -562,7 +562,7 @@ const SoporteOperaciones = () => {
               <Button
                 variant="outline"
                 asChild
-                className="border-white/30 text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-10 py-4 text-lg rounded-lg"
               >
                 <Link to="/contacto">Ver más información</Link>
               </Button>

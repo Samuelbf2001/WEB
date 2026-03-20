@@ -263,7 +263,7 @@ const Plataforma = () => {
                       <span className="font-poppins font-black text-white text-4xl">{plan.price}</span>
                       <span className="text-gray-400 text-sm">/mes</span>
                     </div>
-                    <div className="text-gray-500 text-sm">Implementación desde USD {plan.impl} · {plan.users} usuarios</div>
+                    <div className="text-gray-400 text-sm">Implementación desde USD {plan.impl} · {plan.users} usuarios</div>
                   </div>
 
                   <ul className="space-y-2.5 flex-1 mb-8">
@@ -274,8 +274,8 @@ const Plataforma = () => {
                       </li>
                     ))}
                     {plan.notIncluded.map((f, fi) => (
-                      <li key={fi} className="flex items-start gap-2.5 text-sm text-gray-600">
-                        <X className="w-4 h-4 text-gray-700 shrink-0 mt-0.5" />
+                      <li key={fi} className="flex items-start gap-2.5 text-sm text-gray-500">
+                        <X className="w-4 h-4 text-gray-500 shrink-0 mt-0.5" />
                         {f}
                       </li>
                     ))}
@@ -297,7 +297,7 @@ const Plataforma = () => {
             })}
           </div>
 
-          <p className="text-center text-gray-500 text-sm mt-8">
+          <p className="text-center text-gray-400 text-sm mt-8">
             Usuario adicional operativo: USD 25/mes · Usuario admin/visor: USD 12.5/mes
           </p>
         </div>

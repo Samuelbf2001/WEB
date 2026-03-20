@@ -145,9 +145,9 @@ const ChatbotIA = () => {
             <div className="bg-[#0a2342] rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-2">Inversión</h3>
               <div className="text-4xl font-bold text-green-400 mb-1">$1.000.000 COP</div>
-              <p className="text-gray-400 text-sm mb-2">Implementación única</p>
+              <p className="text-gray-300 text-sm mb-2">Implementación única</p>
               <div className="text-2xl font-bold text-teal-400 mb-1">+ $300.000 COP/mes</div>
-              <p className="text-gray-400 text-sm mb-6">Soporte y operación mensual</p>
+              <p className="text-gray-300 text-sm mb-6">Soporte y operación mensual</p>
               <ul className="space-y-3 mb-8">
                 {['Sin costos ocultos', 'Entregable en 2–3 semanas', 'Entrenamiento personalizado incluido', 'Escalable a más canales'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-gray-300 text-sm">

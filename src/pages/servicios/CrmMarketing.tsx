@@ -145,7 +145,7 @@ const CrmMarketing = () => {
             <div className="bg-[#0a2342] rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-2">Inversión</h3>
               <div className="text-4xl font-bold text-blue-400 mb-1">$1.500.000 COP</div>
-              <p className="text-gray-400 text-sm mb-6">Pago único por implementación completa</p>
+              <p className="text-gray-300 text-sm mb-6">Pago único por implementación completa</p>
               <ul className="space-y-3 mb-8">
                 {['Sin costos ocultos', 'Entregable en 4 semanas', '30 días de soporte incluido', 'Capacitación sin límite de usuarios'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-gray-300 text-sm">

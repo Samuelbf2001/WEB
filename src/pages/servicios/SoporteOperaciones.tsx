@@ -322,7 +322,7 @@ const SoporteOperaciones = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-                <div className="text-gray-500 font-poppins font-bold text-sm uppercase tracking-widest mb-6">Soporte técnico tradicional</div>
+                <div className="text-gray-400 font-poppins font-bold text-sm uppercase tracking-widest mb-6">Soporte técnico tradicional</div>
                 <ul className="space-y-4">
                   {[
                     'Reacciona cuando algo falla',
@@ -332,8 +332,8 @@ const SoporteOperaciones = () => {
                     'No propone mejoras proactivas',
                     'No tiene contexto acumulado de tu operación',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-500 text-sm">
-                      <span className="w-5 h-5 rounded-full border border-gray-700 flex items-center justify-center shrink-0 mt-0.5 text-gray-700 text-xs">✕</span>
+                    <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
+                      <span className="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center shrink-0 mt-0.5 text-gray-400 text-xs">✕</span>
                       {item}
                     </li>
                   ))}
@@ -426,7 +426,7 @@ const SoporteOperaciones = () => {
           </div>
 
           <p className="text-center text-gray-500 text-sm mt-6">
-            Las horas mensuales no son acumulables. Horas adicionales disponibles según el plan contratado.
+            Las horas mensuales no son acumulables · Horas adicionales disponibles según el plan contratado.
           </p>
         </div>
       </section>

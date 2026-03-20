@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-6 leading-relaxed max-w-sm">
               Transformamos tu negocio con CRM, automatizaciones e IA. Combinamos procesos, tecnología y personas para impulsar tu crecimiento digital.
             </p>
-            <div className="space-y-2 text-sm text-gray-400">
+            <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-teal-400 flex-shrink-0" />
                 <span>alpha@sixteam.pro</span>
@@ -52,7 +52,7 @@ const Footer = () => {
                 { name: 'Chatbot IA para WhatsApp', path: '/servicios/chatbot-ia' },
               ].map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-gray-400 hover:text-teal-400 transition-colors text-sm">
+                  <Link to={item.path} className="text-gray-300 hover:text-teal-400 transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -70,7 +70,7 @@ const Footer = () => {
                 { name: 'Contacto', path: '/contacto' },
               ].map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-gray-400 hover:text-teal-400 transition-colors text-sm">
+                  <Link to={item.path} className="text-gray-300 hover:text-teal-400 transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+        <div className="border-t border-white/10 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-300 text-sm">
           <p>&copy; 2025 Sixteam.pro. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <Link to="/politicas" className="hover:text-teal-400 transition-colors">

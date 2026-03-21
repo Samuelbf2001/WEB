@@ -5,8 +5,14 @@ import { MessageCircle, Target, Headphones, Brain, Bot, CheckCircle, Zap, Clock,
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 
 const Servicios = () => {
+  useSEO({
+    title: "Servicios de CRM, IA y Automatización — Sixteam.pro",
+    description: "Implementación de CRM, chatbots IA para WhatsApp, automatizaciones y RevOps. Conoce todos nuestros servicios para transformar tu operación comercial en Colombia.",
+  });
+
   const handleWhatsAppClick = (message: string = 'Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Sixteam.pro') => {
     window.open(`https://wa.me/+573023515392?text=${message}`, '_blank');
   };
@@ -269,7 +275,7 @@ const Servicios = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-blue-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center mb-4">

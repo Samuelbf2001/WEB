@@ -4,15 +4,21 @@ import {
   MessageCircle, ArrowLeft, CheckCircle, Clock, Zap, Globe,
   Code2, Settings, ChevronDown, ChevronUp, ShieldCheck,
   BarChart3, RefreshCcw, Users, TrendingUp, Target,
-  ArrowRight, Layers, AlertCircle, HandshakeIcon
+  ArrowRight, Layers, AlertCircle
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 
 const WA_BASE = 'https://wa.me/+573023515392?text=';
 
 const SoporteOperaciones = () => {
+  useSEO({
+    title: "RevOps y Soporte de Operaciones — Sixteam.pro | Operación CRM Mensual",
+    description: "Operación mensual de tu CRM con mejoras proactivas, reportes ejecutivos y SLA de 4 horas. Acompañamiento RevOps desde $500,000 COP/mes.",
+  });
+
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const handleWA = (msg: string) => {
@@ -164,6 +170,13 @@ const SoporteOperaciones = () => {
     },
   ];
 
+  const stats = [
+    { num: '+40%', label: 'Aumento en tasa de conversión de oportunidades en los primeros 90 días', color: 'text-[#00bfa5]' },
+    { num: '-60%', label: 'Reducción de tareas manuales repetitivas del equipo comercial', color: 'text-[#1d70a2]' },
+    { num: '100%', label: 'Visibilidad del pipeline y métricas de revenue en tiempo real', color: 'text-[#00bfa5]' },
+    { num: '3x', label: 'Más velocidad en ejecución de mejoras operativas vs. hacerlo internamente', color: 'text-[#1d70a2]' },
+  ];
+
   return (
     <div className="min-h-screen bg-white font-lato">
       <Header />
@@ -183,7 +196,7 @@ const SoporteOperaciones = () => {
           <div className="max-w-5xl space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
               <TrendingUp className="w-4 h-4 text-[#00bfa5]" />
-              <span className="text-[#00bfa5] font-medium text-sm font-poppins">Revenue Operations · Aliado estratégico · Equipo tech externo</span>
+              <span className="text-[#00bfa5] font-poppins font-medium text-sm">Revenue Operations · Aliado estratégico · Equipo tech externo</span>
             </div>
 
             <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
@@ -239,6 +252,7 @@ const SoporteOperaciones = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 space-y-4">
+              <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">El problema</p>
               <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
                 Lo que pasa cuando no tienes un equipo RevOps
               </h2>
@@ -256,7 +270,7 @@ const SoporteOperaciones = () => {
                 { problema: 'Dependencia de un solo técnico', desc: 'Todo el conocimiento del sistema está en una persona. Si sale, la operación se para.' },
                 { problema: 'Tecnología que no escala', desc: 'Tu stack creció de forma desordenada. Hay herramientas duplicadas, sin integrar y sin documentación.' },
               ].map((item, i) => (
-                <div key={i} className="bg-white border border-red-100 rounded-xl p-5 flex items-start gap-4">
+                <div key={i} className="bg-white border border-red-100 rounded-xl p-5 flex items-start gap-4 hover:border-red-200 hover:shadow-md transition-all duration-300">
                   <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-poppins font-semibold text-gray-900 mb-1 text-base">{item.problema}</h3>
@@ -268,7 +282,8 @@ const SoporteOperaciones = () => {
 
             <div className="mt-10 text-center">
               <p className="text-gray-700 text-lg font-medium">
-                Sixteam resuelve todo esto actuando como tu <span className="text-[#1d70a2] font-bold">equipo de RevOps externo</span>.
+                Sixteam resuelve todo esto actuando como tu{' '}
+                <span className="text-[#1d70a2] font-bold">equipo de RevOps externo</span>.
               </p>
             </div>
           </div>
@@ -279,6 +294,7 @@ const SoporteOperaciones = () => {
       <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
+            <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Lo que hacemos</p>
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
               Qué hace Sixteam como tu equipo RevOps
             </h2>
@@ -291,12 +307,15 @@ const SoporteOperaciones = () => {
             {quehacemos.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
-                  <div className="w-10 h-10 bg-[#0a2342] rounded-lg flex items-center justify-center mb-4">
+                <div
+                  key={i}
+                  className="bg-gradient-to-br from-[#0a2342] to-[#0d2d4f] border border-[#1d70a2]/30 rounded-xl p-6 hover:border-[#00bfa5]/50 transition-all duration-300"
+                >
+                  <div className="w-10 h-10 bg-[#00bfa5]/10 border border-[#00bfa5]/20 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5 text-[#00bfa5]" />
                   </div>
-                  <h3 className="font-poppins font-semibold text-gray-900 text-lg mb-2">{item.titulo}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-poppins font-semibold text-white text-lg mb-2">{item.titulo}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               );
             })}
@@ -315,8 +334,11 @@ const SoporteOperaciones = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10 space-y-4">
+              <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">La diferencia</p>
               <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl">
-                No somos un proveedor de soporte.<br />Somos tu aliado de Revenue Operations.
+                No somos un proveedor de soporte.
+                <br />
+                Somos tu aliado de Revenue Operations.
               </h2>
             </div>
 
@@ -363,10 +385,39 @@ const SoporteOperaciones = () => {
         </div>
       </section>
 
+      {/* ── RESULTADOS ────────────────────────────────────── */}
+      <section className="py-16 sm:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Resultados</p>
+              <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
+                Lo que logran nuestros clientes
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Basados en empresas que operamos como aliado RevOps en Colombia y Latam
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300"
+                >
+                  <div className={`text-4xl font-poppins font-black ${stat.color} mb-3`}>{stat.num}</div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PLANES ───────────────────────────────────────── */}
-      <section id="planes" className="py-16 sm:py-24 bg-gray-50">
+      <section id="planes" className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
+            <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Precios</p>
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
               Planes de RevOps mensual
             </h2>
@@ -375,7 +426,7 @@ const SoporteOperaciones = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {planes.map((plan, i) => (
               <div
                 key={i}
@@ -387,7 +438,7 @@ const SoporteOperaciones = () => {
               >
                 {plan.highlight && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00bfa5] text-white text-xs font-poppins font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
-                    ★ Más solicitado
+                    Más solicitado
                   </div>
                 )}
                 <div className="mb-6">
@@ -412,7 +463,7 @@ const SoporteOperaciones = () => {
 
                 <Button
                   onClick={() => handleWA(plan.waMsg)}
-                  className={`w-full font-poppins font-semibold py-3 rounded-lg transition-all duration-300 ${
+                  className={`w-full font-poppins font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105 ${
                     plan.highlight
                       ? 'bg-[#00bfa5] hover:bg-[#00a08a] text-white'
                       : 'bg-[#0a2342] hover:bg-[#1d70a2] text-white'
@@ -432,9 +483,10 @@ const SoporteOperaciones = () => {
       </section>
 
       {/* ── INICIATIVAS ESTRATÉGICAS ──────────────────────── */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
+            <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Proyectos adicionales</p>
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
               Iniciativas estratégicas
             </h2>
@@ -447,7 +499,7 @@ const SoporteOperaciones = () => {
             {iniciativas.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div key={i} className="border border-gray-200 rounded-xl p-6 hover:border-[#1d70a2]/40 hover:shadow-md transition-all duration-300">
+                <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#1d70a2]/40 hover:shadow-md transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#0a2342] rounded-xl flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-[#00bfa5]" />
@@ -473,9 +525,10 @@ const SoporteOperaciones = () => {
       </section>
 
       {/* ── CÓMO NOS INTEGRAMOS ───────────────────────────── */}
-      <section className="py-16 sm:py-24 bg-gray-50">
+      <section className="py-16 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
+            <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">El proceso</p>
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
               Cómo Sixteam se integra a tu operación
             </h2>
@@ -487,12 +540,12 @@ const SoporteOperaciones = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { step: '01', titulo: 'Diagnóstico RevOps', desc: 'Auditamos tu stack, tus procesos y el estado de tus datos para entender el punto de partida y priorizar el impacto.' },
-              { step: '02', titulo: 'Onboarding y accesos', desc: 'Nos integramos a tus plataformas y canales de comunicación. Definimos el roadmap del primer mes.' },
+              { step: '02', titulo: 'Onboarding y accesos', desc: 'Nos integramos a tus plataformas y canales de comunicación. Definimos el roadmap del primer mes con métricas claras.' },
               { step: '03', titulo: 'Operación continua', desc: 'Ejecutamos cada mes: ajustes, mejoras, automatizaciones, reportes y comunicaciones dentro de las horas contratadas.' },
               { step: '04', titulo: 'Revisión estratégica', desc: 'Reunión mensual para revisar resultados, ajustar prioridades y planificar la siguiente etapa de madurez digital.' },
             ].map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
-                <div className="w-14 h-14 bg-[#0a2342] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={i} className="text-center p-6 bg-gray-50 rounded-xl border border-gray-200 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#0a2342] to-[#1d70a2] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-[#00bfa5] font-poppins font-bold text-lg">{item.step}</span>
                 </div>
                 <h3 className="font-poppins font-bold text-gray-900 text-lg mb-2">{item.titulo}</h3>
@@ -504,17 +557,18 @@ const SoporteOperaciones = () => {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────── */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12 space-y-4">
+              <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Preguntas frecuentes</p>
               <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
-                Preguntas frecuentes
+                Todo lo que necesitas saber
               </h2>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
-                <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <div key={i} className="border border-gray-200 rounded-xl overflow-hidden hover:border-[#1d70a2]/40 transition-colors bg-white">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
@@ -525,7 +579,7 @@ const SoporteOperaciones = () => {
                       : <ChevronDown className="w-5 h-5 text-gray-400 shrink-0" />}
                   </button>
                   {openFaq === i && (
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm">
+                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 text-sm bg-gray-50">
                       {faq.a}
                     </div>
                   )}

@@ -14,6 +14,7 @@ const Header = () => {
     {
       name: 'Servicios',
       path: '/servicios',
+      showParentLink: true,
       submenu: [
         { name: 'CRM para Ventas', path: '/servicios/crm-ventas' },
         { name: 'CRM para Atención al Cliente', path: '/servicios/crm-atencion' },
@@ -24,13 +25,26 @@ const Header = () => {
     },
     { name: 'Plataforma', path: '/plataforma' },
     { name: 'Radar', path: '/radar' },
+    {
+      name: 'Industrias',
+      path: '/industrias/agencias-de-viaje',
+      activePath: '/industrias',
+      showParentLink: false,
+      submenu: [
+        { name: 'Agencias de Viaje', path: '/industrias/agencias-de-viaje' },
+        { name: 'Inmobiliarias', path: '/industrias/inmobiliarias' },
+        { name: 'Servicios Generales', path: '/industrias/servicios-generales' },
+      ],
+    },
     { name: 'Casos de Éxito', path: '/casos-exito' },
     { name: 'Nosotros', path: '/nosotros' },
     { name: 'Contacto', path: '/contacto' },
   ];
 
-  const isActive = (path: string) =>
-    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+  const isActive = (path: string, activePath?: string) => {
+    const checkPath = activePath ?? path;
+    return checkPath === '/' ? location.pathname === '/' : location.pathname.startsWith(checkPath);
+  };
 
   const closeMobile = () => {
     setIsMobileMenuOpen(false);
@@ -74,7 +88,7 @@ const Header = () => {
                 <Link
                   to={item.path}
                   className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
+                    isActive(item.path, (item as any).activePath)
                       ? 'text-[#00bfa5]'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
@@ -142,7 +156,7 @@ const Header = () => {
                       {/* Item con submenu: toggle acordeón */}
                       <button
                         className={`w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
-                          isActive(item.path) ? 'text-[#00bfa5]' : 'text-gray-200 hover:text-white hover:bg-white/5'
+                          isActive(item.path, (item as any).activePath) ? 'text-[#00bfa5]' : 'text-gray-200 hover:text-white hover:bg-white/5'
                         }`}
                         onClick={() => toggleMobileExpand(item.name)}
                       >
@@ -154,14 +168,16 @@ const Header = () => {
 
                       {mobileExpandedItem === item.name && (
                         <div className="ml-3 mb-2 border-l-2 border-[#1d70a2]/40 pl-4 flex flex-col gap-0.5">
-                          {/* Link directo a la página padre */}
-                          <Link
-                            to={item.path}
-                            className="py-2 text-sm text-gray-400 hover:text-[#00bfa5] transition-colors"
-                            onClick={closeMobile}
-                          >
-                            Ver todos los servicios →
-                          </Link>
+                          {/* Link directo a la página padre (sólo si tiene página índice propia) */}
+                          {item.showParentLink && (
+                            <Link
+                              to={item.path}
+                              className="py-2 text-sm text-gray-400 hover:text-[#00bfa5] transition-colors"
+                              onClick={closeMobile}
+                            >
+                              Ver todos los servicios →
+                            </Link>
+                          )}
                           {item.submenu.map((sub) => (
                             <Link
                               key={sub.path}

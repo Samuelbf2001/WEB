@@ -8,8 +8,38 @@ import {
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ChatWidget from '@/components/ChatWidget';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
+
+const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro para el servicio de RevOps Externo / Soporte de Operaciones.
+Página: /servicios/soporte-operaciones
+
+SERVICIO: Operación mensual del CRM y stack tecnológico de revenue como equipo externo. Sixteam actúa como el equipo de RevOps que la empresa no tiene internamente.
+
+QUÉ ES REVOPS: Revenue Operations (RevOps) alinea ventas, marketing y servicio al cliente alrededor de datos, procesos y tecnología compartidos para maximizar ingresos.
+
+QUÉ HACEMOS CADA MES:
+- Operamos y mantenemos el CRM, automatizaciones y pipelines
+- Ejecutamos mejoras proactivas de proceso y configuración
+- Diseñamos y construimos automatizaciones de revenue
+- Generamos reportes ejecutivos con KPIs de negocio
+- Alineamos ventas, marketing y servicio al cliente
+
+PLANES:
+- RevOps Starter: $500.000 COP/mes — 5 horas, SLA 4h
+- RevOps Operativo: desde $1.250.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
+- RevOps Avanzado: desde $2.500.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
+
+DIFERENCIAL: No somos soporte reactivo. Somos proactivos — cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
+SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
+
+const EXAMPLE_QUESTIONS = [
+  '¿Qué hace un equipo RevOps?',
+  '¿Cuál plan me conviene?',
+  '¿Necesito ya tener CRM?',
+  '¿Cuántas horas incluye cada plan?',
+];
 
 const WA_BASE = 'https://wa.me/+573023515392?text=';
 
@@ -193,55 +223,64 @@ const SoporteOperaciones = () => {
             Volver a Servicios
           </Link>
 
-          <div className="max-w-5xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
-              <TrendingUp className="w-4 h-4 text-[#00bfa5]" />
-              <span className="text-[#00bfa5] font-poppins font-medium text-sm">Revenue Operations · Aliado estratégico · Equipo tech externo</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
+                <TrendingUp className="w-4 h-4 text-[#00bfa5]" />
+                <span className="text-[#00bfa5] font-poppins font-medium text-sm">Revenue Operations · Aliado estratégico · Equipo tech externo</span>
+              </div>
+
+              <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+                Tu equipo de{' '}
+                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
+                  RevOps externo
+                </span>
+              </h1>
+
+              <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
+                Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno, sin el costo de serlo. CRM, automatizaciones, integraciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                {[
+                  { icon: Target, label: 'Ventas + Marketing + Servicio alineados' },
+                  { icon: Clock, label: 'SLA 4 horas en días hábiles' },
+                  { icon: TrendingUp, label: 'Mejora continua mes a mes' },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i} className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+                      <Icon className="w-4 h-4 text-[#00bfa5]" />
+                      <span className="text-white font-medium text-sm">{item.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Button
+                  onClick={() => handleWA('Hola, quiero conocer cómo Sixteam puede ser mi equipo de RevOps externo')}
+                  className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Habla con un experto RevOps
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+                >
+                  Ver planes
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
             </div>
-
-            <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-              Tu equipo de{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                RevOps externo
-              </span>
-            </h1>
-
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-              Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno, sin el costo de serlo. CRM, automatizaciones, integraciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-2">
-              {[
-                { icon: Target, label: 'Ventas + Marketing + Servicio alineados' },
-                { icon: Clock, label: 'SLA 4 horas en días hábiles' },
-                { icon: TrendingUp, label: 'Mejora continua mes a mes' },
-              ].map((item, i) => {
-                const Icon = item.icon;
-                return (
-                  <div key={i} className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                    <Icon className="w-4 h-4 text-[#00bfa5]" />
-                    <span className="text-white font-medium text-sm">{item.label}</span>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button
-                onClick={() => handleWA('Hola, quiero conocer cómo Sixteam puede ser mi equipo de RevOps externo')}
-                className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Habla con un experto RevOps
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
-              >
-                Ver planes
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+            <div className="w-full">
+              <ChatWidget
+                pageContext={PAGE_CONTEXT}
+                initialMessage="¡Hola! Soy el asistente de Sixteam. ¿Tienes preguntas sobre nuestro servicio de RevOps externo o quieres saber cuál plan te conviene?"
+                exampleQuestions={EXAMPLE_QUESTIONS}
+              />
             </div>
           </div>
         </div>

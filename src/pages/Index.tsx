@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { gtm } from '@/lib/gtm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
@@ -7,8 +8,14 @@ import Footer from '@/components/Footer';
 import ChatSection from '@/components/ChatSection';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 
 const Index = () => {
+  useSEO({
+    title: 'Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia',
+    description: 'Transformamos tu negocio con CRM, automatizaciones e IA. Implementamos GoHighLevel, pipelines de ventas, chatbots IA y RevOps para empresas en Colombia y Latinoamérica.',
+  });
+
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [animationsLoaded, setAnimationsLoaded] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -66,6 +73,9 @@ const Index = () => {
   // Efecto para dibujar líneas de conexión dinámicas entre puntos
   useEffect(() => {
     if (!animationsLoaded) return;
+
+    // Respect user's reduced-motion preference and skip heavy canvas animation
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const canvas = document.getElementById('connectionLines') as HTMLCanvasElement;
     if (!canvas) return;
@@ -234,6 +244,7 @@ const Index = () => {
   }, [animationsLoaded]);
 
   const handleWhatsAppClick = () => {
+    gtm.ctaClick('hero_cta', 'home_hero');
     window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20agendar%20una%20cita%20para%20conocer%20más%20sobre%20los%20servicios%20de%20Sixteam.pro', '_blank');
   };
 
@@ -412,7 +423,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-lato">
+    <div className="min-h-screen bg-[#0a2342] font-lato">
       <Header />
 
       {/* Hero Section Profesional */}
@@ -616,7 +627,7 @@ const Index = () => {
             <div className="flex justify-center items-center pt-3 sm:pt-4 lg:pt-6 px-4 sm:px-0">
               <Button
                 onClick={handleWhatsAppClick}
-                className="w-full sm:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 max-w-sm sm:max-w-none"
+                className="w-full sm:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 bg-[#00bfa5] hover:bg-[#00a08a] text-white rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 max-w-sm sm:max-w-none"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 <span className="text-sm sm:text-base lg:text-lg">Solicita un Diagnóstico Inicial SIN COSTO</span>
@@ -632,7 +643,7 @@ const Index = () => {
       <ChatSection />
 
       {/* Ecosistema de IA - Sección Profesional */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 lg:py-24 bg-[#0a2342] overflow-hidden">
         {/* Fondo sutil */}
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{
@@ -644,48 +655,48 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Título de sección para C-Level */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-gray-100 border border-gray-200 rounded-full">
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-[#1d70a2]/10 border border-[#1d70a2]/20 rounded-full">
               <div className="text-sm font-bold font-poppins tracking-tight whitespace-nowrap">
-                <span className="text-gray-800">Process</span>
-                <span className="text-gray-800 mx-1">+</span>
-                <span className="text-gray-800">Technology</span>
-                <span className="text-gray-800 mx-1">+</span>
-                <span className="text-blue-600">People</span>
-                <span className="text-gray-800 mx-1">=</span>
-                <span className="text-green-600 font-bold">Growth</span>
+                <span className="text-white">Process</span>
+                <span className="text-white mx-1">+</span>
+                <span className="text-white">Technology</span>
+                <span className="text-white mx-1">+</span>
+                <span className="text-[#00bfa5]">People</span>
+                <span className="text-white mx-1">=</span>
+                <span className="text-green-400 font-bold">Growth</span>
               </div>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight px-4 sm:px-0">
               Revenue Operations
               <br />
-              <span className="text-blue-600">Impulsado por IA</span>
+              <span className="text-[#00bfa5]">Impulsado por IA</span>
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 px-4 sm:px-6 lg:px-0">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#e0e0e0] leading-relaxed">
                 Transformamos tu negocio con estrategia de Operaciones de Ingresos (Revenue Operations) y tecnología que conecta todas tus áreas, reduce costos, optimiza procesos y te permite tomar decisiones informadas en tiempo real.
               </p>
-              <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#e0e0e0]/70 leading-relaxed">
                 Implementamos procesos avanzados, desde la calificación automática de leads hasta la gestión proactiva de clientes, para que aumentes el valor de cada cliente y bajes tus costos de adquisición.
               </p>
 
               {/* Métricas específicas RevOps + IA */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 pt-8 sm:pt-12 px-4 sm:px-0">
-                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-gray-100 rounded-xl border border-gray-200">
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-600">40%</div>
-                  <div className="text-gray-700 text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Reducción CAC (Customer Acquisition Cost)</div>
-                  <div className="text-gray-500 text-xs">vs. procesos manuales tradicionales</div>
+                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-[#1d70a2]/10 rounded-xl border border-[#1d70a2]/20">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00bfa5]">40%</div>
+                  <div className="text-[#e0e0e0] text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Reducción CAC (Customer Acquisition Cost)</div>
+                  <div className="text-[#e0e0e0]/70 text-xs">vs. procesos manuales tradicionales</div>
                 </div>
-                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-gray-100 rounded-xl border border-gray-200">
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-600">3.2x</div>
-                  <div className="text-gray-700 text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Incremento en Lead-to-Customer Rate</div>
-                  <div className="text-gray-500 text-xs">con scoring predictivo + nurturing IA</div>
+                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-[#1d70a2]/10 rounded-xl border border-[#1d70a2]/20">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00bfa5]">3.2x</div>
+                  <div className="text-[#e0e0e0] text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Incremento en Lead-to-Customer Rate</div>
+                  <div className="text-[#e0e0e0]/70 text-xs">con scoring predictivo + nurturing IA</div>
                 </div>
-                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-gray-100 rounded-xl border border-gray-200 sm:col-span-2 lg:col-span-1">
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-600">85%</div>
-                  <div className="text-gray-700 text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Automatización Sales Pipeline</div>
-                  <div className="text-gray-500 text-xs">desde lead capture hasta customer success</div>
+                <div className="text-center space-y-3 sm:space-y-4 p-4 sm:p-6 bg-[#1d70a2]/10 rounded-xl border border-[#1d70a2]/20 sm:col-span-2 lg:col-span-1">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00bfa5]">85%</div>
+                  <div className="text-[#e0e0e0] text-xs sm:text-sm tracking-wide uppercase font-medium px-2">Automatización Sales Pipeline</div>
+                  <div className="text-[#e0e0e0]/70 text-xs">desde lead capture hasta customer success</div>
                 </div>
               </div>
             </div>
@@ -695,32 +706,32 @@ const Index = () => {
       </section>
 
       {/* Herramientas y Tecnologías */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-gray-50 overflow-hidden">
+      <section className="relative py-12 sm:py-16 lg:py-24 bg-[#081c36] overflow-hidden">
         {/* Elementos decorativos sutiles */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-32 sm:w-64 h-32 sm:h-64 bg-blue-100/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-40 sm:w-80 h-40 sm:h-80 bg-teal-100/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-32 sm:w-64 h-32 sm:h-64 bg-[#1d70a2]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-40 sm:w-80 h-40 sm:h-80 bg-[#00bfa5]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-white border border-gray-200 rounded-full shadow-sm">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-              <span className="text-gray-700 font-medium text-xs sm:text-sm tracking-wide">TECNOLOGÍAS LÍDERES</span>
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-full">
+              <div className="w-2 h-2 bg-[#00bfa5] rounded-full"></div>
+              <span className="text-[#e0e0e0] font-medium text-xs sm:text-sm tracking-wide">TECNOLOGÍAS LÍDERES</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight px-4 sm:px-0">
               Herramientas que
               <br />
-              <span className="text-blue-600">Utilizamos</span>
+              <span className="text-[#00bfa5]">Utilizamos</span>
             </h2>
 
             <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 px-4 sm:px-6 lg:px-0">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#e0e0e0] leading-relaxed">
                 Trabajamos con las mejores plataformas y herramientas del mercado para garantizar
                 resultados excepcionales en tu transformación digital.
               </p>
-              <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#e0e0e0]/70 leading-relaxed">
                 Cada herramienta está cuidadosamente seleccionada para maximizar
                 el rendimiento y la escalabilidad de tu operación.
               </p>
@@ -745,7 +756,7 @@ const Index = () => {
                 {partnerLogos.map((logo, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4 lg:basis-1/5">
                     <div className="p-1">
-                      <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm">
+                      <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300 bg-[#0d2d52] backdrop-blur-sm">
                         <CardContent className="flex items-center justify-center p-3 overflow-hidden" style={{ aspectRatio: '4/3' }}>
                           <img
                             src={logo.src}
@@ -775,7 +786,7 @@ const Index = () => {
           <div className="text-center mt-12 sm:mt-16 px-4 sm:px-0">
             <Button
               onClick={handleWhatsAppClick}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#1d70a2] hover:bg-[#1d70a2]/80 text-white rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
             >
               <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               <span className="text-sm sm:text-base lg:text-lg">Conoce Nuestras Integraciones</span>
@@ -1094,7 +1105,7 @@ const Index = () => {
       </section>
 
       {/* Nuestro Ciclo de Servicio */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-gray-50 overflow-hidden">
+      <section className="relative py-12 sm:py-16 lg:py-24 bg-[#081c36] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle, rgba(100, 116, 139, 0.08) 1px, transparent 1px)',
@@ -1104,13 +1115,13 @@ const Index = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 leading-tight px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight px-4 sm:px-0">
               Nuestro Ciclo de Servicio para tu
               <br />
-              <span className="text-blue-600">Transformación Digital</span>
+              <span className="text-[#00bfa5]">Transformación Digital</span>
             </h2>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#e0e0e0] leading-relaxed">
                 Entendemos que la verdadera transformación digital no se logra de manera aislada, sino con un socio estratégico que facilite este proceso. Por eso, diseñamos un ciclo de servicio para acompañarte en cada etapa y garantizar el resultado deseado.
               </p>
             </div>
@@ -1119,17 +1130,17 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-0">
             {services.map((service, index) => (
               <div key={index} className="group relative">
-                <Link to={service.path} className="block bg-white border border-gray-200 rounded-xl p-6 sm:p-8 hover:border-blue-300 hover:shadow-lg transition-all duration-300 h-full">
+                <Link to={service.path} className="block bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-xl p-6 sm:p-8 hover:border-[#00bfa5]/50 hover:shadow-lg transition-all duration-300 h-full">
                   <div className="flex items-center justify-center mb-6 sm:mb-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#1d70a2]/20 rounded-lg flex items-center justify-center">
                       <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base text-center mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">{service.title}</h3>
+                  <p className="text-[#e0e0e0] leading-relaxed text-sm sm:text-base text-center mb-4">
                     {service.description}
                   </p>
-                  <p className="text-blue-600 text-sm font-semibold text-center group-hover:underline">Ver detalles →</p>
+                  <p className="text-[#00bfa5] hover:text-[#00bfa5]/80 text-sm font-semibold text-center group-hover:underline">Ver detalles →</p>
                 </Link>
               </div>
             ))}
@@ -1138,7 +1149,7 @@ const Index = () => {
           <div className="text-center px-4 sm:px-0">
             <Button
               onClick={handleWhatsAppClick}
-              className="w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-lg font-semibold text-base sm:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
+              className="w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 bg-[#1d70a2] hover:bg-[#1d70a2]/80 text-white rounded-lg font-semibold text-base sm:text-lg lg:text-xl transition-all duration-300 shadow-lg hover:shadow-xl max-w-md sm:max-w-none"
             >
               <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
               <span className="text-sm sm:text-base lg:text-lg">Conoce más sobre estos servicios</span>
@@ -1165,6 +1176,7 @@ const Index = () => {
                   src="/lovable-uploads/3b066a0e-1bea-4907-b036-3b460d543754.png"
                   alt="Sixteam.pro Logo"
                   className="w-4 h-4 sm:w-5 sm:h-5"
+                  loading="lazy"
                 />
                 <span className="text-gray-200 font-medium text-xs sm:text-sm tracking-wide">Sixteam.pro</span>
               </div>
@@ -1248,27 +1260,27 @@ const Index = () => {
       </section>
 
       {/* Casos de Éxito Elite */}
-      <section className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden">
+      <section className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-[#081c36] via-[#0a2342] to-[#081c36] overflow-hidden">
         {/* Elementos decorativos flotantes */}
         <div className="absolute inset-0">
-          <div className="absolute top-8 sm:top-16 right-8 sm:right-16 w-16 sm:w-32 h-16 sm:h-32 border border-blue-200 rounded-full opacity-30 animate-spin" style={{ animationDuration: '20s' }}></div>
-          <div className="absolute bottom-8 sm:bottom-16 left-8 sm:left-16 w-24 sm:w-48 h-24 sm:h-48 border border-gray-200 rounded-full opacity-20 animate-spin" style={{ animationDuration: '30s' }}></div>
+          <div className="absolute top-8 sm:top-16 right-8 sm:right-16 w-16 sm:w-32 h-16 sm:h-32 border border-[#1d70a2]/30 rounded-full opacity-30 animate-spin" style={{ animationDuration: '20s' }}></div>
+          <div className="absolute bottom-8 sm:bottom-16 left-8 sm:left-16 w-24 sm:w-48 h-24 sm:h-48 border border-[#1d70a2]/20 rounded-full opacity-20 animate-spin" style={{ animationDuration: '30s' }}></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-green-50 border border-green-200 rounded-full mb-4 sm:mb-6">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-600 font-medium text-xs sm:text-sm">Resultados Verificados</span>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-4 sm:mb-6">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400 font-medium text-xs sm:text-sm">Resultados Verificados</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 px-4 sm:px-0">
-              <span className="text-gray-900">Transformaciones</span>
+              <span className="text-white">Transformaciones</span>
               <br />
-              <span className="text-blue-600">de Alto Impacto</span>
+              <span className="text-[#00bfa5]">de Alto Impacto</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 lg:px-0">
+            <p className="text-lg sm:text-xl text-[#e0e0e0] max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 lg:px-0">
               Empresas líderes confían en nosotros para revolucionar sus operaciones
               con inteligencia artificial y automatización de vanguardia.
             </p>
@@ -1286,7 +1298,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 {/* Card principal */}
-                <div className="relative bg-white border border-gray-200 rounded-3xl p-10 hover:border-blue-300 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                <div className="relative bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-3xl p-10 hover:border-[#00bfa5]/50 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
 
                   {/* Header con estrellas y badge */}
                   <div className="flex items-center justify-between mb-8">
@@ -1295,33 +1307,33 @@ const Index = () => {
                         <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <div className="px-3 py-1 bg-green-100 text-green-600 text-sm font-medium rounded-full">
+                    <div className="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-medium rounded-full border border-green-500/30">
                       VERIFICADO
                     </div>
                   </div>
 
                   {/* Quote con diseño elegante */}
                   <div className="relative mb-8">
-                    <div className="absolute -top-4 -left-4 text-6xl text-blue-200 font-serif">"</div>
-                    <p className="text-lg text-gray-700 leading-relaxed italic relative z-10 pl-8">
+                    <div className="absolute -top-4 -left-4 text-6xl text-[#1d70a2]/50 font-serif">"</div>
+                    <p className="text-lg text-[#e0e0e0] leading-relaxed italic relative z-10 pl-8">
                       {testimonial.text}
                     </p>
-                    <div className="absolute -bottom-4 -right-4 text-6xl text-blue-200 font-serif rotate-180">"</div>
+                    <div className="absolute -bottom-4 -right-4 text-6xl text-[#1d70a2]/50 font-serif rotate-180">"</div>
                   </div>
 
                   {/* Información del cliente con avatar */}
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    <div className="w-16 h-16 bg-[#1d70a2] rounded-full flex items-center justify-center text-white font-bold text-xl">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
-                      <p className="text-gray-600 font-medium">{testimonial.company}</p>
+                      <p className="font-bold text-white text-lg">{testimonial.name}</p>
+                      <p className="text-[#e0e0e0] font-medium">{testimonial.company}</p>
                     </div>
                   </div>
 
                   {/* Línea decorativa */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-blue-600 rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-[#00bfa5] rounded-full"></div>
                 </div>
               </div>
             ))}

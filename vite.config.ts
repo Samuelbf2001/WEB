@@ -16,7 +16,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Separar dependencias grandes
-          'react-vendor': ['react', 'react-dom'],
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['lucide-react'],
           'carousel-vendor': ['embla-carousel-react']
         }

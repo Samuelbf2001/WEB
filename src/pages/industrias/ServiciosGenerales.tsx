@@ -1,248 +1,253 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   MessageCircle, CheckCircle, ArrowRight, Bot, BarChart3,
-  Inbox, Users, Zap, Globe, Calendar, TrendingUp, Clock,
+  Inbox, Users, Zap, Globe, TrendingUp, Clock,
   AlertCircle, ChevronDown, ChevronUp, Mail,
-  Wrench, Star, RefreshCw, FileText, Target, Phone, Settings
+  Wrench, Star, FileText, Quote, Send,
+  ShieldCheck, Sparkles, Target, Repeat, DollarSign
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 
-const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro especializada para empresas de servicios generales.
+const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro especializada para empresas de servicios profesionales y consultoría.
 Página: /industrias/servicios-generales
 
-PROPUESTA DE VALOR: Ayudamos a empresas de servicios a ordenar su operación y cerrar más negocios con CRM, automatizaciones e IA, sin depender del esfuerzo manual del equipo.
+PROPUESTA DE VALOR: Ayudamos a empresas de servicios a cerrar más propuestas, gestionar clientes recurrentes y crecer sin necesidad de contratar más personal administrativo.
 
 PROBLEMAS QUE RESOLVEMOS (pain points):
-- Llamadas y mensajes sin control: solicitudes por WhatsApp, llamadas y email simultáneas sin sistema centralizado
-- Agenda desorganizada: técnicos con su propia agenda en papel, choques de horarios y visitas olvidadas
-- Seguimiento que depende de la memoria: si el asesor no recuerda llamar, el cliente se pierde
-- Cotizaciones sin respuesta: se envía el presupuesto y el cliente desaparece sin follow-up automático
-- Información dispersa: cada técnico maneja sus propios clientes, cuando alguien sale la info se va con él
-- Clientes que no renuevan: no hay sistema para recordar mantenimientos periódicos o nuevas contrataciones
+- Follow-up perdido en propuestas: se envía la propuesta y si el cliente no responde nadie hace seguimiento sistemático
+- Sin gestión de clientes recurrentes: no hay sistema para programar renovaciones, mantenimientos o re-contrataciones
+- Recordatorios de cobro manuales: el equipo debe acordarse de enviar recordatorios de pago uno a uno
+- Sin rastreo de referidos: no saben qué clientes traen nuevos clientes ni cuánto revenue generan
+- Historial de clientes disperso: cada ejecutivo maneja su cartera por separado sin visibilidad centralizada
+- Propuestas que mueren en el correo: sin un pipeline de propuestas, nadie sabe cuántas están pendientes ni en qué estado
 
 SOLUCIONES / FUNCIONALIDADES:
-- Bandeja omnicanal unificada: WhatsApp, Instagram, Facebook, email y web en una sola pantalla
-- Agente IA 24/7: recibe solicitud, pregunta tipo de servicio, ubicación y urgencia, asigna al técnico correcto
-- Agendamiento automático con recordatorios: confirmación, recordatorio 24h antes, mensaje el día de la cita
-- Pipeline de servicios por etapa: Solicitud → Cotización → Aprobada → En curso → Completado → Facturado
-- Seguimiento automático post-cotización: recordatorio a las 24h, alerta al asesor a las 48h
-- Reportes de rendimiento: solicitudes recibidas, cotizadas, cerradas y facturación por técnico y canal
+- CRM de propuestas con seguimiento automático: pipeline visual y follow-ups automáticos a las 24h, 72h y 7 días
+- Automatización de clientes recurrentes: recordatorios de renovación, alertas de vencimiento y re-contratación programada
+- Secuencias de cobro automáticas: recordatorio amable previo al vencimiento, recordatorio en fecha y alerta de mora
+- Pipeline de referidos: rastreo de qué clientes refieren, cuántos negocios traen y cuánto revenue representan
+- Historial centralizado: todas las propuestas, contratos, comunicaciones y facturas de cada cliente en un solo lugar
+- Bandeja omnicanal: WhatsApp, email, Instagram y web en una sola pantalla para todo el equipo
 
 CÓMO FUNCIONA (4 pasos):
-1. Cliente solicita servicio por WhatsApp, web, Instagram o llamada
-2. IA califica: tipo de servicio, ubicación, urgencia y asigna al técnico disponible
-3. Equipo agenda con recordatorios automáticos y el CRM hace el seguimiento de cotización
-4. Post-servicio: encuesta de satisfacción y recordatorio automático de mantenimiento periódico
+1. Lead o solicitud entra por WhatsApp, web, email o referido
+2. CRM captura y crea la oportunidad en el pipeline de propuestas
+3. El equipo envía la propuesta — el sistema hace el seguimiento automático
+4. Cliente cerrado: activación de recordatorios de renovación y programa de referidos
 
 PLANES Y PRECIOS:
-- Sixteam Inbox + IA: $149 USD/mes + $250 USD implementación. Bandeja omnicanal, IA 24/7, captura de tipo/ubicación/urgencia, 2 usuarios
-- CRM Sixteam Core: $200 USD/mes + $500 USD implementación. Todo lo anterior + pipeline de servicios, agendamiento con recordatorios, seguimiento post-cotización, campañas de reactivación, reportes por técnico, 3 usuarios
+- Sixteam Inbox + IA: $149 USD/mes + $250 USD implementación. Bandeja omnicanal, IA 24/7, captura de solicitudes, 2 usuarios
+- CRM Sixteam Core: $200 USD/mes + $500 USD implementación. Todo lo anterior + pipeline de propuestas, automatizaciones de seguimiento y renovación, secuencias de cobro, pipeline de referidos, 3 usuarios
 - RevOps Externo: desde $500.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
 
-RESULTADOS ESPERADOS: -65% tiempo de respuesta, +45% cotizaciones convertidas, atención 24/7, 3× más clientes fidelizados.
+RESULTADOS ESPERADOS: +28% tasa de cierre de propuestas, -60% tiempo administrativo, crecimiento del 40% sin añadir personal, nunca más un seguimiento olvidado.
 
-IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español. Funciona para técnicos en campo con acceso móvil.`;
+IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español.`;
 
 const EXAMPLE_QUESTIONS = [
-  '¿Funciona para técnicos en campo?',
-  '¿El bot puede dar cotizaciones automáticas?',
-  '¿Cómo funciona el agendamiento?',
-  '¿Puedo enviar recordatorios de mantenimiento?',
+  '¿Funciona para consultoría y servicios profesionales?',
+  '¿El sistema puede enviar recordatorios de cobro?',
+  '¿Cómo funciona el pipeline de propuestas?',
+  '¿Puedo rastrear mis clientes referidos?',
 ];
 
-const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20tengo%20una%20empresa%20de%20servicios%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20automatizar%20mis%20procesos';
+const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20tengo%20una%20empresa%20de%20servicios%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20crecer%20sin%20m%C3%A1s%20carga%20administrativa';
 
 const handleWA = () => window.open(WA_URL, '_blank');
 
 const painPoints = [
   {
-    icon: Phone,
-    title: 'Llamadas y mensajes sin control',
-    desc: 'Los clientes llaman, escriben por WhatsApp y mandan correos al mismo tiempo. Sin un sistema centralizado, las solicitudes se pierden y queda mal el servicio.',
-  },
-  {
-    icon: Calendar,
-    title: 'Agenda desorganizada',
-    desc: 'Los técnicos y ejecutivos tienen su propia agenda en papel o en el celular. Hay choques de horarios, visitas olvidadas y clientes que esperan sin saber cuándo llegan.',
-  },
-  {
-    icon: Clock,
-    title: 'Seguimiento que depende de la memoria',
-    desc: 'Si el asesor no recuerda llamar, el cliente se pierde. No hay automatización que haga el follow-up cuando el equipo está ocupado atendiendo otros servicios.',
-  },
-  {
     icon: FileText,
-    title: 'Cotizaciones sin respuesta',
-    desc: 'Envías la cotización y el cliente desaparece. Sin un proceso automatizado de seguimiento, ese presupuesto queda en el aire y el negocio no cierra.',
+    title: 'Propuestas enviadas que nadie sigue',
+    desc: 'Envías la propuesta por correo, el cliente queda en silencio y nadie hace seguimiento. Sin un proceso automático de follow-up a las 24h, 72h y 7 días, ese negocio simplemente muere sin que nadie lo note.',
+  },
+  {
+    icon: Repeat,
+    title: 'Clientes recurrentes que se te escapan',
+    desc: 'Prestaste un servicio de 6 meses que vence pronto. Sin un sistema que te alerte y que le envíe al cliente una propuesta de renovación a tiempo, ese contrato simplemente no se renueva — y tienes que volver a cazarlo.',
+  },
+  {
+    icon: DollarSign,
+    title: 'Recordatorios de cobro manuales y vergonzosos',
+    desc: 'Tu equipo tiene que acordarse de enviar cada recordatorio de pago, una a una, por WhatsApp o correo. Se olvidan, se retrasan o simplemente evitan la incomodidad — y el flujo de caja sufre.',
   },
   {
     icon: Users,
-    title: 'Información dispersa entre el equipo',
-    desc: 'Cada técnico o asesor maneja sus propios clientes de forma independiente. Cuando alguien sale, la información del cliente se va con él.',
+    title: 'Referidos invisibles: nadie sabe quién trae clientes',
+    desc: 'Tus mejores clientes te refieren, pero no tienes un sistema para rastrear quién trajo a quién, cuántos negocios generó ese referido ni cómo recompensarlo. La fuente más barata de nuevos clientes queda desaprovechada.',
   },
   {
-    icon: RefreshCw,
-    title: 'Clientes que no vuelven a contratar',
-    desc: 'Prestaste un servicio hace seis meses y no tienes un sistema para recordarle al cliente que es momento de renovar o de contratar otro servicio.',
+    icon: Inbox,
+    title: 'Historial de clientes disperso entre ejecutivos',
+    desc: 'El historial de propuestas, contratos y conversaciones de cada cliente vive en el correo personal del ejecutivo que lo atiende. Si esa persona se va, pierdes el contexto completo de la relación.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Sin visibilidad del pipeline de propuestas',
+    desc: 'El gerente no sabe cuántas propuestas están abiertas, cuántas están en negociación ni cuánto revenue está en juego. Tomar decisiones sin esa visibilidad es operar a ciegas.',
+  },
+];
+
+const solutionPairs = [
+  {
+    pain: 'Propuesta enviada — y silencio total del cliente',
+    solution: 'El CRM activa automáticamente una secuencia: mensaje a las 24h, seguimiento a las 72h, recordatorio final al 7° día. El ejecutivo solo interviene cuando el cliente responde.',
+    icon: Send,
+  },
+  {
+    pain: 'Contratos que vencen sin oportunidad de renovar',
+    solution: 'El sistema alerta al ejecutivo 30 días antes del vencimiento y envía al cliente una propuesta de renovación personalizada. La renovación se convierte en un proceso proactivo, no reactivo.',
+    icon: Repeat,
+  },
+  {
+    pain: 'Cobros que dependen de que alguien se acuerde',
+    solution: 'Secuencias de cobro automáticas: recordatorio amable 3 días antes, aviso el día de vencimiento y alerta de mora al día 5. El equipo se desentiende del proceso — el sistema lo gestiona.',
+    icon: ShieldCheck,
+  },
+  {
+    pain: 'Historial fragmentado en correos personales',
+    solution: 'Toda la relación con el cliente — propuestas, contratos, conversaciones, facturas — centralizada en un solo perfil. Cualquier miembro del equipo puede dar continuidad al instante.',
+    icon: Inbox,
   },
 ];
 
 const features = [
   {
-    icon: Inbox,
+    icon: FileText,
     color: 'from-[#1d70a2] to-[#0a2342]',
-    title: 'Bandeja omnicanal unificada',
-    desc: 'WhatsApp, Instagram, Facebook, email y formulario web en una sola pantalla. Todo el equipo ve todas las solicitudes y nadie queda sin respuesta.',
+    title: 'Pipeline de propuestas con seguimiento automático',
+    desc: 'Propuesta enviada → En negociación → Aprobada → Rechazada. Seguimiento automático en cada etapa. El ejecutivo sabe exactamente dónde está cada oportunidad.',
+  },
+  {
+    icon: Repeat,
+    color: 'from-[#00bfa5] to-[#1d70a2]',
+    title: 'Automatización de renovaciones y recurrencia',
+    desc: 'El sistema alerta 30 días antes del vencimiento de cada contrato y envía propuesta de renovación. Nunca más un cliente recurrente que se va por inercia.',
+  },
+  {
+    icon: DollarSign,
+    color: 'from-[#0a2342] to-[#1d70a2]',
+    title: 'Secuencias de cobro automáticas',
+    desc: 'Recordatorio previo al vencimiento, aviso el día D y alerta de mora. Todo por WhatsApp o email, sin que el equipo tenga que tocar nada. Reduce la cartera vencida sin conversaciones incómodas.',
+  },
+  {
+    icon: Users,
+    color: 'from-[#1d70a2] to-[#00bfa5]',
+    title: 'Pipeline de referidos rastreable',
+    desc: 'Registra qué cliente refirió a quién, cuántos negocios generó ese referido y cuánto revenue representa. Identifica a tus mejores embajadores y prémialos con datos en la mano.',
+  },
+  {
+    icon: Inbox,
+    color: 'from-[#0a2342] to-[#00bfa5]',
+    title: 'Historial centralizado de cada cliente',
+    desc: 'Todas las propuestas, contratos, facturas y conversaciones en un solo perfil de cliente. Cualquier ejecutivo puede tomar el caso y dar continuidad sin perder contexto.',
   },
   {
     icon: Bot,
-    color: 'from-[#00bfa5] to-[#1d70a2]',
+    color: 'from-[#00bfa5] to-[#0a2342]',
     title: 'Agente IA para primera atención 24/7',
-    desc: 'El bot recibe la solicitud, pregunta el tipo de servicio, la ubicación y la urgencia. Califica el lead y lo asigna al técnico o asesor correcto antes de que abra el computador.',
-  },
-  {
-    icon: Calendar,
-    color: 'from-[#0a2342] to-[#1d70a2]',
-    title: 'Agendamiento automático con recordatorios',
-    desc: 'El cliente agenda su visita técnica o cita de servicio directamente. El sistema envía confirmación, recordatorio 24 horas antes y mensaje el día de la cita.',
+    desc: 'El bot recibe solicitudes, hace preguntas de calificación y asigna al ejecutivo correcto. Los leads que llegan fuera de horario no quedan sin respuesta hasta el día siguiente.',
   },
   {
     icon: TrendingUp,
-    color: 'from-[#1d70a2] to-[#00bfa5]',
-    title: 'Pipeline de servicios por etapa',
-    desc: 'Solicitud → Cotización enviada → Aprobada → Servicio en curso → Completado → Facturado. Visibilidad total del estado de cada trabajo en tiempo real.',
+    color: 'from-[#1d70a2] to-[#0a2342]',
+    title: 'Dashboard ejecutivo de revenue',
+    desc: 'Revenue en pipeline, propuestas ganadas vs. perdidas, tasa de cierre por ejecutivo y proyección del mes. Decisiones basadas en datos, no en intuición.',
   },
   {
     icon: Zap,
-    color: 'from-[#0a2342] to-[#00bfa5]',
-    title: 'Seguimiento automático post-cotización',
-    desc: 'Si el cliente no aprueba la cotización en 24 horas, el sistema envía un recordatorio. A las 48 horas, alerta al asesor. Nunca más una cotización olvidada.',
-  },
-  {
-    icon: BarChart3,
-    color: 'from-[#1d70a2] to-[#0a2342]',
-    title: 'Reportes de rendimiento del equipo',
-    desc: 'Cuántas solicitudes se recibieron, cuántas se cotizaron, cuántas se cerraron y cuánto facturó cada técnico o asesor. Todo en un dashboard ejecutivo.',
+    color: 'from-[#0a2342] to-[#1d70a2]',
+    title: 'Bandeja omnicanal unificada',
+    desc: 'WhatsApp, email, Instagram y formulario web en una sola pantalla. El equipo responde todo desde un lugar — sin abrir 4 aplicaciones distintas.',
   },
 ];
 
 const steps = [
   {
     num: '01',
-    title: 'Cliente solicita el servicio',
-    desc: 'Por WhatsApp, web, Instagram o llamada. Todo entra a la misma bandeja centralizada.',
+    title: 'Lead o solicitud entra al sistema',
+    desc: 'Por WhatsApp, email, formulario web o referido directo. Todo queda registrado automáticamente en el pipeline.',
     icon: Globe,
   },
   {
     num: '02',
-    title: 'IA califica y asigna',
-    desc: 'El bot recoge tipo de servicio, ubicación y urgencia. Asigna al técnico o asesor disponible.',
-    icon: Bot,
+    title: 'Oportunidad creada y asignada',
+    desc: 'El CRM crea la oportunidad, la asigna al ejecutivo correcto y activa recordatorios de seguimiento desde el primer día.',
+    icon: Target,
   },
   {
     num: '03',
-    title: 'Equipo agenda y cotiza',
-    desc: 'El CRM guarda todo. Los recordatorios van automáticos. El seguimiento de cotización también.',
-    icon: Wrench,
+    title: 'Propuesta enviada — seguimiento automático',
+    desc: 'El ejecutivo envía la propuesta. El sistema hace el follow-up solo: 24h, 72h, 7 días. El ejecutivo solo cierra.',
+    icon: CheckCircle,
   },
   {
     num: '04',
-    title: 'Servicio completado y cliente fidelizado',
-    desc: 'Post-servicio el sistema pide calificación y programa recontratación automática.',
+    title: 'Cliente activo, renovaciones y referidos',
+    desc: 'Una vez cerrado, el sistema activa recordatorios de renovación, secuencias de cobro y el programa de referidos.',
     icon: Star,
   },
 ];
 
-const plans = [
+const testimonials = [
   {
-    name: 'Sixteam Inbox + IA',
-    tag: 'Ideal para empezar',
-    price: '149',
-    impl: '250',
-    accent: '#1d70a2',
-    popular: false,
-    desc: 'Para empresas de servicios que quieren centralizar canales y que la IA atienda la primera solicitud.',
-    features: [
-      'WhatsApp, Instagram, Facebook y email unificados',
-      'Agente IA 24/7 para primera atención',
-      'Captura de tipo de servicio, ubicación y urgencia',
-      'Asignación automática al técnico o asesor',
-      'Widget de chat para tu sitio web',
-      '2 usuarios incluidos',
-    ],
-    waMsg: 'Hola, tengo una empresa de servicios y quiero conocer el plan Inbox + IA',
+    quote: 'Teníamos propuestas enviadas que nadie seguía. Con Sixteam, el sistema hace el follow-up automático y en 3 meses nuestra tasa de cierre pasó del 22% al 51%. Crecimos un 40% sin contratar a nadie nuevo.',
+    author: 'Santiago L.',
+    role: 'Socio director, firma de consultoría en Bogotá',
+    stars: 5,
   },
   {
-    name: 'CRM Sixteam Core',
-    tag: 'Más popular',
-    price: '200',
-    impl: '500',
-    accent: '#00bfa5',
-    popular: true,
-    desc: 'CRM operativo con pipeline de servicios, agendamiento automático, seguimiento de cotizaciones y reportes.',
-    features: [
-      'Todo lo del plan Inbox + IA',
-      'Pipeline de servicios por etapas personalizado',
-      'Agendamiento de visitas con recordatorios automáticos',
-      'Seguimiento automático post-cotización',
-      'Campañas de reactivación de clientes anteriores',
-      'Reportes por técnico, servicio y canal',
-      '3 usuarios incluidos',
-    ],
-    waMsg: 'Hola, tengo una empresa de servicios y quiero conocer el plan CRM Core',
+    quote: 'Lo que más nos cambió fue la gestión de renovaciones. Antes perdíamos contratos porque nadie se acordaba de proponer la renovación a tiempo. Ahora el sistema lo hace solo y nuestra retención subió al 87%.',
+    author: 'Valentina O.',
+    role: 'Gerente general, agencia de marketing digital en Medellín',
+    stars: 5,
   },
   {
-    name: 'RevOps Externo',
-    tag: 'Operación mensual',
-    price: '500.000 COP',
-    impl: null,
-    accent: '#1d70a2',
-    popular: false,
-    desc: 'Sixteam opera tu CRM y automatizaciones mes a mes como si fuera tu equipo interno de operaciones.',
-    features: [
-      'Operación mensual de CRM y automatizaciones',
-      'Mejoras proactivas de flujos y procesos',
-      'SLA de 4 horas en días hábiles',
-      'Reunión mensual de revisión y estrategia',
-      'Reportería ejecutiva de revenue',
-      'Soporte dedicado vía WhatsApp',
-    ],
-    waMsg: 'Hola, tengo una empresa de servicios y quiero conocer el servicio RevOps externo',
+    quote: 'Los recordatorios de cobro automáticos nos ahorraron horas de trabajo administrativo al mes y redujeron nuestra cartera vencida en un 65%. El equipo ahora se enfoca en conseguir clientes, no en perseguir pagos.',
+    author: 'Carlos M.',
+    role: 'Director financiero, empresa de servicios contables en Cali',
+    stars: 5,
   },
 ];
 
 const faqs = [
   {
-    q: '¿Funciona para empresas con técnicos en campo?',
-    a: 'Sí. Cada técnico tiene su propio acceso desde el celular. Puede ver sus trabajos asignados, actualizar el estado del servicio y comunicarse con el cliente desde la misma plataforma.',
+    q: '¿Funciona para consultoría, agencias y servicios profesionales?',
+    a: 'Sí, es ideal para ese perfil. El pipeline de propuestas, el seguimiento automático post-envío y la gestión de clientes recurrentes están diseñados exactamente para empresas que venden servicios de alto valor con ciclos de venta de días o semanas.',
   },
   {
-    q: '¿El bot puede entregar cotizaciones automáticas?',
-    a: 'Para servicios con precios fijos o rangos definidos, sí. El bot puede entregar un precio estimado al instante. Para servicios que requieren diagnóstico, recoge la información y agenda una visita técnica.',
+    q: '¿Cómo funciona el seguimiento automático de propuestas?',
+    a: 'Una vez marcas una propuesta como "enviada" en el CRM, el sistema activa una secuencia automática: un recordatorio amable a las 24 horas, un segundo mensaje a las 72 horas y una alerta final al ejecutivo al 7° día. Cada mensaje puede personalizarse con el nombre del cliente y el servicio cotizado.',
   },
   {
-    q: '¿Puedo gestionar diferentes tipos de servicios en el mismo CRM?',
-    a: 'Sí. Creamos pipelines separados por tipo de servicio si lo necesitas. Mantenimiento, instalación, reparación — cada uno con sus propias etapas y automatizaciones.',
+    q: '¿El sistema puede gestionar clientes con contratos mensuales o anuales?',
+    a: 'Sí. Registras la fecha de inicio y fin de cada contrato. El sistema alerta al ejecutivo 30 días antes del vencimiento y puede enviar automáticamente al cliente una propuesta de renovación. También programa recordatorios de cobro según el ciclo de facturación de cada cliente.',
+  },
+  {
+    q: '¿Cómo funciona el rastreo de referidos?',
+    a: 'Cuando registras un nuevo lead, puedes indicar quién lo refirió. El sistema lleva un histórico de cuántos clientes ha referido cada contacto, cuántos negocios se cerraron y cuánto revenue generaron esas referencias. Con esa información puedes priorizar a tus mejores embajadores.',
+  },
+  {
+    q: '¿Puedo ver el rendimiento de cada ejecutivo de cuenta?',
+    a: 'Sí. El dashboard muestra para cada ejecutivo: cuántas propuestas envió, cuántas cerró, cuál es su tasa de conversión, cuánto revenue generó y cuántos contratos tiene por renovar. El gerente tiene visibilidad total sin depender de reportes manuales.',
   },
   {
     q: '¿Cuánto tiempo tarda la implementación?',
-    a: 'Entre 2 y 3 semanas. Configuramos los canales, el pipeline, las automatizaciones y capacitamos a tu equipo.',
-  },
-  {
-    q: '¿Puedo enviar recordatorios de mantenimiento periódico a mis clientes?',
-    a: 'Sí. Configuramos campañas automáticas que envían mensajes a clientes cada cierto período para recordarles el mantenimiento o renovación del servicio.',
-  },
-  {
-    q: '¿Sirve si mi empresa también vende productos además de servicios?',
-    a: 'Sí. El CRM puede manejar tanto el proceso de venta de productos como el de servicios en paralelo, con sus propios flujos y equipos asignados.',
+    a: 'Entre 2 y 3 semanas. Configuramos el pipeline de propuestas con las etapas de tu proceso, las automatizaciones de seguimiento, las secuencias de cobro y la bandeja omnicanal. Capacitamos a tu equipo y migramos los clientes actuales desde Excel o el sistema que estés usando.',
   },
 ];
 
 const ServiciosGenerales = () => {
+  useSEO({
+    title: "CRM para Empresas de Servicios — Sixteam.pro | Crece sin más Personal",
+    description: "Pipeline de propuestas, renovaciones automáticas y secuencias de cobro para consultoras y servicios profesionales. Crece un 40% sin contratar más personal.",
+  });
+
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
@@ -258,23 +263,37 @@ const ServiciosGenerales = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
 
-            {/* Columna izquierda — texto */}
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-6 backdrop-blur-sm">
                 <Wrench className="w-4 h-4 text-[#00bfa5]" />
-                <span className="text-[#00bfa5] text-sm font-medium tracking-wide">Para empresas de servicios</span>
+                <span className="text-[#00bfa5] text-sm font-medium tracking-wide">Para empresas de servicios y consultoría</span>
               </div>
 
               <h1 className="font-poppins font-black text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
-                Más servicios cerrados,{' '}
+                Crece un 40% sin{' '}
                 <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  menos caos operativo
+                  añadir más personal
                 </span>
               </h1>
 
-              <p className="text-[#e0e0e0] text-lg leading-relaxed mb-8">
-                CRM, automatizaciones e IA para empresas de servicios que quieren atender más solicitudes, dar mejor seguimiento y fidelizar clientes — sin depender solo del esfuerzo de su equipo.
+              <p className="text-[#e0e0e0] text-lg leading-relaxed mb-4">
+                CRM y automatizaciones para empresas de servicios que quieren cerrar más propuestas, fidelizar clientes recurrentes y eliminar la carga administrativa — sin depender del esfuerzo manual del equipo.
               </p>
+
+              <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8 text-sm text-[#e0e0e0]">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-[#00bfa5]" />
+                  <span>+28% tasa de cierre de propuestas</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#00bfa5]" />
+                  <span>-60% tiempo administrativo</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4 text-[#00bfa5]" />
+                  <span>Nunca más un seguimiento olvidado</span>
+                </div>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
@@ -308,11 +327,10 @@ const ServiciosGenerales = () => {
               </div>
             </div>
 
-            {/* Columna derecha — chat */}
             <div className="w-full">
               <ChatWidget
                 pageContext={PAGE_CONTEXT}
-                initialMessage="¡Hola! 👋 Soy el asistente de Sixteam. ¿Tienes preguntas sobre cómo podemos ayudar a tu empresa de servicios?"
+                initialMessage="¡Hola! Soy el asistente de Sixteam. ¿Tienes preguntas sobre cómo podemos ayudar a tu empresa de servicios a cerrar más propuestas y gestionar clientes recurrentes?"
                 exampleQuestions={EXAMPLE_QUESTIONS}
               />
             </div>
@@ -321,7 +339,7 @@ const ServiciosGenerales = () => {
         </div>
       </section>
 
-      {/* Pain points */}
+      {/* Pain Points */}
       <section className="py-20 bg-[#081c36]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14">
@@ -330,16 +348,16 @@ const ServiciosGenerales = () => {
               <span className="text-red-400 text-sm font-medium">¿Te suena familiar?</span>
             </div>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Lo que frena a las empresas de servicios
+              Por qué las empresas de servicios dejan dinero sobre la mesa
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              Si alguno de estos es tu realidad, Sixteam tiene la solución.
+              Estos son los puntos exactos donde tu empresa pierde revenue sin que nadie lo esté midiendo.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {painPoints.map((pain, i) => (
-              <div key={i} className="bg-white/5 border border-red-500/20 rounded-lg p-6 hover:border-red-500/40 transition-all duration-300">
+              <div key={i} className="bg-white/5 border border-red-500/20 rounded-xl p-6 hover:border-red-500/40 transition-all duration-300">
                 <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
                   <pain.icon className="w-5 h-5 text-red-400" />
                 </div>
@@ -351,13 +369,54 @@ const ServiciosGenerales = () => {
         </div>
       </section>
 
-      {/* Solución */}
+      {/* Solution Showcase */}
       <section className="py-20 bg-[#0a2342]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full mb-4">
-              <Zap className="w-4 h-4 text-[#00bfa5]" />
-              <span className="text-[#00bfa5] text-sm font-medium">La solución</span>
+              <Sparkles className="w-4 h-4 text-[#00bfa5]" />
+              <span className="text-[#00bfa5] text-sm font-medium">Cómo lo resolvemos</span>
+            </div>
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
+              Cada problema tiene una{' '}
+              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
+                solución concreta
+              </span>
+            </h2>
+            <p className="text-[#e0e0e0] text-lg">
+              No vendemos software genérico. Automatizamos los procesos exactos donde tu empresa pierde tiempo y dinero.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {solutionPairs.map((item, i) => (
+              <div key={i} className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-xl p-6 hover:border-[#00bfa5]/50 transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-[#00bfa5]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-[#00bfa5]" />
+                  </div>
+                  <div>
+                    <p className="text-red-400 text-xs font-medium uppercase tracking-wide mb-1">Antes</p>
+                    <p className="text-[#e0e0e0] text-sm">{item.pain}</p>
+                  </div>
+                </div>
+                <div className="border-t border-[#1d70a2]/20 pt-4">
+                  <p className="text-[#00bfa5] text-xs font-medium uppercase tracking-wide mb-1">Con Sixteam</p>
+                  <p className="text-white text-sm font-medium leading-relaxed">{item.solution}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-20 bg-[#081c36]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-full mb-4">
+              <Target className="w-4 h-4 text-[#1d70a2]" />
+              <span className="text-[#1d70a2] text-sm font-medium">Herramientas especializadas</span>
             </div>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
               Una plataforma que ordena tu operación{' '}
@@ -366,25 +425,191 @@ const ServiciosGenerales = () => {
               </span>
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              No es un CRM genérico. Lo configuramos para el proceso real de una empresa de servicios.
+              No es un CRM genérico. Lo configuramos para el proceso real de una empresa de servicios — propuestas, recurrencia y cobro incluidos.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {features.map((feat, i) => (
-              <div key={i} className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-lg p-6 hover:border-[#00bfa5]/40 transition-all duration-300 group">
+              <div key={i} className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-xl p-6 hover:border-[#00bfa5]/40 transition-all duration-300 group">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feat.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feat.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-poppins font-semibold text-white text-base mb-2">{feat.title}</h3>
-                <p className="text-[#e0e0e0] text-sm leading-relaxed">{feat.desc}</p>
+                <h3 className="font-poppins font-semibold text-white text-sm mb-2">{feat.title}</h3>
+                <p className="text-[#e0e0e0] text-xs leading-relaxed">{feat.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cómo funciona */}
+      {/* Case Study */}
+      <section className="py-20 bg-[#0a2342]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#00bfa5]/30 rounded-2xl p-8 sm:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full mb-6">
+                    <Star className="w-4 h-4 text-[#00bfa5]" />
+                    <span className="text-[#00bfa5] text-xs font-medium uppercase tracking-widest">Caso de éxito</span>
+                  </div>
+                  <h2 className="font-poppins font-bold text-white text-2xl sm:text-3xl mb-4">
+                    Firma de consultoría en Bogotá: 40% de crecimiento sin contratar nuevo personal
+                  </h2>
+                  <p className="text-[#e0e0e0] text-sm leading-relaxed mb-6">
+                    Esta firma con 8 consultores enviaba 15–20 propuestas por mes, pero cerraba menos del 22%. El seguimiento era manual y dependía de que cada consultor se acordara de llamar. Los contratos recurrentes no se renovaban a tiempo y el flujo de caja era impredecible.
+                  </p>
+                  <p className="text-[#e0e0e0] text-sm leading-relaxed mb-6">
+                    Implementamos el pipeline de propuestas con seguimiento automático, las secuencias de renovación y los recordatorios de cobro. En 4 meses, la tasa de cierre pasó del 22% al 51% y los ingresos crecieron un 40% sin aumentar el equipo.
+                  </p>
+                  <Button
+                    onClick={handleWA}
+                    className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Quiero resultados similares
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { num: '+40%', label: 'Crecimiento en ingresos en 4 meses', icon: TrendingUp },
+                    { num: '22% → 51%', label: 'Tasa de cierre de propuestas', icon: FileText },
+                    { num: '-60%', label: 'Tiempo administrativo del equipo', icon: Clock },
+                    { num: '87%', label: 'Tasa de retención de clientes recurrentes', icon: Repeat },
+                  ].map((stat, i) => (
+                    <div key={i} className="bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-xl p-5 text-center">
+                      <div className="w-8 h-8 bg-[#00bfa5]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <stat.icon className="w-4 h-4 text-[#00bfa5]" />
+                      </div>
+                      <div className="font-poppins font-black text-[#00bfa5] text-xl mb-1">{stat.num}</div>
+                      <p className="text-[#e0e0e0] text-xs leading-tight">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 bg-[#081c36]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-full mb-4">
+              <DollarSign className="w-4 h-4 text-[#1d70a2]" />
+              <span className="text-[#1d70a2] text-sm font-medium">Planes y precios</span>
+            </div>
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
+              Empieza con el plan que{' '}
+              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
+                necesitas hoy
+              </span>
+            </h2>
+            <p className="text-[#e0e0e0] text-lg">Sin contratos anuales. Sin costos ocultos. Creces de plan cuando quieras.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 flex flex-col hover:border-[#1d70a2]/60 transition-all duration-300">
+              <div className="mb-6">
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inbox + IA</p>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="font-poppins font-black text-white text-4xl">$149</span>
+                  <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
+                </div>
+                <p className="text-[#e0e0e0]/60 text-xs">+ $250 USD implementación única</p>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  'Bandeja omnicanal (WhatsApp, email, IG, web)',
+                  'Agente IA 24/7 para primera atención',
+                  'Captura y asignación de solicitudes',
+                  '2 usuarios incluidos',
+                  'Soporte en español',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
+                    <CheckCircle className="w-4 h-4 text-[#00bfa5] mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button onClick={handleWA} variant="outline" className="border-[#1d70a2] bg-transparent text-white hover:bg-[#1d70a2]/20 font-poppins font-semibold w-full">
+                Empezar
+              </Button>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#1d70a2]/30 to-[#0a2342] border-2 border-[#00bfa5] rounded-2xl p-8 flex flex-col relative shadow-xl shadow-[#00bfa5]/10">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-[#00bfa5] text-[#0a2342] text-xs font-poppins font-bold px-4 py-1 rounded-full">MÁS POPULAR</span>
+              </div>
+              <div className="mb-6">
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">CRM Core</p>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
+                </div>
+                <p className="text-[#e0e0e0]/60 text-xs">+ $500 USD implementación única</p>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  'Todo lo de Inbox + IA',
+                  'Pipeline de propuestas con seguimiento automático',
+                  'Automatización de renovaciones y recurrencia',
+                  'Secuencias de cobro automáticas',
+                  'Pipeline de referidos rastreable',
+                  '3 usuarios incluidos',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
+                    <CheckCircle className="w-4 h-4 text-[#00bfa5] mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button onClick={handleWA} className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold w-full">
+                Empezar
+              </Button>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 flex flex-col hover:border-[#1d70a2]/60 transition-all duration-300">
+              <div className="mb-6">
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">RevOps Externo</p>
+                <div className="flex items-end gap-1 mb-1">
+                  <span className="font-poppins font-black text-white text-3xl">$500k</span>
+                  <span className="text-[#e0e0e0] text-sm mb-1">COP/mes</span>
+                </div>
+                <p className="text-[#e0e0e0]/60 text-xs">Desde · operación mensual incluida</p>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {[
+                  'CRM operado por el equipo Sixteam',
+                  'Seguimiento de propuestas y renovaciones',
+                  'Mejoras proactivas cada mes',
+                  'SLA de respuesta 4 horas',
+                  'Reunión estratégica mensual',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
+                    <CheckCircle className="w-4 h-4 text-[#00bfa5] mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Button onClick={handleWA} variant="outline" className="border-[#1d70a2] bg-transparent text-white hover:bg-[#1d70a2]/20 font-poppins font-semibold w-full">
+                Consultar
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-center text-[#e0e0e0]/60 text-sm mt-8">
+            ¿No sabes cuál elegir?{' '}
+            <Link to="/radar/diagnostico-gratis" className="text-[#00bfa5] hover:underline font-medium">
+              Empieza con un diagnóstico gratuito →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* How we work */}
       <section className="py-20 bg-[#081c36]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14">
@@ -402,7 +627,7 @@ const ServiciosGenerales = () => {
                 {i < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-[#1d70a2] to-transparent z-0" />
                 )}
-                <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-lg p-6 relative z-10 hover:border-[#00bfa5]/40 transition-all duration-300">
+                <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-xl p-6 relative z-10 hover:border-[#00bfa5]/40 transition-all duration-300">
                   <div className="text-[#00bfa5] font-poppins font-black text-3xl mb-3">{step.num}</div>
                   <div className="w-10 h-10 bg-[#1d70a2]/20 rounded-lg flex items-center justify-center mb-4">
                     <step.icon className="w-5 h-5 text-[#00bfa5]" />
@@ -416,105 +641,54 @@ const ServiciosGenerales = () => {
         </div>
       </section>
 
-      {/* Planes */}
+      {/* Testimonials */}
       <section className="py-20 bg-[#0a2342]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Planes para empresas de servicios
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full mb-4">
+              <Quote className="w-4 h-4 text-[#00bfa5]" />
+              <span className="text-[#00bfa5] text-sm font-medium">Lo que dicen nuestros clientes</span>
+            </div>
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl mb-4">
+              Empresas de servicios que ya transformaron su operación
             </h2>
-            <p className="text-[#e0e0e0] text-lg">
-              Empieza con lo que necesitas hoy. Escala cuando estés listo.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {plans.map((plan, i) => (
-              <div
-                key={i}
-                className={`relative bg-gradient-to-br from-[#0d2d52] to-[#0a2342] rounded-xl p-8 flex flex-col border transition-all duration-300 hover:scale-[1.02] ${
-                  plan.popular
-                    ? 'border-[#00bfa5] shadow-[0_0_30px_rgba(0,191,165,0.15)]'
-                    : 'border-[#1d70a2]/30 hover:border-[#1d70a2]/60'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-[#00bfa5] text-white text-xs font-poppins font-semibold px-4 py-1 rounded-full">
-                      Más popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-6">
-                  <span className="text-xs font-medium px-3 py-1 rounded-full border mb-3 inline-block"
-                    style={{ color: 'white', borderColor: `${plan.accent}99`, background: `${plan.accent}60` }}>
-                    {plan.tag}
-                  </span>
-                  <h3 className="font-poppins font-bold text-white text-xl mb-2">{plan.name}</h3>
-                  <p className="text-[#e0e0e0] text-sm leading-relaxed">{plan.desc}</p>
-                </div>
-
-                <div className="mb-6">
-                  <div className="text-white font-poppins font-black text-4xl">
-                    {plan.impl ? `$${plan.price}` : plan.price}
-                    {plan.impl && <span className="text-base font-normal text-[#e0e0e0] ml-1">USD/mes</span>}
-                    {!plan.impl && <span className="text-base font-normal text-[#e0e0e0] ml-1">/mes</span>}
-                  </div>
-                  {plan.impl && (
-                    <div className="text-[#e0e0e0] text-sm mt-1">+ ${plan.impl} USD implementación única</div>
-                  )}
-                </div>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {plan.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
-                      <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: plan.accent }} />
-                      {f}
-                    </li>
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-xl p-6 hover:border-[#00bfa5]/50 transition-all duration-300 flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: t.stars }).map((_, s) => (
+                    <Star key={s} className="w-4 h-4 text-[#00bfa5] fill-[#00bfa5]" />
                   ))}
-                </ul>
-
-                <Button
-                  onClick={() => window.open(`https://wa.me/+573023515392?text=${encodeURIComponent(plan.waMsg)}`, '_blank')}
-                  className="w-full font-poppins font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105"
-                  style={{
-                    background: plan.popular ? '#00bfa5' : 'transparent',
-                    border: `1px solid ${plan.accent}`,
-                    color: 'white',
-                  }}
-                >
-                  Quiero este plan
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                </div>
+                <p className="text-[#e0e0e0] text-sm leading-relaxed mb-6 flex-1">"{t.quote}"</p>
+                <div>
+                  <p className="text-white font-poppins font-semibold text-sm">{t.author}</p>
+                  <p className="text-[#00bfa5] text-xs mt-0.5">{t.role}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Resultados */}
-      <section className="py-20 bg-[#081c36]">
+      {/* Metrics Strip */}
+      <section className="py-16 bg-[#081c36]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-14">
-            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Lo que logran las empresas de servicios con Sixteam
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { num: '-65%', label: 'Tiempo de respuesta a la primera solicitud', icon: Clock },
-              { num: '+45%', label: 'Cotizaciones que se convierten en servicio', icon: TrendingUp },
-              { num: '24/7', label: 'Atención y calificación sin intervención humana', icon: Bot },
-              { num: '3×', label: 'Más clientes fidelizados con reactivación automática', icon: RefreshCw },
+              { num: '+28%', label: 'Aumento en tasa de cierre de propuestas', icon: TrendingUp },
+              { num: '-60%', label: 'Reducción en tiempo administrativo', icon: Clock },
+              { num: '+40%', label: 'Crecimiento de ingresos sin nuevo personal', icon: BarChart3 },
+              { num: '87%', label: 'Retención de clientes recurrentes', icon: Repeat },
             ].map((stat, i) => (
-              <div key={i} className="text-center bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-xl p-8 hover:border-[#00bfa5]/30 transition-all duration-300">
-                <div className="w-12 h-12 bg-[#00bfa5]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-[#00bfa5]" />
+              <div key={i} className="text-center bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/20 rounded-xl p-6 hover:border-[#00bfa5]/30 transition-all duration-300">
+                <div className="w-10 h-10 bg-[#00bfa5]/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <stat.icon className="w-5 h-5 text-[#00bfa5]" />
                 </div>
-                <div className="font-poppins font-black text-[#00bfa5] text-4xl mb-2">{stat.num}</div>
-                <p className="text-[#e0e0e0] text-sm leading-relaxed">{stat.label}</p>
+                <div className="font-poppins font-black text-[#00bfa5] text-3xl mb-1">{stat.num}</div>
+                <p className="text-[#e0e0e0] text-xs leading-relaxed">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -531,7 +705,7 @@ const ServiciosGenerales = () => {
 
           <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-[#0d2d52] border border-[#1d70a2]/20 rounded-lg overflow-hidden hover:border-[#1d70a2]/40 transition-all duration-300">
+              <div key={i} className="bg-[#0d2d52] border border-[#1d70a2]/20 rounded-xl overflow-hidden hover:border-[#1d70a2]/40 transition-all duration-300">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between p-6 text-left"
@@ -564,10 +738,10 @@ const ServiciosGenerales = () => {
             </div>
 
             <h2 className="font-poppins font-black text-white text-3xl sm:text-5xl mb-6">
-              ¿Listo para ordenar tu operación y crecer?
+              ¿Listo para crecer sin caos operativo?
             </h2>
             <p className="text-[#e0e0e0] text-lg mb-10 max-w-2xl mx-auto">
-              Agenda una demo de 30 minutos. Te mostramos la plataforma configurada para empresas de servicios y te decimos exactamente qué necesitas.
+              Agenda una demo de 30 minutos. Te mostramos la plataforma configurada para empresas de servicios y te decimos exactamente qué necesitas para dejar de perder propuestas esta semana.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { gtm } from '@/lib/gtm';
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleWhatsAppClick = () => {
-    const phone = "+573002408743";
+    gtm.whatsappClick('floating_button');
+    const phone = "+573023515392";
     const message = "Hola. estoy interesado en un servicio para ...";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

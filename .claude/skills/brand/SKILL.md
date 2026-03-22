@@ -7,6 +7,8 @@ description: Guía de identidad visual de Sixteam.pro. Usar cuando se diseñen c
 
 Aplica siempre estos estándares de marca al diseñar o revisar componentes visuales.
 
+> **Brand Book visual**: `c:\Users\samue\WEB\brandbook.html` — ábrelo en el navegador para referencia completa de colores, tipografía, componentes y reglas con ejemplos visuales interactivos. Léelo con el tool Read si necesitas consultar detalles específicos durante el diseño.
+
 ## Identidad de Marca
 
 **Nombre**: Sixteam.pro

@@ -3,9 +3,44 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle, Target, CheckCircle, ArrowLeft, Clock, DollarSign, BarChart3, Users, Zap, TrendingUp } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ChatWidget from '@/components/ChatWidget';
 import { Link } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
+
+const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro para el servicio de CRM de Ventas.
+Página: /servicios/crm-ventas
+
+SERVICIO: Implementación de CRM de Ventas con pipeline visual, seguimiento automático de leads y reportería en tiempo real.
+
+PARA QUIÉN: Equipos comerciales que pierden oportunidades por falta de seguimiento, visibilidad o proceso definido.
+
+QUÉ INCLUYE:
+- Pipeline de ventas personalizado (etapas, probabilidades, reglas)
+- Automatización de seguimientos (recordatorios, tareas, secuencias)
+- Integración con WhatsApp, email y formularios web
+- Reportes y dashboards de conversión por asesor y canal
+- Capacitación del equipo comercial
+- Soporte post-implementación 30 días
+
+PRECIO: Desde $2.000.000 COP implementación única.
+TIEMPO: 4 semanas para estar operativo.
+SIN contratos anuales. Soporte en español.
+
+RESULTADOS TÍPICOS: +40% en tasa de cierre, 3× más seguimientos por asesor, visibilidad total del pipeline en tiempo real.`;
+
+const EXAMPLE_QUESTIONS = [
+  '¿Qué CRM implementan?',
+  '¿Cuánto demora la implementación?',
+  '¿Funciona con WhatsApp?',
+  '¿Cuánto cuesta?',
+];
 
 const CrmVentas = () => {
+  useSEO({
+    title: "CRM de Ventas — Sixteam.pro | Pipeline y Automatización Comercial",
+    description: "Implementamos tu módulo de ventas en CRM con pipeline visual, seguimiento automático de leads y reportes en tiempo real. Desde $2,000,000 COP. Implementación en 4 semanas.",
+  });
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20CRM%20para%20Ventas', '_blank');
   };
@@ -24,38 +59,47 @@ const CrmVentas = () => {
             <ArrowLeft className="w-4 h-4" />
             Volver a Servicios
           </Link>
-          <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full">
-              <Target className="w-4 h-4 text-blue-400" />
-              <span className="text-blue-300 font-medium text-sm">CRM · Ventas</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-              CRM para
-              <br />
-              <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                Equipos de Ventas
-              </span>
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-              Implementamos tu CRM de ventas con pipelines visuales, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más oportunidades con menos esfuerzo.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <DollarSign className="w-5 h-5 text-teal-400" />
-                <span className="text-white font-semibold">Desde $2.000.000 COP</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full">
+                <Target className="w-4 h-4 text-blue-400" />
+                <span className="text-blue-300 font-medium text-sm">CRM · Ventas</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <Clock className="w-5 h-5 text-blue-400" />
-                <span className="text-white font-semibold">4 semanas</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+                CRM para
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                  Equipos de Ventas
+                </span>
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
+                Implementamos tu CRM de ventas con pipelines visuales, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más oportunidades con menos esfuerzo.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+                  <DollarSign className="w-5 h-5 text-teal-400" />
+                  <span className="text-white font-semibold">Desde $2.000.000 COP</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+                  <Clock className="w-5 h-5 text-blue-400" />
+                  <span className="text-white font-semibold">4 semanas</span>
+                </div>
               </div>
+              <Button
+                onClick={handleWhatsAppClick}
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <MessageCircle className="w-5 h-5 mr-3" />
+                Solicitar Cotización
+              </Button>
             </div>
-            <Button
-              onClick={handleWhatsAppClick}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              <MessageCircle className="w-5 h-5 mr-3" />
-              Solicitar Cotización
-            </Button>
+            <div className="w-full">
+              <ChatWidget
+                pageContext={PAGE_CONTEXT}
+                initialMessage="¡Hola! Soy el asistente de Sixteam. ¿Tienes preguntas sobre el CRM de ventas o quieres saber si es lo que tu equipo necesita?"
+                exampleQuestions={EXAMPLE_QUESTIONS}
+              />
+            </div>
           </div>
         </div>
       </section>

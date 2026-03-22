@@ -19,6 +19,7 @@ const Footer = () => {
                 src="/lovable-uploads/3b066a0e-1bea-4907-b036-3b460d543754.png"
                 alt="Sixteam.pro Logo"
                 className="w-8 h-8"
+                loading="lazy"
               />
               <span className="text-xl font-poppins font-bold">Sixteam.pro</span>
             </div>

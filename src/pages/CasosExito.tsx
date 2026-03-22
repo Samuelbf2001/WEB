@@ -4,8 +4,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { MessageCircle, TrendingUp, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { useSEO } from '@/hooks/useSEO';
 
 const CasosExito = () => {
+  useSEO({
+    title: "Casos de Éxito — Sixteam.pro | Resultados Reales en Colombia",
+    description: "Empresas que transformaron su operación con Sixteam.pro. CRM, automatizaciones e IA con resultados medibles: +65% conversión, -80% tiempo de respuesta.",
+  });
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20casos%20de%20%C3%A9xito%20de%20Sixteam.pro', '_blank');
   };

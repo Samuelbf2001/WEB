@@ -7,8 +7,37 @@ import {
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ChatWidget from '@/components/ChatWidget';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
+
+const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro para la Plataforma CRM.
+Página: /plataforma
+
+PLATAFORMA: CRM todo-en-uno implementado sobre HighLevel (GHL), configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
+
+PLANES DISPONIBLES:
+1. Sixteam Inbox + IA — $149 USD/mes + $250 USD implementación (2 usuarios)
+   Incluye: bandeja omnicanal (WhatsApp, Instagram, Facebook, email, SMS), IA conversacional 24/7, entrenamiento del bot, handoff IA→humano, widget de chat web.
+
+2. CRM Sixteam.pro Core — $200 USD/mes + $500 USD implementación (3 usuarios)
+   Incluye: todo lo de Inbox + CRM de contactos, pipelines y oportunidades, Smart Lists, Workflows de automatización, deduplicación.
+
+3. CRM Sixteam.pro Growth — $299 USD/mes + $800 USD implementación (5 usuarios)
+   Incluye: todo lo de Core + calendarios y agendamiento, funnels y landing pages, email marketing, social planner, reputation management.
+
+USUARIOS ADICIONALES: $25 USD/usuario/mes (operativo) o $12.5 USD/usuario/mes (administrativo/visor).
+TIEMPO DE IMPLEMENTACIÓN: Inbox 2-3 semanas; Core y Growth 3-6 semanas.
+TECNOLOGÍA BASE: HighLevel (GHL) — infraestructura líder para agencias en Latam.
+
+DIFERENCIAL: No vendemos acceso a software — configuramos, implementamos y operamos la plataforma bajo tu proceso de negocio.`;
+
+const EXAMPLE_QUESTIONS = [
+  '¿Cuál plan me recomiendas?',
+  '¿En qué se diferencia Inbox de Core?',
+  '¿Qué canales puedo conectar?',
+  '¿Cuánto cuesta agregar usuarios?',
+];
 
 const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma%20Sixteam.pro';
 
@@ -155,7 +184,7 @@ const Plataforma = () => {
   const activePlan = plans.find(p => p.id === activeTab)!;
 
   return (
-    <div className="min-h-screen bg-white font-lato">
+    <div className="min-h-screen bg-[#0a2342] font-lato">
       <Header />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
@@ -165,54 +194,63 @@ const Plataforma = () => {
         <div className="absolute bottom-10 right-8 w-96 h-96 bg-[#00bfa5]/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
-              <Layers className="w-4 h-4 text-[#00bfa5]" />
-              <span className="text-[#00bfa5] font-medium text-sm font-poppins">Plataforma sobre HighLevel</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
+                <Layers className="w-4 h-4 text-[#00bfa5]" />
+                <span className="text-[#00bfa5] font-medium text-sm font-poppins">Plataforma sobre HighLevel</span>
+              </div>
+
+              <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+                Una sola plataforma para{' '}
+                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
+                  vender, atender y crecer
+                </span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed">
+                Sixteam.pro entrega la tecnología de HighLevel configurada, operativa y lista para tu equipo.
+                CRM, IA conversacional, automatizaciones y marketing en un solo lugar — sin fricción técnica.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Button
+                  onClick={() => handleWA()}
+                  className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Agenda una demo gratis
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
+                >
+                  Ver planes y precios
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-4">
+                {[
+                  { value: '3', label: 'Planes escalables' },
+                  { value: '14+', label: 'Módulos integrados' },
+                  { value: '100%', label: 'Implementado por Sixteam' },
+                ].map((s, i) => (
+                  <div key={i} className="text-center">
+                    <div className="font-poppins font-black text-3xl sm:text-4xl text-[#00bfa5]">{s.value}</div>
+                    <div className="text-gray-400 text-sm mt-1">{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-              Una sola plataforma para{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                vender, atender y crecer
-              </span>
-            </h1>
-
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Sixteam.pro entrega la tecnología de HighLevel configurada, operativa y lista para tu equipo.
-              CRM, IA conversacional, automatizaciones y marketing en un solo lugar — sin fricción técnica.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-              <Button
-                onClick={() => handleWA()}
-                className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Agenda una demo gratis
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-white/30 bg-transparent text-white hover:bg-white/10 font-poppins font-semibold px-8 py-4 text-lg rounded-lg"
-              >
-                Ver planes y precios
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-8 pt-8 max-w-2xl mx-auto">
-              {[
-                { value: '3', label: 'Planes escalables' },
-                { value: '14+', label: 'Módulos integrados' },
-                { value: '100%', label: 'Implementado por Sixteam' },
-              ].map((s, i) => (
-                <div key={i} className="text-center">
-                  <div className="font-poppins font-black text-3xl sm:text-4xl text-[#00bfa5]">{s.value}</div>
-                  <div className="text-gray-400 text-sm mt-1">{s.label}</div>
-                </div>
-              ))}
+            <div className="w-full">
+              <ChatWidget
+                pageContext={PAGE_CONTEXT}
+                initialMessage="¡Hola! Soy el asistente de Sixteam. ¿Tienes preguntas sobre los planes de la plataforma o quieres saber cuál se adapta mejor a tu negocio?"
+                exampleQuestions={EXAMPLE_QUESTIONS}
+              />
             </div>
           </div>
         </div>
@@ -310,13 +348,13 @@ const Plataforma = () => {
       </section>
 
       {/* ── MÓDULOS DETALLADOS CON TABS ───────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50">
+      <section className="py-20 sm:py-28 bg-[#081c36]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
-            <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
               ¿Qué implementa Sixteam en cada plan?
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-[#e0e0e0] text-lg max-w-2xl mx-auto">
               No solo te entregamos acceso a la plataforma — configuramos, probamos y capacitamos a tu equipo.
             </p>
           </div>
@@ -329,8 +367,8 @@ const Plataforma = () => {
                 onClick={() => setActiveTab(plan.id as typeof activeTab)}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-poppins font-semibold text-xs sm:text-sm transition-all duration-200 ${
                   activeTab === plan.id
-                    ? 'bg-[#0a2342] text-white shadow-lg'
-                    : 'bg-white text-gray-600 border border-gray-200 hover:border-[#1d70a2] hover:text-[#1d70a2]'
+                    ? 'bg-[#1d70a2] text-white shadow-lg'
+                    : 'bg-[#0d2d4f] text-[#e0e0e0] border border-[#1d70a2]/30 hover:border-[#00bfa5] hover:text-[#00bfa5]'
                 }`}
               >
                 {plan.name}
@@ -339,32 +377,32 @@ const Plataforma = () => {
           </div>
 
           {/* Tab content */}
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="max-w-4xl mx-auto bg-[#0d2d4f] rounded-2xl border border-[#1d70a2]/20 overflow-hidden">
             <div className="bg-gradient-to-r from-[#0a2342] to-[#1d70a2] p-5 sm:p-8 text-white">
               <h3 className="font-poppins font-bold text-2xl mb-2">{activePlan.name}</h3>
               <p className="text-gray-300">{activePlan.desc}</p>
             </div>
             <div className="p-8">
-              <h4 className="font-poppins font-semibold text-gray-900 text-lg mb-6">Lo que configuramos e implementamos</h4>
+              <h4 className="font-poppins font-semibold text-white text-lg mb-6">Lo que configuramos e implementamos</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {activePlan.features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                  <div key={i} className="flex items-start gap-3 p-4 bg-[#1d70a2]/10 rounded-lg">
                     <CheckCircle className="w-5 h-5 text-[#00bfa5] shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{f}</span>
+                    <span className="text-[#e0e0e0] text-sm">{f}</span>
                   </div>
                 ))}
               </div>
               {activePlan.notIncluded.length > 0 && (
-                <div className="mt-6 pt-6 border-t border-gray-100">
-                  <h4 className="font-poppins font-semibold text-gray-500 text-sm mb-3">No incluido en este plan</h4>
+                <div className="mt-6 pt-6 border-t border-[#1d70a2]/20">
+                  <h4 className="font-poppins font-semibold text-gray-400 text-sm mb-3">No incluido en este plan</h4>
                   <div className="flex flex-wrap gap-2">
                     {activePlan.notIncluded.map((f, i) => (
-                      <span key={i} className="text-xs text-gray-400 bg-gray-100 px-3 py-1.5 rounded-full">{f}</span>
+                      <span key={i} className="text-xs text-gray-400 bg-[#1d70a2]/10 px-3 py-1.5 rounded-full">{f}</span>
                     ))}
                   </div>
                 </div>
               )}
-              <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
+              <div className="mt-8 pt-6 border-t border-[#1d70a2]/20 flex flex-col sm:flex-row gap-4">
                 <Button
                   onClick={() => handleWA(activePlan.waMsg)}
                   className="bg-[#0a2342] hover:bg-[#1d70a2] text-white font-poppins font-semibold px-8 py-3 rounded-lg transition-all duration-300"
@@ -436,19 +474,19 @@ const Plataforma = () => {
       </section>
 
       {/* ── POR QUÉ SOBRE HIGHLEVEL ───────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-[#0a2342]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0a2342]/5 border border-[#0a2342]/10 rounded-full">
-                  <Shield className="w-4 h-4 text-[#1d70a2]" />
-                  <span className="text-[#1d70a2] font-medium text-sm font-poppins">Tecnología de clase enterprise</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-full">
+                  <Shield className="w-4 h-4 text-[#00bfa5]" />
+                  <span className="text-[#00bfa5] font-medium text-sm font-poppins">Tecnología de clase enterprise</span>
                 </div>
-                <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl leading-tight">
+                <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
                   ¿Por qué la plataforma de Sixteam está sobre HighLevel?
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-[#e0e0e0] text-lg leading-relaxed">
                   HighLevel es la infraestructura elegida por miles de agencias en el mundo para construir operaciones digitales completas. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo — para que obtengas resultados desde el primer día.
                 </p>
                 <ul className="space-y-4">
@@ -461,12 +499,12 @@ const Plataforma = () => {
                     const Icon = item.icon;
                     return (
                       <li key={i} className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-[#0a2342] rounded-lg flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 bg-[#1d70a2]/20 rounded-lg flex items-center justify-center shrink-0">
                           <Icon className="w-5 h-5 text-[#00bfa5]" />
                         </div>
                         <div>
-                          <div className="font-poppins font-semibold text-gray-900 mb-1">{item.title}</div>
-                          <div className="text-gray-600 text-sm leading-relaxed">{item.desc}</div>
+                          <div className="font-poppins font-semibold text-white mb-1">{item.title}</div>
+                          <div className="text-[#e0e0e0] text-sm leading-relaxed">{item.desc}</div>
                         </div>
                       </li>
                     );
@@ -487,11 +525,11 @@ const Plataforma = () => {
                 ].map((item, i) => {
                   const Icon = item.icon;
                   return (
-                    <div key={i} className="bg-gray-50 border border-gray-100 rounded-xl p-5 flex flex-col items-center text-center gap-3 hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: item.color + '15' }}>
+                    <div key={i} className="bg-[#0d2d4f] border border-[#1d70a2]/20 rounded-xl p-5 flex flex-col items-center text-center gap-3 hover:border-[#00bfa5]/50 transition-all duration-300">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: item.color + '20' }}>
                         <Icon className="w-5 h-5" style={{ color: item.color }} />
                       </div>
-                      <span className="text-gray-700 text-sm font-medium">{item.label}</span>
+                      <span className="text-[#e0e0e0] text-sm font-medium">{item.label}</span>
                     </div>
                   );
                 })}
@@ -502,29 +540,29 @@ const Plataforma = () => {
       </section>
 
       {/* ── FAQ ───────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-gray-50">
+      <section className="py-20 sm:py-28 bg-[#081c36]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12 space-y-4">
-              <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
+              <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl">
                 Preguntas frecuentes
               </h2>
-              <p className="text-gray-600 text-lg">Todo lo que necesitas saber antes de empezar.</p>
+              <p className="text-[#e0e0e0] text-lg">Todo lo que necesitas saber antes de empezar.</p>
             </div>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
-                <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <div key={i} className="bg-[#0d2d4f] border border-[#1d70a2]/20 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-[#1d70a2]/10 transition-colors"
                   >
-                    <span className="font-poppins font-semibold text-gray-900 pr-4">{faq.q}</span>
+                    <span className="font-poppins font-semibold text-white pr-4">{faq.q}</span>
                     {openFaq === i
-                      ? <ChevronUp className="w-5 h-5 text-[#1d70a2] shrink-0" />
+                      ? <ChevronUp className="w-5 h-5 text-[#00bfa5] shrink-0" />
                       : <ChevronDown className="w-5 h-5 text-gray-400 shrink-0" />}
                   </button>
                   {openFaq === i && (
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    <div className="px-6 pb-6 text-[#e0e0e0] leading-relaxed border-t border-[#1d70a2]/20 pt-4">
                       {faq.a}
                     </div>
                   )}

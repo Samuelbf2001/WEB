@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { gtm } from '@/lib/gtm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,8 +10,14 @@ import { MessageCircle, Mail, MapPin, Send, Clock } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { useSEO } from '@/hooks/useSEO';
 
 const Contacto = () => {
+  useSEO({
+    title: "Contacto — Sixteam.pro | Habla con Nuestro Equipo",
+    description: "Escríbenos por WhatsApp o llena el formulario. Respondemos en menos de 2 horas. Bogotá, Colombia. Atendemos toda Latinoamérica.",
+  });
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     nombre: '',
@@ -43,6 +50,11 @@ const Contacto = () => {
       title: '¡Mensaje enviado!',
       description: 'Nos pondremos en contacto contigo muy pronto.',
     });
+
+    // GTM dataLayer — dispara trigger "CE - form_submit" en GTM
+    // Mapea a GA4 event + tag Meta Pixel Lead
+    gtm.formSubmit('contacto');
+
     setFormData({ nombre: '', telefono: '', pais: '+57', email: '', empresa: '', mensaje: '' });
   };
 

@@ -28,9 +28,6 @@ const AgenciasDeViaje = lazy(() => import('./pages/industrias/AgenciasDeViaje'))
 const Inmobiliarias = lazy(() => import('./pages/industrias/Inmobiliarias'));
 const ServiciosGenerales = lazy(() => import('./pages/industrias/ServiciosGenerales'));
 const IndustriasIndex = lazy(() => import('./pages/industrias/Index'));
-const LandingV2 = lazy(() => import('./pages/LandingV2'));
-const ProposalLanding = lazy(() => import('./pages/ProposalLanding'));
-const StunetProposal = lazy(() => import('./pages/StunetProposal'));
 
 const queryClient = new QueryClient();
 
@@ -64,9 +61,6 @@ const App = () => {
               <Route path="/industrias/agencias-de-viaje" element={<AgenciasDeViaje />} />
               <Route path="/industrias/inmobiliarias" element={<Inmobiliarias />} />
               <Route path="/industrias/servicios-generales" element={<ServiciosGenerales />} />
-              <Route path="/landing-v2" element={<LandingV2 />} />
-              <Route path="/propuesta" element={<ProposalLanding />} />
-              <Route path="/propuesta/stunet" element={<StunetProposal />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

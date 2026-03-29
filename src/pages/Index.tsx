@@ -282,25 +282,25 @@ const Index = () => {
   const services = [
     {
       icon: Target,
-      title: 'Implementación de módulos de venta en el CRM',
+      title: 'Implementación Para Ventas',
       description: 'Implementamos tu CRM con pipelines de ventas, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más con menos esfuerzo.',
       path: '/servicios/crm-ventas',
     },
     {
       icon: Headphones,
-      title: 'Implementación de módulos de atención al cliente en el CRM',
+      title: 'Implementaciones Para Servicio',
       description: 'Centraliza todos los tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta y mejora la satisfacción del cliente con flujos automatizados.',
       path: '/servicios/crm-atencion',
     },
     {
       icon: Brain,
-      title: 'Implementación de módulos de marketing en el CRM',
+      title: 'Implementación Para Marketing',
       description: 'Gestiona campañas multicanal, segmenta audiencias con IA, automatiza secuencias de nurturing y mide el ROI de cada acción de marketing directamente en el CRM.',
       path: '/servicios/crm-marketing',
     },
     {
       icon: Bot,
-      title: 'Implementación de Chatbot IA para WhatsApp Business',
+      title: 'Implementación Agentes IA',
       description: 'Desplegamos tu agente IA en WhatsApp Business: responde 24/7, califica leads, agenda citas y actualiza el CRM automáticamente. Sin intervención humana constante.',
       path: '/servicios/chatbot-ia',
     },
@@ -599,18 +599,15 @@ const Index = () => {
 
             {/* Título principal profesional con animación */}
             <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight tracking-tight px-4 sm:px-0">
-                <span className="text-white font-extrabold">¿Tus procesos</span>
-                <br />
-                <span className="text-white">
-                  <span
-                    className="inline-block min-w-[200px] sm:min-w-[300px] lg:min-w-[400px] text-center relative"
-                  >
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight px-4 sm:px-0">
+                <span className="text-white font-extrabold">¿Tus procesos </span>
+                <span className="inline-block relative align-baseline" style={{ minWidth: '7ch' }}>
+                  <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent whitespace-nowrap">
                     {displayText}
-                    <span className="typewriter-cursor ml-1">|</span>
-                  </span> te están
+                  </span>
+                  <span className="typewriter-cursor text-[#00bfa5] ml-0.5">|</span>
                 </span>
-                <br />
+                <span className="text-white font-extrabold"> te están </span>
                 <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
                   impidiendo crecer?
                 </span>
@@ -1260,6 +1257,7 @@ const Index = () => {
       </section>
 
       {/* Casos de Éxito Elite */}
+      {false && (
       <section className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-[#081c36] via-[#0a2342] to-[#081c36] overflow-hidden">
         {/* Elementos decorativos flotantes */}
         <div className="absolute inset-0">
@@ -1358,6 +1356,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      )}
 
       <Footer />
     </div>

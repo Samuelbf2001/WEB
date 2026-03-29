@@ -14,7 +14,7 @@ import { useSEO } from '@/hooks/useSEO';
 const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro para la Plataforma CRM.
 Página: /plataforma
 
-PLATAFORMA: CRM todo-en-uno implementado sobre HighLevel (GHL), configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
+PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
 1. Sixteam Inbox + IA — $149 USD/mes + $250 USD implementación (2 usuarios)
@@ -28,7 +28,7 @@ PLANES DISPONIBLES:
 
 USUARIOS ADICIONALES: $25 USD/usuario/mes (operativo) o $12.5 USD/usuario/mes (administrativo/visor).
 TIEMPO DE IMPLEMENTACIÓN: Inbox 2-3 semanas; Core y Growth 3-6 semanas.
-TECNOLOGÍA BASE: HighLevel (GHL) — infraestructura líder para agencias en Latam.
+TECNOLOGÍA BASE: Infraestructura de clase enterprise configurada y operada por Sixteam.pro.
 
 DIFERENCIAL: No vendemos acceso a software — configuramos, implementamos y operamos la plataforma bajo tu proceso de negocio.`;
 
@@ -153,7 +153,7 @@ const Plataforma = () => {
   const faqs = [
     {
       q: '¿Sobre qué tecnología está construida la plataforma?',
-      a: 'La plataforma Sixteam.pro está implementada sobre HighLevel (GHL), la infraestructura tecnológica líder para agencias y negocios digitales en Latinoamérica. Sixteam configura, adapta y opera toda la plataforma bajo tu marca y proceso.',
+      a: 'La plataforma Sixteam.pro está construida sobre infraestructura de clase enterprise usada por miles de agencias y negocios digitales en el mundo. Sixteam configura, adapta y opera toda la plataforma bajo tu marca y proceso.',
     },
     {
       q: '¿Puedo empezar con Inbox + IA y escalar después?',
@@ -198,7 +198,7 @@ const Plataforma = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00bfa5]/10 border border-[#00bfa5]/30 rounded-full">
                 <Layers className="w-4 h-4 text-[#00bfa5]" />
-                <span className="text-[#00bfa5] font-medium text-sm font-poppins">Plataforma sobre HighLevel</span>
+                <span className="text-[#00bfa5] font-medium text-sm font-poppins">Plataforma Sixteam.pro</span>
               </div>
 
               <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
@@ -209,7 +209,7 @@ const Plataforma = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed">
-                Sixteam.pro entrega la tecnología de HighLevel configurada, operativa y lista para tu equipo.
+                Sixteam.pro entrega una plataforma configurada, operativa y lista para tu equipo.
                 CRM, IA conversacional, automatizaciones y marketing en un solo lugar — sin fricción técnica.
               </p>
 
@@ -433,7 +433,7 @@ const Plataforma = () => {
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl">
               Compara todos los módulos
             </h2>
-            <p className="text-gray-400 text-lg">Todos los planes sobre la misma base tecnológica de HighLevel.</p>
+            <p className="text-gray-400 text-lg">Todos los planes sobre la misma base tecnológica de clase enterprise.</p>
           </div>
 
           <div className="max-w-4xl mx-auto -mx-4 sm:mx-auto overflow-x-auto rounded-xl">
@@ -484,10 +484,10 @@ const Plataforma = () => {
                   <span className="text-[#00bfa5] font-medium text-sm font-poppins">Tecnología de clase enterprise</span>
                 </div>
                 <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
-                  ¿Por qué la plataforma de Sixteam está sobre HighLevel?
+                  ¿Por qué elegir la plataforma de Sixteam.pro?
                 </h2>
                 <p className="text-[#e0e0e0] text-lg leading-relaxed">
-                  HighLevel es la infraestructura elegida por miles de agencias en el mundo para construir operaciones digitales completas. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo — para que obtengas resultados desde el primer día.
+                  Construida sobre infraestructura de clase enterprise usada por miles de negocios digitales en el mundo. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo — para que obtengas resultados desde el primer día.
                 </p>
                 <ul className="space-y-4">
                   {[

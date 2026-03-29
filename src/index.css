@@ -112,10 +112,7 @@
 
 
 
-  /* Mejorar rendimiento de scroll */
-  .overflow-hidden {
-    contain: layout style paint;
-  }
+
 }
 
 @layer base {

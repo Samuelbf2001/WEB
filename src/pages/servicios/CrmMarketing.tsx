@@ -144,10 +144,10 @@ const CrmMarketing = () => {
   ];
 
   const stats = [
-    { num: '+45%', label: 'Aumento en tasa de conversión de leads a clientes', color: 'text-[#1d70a2]' },
-    { num: '-30%', label: 'Reducción en costo por lead adquirido', color: 'text-[#00bfa5]' },
-    { num: '3x', label: 'Retorno sobre inversión en campañas en los primeros 6 meses', color: 'text-[#1d70a2]' },
-    { num: '+60%', label: 'Más leads calificados llegando al equipo de ventas', color: 'text-[#00bfa5]' },
+    { num: '-70%', label: 'Trabajo manual en registro y actualización de leads', sublabel: 'Cada interacción se registra automáticamente desde el primer clic', color: 'text-[#00bfa5]' },
+    { num: '-80%', label: 'Tiempo para asignar leads calificados a ventas', sublabel: 'Lead scoring automático: solo pasan al equipo los prospectos listos', color: 'text-[#1d70a2]' },
+    { num: '-90%', label: 'Tiempo para generar reportes de campañas', sublabel: 'Dashboard en vivo con ROI, costo por lead y conversión por canal', color: 'text-[#00bfa5]' },
+    { num: '+85%', label: 'Procesos del flujo de marketing automatizados', sublabel: 'Nurturing, seguimientos, scoring y atribución sin intervención manual', color: 'text-[#1d70a2]' },
   ];
 
   const deliverables = [
@@ -210,15 +210,28 @@ const CrmMarketing = () => {
                 <span className="text-blue-300 font-poppins font-medium text-sm">CRM · Marketing Automation</span>
               </div>
               <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl leading-tight">
-                CRM para
+                Implementación CRM
                 <br />
                 <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  Equipos de Marketing
+                  para Marketing
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Automatiza campañas multicanal, nutre leads con secuencias personalizadas, califica prospectos con scoring y mide el ROI real de cada campaña — todo desde el CRM.
+                Conecta tus campañas con resultados reales. Automatiza el seguimiento de leads y mide qué canales generan clientes — no solo clics.
               </p>
+              <ul className="space-y-2 pt-2">
+                {[
+                  '¿Inviertes en pauta pero no sabes qué canal genera ventas reales?',
+                  '¿Tus leads llegan fríos y sin contexto al equipo comercial?',
+                  '¿El nurturing se cae porque no hay tiempo para hacerlo manual?',
+                  '¿No puedes justificar el presupuesto de marketing con números?',
+                ].map((q, i) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-300 text-base">
+                    <span className="text-[#00bfa5] font-bold mt-0.5">→</span>
+                    <span>{q}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#00bfa5]" />
@@ -361,15 +374,19 @@ const CrmMarketing = () => {
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-4">Resultados</p>
             <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-white mb-4">Resultados que puedes esperar</h2>
-            <p className="text-xl text-gray-300 mb-12">Basados en implementaciones reales con empresas en crecimiento en Colombia</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <p className="text-xl text-gray-300 mb-12">Lo que cambia cuando el proceso de marketing está bien configurado</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
               {stats.map((stat, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#1d70a2]/40 transition-all duration-300">
-                  <div className={`text-4xl sm:text-5xl font-poppins font-black ${stat.color} mb-3`}>{stat.num}</div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{stat.label}</p>
+                <div key={i} className="bg-white/5 border border-white/15 rounded-2xl p-6 text-left hover:border-[#1d70a2]/40 transition-all duration-300">
+                  <div className={`text-4xl font-poppins font-black ${stat.color} mb-2`}>{stat.num}</div>
+                  <p className="text-white font-semibold text-sm leading-snug mb-2">{stat.label}</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
+            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+              * Los resultados de conversión y ROI dependen también de la calidad de las campañas y la estrategia de contenido — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+            </p>
           </div>
         </div>
       </section>

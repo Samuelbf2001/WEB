@@ -1,13 +1,6 @@
-import React, { useState } from 'react';
-import { gtm } from '@/lib/gtm';
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { MessageCircle, Mail, MapPin, Send, Clock } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useSEO } from '@/hooks/useSEO';
@@ -18,57 +11,17 @@ const Contacto = () => {
     description: "Escríbenos por WhatsApp o llena el formulario. Respondemos en menos de 2 horas. Bogotá, Colombia. Atendemos toda Latinoamérica.",
   });
 
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    nombre: '',
-    telefono: '',
-    pais: '+57',
-    email: '',
-    empresa: '',
-    mensaje: '',
-  });
-
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+573023515392?text=Hola%2C%20estoy%20listo%20para%20empezar%20la%20transformaci%C3%B3n%20digital%20de%20mi%20negocio', '_blank');
   };
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.nombre || !formData.telefono || !formData.email || !formData.empresa) {
-      toast({
-        title: 'Campos requeridos',
-        description: 'Por favor completa todos los campos obligatorios.',
-        variant: 'destructive',
-      });
-      return;
-    }
-    toast({
-      title: '¡Mensaje enviado!',
-      description: 'Nos pondremos en contacto contigo muy pronto.',
-    });
-
-    // GTM dataLayer — dispara trigger "CE - form_submit" en GTM
-    // Mapea a GA4 event + tag Meta Pixel Lead
-    gtm.formSubmit('contacto');
-
-    setFormData({ nombre: '', telefono: '', pais: '+57', email: '', empresa: '', mensaje: '' });
-  };
-
-  const paises = [
-    { code: '+57', name: 'Colombia' },
-    { code: '+52', name: 'México' },
-    { code: '+1', name: 'Estados Unidos' },
-    { code: '+54', name: 'Argentina' },
-    { code: '+56', name: 'Chile' },
-    { code: '+51', name: 'Perú' },
-    { code: '+593', name: 'Ecuador' },
-    { code: '+58', name: 'Venezuela' },
-    { code: '+34', name: 'España' },
-  ];
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://web.sixteam.pro/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white font-lato">
@@ -172,68 +125,27 @@ const Contacto = () => {
               </div>
             </div>
 
-            {/* Formulario */}
+            {/* Formulario GHL */}
             <div className="lg:col-span-2">
-              <Card className="border-0 shadow-xl">
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Formulario de Contacto</h2>
-                  <p className="text-gray-600 mb-8">Completa el formulario y nos pondremos en contacto contigo muy pronto.</p>
-
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="nombre">Nombre completo *</Label>
-                        <Input id="nombre" type="text" value={formData.nombre} onChange={(e) => handleInputChange('nombre', e.target.value)} placeholder="Tu nombre completo" required className="mt-1" />
-                      </div>
-                      <div>
-                        <Label htmlFor="empresa">Empresa *</Label>
-                        <Input id="empresa" type="text" value={formData.empresa} onChange={(e) => handleInputChange('empresa', e.target.value)} placeholder="Nombre de tu empresa" required className="mt-1" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div>
-                        <Label htmlFor="pais">País</Label>
-                        <Select value={formData.pais} onValueChange={(value) => handleInputChange('pais', value)}>
-                          <SelectTrigger className="mt-1">
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent className="bg-white">
-                            {paises.map((pais) => (
-                              <SelectItem key={pais.code} value={pais.code}>{pais.code} {pais.name}</SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="md:col-span-2">
-                        <Label htmlFor="telefono">Número de teléfono *</Label>
-                        <Input id="telefono" type="tel" value={formData.telefono} onChange={(e) => handleInputChange('telefono', e.target.value)} placeholder="300 123 4567" required className="mt-1" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="email">Correo electrónico *</Label>
-                      <Input id="email" type="email" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} placeholder="tu@empresa.com" required className="mt-1" />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="mensaje">Mensaje</Label>
-                      <Textarea id="mensaje" value={formData.mensaje} onChange={(e) => handleInputChange('mensaje', e.target.value)} placeholder="Cuéntanos sobre tu proyecto y cómo podemos ayudarte..." rows={4} className="mt-1" />
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button type="submit" className="bg-[#0a2342] hover:bg-[#0d2d52] text-white flex-1">
-                        <Send className="w-4 h-4 mr-2" />
-                        Enviar Mensaje
-                      </Button>
-                      <Button type="button" onClick={handleWhatsAppClick} className="bg-teal-600 hover:bg-teal-700 text-white flex-1">
-                        <MessageCircle className="w-4 h-4 mr-2" />
-                        Mejor por WhatsApp
-                      </Button>
-                    </div>
-                  </form>
-                </CardContent>
-              </Card>
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                <iframe
+                  src="https://web.sixteam.pro/widget/form/n7ZRMcX0KMY9l7qAW05T"
+                  style={{ width: '100%', height: '420px', border: 'none', borderRadius: '3px' }}
+                  id="inline-n7ZRMcX0KMY9l7qAW05T"
+                  data-layout='{"id":"INLINE"}'
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Form pagina web sixteam - Copy"
+                  data-height="360"
+                  data-layout-iframe-id="inline-n7ZRMcX0KMY9l7qAW05T"
+                  data-form-id="n7ZRMcX0KMY9l7qAW05T"
+                  title="Formulario de contacto Sixteam.pro"
+                />
+              </div>
             </div>
           </div>
         </div>

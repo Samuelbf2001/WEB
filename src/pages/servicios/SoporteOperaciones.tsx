@@ -28,8 +28,8 @@ QUÉ HACEMOS CADA MES:
 
 PLANES:
 - RevOps Starter: $500.000 COP/mes — 5 horas, SLA 4h
-- RevOps Operativo: desde $1.250.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
-- RevOps Avanzado: desde $2.500.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
+- RevOps Operativo: desde $1.000.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
+- RevOps Avanzado: desde $2.000.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
 
 DIFERENCIAL: No somos soporte reactivo. Somos proactivos — cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
 SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
@@ -65,10 +65,10 @@ const SoporteOperaciones = () => {
       incluye: [
         'Hasta 5 horas de operación RevOps al mes',
         'SLA de respuesta: 4 horas en días hábiles',
+        'Ajustes de configuración y tarjetas en el CRM',
+        'Cambios en flujos y automatizaciones existentes',
+        'Diagnóstico mensual con recomendaciones de mejora',
         'Atención de urgencias fines de semana',
-        'Ajustes y mejoras de configuración en plataforma',
-        'Ejecución operativa y apoyo funcional al equipo',
-        'Diagnóstico mensual de oportunidades de mejora',
       ],
       waMsg: 'Hola, quiero el plan RevOps Starter de Sixteam.pro',
       highlight: false,
@@ -76,16 +76,17 @@ const SoporteOperaciones = () => {
     {
       nombre: 'RevOps Operativo',
       horas: '10 horas/mes',
-      precio: 'Desde $1.250.000 COP/mes',
-      horaExtra: '$125.000 COP/hora adicional',
+      precio: 'Desde $1.000.000 COP/mes',
+      horaExtra: '$100.000 COP/hora adicional',
       descripcion: 'Para equipos en crecimiento que necesitan un socio técnico activo que opere, automatice y evolucione su stack mensualmente.',
       incluye: [
         'Hasta 10 horas de operación RevOps al mes',
         'SLA de respuesta: 4 horas en días hábiles',
-        'Atención de urgencias fines de semana',
-        'Ejecución de automatizaciones y mejoras de proceso',
-        'Apoyo en campañas, comunicaciones y reportería',
+        'Nuevas automatizaciones y cambios en el CRM',
+        'Apoyo estratégico en envíos de email y WhatsApp',
+        'Identificación mensual de oportunidades de mejora',
         'Reunión mensual de alineación estratégica + reporte',
+        'Atención de urgencias fines de semana',
       ],
       waMsg: 'Hola, quiero el plan RevOps Operativo de Sixteam.pro',
       highlight: true,
@@ -93,16 +94,18 @@ const SoporteOperaciones = () => {
     {
       nombre: 'RevOps Avanzado',
       horas: '20–30 horas/mes',
-      precio: 'Desde $2.500.000 COP/mes',
+      precio: 'Desde $2.000.000 COP/mes',
       horaExtra: '$99.999 COP/hora adicional',
       descripcion: 'Sixteam actúa como tu equipo de RevOps externo dedicado: opera, diseña e impulsa la madurez de toda la operación de revenue.',
       incluye: [
         'Hasta 20–30 horas de operación RevOps al mes',
         'SLA prioritario en días hábiles',
+        'Diseño y ejecución de nuevas automatizaciones',
+        'Gestión completa del CRM: tarjetas, pipelines, vistas',
+        'Estrategia y ejecución de campañas email y WhatsApp',
+        'Recomendaciones proactivas de oportunidades de mejora',
+        'Roadmap mensual de operaciones + reporte ejecutivo',
         'Atención de urgencias fines de semana',
-        'Diseño y ejecución de iniciativas de mejora continua',
-        'Gestión del stack: CRM, automatizaciones, integraciones',
-        'Acompañamiento estratégico y roadmap de operaciones',
       ],
       waMsg: 'Hola, quiero el plan RevOps Avanzado de Sixteam.pro',
       highlight: false,
@@ -201,10 +204,10 @@ const SoporteOperaciones = () => {
   ];
 
   const stats = [
-    { num: '+40%', label: 'Aumento en tasa de conversión de oportunidades en los primeros 90 días', color: 'text-[#00bfa5]' },
-    { num: '-60%', label: 'Reducción de tareas manuales repetitivas del equipo comercial', color: 'text-[#1d70a2]' },
-    { num: '100%', label: 'Visibilidad del pipeline y métricas de revenue en tiempo real', color: 'text-[#00bfa5]' },
-    { num: '3x', label: 'Más velocidad en ejecución de mejoras operativas vs. hacerlo internamente', color: 'text-[#1d70a2]' },
+    { num: '100%', label: 'CRM y automatizaciones operando sin intervención del equipo interno', sublabel: 'Nos encargamos de la operación, ajustes y mantenimiento mensual', color: 'text-[#00bfa5]' },
+    { num: '<4h', label: 'Tiempo de respuesta a solicitudes críticas en días hábiles', sublabel: 'SLA garantizado en todos los planes, urgencias fines de semana', color: 'text-[#1d70a2]' },
+    { num: '+3', label: 'Mejoras o automatizaciones ejecutadas por mes en promedio', sublabel: 'Operación proactiva: cada mes proponemos y ejecutamos iniciativas de mejora', color: 'text-[#00bfa5]' },
+    { num: '1', label: 'Reporte ejecutivo mensual con KPIs de revenue y avance del roadmap', sublabel: 'Visibilidad total de lo que se hizo, lo que se midió y lo que sigue', color: 'text-[#1d70a2]' },
   ];
 
   return (
@@ -431,20 +434,21 @@ const SoporteOperaciones = () => {
             <div className="text-center mb-12 space-y-4">
               <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Resultados</p>
               <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl">
-                Lo que logran nuestros clientes
+                Lo que obtienes cada mes
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Basados en empresas que operamos como aliado RevOps en Colombia y Latam
+                Compromisos concretos y medibles del servicio, no promesas de resultado
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-white border border-gray-200 rounded-2xl p-8 text-center hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300"
+                  className="bg-white border border-gray-200 rounded-2xl p-6 text-left hover:border-[#1d70a2]/30 hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`text-4xl font-poppins font-black ${stat.color} mb-3`}>{stat.num}</div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{stat.label}</p>
+                  <div className={`text-4xl font-poppins font-black ${stat.color} mb-2`}>{stat.num}</div>
+                  <p className="text-gray-800 font-semibold text-sm leading-snug mb-2">{stat.label}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed">{stat.sublabel}</p>
                 </div>
               ))}
             </div>

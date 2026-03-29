@@ -66,14 +66,14 @@ const CrmVentas = () => {
                 <span className="text-blue-300 font-medium text-sm">CRM · Ventas</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                CRM para
+                Implementación CRM
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                  Equipos de Ventas
+                  para Equipos de Ventas
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Implementamos tu CRM de ventas con pipelines visuales, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más oportunidades con menos esfuerzo.
+                Ordena tu proceso comercial y da seguimiento real a cada oportunidad desde un solo sistema. Convierte más oportunidades con un CRM de ventas bien implementado.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
@@ -252,19 +252,24 @@ const CrmVentas = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Resultados que puedes esperar</h2>
-            <p className="text-xl text-gray-300 mb-12">Basados en implementaciones realizadas en empresas similares a la tuya</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <p className="text-xl text-gray-300 mb-12">Lo que cambia cuando el proceso comercial está bien configurado</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
               {[
-                { num: '+35%', label: 'Aumento en tasa de cierre', color: 'text-blue-400' },
-                { num: '-40%', label: 'Reducción en tiempo de ciclo de venta', color: 'text-teal-400' },
-                { num: '+60%', label: 'Visibilidad sobre el pipeline en tiempo real', color: 'text-blue-400' },
+                { num: '-70%', label: 'Trabajo manual en actualización de negocios', sublabel: 'El CRM registra automáticamente cada interacción', color: 'text-teal-400' },
+                { num: '-80%', label: 'Tiempo para asignar leads al equipo', sublabel: 'Reglas de distribución automática por canal o zona', color: 'text-blue-400' },
+                { num: '-90%', label: 'Tiempo para generar reportes de ventas', sublabel: 'Dashboard en tiempo real, sin exportar ni consolidar', color: 'text-teal-400' },
+                { num: '+85%', label: 'Procesos del flujo comercial automatizados', sublabel: 'Seguimientos, tareas y notificaciones sin intervención humana', color: 'text-blue-400' },
               ].map((stat, i) => (
-                <div key={i} className="bg-white/5 border border-white/15 rounded-2xl p-8">
-                  <div className={`text-5xl font-bold ${stat.color} mb-3`}>{stat.num}</div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{stat.label}</p>
+                <div key={i} className="bg-white/5 border border-white/15 rounded-2xl p-6 text-left">
+                  <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.num}</div>
+                  <p className="text-white font-semibold text-sm leading-snug mb-2">{stat.label}</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
+            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+              * Los resultados de conversión y cierre dependen del proceso comercial y el seguimiento de tu equipo — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+            </p>
           </div>
         </div>
       </section>

@@ -143,10 +143,10 @@ const CrmAtencion = () => {
   ];
 
   const stats = [
-    { num: '-50%', label: 'Reducción en tiempo promedio de primera respuesta', color: 'text-[#00bfa5]' },
-    { num: '+45%', label: 'Mejora en satisfacción del cliente (CSAT)', color: 'text-[#1d70a2]' },
-    { num: '100%', label: 'Trazabilidad de cada conversación y ticket abierto', color: 'text-[#00bfa5]' },
-    { num: '-35%', label: 'Reducción en costo operativo del equipo de soporte', color: 'text-[#1d70a2]' },
+    { num: '-70%', label: 'Trabajo manual en actualización y registro de casos', sublabel: 'El CRM registra automáticamente cada interacción por canal', color: 'text-[#00bfa5]' },
+    { num: '-80%', label: 'Tiempo para asignar tickets al agente correcto', sublabel: 'Reglas de enrutamiento automático por canal, tipo o prioridad', color: 'text-[#1d70a2]' },
+    { num: '-90%', label: 'Tiempo para generar reportes de servicio', sublabel: 'Dashboard en vivo con tiempos, CSAT y carga por agente', color: 'text-[#00bfa5]' },
+    { num: '+85%', label: 'Procesos del flujo de atención automatizados', sublabel: 'Asignaciones, alertas de SLA y encuestas sin intervención manual', color: 'text-[#1d70a2]' },
   ];
 
   const deliverables = [
@@ -209,15 +209,28 @@ const CrmAtencion = () => {
                 <span className="text-[#00bfa5] font-poppins font-medium text-sm">CRM · Atención al Cliente</span>
               </div>
               <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl leading-tight">
-                CRM para
+                Implementación CRM
                 <br />
                 <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  Atención al Cliente
+                  para Servicio al Cliente
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Centraliza todos los tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta hasta un 50%, mejora el CSAT y automatiza los flujos de atención omnicanal.
+                Ordena tu operación de atención y responde más rápido desde un solo sistema. Deja de perder tickets y empieza a medir la calidad de cada interacción.
               </p>
+              <ul className="space-y-2 pt-2">
+                {[
+                  '¿Tu equipo atiende por WhatsApp, email y redes sin un sistema central?',
+                  '¿No sabes cuánto demora tu equipo en responder cada solicitud?',
+                  '¿Se pierden tickets o quedan sin respuesta sin que nadie lo note?',
+                  '¿No tienes métricas reales de satisfacción del cliente?',
+                ].map((q, i) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-300 text-base">
+                    <span className="text-[#00bfa5] font-bold mt-0.5">→</span>
+                    <span>{q}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#00bfa5]" />
@@ -361,15 +374,19 @@ const CrmAtencion = () => {
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-4">Resultados</p>
             <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-white mb-4">Resultados que puedes esperar</h2>
-            <p className="text-xl text-gray-300 mb-12">Basados en implementaciones reales en empresas de servicio en Colombia</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <p className="text-xl text-gray-300 mb-12">Lo que cambia cuando la operación de atención está bien configurada</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
               {stats.map((stat, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#00bfa5]/30 transition-all duration-300">
-                  <div className={`text-4xl sm:text-5xl font-poppins font-black ${stat.color} mb-3`}>{stat.num}</div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{stat.label}</p>
+                <div key={i} className="bg-white/5 border border-white/15 rounded-2xl p-6 text-left hover:border-[#00bfa5]/30 transition-all duration-300">
+                  <div className={`text-4xl font-poppins font-black ${stat.color} mb-2`}>{stat.num}</div>
+                  <p className="text-white font-semibold text-sm leading-snug mb-2">{stat.label}</p>
+                  <p className="text-gray-400 text-xs leading-relaxed">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
+            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+              * Los resultados de satisfacción y retención dependen también de la calidad del servicio y el compromiso del equipo — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+            </p>
           </div>
         </div>
       </section>

@@ -819,101 +819,84 @@ const Index = () => {
             </p>
           </div>
 
-          {/* AI Agents highlight - top banner */}
-          <div className="max-w-5xl mx-auto mb-12 sm:mb-16">
-            <div className="bg-gradient-to-r from-teal-500/20 to-blue-500/20 border border-teal-400/30 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-teal-400 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Bot className="w-8 h-8 text-white" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-teal-300 text-xs font-bold uppercase tracking-widest">Nuevo</span>
-                    <div className="h-px flex-1 bg-teal-400/30"></div>
-                  </div>
-                  <h3 className="text-white font-bold text-xl sm:text-2xl mb-1">Agente IA: WhatsApp + Llamadas 24/7</h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Nuestro agente de inteligencia artificial responde automáticamente mensajes de WhatsApp y atiende llamadas telefónicas como un humano — califica leads, resuelve dudas, agenda citas y actualiza el CRM, todo sin intervención humana.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Main content: dashboard mockup + features */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
 
             {/* Left: visual dashboard card */}
             <div className="relative">
-              <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-2xl">
+              <div className="bg-[#0d2d4f]/80 border border-[#1d70a2]/40 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-2xl">
+
                 {/* Top bar */}
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-7">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-500 rounded-lg flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
+                    <div className="w-9 h-9 bg-gradient-to-br from-[#1d70a2] to-[#00bfa5] rounded-xl flex items-center justify-center shadow-lg">
+                      <Bot className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-bold text-sm">CRM by Sixteam.pro</p>
-                      <p className="text-teal-400 text-xs">● En vivo</p>
+                      <p className="text-white font-bold text-sm leading-tight">CRM by Sixteam.pro</p>
+                      <p className="text-[#00bfa5] text-xs flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full inline-block animate-pulse"></span>
+                        En vivo
+                      </p>
                     </div>
                   </div>
-                  <span className="text-xs bg-teal-400/20 text-teal-300 border border-teal-400/30 px-2 py-1 rounded-full">IA Activa</span>
+                  <span className="text-xs bg-[#00bfa5]/10 text-[#00bfa5] border border-[#00bfa5]/30 px-3 py-1 rounded-full font-medium">Todo incluido</span>
                 </div>
 
                 {/* Pipeline stages */}
                 <div className="mb-6">
-                  <p className="text-gray-400 text-xs uppercase tracking-widest mb-3">Pipeline de Ventas</p>
+                  <p className="text-[#e0e0e0]/50 text-[0.65rem] uppercase tracking-widest mb-3 font-medium">Pipeline de Ventas</p>
                   <div className="grid grid-cols-4 gap-2">
                     {[
-                      { stage: 'Leads', count: '24', color: 'bg-blue-500' },
-                      { stage: 'Contactados', count: '18', color: 'bg-yellow-500' },
-                      { stage: 'Propuesta', count: '9', color: 'bg-orange-500' },
-                      { stage: 'Cerrados', count: '6', color: 'bg-teal-500' },
+                      { stage: 'Leads', count: '24', color: 'bg-[#1d70a2]', bar: 'w-full' },
+                      { stage: 'Contactados', count: '18', color: 'bg-yellow-400', bar: 'w-3/4' },
+                      { stage: 'Propuesta', count: '9', color: 'bg-orange-400', bar: 'w-2/5' },
+                      { stage: 'Cerrados', count: '6', color: 'bg-[#00bfa5]', bar: 'w-1/4' },
                     ].map((s) => (
-                      <div key={s.stage} className="bg-white/5 rounded-xl p-3 text-center border border-white/10">
-                        <div className={`w-2 h-2 ${s.color} rounded-full mx-auto mb-2`}></div>
-                        <p className="text-white font-bold text-lg">{s.count}</p>
-                        <p className="text-gray-400 text-xs">{s.stage}</p>
+                      <div key={s.stage} className="bg-white/5 rounded-2xl p-3 text-center border border-white/8 flex flex-col items-center gap-1.5">
+                        <div className={`w-2 h-2 ${s.color} rounded-full`}></div>
+                        <p className="text-white font-bold text-xl leading-none">{s.count}</p>
+                        <p className="text-[#e0e0e0]/50 text-[0.6rem] leading-tight">{s.stage}</p>
+                        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-1">
+                          <div className={`h-full ${s.color} ${s.bar} rounded-full opacity-70`}></div>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* AI agent activity */}
+                {/* Conversion funnel visual */}
                 <div className="mb-6">
-                  <p className="text-gray-400 text-xs uppercase tracking-widest mb-3">Actividad del Agente IA — hoy</p>
-                  <div className="space-y-2">
-                    {[
-                      { icon: '💬', text: 'WhatsApp respondido automáticamente', time: 'hace 2 min', color: 'border-green-500/40' },
-                      { icon: '📞', text: 'Llamada atendida · cita agendada', time: 'hace 8 min', color: 'border-blue-500/40' },
-                      { icon: '🎯', text: 'Lead calificado → pipeline actualizado', time: 'hace 15 min', color: 'border-teal-500/40' },
-                    ].map((item, i) => (
-                      <div key={i} className={`flex items-center gap-3 bg-white/5 border ${item.color} rounded-lg px-4 py-2.5`}>
-                        <span className="text-base">{item.icon}</span>
-                        <p className="text-gray-300 text-xs flex-1">{item.text}</p>
-                        <span className="text-gray-500 text-xs whitespace-nowrap">{item.time}</span>
-                      </div>
-                    ))}
+                  <p className="text-[#e0e0e0]/50 text-[0.65rem] uppercase tracking-widest mb-3 font-medium">Tasa de Conversión</p>
+                  <div className="bg-white/5 border border-white/8 rounded-2xl p-4 flex items-center gap-4">
+                    <div className="flex-1 flex items-end gap-1.5 h-12">
+                      {[85, 62, 40, 25].map((h, i) => (
+                        <div key={i} className="flex-1 rounded-t-md" style={{
+                          height: `${h}%`,
+                          background: i === 3 ? 'linear-gradient(180deg,#00bfa5,#1d70a2)' : 'rgba(29,112,162,0.35)',
+                        }}></div>
+                      ))}
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[#00bfa5] font-bold text-2xl leading-none">25%</p>
+                      <p className="text-[#e0e0e0]/50 text-[0.65rem] mt-0.5">Cierre</p>
+                    </div>
                   </div>
                 </div>
 
                 {/* Stats row */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { num: '24/7', label: 'Agente activo' },
-                    { num: '∞', label: 'Canales unificados' },
-                    { num: '100%', label: 'Todo en uno' },
+                    { num: '3.2×', label: 'Más cierres' },
+                    { num: '-40%', label: 'Tiempo admin.' },
+                    { num: '100%', label: 'Centralizado' },
                   ].map((stat) => (
-                    <div key={stat.label} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                      <p className="text-white font-bold text-xl">{stat.num}</p>
-                      <p className="text-gray-400 text-xs mt-1">{stat.label}</p>
+                    <div key={stat.label} className="bg-white/5 border border-white/8 rounded-2xl p-3 text-center">
+                      <p className="text-[#00bfa5] font-bold text-xl leading-none">{stat.num}</p>
+                      <p className="text-[#e0e0e0]/50 text-[0.65rem] mt-1.5 leading-tight">{stat.label}</p>
                     </div>
                   ))}
                 </div>
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl">
-                Todo incluido
               </div>
             </div>
 

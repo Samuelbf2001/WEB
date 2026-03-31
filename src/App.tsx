@@ -21,6 +21,7 @@ const ChatbotIA = lazy(() => import('./pages/servicios/ChatbotIA'));
 const SoporteOperaciones = lazy(() => import('./pages/servicios/SoporteOperaciones'));
 const RadarSixteam = lazy(() => import('./pages/RadarSixteam'));
 const Plataforma = lazy(() => import('./pages/Plataforma'));
+const Brochure = lazy(() => import('./pages/Brochure'));
 const DiagnosticoGratis = lazy(() => import('./pages/radar/DiagnosticoGratis'));
 const AntesDeInvertir = lazy(() => import('./pages/radar/AntesDeInvertir'));
 const OportunidadesPerdidas = lazy(() => import('./pages/radar/OportunidadesPerdidas'));
@@ -53,6 +54,7 @@ const App = () => {
               <Route path="/servicios/chatbot-ia" element={<ChatbotIA />} />
               <Route path="/servicios/soporte-operaciones" element={<SoporteOperaciones />} />
               <Route path="/plataforma" element={<Plataforma />} />
+              <Route path="/brochure" element={<Brochure />} />
               <Route path="/radar" element={<RadarSixteam />} />
               <Route path="/radar/diagnostico-gratis" element={<DiagnosticoGratis />} />
               <Route path="/radar/antes-de-invertir" element={<AntesDeInvertir />} />

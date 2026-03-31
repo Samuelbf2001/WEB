@@ -21,9 +21,9 @@ import {
 } from 'lucide-react';
 
 const SERVICES = [
-  ['Implementaciones para ventas, servicio y marketing', 'Diseñamos e implementamos soluciones para organizar procesos, datos, seguimiento y automatizaciones en las areas clave del negocio.', Target],
-  ['CRM para servicio', 'Estructuramos la operación de atención con tickets, SLA, automatizaciones y visibilidad de tiempos de respuesta para equipos de soporte.', ShieldCheck],
-  ['CRM para marketing', 'Conectamos formularios, páginas, captación y reportería para activar campañas y dar continuidad al proceso de generación de demanda.', Rocket],
+  ['Implementaciones para ventas', 'Diseñamos e implementamos soluciones para organizar procesos, datos, seguimiento y automatizaciones en las areas clave del negocio comercial.', Target],
+  ['Implementaciones para servicio', 'Estructuramos la operación de atención con tickets, SLA, automatizaciones y visibilidad de tiempos de respuesta para equipos de soporte.', ShieldCheck],
+  ['Implementaciones para marketing', 'Conectamos formularios, páginas, captación y reportería para activar campañas y dar continuidad al proceso de generación de demanda.', Rocket],
   ['Automatización e IA', 'Implementamos workflows, bots y asistentes conversacionales para responder más rápido, filtrar leads y reducir tareas operativas repetitivas.', Bot],
   ['Integraciones', 'Unimos CRM, canales, formularios y herramientas externas para que la información fluya sin reprocesos entre ventas, marketing y operación.', Link2],
   ['Manejo de pauta publicitaria Meta y Google', 'Activamos, optimizamos y conectamos campañas publicitarias con la operación comercial para mejorar respuesta, seguimiento y aprendizaje del canal.', Megaphone],

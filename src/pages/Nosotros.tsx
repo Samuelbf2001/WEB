@@ -169,22 +169,13 @@ const Nosotros = () => {
           </svg>
         </div>
 
-        {/* ── IMAGEN DESKTOP — absolute, pegada al fondo ── */}
-        <div className="absolute bottom-0 right-0 lg:right-4 xl:right-12 h-full hidden lg:flex items-end pointer-events-none select-none" style={{ zIndex: 3 }}>
-          <img
-            src="/founders.png"
-            alt="Sebastián, Ernesto y Samuel — Socios fundadores de Sixteam.pro"
-            className="h-[90%] max-h-[620px] w-auto object-contain object-bottom"
-            style={{ filter: 'brightness(1.05) contrast(1.05)' }}
-          />
-        </div>
 
         {/* ── CONTENIDO ── */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative" style={{ zIndex: 4 }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div className="max-w-3xl">
 
             {/* Columna texto */}
-            <div className="pt-20 sm:pt-24 lg:pt-32 pb-10 lg:pb-28 flex flex-col justify-center">
+            <div className="pt-20 sm:pt-24 lg:pt-32 pb-16 lg:pb-32 flex flex-col justify-center">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-full mb-6 w-fit">
                 <div className="w-2 h-2 bg-[#00bfa5] rounded-full animate-pulse" />
@@ -217,20 +208,6 @@ const Nosotros = () => {
               </div>
             </div>
 
-            {/* Imagen mobile — dentro del flujo, pegada al fondo sin gap */}
-            <div className="lg:hidden -mx-4 sm:-mx-6 mt-0" style={{ zIndex: 2 }}>
-              <div className="relative w-full" style={{ height: '340px' }}>
-                <img
-                  src="/founders.png"
-                  alt="Sebastián, Ernesto y Samuel — Socios fundadores de Sixteam.pro"
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 h-full w-auto object-contain object-bottom"
-                  style={{ filter: 'brightness(1.05) contrast(1.05)' }}
-                />
-              </div>
-            </div>
-
-            {/* Columna derecha desktop — vacía, imagen es absolute */}
-            <div className="hidden lg:block" />
           </div>
         </div>
       </section>
@@ -247,46 +224,68 @@ const Nosotros = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Los principios que guían todo lo que hacemos</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {/* Misión */}
-            <div className="p-8 rounded-2xl border border-[#1d70a2]/40 hover:border-[#1d70a2]/70 transition-all duration-300 hover:-translate-y-1"
-              style={{ background: 'linear-gradient(135deg, #1d70a2, #0a2342)', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
-              <div className="flex items-center mb-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0 border border-white/20"
-                  style={{ background: 'rgba(255,255,255,0.12)' }}>
-                  <Target className="w-7 h-7 text-[#00bfa5]" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+
+            {/* Columna izquierda — Misión + Visión */}
+            <div className="flex flex-col gap-6">
+              {/* Misión */}
+              <div className="p-6 rounded-2xl border border-[#1d70a2]/40 hover:border-[#1d70a2]/70 transition-all duration-300 hover:-translate-y-1 flex-1"
+                style={{ background: 'linear-gradient(135deg, #1d70a2, #0a2342)', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
+                <div className="flex items-center mb-4">
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mr-3 flex-shrink-0 border border-white/20"
+                    style={{ background: 'rgba(255,255,255,0.12)' }}>
+                    <Target className="w-5 h-5 text-[#00bfa5]" />
+                  </div>
+                  <div>
+                    <p className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-widest mb-0.5">Misión</p>
+                    <h3 className="text-lg font-poppins font-bold text-white">Nuestra Misión</h3>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-widest mb-1">Misión</p>
-                  <h3 className="text-xl font-poppins font-bold text-white">Nuestra Misión</h3>
-                </div>
+                <p className="text-white/85 text-sm leading-relaxed">
+                  Proporcionar servicios de alto valor en la creación, operación y mantenimiento de sistemas
+                  relacionados con las áreas de marketing y ventas, facilitando la transformación digital de
+                  las empresas y contribuyendo a su crecimiento en el mundo digital.
+                </p>
               </div>
-              <p className="text-white/85 leading-relaxed">
-                Proporcionar servicios de alto valor en la creación, operación y mantenimiento de sistemas
-                relacionados con las áreas de marketing y ventas, facilitando la transformación digital de
-                las empresas y contribuyendo a su crecimiento en el mundo digital.
-              </p>
+
+              {/* Visión */}
+              <div className="p-6 rounded-2xl border border-[#00bfa5]/35 hover:border-[#00bfa5]/60 transition-all duration-300 hover:-translate-y-1 flex-1"
+                style={{ background: 'linear-gradient(135deg, #0a2342, #1d70a2)', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
+                <div className="flex items-center mb-4">
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mr-3 flex-shrink-0 border border-white/20"
+                    style={{ background: 'rgba(0,191,165,0.2)' }}>
+                    <Eye className="w-5 h-5 text-[#00bfa5]" />
+                  </div>
+                  <div>
+                    <p className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-widest mb-0.5">Visión</p>
+                    <h3 className="text-lg font-poppins font-bold text-white">Nuestra Visión</h3>
+                  </div>
+                </div>
+                <p className="text-white/85 text-sm leading-relaxed">
+                  Ser referentes en el mercado como socios estratégicos en transformación digital para empresas
+                  que buscan innovar y optimizar sus procesos de marketing y ventas mediante soluciones
+                  tecnológicas avanzadas.
+                </p>
+              </div>
             </div>
 
-            {/* Visión */}
-            <div className="p-8 rounded-2xl border border-[#00bfa5]/35 hover:border-[#00bfa5]/60 transition-all duration-300 hover:-translate-y-1"
-              style={{ background: 'linear-gradient(135deg, #0a2342, #1d70a2)', boxShadow: '0 8px 32px rgba(0,0,0,0.25)' }}>
-              <div className="flex items-center mb-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0 border border-white/20"
-                  style={{ background: 'rgba(0,191,165,0.2)' }}>
-                  <Eye className="w-7 h-7 text-[#00bfa5]" />
-                </div>
-                <div>
-                  <p className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-widest mb-1">Visión</p>
-                  <h3 className="text-xl font-poppins font-bold text-white">Nuestra Visión</h3>
-                </div>
+            {/* Columna derecha — Foto socios fundadores */}
+            <div className="rounded-2xl border border-[#1d70a2]/40 overflow-hidden flex flex-col"
+              style={{ background: 'linear-gradient(135deg, #0a2342, #1d70a2)', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
+              <div className="flex items-center gap-3 px-6 pt-5 pb-3 border-b border-white/10">
+                <div className="w-2 h-2 rounded-full bg-[#00bfa5] animate-pulse" />
+                <p className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-widest">Socios Fundadores</p>
               </div>
-              <p className="text-white/85 leading-relaxed">
-                Ser referentes en el mercado como socios estratégicos en transformación digital para empresas
-                que buscan innovar y optimizar sus procesos de marketing y ventas mediante soluciones
-                tecnológicas avanzadas.
-              </p>
+              <div className="flex-1 flex items-end justify-center overflow-hidden p-2">
+                <img
+                  src="/founders.png"
+                  alt="Sebastián, Ernesto y Samuel — Socios fundadores de Sixteam.pro"
+                  className="w-full h-auto object-contain"
+                  style={{ filter: 'brightness(1.05) contrast(1.05)', transform: 'scale(1.2)' }}
+                />
+              </div>
             </div>
+
           </div>
         </div>
       </section>

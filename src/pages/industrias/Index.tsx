@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import { useSEO } from '@/hooks/useSEO';
 
 const WA_URL =
-  'https://wa.me/573023515392?text=Hola%2C%20quiero%20saber%20si%20tienen%20soluci%C3%B3n%20para%20mi%20industria';
+  'https://wa.me/573004188522?text=Hola%2C%20quiero%20saber%20si%20tienen%20soluci%C3%B3n%20para%20mi%20industria';
 
 const industries = [
   {

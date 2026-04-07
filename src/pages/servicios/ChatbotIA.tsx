@@ -48,7 +48,7 @@ const ChatbotIA = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Chatbot%20IA%20para%20WhatsApp',
+      'https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Chatbot%20IA%20para%20WhatsApp',
       '_blank'
     );
   };

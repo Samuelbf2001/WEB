@@ -28,7 +28,7 @@ const OportunidadesPerdidas = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/+573023515392?text=Hola%2C%20quiero%20descubrir%20cu%C3%A1ntas%20oportunidades%20estoy%20perdiendo%20con%20el%20diagn%C3%B3stico%20de%20Sixteam',
+      'https://wa.me/+573004188522?text=Hola%2C%20quiero%20descubrir%20cu%C3%A1ntas%20oportunidades%20estoy%20perdiendo%20con%20el%20diagn%C3%B3stico%20de%20Sixteam',
       '_blank'
     );
   };

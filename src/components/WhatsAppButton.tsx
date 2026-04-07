@@ -6,7 +6,7 @@ const WhatsAppButton = () => {
 
   const handleWhatsAppClick = () => {
     gtm.whatsappClick('floating_button');
-    const phone = "+573023515392";
+    const phone = "+573004188522";
     const message = "Hola. estoy interesado en un servicio para ...";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

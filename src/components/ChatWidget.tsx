@@ -67,7 +67,11 @@ const ChatWidget = ({
       });
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      const data = await response.json();
+      const responseText = await response.text();
+      if (!responseText || !responseText.trim()) {
+        throw new Error('El webhook respondió con cuerpo vacío. Verifica el nodo "Respond to Webhook" en n8n.');
+      }
+      const data = JSON.parse(responseText);
 
       setMessages(prev => prev.filter(m => m.id !== 'typing'));
       if (data.thread) sessionStorage.setItem('chatbot-thread', data.thread);
@@ -111,49 +115,86 @@ const ChatWidget = ({
     date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col h-[520px] lg:h-[560px]">
-
+    <div
+      className="rounded-2xl overflow-hidden flex flex-col h-[520px] lg:h-[560px]"
+      style={{
+        background: '#111120',
+        border: '1px solid rgba(255,255,255,0.07)',
+        boxShadow: '0 32px 80px rgba(0,0,0,0.8)',
+      }}
+    >
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#0a2342] to-[#1d70a2] px-5 py-4 flex items-center gap-3 flex-shrink-0">
-        <div className="w-10 h-10 bg-[#00bfa5]/20 border border-[#00bfa5]/40 rounded-full flex items-center justify-center">
-          <Bot className="w-5 h-5 text-[#00bfa5]" />
+      <div
+        className="px-5 py-3.5 flex items-center gap-3 flex-shrink-0"
+        style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}
+      >
+        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+          style={{ background: 'rgba(0,191,165,0.1)', border: '1px solid rgba(0,191,165,0.2)' }}>
+          <Bot className="w-4.5 h-4.5 text-[#00bfa5]" style={{ width: '18px', height: '18px' }} />
         </div>
-        <div>
-          <p className="text-white font-poppins font-semibold text-sm">{CHATBOT_CONFIG.botName}</p>
-          <div className="flex items-center gap-1.5">
-            <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full animate-pulse" />
-            <span className="text-[#00bfa5] text-xs">En línea ahora</span>
+        <div className="flex-1 min-w-0">
+          <p className="text-white font-poppins font-semibold text-sm leading-tight">{CHATBOT_CONFIG.botName}</p>
+          <div className="flex items-center gap-1.5 mt-0.5">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00bfa5] opacity-60" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#00bfa5]" />
+            </span>
+            <span className="text-[#00bfa5] text-xs font-lato" style={{ opacity: 0.75 }}>En línea ahora</span>
           </div>
         </div>
+        <span className="font-lato text-xs font-semibold tracking-widest uppercase"
+          style={{ color: 'rgba(255,255,255,0.18)', letterSpacing: '2px' }}>IA</span>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+      <div className="flex-1 overflow-y-auto p-4 space-y-3.5"
+        style={{
+          background: '#06080d',
+          scrollbarWidth: 'thin',
+          scrollbarColor: 'rgba(255,255,255,0.06) transparent',
+        }}
+      >
         {messages.map((message) => (
           <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`flex items-end gap-2 max-w-[85%] ${message.sender === 'user' ? 'flex-row-reverse' : ''}`}>
-              <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 ${
-                message.sender === 'user' ? 'bg-[#1d70a2]' : 'bg-[#0a2342]'
-              }`}>
+              <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{
+                  background: message.sender === 'user'
+                    ? 'linear-gradient(135deg, #1d70a2, #00bfa5)'
+                    : 'rgba(0,191,165,0.1)',
+                  border: message.sender === 'user'
+                    ? 'none'
+                    : '1px solid rgba(0,191,165,0.2)',
+                }}
+              >
                 {message.sender === 'user'
-                  ? <User className="w-3.5 h-3.5 text-white" />
-                  : <Bot className="w-3.5 h-3.5 text-[#00bfa5]" />}
+                  ? <User className="w-3 h-3 text-white" />
+                  : <Bot className="w-3 h-3 text-[#00bfa5]" />}
               </div>
-              <div className={`px-4 py-2.5 rounded-2xl text-sm ${
-                message.sender === 'user'
-                  ? 'bg-[#1d70a2] text-white rounded-br-sm'
-                  : 'bg-white text-gray-800 rounded-bl-sm shadow-sm border border-gray-100'
-              } ${message.isTyping ? 'animate-pulse' : ''}`}>
+              <div
+                className={`px-3.5 py-2.5 text-sm leading-relaxed ${message.isTyping ? 'animate-pulse' : ''} ${
+                  message.sender === 'user' ? 'rounded-2xl rounded-br-sm' : 'rounded-2xl rounded-bl-sm'
+                }`}
+                style={message.sender === 'user' ? {
+                  background: 'rgba(29,112,162,0.25)',
+                  border: '1px solid rgba(29,112,162,0.35)',
+                  color: 'rgba(255,255,255,0.9)',
+                } : {
+                  background: 'rgba(0,191,165,0.07)',
+                  border: '1px solid rgba(0,191,165,0.18)',
+                  color: 'rgba(255,255,255,0.85)',
+                }}
+              >
                 {message.isTyping ? (
                   <div className="flex gap-1 items-center h-4">
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" />
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                    <div className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ background: 'rgba(0,191,165,0.5)' }} />
+                    <div className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ background: 'rgba(0,191,165,0.5)', animationDelay: '0.1s' }} />
+                    <div className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ background: 'rgba(0,191,165,0.5)', animationDelay: '0.2s' }} />
                   </div>
                 ) : (
                   <>
-                    <p className="whitespace-pre-wrap leading-relaxed">{message.text}</p>
-                    <p className={`text-xs mt-1 opacity-60 ${message.sender === 'user' ? 'text-blue-100' : 'text-gray-400'}`}>
+                    <p className="whitespace-pre-wrap font-lato">{message.text}</p>
+                    <p className="text-xs mt-1 font-lato" style={{ color: 'rgba(255,255,255,0.25)' }}>
                       {formatTime(message.timestamp)}
                     </p>
                   </>
@@ -166,14 +207,30 @@ const ChatWidget = ({
       </div>
 
       {/* Quick questions */}
-      <div className="px-4 pt-3 pb-2 bg-white border-t border-gray-100 flex-shrink-0">
-        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+      <div className="px-4 pt-2.5 pb-2 flex-shrink-0"
+        style={{ background: '#0d0d1a', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div className="flex gap-2 overflow-x-auto pb-0.5" style={{ scrollbarWidth: 'none' }}>
           {resolvedQuestions.slice(0, 3).map((q, i) => (
             <button
               key={i}
               onClick={() => sendMessage(q)}
               disabled={isLoading}
-              className="whitespace-nowrap text-xs px-3 py-1.5 bg-gray-50 hover:bg-[#e6f7f5] text-gray-600 hover:text-[#00897b] border border-gray-200 hover:border-[#00bfa5]/40 rounded-full transition-colors flex-shrink-0 disabled:opacity-50"
+              className="whitespace-nowrap text-xs px-3 py-1.5 rounded-full transition-all duration-200 flex-shrink-0 disabled:opacity-30 font-lato"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                color: 'rgba(255,255,255,0.5)',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = 'rgba(0,191,165,0.1)';
+                e.currentTarget.style.borderColor = 'rgba(0,191,165,0.3)';
+                e.currentTarget.style.color = '#00bfa5';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.04)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.5)';
+              }}
             >
               {q}
             </button>
@@ -182,7 +239,8 @@ const ChatWidget = ({
       </div>
 
       {/* Input */}
-      <div className="px-4 pb-4 pt-2 bg-white flex-shrink-0">
+      <div className="px-4 pb-4 pt-2.5 flex-shrink-0"
+        style={{ background: '#0d0d1a', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="flex gap-2">
           <div className="flex-1 relative">
             <input
@@ -193,21 +251,42 @@ const ChatWidget = ({
               onKeyPress={handleKeyPress}
               placeholder="Escribe tu pregunta..."
               disabled={isLoading}
-              className="w-full pl-4 pr-10 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1d70a2]/30 focus:border-[#1d70a2] bg-gray-50"
+              className="w-full pl-4 pr-10 py-2.5 text-sm rounded-xl font-lato outline-none transition-all duration-200"
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                color: 'rgba(255,255,255,0.8)',
+              }}
+              onFocus={e => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
+                e.currentTarget.style.borderColor = 'rgba(0,191,165,0.35)';
+              }}
+              onBlur={e => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+              }}
             />
-            <MessageCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
+            <MessageCircle className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5"
+              style={{ color: 'rgba(255,255,255,0.15)' }} />
           </div>
           <button
             onClick={() => sendMessage()}
             disabled={!inputText.trim() || isLoading}
-            className="px-4 py-2.5 bg-[#0a2342] hover:bg-[#1d70a2] text-white rounded-xl disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex items-center gap-1.5"
+            className="px-4 py-2.5 rounded-xl transition-all duration-200 flex items-center gap-1.5 hover:scale-[1.03] active:scale-95"
+            style={{
+              background: inputText.trim() && !isLoading
+                ? 'linear-gradient(90deg, #1d70a2, #00bfa5)'
+                : 'rgba(255,255,255,0.06)',
+              opacity: !inputText.trim() || isLoading ? 0.35 : 1,
+              cursor: !inputText.trim() || isLoading ? 'not-allowed' : 'pointer',
+            }}
           >
             {isLoading
               ? <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              : <Send className="w-4 h-4" />}
+              : <Send className="w-4 h-4 text-white" />}
           </button>
         </div>
-        <p className="text-center text-xs text-gray-400 mt-2">
+        <p className="text-center text-xs mt-2 font-lato" style={{ color: 'rgba(255,255,255,0.2)' }}>
           {isLoading ? 'Escribiendo...' : 'Presiona Enter para enviar'}
         </p>
       </div>

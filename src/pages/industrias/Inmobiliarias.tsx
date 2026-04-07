@@ -56,7 +56,7 @@ const EXAMPLE_QUESTIONS = [
   '¿Cómo funciona el agendamiento?',
 ];
 
-const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20soy%20de%20una%20inmobiliaria%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20automatizar%20mis%20procesos%20de%20ventas';
+const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20soy%20de%20una%20inmobiliaria%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20automatizar%20mis%20procesos%20de%20ventas';
 
 const handleWA = () => window.open(WA_URL, '_blank');
 

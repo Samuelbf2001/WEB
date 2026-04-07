@@ -56,7 +56,7 @@ const EXAMPLE_QUESTIONS = [
   '¿Puedo rastrear mis clientes referidos?',
 ];
 
-const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20tengo%20una%20empresa%20de%20servicios%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20crecer%20sin%20m%C3%A1s%20carga%20administrativa';
+const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20tengo%20una%20empresa%20de%20servicios%20y%20quiero%20conocer%20c%C3%B3mo%20Sixteam%20puede%20ayudarme%20a%20crecer%20sin%20m%C3%A1s%20carga%20administrativa';
 
 const handleWA = () => window.open(WA_URL, '_blank');
 

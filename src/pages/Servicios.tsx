@@ -14,7 +14,7 @@ const Servicios = () => {
   });
 
   const handleWhatsAppClick = (message: string = 'Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Sixteam.pro') => {
-    window.open(`https://wa.me/+573023515392?text=${message}`, '_blank');
+    window.open(`https://wa.me/+573004188522?text=${message}`, '_blank');
   };
 
   const services = [

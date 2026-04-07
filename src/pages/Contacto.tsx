@@ -12,7 +12,7 @@ const Contacto = () => {
   });
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+573023515392?text=Hola%2C%20estoy%20listo%20para%20empezar%20la%20transformaci%C3%B3n%20digital%20de%20mi%20negocio', '_blank');
+    window.open('https://wa.me/+573004188522?text=Hola%2C%20estoy%20listo%20para%20empezar%20la%20transformaci%C3%B3n%20digital%20de%20mi%20negocio', '_blank');
   };
 
   useEffect(() => {

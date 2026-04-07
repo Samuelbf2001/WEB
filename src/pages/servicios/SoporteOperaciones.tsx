@@ -41,7 +41,7 @@ const EXAMPLE_QUESTIONS = [
   '¿Cuántas horas incluye cada plan?',
 ];
 
-const WA_BASE = 'https://wa.me/+573023515392?text=';
+const WA_BASE = 'https://wa.me/+573004188522?text=';
 
 const SoporteOperaciones = () => {
   useSEO({

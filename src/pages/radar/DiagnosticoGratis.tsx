@@ -33,7 +33,7 @@ const DiagnosticoGratis = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/+573023515392?text=Hola%2C%20quiero%20hacer%20mi%20diagn%C3%B3stico%20gratuito%20de%20negocio%20con%20Sixteam',
+      'https://wa.me/+573004188522?text=Hola%2C%20quiero%20hacer%20mi%20diagn%C3%B3stico%20gratuito%20de%20negocio%20con%20Sixteam',
       '_blank'
     );
   };
@@ -44,7 +44,7 @@ const DiagnosticoGratis = () => {
     const msg = encodeURIComponent(
       `Hola, quiero mi diagnóstico gratuito. Soy ${formData.name} de ${formData.company}. Mi reto principal: ${formData.challenge}. Mi correo: ${formData.email}`
     );
-    window.open(`https://wa.me/+573023515392?text=${msg}`, '_blank');
+    window.open(`https://wa.me/+573004188522?text=${msg}`, '_blank');
     setSubmitted(true);
   };
 

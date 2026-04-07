@@ -148,7 +148,11 @@ const ChatSection = ({
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data: WebhookResponse = await response.json();
+      const responseText = await response.text();
+      if (!responseText || !responseText.trim()) {
+        throw new Error('El webhook respondió con cuerpo vacío. Verifica el nodo "Respond to Webhook" en n8n.');
+      }
+      const data: WebhookResponse = JSON.parse(responseText);
       
       // Remover mensaje de "escribiendo..."
       setMessages(prev => prev.filter(msg => msg.id !== 'typing'));

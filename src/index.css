@@ -463,3 +463,58 @@
     opacity: 0;
   }
 }
+
+/* ── Logo Slider Infinito ── */
+.logo-slider-track {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  animation: scroll-logos 40s linear infinite;
+  width: max-content;
+}
+
+.logo-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-slider-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.logo-slider-item img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+.logo-slider-item:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Calendario iframe embed ── */
+.calendar-embed-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 191, 165, 0.12);
+  border: 1px solid rgba(0, 191, 165, 0.2);
+}
+
+.calendar-embed-wrapper iframe {
+  width: 100%;
+  min-height: 680px;
+  border: none;
+  display: block;
+}

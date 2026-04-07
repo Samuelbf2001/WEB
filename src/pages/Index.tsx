@@ -245,7 +245,7 @@ const Index = () => {
 
   const handleWhatsAppClick = () => {
     gtm.ctaClick('hero_cta', 'home_hero');
-    window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20agendar%20una%20cita%20para%20conocer%20más%20sobre%20los%20servicios%20de%20Sixteam.pro', '_blank');
+    window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20agendar%20una%20cita%20para%20conocer%20más%20sobre%20los%20servicios%20de%20Sixteam.pro', '_blank');
   };
 
   // Auto-scroll del carrusel cada 8 segundos (solo cuando esté visible)
@@ -409,15 +409,36 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: 'María González',
-      company: 'TechStart Solutions',
-      text: 'Con Sixteam.pro automatizamos nuestros procesos de ventas usando IA. Aumentamos conversiones 40% y redujimos tiempo manual 60%.',
+      name: 'Juliana Ospina',
+      role: 'Directora Comercial',
+      company: 'Grupo Ospina Bienes Raíces',
+      city: 'Bogotá, Colombia',
+      flag: '🇨🇴',
+      initials: 'JO',
+      avatarColor: '#1d70a2',
+      text: 'Antes perdíamos leads por falta de seguimiento. Con Sixteam.pro implementamos un CRM con recordatorios automáticos y flujos de WhatsApp. En 60 días cerramos un 35% más de negocios sin contratar más vendedores.',
       rating: 5
     },
     {
-      name: 'Carlos Rodríguez',
-      company: 'Innovación Digital',
-      text: 'La implementación de IA en nuestro CRM transformó completamente cómo gestionamos leads. Resultados extraordinarios en 3 meses.',
+      name: 'Sebastián Arango',
+      role: 'Gerente General',
+      company: 'Clínica Dental Arango & Asociados',
+      city: 'Medellín, Colombia',
+      flag: '🇨🇴',
+      initials: 'SA',
+      avatarColor: '#0d6659',
+      text: 'Nuestras citas se llenaban a medias y el equipo perdía horas confirmando por teléfono. Sixteam.pro automatizó las confirmaciones y reagendamientos por WhatsApp. Redujimos ausentismo un 48% en el primer mes.',
+      rating: 5
+    },
+    {
+      name: 'Camila Fuentes',
+      role: 'CEO',
+      company: 'Viajes & Aventura Premium',
+      city: 'Santiago, Chile',
+      flag: '🇨🇱',
+      initials: 'CF',
+      avatarColor: '#7c3aed',
+      text: 'Manejamos grupos de turismo y coordinar cotizaciones era un caos. Con el CRM de Sixteam.pro centralizamos todo: presupuestos, seguimientos y pagos. Nuestro tiempo de respuesta bajó de 2 días a menos de 2 horas.',
       rating: 5
     }
   ];
@@ -973,7 +994,7 @@ const Index = () => {
                 <h4 className="text-xl font-bold mb-1">¿Quieres ver el CRM en acción?</h4>
                 <p className="text-blue-100 text-sm mb-4">Agenda una demo personalizada y descubre el agente IA respondiendo en vivo.</p>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20CRM%20by%20Sixteam.pro%20y%20el%20agente%20IA%20de%20WhatsApp%20y%20llamadas', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20CRM%20by%20Sixteam.pro%20y%20el%20agente%20IA%20de%20WhatsApp%20y%20llamadas', '_blank')}
                   className="bg-white text-blue-700 hover:bg-blue-50 font-bold px-6 py-3 rounded-xl flex items-center gap-2 transition-all hover:scale-105 shadow-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -1012,7 +1033,7 @@ const Index = () => {
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />2 usuarios incluidos</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20Sixteam%20Inbox%20%2B%20IA', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20Sixteam%20Inbox%20%2B%20IA', '_blank')}
                   className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
                 >
                   Empezar con Inbox + IA
@@ -1042,7 +1063,7 @@ const Index = () => {
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />3 usuarios incluidos</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Core%20de%20Sixteam.pro', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Core%20de%20Sixteam.pro', '_blank')}
                   className="w-full bg-blue-500 hover:bg-blue-400 text-white rounded-xl py-3 font-semibold transition-all shadow-lg"
                 >
                   Empezar con CRM Core
@@ -1071,7 +1092,7 @@ const Index = () => {
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />5 usuarios incluidos</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Growth%20de%20Sixteam.pro', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Growth%20de%20Sixteam.pro', '_blank')}
                   className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
                 >
                   Empezar con CRM Growth
@@ -1268,7 +1289,7 @@ const Index = () => {
           </div>
 
           {/* Grid de testimonios premium */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -1279,37 +1300,44 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 {/* Card principal */}
-                <div className="relative bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-3xl p-10 hover:border-[#00bfa5]/50 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                <div className="relative bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-3xl p-8 hover:border-[#00bfa5]/50 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 flex flex-col h-full">
 
                   {/* Header con estrellas y badge */}
-                  <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center justify-between mb-6">
                     <div className="flex gap-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <div className="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-medium rounded-full border border-green-500/30">
+                    <div className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-500/30">
                       VERIFICADO
                     </div>
                   </div>
 
                   {/* Quote con diseño elegante */}
-                  <div className="relative mb-8">
-                    <div className="absolute -top-4 -left-4 text-6xl text-[#1d70a2]/50 font-serif">"</div>
-                    <p className="text-lg text-[#e0e0e0] leading-relaxed italic relative z-10 pl-8">
+                  <div className="relative mb-8 flex-1">
+                    <div className="absolute -top-3 -left-2 text-5xl text-[#1d70a2]/40 font-serif leading-none">"</div>
+                    <p className="text-base text-[#e0e0e0] leading-relaxed italic relative z-10 pl-6 pr-4">
                       {testimonial.text}
                     </p>
-                    <div className="absolute -bottom-4 -right-4 text-6xl text-[#1d70a2]/50 font-serif rotate-180">"</div>
                   </div>
+
+                  {/* Separador */}
+                  <div className="w-full h-px bg-[#1d70a2]/30 mb-6"></div>
 
                   {/* Información del cliente con avatar */}
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-[#1d70a2] rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      {testimonial.name.charAt(0)}
+                    <div
+                      className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0"
+                      style={{ backgroundColor: testimonial.avatarColor }}
+                    >
+                      {testimonial.initials}
                     </div>
-                    <div>
-                      <p className="font-bold text-white text-lg">{testimonial.name}</p>
-                      <p className="text-[#e0e0e0] font-medium">{testimonial.company}</p>
+                    <div className="min-w-0">
+                      <p className="font-bold text-white text-base leading-tight">{testimonial.name}</p>
+                      <p className="text-[#00bfa5] text-sm font-medium">{testimonial.role}</p>
+                      <p className="text-[#e0e0e0]/70 text-sm truncate">{testimonial.company}</p>
+                      <p className="text-[#e0e0e0]/50 text-xs mt-1">{testimonial.flag} {testimonial.city}</p>
                     </div>
                   </div>
 

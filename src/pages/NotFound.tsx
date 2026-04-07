@@ -26,7 +26,7 @@ const NotFound = () => {
   ];
 
   const handleWhatsApp = () => {
-    const phone = "+573023515392";
+    const phone = "+573004188522";
     const message = "Hola, estoy navegando por el sitio web y necesito ayuda.";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };

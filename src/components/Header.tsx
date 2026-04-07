@@ -125,12 +125,11 @@ const Header = () => {
           <div className="flex items-center gap-3">
             {/* CTA solo desktop */}
             <a
-              href="https://wa.me/+573023515392?text=Hola%2C%20quiero%20una%20consultor%C3%ADa%20gratuita"
-              target="_blank"
-              rel="noreferrer"
+              href="#agenda-asesoria"
+              onClick={(e) => { e.preventDefault(); document.getElementById('agenda-asesoria')?.scrollIntoView({ behavior: 'smooth' }); }}
               className="hidden lg:inline-flex items-center gap-2 bg-[#00bfa5] hover:bg-[#00a08a] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
             >
-              Consultoría gratis
+              Agenda tu asesoría
             </a>
 
             {/* Hamburger */}
@@ -207,13 +206,11 @@ const Header = () => {
               {/* CTA mobile */}
               <div className="mt-3 pt-3 border-t border-white/10">
                 <a
-                  href="https://wa.me/+573023515392?text=Hola%2C%20quiero%20una%20consultor%C3%ADa%20gratuita"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#agenda-asesoria"
+                  onClick={(e) => { e.preventDefault(); closeMobile(); setTimeout(() => document.getElementById('agenda-asesoria')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
                   className="flex items-center justify-center gap-2 bg-[#00bfa5] hover:bg-[#00a08a] text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
-                  onClick={closeMobile}
                 >
-                  Consultoría gratis por WhatsApp
+                  Agenda tu asesoría
                 </a>
               </div>
             </nav>

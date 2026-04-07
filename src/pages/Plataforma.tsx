@@ -39,7 +39,7 @@ const EXAMPLE_QUESTIONS = [
   '¿Cuánto cuesta agregar usuarios?',
 ];
 
-const WA_URL = 'https://wa.me/+573023515392?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma%20Sixteam.pro';
+const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma%20Sixteam.pro';
 
 const Plataforma = () => {
   useSEO({
@@ -52,7 +52,7 @@ const Plataforma = () => {
 
   const handleWA = (msg = '') => {
     const text = msg
-      ? `https://wa.me/+573023515392?text=${encodeURIComponent(msg)}`
+      ? `https://wa.me/+573004188522?text=${encodeURIComponent(msg)}`
       : WA_URL;
     window.open(text, '_blank');
   };

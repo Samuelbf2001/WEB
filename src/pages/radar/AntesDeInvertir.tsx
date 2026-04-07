@@ -28,7 +28,7 @@ const AntesDeInvertir = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/+573023515392?text=Hola%2C%20quiero%20hacer%20el%20diagn%C3%B3stico%20antes%20de%20invertir%20en%20CRM%20o%20automatizaci%C3%B3n',
+      'https://wa.me/+573004188522?text=Hola%2C%20quiero%20hacer%20el%20diagn%C3%B3stico%20antes%20de%20invertir%20en%20CRM%20o%20automatizaci%C3%B3n',
       '_blank'
     );
   };

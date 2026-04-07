@@ -12,7 +12,7 @@ import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
 
-const WA_BASE = 'https://wa.me/+573023515392?text=';
+const WA_BASE = 'https://wa.me/+573004188522?text=';
 
 const RadarSixteam = () => {
   useSEO({

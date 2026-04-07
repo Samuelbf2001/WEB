@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+573023515392?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Sixteam.pro', '_blank');
+    window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Sixteam.pro', '_blank');
   };
 
   return (

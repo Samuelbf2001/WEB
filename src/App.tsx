@@ -26,6 +26,8 @@ const DiagnosticoGratis = lazy(() => import('./pages/radar/DiagnosticoGratis'));
 const AntesDeInvertir = lazy(() => import('./pages/radar/AntesDeInvertir'));
 const OportunidadesPerdidas = lazy(() => import('./pages/radar/OportunidadesPerdidas'));
 const AgenciasDeViaje = lazy(() => import('./pages/industrias/AgenciasDeViaje'));
+const AgenciasDeViajeAds = lazy(() => import('./pages/industrias/AgenciasDeViajeAds'));
+const MasterViajes = lazy(() => import('./pages/casos/MasterViajes'));
 const Inmobiliarias = lazy(() => import('./pages/industrias/Inmobiliarias'));
 const ServiciosGenerales = lazy(() => import('./pages/industrias/ServiciosGenerales'));
 const IndustriasIndex = lazy(() => import('./pages/industrias/Index'));
@@ -61,8 +63,10 @@ const App = () => {
               <Route path="/radar/oportunidades-perdidas" element={<OportunidadesPerdidas />} />
               <Route path="/industrias" element={<IndustriasIndex />} />
               <Route path="/industrias/agencias-de-viaje" element={<AgenciasDeViaje />} />
+              <Route path="/viajes" element={<AgenciasDeViajeAds />} />
               <Route path="/industrias/inmobiliarias" element={<Inmobiliarias />} />
               <Route path="/industrias/servicios-generales" element={<ServiciosGenerales />} />
+              <Route path="/casos/master-viajes" element={<MasterViajes />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

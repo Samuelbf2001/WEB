@@ -816,7 +816,7 @@ const AgenciasDeViajeAds = () => {
         </div>
       </section>
 
-      {/* ═══ CHAT AGENT — ¿Tienes preguntas? ═══ */}
+      {/* ═══ CHAT AGENT — ¿Tienes preguntas? — HIDDEN PER USER REQUEST ═══
       <section className="py-14 sm:py-16 relative overflow-hidden" style={{ background: '#0d0d1a' }}>
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at bottom right, rgba(29,112,162,0.07) 0%, transparent 60%)' }} />
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
@@ -870,6 +870,7 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
           </div>
         </div>
       </section>
+      */}
 
       {/* ═══ FINAL CTA + CALENDAR ═══ */}
       <section id="agenda" className="py-16 sm:py-24 relative overflow-hidden">

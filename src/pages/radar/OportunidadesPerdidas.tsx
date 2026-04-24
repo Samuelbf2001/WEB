@@ -24,6 +24,8 @@ const OportunidadesPerdidas = () => {
   useSEO({
     title: "Oportunidades de Venta Perdidas — Radar Sixteam | Auditoría RevOps",
     description: "¿Cuánto dinero estás perdiendo sin saberlo? Auditamos fugas en tu pipeline, leads sin seguimiento y clientes que no regresan. Diagnóstico gratuito.",
+    canonical: "https://sixteam.pro/radar/oportunidades-perdidas",
+    ogUrl: "https://sixteam.pro/radar/oportunidades-perdidas",
   });
 
   const handleWhatsAppClick = () => {

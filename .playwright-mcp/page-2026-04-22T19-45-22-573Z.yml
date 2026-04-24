@@ -1,0 +1,391 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e8]:
+        - strong [ref=e9]: Solo 4 consultorías gratuitas esta semana
+        - text: — por videollamada, llamada o WhatsApp
+      - button "Reservar ahora" [ref=e10] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - img [ref=e17]
+          - generic [ref=e19]: Para agencias de viaje · Colombia & LATAM
+        - heading "Tu agencia pierde reservas cada semana — y no lo notas" [level=1] [ref=e20]
+        - paragraph [ref=e21]:
+          - text: Cotizaciones lentas, seguimientos que no pasan y leads dispersos en 5 canales.
+          - strong [ref=e22]: Resolvemos los 3 en 2 semanas
+          - text: con CRM, bot IA y automatizaciones.
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e28]: Respuesta en 2 minutos (24/7)
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e33]: Seguimiento automático 7 días
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - generic [ref=e38]: Sin contratar más personal
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: MR
+            - generic [ref=e42]: JP
+            - generic [ref=e43]: CF
+            - generic [ref=e44]: AL
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - img [ref=e47]
+              - img [ref=e49]
+              - img [ref=e51]
+              - img [ref=e53]
+              - img [ref=e55]
+            - paragraph [ref=e57]: +200 agencias en LATAM confían en Sixteam
+      - generic [ref=e58]:
+        - generic [ref=e60]:
+          - text: Solo 4 cupos — se cierran en
+          - generic [ref=e64]: 05:09:13:37
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - img [ref=e68]
+              - heading "Diagnóstico gratuito para tu agencia" [level=2] [ref=e72]
+            - paragraph [ref=e73]: "Valor real: $340 USD GRATIS · Solo para agencias calificadas"
+            - paragraph [ref=e74]:
+              - generic [ref=e75]: 📹 Videollamada · 📞 Llamada · 💬 WhatsApp — tú eliges
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - textbox "Tu nombre completo" [ref=e78]
+              - textbox "Nombre de tu agencia" [ref=e79]
+              - 'textbox "Tu WhatsApp (ej: +57 300 123 4567)" [ref=e80]'
+              - combobox [ref=e81]:
+                - option "¿Cuántos asesores tiene tu agencia?" [selected]
+                - option "1–2 asesores"
+                - option "3–5 asesores"
+                - option "6–10 asesores"
+                - option "Más de 10"
+            - button "Quiero mi diagnóstico GRATIS" [ref=e82] [cursor=pointer]:
+              - img [ref=e83]
+              - text: Quiero mi diagnóstico GRATIS
+              - img [ref=e87]
+            - paragraph [ref=e89]:
+              - img [ref=e90]
+              - text: Sin spam · Sin tarjeta de crédito · Solo 4 spots disponibles
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - img [ref=e95]
+            - text: Análisis de canales y leads perdidos
+          - generic [ref=e98]:
+            - img [ref=e99]
+            - text: Demo personalizada con tu proceso
+          - generic [ref=e102]:
+            - img [ref=e103]
+            - text: Plan de implementación en 2 semanas
+    - generic [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]: "+200"
+        - generic [ref=e111]: agencias en LATAM
+      - generic [ref=e112]:
+        - generic [ref=e113]: 2 min
+        - generic [ref=e114]: tiempo de respuesta promedio
+      - generic [ref=e115]:
+        - generic [ref=e116]: +54%
+        - generic [ref=e117]: tasa de cierre (caso real)
+      - generic [ref=e118]:
+        - generic [ref=e119]: 2–3 sem
+        - generic [ref=e120]: implementación completa
+      - generic [ref=e121]:
+        - img [ref=e122]
+        - generic [ref=e124]: Sin contratos anuales
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - img [ref=e129]
+          - generic [ref=e131]: ¿Te suena familiar?
+        - heading "Por qué tu agencia pierde dinero sin darse cuenta" [level=2] [ref=e132]
+        - paragraph [ref=e133]: No es falta de esfuerzo. Es que el proceso manual tiene huecos por donde se escapa el revenue.
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - generic [ref=e136]: ⏱️
+          - heading "Cotizas en horas, el cliente reserva en minutos" [level=3] [ref=e137]
+          - paragraph [ref=e138]: El cliente pide un paquete a Cancún. Tu asesor tarda 3–4 horas en armar la propuesta. Ya reservó con la competencia.
+          - paragraph [ref=e140]: 78% de leads se van en las primeras 2 horas sin respuesta
+        - generic [ref=e141]:
+          - generic [ref=e142]: 💬
+          - heading "Mandas la cotización y se hace el muerto" [level=3] [ref=e143]
+          - paragraph [ref=e144]: Envías el paquete por WhatsApp, queda en "visto" y nadie hace seguimiento. Ese lead costó dinero en ads.
+          - paragraph [ref=e146]: 65% de cotizaciones nunca tienen follow-up automático
+        - generic [ref=e147]:
+          - generic [ref=e148]: 📱
+          - heading "Leads en 5 canales, 0 centralización" [level=3] [ref=e149]
+          - paragraph [ref=e150]: WhatsApp personal del asesor, Instagram DMs, email, web... alguno siempre se pierde. Especialmente en temporada alta.
+          - paragraph [ref=e152]: 1 de cada 3 mensajes queda sin responder más de 24 horas
+      - button "Quiero saber cuánto estoy perdiendo" [ref=e154] [cursor=pointer]:
+        - img [ref=e155]
+        - text: Quiero saber cuánto estoy perdiendo
+        - img [ref=e159]
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - img [ref=e166]
+          - generic [ref=e170]: Tu diagnóstico gratuito incluye
+        - heading "Todo esto, sin costo" [level=2] [ref=e171]
+        - paragraph [ref=e172]: "Valor total: $340 USD → $0 para agencias calificadas"
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - img [ref=e176]
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - heading "Análisis de tus canales actuales" [level=3] [ref=e181]
+              - generic [ref=e182]: $80 USD
+            - paragraph [ref=e183]: Revisamos cómo llegan tus leads hoy (WhatsApp, IG, email, web) y qué se está perdiendo.
+        - generic [ref=e184]:
+          - img [ref=e186]
+          - generic [ref=e188]:
+            - generic [ref=e189]:
+              - heading "Mapa de oportunidades perdidas" [level=3] [ref=e190]
+              - generic [ref=e191]: $60 USD
+            - paragraph [ref=e192]: Calculamos cuántas reservas estás dejando ir cada mes por falta de seguimiento.
+        - generic [ref=e193]:
+          - img [ref=e195]
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - heading "Demo personalizada de la plataforma" [level=3] [ref=e199]
+              - generic [ref=e200]: $120 USD
+            - paragraph [ref=e201]: Te mostramos la plataforma configurada con el proceso de tu agencia, no un demo genérico.
+        - generic [ref=e202]:
+          - img [ref=e204]
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - heading "Plan de acción en 2 semanas" [level=3] [ref=e209]
+              - generic [ref=e210]: $80 USD
+            - paragraph [ref=e211]: Un roadmap paso a paso para automatizar cotizaciones y seguimientos en tu agencia específica.
+      - generic [ref=e212]:
+        - paragraph [ref=e213]:
+          - text: ¿Cuántos spots quedan?
+          - generic [ref=e214]: Solo 4
+        - paragraph [ref=e215]: El diagnóstico requiere tiempo de nuestro equipo. Por eso limitamos los spots cada semana.
+        - button "Reservar mi diagnóstico gratis" [ref=e216] [cursor=pointer]:
+          - img [ref=e217]
+          - text: Reservar mi diagnóstico gratis
+        - paragraph [ref=e221]:
+          - img [ref=e222]
+          - text: Sin compromiso · Sin tarjeta de crédito
+    - generic [ref=e226]:
+      - heading "Antes vs. con Sixteam" [level=2] [ref=e228]
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - img [ref=e232]
+            - generic [ref=e235]: Sin Sixteam
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - img [ref=e238]
+              - text: Leads esperan 3–6 horas por una respuesta
+            - generic [ref=e241]:
+              - img [ref=e242]
+              - text: Cotización enviada... y nadie hace seguimiento
+            - generic [ref=e245]:
+              - img [ref=e246]
+              - text: 5 canales, 5 apps, caos total
+            - generic [ref=e249]:
+              - img [ref=e250]
+              - text: Diciembre y Semana Santa = bombero apagando incendios
+            - generic [ref=e253]:
+              - img [ref=e254]
+              - text: Cada asesor maneja sus propios contactos (y los pierde)
+            - generic [ref=e257]:
+              - img [ref=e258]
+              - text: No sabes qué canal o asesor vende más
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - img [ref=e263]
+            - generic [ref=e266]: Con Sixteam
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - img [ref=e269]
+              - text: Bot IA responde en 2 minutos — 24/7, sin asesor
+            - generic [ref=e272]:
+              - img [ref=e273]
+              - text: Follow-up automático a 24h, 48h y 7 días post-cotización
+            - generic [ref=e276]:
+              - img [ref=e277]
+              - text: "Una bandeja: WhatsApp, IG, email, web — todo en pantalla"
+            - generic [ref=e280]:
+              - img [ref=e281]
+              - text: "Temporada alta sin caos: el bot atiende el 80% solo"
+            - generic [ref=e284]:
+              - img [ref=e285]
+              - text: "CRM centralizado: historial, preferencias, destinos anteriores"
+            - generic [ref=e288]:
+              - img [ref=e289]
+              - text: Dashboard en tiempo real por canal, asesor y destino
+    - generic [ref=e294]:
+      - generic [ref=e295]:
+        - heading "Agencias que ya automatizaron sus reservas" [level=2] [ref=e296]
+        - paragraph [ref=e297]: Resultados reales de clientes en Colombia, Chile y México.
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - generic [ref=e301]: +35% cierre
+          - generic [ref=e302]:
+            - img [ref=e303]
+            - img [ref=e305]
+            - img [ref=e307]
+            - img [ref=e309]
+            - img [ref=e311]
+          - blockquote [ref=e313]: "\"Pasamos del 19% al 54% de tasa de cierre en 3 meses. En Semana Santa atendimos 200 mensajes diarios sin contratar a nadie más.\""
+          - generic [ref=e314]:
+            - img "Marcela Ríos" [ref=e316]
+            - generic [ref=e317]:
+              - generic [ref=e318]: Marcela Ríos
+              - generic [ref=e319]: Directora Comercial · Viajes Ríos Tours
+              - generic [ref=e320]: Medellín 🇨🇴
+        - generic [ref=e321]:
+          - generic [ref=e323]: +38% ventas
+          - generic [ref=e324]:
+            - img [ref=e325]
+            - img [ref=e327]
+            - img [ref=e329]
+            - img [ref=e331]
+            - img [ref=e333]
+          - blockquote [ref=e335]: "\"Aumenté mis ventas un 38% sin contratar a nadie. El sistema hace el seguimiento por WhatsApp durante 7 días y yo solo cierro los que ya están calientes.\""
+          - generic [ref=e336]:
+            - img "Juan Pablo Vargas" [ref=e338]
+            - generic [ref=e339]:
+              - generic [ref=e340]: Juan Pablo Vargas
+              - generic [ref=e341]: Propietario · Experiencias Colombia Travel
+              - generic [ref=e342]: Bogotá 🇨🇴
+        - generic [ref=e343]:
+          - generic [ref=e345]: 6h → 30min
+          - generic [ref=e346]:
+            - img [ref=e347]
+            - img [ref=e349]
+            - img [ref=e351]
+            - img [ref=e353]
+            - img [ref=e355]
+          - blockquote [ref=e357]: "\"Nuestro tiempo de respuesta bajó de 6 horas a menos de 30 minutos. Visibilidad total de cada cotización, cada cliente, cada asesor.\""
+          - generic [ref=e358]:
+            - img "Camila Fuentes" [ref=e360]
+            - generic [ref=e361]:
+              - generic [ref=e362]: Camila Fuentes
+              - generic [ref=e363]: CEO · Sur Viajes Premium
+              - generic [ref=e364]: Santiago 🇨🇱
+    - generic [ref=e368]:
+      - generic [ref=e369]:
+        - paragraph [ref=e370]: ¿Cuántas reservas perdiste esta semana?
+        - paragraph [ref=e371]: El diagnóstico es gratis. Los leads perdidos, no.
+      - generic [ref=e372]:
+        - button "Diagnóstico gratis" [ref=e373] [cursor=pointer]:
+          - img [ref=e374]
+          - text: Diagnóstico gratis
+        - button "WhatsApp directo" [ref=e378] [cursor=pointer]:
+          - img [ref=e379]
+          - text: WhatsApp directo
+    - generic [ref=e382]:
+      - heading "3 pasos para automatizar tu agencia" [level=2] [ref=e384]
+      - generic [ref=e387]:
+        - generic [ref=e388]:
+          - generic [ref=e389]:
+            - img [ref=e391]
+            - generic [ref=e393]: "1"
+          - generic [ref=e394]: "01"
+          - heading "Reservas tu diagnóstico" [level=3] [ref=e395]
+          - paragraph [ref=e396]: Completas el formulario. Un especialista te confirma en menos de 2 horas por WhatsApp.
+        - generic [ref=e397]:
+          - generic [ref=e398]:
+            - img [ref=e400]
+            - generic [ref=e403]: "2"
+          - generic [ref=e404]: "02"
+          - heading "Analizamos tu agencia" [level=3] [ref=e405]
+          - paragraph [ref=e406]: Revisamos tus canales, proceso actual y calculamos el revenue que estás dejando sobre la mesa.
+        - generic [ref=e407]:
+          - generic [ref=e408]:
+            - img [ref=e410]
+            - generic [ref=e413]: "3"
+          - generic [ref=e414]: "03"
+          - heading "Te entregamos el plan" [level=3] [ref=e415]
+          - paragraph [ref=e416]: Demo personalizada + roadmap de implementación en 2 semanas. Tú decides si continúas.
+    - generic [ref=e418]:
+      - heading "Preguntas frecuentes" [level=2] [ref=e420]
+      - generic [ref=e421]:
+        - generic [ref=e422]:
+          - button "¿Realmente es gratis? ¿Qué pasa en la sesión?" [ref=e423] [cursor=pointer]:
+            - generic [ref=e424]: ¿Realmente es gratis? ¿Qué pasa en la sesión?
+            - img [ref=e426]
+          - paragraph [ref=e430]: Sí, 100% gratis. En la sesión analizamos tu negocio, entendemos tu proceso actual y te mostramos qué se podría resolver con tecnología. No conectamos nada ni vendemos nada en esa sesión. Si tiene sentido continuar, te presentamos un plan. Sin presión.
+        - button "¿Cómo es la sesión — videollamada, llamada o WhatsApp?" [ref=e432] [cursor=pointer]:
+          - generic [ref=e433]: ¿Cómo es la sesión — videollamada, llamada o WhatsApp?
+          - img [ref=e435]
+        - button "¿Necesito preparar algo antes de la sesión?" [ref=e438] [cursor=pointer]:
+          - generic [ref=e439]: ¿Necesito preparar algo antes de la sesión?
+          - img [ref=e441]
+        - button "¿Funciona para una agencia pequeña de 2–3 personas?" [ref=e444] [cursor=pointer]:
+          - generic [ref=e445]: ¿Funciona para una agencia pequeña de 2–3 personas?
+          - img [ref=e447]
+    - generic [ref=e452]:
+      - generic [ref=e453]:
+        - generic [ref=e454]:
+          - img [ref=e455]
+          - generic [ref=e458]: Agente IA disponible ahora
+        - heading "¿Tienes preguntas antes de agendar?" [level=2] [ref=e459]
+        - paragraph [ref=e460]: Nuestro asistente IA conoce el sistema al detalle. Pregúntale sobre precios, integración con tu WhatsApp, temporada alta o lo que necesites saber.
+        - generic [ref=e461]:
+          - generic [ref=e462]: "\"¿Funciona con mi WhatsApp Business actual?\""
+          - generic [ref=e464]: "\"¿Cuánto cuesta implementarlo?\""
+          - generic [ref=e466]: "\"¿El bot puede cotizar destinos?\""
+          - generic [ref=e468]: "\"¿Funciona para agencias pequeñas?\""
+      - generic [ref=e471]:
+        - generic [ref=e472]:
+          - img [ref=e474]
+          - generic [ref=e477]:
+            - paragraph [ref=e478]: Asistente IA Sixteam
+            - generic [ref=e483]: En línea ahora
+          - generic [ref=e484]: IA
+        - generic [ref=e487]:
+          - img [ref=e489]
+          - generic [ref=e492]:
+            - paragraph [ref=e493]: ¡Hola! Soy el asistente de Sixteam 👋 Conozco el sistema al detalle. ¿Qué quieres saber antes de agendar tu diagnóstico gratuito?
+            - paragraph [ref=e494]: 14:45
+        - generic [ref=e496]:
+          - button "¿Funciona con mi WhatsApp?" [ref=e497] [cursor=pointer]
+          - button "¿Cuánto cuesta?" [ref=e498] [cursor=pointer]
+          - button "¿El bot cotiza destinos?" [ref=e499] [cursor=pointer]
+        - generic [ref=e500]:
+          - generic [ref=e501]:
+            - generic [ref=e502]:
+              - textbox "Escribe tu pregunta..." [ref=e503]
+              - img [ref=e504]
+            - button [disabled] [ref=e506]:
+              - img [ref=e507]
+          - paragraph [ref=e510]: Presiona Enter para enviar
+    - generic [ref=e514]:
+      - generic [ref=e515]:
+        - generic [ref=e520]: Asesorías disponibles esta semana
+        - heading "Agenda tu diagnóstico ahora" [level=2] [ref=e521]
+        - paragraph [ref=e522]: 30 minutos con un especialista por videollamada, llamada o WhatsApp — tú eliges el formato. Te mostramos exactamente cómo quedará tu agencia automatizada.
+        - button "Prefiero hablar por WhatsApp primero" [ref=e523] [cursor=pointer]:
+          - img [ref=e524]
+          - text: Prefiero hablar por WhatsApp primero
+      - generic [ref=e527]:
+        - generic [ref=e528]:
+          - img [ref=e529]
+          - text: Sin compromiso
+        - generic [ref=e532]:
+          - img [ref=e533]
+          - text: Sin tarjeta de crédito
+        - generic [ref=e536]:
+          - img [ref=e537]
+          - text: Respuesta en menos de 2 horas
+        - generic [ref=e540]:
+          - img [ref=e541]
+          - text: Datos 100% privados
+    - contentinfo [ref=e543]:
+      - generic [ref=e544]:
+        - generic [ref=e545]: Sixteam
+        - generic [ref=e546]: .
+        - generic [ref=e547]: pro
+      - paragraph [ref=e548]: CRM · Automatizaciones · IA para Agencias de Viaje · Colombia & LATAM
+      - paragraph [ref=e549]: © 2026 Sixteam.pro — Todos los derechos reservados
+  - button "Contactar por WhatsApp" [ref=e552] [cursor=pointer]:
+    - img [ref=e553]

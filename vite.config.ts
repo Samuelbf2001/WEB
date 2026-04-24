@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    dedupe: ['react', 'react-dom'],
   },
   build: {
     // Optimizaciones de build
@@ -27,12 +28,6 @@ export default defineConfig({
     // Usar esbuild en lugar de terser para mejor compatibilidad
     minify: 'esbuild',
     target: 'es2015',
-  },
-  // Optimizaciones de servidor de desarrollo
-  server: {
-    headers: {
-      'Cache-Control': 'public, max-age=31536000',
-    },
   },
   // Preload de módulos críticos
   optimizeDeps: {

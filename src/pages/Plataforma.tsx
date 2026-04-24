@@ -45,6 +45,8 @@ const Plataforma = () => {
   useSEO({
     title: "Plataforma CRM — Sixteam.pro | Planes desde $149 USD/mes",
     description: "Planes CRM todo-en-uno desde $149 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
+    canonical: "https://sixteam.pro/plataforma",
+    ogUrl: "https://sixteam.pro/plataforma",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

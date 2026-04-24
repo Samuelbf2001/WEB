@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { MessageCircle, Target, Eye, Award, Users, Briefcase, CheckCircle2, TrendingUp, Zap } from 'lucide-react';
+import { MessageCircle, Target, Eye, Award, Users, Briefcase, CheckCircle2, TrendingUp, Zap, ChevronDown } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useSEO } from '@/hooks/useSEO';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const Nosotros = () => {
   useSEO({
     title: "Nosotros — Sixteam.pro | Equipo de CRM, IA y RevOps",
     description: "Somos el equipo detrás de Sixteam.pro. Expertos en CRM, automatización e inteligencia artificial para empresas de servicios en Colombia y Latinoamérica.",
+    canonical: "https://sixteam.pro/nosotros",
+    ogUrl: "https://sixteam.pro/nosotros",
   });
 
   const handleWhatsAppClick = () => {
@@ -76,8 +79,72 @@ const Nosotros = () => {
     { num: '98%', label: 'Satisfacción de clientes', icon: Zap, color: 'text-blue-400' },
   ];
 
+  const faqs = [
+    {
+      q: '¿Qué hace Sixteam.pro?',
+      a: 'Sixteam.pro implementa CRM, automatizaciones e inteligencia artificial para empresas en Colombia y Latinoamérica. Ayudamos a las empresas a crecer usando tecnología como GoHighLevel, chatbots con IA y estrategias RevOps para aumentar ventas y mejorar la operación comercial.',
+    },
+    {
+      q: '¿En qué países trabajan?',
+      a: 'Operamos principalmente en Colombia y atendemos clientes en toda Latinoamérica — México, Argentina, Chile, Perú y más. Trabajamos 100% remoto con empresas de cualquier país hispanohablante.',
+    },
+    {
+      q: '¿Cuánto cuesta trabajar con Sixteam.pro?',
+      a: 'Nuestros planes CRM comienzan desde $149 USD/mes (Sixteam Inbox + IA), $200 USD/mes (CRM Core) y $299 USD/mes (CRM Growth). Las implementaciones tienen costo único desde $250 USD. Cada plan incluye implementación del CRM, automatizaciones y soporte continuo del equipo.',
+    },
+    {
+      q: '¿Qué es GoHighLevel y por qué lo usan?',
+      a: 'GoHighLevel es una plataforma todo-en-uno que centraliza CRM, email marketing, SMS, pipelines de ventas, chatbots y automatizaciones. Somos especialistas certificados porque es la herramienta más completa y escalable para empresas de servicios en Latinoamérica.',
+    },
+    {
+      q: '¿En cuánto tiempo ven resultados?',
+      a: 'La mayoría de nuestros clientes comienza a ver resultados en los primeros 30-60 días: leads mejor calificados, respuesta más rápida, y procesos comerciales más ordenados. Los resultados completos de crecimiento se consolidan entre 3 y 6 meses.',
+    },
+    {
+      q: '¿Necesito conocimientos técnicos para usar el CRM?',
+      a: 'No. Nos encargamos de toda la configuración técnica y te entrenamos a ti y a tu equipo. Nuestro soporte continuo garantiza que siempre tengas ayuda cuando la necesites.',
+    },
+  ];
+
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (i: number) => {
+    setOpenFaq(prev => (prev === i ? null : i));
+  };
+
   return (
     <div className="min-h-screen bg-white font-lato">
+      <SchemaOrg schema={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué hace Sixteam.pro?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sixteam.pro implementa CRM, automatizaciones e inteligencia artificial para empresas en Colombia y Latinoamérica. Ayudamos a empresas a crecer usando tecnología como GoHighLevel, chatbots con IA y estrategias de RevOps."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué países opera Sixteam.pro?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sixteam.pro opera principalmente en Colombia y tiene clientes en toda Latinoamérica, incluyendo México, Argentina, Chile y Perú."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta implementar un CRM con Sixteam.pro?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Los planes CRM by Sixteam.pro comienzan desde $149 USD/mes (Sixteam Inbox + IA, 2 usuarios), $200 USD/mes (CRM Core, 3 usuarios con pipeline visual y automatizaciones), y $299 USD/mes (CRM Growth, 5 usuarios con agente IA de llamadas). Las implementaciones tienen un costo único desde $250 USD. Usuarios adicionales desde $12.5 USD/mes."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es GoHighLevel y por qué lo usa Sixteam.pro?",
+            "acceptedAnswer": {"@type": "Answer", "text": "GoHighLevel es una plataforma de CRM y automatización de marketing todo-en-uno. Sixteam.pro es especialista en GoHighLevel porque centraliza CRM, email marketing, SMS, chatbots, pipelines de ventas y automatizaciones en una sola plataforma optimizada para empresas latinoamericanas."}
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué incluye el servicio de chatbot con IA de Sixteam.pro?",
+            "acceptedAnswer": {"@type": "Answer", "text": "El chatbot con IA de Sixteam.pro incluye un asistente virtual entrenado con la información de tu negocio, integración con WhatsApp Business, respuestas automáticas 24/7, calificación de leads y transferencia a agentes humanos cuando sea necesario."}
+          }
+        ]
+      }} />
       <Header />
 
       {/* ───────── HERO ───────── */}
@@ -374,6 +441,35 @@ const Nosotros = () => {
             <MessageCircle className="w-6 h-6 mr-3" />
             Contáctanos por WhatsApp
           </Button>
+        </div>
+      </section>
+
+      {/* ───────── FAQ ───────── */}
+      <section className="py-20 bg-[#0a2342]">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-[#00bfa5] text-xs font-medium uppercase tracking-widest mb-3 text-center font-poppins">FAQ</p>
+          <h2 className="text-3xl font-bold text-white text-center mb-12 font-poppins">Preguntas Frecuentes</h2>
+          <div>
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-[#1d70a2]/30 rounded-xl mb-3 overflow-hidden">
+                <button
+                  onClick={() => toggleFaq(i)}
+                  className="w-full text-left px-6 py-5 flex justify-between items-center bg-[#0a2342] hover:bg-[#1d70a2]/10 transition-colors"
+                >
+                  <span className="text-white font-semibold font-poppins pr-4">{faq.q}</span>
+                  <ChevronDown
+                    className={`text-[#00bfa5] transition-transform duration-300 flex-shrink-0 ${openFaq === i ? 'rotate-180' : ''}`}
+                    size={20}
+                  />
+                </button>
+                {openFaq === i && (
+                  <div className="px-6 py-4 bg-[#1d70a2]/10 text-[#e0e0e0] font-lato leading-relaxed text-sm">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

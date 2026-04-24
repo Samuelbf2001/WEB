@@ -39,6 +39,8 @@ const CrmVentas = () => {
   useSEO({
     title: "CRM de Ventas — Sixteam.pro | Pipeline y Automatización Comercial",
     description: "Implementamos tu módulo de ventas en CRM con pipeline visual, seguimiento automático de leads y reportes en tiempo real. Desde $2,000,000 COP. Implementación en 4 semanas.",
+    canonical: "https://sixteam.pro/servicios/crm-ventas",
+    ogUrl: "https://sixteam.pro/servicios/crm-ventas",
   });
 
   const handleWhatsAppClick = () => {

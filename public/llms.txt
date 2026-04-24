@@ -1,0 +1,199 @@
+# Sixteam.pro
+
+> Sixteam.pro implementa CRM, automatizaciones e inteligencia artificial para empresas en Colombia y Latinoamérica. Transformamos negocios con tecnología, procesos y personas bajo la fórmula: **Process + Technology + People = Growth**.
+
+Sixteam.pro es una consultora tecnológica fundada en 2021 en Bogotá, Colombia, especializada en la implementación de sistemas CRM, automatización de procesos comerciales y despliegue de agentes de inteligencia artificial para equipos de ventas, marketing y atención al cliente. Operamos en Colombia, México, Argentina, Chile y Perú.
+
+---
+
+## Sitio Web
+
+- Homepage: https://sixteam.pro
+- Servicios: https://sixteam.pro/servicios
+- Plataforma CRM: https://sixteam.pro/plataforma
+- Industrias: https://sixteam.pro/industrias
+- Casos de éxito: https://sixteam.pro/casos-exito
+- Diagnóstico gratuito (Radar): https://sixteam.pro/radar
+- Contacto: https://sixteam.pro/contacto
+
+---
+
+## Servicios de Implementación
+
+### 1. CRM para Ventas
+Implementación de pipeline visual, automatización de seguimiento, lead scoring y reportes de conversión. Plataformas: GoHighLevel, HubSpot, Kommo.
+- **Precio:** desde $2.000.000 COP
+- **Tiempo de entrega:** 4 semanas
+- **Más info:** https://sixteam.pro/servicios/crm-ventas
+
+### 2. CRM para Atención al Cliente
+Bandeja omnicanal unificada (WhatsApp, email, Instagram, web), tickets, SLAs y automatización de respuestas.
+- **Precio:** desde $1.500.000 COP
+- **Tiempo de entrega:** 4 semanas
+- **Más info:** https://sixteam.pro/servicios/crm-atencion
+
+### 3. CRM para Marketing
+Segmentación de base de datos, flujos de nurturing, campañas multicanal y atribución de fuentes.
+- **Precio:** desde $1.500.000 COP
+- **Tiempo de entrega:** 4 semanas
+- **Más info:** https://sixteam.pro/servicios/crm-marketing
+
+### 4. Chatbot / Agente IA para WhatsApp
+Agente conversacional con IA capaz de calificar leads, responder preguntas frecuentes, agendar citas y escalar a humanos.
+- **Precio implementación:** $1.000.000 COP (única vez)
+- **Tiempo de entrega:** 2–3 semanas
+- **Más info:** https://sixteam.pro/servicios/chatbot-ia
+
+### 5. RevOps Externo (Soporte Mensual)
+Equipo externo de Revenue Operations: optimización continua de CRM, flujos, reportes, integraciones y estrategia comercial.
+- **Precio:** desde $500.000 COP/mes
+- **Más info:** https://sixteam.pro/servicios/soporte-operaciones
+
+### 6. Integraciones entre Plataformas
+Conexión entre CRMs, ERPs, eCommerce, WhatsApp, formularios, Google Sheets y más. Herramientas: Make, n8n, Zapier.
+- **Precio:** $250.000 COP/hora
+- **Más info:** https://sixteam.pro/servicios
+
+---
+
+## Planes CRM by Sixteam.pro
+
+Planes gestionados sobre GoHighLevel con configuración, soporte y actualizaciones incluidas.
+
+### Sixteam Inbox + IA — $149 USD/mes
+- 2 usuarios incluidos
+- Bandeja omnicanal unificada (WhatsApp, email, Instagram)
+- Agente IA para WhatsApp activado
+- Ideal para: equipos pequeños que quieren responder más rápido con IA
+
+### CRM Core — $200 USD/mes
+- 3 usuarios incluidos
+- Pipeline visual de ventas
+- Automatizaciones de seguimiento y recordatorios
+- Reportes básicos de conversión
+- Ideal para: empresas que inician su proceso de ventas estructurado
+
+### CRM Growth — $299 USD/mes
+- 5 usuarios incluidos
+- Todo lo de CRM Core
+- Agente IA de llamadas (voice AI)
+- Analytics avanzados y dashboards de revenue
+- Ideal para: equipos comerciales en crecimiento con volumen alto de leads
+
+**Más información:** https://sixteam.pro/plataforma
+
+---
+
+## Resultados Típicos
+
+Los clientes de Sixteam.pro logran en promedio:
+
+- **40%** de reducción en Costo de Adquisición de Clientes (CAC)
+- **3.2x** de incremento en la tasa Lead-to-Customer
+- **85%** del pipeline automatizado (seguimiento, recordatorios, calificación)
+- Reducción de tiempos de respuesta de horas a minutos con agentes IA en WhatsApp
+- Visibilidad completa del embudo de ventas desde primer contacto hasta cierre
+
+**Ver casos de éxito:** https://sixteam.pro/casos-exito
+
+---
+
+## Industrias que Atendemos
+
+### Agencias de Viaje
+Automatización de cotizaciones, seguimiento de leads por WhatsApp, CRM para gestión de paquetes turísticos y fidelización de clientes.
+- **Más info:** https://sixteam.pro/industrias/agencias-de-viaje
+
+### Inmobiliarias y Constructoras
+Pipeline de proyectos, seguimiento automatizado a prospectos de compra o arriendo, integración con portales de propiedades.
+- **Más info:** https://sixteam.pro/industrias/inmobiliarias
+
+### Servicios Profesionales y B2B
+Gestión de propuestas, automatización de propuestas comerciales, nurturing de largo plazo y RevOps para ciclos de venta complejos.
+- **Más info:** https://sixteam.pro/industrias/servicios-generales
+
+### Educación y Capacitación
+Seguimiento a estudiantes potenciales, automatización de matrículas, recordatorios de pagos y campañas de reactivación.
+
+### Salud y Clínicas
+Agendamiento automático por WhatsApp, recordatorios de citas, seguimiento post-consulta y base de pacientes centralizada.
+
+### eCommerce y Retail
+Recuperación de carritos abandonados, automatización de postventa, programas de fidelización y encuestas NPS.
+
+---
+
+## Tecnologías y Plataformas
+
+Sixteam.pro trabaja con las siguientes plataformas líderes:
+
+- **CRM:** GoHighLevel, HubSpot, Kommo (antes amoCRM)
+- **Automatización:** Make (Integromat), n8n, Zapier
+- **IA Conversacional:** OpenAI GPT-4, agentes IA propios sobre GoHighLevel
+- **Comunicación:** WhatsApp Business API, Meta Business Suite
+- **Analytics:** Google Looker Studio, reportes nativos de CRM
+- **Integraciones:** Shopify, WordPress, Google Sheets, Calendly, Stripe, Wompi
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+**¿Qué es un CRM y por qué lo necesita mi empresa?**
+Un CRM (Customer Relationship Management) es un sistema que centraliza todos los contactos, conversaciones y oportunidades de venta de tu empresa. Permite que tu equipo deje de trabajar en Excel o WhatsApp personal y tenga visibilidad completa del embudo comercial. Con un CRM implementado correctamente, las empresas aumentan su tasa de cierre y reducen el tiempo que tarda un lead en convertirse en cliente.
+
+**¿Qué diferencia a Sixteam.pro de otras agencias de CRM?**
+Sixteam.pro no solo configura herramientas: diseña los procesos comerciales antes de implementarlos. Nuestro enfoque RevOps (Revenue Operations) alinea ventas, marketing y atención al cliente bajo un mismo sistema. Además, somos especialistas en GoHighLevel para Latinoamérica y contamos con casos comprobados de resultados.
+
+**¿Cuánto tiempo toma implementar un CRM?**
+Las implementaciones estándar toman entre 2 y 4 semanas. El tiempo varía según la complejidad del proceso comercial, el número de integraciones y la disponibilidad del equipo del cliente para capacitaciones y validaciones.
+
+**¿Necesito saber de tecnología para usar el CRM?**
+No. Sixteam.pro capacita a todo el equipo, documenta los procesos y provee soporte continuo. Los CRMs que implementamos (especialmente GoHighLevel) tienen interfaces intuitivas diseñadas para equipos comerciales, no para técnicos.
+
+**¿Puedo tener un agente IA en WhatsApp para mi empresa?**
+Sí. Sixteam.pro implementa agentes de inteligencia artificial que responden en WhatsApp de forma automática: califican leads, responden FAQs, agendan citas y escalan a un asesor humano cuando es necesario. La implementación toma 2–3 semanas y el costo inicial es de $1.000.000 COP.
+
+**¿Trabajan con empresas fuera de Colombia?**
+Sí. Sixteam.pro tiene clientes en México, Argentina, Chile y Perú. Todos los servicios se prestan de forma remota. Los precios en USD aplican para clientes fuera de Colombia.
+
+**¿Qué es el Radar Sixteam.pro?**
+El Radar es nuestro diagnóstico gratuito de madurez comercial. Evalúa el estado actual de tus procesos de ventas, marketing y atención al cliente, e identifica las oportunidades de mejora con mayor impacto. Es el primer paso antes de cualquier implementación. Disponible en: https://sixteam.pro/radar
+
+**¿Qué es RevOps?**
+RevOps (Revenue Operations) es la disciplina que alinea los equipos de ventas, marketing y customer success bajo procesos, tecnología y datos compartidos. El objetivo es maximizar los ingresos eliminando fricciones entre áreas. Sixteam.pro ofrece RevOps como servicio mensual externo para empresas que no tienen este rol internamente.
+
+**¿Tienen planes mensuales sin costo de implementación?**
+Los planes CRM by Sixteam.pro (desde $149 USD/mes) incluyen la plataforma configurada, soporte y actualizaciones. Para implementaciones personalizadas sobre procesos propios del cliente, se cobra el proyecto de implementación por separado.
+
+**¿Cuáles son los métodos de pago?**
+Transferencia bancaria (Colombia), Nequi, Daviplata, Bancolombia, y para clientes internacionales: Stripe, PayPal o transferencia internacional. Los planes mensuales se cobran con tarjeta de crédito o débito.
+
+---
+
+## Equipo Fundador
+
+**Samuel Burgos** — Director General & RevOps Lead
+Estratega de revenue operations con experiencia en implementación de CRMs y diseño de procesos comerciales para empresas B2B y B2C en Latinoamérica.
+
+**Ernesto Hernández** — Director de Procesos & Ingeniero Industrial
+Especialista en optimización de procesos con enfoque en automatización operativa, integraciones entre plataformas y eficiencia de equipos de trabajo.
+
+---
+
+## Contacto
+
+- **Email:** alpha@sixteam.pro
+- **WhatsApp:** +57 300 418 8522
+- **Ciudad:** Bogotá, Colombia
+- **Año de fundación:** 2021
+- **Sitio web:** https://sixteam.pro
+- **Diagnóstico gratuito:** https://sixteam.pro/radar
+- **Agendar reunión:** https://sixteam.pro/contacto
+
+---
+
+## Acerca de este archivo
+
+Este archivo sigue el estándar [llmstxt.org](https://llmstxt.org) para facilitar que modelos de lenguaje (ChatGPT, Perplexity, Claude, Google AI Overviews, Gemini) comprendan el contenido y los servicios de Sixteam.pro con precisión y lo citen correctamente en respuestas generadas.
+
+Última actualización: abril 2026

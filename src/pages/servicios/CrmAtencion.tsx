@@ -42,6 +42,8 @@ const CrmAtencion = () => {
   useSEO({
     title: "CRM de Atención al Cliente — Sixteam.pro | Tickets, SLA y Omnicanal",
     description: "Centraliza tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta con automatizaciones de servicio al cliente. Implementación en 3 semanas.",
+    canonical: "https://sixteam.pro/servicios/crm-atencion",
+    ogUrl: "https://sixteam.pro/servicios/crm-atencion",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

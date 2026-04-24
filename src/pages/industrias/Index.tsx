@@ -73,6 +73,8 @@ const IndustriasIndex = () => {
     title: 'Soluciones por Industria | Sixteam.pro',
     description:
       'CRM, automatizaciones e IA personalizadas para agencias de viaje, inmobiliarias y servicios generales en Colombia.',
+    canonical: "https://sixteam.pro/industrias",
+    ogUrl: "https://sixteam.pro/industrias",
   });
 
   return (

@@ -47,6 +47,8 @@ const SoporteOperaciones = () => {
   useSEO({
     title: "RevOps y Soporte de Operaciones — Sixteam.pro | Operación CRM Mensual",
     description: "Operación mensual de tu CRM con mejoras proactivas, reportes ejecutivos y SLA de 4 horas. Acompañamiento RevOps desde $500,000 COP/mes.",
+    canonical: "https://sixteam.pro/servicios/soporte-operaciones",
+    ogUrl: "https://sixteam.pro/servicios/soporte-operaciones",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

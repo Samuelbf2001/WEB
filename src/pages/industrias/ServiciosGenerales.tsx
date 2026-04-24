@@ -246,6 +246,8 @@ const ServiciosGenerales = () => {
   useSEO({
     title: "CRM para Empresas de Servicios — Sixteam.pro | Crece sin más Personal",
     description: "Pipeline de propuestas, renovaciones automáticas y secuencias de cobro para consultoras y servicios profesionales. Crece un 40% sin contratar más personal.",
+    canonical: "https://sixteam.pro/industrias/servicios-generales",
+    ogUrl: "https://sixteam.pro/industrias/servicios-generales",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

@@ -1,0 +1,94 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a2342"/>
+      <stop offset="100%" style="stop-color:#1d70a2"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d70a2"/>
+      <stop offset="100%" style="stop-color:#00bfa5"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00bfa5;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00bfa5;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glow circles -->
+  <circle cx="950" cy="150" r="280" fill="#00bfa5" opacity="0.06" filter="url(#blur)"/>
+  <circle cx="200" cy="500" r="200" fill="#1d70a2" opacity="0.12" filter="url(#blur)"/>
+
+  <!-- Grid pattern subtle -->
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1d70a2" stroke-width="0.5" opacity="0.2"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="200" width="4" height="180" rx="2" fill="url(#tealGrad)"/>
+
+  <!-- Eyebrow label -->
+  <text x="104" y="228" font-family="'Poppins', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="4" fill="#00bfa5" text-transform="uppercase">CRM · AUTOMATIZACIÓN · IA</text>
+
+  <!-- Main headline -->
+  <text x="100" y="305" font-family="'Poppins', Arial, sans-serif" font-size="72" font-weight="900" fill="#ffffff">Transformamos</text>
+  <text x="100" y="385" font-family="'Poppins', Arial, sans-serif" font-size="72" font-weight="900" fill="url(#tealGrad)">tu negocio.</text>
+
+  <!-- Subtitle -->
+  <text x="104" y="435" font-family="'Lato', Arial, sans-serif" font-size="22" font-weight="300" fill="#e0e0e0">CRM, automatizaciones e inteligencia artificial</text>
+  <text x="104" y="463" font-family="'Lato', Arial, sans-serif" font-size="22" font-weight="300" fill="#e0e0e0">para empresas en Colombia y Latinoamérica.</text>
+
+  <!-- Bottom teal line -->
+  <rect x="100" y="510" width="120" height="3" rx="1.5" fill="url(#tealGrad)"/>
+
+  <!-- Domain -->
+  <text x="100" y="553" font-family="'Poppins', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.9">sixteam.pro</text>
+
+  <!-- Right side: decorative card -->
+  <rect x="780" y="140" width="340" height="200" rx="16" fill="#1d70a2" opacity="0.15"/>
+  <rect x="780" y="140" width="340" height="200" rx="16" fill="none" stroke="#1d70a2" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Card content -->
+  <text x="810" y="185" font-family="'Poppins', Arial, sans-serif" font-size="13" font-weight="500" fill="#00bfa5" letter-spacing="2">PROCESO · TECNOLOGÍA · PERSONAS</text>
+  <text x="810" y="225" font-family="'Poppins', Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff">=</text>
+  <text x="840" y="225" font-family="'Poppins', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#tealGrad)">Crecimiento</text>
+
+  <!-- Stats row -->
+  <text x="810" y="280" font-family="'Poppins', Arial, sans-serif" font-size="32" font-weight="900" fill="#00bfa5">+150</text>
+  <text x="810" y="305" font-family="'Lato', Arial, sans-serif" font-size="12" fill="#e0e0e0">clientes</text>
+
+  <line x1="895" y1="265" x2="895" y2="315" stroke="#1d70a2" stroke-width="1" opacity="0.5"/>
+
+  <text x="910" y="280" font-family="'Poppins', Arial, sans-serif" font-size="32" font-weight="900" fill="#00bfa5">LATAM</text>
+  <text x="910" y="305" font-family="'Lato', Arial, sans-serif" font-size="12" fill="#e0e0e0">cobertura</text>
+
+  <line x1="1010" y1="265" x2="1010" y2="315" stroke="#1d70a2" stroke-width="1" opacity="0.5"/>
+
+  <text x="1025" y="280" font-family="'Poppins', Arial, sans-serif" font-size="32" font-weight="900" fill="#00bfa5">CRM</text>
+  <text x="1025" y="305" font-family="'Lato', Arial, sans-serif" font-size="12" fill="#e0e0e0">especialistas</text>
+
+  <!-- Second card -->
+  <rect x="820" y="370" width="280" height="120" rx="12" fill="url(#glowGrad)"/>
+  <rect x="820" y="370" width="280" height="120" rx="12" fill="none" stroke="#00bfa5" stroke-width="1.5" opacity="0.4"/>
+
+  <text x="850" y="410" font-family="'Poppins', Arial, sans-serif" font-size="13" font-weight="600" fill="#00bfa5">GoHighLevel</text>
+  <text x="850" y="435" font-family="'Lato', Arial, sans-serif" font-size="12" fill="#e0e0e0">Especialistas en Colombia y LATAM</text>
+  <text x="850" y="460" font-family="'Lato', Arial, sans-serif" font-size="12" fill="#e0e0e0">CRM · Automatización · Chatbots</text>
+
+  <!-- Dot grid decoration -->
+  <circle cx="1100" cy="550" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1120" cy="550" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1140" cy="550" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1100" cy="570" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1120" cy="570" r="2" fill="#00bfa5" opacity="0.6"/>
+  <circle cx="1140" cy="570" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1100" cy="590" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1120" cy="590" r="2" fill="#1d70a2" opacity="0.4"/>
+  <circle cx="1140" cy="590" r="2" fill="#1d70a2" opacity="0.4"/>
+</svg>

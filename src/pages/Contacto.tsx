@@ -9,6 +9,8 @@ const Contacto = () => {
   useSEO({
     title: "Contacto — Sixteam.pro | Habla con Nuestro Equipo",
     description: "Escríbenos por WhatsApp o llena el formulario. Respondemos en menos de 2 horas. Bogotá, Colombia. Atendemos toda Latinoamérica.",
+    canonical: "https://sixteam.pro/contacto",
+    ogUrl: "https://sixteam.pro/contacto",
   });
 
   const handleWhatsAppClick = () => {

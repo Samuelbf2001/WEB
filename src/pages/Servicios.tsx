@@ -6,11 +6,14 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const Servicios = () => {
   useSEO({
     title: "Servicios de CRM, IA y Automatización — Sixteam.pro",
     description: "Implementación de CRM, chatbots IA para WhatsApp, automatizaciones y RevOps. Conoce todos nuestros servicios para transformar tu operación comercial en Colombia.",
+    canonical: "https://sixteam.pro/servicios",
+    ogUrl: "https://sixteam.pro/servicios",
   });
 
   const handleWhatsAppClick = (message: string = 'Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Sixteam.pro') => {
@@ -148,6 +151,19 @@ const Servicios = () => {
 
   return (
     <div className="min-h-screen bg-white font-lato">
+      <SchemaOrg schema={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Servicios de Sixteam.pro",
+        "description": "Servicios de CRM, automatización e IA para empresas en Colombia y Latinoamérica",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "CRM de Ventas", "url": "https://sixteam.pro/servicios/crm-ventas"},
+          {"@type": "ListItem", "position": 2, "name": "CRM de Atención al Cliente", "url": "https://sixteam.pro/servicios/crm-atencion"},
+          {"@type": "ListItem", "position": 3, "name": "CRM de Marketing", "url": "https://sixteam.pro/servicios/crm-marketing"},
+          {"@type": "ListItem", "position": 4, "name": "Chatbot con IA para WhatsApp", "url": "https://sixteam.pro/servicios/chatbot-ia"},
+          {"@type": "ListItem", "position": 5, "name": "Soporte y Operaciones RevOps", "url": "https://sixteam.pro/servicios/soporte-operaciones"}
+        ]
+      }} />
       <Header />
 
       {/* Hero */}

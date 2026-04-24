@@ -18,6 +18,8 @@ const RadarSixteam = () => {
   useSEO({
     title: "Radar Sixteam — Diagnóstico Gratuito de tu Operación Comercial",
     description: "Diagnóstico gratuito por WhatsApp en 5 minutos. Descubre dónde está el cuello de botella de tu empresa antes de invertir en CRM, IA o automatización.",
+    canonical: "https://sixteam.pro/radar",
+    ogUrl: "https://sixteam.pro/radar",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

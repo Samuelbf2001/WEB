@@ -24,6 +24,8 @@ const AntesDeInvertir = () => {
   useSEO({
     title: "¿Vale la Pena Invertir en CRM? — Radar Sixteam | Diagnóstico Previo",
     description: "El 60% de las implementaciones de CRM fallan sin diagnóstico previo. Antes de comprar, diagnostica. Ahorra hasta un 40% en tu implementación.",
+    canonical: "https://sixteam.pro/radar/antes-de-invertir",
+    ogUrl: "https://sixteam.pro/radar/antes-de-invertir",
   });
 
   const handleWhatsAppClick = () => {

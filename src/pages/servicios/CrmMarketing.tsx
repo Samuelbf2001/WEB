@@ -43,6 +43,8 @@ const CrmMarketing = () => {
   useSEO({
     title: "CRM de Marketing — Sixteam.pro | Campañas, Lead Scoring y Nurturing",
     description: "Gestiona campañas multicanal, segmentación con IA y lead scoring. Automatiza el nurturing y mide el ROI de cada acción de marketing. Implementación en 4 semanas.",
+    canonical: "https://sixteam.pro/servicios/crm-marketing",
+    ogUrl: "https://sixteam.pro/servicios/crm-marketing",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

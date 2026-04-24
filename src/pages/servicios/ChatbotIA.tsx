@@ -42,6 +42,8 @@ const ChatbotIA = () => {
   useSEO({
     title: "Chatbot IA para WhatsApp — Sixteam.pro | Atención Automática 24/7",
     description: "Desplegamos tu agente IA en WhatsApp Business: responde en menos de 5 segundos, califica leads y agenda citas sin intervención humana. Desde $800,000 COP.",
+    canonical: "https://sixteam.pro/servicios/chatbot-ia",
+    ogUrl: "https://sixteam.pro/servicios/chatbot-ia",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

@@ -1,4 +1,5 @@
 import { type CSSProperties } from 'react';
+import { useSEO } from '@/hooks/useSEO';
 import {
   ArrowRight,
   Bot,
@@ -77,6 +78,14 @@ const HERO_CHIPS = [
 ];
 
 export default function BrochurePage() {
+  useSEO({
+    title: "Portafolio de Servicios — Sixteam.pro | CRM, IA y Automatización",
+    description: "Conoce el portafolio completo de Sixteam.pro: implementaciones CRM, automatizaciones, chatbots IA, integraciones y RevOps para empresas en Colombia y Latam.",
+    canonical: "https://sixteam.pro/brochure",
+    ogUrl: "https://sixteam.pro/brochure",
+    noindex: true,
+  });
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };

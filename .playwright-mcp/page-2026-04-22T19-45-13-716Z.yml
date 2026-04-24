@@ -1,0 +1,37 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - link "Volver al inicio" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img [ref=e6]
+      - text: Volver al inicio
+    - generic [ref=e8]:
+      - heading "404" [level=1] [ref=e9]
+      - heading "Esta página no existe, pero tu negocio puede crecer" [level=2] [ref=e10]:
+        - text: Esta página no existe,
+        - text: pero tu negocio puede crecer
+      - paragraph [ref=e11]: La URL que buscas no está disponible. Usa los enlaces de abajo para navegar al lugar correcto.
+      - generic [ref=e12]:
+        - link "Inicio" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img [ref=e14]
+          - generic [ref=e17]: Inicio
+        - link "Servicios" [ref=e18] [cursor=pointer]:
+          - /url: /servicios
+          - img [ref=e19]
+          - generic [ref=e23]: Servicios
+        - link "Radar" [ref=e24] [cursor=pointer]:
+          - /url: /radar
+          - img [ref=e25]
+          - generic [ref=e31]: Radar
+        - link "Contacto" [ref=e32] [cursor=pointer]:
+          - /url: /contacto
+          - img [ref=e33]
+          - generic [ref=e35]: Contacto
+      - button "Escríbenos por WhatsApp" [ref=e36] [cursor=pointer]:
+        - img [ref=e37]
+        - text: Escríbenos por WhatsApp
+  - button "Contactar por WhatsApp" [ref=e41] [cursor=pointer]:
+    - img [ref=e42]

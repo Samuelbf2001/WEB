@@ -3,17 +3,20 @@ import { gtm } from '@/lib/gtm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
-import { MessageCircle, Target, Brain, Headphones, CheckCircle, Star, Zap, Bot } from 'lucide-react';
+import { MessageCircle, Target, Brain, Headphones, CheckCircle, Star, Zap, Bot, Search, Map, TrendingUp, BarChart3, Settings2, Megaphone } from 'lucide-react';
 import Footer from '@/components/Footer';
 import ChatSection from '@/components/ChatSection';
 import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const Index = () => {
   useSEO({
     title: 'Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia',
     description: 'Transformamos tu negocio con CRM, automatizaciones e IA. Implementamos GoHighLevel, pipelines de ventas, chatbots IA y RevOps para empresas en Colombia y Latinoamérica.',
+    canonical: 'https://sixteam.pro',
+    ogUrl: 'https://sixteam.pro',
   });
 
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -445,6 +448,28 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#0a2342] font-lato">
+      <SchemaOrg schema={{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sixteam.pro",
+        "url": "https://sixteam.pro",
+        "logo": "https://sixteam.pro/LOGO.png",
+        "description": "Sixteam.pro implementa CRM, automatizaciones e inteligencia artificial para empresas en Colombia y Latinoamérica. Somos especialistas en GoHighLevel, RevOps y chatbots con IA.",
+        "foundingDate": "2021",
+        "areaServed": ["Colombia", "México", "Argentina", "Chile", "Perú", "Latinoamérica"],
+        "serviceType": ["Implementación de CRM", "Automatización de marketing", "Chatbots con IA", "RevOps", "GoHighLevel"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+573004188522",
+          "email": "alpha@sixteam.pro",
+          "contactType": "customer service",
+          "availableLanguage": "Spanish",
+          "areaServed": ["CO", "MX", "AR", "CL", "PE"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/sixteam-pro"
+        ]
+      }} />
       <Header />
 
       {/* Hero Section Profesional */}
@@ -1258,6 +1283,214 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Consultoría Estratégica — Primero Diagnosticamos, Luego Implementamos */}
+      <section className="relative py-12 sm:py-16 lg:py-24 bg-[#081c36] overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle, rgba(100, 116, 139, 0.08) 1px, transparent 1px)',
+            backgroundSize: '32px 32px'
+          }}></div>
+          <div className="absolute top-16 right-10 w-72 h-72 bg-[#1d70a2]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-16 left-10 w-96 h-96 bg-[#00bfa5]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6">
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-full">
+              <div className="w-2 h-2 bg-[#00bfa5] rounded-full"></div>
+              <span className="text-[#e0e0e0] font-medium text-xs sm:text-sm tracking-wide uppercase">Consultoría Estratégica</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight px-4 sm:px-0">
+              Primero entendemos tu negocio.
+              <br />
+              <span className="text-[#00bfa5]">Luego recomendamos tecnología.</span>
+            </h2>
+
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
+              <p className="text-lg sm:text-xl text-[#e0e0e0] leading-relaxed">
+                No somos implementadores de software. Somos consultores de negocio que usan la tecnología como herramienta. Antes de tocar una sola plataforma, dedicamos tiempo a entender tus procesos, tus equipos y tus objetivos reales.
+              </p>
+            </div>
+          </div>
+
+          {/* 3 fases de consultoría */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-14 sm:mb-20 max-w-5xl mx-auto px-4 sm:px-0">
+            {[
+              {
+                Icon: Search,
+                phase: '01',
+                title: 'Diagnóstico Profundo',
+                description: 'Analizamos tu operación actual: flujos de trabajo, puntos de quiebre, cuellos de botella y oportunidades ocultas. Entrevistamos a tu equipo, no solo a la dirección.',
+              },
+              {
+                Icon: Map,
+                phase: '02',
+                title: 'Mapeo de Procesos',
+                description: 'Documentamos y rediseñamos tus procesos comerciales, de marketing y de servicio. Identificamos qué automatizar, qué eliminar y qué fortalecer antes de cualquier implementación.',
+              },
+              {
+                Icon: TrendingUp,
+                phase: '03',
+                title: 'Hoja de Ruta Estratégica',
+                description: 'Construimos un plan de transformación con prioridades claras, métricas de éxito definidas y una secuencia de implementación que minimiza el riesgo y maximiza el retorno.',
+              },
+            ].map(({ Icon, phase, title, description }, i) => (
+              <div
+                key={i}
+                className="relative group bg-gradient-to-br from-[#0a2342] to-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-xl p-6 sm:p-8 hover:border-[#00bfa5]/50 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="absolute top-4 right-5 text-5xl font-black text-white/5 select-none leading-none">{phase}</div>
+                <div className="w-12 h-12 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-lg flex items-center justify-center mb-5">
+                  <Icon className="w-6 h-6 text-[#00bfa5]" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">{title}</h3>
+                <p className="text-[#e0e0e0]/80 text-sm sm:text-base leading-relaxed">{description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Split: diferenciadores + CTA glassmorphism */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto px-4 sm:px-0">
+            <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">
+                Lo que nos distingue de un implementador tradicional
+              </h3>
+              {[
+                'Comenzamos con preguntas de negocio, no con demos de software',
+                'Mapeamos procesos reales antes de recomendar herramientas',
+                'Identificamos si el problema es cultural, operativo o tecnológico',
+                'Diseñamos la arquitectura de procesos antes de cualquier configuración',
+                'Medimos el éxito en resultados de negocio, no en funcionalidades activadas',
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 bg-[#1d70a2]/8 border border-[#1d70a2]/20 rounded-lg">
+                  <div className="w-6 h-6 bg-[#00bfa5]/20 border border-[#00bfa5]/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-3.5 h-3.5 text-[#00bfa5]" />
+                  </div>
+                  <span className="text-[#e0e0e0] text-sm sm:text-base leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div
+              className="rounded-2xl p-7 sm:p-10"
+              style={{
+                background: 'rgba(29,112,162,.12)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid rgba(29,112,162,.35)',
+                borderRadius: '12px',
+              }}
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00bfa5]/15 border border-[#00bfa5]/30 rounded-full mb-5">
+                <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full animate-pulse"></div>
+                <span className="text-[#00bfa5] text-xs font-semibold tracking-wide uppercase">Sesión sin costo</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                ¿No sabes por dónde empezar?
+              </h3>
+              <p className="text-[#e0e0e0]/80 text-sm sm:text-base leading-relaxed mb-7">
+                Agenda una sesión de diagnóstico gratuita. En 45 minutos identificamos tus principales oportunidades de mejora y te damos claridad sobre qué tecnología (si es que alguna) tiene sentido para tu negocio ahora mismo.
+              </p>
+
+              <ul className="space-y-2.5 mb-7">
+                {[
+                  '45 minutos de conversación estratégica',
+                  'Análisis de tu situación actual sin compromiso',
+                  'Recomendación honesta, implementemos o no',
+                ].map((bullet, i) => (
+                  <li key={i} className="flex items-center gap-2.5 text-[#e0e0e0] text-sm">
+                    <CheckCircle className="w-4 h-4 text-[#00bfa5] flex-shrink-0" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+
+              <Button
+                onClick={handleWhatsAppClick}
+                className="w-full sm:w-auto bg-gradient-to-r from-[#00bfa5] to-[#1d70a2] hover:from-[#00bfa5]/90 hover:to-[#1d70a2]/90 text-white px-6 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                Agendar diagnóstico gratuito
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Operaciones y Marketing — Franja Compacta */}
+      <section className="relative py-10 sm:py-14 bg-[#0a2342] overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1d70a2]/50 to-transparent"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1d70a2]/10 border border-[#1d70a2]/25 rounded-full mb-4">
+              <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full"></div>
+              <span className="text-[#e0e0e0] text-xs font-medium tracking-wide uppercase">Más allá del CRM</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
+              También resolvemos problemas de{' '}
+              <span className="text-[#00bfa5]">operaciones y marketing</span>
+            </h2>
+            <p className="mt-3 text-[#e0e0e0]/70 text-sm sm:text-base max-w-2xl mx-auto">
+              Nuestro trabajo no termina en el pipeline de ventas. Ayudamos a empresas a mejorar su eficiencia operativa y su estrategia de marketing de manera integral.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8 sm:mb-10">
+            {[
+              {
+                Icon: Settings2,
+                tag: 'Operaciones',
+                title: 'Mejora Operativa',
+                description: 'Rediseñamos procesos internos para eliminar ineficiencias, reducir costos operativos y liberar capacidad en tu equipo.',
+              },
+              {
+                Icon: Megaphone,
+                tag: 'Marketing',
+                title: 'Estrategia de Marketing',
+                description: 'Diseñamos estrategias de generación de demanda, posicionamiento y activación que van más allá de la pauta digital.',
+              },
+              {
+                Icon: BarChart3,
+                tag: 'Analítica',
+                title: 'Métricas e Inteligencia',
+                description: 'Construimos dashboards y sistemas de reporte que te dan visibilidad real sobre tus operaciones y resultados de marketing.',
+              },
+            ].map(({ Icon, tag, title, description }, i) => (
+              <div
+                key={i}
+                className="flex gap-4 p-5 sm:p-6 rounded-xl border border-[#1d70a2]/25 hover:border-[#00bfa5]/40 transition-all duration-300"
+                style={{ background: 'rgba(29,112,162,.10)' }}
+              >
+                <div className="w-10 h-10 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-[#00bfa5]" />
+                </div>
+                <div>
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#00bfa5]/70 mb-1">{tag}</span>
+                  <h3 className="text-sm sm:text-base font-bold text-white mb-1.5">{title}</h3>
+                  <p className="text-[#e0e0e0]/70 text-xs sm:text-sm leading-relaxed">{description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button
+              onClick={handleWhatsAppClick}
+              variant="outline"
+              className="w-full sm:w-auto px-7 py-3 bg-transparent border border-[#1d70a2]/60 hover:border-[#00bfa5] text-[#e0e0e0] hover:text-white rounded-lg font-medium text-sm sm:text-base transition-all duration-300"
+            >
+              <MessageCircle className="w-4 h-4 mr-2 text-[#00bfa5]" />
+              Cuéntanos tu problema operativo o de marketing
+            </Button>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1d70a2]/50 to-transparent"></div>
       </section>
 
       {/* Casos de Éxito Elite */}

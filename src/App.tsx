@@ -28,6 +28,7 @@ const OportunidadesPerdidas = lazy(() => import('./pages/radar/OportunidadesPerd
 const AgenciasDeViaje = lazy(() => import('./pages/industrias/AgenciasDeViaje'));
 const AgenciasDeViajeAds = lazy(() => import('./pages/industrias/AgenciasDeViajeAds'));
 const MasterViajes = lazy(() => import('./pages/casos/MasterViajes'));
+const StudentTravelCenter = lazy(() => import('./pages/casos/StudentTravelCenter'));
 const Inmobiliarias = lazy(() => import('./pages/industrias/Inmobiliarias'));
 const InmobiliariasV2 = lazy(() => import('./pages/industrias/InmobiliariasV2'));
 const ServiciosGenerales = lazy(() => import('./pages/industrias/ServiciosGenerales'));
@@ -69,6 +70,7 @@ const App = () => {
               <Route path="/inmobiliarias" element={<InmobiliariasV2 />} />
               <Route path="/industrias/servicios-generales" element={<ServiciosGenerales />} />
               <Route path="/casos/master-viajes" element={<MasterViajes />} />
+              <Route path="/casos/student-travel-center" element={<StudentTravelCenter />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

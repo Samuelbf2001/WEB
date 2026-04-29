@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { MessageCircle, TrendingUp, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useSEO } from '@/hooks/useSEO';
@@ -36,6 +37,7 @@ const CasosExito = () => {
         { value: '+85%', label: 'Mejora en Respuesta' },
       ],
       color: 'from-blue-600 to-[#0a2342]',
+      link: '/casos/student-travel-center',
     },
     {
       cliente: 'TechInnovate Solutions',
@@ -166,16 +168,27 @@ const CasosExito = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`lg:col-span-2 bg-gradient-to-br ${caso.color} p-8 text-white`}>
-                    <h3 className="text-xl font-semibold mb-6">Métricas Clave</h3>
-                    <div className="space-y-4">
-                      {caso.metrics.map((metric, i) => (
-                        <div key={i} className="text-center bg-white/10 rounded-xl p-4 border border-white/15">
-                          <div className="text-3xl font-bold mb-1">{metric.value}</div>
-                          <div className="text-sm text-white/80">{metric.label}</div>
-                        </div>
-                      ))}
+                  <div className={`lg:col-span-2 bg-gradient-to-br ${caso.color} p-8 text-white flex flex-col justify-between`}>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-6">Métricas Clave</h3>
+                      <div className="space-y-4">
+                        {caso.metrics.map((metric, i) => (
+                          <div key={i} className="text-center bg-white/10 rounded-xl p-4 border border-white/15">
+                            <div className="text-3xl font-bold mb-1">{metric.value}</div>
+                            <div className="text-sm text-white/80">{metric.label}</div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
+                    {caso.link && (
+                      <Link
+                        to={caso.link}
+                        className="mt-6 inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                      >
+                        Ver caso completo
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </Card>

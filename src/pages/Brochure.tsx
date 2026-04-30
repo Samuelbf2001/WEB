@@ -67,7 +67,7 @@ export default function BrochurePage() {
 
         {/* Logo slider — tono levemente elevado */}
         <div className="bg-[#06121f]">
-          <LogoSlider title="Empresas y agencias que ya operan con Sixteam.pro" />
+          <LogoSlider title="Estas empresas ya han confiado en nuestro equipo" />
         </div>
 
         {/* Pain points — navy oscuro con textura de puntos */}

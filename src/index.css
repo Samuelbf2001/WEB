@@ -469,7 +469,7 @@
   display: flex;
   gap: 3rem;
   align-items: center;
-  animation: scroll-logos 40s linear infinite;
+  animation: scroll-logos 50s linear infinite;
   width: max-content;
 }
 

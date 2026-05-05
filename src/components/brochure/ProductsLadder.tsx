@@ -65,7 +65,18 @@ export default function ProductsLadder({ onCta }: Props) {
                 <h3 className="font-poppins text-xl font-extrabold leading-tight text-white sm:text-2xl">
                   {p.name}
                 </h3>
-                <p className="mt-2 font-lato text-sm leading-relaxed text-white/60">
+
+                <div className="mt-3">
+                  <span
+                    className="font-poppins text-2xl font-black"
+                    style={{ color: p.accent }}
+                  >
+                    {p.price}
+                  </span>
+                  <p className="mt-0.5 font-lato text-xs text-white/40">{p.impl}</p>
+                </div>
+
+                <p className="mt-3 font-lato text-sm leading-relaxed text-white/60">
                   {p.ideal}
                 </p>
 

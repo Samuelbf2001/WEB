@@ -105,7 +105,7 @@ export const SERVICES: { title: string; copy: string; bullets: string[]; icon: I
     copy: 'Implementamos workflows, bots y asistentes conversacionales para responder más rápido y reducir tareas operativas.',
     bullets: ['Bots conversacionales', 'Workflows con IA', 'Filtrado automático de leads'],
     icon: Bot,
-    price: '$1.152.000 COP impl · $216.000/mes',
+    price: 'Desde $500.000/mes · impl desde $1.500.000',
   },
   {
     title: 'Integraciones',
@@ -145,6 +145,8 @@ export const PRODUCTS: {
   includes: string[];
   moment: string;
   highlighted: boolean;
+  price: string;
+  impl: string;
 }[] = [
   {
     name: 'Sixteam Inbox + IA',
@@ -158,6 +160,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: primer paso para ordenar la atención y responder más rápido a leads o clientes.',
     highlighted: false,
+    price: '$215 USD/mes',
+    impl: '+ $360 USD impl · 2 usuarios',
   },
   {
     name: 'CRM Sixteam.pro Core',
@@ -172,6 +176,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al pasar de operación manual a gestión con control, trazabilidad y roles definidos.',
     highlighted: true,
+    price: '$288 USD/mes',
+    impl: '+ $720 USD impl · 3 usuarios',
   },
   {
     name: 'CRM Sixteam.pro Growth',
@@ -185,6 +191,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al escalar crecimiento, nutrir demanda y conectar captación con ventas en un solo flujo.',
     highlighted: false,
+    price: '$431 USD/mes',
+    impl: '+ $1.152 USD impl · 5 usuarios',
   },
 ];
 

@@ -28,7 +28,7 @@ const Servicios = () => {
       borderColor: 'border-blue-500/30',
       tag: 'Ventas',
       title: 'Implementación Para Ventas',
-      price: 'Desde $2.000.000 COP',
+      price: 'Desde $2.880.000 COP',
       time: '4 semanas',
       description: 'Implementamos tu CRM de ventas con pipelines visuales, seguimiento de leads, automatización de tareas y reportería en tiempo real. Tu equipo comercial cierra más oportunidades con menos esfuerzo.',
       deliverables: [
@@ -49,7 +49,7 @@ const Servicios = () => {
       borderColor: 'border-teal-500/30',
       tag: 'Atención',
       title: 'Implementaciones Para Servicio',
-      price: 'Desde $1.500.000 COP',
+      price: 'Desde $2.160.000 COP',
       time: '4 semanas',
       description: 'Centraliza todos los tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta, mejora la satisfacción del cliente y automatiza flujos de atención.',
       deliverables: [
@@ -70,7 +70,7 @@ const Servicios = () => {
       borderColor: 'border-blue-500/30',
       tag: 'Marketing',
       title: 'Implementación Para Marketing',
-      price: 'Desde $1.500.000 COP',
+      price: 'Desde $2.160.000 COP',
       time: '4 semanas',
       description: 'Gestiona campañas multicanal, segmenta audiencias con IA, automatiza secuencias de nurturing y mide el ROI de cada acción directamente en el CRM.',
       deliverables: [
@@ -91,7 +91,7 @@ const Servicios = () => {
       borderColor: 'border-green-500/30',
       tag: 'IA',
       title: 'Implementación Agentes IA',
-      price: '$1.000.000 COP implementación',
+      price: '$1.440.000 COP implementación',
       time: '2–3 semanas',
       description: 'Desplegamos tu agente de inteligencia artificial en WhatsApp Business: responde 24/7, califica leads, agenda citas y actualiza el CRM automáticamente, sin intervención humana.',
       deliverables: [
@@ -100,7 +100,7 @@ const Servicios = () => {
         'Calificación automática de leads',
         'Agendamiento de citas integrado',
         'Escalación a humano cuando se requiera',
-        'Soporte mensual desde $300.000 COP/mes',
+        'Soporte mensual desde $432.000 COP/mes',
       ],
       waMessage: 'Hola%2C%20me%20interesa%20el%20servicio%20de%20Chatbot%20IA%20para%20WhatsApp',
       path: '/servicios/chatbot-ia',
@@ -112,7 +112,7 @@ const Servicios = () => {
       borderColor: 'border-[#1d70a2]/40',
       tag: 'RevOps',
       title: 'Tu equipo de RevOps externo',
-      price: 'Desde $500.000 COP / mes',
+      price: 'Desde $720.000 COP / mes',
       time: 'Mensual',
       description: 'Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno. CRM, automatizaciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.',
       deliverables: [
@@ -132,19 +132,19 @@ const Servicios = () => {
     {
       icon: Zap,
       title: 'Integraciones entre plataformas',
-      price: '$250.000 COP / hora',
+      price: '$360.000 COP / hora',
       description: 'Conectamos tu CRM con ERP, e-commerce, herramientas de marketing y cualquier sistema que uses. Usamos Make, n8n y Zapier para automatizaciones complejas.',
     },
     {
       icon: Clock,
       title: 'Soporte y operación mensual',
-      price: 'Desde $500.000 COP / mes',
+      price: 'Desde $720.000 COP / mes',
       description: 'Mantenimiento, actualizaciones, ajustes de flujos y soporte técnico continuo. Tu CRM siempre funcionando de manera óptima con un equipo especializado.',
     },
     {
       icon: Users,
       title: 'Implementaciones a medida',
-      price: '$180.000 COP / hora',
+      price: '$260.000 COP / hora',
       description: 'Desarrollos personalizados, configuraciones avanzadas e implementaciones que van más allá de los paquetes estándar. Cotizamos según tu proyecto específico.',
     },
   ];

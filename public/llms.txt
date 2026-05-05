@@ -22,36 +22,36 @@ Sixteam.pro es una consultora tecnológica fundada en 2021 en Bogotá, Colombia,
 
 ### 1. CRM para Ventas
 Implementación de pipeline visual, automatización de seguimiento, lead scoring y reportes de conversión. Plataformas: GoHighLevel, HubSpot, Kommo.
-- **Precio:** desde $2.000.000 COP
+- **Precio:** desde $2.880.000 COP
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-ventas
 
 ### 2. CRM para Atención al Cliente
 Bandeja omnicanal unificada (WhatsApp, email, Instagram, web), tickets, SLAs y automatización de respuestas.
-- **Precio:** desde $1.500.000 COP
+- **Precio:** desde $2.160.000 COP
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-atencion
 
 ### 3. CRM para Marketing
 Segmentación de base de datos, flujos de nurturing, campañas multicanal y atribución de fuentes.
-- **Precio:** desde $1.500.000 COP
+- **Precio:** desde $2.592.000 COP
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-marketing
 
 ### 4. Chatbot / Agente IA para WhatsApp
 Agente conversacional con IA capaz de calificar leads, responder preguntas frecuentes, agendar citas y escalar a humanos.
-- **Precio implementación:** $1.000.000 COP (única vez)
+- **Precio implementación:** $1.152.000 COP (única vez)
 - **Tiempo de entrega:** 2–3 semanas
 - **Más info:** https://sixteam.pro/servicios/chatbot-ia
 
 ### 5. RevOps Externo (Soporte Mensual)
 Equipo externo de Revenue Operations: optimización continua de CRM, flujos, reportes, integraciones y estrategia comercial.
-- **Precio:** desde $500.000 COP/mes
+- **Precio:** desde $720.000 COP/mes
 - **Más info:** https://sixteam.pro/servicios/soporte-operaciones
 
 ### 6. Integraciones entre Plataformas
 Conexión entre CRMs, ERPs, eCommerce, WhatsApp, formularios, Google Sheets y más. Herramientas: Make, n8n, Zapier.
-- **Precio:** $250.000 COP/hora
+- **Precio:** $360.000 COP/hora
 - **Más info:** https://sixteam.pro/servicios
 
 ---
@@ -60,20 +60,20 @@ Conexión entre CRMs, ERPs, eCommerce, WhatsApp, formularios, Google Sheets y m�
 
 Planes gestionados sobre GoHighLevel con configuración, soporte y actualizaciones incluidas.
 
-### Sixteam Inbox + IA — $149 USD/mes
+### Sixteam Inbox + IA — $215 USD/mes
 - 2 usuarios incluidos
 - Bandeja omnicanal unificada (WhatsApp, email, Instagram)
 - Agente IA para WhatsApp activado
 - Ideal para: equipos pequeños que quieren responder más rápido con IA
 
-### CRM Core — $200 USD/mes
+### CRM Core — $288 USD/mes
 - 3 usuarios incluidos
 - Pipeline visual de ventas
 - Automatizaciones de seguimiento y recordatorios
 - Reportes básicos de conversión
 - Ideal para: empresas que inician su proceso de ventas estructurado
 
-### CRM Growth — $299 USD/mes
+### CRM Growth — $431 USD/mes
 - 5 usuarios incluidos
 - Todo lo de CRM Core
 - Agente IA de llamadas (voice AI)

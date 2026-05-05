@@ -41,9 +41,9 @@ CÓMO FUNCIONA (4 pasos):
 4. Cliente cerrado: activación de recordatorios de renovación y programa de referidos
 
 PLANES Y PRECIOS:
-- Sixteam Inbox + IA: $149 USD/mes + $250 USD implementación. Bandeja omnicanal, IA 24/7, captura de solicitudes, 2 usuarios
-- CRM Sixteam Core: $200 USD/mes + $500 USD implementación. Todo lo anterior + pipeline de propuestas, automatizaciones de seguimiento y renovación, secuencias de cobro, pipeline de referidos, 3 usuarios
-- RevOps Externo: desde $500.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
+- Sixteam Inbox + IA: $215 USD/mes + $360 USD implementación. Bandeja omnicanal, IA 24/7, captura de solicitudes, 2 usuarios
+- CRM Sixteam Core: $288 USD/mes + $720 USD implementación. Todo lo anterior + pipeline de propuestas, automatizaciones de seguimiento y renovación, secuencias de cobro, pipeline de referidos, 3 usuarios
+- RevOps Externo: desde $720.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
 
 RESULTADOS ESPERADOS: +28% tasa de cierre de propuestas, -60% tiempo administrativo, crecimiento del 40% sin añadir personal, nunca más un seguimiento olvidado.
 
@@ -517,10 +517,10 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inbox + IA</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$149</span>
+                  <span className="font-poppins font-black text-white text-4xl">$215</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/60 text-xs">+ $250 USD implementación única</p>
+                <p className="text-[#e0e0e0]/60 text-xs">+ $360 USD implementación única</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
@@ -548,10 +548,10 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">CRM Core</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$288</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/60 text-xs">+ $500 USD implementación única</p>
+                <p className="text-[#e0e0e0]/60 text-xs">+ $720 USD implementación única</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
@@ -577,7 +577,7 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">RevOps Externo</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-3xl">$500k</span>
+                  <span className="font-poppins font-black text-white text-3xl">$720k</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">COP/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Desde · operación mensual incluida</p>

@@ -43,10 +43,10 @@ CÓMO FUNCIONA (4 pasos):
 4. Post-viaje: encuesta de satisfacción y reactivación para próxima temporada
 
 PLANES Y PRECIOS:
-- Sixteam Inbox + IA: $149 USD/mes + $250 USD implementación. Incluye bandeja omnicanal, IA 24/7, captura de datos de viaje, 2 usuarios
-- CRM Sixteam.pro Core: $200 USD/mes + $500 USD implementación, 3 usuarios. CRM completo: pipelines, workflows, smart lists, reportes por asesor.
-- CRM Sixteam.pro Growth: $299 USD/mes + $800 USD implementación, 5 usuarios. Plataforma completa: CRM + marketing + automatización. Incluye calendarios, funnels, email marketing, social planner, blog SEO, reputation management, workflows
-- Servicio RevOps: desde $500.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica. Compatible con cualquier plan.
+- Sixteam Inbox + IA: $215 USD/mes + $360 USD implementación. Incluye bandeja omnicanal, IA 24/7, captura de datos de viaje, 2 usuarios
+- CRM Sixteam.pro Core: $288 USD/mes + $720 USD implementación, 3 usuarios. CRM completo: pipelines, workflows, smart lists, reportes por asesor.
+- CRM Sixteam.pro Growth: $431 USD/mes + $1.152 USD implementación, 5 usuarios. Plataforma completa: CRM + marketing + automatización. Incluye calendarios, funnels, email marketing, social planner, blog SEO, reputation management, workflows
+- Servicio RevOps: desde $720.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica. Compatible con cualquier plan.
 
 RESULTADOS ESPERADOS: mejora significativa en tasa de conversión de cotización a reserva, reducción drástica del tiempo de respuesta al lead, multiplicar leads atendidos por asesor sin aumentar equipo.
 
@@ -937,10 +937,10 @@ const AgenciasDeViaje = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Inbox + IA</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$149</span>
+                  <span className="font-poppins font-black text-white text-4xl">$215</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $250 USD implementación · 2 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">+ $360 USD implementación · 2 usuarios</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
@@ -976,10 +976,10 @@ const AgenciasDeViaje = () => {
               <div className="mb-5 mt-1">
                 <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">CRM Core</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$288</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $500 USD implementación · 3 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">+ $720 USD implementación · 3 usuarios</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
@@ -1015,10 +1015,10 @@ const AgenciasDeViaje = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">CRM Growth</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$299</span>
+                  <span className="font-poppins font-black text-white text-4xl">$431</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $800 USD implementación · 5 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">+ $1.152 USD implementación · 5 usuarios</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
@@ -1065,7 +1065,7 @@ const AgenciasDeViaje = () => {
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$500k COP</p>
+                  <p className="text-white font-poppins font-black text-2xl">$720k COP</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button

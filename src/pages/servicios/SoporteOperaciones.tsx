@@ -27,9 +27,9 @@ QUÉ HACEMOS CADA MES:
 - Alineamos ventas, marketing y servicio al cliente
 
 PLANES:
-- RevOps Starter: $500.000 COP/mes — 5 horas, SLA 4h
-- RevOps Operativo: desde $1.000.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
-- RevOps Avanzado: desde $2.000.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
+- RevOps Starter: $720.000 COP/mes — 5 horas, SLA 4h
+- RevOps Operativo: desde $1.440.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
+- RevOps Avanzado: desde $2.880.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
 
 DIFERENCIAL: No somos soporte reactivo. Somos proactivos — cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
 SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
@@ -46,7 +46,7 @@ const WA_BASE = 'https://wa.me/+573004188522?text=';
 const SoporteOperaciones = () => {
   useSEO({
     title: "RevOps y Soporte de Operaciones — Sixteam.pro | Operación CRM Mensual",
-    description: "Operación mensual de tu CRM con mejoras proactivas, reportes ejecutivos y SLA de 4 horas. Acompañamiento RevOps desde $500,000 COP/mes.",
+    description: "Operación mensual de tu CRM con mejoras proactivas, reportes ejecutivos y SLA de 4 horas. Acompañamiento RevOps desde $720.000 COP/mes.",
     canonical: "https://sixteam.pro/servicios/soporte-operaciones",
     ogUrl: "https://sixteam.pro/servicios/soporte-operaciones",
   });
@@ -61,8 +61,8 @@ const SoporteOperaciones = () => {
     {
       nombre: 'RevOps Starter',
       horas: '5 horas/mes',
-      precio: '$500.000 COP/mes',
-      horaExtra: '$150.000 COP/hora adicional',
+      precio: '$720.000 COP/mes',
+      horaExtra: '$216.000 COP/hora adicional',
       descripcion: 'Para equipos que ya tienen base implementada y necesitan un aliado técnico que mantenga y mejore la operación.',
       incluye: [
         'Hasta 5 horas de operación RevOps al mes',
@@ -78,8 +78,8 @@ const SoporteOperaciones = () => {
     {
       nombre: 'RevOps Operativo',
       horas: '10 horas/mes',
-      precio: 'Desde $1.000.000 COP/mes',
-      horaExtra: '$100.000 COP/hora adicional',
+      precio: 'Desde $1.440.000 COP/mes',
+      horaExtra: '$144.000 COP/hora adicional',
       descripcion: 'Para equipos en crecimiento que necesitan un socio técnico activo que opere, automatice y evolucione su stack mensualmente.',
       incluye: [
         'Hasta 10 horas de operación RevOps al mes',
@@ -96,8 +96,8 @@ const SoporteOperaciones = () => {
     {
       nombre: 'RevOps Avanzado',
       horas: '20–30 horas/mes',
-      precio: 'Desde $2.000.000 COP/mes',
-      horaExtra: '$99.999 COP/hora adicional',
+      precio: 'Desde $2.880.000 COP/mes',
+      horaExtra: '$144.000 COP/hora adicional',
       descripcion: 'Sixteam actúa como tu equipo de RevOps externo dedicado: opera, diseña e impulsa la madurez de toda la operación de revenue.',
       incluye: [
         'Hasta 20–30 horas de operación RevOps al mes',
@@ -151,14 +151,14 @@ const SoporteOperaciones = () => {
     {
       icon: Zap,
       titulo: 'Automatizaciones avanzadas de Revenue',
-      precio: '$180.000 COP / hora',
+      precio: '$260.000 COP / hora',
       desc: 'Workflows complejos, lógica de procesos a medida y automatizaciones que conectan ventas, marketing y servicio en un solo flujo de ingresos.',
       waMsg: 'Hola, quiero cotizar automatizaciones avanzadas de RevOps',
     },
     {
       icon: Globe,
       titulo: 'Integraciones entre sistemas',
-      precio: '$250.000 COP / hora',
+      precio: '$360.000 COP / hora',
       desc: 'Conectamos tu CRM con ERP, e-commerce, herramientas de marketing o cualquier sistema externo (Shopify, NetSuite, HubSpot, Mailchimp y más) vía API o Webhook.',
       waMsg: 'Hola, quiero cotizar una integración de sistemas',
     },
@@ -172,7 +172,7 @@ const SoporteOperaciones = () => {
     {
       icon: Layers,
       titulo: 'Desarrollo de plataforma a medida',
-      precio: '$300.000 COP / hora',
+      precio: '$432.000 COP / hora',
       desc: 'Diseñamos y construimos módulos o funcionalidades personalizadas que ningún software estándar cubre, alineados a tu flujo operativo único.',
       waMsg: 'Hola, quiero cotizar desarrollo de plataforma personalizada',
     },

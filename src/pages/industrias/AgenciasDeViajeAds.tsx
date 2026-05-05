@@ -215,10 +215,10 @@ const AgenciasDeViajeAds = () => {
   }, []);
 
   const valueItems = [
-    { icon: Bot, title: 'Análisis de tus canales actuales', desc: 'Revisamos cómo llegan tus leads hoy (WhatsApp, IG, email, web) y qué se está perdiendo.', value: '$80 USD' },
-    { icon: BarChart3, title: 'Mapa de oportunidades perdidas', desc: 'Calculamos cuántas reservas estás dejando ir cada mes por falta de seguimiento.', value: '$60 USD' },
-    { icon: Zap, title: 'Demo personalizada de la plataforma', desc: 'Te mostramos la plataforma configurada con el proceso de tu agencia, no un demo genérico.', value: '$120 USD' },
-    { icon: TrendingUp, title: 'Plan de acción en 2 semanas', desc: 'Un roadmap paso a paso para automatizar cotizaciones y seguimientos en tu agencia específica.', value: '$80 USD' },
+    { icon: Bot, title: 'Análisis de tus canales actuales', desc: 'Revisamos cómo llegan tus leads hoy (WhatsApp, IG, email, web) y qué se está perdiendo.', value: '$115 USD' },
+    { icon: BarChart3, title: 'Mapa de oportunidades perdidas', desc: 'Calculamos cuántas reservas estás dejando ir cada mes por falta de seguimiento.', value: '$86 USD' },
+    { icon: Zap, title: 'Demo personalizada de la plataforma', desc: 'Te mostramos la plataforma configurada con el proceso de tu agencia, no un demo genérico.', value: '$173 USD' },
+    { icon: TrendingUp, title: 'Plan de acción en 2 semanas', desc: 'Un roadmap paso a paso para automatizar cotizaciones y seguimientos en tu agencia específica.', value: '$115 USD' },
   ];
 
   const painPoints = [
@@ -423,7 +423,7 @@ const AgenciasDeViajeAds = () => {
                   </div>
                   <p className="text-[#e0e0e0]/60 text-sm">
                     Valor real:{' '}
-                    <span className="line-through text-[#e0e0e0]/35">$340 USD</span>{' '}
+                    <span className="line-through text-[#e0e0e0]/35">$490 USD</span>{' '}
                     <span className="text-[#00bfa5] font-bold">GRATIS</span> · Solo para agencias calificadas
                   </p>
                   <p className="text-[#e0e0e0]/50 text-xs flex items-center gap-1.5 mt-1.5">
@@ -537,7 +537,7 @@ const AgenciasDeViajeAds = () => {
                 sin costo
               </span>
             </h2>
-            <p className="text-[#e0e0e0]/55 text-base">Valor total: <span className="line-through text-[#e0e0e0]/35">$340 USD</span> → <span className="text-[#00bfa5] font-bold">$0 para agencias calificadas</span></p>
+            <p className="text-[#e0e0e0]/55 text-base">Valor total: <span className="line-through text-[#e0e0e0]/35">$490 USD</span> → <span className="text-[#00bfa5] font-bold">$0 para agencias calificadas</span></p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -854,8 +854,8 @@ const AgenciasDeViajeAds = () => {
               <ChatWidget
                 pageContext={`Estás en la landing page de ads de Sixteam.pro para agencias de viaje.
 PROPUESTA DE VALOR: CRM, automatizaciones e IA para agencias de viaje que quieren cerrar más reservas sin contratar más personal.
-OFERTA ACTUAL: Diagnóstico gratuito (valor $340 USD) — análisis de canales, mapa de oportunidades, demo personalizada y plan de implementación.
-PLANES: Inbox+IA $149 USD/mes, CRM Core $200 USD/mes, CRM Growth $299 USD/mes.
+OFERTA ACTUAL: Diagnóstico gratuito (valor $490 USD) — análisis de canales, mapa de oportunidades, demo personalizada y plan de implementación.
+PLANES: Inbox+IA $215 USD/mes, CRM Core $288 USD/mes, CRM Growth $431 USD/mes.
 IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español.
 FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seguimiento automático post-cotización, pipeline visual de reservas, historial del viajero.`}
                 initialMessage="¡Hola! Soy el asistente de Sixteam 👋 Conozco el sistema al detalle. ¿Qué quieres saber antes de agendar tu diagnóstico gratuito?"

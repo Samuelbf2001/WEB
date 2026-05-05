@@ -17,16 +17,16 @@ Página: /plataforma
 PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
-1. Sixteam Inbox + IA — $149 USD/mes + $250 USD implementación (2 usuarios)
+1. Sixteam Inbox + IA — $215 USD/mes + $360 USD implementación (2 usuarios)
    Incluye: bandeja omnicanal (WhatsApp, Instagram, Facebook, email, SMS), IA conversacional 24/7, entrenamiento del bot, handoff IA→humano, widget de chat web.
 
-2. CRM Sixteam.pro Core — $200 USD/mes + $500 USD implementación (3 usuarios)
+2. CRM Sixteam.pro Core — $288 USD/mes + $720 USD implementación (3 usuarios)
    Incluye: todo lo de Inbox + CRM de contactos, pipelines y oportunidades, Smart Lists, Workflows de automatización, deduplicación.
 
-3. CRM Sixteam.pro Growth — $299 USD/mes + $800 USD implementación (5 usuarios)
+3. CRM Sixteam.pro Growth — $431 USD/mes + $1.152 USD implementación (5 usuarios)
    Incluye: todo lo de Core + calendarios y agendamiento, funnels y landing pages, email marketing, social planner, reputation management.
 
-USUARIOS ADICIONALES: $25 USD/usuario/mes (operativo) o $12.5 USD/usuario/mes (administrativo/visor).
+USUARIOS ADICIONALES: $36 USD/usuario/mes (operativo) o $18 USD/usuario/mes (administrativo/visor).
 TIEMPO DE IMPLEMENTACIÓN: Inbox 2-3 semanas; Core y Growth 3-6 semanas.
 TECNOLOGÍA BASE: Infraestructura de clase enterprise configurada y operada por Sixteam.pro.
 
@@ -43,8 +43,8 @@ const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%
 
 const Plataforma = () => {
   useSEO({
-    title: "Plataforma CRM — Sixteam.pro | Planes desde $149 USD/mes",
-    description: "Planes CRM todo-en-uno desde $149 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
+    title: "Plataforma CRM — Sixteam.pro | Planes desde $215 USD/mes",
+    description: "Planes CRM todo-en-uno desde $215 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
     canonical: "https://sixteam.pro/plataforma",
     ogUrl: "https://sixteam.pro/plataforma",
   });
@@ -65,8 +65,8 @@ const Plataforma = () => {
       name: 'Sixteam Inbox + IA',
       tagline: 'Tu primer paso hacia la automatización',
       desc: 'Centraliza todas tus conversaciones en una sola bandeja y deja que la IA atienda, clasifique y haga seguimiento 24/7.',
-      price: '149',
-      impl: '250',
+      price: '215',
+      impl: '360',
       users: '2',
       accent: '#1d70a2',
       badge: 'Producto gancho',
@@ -89,8 +89,8 @@ const Plataforma = () => {
       name: 'CRM Sixteam.pro Core',
       tagline: 'Ordena tu operación, cierra más negocios',
       desc: 'CRM operativo completo para equipos de ventas o servicio al cliente. Pipelines, seguimientos automáticos y visibilidad total de tu proceso.',
-      price: '200',
-      impl: '500',
+      price: '288',
+      impl: '720',
       users: '3',
       accent: '#00bfa5',
       badge: 'Más popular',
@@ -113,8 +113,8 @@ const Plataforma = () => {
       name: 'CRM Sixteam.pro Growth',
       tagline: 'Capta, nutre, convierte y crece',
       desc: 'La plataforma completa: CRM + marketing + automatización en una sola operación digital para escalar tu negocio.',
-      price: '299',
-      impl: '800',
+      price: '431',
+      impl: '1.152',
       users: '5',
       accent: '#00bfa5',
       badge: 'Plataforma completa',
@@ -171,7 +171,7 @@ const Plataforma = () => {
     },
     {
       q: '¿Cuántos usuarios adicionales puedo agregar?',
-      a: 'Puedes agregar usuarios operativos adicionales por $25 USD/usuario/mes. Los usuarios administrativos, visores o de marketing tienen un costo de $12.5 USD/usuario/mes según aplique.',
+      a: 'Puedes agregar usuarios operativos adicionales por $36 USD/usuario/mes. Los usuarios administrativos, visores o de marketing tienen un costo de $18 USD/usuario/mes según aplique.',
     },
     {
       q: '¿Las integraciones con sistemas externos están incluidas?',
@@ -344,7 +344,7 @@ const Plataforma = () => {
           </div>
 
           <p className="text-center text-gray-400 text-sm mt-8">
-            Usuario adicional operativo: USD 25/mes · Usuario admin/visor: USD 12.5/mes
+            Usuario adicional operativo: USD 36/mes · Usuario admin/visor: USD 18/mes
           </p>
         </div>
       </section>

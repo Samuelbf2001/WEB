@@ -1046,10 +1046,10 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$149</span>
+                    <span className="text-3xl font-bold text-white">$215</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">+ créditos IA | Implementación desde $250 USD | 2 usuarios</p>
+                  <p className="text-gray-500 text-xs">+ créditos IA | Implementación desde $360 USD | 2 usuarios</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Bandeja unificada (WhatsApp, email, SMS)</li>
@@ -1075,10 +1075,10 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$200</span>
+                    <span className="text-3xl font-bold text-white">$288</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">Implementación desde $500 USD | 3 usuarios</p>
+                  <p className="text-gray-500 text-xs">Implementación desde $720 USD | 3 usuarios</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Todo lo del plan Inbox + IA</li>
@@ -1104,10 +1104,10 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$299</span>
+                    <span className="text-3xl font-bold text-white">$431</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">Implementación desde $800 USD | 5 usuarios</p>
+                  <p className="text-gray-500 text-xs">Implementación desde $1.152 USD | 5 usuarios</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Todo lo del plan Core</li>
@@ -1125,7 +1125,7 @@ const Index = () => {
               </div>
             </div>
 
-            <p className="text-center text-gray-500 text-xs mt-6">Usuarios adicionales desde $12.5 USD/mes. Precios en USD. Implementación cobrada una sola vez.</p>
+            <p className="text-center text-gray-500 text-xs mt-6">Usuarios adicionales desde $18 USD/mes. Precios en USD. Implementación cobrada una sola vez.</p>
           </div>
         </div>
       </section>

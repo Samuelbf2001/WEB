@@ -107,7 +107,7 @@ const RadarSixteam = () => {
       ],
       cta: 'Hablar de implementación',
       waMessage: 'Hola%2C%20quiero%20hablar%20sobre%20implementaci%C3%B3n%20con%20Sixteam',
-      price: 'Desde $800k COP',
+      price: 'Desde $1.152k COP',
     },
   ];
 

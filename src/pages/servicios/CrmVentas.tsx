@@ -22,7 +22,7 @@ QUÉ INCLUYE:
 - Capacitación del equipo comercial
 - Soporte post-implementación 30 días
 
-PRECIO: Desde $2.000.000 COP implementación única.
+PRECIO: Desde $2.880.000 COP implementación única.
 TIEMPO: 4 semanas para estar operativo.
 SIN contratos anuales. Soporte en español.
 
@@ -38,7 +38,7 @@ const EXAMPLE_QUESTIONS = [
 const CrmVentas = () => {
   useSEO({
     title: "CRM de Ventas — Sixteam.pro | Pipeline y Automatización Comercial",
-    description: "Implementamos tu módulo de ventas en CRM con pipeline visual, seguimiento automático de leads y reportes en tiempo real. Desde $2,000,000 COP. Implementación en 4 semanas.",
+    description: "Implementamos tu módulo de ventas en CRM con pipeline visual, seguimiento automático de leads y reportes en tiempo real. Desde $2,400,000 COP. Implementación en 4 semanas.",
     canonical: "https://sixteam.pro/servicios/crm-ventas",
     ogUrl: "https://sixteam.pro/servicios/crm-ventas",
   });
@@ -80,7 +80,7 @@ const CrmVentas = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-teal-400" />
-                  <span className="text-white font-semibold">Desde $2.000.000 COP</span>
+                  <span className="text-white font-semibold">Desde $2.880.000 COP</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-blue-400" />
@@ -190,7 +190,7 @@ const CrmVentas = () => {
             </div>
             <div className="bg-[#0a2342] rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-2">Inversión</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-1">$2.000.000 COP</div>
+              <div className="text-4xl font-bold text-blue-400 mb-1">$2.880.000 COP</div>
               <p className="text-gray-300 text-sm mb-6">Pago único por implementación completa</p>
               <ul className="space-y-3 mb-8">
                 {['Sin costos ocultos', 'Entregable en 4 semanas', '30 días de soporte incluido', 'Capacitación sin límite de usuarios'].map((item, i) => (

@@ -78,54 +78,62 @@ export const JOURNEY: {
   },
 ];
 
-export const SERVICES: { title: string; copy: string; bullets: string[]; icon: IconType }[] = [
+export const SERVICES: { title: string; copy: string; bullets: string[]; icon: IconType; price: string }[] = [
   {
     title: 'Implementaciones para ventas',
     copy: 'Diseñamos e implementamos soluciones para organizar procesos, datos, seguimiento y automatizaciones en las áreas comerciales.',
     bullets: ['Pipelines y etapas', 'Automatización de seguimiento', 'Asignación inteligente de leads'],
     icon: Target,
+    price: 'Desde $2.880.000 COP',
   },
   {
     title: 'Implementaciones para servicio',
     copy: 'Estructuramos la operación de atención con tickets, SLA, automatizaciones y visibilidad de tiempos de respuesta.',
     bullets: ['Tickets y SLA', 'Automatizaciones de soporte', 'Reportería de cumplimiento'],
     icon: ShieldCheck,
+    price: 'Desde $2.160.000 COP',
   },
   {
     title: 'Implementaciones para marketing',
     copy: 'Conectamos formularios, páginas, captación y reportería para activar campañas y darle continuidad al embudo.',
     bullets: ['Formularios y landing', 'Email marketing', 'Atribución y reporting'],
     icon: Rocket,
+    price: 'Desde $2.160.000 COP',
   },
   {
     title: 'Automatización e IA',
     copy: 'Implementamos workflows, bots y asistentes conversacionales para responder más rápido y reducir tareas operativas.',
     bullets: ['Bots conversacionales', 'Workflows con IA', 'Filtrado automático de leads'],
     icon: Bot,
+    price: '$1.152.000 COP impl · $216.000/mes',
   },
   {
     title: 'Integraciones',
     copy: 'Unimos CRM, canales, formularios y herramientas externas para que la información fluya sin reprocesos.',
     bullets: ['APIs y webhooks', 'Conectores nativos', 'Sincronizaciones bidireccionales'],
     icon: Link2,
+    price: 'Desde $2.000.000 COP',
   },
   {
     title: 'Pauta Meta y Google',
     copy: 'Activamos, optimizamos y conectamos campañas con la operación comercial para mejorar respuesta y aprendizaje.',
     bullets: ['Estructura de campañas', 'Conexión con CRM', 'Atribución multi-canal'],
     icon: Megaphone,
+    price: 'Desde $500.000 COP + 10% inversión',
   },
   {
     title: 'Websites y landing pages',
     copy: 'Creamos activos digitales enfocados en conversión, posicionamiento y captura de oportunidades.',
     bullets: ['Diseño orientado a conversión', 'Performance y SEO', 'Conectados al CRM'],
     icon: LayoutTemplate,
+    price: 'Desde $2.000.000 COP',
   },
   {
     title: 'Desarrollo a la medida',
     copy: 'Construimos soluciones personalizadas cuando el negocio requiere arquitectura más robusta de software.',
     bullets: ['Apps internas', 'Portales de cliente', 'Integraciones complejas'],
     icon: Wrench,
+    price: 'Desde $5.000.000 COP',
   },
 ];
 

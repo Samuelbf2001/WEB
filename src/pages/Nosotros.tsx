@@ -90,7 +90,7 @@ const Nosotros = () => {
     },
     {
       q: '¿Cuánto cuesta trabajar con Sixteam.pro?',
-      a: 'Nuestros planes CRM comienzan desde $149 USD/mes (Sixteam Inbox + IA), $200 USD/mes (CRM Core) y $299 USD/mes (CRM Growth). Las implementaciones tienen costo único desde $250 USD. Cada plan incluye implementación del CRM, automatizaciones y soporte continuo del equipo.',
+      a: 'Nuestros planes CRM comienzan desde $215 USD/mes (Sixteam Inbox + IA), $288 USD/mes (CRM Core) y $431 USD/mes (CRM Growth). Las implementaciones tienen costo único desde $360 USD. Cada plan incluye implementación del CRM, automatizaciones y soporte continuo del equipo.',
     },
     {
       q: '¿Qué es GoHighLevel y por qué lo usan?',
@@ -131,7 +131,7 @@ const Nosotros = () => {
           {
             "@type": "Question",
             "name": "¿Cuánto cuesta implementar un CRM con Sixteam.pro?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Los planes CRM by Sixteam.pro comienzan desde $149 USD/mes (Sixteam Inbox + IA, 2 usuarios), $200 USD/mes (CRM Core, 3 usuarios con pipeline visual y automatizaciones), y $299 USD/mes (CRM Growth, 5 usuarios con agente IA de llamadas). Las implementaciones tienen un costo único desde $250 USD. Usuarios adicionales desde $12.5 USD/mes."}
+            "acceptedAnswer": {"@type": "Answer", "text": "Los planes CRM by Sixteam.pro comienzan desde $215 USD/mes (Sixteam Inbox + IA, 2 usuarios), $288 USD/mes (CRM Core, 3 usuarios con pipeline visual y automatizaciones), y $431 USD/mes (CRM Growth, 5 usuarios con agente IA de llamadas). Las implementaciones tienen un costo único desde $360 USD. Usuarios adicionales desde $18 USD/mes."}
           },
           {
             "@type": "Question",

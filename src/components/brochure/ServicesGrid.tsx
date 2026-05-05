@@ -32,7 +32,7 @@ export default function ServicesGrid() {
         </div>
 
         <div className="grid auto-rows-[minmax(220px,auto)] grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
-          {SERVICES.map(({ title, copy, bullets, icon: Icon }, index) => (
+          {SERVICES.map(({ title, copy, bullets, icon: Icon, price }, index) => (
             <article
               key={title}
               className={`group relative overflow-hidden rounded-2xl border border-[#1d70a2]/25 bg-gradient-to-br from-[#0a2342] to-[#06121f] p-6 shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:border-[#00bfa5]/55 hover:from-[#0d2d52] hover:shadow-[0_25px_70px_-15px_rgba(0,191,165,0.35)] ${BENTO_SPANS[index] ?? ''}`}
@@ -53,6 +53,10 @@ export default function ServicesGrid() {
                 <p className="mt-2 font-lato text-sm leading-relaxed text-white/70">
                   {copy}
                 </p>
+
+                <div className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-[#00bfa5]/25 bg-[#00bfa5]/10 px-3 py-1.5">
+                  <span className="font-poppins text-xs font-bold text-[#00bfa5]">{price}</span>
+                </div>
 
                 <ul className="mt-auto grid gap-1.5 pt-5 transition-all duration-300">
                   {bullets.map((b) => (

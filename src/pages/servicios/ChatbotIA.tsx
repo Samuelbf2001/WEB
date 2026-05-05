@@ -26,7 +26,7 @@ QUÉ HACE EL AGENTE IA:
 - Transfiere a agente humano cuando el cliente lo pide o la situación lo requiere
 - Responde preguntas frecuentes sobre productos, precios, disponibilidad
 
-PRECIO: $800.000 COP implementación + $150.000 COP/mes operación.
+PRECIO: $1.152.000 COP implementación + $216.000 COP/mes operación.
 TIEMPO: 2 semanas para estar en vivo.
 
 RESULTADOS TÍPICOS: 0 leads perdidos fuera de horario, -70% tiempo del equipo en respuestas repetitivas, leads calificados antes de llegar al asesor.`;
@@ -41,7 +41,7 @@ const EXAMPLE_QUESTIONS = [
 const ChatbotIA = () => {
   useSEO({
     title: "Chatbot IA para WhatsApp — Sixteam.pro | Atención Automática 24/7",
-    description: "Desplegamos tu agente IA en WhatsApp Business: responde en menos de 5 segundos, califica leads y agenda citas sin intervención humana. Desde $800,000 COP.",
+    description: "Desplegamos tu agente IA en WhatsApp Business: responde en menos de 5 segundos, califica leads y agenda citas sin intervención humana. Desde $960,000 COP.",
     canonical: "https://sixteam.pro/servicios/chatbot-ia",
     ogUrl: "https://sixteam.pro/servicios/chatbot-ia",
   });
@@ -159,7 +159,7 @@ const ChatbotIA = () => {
     'Integración con tu CRM para registro automático de contactos',
     'Escalación a agente humano con contexto preservado',
     'Panel de supervisión y métricas de conversaciones',
-    'Soporte y operación mensual disponible desde $150.000/mes',
+    'Soporte y operación mensual disponible desde $216.000/mes',
   ];
 
   const faqs = [
@@ -181,7 +181,7 @@ const ChatbotIA = () => {
     },
     {
       q: '¿El plan mensual es obligatorio después de la implementación?',
-      a: 'No es obligatorio, pero sí muy recomendado. El plan mensual desde $150.000 COP incluye monitoreo de conversaciones, actualizaciones de la base de conocimiento, ajustes de flujos y soporte técnico. Sin este plan, el agente puede seguir funcionando pero sin actualizaciones ni mejoras continuas.',
+      a: 'No es obligatorio, pero sí muy recomendado. El plan mensual desde $216.000 COP incluye monitoreo de conversaciones, actualizaciones de la base de conocimiento, ajustes de flujos y soporte técnico. Sin este plan, el agente puede seguir funcionando pero sin actualizaciones ni mejoras continuas.',
     },
   ];
 
@@ -221,11 +221,11 @@ const ChatbotIA = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#00bfa5]" />
-                  <span className="text-white font-semibold">$800.000 COP implementación</span>
+                  <span className="text-white font-semibold">$1.152.000 COP implementación</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#1d70a2]" />
-                  <span className="text-white font-semibold">+ $150.000/mes operación</span>
+                  <span className="text-white font-semibold">+ $216.000/mes operación</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-[#00bfa5]" />
@@ -397,10 +397,10 @@ const ChatbotIA = () => {
             </div>
             <div className="bg-gradient-to-br from-[#0a2342] to-[#0d2d4f] border border-[#1d70a2]/30 rounded-2xl p-8 text-white sticky top-8">
               <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inversión</p>
-              <div className="text-5xl font-poppins font-black text-white mb-1">$800.000</div>
+              <div className="text-5xl font-poppins font-black text-white mb-1">$960.000</div>
               <p className="text-gray-300 text-sm mb-1">COP · Implementación única del agente IA</p>
               <div className="mt-4 mb-1">
-                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">+ $150.000/mes</span>
+                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">+ $216.000/mes</span>
               </div>
               <p className="text-gray-400 text-xs mb-6">Operación, actualizaciones y soporte mensual</p>
               <ul className="space-y-3 mb-8">

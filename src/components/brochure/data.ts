@@ -160,8 +160,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: primer paso para ordenar la atención y responder más rápido a leads o clientes.',
     highlighted: false,
-    price: '$215 USD/mes',
-    impl: '+ $360 USD impl · 2 usuarios',
+    price: '$180 USD/mes',
+    impl: '+ $300 USD impl · 2 usuarios',
   },
   {
     name: 'CRM Sixteam.pro Core',
@@ -176,8 +176,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al pasar de operación manual a gestión con control, trazabilidad y roles definidos.',
     highlighted: true,
-    price: '$288 USD/mes',
-    impl: '+ $720 USD impl · 3 usuarios',
+    price: '$240 USD/mes',
+    impl: '+ $600 USD impl · 3 usuarios',
   },
   {
     name: 'CRM Sixteam.pro Growth',
@@ -191,8 +191,8 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al escalar crecimiento, nutrir demanda y conectar captación con ventas en un solo flujo.',
     highlighted: false,
-    price: '$431 USD/mes',
-    impl: '+ $1.152 USD impl · 5 usuarios',
+    price: '$360 USD/mes',
+    impl: '+ $960 USD impl · 5 usuarios',
   },
 ];
 

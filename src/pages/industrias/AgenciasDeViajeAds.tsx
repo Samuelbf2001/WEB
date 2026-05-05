@@ -855,7 +855,7 @@ const AgenciasDeViajeAds = () => {
                 pageContext={`Estás en la landing page de ads de Sixteam.pro para agencias de viaje.
 PROPUESTA DE VALOR: CRM, automatizaciones e IA para agencias de viaje que quieren cerrar más reservas sin contratar más personal.
 OFERTA ACTUAL: Diagnóstico gratuito (valor $490 USD) — análisis de canales, mapa de oportunidades, demo personalizada y plan de implementación.
-PLANES: Inbox+IA $215 USD/mes, CRM Core $288 USD/mes, CRM Growth $431 USD/mes.
+PLANES: Inbox+IA $180 USD/mes, CRM Core $240 USD/mes, CRM Growth $360 USD/mes.
 IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español.
 FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seguimiento automático post-cotización, pipeline visual de reservas, historial del viajero.`}
                 initialMessage="¡Hola! Soy el asistente de Sixteam 👋 Conozco el sistema al detalle. ¿Qué quieres saber antes de agendar tu diagnóstico gratuito?"

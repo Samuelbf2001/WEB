@@ -17,13 +17,13 @@ Página: /plataforma
 PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
-1. Sixteam Inbox + IA — $215 USD/mes + $360 USD implementación (2 usuarios)
+1. Sixteam Inbox + IA — $180 USD/mes + $300 USD implementación (2 usuarios)
    Incluye: bandeja omnicanal (WhatsApp, Instagram, Facebook, email, SMS), IA conversacional 24/7, entrenamiento del bot, handoff IA→humano, widget de chat web.
 
-2. CRM Sixteam.pro Core — $288 USD/mes + $720 USD implementación (3 usuarios)
+2. CRM Sixteam.pro Core — $240 USD/mes + $600 USD implementación (3 usuarios)
    Incluye: todo lo de Inbox + CRM de contactos, pipelines y oportunidades, Smart Lists, Workflows de automatización, deduplicación.
 
-3. CRM Sixteam.pro Growth — $431 USD/mes + $1.152 USD implementación (5 usuarios)
+3. CRM Sixteam.pro Growth — $360 USD/mes + $960 USD implementación (5 usuarios)
    Incluye: todo lo de Core + calendarios y agendamiento, funnels y landing pages, email marketing, social planner, reputation management.
 
 USUARIOS ADICIONALES: $36 USD/usuario/mes (operativo) o $18 USD/usuario/mes (administrativo/visor).
@@ -43,8 +43,8 @@ const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%
 
 const Plataforma = () => {
   useSEO({
-    title: "Plataforma CRM — Sixteam.pro | Planes desde $215 USD/mes",
-    description: "Planes CRM todo-en-uno desde $215 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
+    title: "Plataforma CRM — Sixteam.pro | Planes desde $180 USD/mes",
+    description: "Planes CRM todo-en-uno desde $180 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
     canonical: "https://sixteam.pro/plataforma",
     ogUrl: "https://sixteam.pro/plataforma",
   });
@@ -65,8 +65,8 @@ const Plataforma = () => {
       name: 'Sixteam Inbox + IA',
       tagline: 'Tu primer paso hacia la automatización',
       desc: 'Centraliza todas tus conversaciones en una sola bandeja y deja que la IA atienda, clasifique y haga seguimiento 24/7.',
-      price: '215',
-      impl: '360',
+      price: '180',
+      impl: '300',
       users: '2',
       accent: '#1d70a2',
       badge: 'Producto gancho',
@@ -89,8 +89,8 @@ const Plataforma = () => {
       name: 'CRM Sixteam.pro Core',
       tagline: 'Ordena tu operación, cierra más negocios',
       desc: 'CRM operativo completo para equipos de ventas o servicio al cliente. Pipelines, seguimientos automáticos y visibilidad total de tu proceso.',
-      price: '288',
-      impl: '720',
+      price: '240',
+      impl: '600',
       users: '3',
       accent: '#00bfa5',
       badge: 'Más popular',
@@ -113,8 +113,8 @@ const Plataforma = () => {
       name: 'CRM Sixteam.pro Growth',
       tagline: 'Capta, nutre, convierte y crece',
       desc: 'La plataforma completa: CRM + marketing + automatización en una sola operación digital para escalar tu negocio.',
-      price: '431',
-      impl: '1.152',
+      price: '360',
+      impl: '960',
       users: '5',
       accent: '#00bfa5',
       badge: 'Plataforma completa',

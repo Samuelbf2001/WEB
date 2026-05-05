@@ -11,6 +11,7 @@ import StatsSection from '@/components/brochure/StatsSection';
 import MockupsGallery from '@/components/brochure/MockupsGallery';
 import FAQAccordion from '@/components/brochure/FAQAccordion';
 import NotOnlySection from '@/components/brochure/NotOnlySection';
+import EcosystemTimeline from '@/components/brochure/EcosystemTimeline';
 import TripleCTA from '@/components/brochure/TripleCTA';
 
 const WA_LINK =
@@ -140,6 +141,18 @@ export default function BrochurePage() {
           }}
         >
           <NotOnlySection />
+        </div>
+
+        {/* Ecosystem Timeline — journey del cliente con todos los servicios */}
+        <div
+          className="bg-[#030d1a]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle, rgba(29,112,162,0.06) 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        >
+          <EcosystemTimeline />
         </div>
 
         {/* FAQ — oscuro con rejilla diagonal */}

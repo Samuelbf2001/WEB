@@ -3,7 +3,7 @@ import { gtm } from '@/lib/gtm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
-import { MessageCircle, Target, Brain, Headphones, CheckCircle, Star, Zap, Bot, Search, Map, TrendingUp, BarChart3, Settings2, Megaphone } from 'lucide-react';
+import { MessageCircle, Target, Brain, Headphones, CheckCircle, Star, Zap, Bot, Search, Map, TrendingUp, BarChart3, Settings2, Megaphone, ArrowRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 import ChatSection from '@/components/ChatSection';
 import Header from '@/components/Header';
@@ -698,18 +698,6 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Título de sección para C-Level */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-[#1d70a2]/10 border border-[#1d70a2]/20 rounded-full">
-              <div className="text-sm font-bold font-poppins tracking-tight whitespace-nowrap">
-                <span className="text-white">Process</span>
-                <span className="text-white mx-1">+</span>
-                <span className="text-white">Technology</span>
-                <span className="text-white mx-1">+</span>
-                <span className="text-[#00bfa5]">People</span>
-                <span className="text-white mx-1">=</span>
-                <span className="text-green-400 font-bold">Growth</span>
-              </div>
-            </div>
-
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight px-4 sm:px-0">
               Revenue Operations
               <br />
@@ -1184,316 +1172,156 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Más que implementadores, tus Socios Estratégicos */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-gray-900 overflow-hidden">
-        {/* Fondo sutil empresarial */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
-          <div className="absolute top-1/4 left-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-blue-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-40 sm:w-80 h-40 sm:h-80 bg-teal-600/10 rounded-full blur-3xl"></div>
-        </div>
+      {/* ── POR QUÉ SIXTEAM ── */}
+      <section className="relative py-16 sm:py-24 bg-white overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#00bfa5]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1d70a2]/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            {/* Título profesional */}
-            <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6 sm:space-y-8">
-              <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-gray-800/60 border border-gray-600/40 rounded-full">
-                <img
-                  src="/lovable-uploads/3b066a0e-1bea-4907-b036-3b460d543754.png"
-                  alt="Sixteam.pro Logo"
-                  className="w-4 h-4 sm:w-5 sm:h-5"
-                  loading="lazy"
-                />
-                <span className="text-gray-200 font-medium text-xs sm:text-sm tracking-wide">Sixteam.pro</span>
-              </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight px-4 sm:px-0">
-                <span className="text-white">Más que implementadores,</span>
+            {/* Izquierda — texto + diferenciadores */}
+            <div>
+              <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-6">— Por qué Sixteam</p>
+              <h2 className="font-poppins font-black text-[clamp(2rem,5vw,3.5rem)] text-[#0a2342] leading-tight mb-8">
+                Más que implementadores,
                 <br />
-                <span className="text-blue-400">tus Socios Estratégicos</span>
+                <span className="text-[#1d70a2]">tus socios estratégicos</span>
               </h2>
-
-              {/* Párrafo introductorio */}
-              <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6 px-4 sm:px-6 lg:px-0">
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                  En el mercado encontrarás muchas empresas que implementan tecnología. Nuestra verdadera diferencia no radica en las herramientas que usamos, sino en cómo nos integramos con tu equipo.
-                </p>
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                  Antes de implementar cualquier <span className="text-blue-400 font-semibold">herramienta tecnológica</span>, nos dedicamos a conocer a fondo los detalles de tus <span className="text-blue-400 font-semibold">procesos</span>, los desafíos del <span className="text-blue-400 font-semibold">personal</span> y tus objetivos estratégicos.
-                </p>
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                  Esto nos permite crear soluciones que se sienten como una extensión de tu propia empresa:
-                </p>
-              </div>
-            </div>
-
-            {/* Grid empresarial */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
-
-              {/* Lado izquierdo - Pilares de Valor */}
-              <div className="space-y-6 sm:space-y-8 px-4 sm:px-0">
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Pilares de Valor</h3>
-
-                {pilarsOfValue.map((pilar, index) => (
-                  <div key={index} className="bg-gray-800/60 backdrop-blur-sm border border-gray-600/40 rounded-xl p-6 sm:p-8">
-                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{pilar.title}</h4>
-                    <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                      {pilar.description.split('**').map((part, i) =>
-                        i % 2 === 0 ? part : <span key={i} className="text-blue-400 font-semibold">{part}</span>
-                      )}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Lado derecho - Lista de ventajas */}
-              <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
-                {advantages.map((advantage, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-800/40 backdrop-blur-sm border border-gray-600/40 rounded-lg hover:border-blue-400/50 transition-all duration-300"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                    </div>
-                    <span className="text-gray-200 font-medium text-base sm:text-lg">
-                      {advantage}
-                    </span>
-                  </div>
-                ))}
-
-                {/* CTA especial */}
-                <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-800/60 border border-gray-600/40 rounded-xl">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div>
-                      <h4 className="text-lg sm:text-xl font-bold text-white mb-2">¿Listo para la transformación?</h4>
-                      <p className="text-gray-300 text-sm sm:text-base">Agenda una consultoría estratégica gratuita</p>
-                    </div>
-                    <Button
-                      onClick={handleWhatsAppClick}
-                      className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all text-sm sm:text-base"
-                    >
-                      <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                      Empezar Ahora
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Consultoría Estratégica — Primero Diagnosticamos, Luego Implementamos */}
-      <section className="relative py-12 sm:py-16 lg:py-24 bg-[#081c36] overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(100, 116, 139, 0.08) 1px, transparent 1px)',
-            backgroundSize: '32px 32px'
-          }}></div>
-          <div className="absolute top-16 right-10 w-72 h-72 bg-[#1d70a2]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-16 left-10 w-96 h-96 bg-[#00bfa5]/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-6">
-            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-[#1d70a2]/10 border border-[#1d70a2]/30 rounded-full">
-              <div className="w-2 h-2 bg-[#00bfa5] rounded-full"></div>
-              <span className="text-[#e0e0e0] font-medium text-xs sm:text-sm tracking-wide uppercase">Consultoría Estratégica</span>
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight px-4 sm:px-0">
-              Primero entendemos tu negocio.
-              <br />
-              <span className="text-[#00bfa5]">Luego recomendamos tecnología.</span>
-            </h2>
-
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
-              <p className="text-lg sm:text-xl text-[#e0e0e0] leading-relaxed">
-                No somos implementadores de software. Somos consultores de negocio que usan la tecnología como herramienta. Antes de tocar una sola plataforma, dedicamos tiempo a entender tus procesos, tus equipos y tus objetivos reales.
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                Antes de tocar una sola herramienta, invertimos tiempo en entender tu operación desde adentro. Mapeamos procesos, entrevistamos al equipo, identificamos qué automatizar y qué eliminar.
               </p>
-            </div>
-          </div>
-
-          {/* 3 fases de consultoría */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-14 sm:mb-20 max-w-5xl mx-auto px-4 sm:px-0">
-            {[
-              {
-                Icon: Search,
-                phase: '01',
-                title: 'Diagnóstico Profundo',
-                description: 'Analizamos tu operación actual: flujos de trabajo, puntos de quiebre, cuellos de botella y oportunidades ocultas. Entrevistamos a tu equipo, no solo a la dirección.',
-              },
-              {
-                Icon: Map,
-                phase: '02',
-                title: 'Mapeo de Procesos',
-                description: 'Documentamos y rediseñamos tus procesos comerciales, de marketing y de servicio. Identificamos qué automatizar, qué eliminar y qué fortalecer antes de cualquier implementación.',
-              },
-              {
-                Icon: TrendingUp,
-                phase: '03',
-                title: 'Hoja de Ruta Estratégica',
-                description: 'Construimos un plan de transformación con prioridades claras, métricas de éxito definidas y una secuencia de implementación que minimiza el riesgo y maximiza el retorno.',
-              },
-            ].map(({ Icon, phase, title, description }, i) => (
-              <div
-                key={i}
-                className="relative group bg-gradient-to-br from-[#0a2342] to-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-xl p-6 sm:p-8 hover:border-[#00bfa5]/50 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="absolute top-4 right-5 text-5xl font-black text-white/5 select-none leading-none">{phase}</div>
-                <div className="w-12 h-12 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-lg flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-[#00bfa5]" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">{title}</h3>
-                <p className="text-[#e0e0e0]/80 text-sm sm:text-base leading-relaxed">{description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Split: diferenciadores + CTA glassmorphism */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto px-4 sm:px-0">
-            <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">
-                Lo que nos distingue de un implementador tradicional
-              </h3>
-              {[
-                'Comenzamos con preguntas de negocio, no con demos de software',
-                'Mapeamos procesos reales antes de recomendar herramientas',
-                'Identificamos si el problema es cultural, operativo o tecnológico',
-                'Diseñamos la arquitectura de procesos antes de cualquier configuración',
-                'Medimos el éxito en resultados de negocio, no en funcionalidades activadas',
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 bg-[#1d70a2]/8 border border-[#1d70a2]/20 rounded-lg">
-                  <div className="w-6 h-6 bg-[#00bfa5]/20 border border-[#00bfa5]/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-[#00bfa5]" />
+              <p className="text-gray-600 text-lg leading-relaxed mb-10">
+                Y nos quedamos junto a ti mucho después de la implementación — en tu WhatsApp, en tus reuniones, ideando contigo cada semana.
+              </p>
+              <div className="space-y-3">
+                {[
+                  'Comenzamos con preguntas de negocio, no con demos de software',
+                  'Mapeamos procesos reales antes de recomendar herramientas',
+                  'Diseñamos la arquitectura antes de cualquier configuración',
+                  'Medimos éxito en resultados de negocio, no en funcionalidades',
+                  'Soporte continuo post-implementación — somos parte de tu equipo',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 bg-[#0a2342]/3 border border-[#1d70a2]/15 rounded-lg hover:border-[#00bfa5]/40 transition-all">
+                    <CheckCircle className="w-5 h-5 text-[#00bfa5] flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 text-base leading-relaxed">{item}</span>
                   </div>
-                  <span className="text-[#e0e0e0] text-sm sm:text-base leading-relaxed">{item}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Derecha — pilares + CTA */}
+            <div className="space-y-4">
+              {pilarsOfValue.map((pilar, index) => (
+                <div key={index} className="border border-[#1d70a2]/20 rounded-xl p-6 hover:border-[#00bfa5]/40 hover:shadow-md transition-all">
+                  <h4 className="text-xl font-bold text-[#0a2342] mb-3">{pilar.title}</h4>
+                  <p className="text-gray-500 text-base leading-relaxed">
+                    {pilar.description.split('**').map((part, i) =>
+                      i % 2 === 0 ? part : <span key={i} className="text-[#1d70a2] font-semibold">{part}</span>
+                    )}
+                  </p>
                 </div>
               ))}
-            </div>
 
-            <div
-              className="rounded-2xl p-7 sm:p-10"
-              style={{
-                background: 'rgba(29,112,162,.12)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                border: '1px solid rgba(29,112,162,.35)',
-                borderRadius: '12px',
-              }}
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00bfa5]/15 border border-[#00bfa5]/30 rounded-full mb-5">
-                <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full animate-pulse"></div>
-                <span className="text-[#00bfa5] text-xs font-semibold tracking-wide uppercase">Sesión sin costo</span>
+              <div className="bg-gradient-to-r from-[#0a2342] to-[#1d70a2] rounded-xl p-7 text-white">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full mb-4">
+                  <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full animate-pulse" />
+                  <span className="text-[#00bfa5] text-xs font-semibold tracking-wide uppercase">Sin costo</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2">¿No sabes por dónde empezar?</h4>
+                <p className="text-gray-300 text-sm mb-5 leading-relaxed">
+                  45 minutos de diagnóstico estratégico. Sin compromiso. Saldrás con claridad sobre qué tecnología tiene sentido para tu negocio ahora mismo.
+                </p>
+                <Button
+                  onClick={handleWhatsAppClick}
+                  className="bg-[#00bfa5] hover:bg-[#009e96] text-[#0a2342] font-bold px-6 py-3 rounded-lg transition-all h-auto"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Agendar diagnóstico gratuito
+                </Button>
               </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
-                ¿No sabes por dónde empezar?
-              </h3>
-              <p className="text-[#e0e0e0]/80 text-sm sm:text-base leading-relaxed mb-7">
-                Agenda una sesión de diagnóstico gratuita. En 45 minutos identificamos tus principales oportunidades de mejora y te damos claridad sobre qué tecnología (si es que alguna) tiene sentido para tu negocio ahora mismo.
-              </p>
-
-              <ul className="space-y-2.5 mb-7">
-                {[
-                  '45 minutos de conversación estratégica',
-                  'Análisis de tu situación actual sin compromiso',
-                  'Recomendación honesta, implementemos o no',
-                ].map((bullet, i) => (
-                  <li key={i} className="flex items-center gap-2.5 text-[#e0e0e0] text-sm">
-                    <CheckCircle className="w-4 h-4 text-[#00bfa5] flex-shrink-0" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                onClick={handleWhatsAppClick}
-                className="w-full sm:w-auto bg-gradient-to-r from-[#00bfa5] to-[#1d70a2] hover:from-[#00bfa5]/90 hover:to-[#1d70a2]/90 text-white px-6 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 shadow-lg"
-              >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Agendar diagnóstico gratuito
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Operaciones y Marketing — Franja Compacta */}
-      <section className="relative py-10 sm:py-14 bg-[#0a2342] overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1d70a2]/50 to-transparent"></div>
+      {/* ── CASOS DE ÉXITO ── */}
+      <section className="relative py-16 sm:py-24 bg-[#0a2342] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a2342] via-[#0d2d52] to-[#0a2342]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00bfa5]/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1d70a2]/10 border border-[#1d70a2]/25 rounded-full mb-4">
-              <div className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full"></div>
-              <span className="text-[#e0e0e0] text-xs font-medium tracking-wide uppercase">Más allá del CRM</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight">
-              También resolvemos problemas de{' '}
-              <span className="text-[#00bfa5]">operaciones y marketing</span>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
+          <div className="text-center mb-14">
+            <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-4">— Resultados reales</p>
+            <h2 className="font-poppins font-black text-[clamp(2rem,5vw,3.5rem)] text-white leading-tight">
+              Empresas que ya transformaron
+              <br className="hidden sm:block" />
+              su operación con Sixteam
             </h2>
-            <p className="mt-3 text-[#e0e0e0]/70 text-sm sm:text-base max-w-2xl mx-auto">
-              Nuestro trabajo no termina en el pipeline de ventas. Ayudamos a empresas a mejorar su eficiencia operativa y su estrategia de marketing de manera integral.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mb-8 sm:mb-10">
-            {[
-              {
-                Icon: Settings2,
-                tag: 'Operaciones',
-                title: 'Mejora Operativa',
-                description: 'Rediseñamos procesos internos para eliminar ineficiencias, reducir costos operativos y liberar capacidad en tu equipo.',
-              },
-              {
-                Icon: Megaphone,
-                tag: 'Marketing',
-                title: 'Estrategia de Marketing',
-                description: 'Diseñamos estrategias de generación de demanda, posicionamiento y activación que van más allá de la pauta digital.',
-              },
-              {
-                Icon: BarChart3,
-                tag: 'Analítica',
-                title: 'Métricas e Inteligencia',
-                description: 'Construimos dashboards y sistemas de reporte que te dan visibilidad real sobre tus operaciones y resultados de marketing.',
-              },
-            ].map(({ Icon, tag, title, description }, i) => (
-              <div
-                key={i}
-                className="flex gap-4 p-5 sm:p-6 rounded-xl border border-[#1d70a2]/25 hover:border-[#00bfa5]/40 transition-all duration-300"
-                style={{ background: 'rgba(29,112,162,.10)' }}
-              >
-                <div className="w-10 h-10 bg-[#1d70a2]/20 border border-[#1d70a2]/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-5 h-5 text-[#00bfa5]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link
+              to="/casos/master-viajes"
+              className="group block bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 hover:border-[#00bfa5]/50 transition-all hover:-translate-y-1"
+            >
+              <p className="text-[#00bfa5] text-xs font-bold tracking-widest uppercase mb-3">Agencias de Viaje</p>
+              <h3 className="font-poppins font-bold text-2xl text-white mb-3">Master Viajes</h3>
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                Centralizó 4 canales de venta y 2 líneas de negocio en un solo sistema. Zero doble digitación, visibilidad total del negocio en menos de 4 meses.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="bg-white/5 rounded-lg p-3 text-center">
+                  <div className="text-2xl font-black text-[#00bfa5] font-poppins">4</div>
+                  <div className="text-gray-500 text-xs mt-1">Canales conectados</div>
                 </div>
-                <div>
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#00bfa5]/70 mb-1">{tag}</span>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-1.5">{title}</h3>
-                  <p className="text-[#e0e0e0]/70 text-xs sm:text-sm leading-relaxed">{description}</p>
+                <div className="bg-white/5 rounded-lg p-3 text-center">
+                  <div className="text-2xl font-black text-[#00bfa5] font-poppins">100%</div>
+                  <div className="text-gray-500 text-xs mt-1">Trazabilidad</div>
                 </div>
               </div>
-            ))}
+              <span className="text-[#00bfa5] text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Ver caso completo <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+
+            <Link
+              to="/casos/student-travel-center"
+              className="group block bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 hover:border-[#00bfa5]/50 transition-all hover:-translate-y-1"
+            >
+              <p className="text-[#00bfa5] text-xs font-bold tracking-widest uppercase mb-3">Educación Internacional</p>
+              <h3 className="font-poppins font-bold text-2xl text-white mb-3">Student Travel Center</h3>
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                +4 años de alianza continua. Agente de IA omnicanal, HubSpot CRM, Meta Ads y operación centralizada. Partners del día a día.
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="bg-white/5 rounded-lg p-3 text-center">
+                  <div className="text-2xl font-black text-[#00bfa5] font-poppins">+30K</div>
+                  <div className="text-gray-500 text-xs mt-1">Registros CRM</div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-3 text-center">
+                  <div className="text-2xl font-black text-[#00bfa5] font-poppins">+4</div>
+                  <div className="text-gray-500 text-xs mt-1">Años de alianza</div>
+                </div>
+              </div>
+              <span className="text-[#00bfa5] text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Ver caso completo <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
           </div>
 
-          <div className="text-center">
-            <Button
-              onClick={handleWhatsAppClick}
-              variant="outline"
-              className="w-full sm:w-auto px-7 py-3 bg-transparent border border-[#1d70a2]/60 hover:border-[#00bfa5] text-[#e0e0e0] hover:text-white rounded-lg font-medium text-sm sm:text-base transition-all duration-300"
+          <div className="text-center mt-10">
+            <Link
+              to="/casos-exito"
+              className="inline-flex items-center gap-2 text-white/50 hover:text-[#00bfa5] text-sm font-semibold transition-colors"
             >
-              <MessageCircle className="w-4 h-4 mr-2 text-[#00bfa5]" />
-              Cuéntanos tu problema operativo o de marketing
-            </Button>
+              Ver todos los casos de éxito <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1d70a2]/50 to-transparent"></div>
       </section>
 
-      {/* Casos de Éxito Elite */}
+      {/* Testimonios — reservado */}
       {false && (
       <section className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-[#081c36] via-[#0a2342] to-[#081c36] overflow-hidden">
         {/* Elementos decorativos flotantes */}

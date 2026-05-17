@@ -34,6 +34,21 @@ const InmobiliariasV2 = lazy(() => import('./pages/industrias/InmobiliariasV2'))
 const ServiciosGenerales = lazy(() => import('./pages/industrias/ServiciosGenerales'));
 const IndustriasIndex = lazy(() => import('./pages/industrias/Index'));
 
+// V2 — Boutique Intelligence
+const IndexV2 = lazy(() => import('./pages/IndexV2'));
+const CrmVentasV2 = lazy(() => import('./pages/v2/servicios/CrmVentasV2'));
+const CrmAtencionV2 = lazy(() => import('./pages/v2/servicios/CrmAtencionV2'));
+const CrmMarketingV2 = lazy(() => import('./pages/v2/servicios/CrmMarketingV2'));
+const ChatbotIAV2 = lazy(() => import('./pages/v2/servicios/ChatbotIAV2'));
+const SoporteOperacionesV2 = lazy(() => import('./pages/v2/servicios/SoporteOperacionesV2'));
+const RadarV2 = lazy(() => import('./pages/v2/Radar'));
+const ContactoV2 = lazy(() => import('./pages/v2/Contacto'));
+const CasosV2 = lazy(() => import('./pages/v2/Casos'));
+const IndustriasV2 = lazy(() => import('./pages/v2/Industrias'));
+const NosotrosV2 = lazy(() => import('./pages/v2/Nosotros'));
+const ComoFuncionaV2 = lazy(() => import('./pages/v2/ComoFunciona'));
+const SolucionesV2 = lazy(() => import('./pages/v2/Soluciones'));
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -71,6 +86,22 @@ const App = () => {
               <Route path="/industrias/servicios-generales" element={<ServiciosGenerales />} />
               <Route path="/casos/master-viajes" element={<MasterViajes />} />
               <Route path="/casos/student-travel-center" element={<StudentTravelCenter />} />
+
+              {/* V2 — Boutique Intelligence (parallel to V1) */}
+              <Route path="/v2" element={<IndexV2 />} />
+              <Route path="/v2/servicios/crm-ventas" element={<CrmVentasV2 />} />
+              <Route path="/v2/servicios/crm-atencion" element={<CrmAtencionV2 />} />
+              <Route path="/v2/servicios/crm-marketing" element={<CrmMarketingV2 />} />
+              <Route path="/v2/servicios/chatbot-ia" element={<ChatbotIAV2 />} />
+              <Route path="/v2/servicios/soporte-operaciones" element={<SoporteOperacionesV2 />} />
+              <Route path="/v2/radar" element={<RadarV2 />} />
+              <Route path="/v2/contacto" element={<ContactoV2 />} />
+              <Route path="/v2/casos" element={<CasosV2 />} />
+              <Route path="/v2/industrias" element={<IndustriasV2 />} />
+              <Route path="/v2/nosotros" element={<NosotrosV2 />} />
+              <Route path="/v2/como-funciona" element={<ComoFuncionaV2 />} />
+              <Route path="/v2/soluciones" element={<SolucionesV2 />} />
+
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

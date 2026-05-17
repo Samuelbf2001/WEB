@@ -6,9 +6,8 @@ import Container from "./Container";
 import ButtonV2 from "./ButtonV2";
 
 const nav = [
-  { label: "Servicios", to: "/v2/servicios" },
-  { label: "Casos", to: "/v2/casos" },
-  { label: "Industrias", to: "/v2/industrias" },
+  { label: "Cómo funciona", to: "/v2/como-funciona" },
+  { label: "Soluciones", to: "/v2/soluciones" },
   { label: "Nosotros", to: "/v2/nosotros" },
 ];
 

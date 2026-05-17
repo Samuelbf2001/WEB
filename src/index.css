@@ -1,5 +1,5 @@
 /* Optimización de fuentes - Debe ir ANTES de Tailwind */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -45,6 +45,40 @@
     --primary-color: #0a2342;
     --accent-color: #00bfa5;
     --secondary-color: #1d70a2;
+
+    /* ============================================
+       Sixteam V2 — Boutique Intelligence (Light)
+       ============================================ */
+    /* Surfaces — light-first, warm cream */
+    --v2-surface: #fdfcf8;
+    --v2-surface-alt: #f4f3ee;
+    --v2-surface-cream: #faf9f5;
+    --v2-surface-white: #ffffff;
+    --v2-surface-navy-mist: #f4f6f8;
+    --v2-surface-teal-mist: #ecf7f5;
+    --v2-surface-sand-mist: #f7f3e8;
+
+    /* Ink — navy-based text */
+    --v2-ink-heading: #0a2342;
+    --v2-ink-body: #334155;
+    --v2-ink-muted: #74777e;
+    --v2-ink-inverse: #faf9f5;
+
+    /* Accents — brand palette, light edition */
+    --v2-accent-teal: #00bfa5;
+    --v2-accent-teal-deep: #009b86;
+    --v2-accent-blue: #1d70a2;
+    --v2-accent-blue-soft: #768baf;
+    --v2-accent-sand: #d4c9a8;
+    --v2-accent-sand-soft: #f0ead8;
+
+    /* Borders & shadows — soft, low-opacity */
+    --v2-border-subtle: rgba(10, 35, 66, 0.08);
+    --v2-border-medium: rgba(10, 35, 66, 0.16);
+    --v2-shadow-soft: 0 8px 32px rgba(10, 35, 66, 0.06);
+    --v2-shadow-card: 0 4px 24px rgba(10, 35, 66, 0.04);
+    --v2-shadow-card-hover: 0 12px 40px rgba(10, 35, 66, 0.08);
+    --v2-shadow-teal: 0 8px 24px rgba(0, 191, 165, 0.18);
   }
 
   /* Font face optimizaciones */
@@ -123,6 +157,141 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* =====================================================
+   V2 — Boutique Intelligence — Animation System
+   ===================================================== */
+
+/* Custom easing curves */
+:root {
+  --v2-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --v2-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Keyframes */
+@keyframes v2-fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes v2-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes v2-scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes v2-slide-right {
+  from { opacity: 0; transform: translateX(-18px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes v2-glow-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.65; transform: scale(1.08); }
+}
+@keyframes v2-shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(220%) skewX(-15deg); }
+}
+@keyframes v2-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes v2-aurora-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(48px, -28px) scale(1.12); }
+  66%       { transform: translate(-24px, 22px) scale(0.92); }
+}
+@keyframes v2-aurora-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  40%       { transform: translate(-36px, 30px) scale(1.1); }
+  70%       { transform: translate(28px, -18px) scale(0.95); }
+}
+@keyframes v2-spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes v2-task-in {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Scroll-reveal base states — elements start invisible */
+.v2-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s var(--v2-ease-out), transform 0.65s var(--v2-ease-out);
+}
+.v2-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.v2-fade {
+  opacity: 0;
+  transition: opacity 0.55s var(--v2-ease-out);
+}
+.v2-fade.is-visible { opacity: 1; }
+
+.v2-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.55s var(--v2-ease-out), transform 0.55s var(--v2-ease-out);
+}
+.v2-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delay helpers */
+.v2-d1 { transition-delay: 60ms; }
+.v2-d2 { transition-delay: 120ms; }
+.v2-d3 { transition-delay: 180ms; }
+.v2-d4 { transition-delay: 240ms; }
+.v2-d5 { transition-delay: 300ms; }
+.v2-d6 { transition-delay: 360ms; }
+
+/* Primary button shimmer */
+.v2-btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.v2-btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.22) 50%, transparent 100%);
+  transform: skewX(-18deg);
+  animation: v2-shimmer 3.2s var(--v2-ease-out) infinite;
+  pointer-events: none;
+}
+
+/* Slide from right variant */
+.v2-slide-right {
+  opacity: 0;
+  transform: translateX(14px);
+  transition: opacity 0.5s var(--v2-ease-out), transform 0.5s var(--v2-ease-out);
+}
+.v2-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Live pulse dot */
+@keyframes v2-pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.5; }
+}
+.v2-pulse-dot {
+  animation: v2-pulse-dot 1.6s ease-in-out infinite;
+}
+
+/* Animate hero entry (above-the-fold — use CSS animation directly) */
+.v2-hero-entry {
+  animation: v2-fade-up 0.75s var(--v2-ease-out) both;
 }
 
 /* Custom Sixteam.pro styles */

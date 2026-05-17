@@ -1,120 +1,125 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Play, Star, Check, TrendingUp, Users, Zap } from "lucide-react";
+import {
+  ArrowRight, Play, Star,
+  BarChart2, Mail, MessageCircle, Bot, RefreshCw, Cpu, Users2,
+} from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Underlined from "@/components/v2/UnderlineSvg";
 
 const avatars = [
-  { initials: "JR", bg: "bg-v2-accent-teal",  text: "text-v2-ink-heading" },
+  { initials: "JR", bg: "bg-v2-accent-teal", text: "text-v2-ink-heading" },
   { initials: "MA", bg: "bg-v2-accent-blue",  text: "text-white" },
   { initials: "DC", bg: "bg-[#d4a853]",        text: "text-v2-ink-heading" },
 ];
 
-const stages = [
-  { label: "Prospecto",  pct: 72, count: 24, color: "bg-v2-accent-blue" },
-  { label: "Propuesta",  pct: 45, count: 8,  color: "bg-v2-accent-teal" },
-  { label: "Negociando", pct: 28, count: 3,  color: "bg-[#d4a853]" },
-  { label: "Cerrado",    pct: 85, count: 18, color: "bg-v2-accent-teal" },
+/* Who handles each item */
+type Handler = "ia" | "human" | "both";
+
+const ops: { icon: React.ElementType; label: string; status: string; handler: Handler }[] = [
+  { icon: BarChart2,    label: "Pipeline CRM",       status: "Limpio · 24 deals activos",  handler: "ia" },
+  { icon: Mail,         label: "Seguimientos",        status: "0 leads sin respuesta",       handler: "ia" },
+  { icon: MessageCircle,label: "WhatsApp Business",   status: "Bandeja unificada · SLA OK",  handler: "both" },
+  { icon: Bot,          label: "Chatbot IA",          status: "Calificando 24/7",            handler: "ia" },
+  { icon: RefreshCw,    label: "Automatizaciones",    status: "4 workflows corriendo",       handler: "ia" },
+  { icon: BarChart2,    label: "Reporte ejecutivo",   status: "Enviado · Lun 9:01am",        handler: "human" },
 ];
 
-/* ── Dashboard mockup (right column) ── */
-const DashboardMockup = () => (
-  <div className="relative w-full select-none" aria-hidden="true">
+const handlerLabel: Record<Handler, { label: string; dot: string; text: string }> = {
+  ia:    { label: "IA",           dot: "bg-v2-accent-teal",  text: "text-v2-accent-teal-deep" },
+  human: { label: "Experto",      dot: "bg-v2-accent-blue",  text: "text-v2-accent-blue" },
+  both:  { label: "IA + Experto", dot: "bg-[#d4a853]",       text: "text-[#8a7a4f]" },
+};
 
-    {/* Main card */}
-    <div
-      className="relative rounded-3xl overflow-hidden shadow-[0_32px_80px_rgba(10,35,66,0.22)]"
-      style={{ background: "#0a2342" }}
-    >
-      {/* Inner teal glow */}
-      <div
-        className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-25"
-        style={{ background: "radial-gradient(circle, #00bfa5 0%, transparent 70%)" }}
-      />
+/* ── Weekly ops card mockup ── */
+const WeeklyCardMockup = () => (
+  <div
+    className="relative w-full max-w-[420px] mx-auto select-none"
+    style={{ animation: "v2-float 6s ease-in-out infinite" }}
+    aria-hidden="true"
+  >
+    <div className="bg-white rounded-3xl shadow-[0_32px_80px_rgba(10,35,66,0.16)] overflow-hidden border border-v2-border-subtle">
 
       {/* Card header */}
-      <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/8">
-        <div className="flex items-center gap-2.5">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-v2-accent-teal opacity-60" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-v2-accent-teal" />
-          </span>
-          <span className="font-poppins font-bold text-[13px] text-white">Pipeline en vivo</span>
+      <div className="flex items-start justify-between px-6 pt-6 pb-4">
+        <div>
+          <p className="font-serif italic text-[22px] leading-[1.2] text-v2-ink-heading">
+            Tu operación<br />esta semana
+          </p>
         </div>
-        <span className="font-lato text-[11px] uppercase tracking-widest text-white/40">
-          Lun · 9:00 am
-        </span>
+        <div className="flex items-center gap-1.5 bg-v2-surface-teal-mist border border-v2-accent-teal/20 rounded-full px-3 py-1.5 mt-0.5">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-v2-accent-teal opacity-70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-v2-accent-teal" />
+          </span>
+          <span className="font-lato text-[11px] font-semibold text-v2-accent-teal-deep">
+            Todo en orden
+          </span>
+        </div>
       </div>
 
-      {/* KPI row */}
-      <div className="grid grid-cols-3 divide-x divide-white/8 px-0">
-        {[
-          { icon: TrendingUp, value: "$128,500", label: "Pipeline" },
-          { icon: Zap,        value: "78%",       label: "Tasa cierre" },
-          { icon: Users,      value: "12",         label: "Leads nuevos" },
-        ].map(({ icon: Icon, value, label }) => (
-          <div key={label} className="flex flex-col items-center py-5 gap-1">
-            <Icon className="h-3.5 w-3.5 text-v2-accent-teal mb-1" />
-            <p className="font-poppins font-bold text-[20px] text-white leading-none">{value}</p>
-            <p className="font-lato text-[10px] uppercase tracking-widest text-white/40">{label}</p>
-          </div>
-        ))}
-      </div>
+      {/* Ops list */}
+      <div className="px-4 pb-4 flex flex-col gap-1">
+        {ops.map(({ icon: Icon, label, status, handler }) => {
+          const h = handlerLabel[handler];
+          return (
+            <div
+              key={label}
+              className="flex items-center gap-3 bg-v2-surface-alt rounded-2xl px-3 py-3"
+            >
+              {/* Icon */}
+              <div className="w-8 h-8 rounded-xl bg-white border border-v2-border-subtle flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Icon className="h-4 w-4 text-v2-ink-muted" />
+              </div>
 
-      {/* Pipeline stages */}
-      <div className="px-6 pb-6 pt-2 flex flex-col gap-3">
-        <p className="font-lato text-[10px] uppercase tracking-widest text-white/35 mb-1">
-          Etapas del pipeline
-        </p>
-        {stages.map((s) => (
-          <div key={s.label} className="flex items-center gap-3">
-            <span className="font-lato text-[12px] text-white/60 w-[78px] flex-shrink-0">
-              {s.label}
-            </span>
-            <div className="flex-1 h-2 rounded-full bg-white/8 overflow-hidden">
-              <div
-                className={`h-full rounded-full ${s.color} opacity-80`}
-                style={{ width: `${s.pct}%`, transition: "width 1.2s ease" }}
-              />
+              {/* Text */}
+              <div className="flex-1 min-w-0">
+                <p className="font-poppins font-bold text-[13px] text-v2-ink-heading leading-tight">
+                  {label}
+                </p>
+                <p className="font-lato text-[11px] text-v2-ink-muted mt-0.5 truncate">
+                  {status}
+                </p>
+              </div>
+
+              {/* Handler badge */}
+              <div className="flex items-center gap-1.5 flex-shrink-0">
+                <span className={`inline-block w-1.5 h-1.5 rounded-full ${h.dot}`} />
+                <span className={`font-lato text-[10px] font-semibold uppercase tracking-wider ${h.text}`}>
+                  {h.label}
+                </span>
+              </div>
             </div>
-            <span className="font-poppins font-bold text-[12px] text-white/70 w-6 text-right flex-shrink-0">
-              {s.count}
-            </span>
+          );
+        })}
+      </div>
+
+      {/* Footer — "Handled by AI + human team" */}
+      <div className="flex items-center gap-3 px-6 py-4 border-t border-v2-border-subtle">
+        {/* Mini avatar cluster */}
+        <div className="flex items-center -space-x-2">
+          <div className="w-7 h-7 rounded-full bg-v2-surface-teal-mist border-2 border-white flex items-center justify-center">
+            <Cpu className="h-3.5 w-3.5 text-v2-accent-teal-deep" />
           </div>
-        ))}
-      </div>
-    </div>
-
-    {/* Floating notification — top right */}
-    <div
-      className="absolute -top-4 -right-4 md:-right-8 bg-white rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(10,35,66,0.14)] flex items-center gap-3 border border-v2-border-subtle"
-      style={{ animation: "v2-float 4s ease-in-out infinite" }}
-    >
-      <div className="w-7 h-7 rounded-full bg-v2-surface-teal-mist flex items-center justify-center flex-shrink-0">
-        <Check className="h-3.5 w-3.5 text-v2-accent-teal-deep" />
-      </div>
-      <div>
-        <p className="font-poppins font-bold text-[12px] text-v2-ink-heading leading-tight">
-          Lead enrutado
+          {["JR", "MA"].map((ini, i) => (
+            <div
+              key={ini}
+              className={`w-7 h-7 rounded-full border-2 border-white flex items-center justify-center font-poppins font-bold text-[9px] ${i === 0 ? "bg-v2-accent-blue text-white" : "bg-[#d4a853] text-v2-ink-heading"}`}
+            >
+              {ini}
+            </div>
+          ))}
+        </div>
+        <p className="font-lato text-[12px] text-v2-ink-muted leading-tight">
+          Operado por{" "}
+          <span className="font-semibold text-v2-ink-heading">IA</span>
+          {" "}+{" "}
+          <span className="font-semibold text-v2-ink-heading">equipo humano</span>
         </p>
-        <p className="font-lato text-[10px] text-v2-ink-muted">hace 2 min · automático</p>
-      </div>
-    </div>
-
-    {/* Floating notification — bottom left */}
-    <div
-      className="absolute -bottom-4 -left-4 md:-left-8 bg-white rounded-2xl px-4 py-3 shadow-[0_8px_32px_rgba(10,35,66,0.14)] flex items-center gap-3 border border-v2-border-subtle"
-      style={{ animation: "v2-float 5s ease-in-out infinite 0.8s" }}
-    >
-      <div className="w-7 h-7 rounded-full bg-v2-surface-teal-mist flex items-center justify-center flex-shrink-0">
-        <Check className="h-3.5 w-3.5 text-v2-accent-teal-deep" />
-      </div>
-      <div>
-        <p className="font-poppins font-bold text-[12px] text-v2-ink-heading leading-tight">
-          Reporte enviado
-        </p>
-        <p className="font-lato text-[10px] text-v2-ink-muted">3 reps · lunes 9:01am</p>
+        <div className="ml-auto">
+          <Users2 className="h-4 w-4 text-v2-ink-muted/40" />
+        </div>
       </div>
     </div>
   </div>
@@ -297,12 +302,12 @@ export const HeroV2 = () => {
             </div>
           </div>
 
-          {/* ── RIGHT — dashboard mockup ── */}
+          {/* ── RIGHT — weekly ops card ── */}
           <div
-            className="v2-hero-entry hidden lg:flex items-center justify-center px-6"
+            className="v2-hero-entry hidden lg:flex items-center justify-center px-4"
             style={{ animationDelay: "200ms" }}
           >
-            <DashboardMockup />
+            <WeeklyCardMockup />
           </div>
         </div>
       </Container>

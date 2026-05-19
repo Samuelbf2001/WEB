@@ -16,6 +16,7 @@ const company = [
   { label: "Nosotros", to: "/v2/nosotros" },
   { label: "Casos de éxito", to: "/v2/casos" },
   { label: "Radar gratis", to: "/v2/radar" },
+  { label: "Radar 360°", to: "/v2/radar-pro" },
   { label: "Nuestro equipo", to: "/v2/equipo" },
 ];
 

@@ -71,6 +71,12 @@ export const HeaderV2 = () => {
           >
             Radar gratis
           </Link>
+          <Link
+            to="/v2/radar-pro"
+            className="font-lato text-[14px] font-medium text-v2-accent-teal-deep hover:text-v2-ink-heading transition-colors"
+          >
+            Radar 360°
+          </Link>
           <Link to="/v2/contacto">
             <ButtonV2 variant="navy" size="sm" className="group">
               Agendar llamada
@@ -105,6 +111,12 @@ export const HeaderV2 = () => {
               className="font-lato text-[16px] py-3 text-v2-ink-heading border-b border-v2-border-subtle"
             >
               Radar gratis
+            </Link>
+            <Link
+              to="/v2/radar-pro"
+              className="font-lato text-[16px] py-3 text-v2-accent-teal-deep border-b border-v2-border-subtle"
+            >
+              Radar 360°
             </Link>
             <div className="pt-4">
               <Link to="/v2/contacto">

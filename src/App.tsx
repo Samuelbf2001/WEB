@@ -52,6 +52,7 @@ const SolucionesV2 = lazy(() => import('./pages/v2/Soluciones'));
 const OperacionContinua = lazy(() => import('./pages/v2/OperacionContinua'));
 const DiagnosticoSixteam = lazy(() => import('./pages/v2/DiagnosticoSixteam'));
 const EquipoV2 = lazy(() => import('./pages/v2/Equipo'));
+const RadarProV2 = lazy(() => import('./pages/v2/RadarPro'));
 
 const queryClient = new QueryClient();
 
@@ -109,6 +110,7 @@ const App = () => {
               <Route path="/v2/operacion-continua" element={<OperacionContinua />} />
               <Route path="/v2/diagnostico" element={<DiagnosticoSixteam />} />
               <Route path="/v2/equipo" element={<EquipoV2 />} />
+              <Route path="/v2/radar-pro" element={<RadarProV2 />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

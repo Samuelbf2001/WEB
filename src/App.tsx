@@ -22,6 +22,7 @@ const SoporteOperaciones = lazy(() => import('./pages/servicios/SoporteOperacion
 const RadarSixteam = lazy(() => import('./pages/RadarSixteam'));
 const Plataforma = lazy(() => import('./pages/Plataforma'));
 const Brochure = lazy(() => import('./pages/Brochure'));
+const HomeAA = lazy(() => import('./pages/HomeAA'));
 const DiagnosticoGratis = lazy(() => import('./pages/radar/DiagnosticoGratis'));
 const AntesDeInvertir = lazy(() => import('./pages/radar/AntesDeInvertir'));
 const OportunidadesPerdidas = lazy(() => import('./pages/radar/OportunidadesPerdidas'));
@@ -48,6 +49,9 @@ const IndustriasV2 = lazy(() => import('./pages/v2/Industrias'));
 const NosotrosV2 = lazy(() => import('./pages/v2/Nosotros'));
 const ComoFuncionaV2 = lazy(() => import('./pages/v2/ComoFunciona'));
 const SolucionesV2 = lazy(() => import('./pages/v2/Soluciones'));
+const OperacionContinua = lazy(() => import('./pages/v2/OperacionContinua'));
+const DiagnosticoSixteam = lazy(() => import('./pages/v2/DiagnosticoSixteam'));
+const EquipoV2 = lazy(() => import('./pages/v2/Equipo'));
 
 const queryClient = new QueryClient();
 
@@ -74,6 +78,7 @@ const App = () => {
               <Route path="/servicios/soporte-operaciones" element={<SoporteOperaciones />} />
               <Route path="/plataforma" element={<Plataforma />} />
               <Route path="/brochure" element={<Brochure />} />
+              <Route path="/home-aa" element={<HomeAA />} />
               <Route path="/radar" element={<RadarSixteam />} />
               <Route path="/radar/diagnostico-gratis" element={<DiagnosticoGratis />} />
               <Route path="/radar/antes-de-invertir" element={<AntesDeInvertir />} />
@@ -101,6 +106,9 @@ const App = () => {
               <Route path="/v2/nosotros" element={<NosotrosV2 />} />
               <Route path="/v2/como-funciona" element={<ComoFuncionaV2 />} />
               <Route path="/v2/soluciones" element={<SolucionesV2 />} />
+              <Route path="/v2/operacion-continua" element={<OperacionContinua />} />
+              <Route path="/v2/diagnostico" element={<DiagnosticoSixteam />} />
+              <Route path="/v2/equipo" element={<EquipoV2 />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

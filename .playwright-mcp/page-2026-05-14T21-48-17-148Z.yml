@@ -1,0 +1,625 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "Home page" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Clay logo" [ref=e9]:
+            - img "Clay logo" [ref=e10]
+            - img "Clay logo" [ref=e11]
+        - navigation [ref=e12]:
+          - menu [ref=e13]:
+            - menuitem "Work" [ref=e14]:
+              - link "Work" [ref=e16] [cursor=pointer]:
+                - /url: /work
+                - generic:
+                  - generic: Work
+            - menuitem "Clients" [ref=e17]:
+              - link "Clients" [ref=e19] [cursor=pointer]:
+                - /url: /clients
+                - generic:
+                  - generic: Clients
+            - menuitem "Services" [ref=e20]:
+              - link "Services" [ref=e22] [cursor=pointer]:
+                - /url: /services
+                - generic:
+                  - generic: Services
+            - menuitem "Industries Fintech Crypto & Web3 All Industries" [ref=e23]:
+              - generic [ref=e24]:
+                - generic [ref=e25]:
+                  - link "Industries" [ref=e26] [cursor=pointer]:
+                    - /url: /industries
+                    - generic:
+                      - generic: Industries
+                  - generic:
+                    - img
+                - generic [ref=e27]:
+                  - link "Fintech" [ref=e28] [cursor=pointer]:
+                    - /url: /fintech
+                    - generic [ref=e30]: Fintech
+                  - link "Crypto & Web3" [ref=e31] [cursor=pointer]:
+                    - /url: /crypto
+                    - generic [ref=e33]: Crypto & Web3
+                  - link "All Industries" [ref=e34] [cursor=pointer]:
+                    - /url: /industries
+                    - generic [ref=e35]:
+                      - generic [ref=e36]: All Industries
+                      - img [ref=e37]
+            - menuitem "About" [ref=e39]:
+              - link "About" [ref=e41] [cursor=pointer]:
+                - /url: /about
+                - generic:
+                  - generic: About
+            - menuitem "Blog" [ref=e42]:
+              - link "Blog" [ref=e44] [cursor=pointer]:
+                - /url: /blog
+                - generic:
+                  - generic: Blog
+            - menuitem "Contact" [ref=e45]:
+              - link "Contact" [ref=e46] [cursor=pointer]:
+                - /url: /contact
+    - main [ref=e47]:
+      - generic [ref=e48]:
+        - heading [level=1] [ref=e54]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: Clay
+              - generic [ref=e59]: is
+              - generic [ref=e60]: a
+              - generic [ref=e61]: global
+              - generic [ref=e62]: branding
+            - generic [ref=e63]:
+              - generic [ref=e64]: and
+              - generic [ref=e65]: UX
+              - generic [ref=e66]: design
+              - generic [ref=e67]: agency
+        - generic [ref=e69]:
+          - button "Open Youtube player" [ref=e71]
+          - generic:
+            - paragraph
+      - generic [ref=e77]:
+        - paragraph [ref=e78]: We build transformative digital experiences for the world's leading brands by blending AI, design, and technology.
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - button "Branding" [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]:
+                - generic: Branding
+                - img
+            - paragraph [ref=e86]: A brand is more than just a logo or some colors. It’s how people recognize and connect with your business. We build strong visual and verbal identities, design the assets you need, and create clear brand guidelines so your message stays consistent everywhere.
+          - generic [ref=e87]:
+            - button "Digital Products" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]:
+                - generic: Digital Products
+                - img
+            - paragraph [ref=e93]: At Clay, we focus on creating real connections. We combine smart design with behavioral science to make digital products that feel human. Our senior UI and UX designers craft websites and apps that are not just beautiful, but meaningful, and help your brand succeed.
+          - generic [ref=e94]:
+            - button "Websites" [ref=e95] [cursor=pointer]:
+              - generic [ref=e96]:
+                - generic: Websites
+                - img
+            - paragraph [ref=e100]: Your digital presence starts with your website. That’s where your brand comes to life. We design sites that clearly show who you are and what you stand for, all while giving users a smooth, engaging experience.
+          - generic [ref=e101]:
+            - button "Development" [ref=e102] [cursor=pointer]:
+              - generic [ref=e103]:
+                - generic: Development
+                - img
+            - paragraph [ref=e107]: Our app and web developers care about both looks and performance. We build fast, reliable products that work great on every device. Whether it’s the backend or the frontend, we aim for a seamless experience.
+          - generic [ref=e108]:
+            - button "Content" [ref=e109] [cursor=pointer]:
+              - generic [ref=e110]:
+                - generic: Content
+                - img
+            - paragraph [ref=e114]: "Great content is a big part of how people experience your brand. We create everything from words to visuals: copywriting, illustrations, 2D and 3D graphics, icons, animations, videos, and photography."
+          - generic [ref=e115]:
+            - button "Generative AI" [ref=e116] [cursor=pointer]:
+              - generic [ref=e117]:
+                - generic: Generative AI
+                - img
+            - paragraph [ref=e121]: We use AI to work smarter and build better products. Our team leads the way in AI-powered UX, creating new ways for people to interact with digital tools and setting the standard for what’s next.
+      - generic [ref=e123]:
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - img "Meta" [ref=e126]
+          - listitem [ref=e127]:
+            - img "Google" [ref=e128]
+          - listitem [ref=e129]:
+            - img "Discover" [ref=e130]
+          - listitem [ref=e131]:
+            - img "Stripe" [ref=e132]
+          - listitem [ref=e133]:
+            - img "Cola-Cola" [ref=e134]
+          - listitem [ref=e135]:
+            - img "Coinbase" [ref=e136]
+          - listitem [ref=e137]:
+            - img "Uber" [ref=e138]
+          - listitem [ref=e139]:
+            - img "Sony" [ref=e140]
+          - listitem [ref=e141]:
+            - img "Slack" [ref=e142]
+          - listitem [ref=e143]:
+            - img "Amazon" [ref=e144]
+        - link "View all clients" [ref=e146] [cursor=pointer]:
+          - /url: /clients
+          - generic [ref=e148]: View all clients
+      - link "Fintech The Future of Finance is Intelligent Explore fintech" [ref=e151] [cursor=pointer]:
+        - /url: /fintech
+        - generic [ref=e152]:
+          - paragraph [ref=e153]: Fintech
+          - heading "The Future of Finance is Intelligent" [level=1] [ref=e154]
+          - generic [ref=e156]: Explore fintech
+      - generic [ref=e161]:
+        - list "List of works" [ref=e162]:
+          - listitem [ref=e163]:
+            - link "Slack" [ref=e165] [cursor=pointer]:
+              - /url: /work/slack
+              - article [ref=e168]:
+                - generic [ref=e172]:
+                  - heading "Slack" [level=2] [ref=e173]
+                  - paragraph [ref=e175]: Designing and building Slack’s interactive demo experience
+                - list [ref=e177]:
+                  - listitem [ref=e178]: Web Design
+                  - listitem [ref=e179]: Enterprise
+                  - listitem [ref=e180]: Development
+          - listitem [ref=e181]:
+            - link "STC Bank" [ref=e183] [cursor=pointer]:
+              - /url: /work/stc-bank
+              - article [ref=e186]:
+                - generic [ref=e190]:
+                  - heading "STC Bank" [level=2] [ref=e191]
+                  - paragraph [ref=e193]: Accelerating the future of digital banking in Saudi Arabia
+                - list [ref=e195]:
+                  - listitem [ref=e196]: Web App
+                  - listitem [ref=e197]: Mobile
+                  - listitem [ref=e198]: Website
+                  - listitem [ref=e199]: Fintech
+                  - listitem [ref=e200]: UI/UX
+          - listitem [ref=e201]:
+            - link "Sky" [ref=e203] [cursor=pointer]:
+              - /url: /work/sky
+              - article [ref=e206]:
+                - generic [ref=e210]:
+                  - heading "Sky" [level=2] [ref=e211]
+                  - paragraph [ref=e213]: Branding and visual identity for an innovative DeFi platform
+                - list [ref=e215]:
+                  - listitem [ref=e216]: Branding
+                  - listitem [ref=e217]: Design System
+                  - listitem [ref=e218]: UI/UX
+                  - listitem [ref=e219]: Illustration
+                  - listitem [ref=e220]: 3D
+          - listitem [ref=e221]:
+            - link "Snapchat" [ref=e223] [cursor=pointer]:
+              - /url: /work/snapchat
+              - article [ref=e226]:
+                - img "Snapchat" [ref=e229]
+                - generic [ref=e231]:
+                  - heading "Snapchat" [level=2] [ref=e232]
+                  - paragraph [ref=e234]: Integrating augmented reality to elevate social commerce
+                - list [ref=e236]:
+                  - listitem [ref=e237]: UI/UX
+                  - listitem [ref=e238]: Mobile App
+                  - listitem [ref=e239]: Ecommerce
+          - listitem [ref=e240]:
+            - link "Joe & The Juice" [ref=e242] [cursor=pointer]:
+              - /url: /work/joe-and-the-juice
+              - article [ref=e245]:
+                - generic [ref=e246]:
+                  - generic:
+                    - generic:
+                      - paragraph: A new app and visual identity for a global chain of coffee shops and juice bars
+                - generic [ref=e249]:
+                  - heading "Joe & The Juice" [level=2] [ref=e250]
+                  - paragraph [ref=e252]: A digital commerce and loyalty app for a global coffee shop chain
+                - list [ref=e254]:
+                  - listitem [ref=e255]: UI/UX
+                  - listitem [ref=e256]: Mobile App
+                  - listitem [ref=e257]: Consumer
+          - listitem [ref=e258]:
+            - link "Vantara" [ref=e260] [cursor=pointer]:
+              - /url: /work/vantara
+              - article [ref=e263]:
+                - generic [ref=e267]:
+                  - heading "Vantara" [level=2] [ref=e268]
+                  - paragraph [ref=e270]: Website design and development for a landmark animal conservation center
+                - list [ref=e272]:
+                  - listitem [ref=e273]: UI/UX
+                  - listitem [ref=e274]: Design System
+                  - listitem [ref=e275]: Website
+                  - listitem [ref=e276]: 3D
+                  - listitem [ref=e277]: Development
+          - listitem [ref=e278]:
+            - link "Grayscale" [ref=e280] [cursor=pointer]:
+              - /url: /work/grayscale
+              - article [ref=e283]:
+                - generic [ref=e287]:
+                  - heading "Grayscale" [level=2] [ref=e288]
+                  - paragraph [ref=e290]: Web redesign for the world’s largest crypto asset manager
+                - list [ref=e292]:
+                  - listitem [ref=e293]: Web Design
+                  - listitem [ref=e294]: Design System
+                  - listitem [ref=e295]: Illustration
+          - listitem [ref=e296]:
+            - link "Discover" [ref=e298] [cursor=pointer]:
+              - /url: /work/discover
+              - article [ref=e301]:
+                - generic [ref=e305]:
+                  - heading "Discover" [level=2] [ref=e306]
+                  - paragraph [ref=e308]: Design partnership focused on mobile app innovation
+                - list [ref=e310]:
+                  - listitem [ref=e311]: UI/UX
+                  - listitem [ref=e312]: Design System
+                  - listitem [ref=e313]: Fintech
+          - listitem [ref=e314]:
+            - link "Marqeta" [ref=e316] [cursor=pointer]:
+              - /url: /work/marqeta
+              - article [ref=e319]:
+                - generic [ref=e323]:
+                  - heading "Marqeta" [level=2] [ref=e324]
+                  - paragraph [ref=e326]: Website and digital branding for a modern card-issuing platform
+                - list [ref=e328]:
+                  - listitem [ref=e329]: Web Design
+                  - listitem [ref=e330]: 3D
+                  - listitem [ref=e331]: Development
+                  - listitem [ref=e332]: Fintech
+          - listitem [ref=e333]:
+            - link "Yahoo! Games" [ref=e335] [cursor=pointer]:
+              - /url: /work/yahoo-games
+              - article [ref=e338]:
+                - img "Yahoo! Games Web Design and Development" [ref=e341]
+                - generic [ref=e343]:
+                  - heading "Yahoo! Games" [level=2] [ref=e344]
+                  - paragraph [ref=e346]: Website design and development for Yahoo Games
+                - list [ref=e348]:
+                  - listitem [ref=e349]: Web Design
+                  - listitem [ref=e350]: Design System
+                  - listitem [ref=e351]: Illustration
+                  - listitem [ref=e352]: Development
+          - listitem [ref=e353]:
+            - link "Serena & Lily" [ref=e355] [cursor=pointer]:
+              - /url: /work/serenaandlily
+              - article [ref=e358]:
+                - generic [ref=e362]:
+                  - heading "Serena & Lily" [level=2] [ref=e363]
+                  - paragraph [ref=e365]: Ecommerce redesign for a leader in luxury home decor
+                - list [ref=e367]:
+                  - listitem [ref=e368]: Web Design
+                  - listitem [ref=e369]: Design System
+                  - listitem [ref=e370]: Ecommerce
+          - listitem [ref=e371]:
+            - link "Tipalti" [ref=e373] [cursor=pointer]:
+              - /url: /work/tipalti
+              - article [ref=e376]:
+                - generic [ref=e380]:
+                  - heading "Tipalti" [level=2] [ref=e381]
+                  - paragraph [ref=e383]: Web redesign for a modern payables automation platform
+                - list [ref=e385]:
+                  - listitem [ref=e386]: UI/UX
+                  - listitem [ref=e387]: Design System
+                  - listitem [ref=e388]: Fintech
+                  - listitem [ref=e389]: Website
+          - listitem [ref=e390]:
+            - link "Wealth" [ref=e392] [cursor=pointer]:
+              - /url: /work/wealth
+              - article [ref=e395]:
+                - generic [ref=e399]:
+                  - heading "Wealth" [level=2] [ref=e400]
+                  - paragraph [ref=e402]: Designing a self-service digital estate planning platform
+                - list [ref=e404]:
+                  - listitem [ref=e405]: Branding
+                  - listitem [ref=e406]: UI/UX
+                  - listitem [ref=e407]: Website
+                  - listitem [ref=e408]: Design System
+          - listitem [ref=e409]:
+            - link "Art Bridges" [ref=e411] [cursor=pointer]:
+              - /url: /work/artbridges
+              - article [ref=e414]:
+                - generic [ref=e418]:
+                  - heading "Art Bridges" [level=2] [ref=e419]
+                  - paragraph [ref=e421]: Website redesign for a niche nonprofit organization
+                - list [ref=e423]:
+                  - listitem [ref=e424]: Website
+                  - listitem [ref=e425]: Development
+                  - listitem [ref=e426]: Web Design
+        - link "Explore all work" [ref=e428] [cursor=pointer]:
+          - /url: /work
+          - generic [ref=e430]: Explore all work
+      - generic [ref=e432]:
+        - generic [ref=e435]:
+          - heading "We transform companies through design innovation" [level=2] [ref=e436]
+          - paragraph [ref=e438]: A full-service creative agency designing and building inventive digital experiences across all platforms and brand touchpoints.
+          - link "View our services" [ref=e439] [cursor=pointer]:
+            - /url: /services
+            - generic [ref=e441]: View our services
+        - generic [ref=e443]:
+          - generic [ref=e444]:
+            - button [ref=e445]
+            - list [ref=e447]:
+              - listitem [ref=e448]:
+                - generic [ref=e449]:
+                  - img "a person carrying a Clay branded bag full of wheat" [ref=e451]
+                  - img "Clay team members sitting on stairs together" [ref=e453]
+                  - img "a panoramic view of tall buildings in San Francisco" [ref=e455]
+                  - img "Clay team member sitting on a chair with a camera" [ref=e457]
+                  - img "a white shelf with books and a plant in Clay office" [ref=e459]
+                  - img "two Clay team members working in an office setting" [ref=e461]
+                  - img "Clay team member with a laptop in an office smiling" [ref=e463]
+                  - img "a rainbow foil unicorn balloon at Clay office" [ref=e465]
+                  - img "Clay designer using a tablet to create icons for a project" [ref=e467]
+                  - img "Clay team member holding a Clay branded flag in a field" [ref=e469]
+                  - img "a book on a table in an office setting" [ref=e471]
+              - listitem [ref=e472]:
+                - generic [ref=e473]:
+                  - img "a person carrying a Clay branded bag full of wheat" [ref=e475]
+                  - img "Clay team members sitting on stairs together" [ref=e477]
+                  - img "a panoramic view of tall buildings in San Francisco" [ref=e479]
+                  - img "Clay team member sitting on a chair with a camera" [ref=e481]
+                  - img "a white shelf with books and a plant in Clay office" [ref=e483]
+                  - img "two Clay team members working in an office setting" [ref=e485]
+                  - img "Clay team member with a laptop in an office smiling" [ref=e487]
+                  - img "a rainbow foil unicorn balloon at Clay office" [ref=e489]
+                  - img "Clay designer using a tablet to create icons for a project" [ref=e491]
+                  - img "Clay team member holding a Clay branded flag in a field" [ref=e493]
+                  - img "a book on a table in an office setting" [ref=e495]
+              - listitem [ref=e496]:
+                - generic [ref=e497]:
+                  - img "a person carrying a Clay branded bag full of wheat" [ref=e499]
+                  - img "Clay team members sitting on stairs together" [ref=e501]
+                  - img "a panoramic view of tall buildings in San Francisco" [ref=e503]
+                  - img "Clay team member sitting on a chair with a camera" [ref=e505]
+                  - img "a white shelf with books and a plant in Clay office" [ref=e507]
+                  - img "two Clay team members working in an office setting" [ref=e509]
+                  - img "Clay team member with a laptop in an office smiling" [ref=e511]
+                  - img "a rainbow foil unicorn balloon at Clay office" [ref=e513]
+                  - img "Clay designer using a tablet to create icons for a project" [ref=e515]
+                  - img "Clay team member holding a Clay branded flag in a field" [ref=e517]
+                  - img "a book on a table in an office setting" [ref=e519]
+            - button [ref=e520]
+          - generic [ref=e522]:
+            - paragraph [ref=e524]: Our cross-disciplinary team combines strategy, branding, UX design, and technology for swift, impactful results. Working as one team with our clients, we merge human creativity with AI-driven efficiency to consistently exceed expectations.
+            - link "Get to know us" [ref=e525] [cursor=pointer]:
+              - /url: /about
+              - generic [ref=e527]: Get to know us
+      - generic [ref=e530]:
+        - heading "Featured News" [level=2] [ref=e531]
+        - list [ref=e532]:
+          - listitem [ref=e533]:
+            - link "The Best Booths We Saw at Adobe Summit 2026 - Clay News The Best Booths We Saw at Adobe Summit 2026 Apr 26, 2026 2 min read" [ref=e534]:
+              - /url: /blog/best-booths-at-adobe-summit-2026
+              - img "The Best Booths We Saw at Adobe Summit 2026 - Clay" [ref=e536]
+              - generic [ref=e537]:
+                - generic [ref=e538]:
+                  - paragraph [ref=e539]: News
+                  - heading "The Best Booths We Saw at Adobe Summit 2026" [level=3] [ref=e540]
+                - generic [ref=e541]:
+                  - paragraph [ref=e542]: Apr 26, 2026
+                  - img [ref=e543]
+                  - paragraph [ref=e545]: 2 min read
+          - listitem [ref=e546]:
+            - 'link "Clay x The-Brand Identity: Insights on Mission Control, AI, and the Future of Design News Clay x The-Brand Identity: Insights on Mission Control, AI, and the Future of Design Sep 23, 2025 1 min read" [ref=e547]':
+              - /url: /blog/clay-missioncontrol-interview
+              - 'img "Clay x The-Brand Identity: Insights on Mission Control, AI, and the Future of Design" [ref=e549]'
+              - generic [ref=e550]:
+                - generic [ref=e551]:
+                  - paragraph [ref=e552]: News
+                  - 'heading "Clay x The-Brand Identity: Insights on Mission Control, AI, and the Future of Design" [level=3] [ref=e553]'
+                - generic [ref=e554]:
+                  - paragraph [ref=e555]: Sep 23, 2025
+                  - img [ref=e556]
+                  - paragraph [ref=e558]: 1 min read
+          - listitem [ref=e559]:
+            - 'link "The Ultimate AI Guide: Understanding Artificial Intelligence in 2026 - Clay AI The Ultimate AI Guide: Understanding Artificial Intelligence in 2026 Jul 15, 2025 35 min read" [ref=e560]':
+              - /url: /blog/ai-guide
+              - 'img "The Ultimate AI Guide: Understanding Artificial Intelligence in 2026 - Clay" [ref=e562]'
+              - generic [ref=e563]:
+                - generic [ref=e564]:
+                  - paragraph [ref=e565]: AI
+                  - 'heading "The Ultimate AI Guide: Understanding Artificial Intelligence in 2026" [level=3] [ref=e566]'
+                - generic [ref=e567]:
+                  - paragraph [ref=e568]: Jul 15, 2025
+                  - img [ref=e569]
+                  - paragraph [ref=e571]: 35 min read
+        - link "Visit blog" [ref=e573] [cursor=pointer]:
+          - /url: blog
+          - generic [ref=e575]: Visit blog
+      - generic [ref=e578]:
+        - heading "FAQ" [level=2] [ref=e579]
+        - generic [ref=e580]:
+          - generic [ref=e581]:
+            - button "What are your core services as a UX design and branding firm?" [ref=e582] [cursor=pointer]:
+              - generic [ref=e583]: What are your core services as a UX design and branding firm?
+              - img [ref=e584]
+            - paragraph [ref=e588]:
+              - text: At Clay, user experience is not just a capability but the cornerstone of our approach. We first began as a UX design agency in San Francisco, focusing on mobile apps and enterprise/SaaS software.
+              - text: However, our passion for branding and the demand from our clients led us to expand our offering to provide full-service brand design practice and web design and development of marketing websites.
+              - text: Today, our projects encompass a wide range, from building new products and defining brands to revitalizing existing mobile apps, websites, and enterprise software. We specialize in crafting digital products that wholeheartedly embody the brand's personality and deliver delightful experiences to your customers.
+              - text: Our team handles every aspect required to bring a digital product to life. This includes user research, product strategy, branding, user interface and experience design, usability testing, prototyping, web design, and development.
+              - text: Furthermore, we boast an in-house content production studio that provides creative direction, 2D/3D design, illustration and iconography, motion design, animation, sound design, photo/video, and copywriting services.
+              - text: For web projects, we integrate considerations for SEO into our process to ensure that our client's websites are optimized for search engines; however, SEO is not offered as a standalone service.
+          - generic [ref=e589]:
+            - button "What separates Clay from other branding and web design agencies?" [ref=e590] [cursor=pointer]:
+              - generic [ref=e591]: What separates Clay from other branding and web design agencies?
+              - img [ref=e592]
+            - generic [ref=e595]:
+              - paragraph [ref=e596]:
+                - text: In a saturated market of excellent UX design and branding agencies, it's challenging to stand out. At Clay, we believe our client's success is intertwined with our own. We forge enduring partnerships based on trust and mutual growth, going beyond world-class services.
+                - text: When you choose us, you collaborate directly with our dedicated team, who genuinely care about your success. Our cofounders oversee every project, while a design director leads the way, ensuring thorough design reviews and involvement in project details.
+                - text: Communication and transparency drive all our interactions, guaranteeing a premium client experience from start to finish. Our agility stems from working with startups, and our refined project management approach comes from enterprise experience.
+                - text: Unlike traditional design firms, we integrate branding and product expertise in one place, boasting cross-disciplinary teams for each project. This ensures your app or website represents your brand effectively while delivering an unforgettable user experience.
+                - text: Lastly, we specialize in creating scalable designs that support your long-term business goals. Our portfolio showcases websites and products untouched for over five years, proving our future-proof capabilities.
+              - paragraph
+              - paragraph [ref=e597]:
+                - text: For teams evaluating partners, we share curated agency rankings, including the
+                - link "Top Branding Agencies" [ref=e598] [cursor=pointer]:
+                  - /url: https://clay.global/blog/top-branding-agencies
+                - text: and
+                - link "Top Web Design Agencies" [ref=e599] [cursor=pointer]:
+                  - /url: https://clay.global/blog/best-web-design-agencies
+                - text: ", on our blog."
+          - generic [ref=e600]:
+            - button "Do you work with clients in different timezones?" [ref=e601] [cursor=pointer]:
+              - generic [ref=e602]: Do you work with clients in different timezones?
+              - img [ref=e603]
+            - paragraph [ref=e607]:
+              - text: We have extensive experience working with clients in various time zones. Based in San Francisco, we operate as a remote-first company with team members across the United States, Europe, and South-East Asia. This global presence allows us to serve clients worldwide, regardless of location.
+              - text: Over the past 12 years, we have perfected our remote collaboration model, enabling seamless work with clients from Saudi Arabia, China, Australia, Germany, the UK, and many other countries. We understand the challenges of different time zones and have implemented effective communication and project management strategies to overcome them.
+              - text: Our team excels at coordinating and scheduling meetings to accommodate clients' time preferences and availability across different regions. We prioritize clear and timely communication, leveraging various collaboration tools and platforms to maintain constant connectivity and streamline project workflows.
+              - text: Working with clients across diverse time zones has expanded our agency's capabilities and deepened our understanding of global markets. It has fostered an adaptive and efficient culture within our team, allowing us to consistently deliver exceptional results while respecting and embracing our clients' unique needs and perspectives worldwide.
+          - generic [ref=e608]:
+            - button "How much does hiring you for a design project cost?" [ref=e609] [cursor=pointer]:
+              - generic [ref=e610]: How much does hiring you for a design project cost?
+              - img [ref=e611]
+            - paragraph [ref=e615]:
+              - text: At Clay, we understand the importance of flexibility in budget and support for our partners. We offer a blended rate for our services and work with our clients to determine what level of support we can provide based on their budgetary constraints.
+              - text: "We offer three engagement models: time & materials, fixed fee, and retainer. Following a series of discovery conversations and project briefings, our team will recommend the most suitable model for your needs. We will then create a customized proposal, including a timeline and estimated cost."
+              - text: We aim to deliver the best possible solutions to our partners, tailored to their specific requirements. Whether it entails a comprehensive range of services or a customized approach that aligns with their financial constraints, we strive to meet their unique needs.
+          - generic [ref=e616]:
+            - button "Do you work with startups?" [ref=e617] [cursor=pointer]:
+              - generic [ref=e618]: Do you work with startups?
+              - img [ref=e619]
+            - paragraph [ref=e623]:
+              - text: Yes, we work with clients of all sizes, from enterprise-level organizations to startups. We are passionate about helping startups bring their ideas to life and achieve their goals through the power of design and technology. Additionally, we possess the expertise to assist in scaling your product or marketing efforts to enter new markets or reach different target audiences.
+              - text: One of our most common scenarios involves preparing SaaS startups to cater to enterprise clients by revamping their brand, product, and marketing site. We have partnered with numerous early-stage companies, including Coinbase, Uber, SendGrid, and MoneyLion, who have emerged as leaders in their respective industries.
+              - text: Conversely, other startups we have collaborated with, such as Earnin, experienced significant success after we redesigned their app, securing over $100M in additional venture funding.
+              - text: If you are a startup seeking to discuss your project needs, we would be delighted to initiate the conversation. To schedule a consultation with our team, please get in touch with us at hey@clay.global. We will work closely with you to comprehend your vision, goals, and budget, ensuring a tailored approach to your project.
+          - generic [ref=e624]:
+            - button "Can you help us redesign our B2B/enterprise software?" [ref=e625] [cursor=pointer]:
+              - generic [ref=e626]: Can you help us redesign our B2B/enterprise software?
+              - img [ref=e627]
+            - paragraph [ref=e631]:
+              - text: We're one of the few user experience agencies focusing on enterprise UX design and the digital transformation of legacy business software. Our years of experience have allowed us to refine our process, enabling us to revitalize B2B software for top-tier Fortune 100 companies like ADP, Amazon, VMware, and Cisco.
+              - text: Through our ultra-collaborative process and design thinking approach, we create consumer-grade user experiences for business users. We prioritize scalability and longevity by empowering our clients' in-house teams with robust design systems. This ensures continuity and adaptability, enabling the organization to evolve and grow seamlessly.
+              - text: We usually function as an independent unit within the organizational structure. Operating like a startup, we inject agility and fresh perspectives into the sometimes bureaucratic enterprise environment. This approach helps us navigate complex hierarchies and decision-making processes swiftly and efficiently, delivering innovative solutions.
+    - contentinfo [ref=e632]:
+      - generic [ref=e633]:
+        - generic [ref=e635]:
+          - generic [ref=e636]:
+            - heading "Let’s Talk" [level=2] [ref=e637]
+            - link "Email" [ref=e638] [cursor=pointer]:
+              - /url: mailto:hey@clay.global
+              - generic [ref=e640]: hey@clay.global
+            - link "Tel" [ref=e641] [cursor=pointer]:
+              - /url: tel:+1 415 796 6262
+              - generic [ref=e643]: +1 415 796 6262
+          - navigation [ref=e644]:
+            - list [ref=e645]:
+              - listitem [ref=e646]:
+                - link "Work" [ref=e647] [cursor=pointer]:
+                  - /url: /work
+                  - generic [ref=e649]: Work
+              - listitem [ref=e650]:
+                - link "Clients" [ref=e651] [cursor=pointer]:
+                  - /url: /clients
+                  - generic [ref=e653]: Clients
+              - listitem [ref=e654]:
+                - link "Services" [ref=e655] [cursor=pointer]:
+                  - /url: /services
+                  - generic [ref=e657]: Services
+              - listitem [ref=e658]:
+                - link "Industries" [ref=e659] [cursor=pointer]:
+                  - /url: /industries
+                  - generic [ref=e661]: Industries
+              - listitem [ref=e662]:
+                - link "About" [ref=e663] [cursor=pointer]:
+                  - /url: /about
+                  - generic [ref=e665]: About
+              - listitem [ref=e666]:
+                - link "Blog" [ref=e667] [cursor=pointer]:
+                  - /url: /blog
+                  - generic [ref=e669]: Blog
+              - listitem [ref=e670]:
+                - link "Contact" [ref=e671] [cursor=pointer]:
+                  - /url: /contact
+                  - generic [ref=e673]: Contact
+        - list [ref=e676]:
+          - listitem [ref=e677]:
+            - generic [ref=e678]: San Francisco
+            - paragraph [ref=e680]:
+              - link "300 Broadway, San Francisco, CA 94133" [ref=e681] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/G1VHdzEgTTHyJKRDA
+                - generic [ref=e683]:
+                  - text: 300 Broadway,
+                  - text: San Francisco, CA 94133
+          - listitem [ref=e684]:
+            - generic [ref=e685]: New York
+            - paragraph [ref=e687]:
+              - link "148 Lafayette St, New York, NY 10013" [ref=e688] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/Wr1xNTxAh4Hx4zuV6
+                - generic [ref=e690]:
+                  - text: 148 Lafayette St,
+                  - text: New York, NY 10013
+          - listitem [ref=e691]:
+            - generic [ref=e692]: Austin
+            - paragraph [ref=e694]:
+              - link "600 Congress Ave, Austin, TX 78701" [ref=e695] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/tHM3o7BnMvMM3Nks7
+                - generic [ref=e697]:
+                  - text: 600 Congress Ave,
+                  - text: Austin, TX 78701
+          - listitem [ref=e698]:
+            - generic [ref=e699]: Denver
+            - paragraph [ref=e701]:
+              - link "1700 Lincoln St 17th fl, Denver, CO 80203" [ref=e702] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/7snLQRA35qpEJQ7R8
+                - generic [ref=e704]:
+                  - text: 1700 Lincoln St 17th fl,
+                  - text: Denver, CO 80203
+          - listitem [ref=e705]:
+            - generic [ref=e706]: Lisbon
+            - paragraph [ref=e708]:
+              - link "Av. Alm. Reis 139, 1150-015 Lisbon, Portugal" [ref=e709] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/U2uawhnTvn7AQWCPA
+                - generic [ref=e711]:
+                  - text: Av. Alm. Reis 139, 1150-015
+                  - text: Lisbon, Portugal
+          - listitem [ref=e712]:
+            - generic [ref=e713]: Belgrade
+            - paragraph [ref=e715]:
+              - link "Nušićeva 15, 11000 Belgrade, Serbia" [ref=e716] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/pUqg7Exq6m88mSkdA
+                - generic [ref=e718]:
+                  - text: Nušićeva 15, 11000
+                  - text: Belgrade, Serbia
+        - generic [ref=e719]:
+          - list [ref=e721]:
+            - listitem [ref=e722]:
+              - link "Dribbble" [ref=e723] [cursor=pointer]:
+                - /url: https://dribbble.com/clayglobal
+            - listitem [ref=e729]:
+              - link "Behance" [ref=e730] [cursor=pointer]:
+                - /url: https://www.behance.net/clayglobal
+            - listitem [ref=e736]:
+              - link "Instagram" [ref=e737] [cursor=pointer]:
+                - /url: https://www.instagram.com/clayglobal/
+            - listitem [ref=e743]:
+              - link "LinkedIn" [ref=e744] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/clayglobal/
+            - listitem [ref=e750]:
+              - link "Twitter" [ref=e751] [cursor=pointer]:
+                - /url: https://twitter.com/clayglobal
+            - listitem [ref=e757]:
+              - link "Facebook" [ref=e758] [cursor=pointer]:
+                - /url: https://www.facebook.com/claydesignstudio/
+          - generic [ref=e764]:
+            - generic [ref=e765]: © 2016–2026 Clay Global, LLC
+            - generic [ref=e766]:
+              - link "Privacy" [ref=e767] [cursor=pointer]:
+                - /url: /privacy-policy
+                - generic [ref=e769]: Privacy
+              - link "Terms" [ref=e770] [cursor=pointer]:
+                - /url: /terms
+                - generic [ref=e772]: Terms
+              - link "Sitemap" [ref=e773] [cursor=pointer]:
+                - /url: https://clay.global/sitemap
+                - generic [ref=e775]: Sitemap
+    - generic:
+      - generic:
+        - button "Modal Close"
+        - generic:
+          - button "Modal Close"
+    - generic:
+      - img
+      - text: Link copied
+    - generic:
+      - generic:
+        - paragraph: Thank you for subscribing!
+        - paragraph: We'll send you a subscription every couple of weeks.
+  - alert [ref=e776]

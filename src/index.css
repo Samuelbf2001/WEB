@@ -208,6 +208,11 @@
   40%       { transform: translate(-36px, 30px) scale(1.1); }
   70%       { transform: translate(28px, -18px) scale(0.95); }
 }
+@keyframes v2-topo-drift {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.04); }
+  100% { transform: rotate(360deg) scale(1); }
+}
 @keyframes v2-spin-slow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }

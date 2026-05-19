@@ -43,7 +43,7 @@ CÓMO FUNCIONA (4 pasos):
 PLANES Y PRECIOS:
 - Sixteam Inbox + IA: $180 USD/mes + $360 USD implementación. Bandeja omnicanal, IA 24/7, captura de solicitudes, 2 usuarios
 - CRM Sixteam Core: $240 USD/mes + $720 USD implementación. Todo lo anterior + pipeline de propuestas, automatizaciones de seguimiento y renovación, secuencias de cobro, pipeline de referidos, 3 usuarios
-- RevOps Externo: desde $720.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
+- RevOps Externo: desde $180 USD/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
 
 RESULTADOS ESPERADOS: +28% tasa de cierre de propuestas, -60% tiempo administrativo, crecimiento del 40% sin añadir personal, nunca más un seguimiento olvidado.
 
@@ -577,8 +577,8 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">RevOps Externo</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-3xl">$720k</span>
-                  <span className="text-[#e0e0e0] text-sm mb-1">COP/mes</span>
+                  <span className="font-poppins font-black text-white text-4xl">$180</span>
+                  <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Desde · operación mensual incluida</p>
               </div>

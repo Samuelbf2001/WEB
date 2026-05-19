@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { gtm } from '@/lib/gtm';
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { pathname } = useLocation();
+
+  // V2 uses its own contact patterns — hide the V1 WhatsApp on V2 routes
+  if (pathname.startsWith('/v2')) {
+    return null;
+  }
 
   const handleWhatsAppClick = () => {
     gtm.whatsappClick('floating_button');

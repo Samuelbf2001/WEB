@@ -1,0 +1,1254 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Sixteam.pro" [ref=e6] [cursor=pointer]:
+          - /url: /v2
+          - generic [ref=e7]: Sixteam.pro
+        - navigation [ref=e8]:
+          - link "Cómo funciona" [ref=e9] [cursor=pointer]:
+            - /url: /v2/como-funciona
+            - text: Cómo funciona
+          - link "Soluciones" [ref=e10] [cursor=pointer]:
+            - /url: /v2/soluciones
+            - text: Soluciones
+          - link "Nosotros" [ref=e11] [cursor=pointer]:
+            - /url: /v2/nosotros
+            - text: Nosotros
+        - generic [ref=e12]:
+          - link "Radar gratis" [ref=e13] [cursor=pointer]:
+            - /url: /v2/radar
+          - link "Agendar llamada" [ref=e14] [cursor=pointer]:
+            - /url: /v2/contacto
+            - button "Agendar llamada" [ref=e15]:
+              - text: Agendar llamada
+              - img [ref=e16]
+    - main [ref=e18]:
+      - generic [ref=e19]:
+        - generic:
+          - img
+          - img
+        - generic:
+          - img
+          - img
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - generic [ref=e24]:
+                - generic [ref=e25]: JR
+                - generic [ref=e26]: MA
+                - generic [ref=e27]: DC
+              - generic [ref=e28]:
+                - generic [ref=e29]:
+                  - img [ref=e30]
+                  - img [ref=e32]
+                  - img [ref=e34]
+                  - img [ref=e36]
+                  - img [ref=e38]
+                - generic [ref=e40]: 30+ equipos en LATAM
+            - heading "Ya no tienes que operar solo ." [level=1] [ref=e41]:
+              - text: Ya no tienes que
+              - text: operar
+              - generic [ref=e42]:
+                - emphasis [ref=e44]: solo
+                - img
+              - text: .
+            - generic [ref=e45]:
+              - paragraph [ref=e46]: Tu pipeline se opera sin que lo pidas.
+              - paragraph [ref=e47]: Los leads llegan al vendedor correcto en segundos.
+              - paragraph [ref=e48]:
+                - text: Tú…
+                - generic [ref=e49]:
+                  - generic [ref=e50]: solo tienes que crecer.
+                  - img
+            - generic [ref=e51]:
+              - link "Hacer mi auditoría gratis" [ref=e52] [cursor=pointer]:
+                - /url: /v2/radar
+                - button "Hacer mi auditoría gratis" [ref=e53]:
+                  - text: Hacer mi auditoría gratis
+                  - img [ref=e54]
+              - link "30 min, en español" [ref=e56] [cursor=pointer]:
+                - /url: /v2/contacto
+                - button "30 min, en español" [ref=e57]:
+                  - img [ref=e58]
+                  - text: 30 min, en español
+            - generic [ref=e62]:
+              - generic [ref=e63]: JR
+              - generic [ref=e64]:
+                - paragraph [ref=e65]: "\"El equipo de ops que siempre necesitamos pero nunca pudimos contratar.\""
+                - generic [ref=e66]:
+                  - generic [ref=e67]:
+                    - img [ref=e68]
+                    - img [ref=e70]
+                    - img [ref=e72]
+                    - img [ref=e74]
+                    - img [ref=e76]
+                  - generic [ref=e78]: Juan Restrepo · CEO, MasterViajes
+            - generic [ref=e80]:
+              - generic [ref=e81]: 4+ años en LATAM
+              - generic [ref=e82]: 600k+ tareas automatizadas
+              - generic [ref=e84]: Sin contrato de permanencia
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - paragraph [ref=e91]: Tu operación esta semana
+              - generic [ref=e96]: Todo en orden
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - img [ref=e100]
+                - generic [ref=e101]:
+                  - paragraph [ref=e102]: Pipeline CRM
+                  - paragraph [ref=e103]: Limpio · 24 deals activos
+                - generic [ref=e106]: IA
+              - generic [ref=e107]:
+                - img [ref=e109]
+                - generic [ref=e112]:
+                  - paragraph [ref=e113]: Seguimientos
+                  - paragraph [ref=e114]: 0 leads sin respuesta
+                - generic [ref=e117]: IA
+              - generic [ref=e118]:
+                - img [ref=e120]
+                - generic [ref=e122]:
+                  - paragraph [ref=e123]: WhatsApp Business
+                  - paragraph [ref=e124]: Bandeja unificada · SLA OK
+                - generic [ref=e127]: IA + Experto
+              - generic [ref=e128]:
+                - img [ref=e130]
+                - generic [ref=e133]:
+                  - paragraph [ref=e134]: Chatbot IA
+                  - paragraph [ref=e135]: Calificando 24/7
+                - generic [ref=e138]: IA
+              - generic [ref=e139]:
+                - img [ref=e141]
+                - generic [ref=e146]:
+                  - paragraph [ref=e147]: Automatizaciones
+                  - paragraph [ref=e148]: 4 workflows corriendo
+                - generic [ref=e151]: IA
+              - generic [ref=e152]:
+                - img [ref=e154]
+                - generic [ref=e155]:
+                  - paragraph [ref=e156]: Reporte ejecutivo
+                  - paragraph [ref=e157]: Enviado · Lun 9:01am
+                - generic [ref=e160]: Experto
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - img [ref=e164]
+                - generic [ref=e167]: JR
+                - generic [ref=e168]: MA
+              - paragraph [ref=e169]: Operado por IA + equipo humano
+              - img [ref=e171]
+      - generic [ref=e177]:
+        - generic [ref=e178]: Equipos de growth ya operando con Sixteam
+        - generic [ref=e179]:
+          - generic [ref=e180]: MasterViajes
+          - generic [ref=e181]: Student Travel Center
+          - generic [ref=e182]: Sourxe
+          - generic [ref=e183]: Sportix
+          - generic [ref=e184]: Anato
+          - generic [ref=e185]: Ekomercio
+      - generic [ref=e188]:
+        - generic [ref=e190]: El problema real
+        - heading "La mayoría de empresas operan su parte comercial por intuición." [level=2] [ref=e191]:
+          - text: La mayoría de empresas operan su parte
+          - emphasis [ref=e192]: comercial por intuición.
+        - generic [ref=e193]:
+          - generic [ref=e194]:
+            - paragraph [ref=e195]: Te suena conocido?
+            - list [ref=e196]:
+              - listitem [ref=e197]:
+                - img [ref=e199]
+                - generic [ref=e203]: El dueño responde leads desde su WhatsApp personal.
+              - listitem [ref=e204]:
+                - img [ref=e206]
+                - generic [ref=e210]: El seguimiento se hace de memoria — o no se hace.
+              - listitem [ref=e211]:
+                - img [ref=e213]
+                - generic [ref=e217]: El equipo opera 'como cada uno entendió'.
+              - listitem [ref=e218]:
+                - img [ref=e220]
+                - generic [ref=e224]: Los reportes son una mezcla de Excel y cabeza.
+            - generic [ref=e225]:
+              - img [ref=e226]
+              - paragraph [ref=e228]: Funciona hasta cierto punto. Después el crecimiento se traba — y no sabes exactamente dónde.
+            - link "Diagnóstica tu operación gratis" [ref=e229] [cursor=pointer]:
+              - /url: /v2/radar
+              - text: Diagnóstica tu operación gratis
+              - img [ref=e230]
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - paragraph [ref=e234]: 20–30%
+              - paragraph [ref=e235]: del revenue potencial que una empresa B2B promedio deja sobre la mesa — cada mes — por no tener su operación comercial en orden.
+            - generic [ref=e237]:
+              - generic [ref=e238]:
+                - generic [ref=e239]: 40%
+                - paragraph [ref=e240]: del tiempo del vendedor se va en tareas administrativas
+              - generic [ref=e241]:
+                - generic [ref=e242]: 3–5×
+                - paragraph [ref=e243]: más leads cierran cuando hay seguimiento estructurado
+            - blockquote [ref=e244]:
+              - text: "\"Crece hasta cierto punto."
+              - emphasis [ref=e245]: Después se traba.
+              - text: "\""
+      - generic [ref=e248]:
+        - generic [ref=e250]: Por qué pasa
+        - heading "Aprendiste tu oficio. No el oficio de operar ventas." [level=2] [ref=e251]:
+          - text: Aprendiste tu oficio.
+          - emphasis [ref=e252]: No el oficio de operar ventas.
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - paragraph [ref=e255]:
+              - text: Probablemente eres muy bueno en lo que vendes. Tus clientes lo saben. Pero operar un equipo comercial — con pipeline limpio, seguimiento sistemático y reportes que sirven — eso es un
+              - strong [ref=e256]: oficio completamente aparte.
+            - paragraph [ref=e257]: No se aprende en el día a día de vender. Se construye con metodología, herramientas y — sobre todo — con alguien que lo haya hecho antes.
+            - generic [ref=e258]:
+              - paragraph [ref=e259]:
+                - text: Las empresas que crecen más rápido no tienen
+                - emphasis [ref=e260]: mejor producto.
+              - paragraph [ref=e261]:
+                - text: Tienen mejor
+                - emphasis [ref=e262]: sistema comercial.
+          - generic [ref=e263]:
+            - paragraph [ref=e264]: Lo que es un oficio aparte
+            - list [ref=e265]:
+              - listitem [ref=e266]:
+                - generic [ref=e267]: "01"
+                - generic [ref=e268]:
+                  - paragraph [ref=e269]: Calificar un lead
+                  - paragraph [ref=e270]: Determinar cuál vale tiempo y cuál no, sin gastar el de tu equipo.
+              - listitem [ref=e271]:
+                - generic [ref=e272]: "02"
+                - generic [ref=e273]:
+                  - paragraph [ref=e274]: Estructurar el seguimiento
+                  - paragraph [ref=e275]: Cuándo, cómo y por qué canal — no cada uno como cree que se hace.
+              - listitem [ref=e276]:
+                - generic [ref=e277]: "03"
+                - generic [ref=e278]:
+                  - paragraph [ref=e279]: Medir la conversión
+                  - paragraph [ref=e280]: No visitas al Excel los lunes. Métricas que mueven decisiones.
+              - listitem [ref=e281]:
+                - generic [ref=e282]: "04"
+                - generic [ref=e283]:
+                  - paragraph [ref=e284]: Mantener un cliente activo
+                  - paragraph [ref=e285]: Retención no es CX. Es pipeline. Es operación. Es oficio.
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - generic [ref=e290]: El contraste
+          - heading "Lunes sin Sixteam. Lunes con Sixteam." [level=2] [ref=e291]:
+            - text: Lunes sin Sixteam.
+            - emphasis [ref=e292]: Lunes con Sixteam.
+          - paragraph [ref=e293]: El mismo equipo, el mismo lunes. Lo único que cambia es si el sistema trabaja contigo o contra ti.
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - img [ref=e298]
+              - generic [ref=e301]:
+                - paragraph [ref=e302]: Sin Sixteam
+                - paragraph [ref=e303]: Lista mental del lunes por la mañana
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - img [ref=e307]
+                - generic [ref=e310]:
+                  - text: Actualizar CRM con notas de ayer
+                  - generic [ref=e311]: urgente
+              - generic [ref=e312]:
+                - img [ref=e314]
+                - generic [ref=e317]:
+                  - text: Responder leads del fin de semana
+                  - generic [ref=e318]: urgente
+              - generic [ref=e319]:
+                - img [ref=e321]
+                - generic [ref=e324]: Enviar propuesta que quedó pendiente
+              - generic [ref=e325]:
+                - img [ref=e327]
+                - generic [ref=e330]: Reenviar correo sin respuesta desde hace 8 días
+              - generic [ref=e331]:
+                - img [ref=e333]
+                - generic [ref=e336]:
+                  - text: Revisar qué oportunidades están vencidas
+                  - generic [ref=e337]: urgente
+              - generic [ref=e338]:
+                - img [ref=e340]
+                - generic [ref=e343]: Armar reporte de ventas para el jefe
+              - generic [ref=e344]:
+                - img [ref=e346]
+                - generic [ref=e349]: Reunión de status de 1 hora para ver qué pasó
+              - paragraph [ref=e350]: "\"Y esto sin contar los imprevistos que aparecen antes del mediodía.\""
+          - generic [ref=e351]:
+            - generic [ref=e352]:
+              - img [ref=e354]
+              - generic [ref=e356]:
+                - paragraph [ref=e357]: Con Sixteam
+                - paragraph [ref=e358]: Lo que ya está hecho cuando llegas
+            - generic [ref=e359]:
+              - generic [ref=e360]:
+                - img [ref=e362]
+                - generic [ref=e364]: Pipeline limpio y actualizado al abrir el CRM
+              - generic [ref=e365]:
+                - img [ref=e367]
+                - generic [ref=e369]: Leads del fin de semana enrutados y en seguimiento
+              - generic [ref=e370]:
+                - img [ref=e372]
+                - generic [ref=e374]: Propuesta enviada automáticamente con recordatorio programado
+              - generic [ref=e375]:
+                - img [ref=e377]
+                - generic [ref=e379]: Seguimiento ejecutado por la automatización
+              - generic [ref=e380]:
+                - img [ref=e382]
+                - generic [ref=e384]: Alertas enviadas a cada rep con sus oportunidades vencidas
+              - generic [ref=e385]:
+                - img [ref=e387]
+                - generic [ref=e389]: Reporte ejecutivo en tu inbox desde las 9am
+              - generic [ref=e390]:
+                - img [ref=e392]
+                - generic [ref=e394]: Reporte listo — la reunión dura 15 minutos
+              - paragraph [ref=e400]: "\"El sistema operó todo el fin de semana sin que nadie lo supervisara.\""
+        - paragraph [ref=e402]:
+          - text: Eso no es magia. Es
+          - strong [ref=e403]: un sistema bien operado
+          - text: que trabaja mientras tú duermes.
+      - generic [ref=e406]:
+        - generic [ref=e407]:
+          - generic [ref=e408]: Cómo fluye
+          - heading "Un solo flujo. Sin notas perdidas en WhatsApp." [level=2] [ref=e409]:
+            - text: Un solo flujo.
+            - emphasis [ref=e410]: Sin notas perdidas en WhatsApp.
+          - paragraph [ref=e411]: Así opera tu cuenta cada semana, con o sin que tu equipo esté completo.
+        - generic [ref=e414]:
+          - generic [ref=e415]:
+            - generic [ref=e416]:
+              - img [ref=e418]
+              - generic [ref=e420]: Siempre
+            - generic: "01"
+            - heading "Tú nos contextualizas" [level=3] [ref=e421]
+            - paragraph [ref=e422]: Slack, WhatsApp o Loom. Nos cuentas qué cambió, qué necesita atención. Sin reuniones de status.
+          - generic [ref=e423]:
+            - generic [ref=e424]:
+              - img [ref=e426]
+              - generic [ref=e429]: Automático
+            - generic: "02"
+            - heading "IA estructura el sprint" [level=3] [ref=e430]
+            - paragraph [ref=e431]: Limpia datos, prepara automatizaciones, sugiere prioridades. Velocidad de máquina, sin errores manuales.
+          - generic [ref=e432]:
+            - generic [ref=e433]:
+              - img [ref=e435]
+              - generic [ref=e437]: Cada día
+            - generic: "03"
+            - heading "Expertos operan" [level=3] [ref=e438]
+            - paragraph [ref=e439]: Validamos la lógica y ejecutamos en tu CRM. Manos en el stack, no en PowerPoints ni propuestas.
+          - generic [ref=e440]:
+            - generic [ref=e441]:
+              - img [ref=e443]
+              - generic [ref=e444]: Lun 9am
+            - generic: "04"
+            - heading "Sistema vivo, reporte claro" [level=3] [ref=e445]
+            - paragraph [ref=e446]: Dashboard actualizado. Reporte ejecutivo cada lunes a las 9am. Sin que tengas que pedirlo.
+      - generic [ref=e449]:
+        - generic [ref=e450]:
+          - generic [ref=e451]: Lo que cambia
+          - heading "La diferencia entre intuición y sistema." [level=2] [ref=e452]:
+            - text: La diferencia entre
+            - emphasis [ref=e453]: intuición
+            - text: "y"
+            - emphasis [ref=e454]: sistema.
+        - generic [ref=e455]:
+          - generic [ref=e456]:
+            - generic [ref=e457]: Ahora mismo
+            - heading "Operación por intuición" [level=3] [ref=e458]
+            - paragraph [ref=e459]: Funciona hasta cierto punto. Después se traba.
+            - list [ref=e460]:
+              - listitem [ref=e461]:
+                - img [ref=e462]
+                - generic [ref=e466]: El dueño responde leads desde su WhatsApp.
+              - listitem [ref=e467]:
+                - img [ref=e468]
+                - generic [ref=e472]: El seguimiento se hace de memoria — o no se hace.
+              - listitem [ref=e473]:
+                - img [ref=e474]
+                - generic [ref=e478]: El equipo opera 'como cada uno entendió'.
+              - listitem [ref=e479]:
+                - img [ref=e480]
+                - generic [ref=e484]: Los reportes son una mezcla de Excel y cabeza.
+              - listitem [ref=e485]:
+                - img [ref=e486]
+                - generic [ref=e490]: Vendedor dedica 40% del tiempo a tareas admin.
+            - generic [ref=e491]:
+              - paragraph [ref=e492]: Tampoco somos esto
+              - list [ref=e493]:
+                - listitem [ref=e494]:
+                  - img [ref=e495]
+                  - generic [ref=e499]: Una agencia que implementa y se va.
+                - listitem [ref=e500]:
+                  - img [ref=e501]
+                  - generic [ref=e505]: Consultores que dejan un PDF y desaparecen.
+                - listitem [ref=e506]:
+                  - img [ref=e507]
+                  - generic [ref=e511]: Vendedores de software.
+          - generic [ref=e512]:
+            - generic [ref=e513]: Con Sixteam.pro
+            - heading "No implementamos y desaparecemos." [level=3] [ref=e514]
+            - paragraph [ref=e515]: Si algo se rompe, lo arreglamos. Si tu equipo cambia, entrenamos al nuevo.
+            - generic [ref=e516]:
+              - paragraph [ref=e517]: Lo que operamos — mes a mes
+              - generic [ref=e518]:
+                - generic [ref=e519]:
+                  - img [ref=e521]
+                  - generic [ref=e523]: Pipeline operado en tiempo real
+                - generic [ref=e524]: Continuo
+              - generic [ref=e526]:
+                - generic [ref=e527]:
+                  - img [ref=e529]
+                  - generic [ref=e531]: Seguimiento sin leads perdidos
+                - generic [ref=e532]: Cada día
+              - generic [ref=e534]:
+                - generic [ref=e535]:
+                  - img [ref=e537]
+                  - generic [ref=e539]: Reporte claro cada lunes
+                - generic [ref=e540]: Lunes 9:00am
+              - generic [ref=e541]:
+                - generic [ref=e542]:
+                  - img [ref=e544]
+                  - generic [ref=e546]: Entrenamos al nuevo si alguien se va
+                - generic [ref=e547]: Siempre
+            - generic [ref=e548]:
+              - img [ref=e549]
+              - paragraph [ref=e554]:
+                - text: Vendemos que tu operación comercial
+                - strong [ref=e555]: funcione
+                - text: ", mes a mes — con o sin que tu equipo esté completo."
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - generic [ref=e560]: Por qué funciona
+          - heading "Velocidad de máquina. Criterio humano." [level=2] [ref=e561]:
+            - text: Velocidad de máquina.
+            - emphasis [ref=e562]: Criterio humano.
+          - paragraph [ref=e563]: Ninguno de los dos sirve solo. IA sin expertos alucina. Expertos sin IA se ahogan en admin.
+        - generic [ref=e564]:
+          - generic [ref=e566]:
+            - img [ref=e568]
+            - generic [ref=e573]: En tiempo real
+            - heading "Lo que hace la IA" [level=3] [ref=e574]
+            - paragraph [ref=e575]: Velocidad y escala sin errores manuales.
+            - list [ref=e576]:
+              - listitem [ref=e577]:
+                - img [ref=e579]
+                - generic [ref=e581]: Limpieza y de-duplicación de CRM en tiempo real
+              - listitem [ref=e582]:
+                - img [ref=e584]
+                - generic [ref=e586]: Lead scoring y enrichment continuo
+              - listitem [ref=e587]:
+                - img [ref=e589]
+                - generic [ref=e591]: Routing automático al vendedor correcto
+              - listitem [ref=e592]:
+                - img [ref=e594]
+                - generic [ref=e596]: Resúmenes de reuniones y extracción de next steps
+              - listitem [ref=e597]:
+                - img [ref=e599]
+                - generic [ref=e601]: Detección de leads sin seguimiento
+          - generic [ref=e603]:
+            - img [ref=e605]
+            - generic [ref=e610]:
+              - img [ref=e611]
+              - generic [ref=e613]: Criterio estratégico
+            - heading "Lo que hacen los expertos" [level=3] [ref=e614]
+            - paragraph [ref=e615]: Decisiones que no se pueden automatizar.
+            - list [ref=e616]:
+              - listitem [ref=e617]:
+                - img [ref=e619]
+                - generic [ref=e621]: Diseño de arquitectura de datos y blueprints
+              - listitem [ref=e622]:
+                - img [ref=e624]
+                - generic [ref=e626]: Alineación estratégica Sales ↔ Marketing
+              - listitem [ref=e627]:
+                - img [ref=e629]
+                - generic [ref=e631]: Resolución de casos complejos y auditorías
+              - listitem [ref=e632]:
+                - img [ref=e634]
+                - generic [ref=e636]: Entrenamiento al equipo cuando alguien rota
+              - listitem [ref=e637]:
+                - img [ref=e639]
+                - generic [ref=e641]: QBR trimestral de roadmap de revenue
+        - paragraph [ref=e642]: Process + Technology + People = Growth
+      - generic [ref=e645]:
+        - generic [ref=e646]:
+          - generic [ref=e647]: El sistema en partes
+          - heading "Cinco servicios que se operan juntos." [level=2] [ref=e648]:
+            - text: Cinco
+            - emphasis [ref=e649]: servicios
+            - text: que se operan juntos.
+          - paragraph [ref=e650]: Cada pieza se contrata por separado o como sistema completo. La que mejor te conviene depende de dónde está la fuga.
+        - generic [ref=e651]:
+          - link "CRM Ventas Pipeline operado, leads enrutados, dashboards vivos. El comercial deja de hacer admin. Ver servicio" [ref=e652] [cursor=pointer]:
+            - /url: /v2/servicios/crm-ventas
+            - generic: "01"
+            - img [ref=e654]
+            - heading "CRM Ventas" [level=3] [ref=e657]
+            - paragraph [ref=e658]: Pipeline operado, leads enrutados, dashboards vivos. El comercial deja de hacer admin.
+            - generic [ref=e659]:
+              - text: Ver servicio
+              - img [ref=e660]
+          - link "CRM Atención WhatsApp, email y chat en una sola bandeja. SLA medible, sin hilos perdidos. Ver servicio" [ref=e662] [cursor=pointer]:
+            - /url: /v2/servicios/crm-atencion
+            - generic: "02"
+            - img [ref=e664]
+            - heading "CRM Atención" [level=3] [ref=e666]
+            - paragraph [ref=e667]: WhatsApp, email y chat en una sola bandeja. SLA medible, sin hilos perdidos.
+            - generic [ref=e668]:
+              - text: Ver servicio
+              - img [ref=e669]
+          - link "CRM Marketing Campañas, nurturing y atribución conectados al CRM. Para que MKT y Sales hablen el mismo idioma. Ver servicio" [ref=e671] [cursor=pointer]:
+            - /url: /v2/servicios/crm-marketing
+            - generic: "03"
+            - img [ref=e673]
+            - heading "CRM Marketing" [level=3] [ref=e676]
+            - paragraph [ref=e677]: Campañas, nurturing y atribución conectados al CRM. Para que MKT y Sales hablen el mismo idioma.
+            - generic [ref=e678]:
+              - text: Ver servicio
+              - img [ref=e679]
+          - link "Chatbot IA Agentes que califican, agendan y resuelven. Operan con tu base de conocimiento, no con magia. Ver servicio" [ref=e681] [cursor=pointer]:
+            - /url: /v2/servicios/chatbot-ia
+            - generic: "04"
+            - img [ref=e683]
+            - heading "Chatbot IA" [level=3] [ref=e686]
+            - paragraph [ref=e687]: Agentes que califican, agendan y resuelven. Operan con tu base de conocimiento, no con magia.
+            - generic [ref=e688]:
+              - text: Ver servicio
+              - img [ref=e689]
+          - link "Soporte & Operaciones El equipo que mantiene vivo el sistema. Mejoras, ajustes y nuevas automatizaciones cada semana. Ver servicio" [ref=e691] [cursor=pointer]:
+            - /url: /v2/servicios/soporte-operaciones
+            - generic: "05"
+            - img [ref=e693]
+            - heading "Soporte & Operaciones" [level=3] [ref=e695]
+            - paragraph [ref=e696]: El equipo que mantiene vivo el sistema. Mejoras, ajustes y nuevas automatizaciones cada semana.
+            - generic [ref=e697]:
+              - text: Ver servicio
+              - img [ref=e698]
+      - generic [ref=e702]:
+        - generic [ref=e703]:
+          - generic [ref=e704]: Tu vertical
+          - heading "Operamos en tu industria." [level=2] [ref=e705]:
+            - text: Operamos en
+            - emphasis [ref=e706]: tu industria.
+          - paragraph [ref=e707]: Cada sector tiene su propio ciclo de venta y sus propias fricciones. Sabemos cuáles son las tuyas antes de que nos las cuentes.
+        - generic [ref=e708]:
+          - link "💼 Agencias & Consultoras Pipeline de retainers, onboarding de clientes y reportes automatizados. Ver cómo" [ref=e709] [cursor=pointer]:
+            - /url: /v2/industrias/agencias
+            - generic [ref=e710]: 💼
+            - heading "Agencias & Consultoras" [level=3] [ref=e711]
+            - paragraph [ref=e712]: Pipeline de retainers, onboarding de clientes y reportes automatizados.
+            - generic [ref=e713]:
+              - text: Ver cómo
+              - img [ref=e714]
+          - link "🏥 Salud & Clínicas Agenda, recordatorios y seguimiento de pacientes sin fugas. Ver cómo" [ref=e716] [cursor=pointer]:
+            - /url: /v2/industrias/salud
+            - generic [ref=e717]: 🏥
+            - heading "Salud & Clínicas" [level=3] [ref=e718]
+            - paragraph [ref=e719]: Agenda, recordatorios y seguimiento de pacientes sin fugas.
+            - generic [ref=e720]:
+              - text: Ver cómo
+              - img [ref=e721]
+          - link "🎓 Educación & EdTech Captación, inscripción y retención de estudiantes en un solo sistema. Ver cómo" [ref=e723] [cursor=pointer]:
+            - /url: /v2/industrias/educacion
+            - generic [ref=e724]: 🎓
+            - heading "Educación & EdTech" [level=3] [ref=e725]
+            - paragraph [ref=e726]: Captación, inscripción y retención de estudiantes en un solo sistema.
+            - generic [ref=e727]:
+              - text: Ver cómo
+              - img [ref=e728]
+          - link "🏠 Real Estate Seguimiento de prospectos, portafolio y cierre sin pérdida de leads. Ver cómo" [ref=e730] [cursor=pointer]:
+            - /url: /v2/industrias/real-estate
+            - generic [ref=e731]: 🏠
+            - heading "Real Estate" [level=3] [ref=e732]
+            - paragraph [ref=e733]: Seguimiento de prospectos, portafolio y cierre sin pérdida de leads.
+            - generic [ref=e734]:
+              - text: Ver cómo
+              - img [ref=e735]
+          - link "⚙️ Servicios Generales Cotización, agenda y facturación coordinados en un pipeline limpio. Ver cómo" [ref=e737] [cursor=pointer]:
+            - /url: /v2/industrias/servicios-generales
+            - generic [ref=e738]: ⚙️
+            - heading "Servicios Generales" [level=3] [ref=e739]
+            - paragraph [ref=e740]: Cotización, agenda y facturación coordinados en un pipeline limpio.
+            - generic [ref=e741]:
+              - text: Ver cómo
+              - img [ref=e742]
+          - link "✈️ Viajes & Turismo De la consulta a la reserva sin hilos de WhatsApp perdidos. Ver cómo" [ref=e744] [cursor=pointer]:
+            - /url: /v2/industrias/viajes
+            - generic [ref=e745]: ✈️
+            - heading "Viajes & Turismo" [level=3] [ref=e746]
+            - paragraph [ref=e747]: De la consulta a la reserva sin hilos de WhatsApp perdidos.
+            - generic [ref=e748]:
+              - text: Ver cómo
+              - img [ref=e749]
+          - link "💳 Fintech & Seguros Cumplimiento, onboarding y renovación automática de clientes. Ver cómo" [ref=e751] [cursor=pointer]:
+            - /url: /v2/industrias/fintech
+            - generic [ref=e752]: 💳
+            - heading "Fintech & Seguros" [level=3] [ref=e753]
+            - paragraph [ref=e754]: Cumplimiento, onboarding y renovación automática de clientes.
+            - generic [ref=e755]:
+              - text: Ver cómo
+              - img [ref=e756]
+          - link "🏭 Manufactura & B2B Ciclos de venta largos gestionados con pipeline visual y alertas. Ver cómo" [ref=e758] [cursor=pointer]:
+            - /url: /v2/industrias/manufactura
+            - generic [ref=e759]: 🏭
+            - heading "Manufactura & B2B" [level=3] [ref=e760]
+            - paragraph [ref=e761]: Ciclos de venta largos gestionados con pipeline visual y alertas.
+            - generic [ref=e762]:
+              - text: Ver cómo
+              - img [ref=e763]
+        - link "Ver todas las industrias" [ref=e766] [cursor=pointer]:
+          - /url: /v2/industrias
+          - text: Ver todas las industrias
+          - img [ref=e767]
+      - generic [ref=e770]:
+        - generic [ref=e771]:
+          - generic [ref=e772]: Cómo entramos
+          - heading "Tres pasos para arrancar a operar." [level=2] [ref=e773]:
+            - text: Tres pasos para
+            - emphasis [ref=e774]: arrancar a operar.
+          - paragraph [ref=e775]:
+            - text: Sin propuestas de 30 páginas. Sin diagnósticos pagados. Hablamos, validamos, ejecutamos — y
+            - strong [ref=e776]: seguimos contigo mes a mes.
+        - generic [ref=e777]:
+          - generic [ref=e778]:
+            - generic [ref=e779]: "01"
+            - heading "Radar gratis" [level=4] [ref=e780]
+            - paragraph [ref=e781]: Te enviamos un cuestionario corto. En 48h te devolvemos dónde está dejando dinero sobre la mesa tu operación — y qué se puede mejorar primero.
+            - paragraph [ref=e782]: "Qué incluye:"
+            - list [ref=e783]:
+              - listitem [ref=e784]:
+                - img [ref=e785]
+                - generic [ref=e787]: Auditoría de CRM y pipeline actual
+              - listitem [ref=e788]:
+                - img [ref=e789]
+                - generic [ref=e791]: Mapa de procesos críticos
+              - listitem [ref=e792]:
+                - img [ref=e793]
+                - generic [ref=e795]: Estimación de fugas de revenue
+          - generic [ref=e796]:
+            - generic [ref=e797]: "02"
+            - heading "Llamada de alineación" [level=4] [ref=e798]
+            - paragraph [ref=e799]: 30 minutos, en español, sin pitch de venta. Validamos si tiene sentido trabajar juntos y cuál es el punto de entrada correcto para tu empresa.
+            - paragraph [ref=e800]: "Saldrás con:"
+            - list [ref=e801]:
+              - listitem [ref=e802]:
+                - img [ref=e803]
+                - generic [ref=e805]: Plan inicial de 90 días
+              - listitem [ref=e806]:
+                - img [ref=e807]
+                - generic [ref=e809]: Stack recomendado para tu caso
+              - listitem [ref=e810]:
+                - img [ref=e811]
+                - generic [ref=e813]: Inversión estimada clara
+          - generic [ref=e814]:
+            - generic [ref=e815]: "03"
+            - heading "Arrancamos y nos quedamos" [level=4] [ref=e816]
+            - paragraph [ref=e817]: El equipo entra a tu operación. Sprints semanales. Reporte claro los lunes. Y si algo se rompe o alguien de tu equipo cambia — lo atendemos.
+            - paragraph [ref=e818]: "Lo que ocurre:"
+            - list [ref=e819]:
+              - listitem [ref=e820]:
+                - img [ref=e821]
+                - generic [ref=e823]: Integración a tu Slack/WhatsApp
+              - listitem [ref=e824]:
+                - img [ref=e825]
+                - generic [ref=e827]: Onboarding del stack completo
+              - listitem [ref=e828]:
+                - img [ref=e829]
+                - generic [ref=e831]: Single point of contact siempre
+        - generic [ref=e832]:
+          - generic [ref=e833]:
+            - paragraph [ref=e834]: Lo que nos diferencia
+            - paragraph [ref=e835]: No implementamos y desaparecemos.
+            - paragraph [ref=e836]: Operamos tu pipeline, tus leads, tu seguimiento y tu retención — mes a mes. Si algo se rompe, lo arreglamos. Si tu equipo cambia, entrenamos al nuevo.
+          - generic [ref=e837]:
+            - paragraph [ref=e838]: "\"No te vendemos un proyecto. Te vendemos un equipo que opera tu comercial sin pedirte ayuda.\""
+            - link "Empezar con el Radar gratis" [ref=e840] [cursor=pointer]:
+              - /url: /v2/radar
+              - button "Empezar con el Radar gratis" [ref=e841]:
+                - text: Empezar con el Radar gratis
+                - img [ref=e842]
+      - generic [ref=e846]:
+        - generic [ref=e847]:
+          - generic [ref=e849]: Cómo operamos juntos
+          - heading "Una cadencia que mantiene todo en movimiento." [level=2] [ref=e850]:
+            - text: Una cadencia que mantiene
+            - emphasis [ref=e851]: todo en movimiento.
+          - paragraph [ref=e852]: No implementamos y desaparecemos. Tenemos una estructura de trabajo semanal, mensual y diaria — para que nada se trabe sin que alguien lo atienda.
+        - generic [ref=e855]:
+          - generic [ref=e856]:
+            - img [ref=e860]
+            - paragraph [ref=e863]: Cada semana
+            - paragraph [ref=e864]: 30 minutos.
+            - paragraph [ref=e865]: Reunión de 30 minutos. Revisamos qué se trabó y lo ajustamos. Nada acumula.
+            - paragraph [ref=e866]: No esperamos al mes para saber que algo falló.
+          - generic [ref=e867]:
+            - img [ref=e871]
+            - paragraph [ref=e872]: Cada mes
+            - paragraph [ref=e873]: 3 métricas — no 40.
+            - paragraph [ref=e874]: Reporte claro de pipeline, conversión y retención. Solo las métricas que mueven decisiones.
+            - paragraph [ref=e875]: Sin dashboards de 40 KPIs que nadie lee.
+          - generic [ref=e876]:
+            - img [ref=e880]
+            - paragraph [ref=e882]: Cada día
+            - paragraph [ref=e883]: Estamos disponibles.
+            - paragraph [ref=e884]: Si algo se rompe o hay una oportunidad, no esperas a la otra semana. Respondemos hoy.
+            - paragraph [ref=e885]: Por Slack, WhatsApp o email — como funcione para ti.
+        - generic [ref=e886]:
+          - img [ref=e888]
+          - generic [ref=e890]:
+            - paragraph [ref=e891]: Todo queda documentado.
+            - paragraph [ref=e892]: Si alguien se va de tu equipo, el conocimiento no se va con ellos. El proceso, los playbooks y la historia quedan en tu operación — no en la cabeza de una persona.
+      - generic [ref=e895]:
+        - generic [ref=e896]:
+          - generic [ref=e897]: En operación
+          - heading "Empresas reales, números reales." [level=2] [ref=e898]:
+            - text: Empresas reales,
+            - emphasis [ref=e899]: números reales
+            - text: .
+          - paragraph [ref=e900]: No es un benchmark de industria. Es lo que pasó cuando estos equipos cambiaron de cementerio de datos a motor de revenue.
+        - generic [ref=e901]:
+          - link "Agencia de viajes corporativos MasterViajes Migramos su operación de WhatsApp disperso a un CRM unificado. El equipo comercial dejó de pelearse por leads y empezó a cerrarlos. 3.2× Leads a cliente −40% CAC 8h/sem Ahorro por rep Leer caso completo" [ref=e902] [cursor=pointer]:
+            - /url: /casos/master-viajes
+            - generic [ref=e904]:
+              - generic [ref=e905]: Agencia de viajes corporativos
+              - heading "MasterViajes" [level=3] [ref=e906]
+              - paragraph [ref=e907]: Migramos su operación de WhatsApp disperso a un CRM unificado. El equipo comercial dejó de pelearse por leads y empezó a cerrarlos.
+              - generic [ref=e908]:
+                - generic [ref=e909]:
+                  - generic [ref=e910]: 3.2×
+                  - generic [ref=e911]: Leads a cliente
+                - generic [ref=e912]:
+                  - generic [ref=e913]: −40%
+                  - generic [ref=e914]: CAC
+                - generic [ref=e915]:
+                  - generic [ref=e916]: 8h/sem
+                  - generic [ref=e917]: Ahorro por rep
+              - generic [ref=e918]:
+                - text: Leer caso completo
+                - img [ref=e919]
+          - link "Educación internacional Student Travel Center Construimos el sistema operativo de revenue desde cero. Hoy procesan 6× más aplicaciones con el mismo equipo — sin contratar a nadie. 6× Aplicaciones procesadas 85% Reducción admin 0 Leads perdidos Leer caso completo" [ref=e921] [cursor=pointer]:
+            - /url: /casos/student-travel-center
+            - generic [ref=e923]:
+              - generic [ref=e924]: Educación internacional
+              - heading "Student Travel Center" [level=3] [ref=e925]
+              - paragraph [ref=e926]: Construimos el sistema operativo de revenue desde cero. Hoy procesan 6× más aplicaciones con el mismo equipo — sin contratar a nadie.
+              - generic [ref=e927]:
+                - generic [ref=e928]:
+                  - generic [ref=e929]: 6×
+                  - generic [ref=e930]: Aplicaciones procesadas
+                - generic [ref=e931]:
+                  - generic [ref=e932]: 85%
+                  - generic [ref=e933]: Reducción admin
+                - generic [ref=e934]:
+                  - generic [ref=e935]: "0"
+                  - generic [ref=e936]: Leads perdidos
+              - generic [ref=e937]:
+                - text: Leer caso completo
+                - img [ref=e938]
+        - link "Ver todos los casos" [ref=e941] [cursor=pointer]:
+          - /url: /v2/casos
+          - text: Ver todos los casos
+          - img [ref=e942]
+      - generic [ref=e946]:
+        - generic [ref=e947]:
+          - generic [ref=e948]: Voces que importan
+          - heading "Lo que dicen los founders." [level=2] [ref=e949]:
+            - text: Lo que dicen los
+            - emphasis [ref=e950]: founders
+            - text: .
+        - generic [ref=e951]:
+          - article [ref=e952]:
+            - generic [ref=e953]: "\""
+            - paragraph [ref=e954]: Antes vivíamos en WhatsApp. Hoy todo el equipo opera desde el mismo tablero. Sixteam no nos vendió software, nos vendió método.
+            - generic [ref=e955]:
+              - generic [ref=e956]: JR
+              - generic [ref=e957]:
+                - generic [ref=e958]: Juan Restrepo
+                - generic [ref=e959]: Fundador · MasterViajes
+          - article [ref=e960]:
+            - generic [ref=e961]: "\""
+            - paragraph [ref=e962]: Pensé que necesitaba contratar un VP de Sales. Resultó que necesitaba operar bien el CRM que ya tenía. El ROI fue inmediato.
+            - generic [ref=e963]:
+              - generic [ref=e964]: MA
+              - generic [ref=e965]:
+                - generic [ref=e966]: María Acevedo
+                - generic [ref=e967]: CEO · Student Travel Center
+          - article [ref=e968]:
+            - generic [ref=e969]: "\""
+            - paragraph [ref=e970]: Lo distinto es que ellos operan, no solo configuran. Cada lunes llega el reporte sin que tenga que pedirlo. Eso vale oro.
+            - generic [ref=e971]:
+              - generic [ref=e972]: DC
+              - generic [ref=e973]:
+                - generic [ref=e974]: Diego Castillo
+                - generic [ref=e975]: COO · Empresa de servicios B2B
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - generic [ref=e980]: Asistente IA
+          - heading "Pregúntale a nuestro Asistente." [level=2] [ref=e981]:
+            - text: Pregúntale a nuestro
+            - emphasis [ref=e982]: Asistente.
+          - paragraph [ref=e983]: Respuestas inmediatas sobre CRM, automatización, IA y RevOps. Sin formularios, sin esperar a ventas.
+        - generic [ref=e984]:
+          - generic [ref=e985]:
+            - generic [ref=e986]:
+              - img [ref=e988]
+              - generic [ref=e991]:
+                - paragraph [ref=e992]: Asistente IA Sixteam
+                - generic [ref=e997]: En línea ahora
+              - generic [ref=e998]: IA
+            - generic [ref=e1001]:
+              - img [ref=e1003]
+              - generic [ref=e1006]:
+                - paragraph [ref=e1007]: ¡Hola! 👋 Dime tus problemas y te diré cómo te podríamos ayudar. Soy especialista en automatización, IA, CRM y procesos comerciales.
+                - paragraph [ref=e1008]: 14:25
+            - generic [ref=e1010]:
+              - button "¿Cómo puedo automatizar mi proceso de ventas?" [ref=e1011] [cursor=pointer]
+              - button "Necesito ayuda con mi CRM" [ref=e1012] [cursor=pointer]
+              - button "¿Qué es RevOps?" [ref=e1013] [cursor=pointer]
+            - generic [ref=e1014]:
+              - generic [ref=e1015]:
+                - generic [ref=e1016]:
+                  - textbox "Escribe tu pregunta..." [ref=e1017]
+                  - img [ref=e1018]
+                - button [disabled] [ref=e1020]:
+                  - img [ref=e1021]
+              - paragraph [ref=e1024]: Presiona Enter para enviar
+          - generic [ref=e1025]:
+            - generic [ref=e1026]:
+              - paragraph [ref=e1027]: Qué puedes preguntarle
+              - list [ref=e1028]:
+                - listitem [ref=e1029]:
+                  - generic [ref=e1030]: →
+                  - button "¿Cuánto cuesta implementar un CRM?" [ref=e1031] [cursor=pointer]
+                - listitem [ref=e1032]:
+                  - generic [ref=e1033]: →
+                  - button "¿Cuánto tiempo tarda la implementación?" [ref=e1034] [cursor=pointer]
+                - listitem [ref=e1035]:
+                  - generic [ref=e1036]: →
+                  - button "¿Qué pasa si mi equipo no adopta el sistema?" [ref=e1037] [cursor=pointer]
+                - listitem [ref=e1038]:
+                  - generic [ref=e1039]: →
+                  - button "¿Pueden integrarse con HubSpot / Salesforce?" [ref=e1040] [cursor=pointer]
+                - listitem [ref=e1041]:
+                  - generic [ref=e1042]: →
+                  - button "¿Cómo se diferencia Sixteam.pro de una agencia?" [ref=e1043] [cursor=pointer]
+            - generic [ref=e1044]:
+              - paragraph [ref=e1045]: ¿Prefieres hablar directo?
+              - paragraph [ref=e1046]: Si tienes una situación concreta que quieres discutir con un experto, agenda una llamada de 30 minutos sin costo.
+              - link "Agendar llamada gratis" [ref=e1047] [cursor=pointer]:
+                - /url: /v2/contacto
+                - button "Agendar llamada gratis" [ref=e1048]:
+                  - text: Agendar llamada gratis
+                  - img [ref=e1049]
+      - generic [ref=e1053]:
+        - generic [ref=e1054]:
+          - generic [ref=e1055]: Planes y Precios
+          - heading "Un equipo completo. Sin contratar." [level=2] [ref=e1056]:
+            - text: Un equipo completo.
+            - generic [ref=e1057]:
+              - emphasis [ref=e1059]: Sin contratar.
+              - img
+          - paragraph [ref=e1060]:
+            - text: Precio por operación continua. Sin contrato de permanencia. Empieza cuando el
+            - link "Radar gratis" [ref=e1061] [cursor=pointer]:
+              - /url: /v2/radar
+            - text: te indique cuál es tu punto de entrada.
+        - generic [ref=e1062]:
+          - generic [ref=e1063]: Mensual
+          - button "Toggle facturación anual" [ref=e1064] [cursor=pointer]
+          - generic [ref=e1066]: Anual
+        - generic [ref=e1067]:
+          - generic [ref=e1069]:
+            - generic [ref=e1070]:
+              - heading "Arranque" [level=3] [ref=e1071]
+              - generic [ref=e1072]:
+                - generic [ref=e1073]: $1,500
+                - generic [ref=e1074]: /mes
+              - paragraph [ref=e1075]: Una pieza del sistema. La fuga más urgente, primero — sin contratar.
+            - generic [ref=e1076]:
+              - generic [ref=e1077]:
+                - generic [ref=e1078]:
+                  - img [ref=e1079]
+                  - generic [ref=e1081]: Estrategia & Chat IA
+                - paragraph [ref=e1082]:
+                  - text: Acceso inmediato a
+                  - strong [ref=e1083]: Aura, Sam y tu equipo
+                  - text: para planificación, copy y estrategia.
+              - generic [ref=e1084]:
+                - generic [ref=e1085]:
+                  - img [ref=e1086]
+                  - generic [ref=e1089]: Agentes IA en producción
+                  - generic [ref=e1090]: Esencial
+                - paragraph [ref=e1091]: Operación de leads + follow-up. Para el frente más urgente.
+                - generic [ref=e1092]:
+                  - generic [ref=e1093]:
+                    - generic [ref=e1094]: A
+                    - generic [ref=e1095]:
+                      - strong [ref=e1096]: Aura
+                      - generic [ref=e1097]: (Concierge)
+                  - generic [ref=e1098]:
+                    - generic [ref=e1099]: C
+                    - generic [ref=e1100]:
+                      - strong [ref=e1101]: Carlos
+                      - generic [ref=e1102]: (CRM & Pipeline)
+                  - generic [ref=e1103]:
+                    - generic [ref=e1104]: L
+                    - generic [ref=e1105]:
+                      - strong [ref=e1106]: Laura
+                      - generic [ref=e1107]: (WhatsApp 24/7)
+              - generic [ref=e1108]:
+                - generic [ref=e1109]:
+                  - img [ref=e1110]
+                  - generic [ref=e1115]: Especialistas Humanos
+                - generic [ref=e1116]:
+                  - generic [ref=e1117]:
+                    - img [ref=e1118]
+                    - strong [ref=e1121]: 1 frente en operación a la vez
+                  - generic [ref=e1122]:
+                    - img [ref=e1123]
+                    - generic [ref=e1125]: Entregado en 2–4 días hábiles
+              - generic [ref=e1126]:
+                - generic [ref=e1127]:
+                  - img [ref=e1128]
+                  - generic [ref=e1132]: Plataforma Incluida (opcional)
+                - generic [ref=e1133]:
+                  - generic [ref=e1134]:
+                    - img [ref=e1135]
+                    - generic [ref=e1137]:
+                      - strong [ref=e1138]: Plataforma CRM all-in-one
+                      - text: (valor $97/mes) — CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
+                  - generic [ref=e1139]:
+                    - img [ref=e1140]
+                    - generic [ref=e1142]:
+                      - strong [ref=e1143]: $30/mes Wallet de mensajería
+                      - text: — Cubrimos tus primeros $30 de SMS, email y llamadas.
+              - generic [ref=e1144]:
+                - link "Empezar con Arranque" [ref=e1145] [cursor=pointer]:
+                  - /url: /v2/radar
+                  - button "Empezar con Arranque" [ref=e1146]:
+                    - text: Empezar con Arranque
+                    - img [ref=e1147]
+                - generic [ref=e1149]:
+                  - img [ref=e1150]
+                  - link "Garantía 30 días money-back" [ref=e1152] [cursor=pointer]:
+                    - /url: /v2/radar
+          - generic [ref=e1153]:
+            - generic [ref=e1155]: MEJOR VALOR (3× CAPACIDAD)
+            - generic [ref=e1156]:
+              - generic [ref=e1157]:
+                - heading "Core" [level=3] [ref=e1158]
+                - generic [ref=e1159]:
+                  - generic [ref=e1160]: $3,000
+                  - generic [ref=e1161]: /mes
+                - paragraph [ref=e1162]: El punto óptimo para empresas que crecen. 3 frentes operando en paralelo — sin levantar un dedo.
+              - generic [ref=e1163]:
+                - generic [ref=e1164]:
+                  - generic [ref=e1165]:
+                    - img [ref=e1166]
+                    - generic [ref=e1168]: Estrategia & Chat IA
+                  - paragraph [ref=e1169]:
+                    - text: Acceso inmediato a
+                    - strong [ref=e1170]: Aura, Sam y tu equipo
+                    - text: para planificación, copy y estrategia.
+                - generic [ref=e1171]:
+                  - generic [ref=e1172]:
+                    - img [ref=e1173]
+                    - generic [ref=e1176]: Agentes IA en producción
+                    - generic [ref=e1177]: Estándar
+                  - paragraph [ref=e1178]: Operación multi-canal (CRM + WhatsApp + Email) funcionando en paralelo.
+                  - generic [ref=e1179]:
+                    - generic [ref=e1180]:
+                      - generic [ref=e1181]: A
+                      - generic [ref=e1182]:
+                        - strong [ref=e1183]: Aura
+                        - generic [ref=e1184]: (Concierge)
+                    - generic [ref=e1185]:
+                      - generic [ref=e1186]: C
+                      - generic [ref=e1187]:
+                        - strong [ref=e1188]: Carlos
+                        - generic [ref=e1189]: (CRM & Pipeline)
+                    - generic [ref=e1190]:
+                      - generic [ref=e1191]: L
+                      - generic [ref=e1192]:
+                        - strong [ref=e1193]: Laura
+                        - generic [ref=e1194]: (WhatsApp 24/7)
+                - generic [ref=e1195]:
+                  - generic [ref=e1196]:
+                    - img [ref=e1197]
+                    - generic [ref=e1202]: Especialistas Humanos
+                  - generic [ref=e1203]:
+                    - generic [ref=e1204]:
+                      - img [ref=e1205]
+                      - strong [ref=e1208]: 3 frentes en operación a la vez
+                    - paragraph [ref=e1209]: 3× capacidad de Arranque
+                    - generic [ref=e1210]:
+                      - img [ref=e1211]
+                      - generic [ref=e1213]: Entregado en 2–4 días hábiles
+                - generic [ref=e1214]:
+                  - generic [ref=e1215]:
+                    - img [ref=e1216]
+                    - generic [ref=e1220]: Bono Onboarding VIP
+                  - generic [ref=e1221]:
+                    - generic [ref=e1222]:
+                      - img [ref=e1223]
+                      - generic [ref=e1225]: Llamada de estrategia 1:1 — mapea tus primeros 90 días
+                    - generic [ref=e1226]:
+                      - img [ref=e1227]
+                      - generic [ref=e1229]: Setup completo de marca/sistema hecho por nosotros
+                    - generic [ref=e1230]:
+                      - img [ref=e1231]
+                      - generic [ref=e1233]: Primeros 3 frentes fast-track (1–2 días de entrega)
+                  - generic [ref=e1235]:
+                    - text: ⏱ Disponible esta semana · Vence en
+                    - strong [ref=e1236]: 153h 34m 41s
+                - generic [ref=e1237]:
+                  - generic [ref=e1238]:
+                    - img [ref=e1239]
+                    - generic [ref=e1243]: Plataforma Incluida (opcional)
+                  - generic [ref=e1244]:
+                    - generic [ref=e1245]:
+                      - img [ref=e1246]
+                      - generic [ref=e1248]:
+                        - strong [ref=e1249]: Plataforma CRM all-in-one
+                        - text: (valor $97/mes) — CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
+                    - generic [ref=e1250]:
+                      - img [ref=e1251]
+                      - generic [ref=e1253]:
+                        - strong [ref=e1254]: $30/mes Wallet de mensajería
+                        - text: — Cubrimos tus primeros $30 de SMS, email y llamadas.
+                - generic [ref=e1255]:
+                  - link "Empezar con Core" [ref=e1256] [cursor=pointer]:
+                    - /url: /v2/radar
+                    - button "Empezar con Core" [ref=e1257]:
+                      - text: Empezar con Core
+                      - img [ref=e1258]
+                  - generic [ref=e1260]:
+                    - img [ref=e1261]
+                    - link "Garantía 30 días money-back" [ref=e1263] [cursor=pointer]:
+                      - /url: /v2/radar
+          - generic [ref=e1264]:
+            - generic [ref=e1266]: SERVICIO DEDICADO
+            - generic [ref=e1267]:
+              - generic [ref=e1268]:
+                - heading "Plus" [level=3] [ref=e1269]
+                - generic [ref=e1270]:
+                  - generic [ref=e1271]: $5,500
+                  - generic [ref=e1272]: /mes
+                - paragraph [ref=e1273]: Un departamento de RevOps completo — con PM dedicado y llamada semanal de estrategia.
+              - generic [ref=e1274]:
+                - generic [ref=e1275]:
+                  - generic [ref=e1276]:
+                    - img [ref=e1277]
+                    - generic [ref=e1279]: Estrategia & Chat IA
+                  - paragraph [ref=e1280]:
+                    - text: Acceso inmediato a
+                    - strong [ref=e1281]: Aura, Sam y tu equipo
+                    - text: para planificación, copy y estrategia.
+                - generic [ref=e1282]:
+                  - generic [ref=e1283]:
+                    - img [ref=e1284]
+                    - generic [ref=e1287]: Agentes IA en producción
+                    - generic [ref=e1288]: Alto Volumen
+                  - paragraph [ref=e1289]: Operación multi-área, alto volumen, para empresas de mayor escala.
+                  - generic [ref=e1290]:
+                    - generic [ref=e1291]:
+                      - generic [ref=e1292]: A
+                      - generic [ref=e1293]:
+                        - strong [ref=e1294]: Aura
+                        - generic [ref=e1295]: (Concierge)
+                    - generic [ref=e1296]:
+                      - generic [ref=e1297]: C
+                      - generic [ref=e1298]:
+                        - strong [ref=e1299]: Carlos
+                        - generic [ref=e1300]: (CRM & Pipeline)
+                    - generic [ref=e1301]:
+                      - generic [ref=e1302]: L
+                      - generic [ref=e1303]:
+                        - strong [ref=e1304]: Laura
+                        - generic [ref=e1305]: (WhatsApp 24/7)
+                - generic [ref=e1306]:
+                  - generic [ref=e1307]:
+                    - img [ref=e1308]
+                    - generic [ref=e1313]: Especialistas Humanos
+                  - generic [ref=e1314]:
+                    - generic [ref=e1315]:
+                      - img [ref=e1316]
+                      - strong [ref=e1319]: 5 frentes en operación a la vez
+                    - generic [ref=e1320]:
+                      - img [ref=e1321]
+                      - generic [ref=e1323]:
+                        - strong [ref=e1324]: PM Dedicado
+                        - text: en tu workflow
+                    - generic [ref=e1325]:
+                      - img [ref=e1326]
+                      - generic [ref=e1328]: Respuesta prioritaria 1–3 días
+                    - generic [ref=e1329]:
+                      - img [ref=e1330]
+                      - generic [ref=e1332]:
+                        - strong [ref=e1333]: Llamada 1:1 semanal
+                        - text: de estrategia
+                - generic [ref=e1334]:
+                  - generic [ref=e1335]:
+                    - img [ref=e1336]
+                    - generic [ref=e1340]: Plataforma Incluida (opcional)
+                  - generic [ref=e1341]:
+                    - generic [ref=e1342]:
+                      - img [ref=e1343]
+                      - generic [ref=e1345]:
+                        - strong [ref=e1346]: Plataforma CRM all-in-one
+                        - text: (valor $97/mes) — CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
+                    - generic [ref=e1347]:
+                      - img [ref=e1348]
+                      - generic [ref=e1350]:
+                        - strong [ref=e1351]: $30/mes Wallet de mensajería
+                        - text: — Cubrimos tus primeros $30 de SMS, email y llamadas.
+                - generic [ref=e1352]:
+                  - link "Empezar con Plus" [ref=e1353] [cursor=pointer]:
+                    - /url: /v2/radar
+                    - button "Empezar con Plus" [ref=e1354]:
+                      - text: Empezar con Plus
+                      - img [ref=e1355]
+                  - generic [ref=e1357]:
+                    - img [ref=e1358]
+                    - link "Garantía 30 días money-back" [ref=e1360] [cursor=pointer]:
+                      - /url: /v2/radar
+        - generic [ref=e1362]:
+          - generic [ref=e1363]:
+            - paragraph [ref=e1364]: Punto de entrada recomendado
+            - heading "Diagnóstico Sixteam" [level=3] [ref=e1365]
+            - paragraph [ref=e1366]:
+              - text: Mapeo agéntico de tu operación + roadmap cuantificado.
+              - strong [ref=e1367]: $2,500 USD
+              - text: one-time — el ~50% convierte a suscripción.
+          - link "Solicitar Diagnóstico" [ref=e1369] [cursor=pointer]:
+            - /url: /v2/radar
+            - button "Solicitar Diagnóstico" [ref=e1370]:
+              - text: Solicitar Diagnóstico
+              - img [ref=e1371]
+        - paragraph [ref=e1373]: Todos los planes incluyen Radar gratis previo · Sin contrato de permanencia · Factura mensual
+      - generic [ref=e1377]:
+        - generic [ref=e1378]:
+          - generic [ref=e1379]: Preguntas frecuentes
+          - heading "Lo que siempre nos preguntan." [level=2] [ref=e1380]:
+            - text: Lo que
+            - emphasis [ref=e1381]: siempre
+            - text: nos preguntan.
+          - paragraph [ref=e1382]: ¿No ves tu pregunta? Escríbenos por WhatsApp y te respondemos el mismo día.
+          - link "Hablar con un experto" [ref=e1384] [cursor=pointer]:
+            - /url: /v2/contacto
+            - button "Hablar con un experto" [ref=e1385]:
+              - text: Hablar con un experto
+              - img [ref=e1386]
+          - generic [ref=e1388]:
+            - paragraph [ref=e1389]: "\"Si después de 48h te queda solo el diagnóstico y nos dices que no, nos quedamos amigos.\""
+            - paragraph [ref=e1390]: — Equipo Sixteam.pro
+        - generic [ref=e1392]:
+          - heading "¿Cuánto tiempo toma ver resultados?" [level=3] [ref=e1394]:
+            - button "¿Cuánto tiempo toma ver resultados?" [ref=e1395] [cursor=pointer]:
+              - text: ¿Cuánto tiempo toma ver resultados?
+              - img [ref=e1396]
+          - heading "¿Trabajan solo con HubSpot o también con otros CRMs?" [level=3] [ref=e1399]:
+            - button "¿Trabajan solo con HubSpot o también con otros CRMs?" [ref=e1400] [cursor=pointer]:
+              - text: ¿Trabajan solo con HubSpot o también con otros CRMs?
+              - img [ref=e1401]
+          - heading "¿Qué pasa si ya tengo otra agencia o un consultor?" [level=3] [ref=e1404]:
+            - button "¿Qué pasa si ya tengo otra agencia o un consultor?" [ref=e1405] [cursor=pointer]:
+              - text: ¿Qué pasa si ya tengo otra agencia o un consultor?
+              - img [ref=e1406]
+          - heading "¿Necesito un equipo técnico interno para trabajar con ustedes?" [level=3] [ref=e1409]:
+            - button "¿Necesito un equipo técnico interno para trabajar con ustedes?" [ref=e1410] [cursor=pointer]:
+              - text: ¿Necesito un equipo técnico interno para trabajar con ustedes?
+              - img [ref=e1411]
+          - heading "¿Cuánto invierto y cómo se factura?" [level=3] [ref=e1414]:
+            - button "¿Cuánto invierto y cómo se factura?" [ref=e1415] [cursor=pointer]:
+              - text: ¿Cuánto invierto y cómo se factura?
+              - img [ref=e1416]
+          - heading "¿Qué incluye el Radar gratis?" [level=3] [ref=e1419]:
+            - button "¿Qué incluye el Radar gratis?" [ref=e1420] [cursor=pointer]:
+              - text: ¿Qué incluye el Radar gratis?
+              - img [ref=e1421]
+      - generic [ref=e1425]:
+        - generic [ref=e1427]: Empieza por aquí
+        - heading "Tu CRM se merece algo mejor que ser un cementerio." [level=2] [ref=e1428]:
+          - text: Tu CRM se merece
+          - generic [ref=e1429]:
+            - emphasis [ref=e1431]: algo mejor
+            - img
+          - text: que ser un cementerio.
+        - paragraph [ref=e1432]: Empieza con el Radar gratis. 48 horas para saber dónde está la fuga de revenue. Sin venta, sin compromiso, sin propuesta de 30 páginas.
+        - generic [ref=e1433]:
+          - link "Hacer mi auditoría gratis" [ref=e1434] [cursor=pointer]:
+            - /url: /v2/radar
+            - button "Hacer mi auditoría gratis" [ref=e1435]:
+              - text: Hacer mi auditoría gratis
+              - img [ref=e1436]
+          - link "Agendar llamada de 30 min" [ref=e1438] [cursor=pointer]:
+            - /url: /v2/contacto
+            - button "Agendar llamada de 30 min" [ref=e1439]
+        - paragraph [ref=e1440]: "\"Si después de 48h te queda solo el diagnóstico y nos dices que no, nos quedamos amigos.\""
+    - contentinfo [ref=e1441]:
+      - generic [ref=e1442]:
+        - generic [ref=e1443]:
+          - generic [ref=e1444]:
+            - link "Sixteam.pro" [ref=e1445] [cursor=pointer]:
+              - /url: /v2
+              - generic [ref=e1446]: Sixteam.pro
+            - paragraph [ref=e1447]: El motor de Revenue invisible en tu empresa.
+            - paragraph [ref=e1448]: Diseñamos, operamos y evolucionamos sistemas de Revenue Operations para empresas que ya pasaron de la idea al ingreso real.
+            - generic [ref=e1449]:
+              - link "hola@sixteam.pro" [ref=e1450] [cursor=pointer]:
+                - /url: mailto:hola@sixteam.pro
+                - text: hola@sixteam.pro
+                - img [ref=e1451]
+              - link "WhatsApp +57 300 418 8522" [ref=e1454] [cursor=pointer]:
+                - /url: https://wa.me/573004188522
+                - text: WhatsApp +57 300 418 8522
+                - img [ref=e1455]
+          - generic [ref=e1458]:
+            - heading "Servicios" [level=4] [ref=e1459]
+            - list [ref=e1460]:
+              - listitem [ref=e1461]:
+                - link "CRM Ventas" [ref=e1462] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-ventas
+              - listitem [ref=e1463]:
+                - link "CRM Atención" [ref=e1464] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-atencion
+              - listitem [ref=e1465]:
+                - link "CRM Marketing" [ref=e1466] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-marketing
+              - listitem [ref=e1467]:
+                - link "Chatbot IA" [ref=e1468] [cursor=pointer]:
+                  - /url: /v2/servicios/chatbot-ia
+              - listitem [ref=e1469]:
+                - link "Soporte & Operaciones" [ref=e1470] [cursor=pointer]:
+                  - /url: /v2/servicios/soporte-operaciones
+          - generic [ref=e1471]:
+            - heading "Compañía" [level=4] [ref=e1472]
+            - list [ref=e1473]:
+              - listitem [ref=e1474]:
+                - link "Cómo funciona" [ref=e1475] [cursor=pointer]:
+                  - /url: /v2/como-funciona
+              - listitem [ref=e1476]:
+                - link "Soluciones" [ref=e1477] [cursor=pointer]:
+                  - /url: /v2/soluciones
+              - listitem [ref=e1478]:
+                - link "Nosotros" [ref=e1479] [cursor=pointer]:
+                  - /url: /v2/nosotros
+              - listitem [ref=e1480]:
+                - link "Casos de éxito" [ref=e1481] [cursor=pointer]:
+                  - /url: /v2/casos
+              - listitem [ref=e1482]:
+                - link "Radar gratis" [ref=e1483] [cursor=pointer]:
+                  - /url: /v2/radar
+          - generic [ref=e1484]:
+            - heading "Legal" [level=4] [ref=e1485]
+            - list [ref=e1486]:
+              - listitem [ref=e1487]:
+                - link "Política de privacidad" [ref=e1488] [cursor=pointer]:
+                  - /url: /politicas
+              - listitem [ref=e1489]:
+                - link "Términos & condiciones" [ref=e1490] [cursor=pointer]:
+                  - /url: /terminos
+        - generic [ref=e1491]:
+          - paragraph [ref=e1492]: © 2026 Sixteam.pro · Colombia & Latam · Hecho con método.
+          - paragraph [ref=e1493]: Process + Technology + People = Growth

@@ -1,0 +1,826 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "Automation Agency" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Automation Agency" [ref=e8]
+        - generic [ref=e9]:
+          - link "How It Works" [ref=e10] [cursor=pointer]:
+            - /url: /how-it-works
+            - text: How It Works
+          - link "Meet Your Team" [ref=e11] [cursor=pointer]:
+            - /url: /team
+            - text: Meet Your Team
+          - link "Pricing" [ref=e12] [cursor=pointer]:
+            - /url: /pricing
+            - text: Pricing
+          - link "About" [ref=e14] [cursor=pointer]:
+            - /url: /about
+            - text: About
+          - link "Login" [ref=e15] [cursor=pointer]:
+            - /url: https://portal.automationagency.com
+          - link "Get Started" [ref=e16] [cursor=pointer]:
+            - /url: /pricing
+            - button "Get Started" [ref=e17]:
+              - text: Get Started
+              - img
+    - main [ref=e18]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Marketing That Just Gets Done." [level=1] [ref=e23]
+          - paragraph [ref=e24]: Your AI team handles the everyday stuff instantly. Human specialists tackle the complex projects. You focus on growing your business.
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - button "Monthly" [ref=e27]:
+              - generic [ref=e28]: Monthly
+            - button "Annually 2 Months Free" [ref=e29]:
+              - generic [ref=e30]: Annually
+              - generic [ref=e31]: 2 Months Free
+          - paragraph [ref=e32]: All plans billed in USD
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - generic [ref=e39]: VIP Onboarding Bonus
+            - generic [ref=e40]: Valued at $1,500
+          - paragraph [ref=e41]:
+            - text: Sign up for Delegate in the next
+            - generic [ref=e42]: 1 day, 19 hrs
+            - text: and your onboarding is on us
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]: "1"
+              - generic [ref=e46]: day
+            - generic [ref=e47]:
+              - generic [ref=e48]: "19"
+              - generic [ref=e49]: hrs
+            - generic [ref=e50]:
+              - generic [ref=e51]: "59"
+              - generic [ref=e52]: min
+            - generic [ref=e53]:
+              - generic [ref=e54]: "44"
+              - generic [ref=e55]: sec
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - img [ref=e58]
+              - text: 1:1 Strategy Call
+            - generic [ref=e60]:
+              - img [ref=e61]
+              - text: Done-for-You Brand Setup
+            - generic [ref=e67]:
+              - img [ref=e68]
+              - text: First 3 Tasks Fast-Tracked
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - heading "Assist" [level=3] [ref=e74]
+              - generic [ref=e75]:
+                - generic [ref=e76]: $249
+                - generic [ref=e77]: /month
+              - paragraph [ref=e78]: Perfect for solopreneurs who need daily content and light marketing support without hiring.
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - img [ref=e81]
+                - generic [ref=e89]: Unlimited Strategy & Chat
+              - paragraph [ref=e90]: Instant access to Alex, Clara, & Sam for planning, copy, and strategy.
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - generic "Light Capacity" [ref=e93]
+                - generic [ref=e97]: AI Creative Output
+                - generic [ref=e98]: Starter
+              - paragraph [ref=e99]: A few graphics or short videos daily — perfect for social posts and light content.
+              - generic [ref=e100]:
+                - generic [ref=e102]:
+                  - img [ref=e103]
+                  - generic [ref=e105]: Debbie
+                  - generic [ref=e106]: (Designer)
+                - generic [ref=e108]:
+                  - img [ref=e109]
+                  - generic [ref=e112]: Vinnie
+                  - generic [ref=e113]: (Video Editor)
+                - generic [ref=e115]:
+                  - img [ref=e116]
+                  - generic [ref=e121]: Sally
+                  - generic [ref=e122]: (Social Mgr)
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - img [ref=e125]
+                - generic [ref=e130]: Human Specialists
+              - list [ref=e131]:
+                - listitem [ref=e132]:
+                  - img [ref=e133]
+                  - generic [ref=e135]: 1 request in progress at a time
+                - listitem [ref=e136]:
+                  - img [ref=e137]
+                  - generic [ref=e139]: Delivered in 2–4 business days
+            - generic [ref=e140]:
+              - generic [ref=e142]: Included Platform (Optional)
+              - list [ref=e143]:
+                - listitem [ref=e144]:
+                  - img [ref=e145]
+                  - generic [ref=e147]:
+                    - generic [ref=e148]: "All-in-One Marketing Platform (Value: $97/mo)"
+                    - text: CRM, funnels, email, and automations — powered by GoHighLevel. Use it or bring your own tools.
+                - listitem [ref=e149]:
+                  - generic [ref=e150]: 🎁
+                  - generic [ref=e151]:
+                    - generic [ref=e152]: $30/mo Messaging Wallet
+                    - text: We cover your first $30 of SMS, email, and phone costs.
+            - generic [ref=e153]:
+              - link "Start Assist" [ref=e154] [cursor=pointer]:
+                - /url: https://origin-prod.automationagency.com/#/signup?plan_id=CONCIERGE-SOLO-249-USD
+                - button "Start Assist" [ref=e155]
+              - generic [ref=e156]:
+                - img [ref=e157]
+                - generic [ref=e160]: 30-Day Money-Back Guarantee
+          - generic [ref=e161]:
+            - generic [ref=e162]: Best Value (3x Capacity)
+            - generic [ref=e163]:
+              - heading "Delegate" [level=3] [ref=e164]
+              - generic [ref=e165]:
+                - generic [ref=e166]: $499
+                - generic [ref=e167]: /month
+              - paragraph [ref=e168]: The sweet spot for growing businesses — enough AI and human power to run your marketing without lifting a finger.
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - img [ref=e171]
+                - generic [ref=e179]: Unlimited Strategy & Chat
+              - paragraph [ref=e180]: Instant access to Alex, Clara, & Sam for planning, copy, and strategy.
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - generic "Standard Capacity" [ref=e183]
+                - generic [ref=e187]: AI Creative Output
+                - generic [ref=e188]: Standard
+              - paragraph [ref=e189]: Regular graphics, videos, and campaign assets daily — enough for standard marketing needs.
+              - generic [ref=e190]:
+                - generic [ref=e192]:
+                  - img [ref=e193]
+                  - generic [ref=e195]: Debbie
+                  - generic [ref=e196]: (Designer)
+                - generic [ref=e198]:
+                  - img [ref=e199]
+                  - generic [ref=e202]: Vinnie
+                  - generic [ref=e203]: (Video Editor)
+                - generic [ref=e205]:
+                  - img [ref=e206]
+                  - generic [ref=e211]: Sally
+                  - generic [ref=e212]: (Social Mgr)
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - img [ref=e215]
+                - generic [ref=e220]: Human Specialists
+              - list [ref=e221]:
+                - listitem [ref=e222]:
+                  - img [ref=e223]
+                  - generic [ref=e225]:
+                    - generic [ref=e226]: 3 requests in progress at a time
+                    - text: 3x Capacity of Assist
+                - listitem [ref=e227]:
+                  - img [ref=e228]
+                  - generic [ref=e230]: Delivered in 2–4 business days
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - img [ref=e233]
+                - generic [ref=e237]: VIP Onboarding Bonus
+              - list [ref=e238]:
+                - listitem [ref=e239]:
+                  - img [ref=e240]
+                  - generic [ref=e242]: 1:1 Strategy Call — map your first 90 days
+                - listitem [ref=e243]:
+                  - img [ref=e244]
+                  - generic [ref=e246]: Done-for-you brand setup (voice, logos, assets)
+                - listitem [ref=e247]:
+                  - img [ref=e248]
+                  - generic [ref=e250]: First 3 tasks fast-tracked (1–2 day turnaround)
+              - generic [ref=e251]:
+                - img [ref=e252]
+                - generic [ref=e255]: Offer ends in 1 day, 19 hrs, 59 min
+            - generic [ref=e256]:
+              - generic [ref=e258]: Included Platform (Optional)
+              - list [ref=e259]:
+                - listitem [ref=e260]:
+                  - img [ref=e261]
+                  - generic [ref=e263]:
+                    - generic [ref=e264]: "All-in-One Marketing Platform (Value: $97/mo)"
+                    - text: CRM, funnels, email, and automations — powered by GoHighLevel. Use it or bring your own tools.
+                - listitem [ref=e265]:
+                  - generic [ref=e266]: 🎁
+                  - generic [ref=e267]:
+                    - generic [ref=e268]: $30/mo Messaging Wallet
+                    - text: We cover your first $30 of SMS, email, and phone costs.
+            - generic [ref=e269]:
+              - link "Start Delegate" [ref=e270] [cursor=pointer]:
+                - /url: https://origin-prod.automationagency.com/#/signup?plan_id=CONCIERGE-DELEGATE-MONTHLY-450-USD
+                - button "Start Delegate" [ref=e271]
+              - generic [ref=e272]:
+                - img [ref=e273]
+                - generic [ref=e276]: 30-Day Money-Back Guarantee
+          - generic [ref=e277]:
+            - generic [ref=e278]: White Glove Service
+            - generic [ref=e279]:
+              - heading "Elevate" [level=3] [ref=e280]
+              - generic [ref=e281]:
+                - generic [ref=e282]: $1495
+                - generic [ref=e283]: /month
+              - paragraph [ref=e284]: A full marketing department — AI and human — with a dedicated project manager and weekly strategy calls.
+            - generic [ref=e285]:
+              - generic [ref=e286]:
+                - img [ref=e287]
+                - generic [ref=e295]: Unlimited Strategy & Chat
+              - paragraph [ref=e296]: Instant access to Alex, Clara, & Sam for planning, copy, and strategy.
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - generic "Power User Capacity" [ref=e299]
+                - generic [ref=e303]: AI Creative Output
+                - generic [ref=e304]: High Volume
+              - paragraph [ref=e305]: Heavy graphics, video, and content production daily — built for high-volume marketing.
+              - generic [ref=e306]:
+                - generic [ref=e308]:
+                  - img [ref=e309]
+                  - generic [ref=e311]: Debbie
+                  - generic [ref=e312]: (Designer)
+                - generic [ref=e314]:
+                  - img [ref=e315]
+                  - generic [ref=e318]: Vinnie
+                  - generic [ref=e319]: (Video Editor)
+                - generic [ref=e321]:
+                  - img [ref=e322]
+                  - generic [ref=e327]: Sally
+                  - generic [ref=e328]: (Social Mgr)
+            - generic [ref=e329]:
+              - generic [ref=e330]:
+                - img [ref=e331]
+                - generic [ref=e336]: Strategic Partner
+              - list [ref=e337]:
+                - listitem [ref=e338]:
+                  - img [ref=e339]
+                  - generic [ref=e341]: 5 requests in progress at a time
+                - listitem [ref=e342]:
+                  - img [ref=e343]
+                  - generic [ref=e345]: Designated Human Project Manager
+                - listitem [ref=e346]:
+                  - img [ref=e347]
+                  - generic [ref=e349]: Priority 1–3 day turnaround
+            - generic [ref=e350]:
+              - generic [ref=e352]: Included Platform (Optional)
+              - list [ref=e353]:
+                - listitem [ref=e354]:
+                  - img [ref=e355]
+                  - generic [ref=e357]:
+                    - generic [ref=e358]: "All-in-One Marketing Platform (Value: $97/mo)"
+                    - text: CRM, funnels, email, and automations — powered by GoHighLevel. Use it or bring your own tools.
+                - listitem [ref=e359]:
+                  - generic [ref=e360]: 🎁
+                  - generic [ref=e361]:
+                    - generic [ref=e362]: $30/mo Messaging Wallet
+                    - text: We cover your first $30 of SMS, email, and phone costs.
+            - generic [ref=e363]:
+              - button "Start Elevate" [ref=e364] [cursor=pointer]
+              - generic [ref=e365]:
+                - img [ref=e366]
+                - generic [ref=e369]: 30-Day Money-Back Guarantee
+        - paragraph [ref=e371]: "How it works in practice: Your AI team handles the everyday stuff instantly — copy, graphics, social posts, strategy. You save your human specialist slots for complex projects that need a real expert's touch."
+        - heading "👇 View Optional Power-Ups & Add-Ons" [level=3] [ref=e374] [cursor=pointer]:
+          - text: 👇 View Optional Power-Ups & Add-Ons
+          - img [ref=e375]
+        - generic [ref=e378]:
+          - generic [ref=e379]:
+            - heading "Why Choose Us?" [level=2] [ref=e380]
+            - paragraph [ref=e381]: See how the Hybrid Model stacks up against the alternatives.
+          - table [ref=e383]:
+            - rowgroup [ref=e384]:
+              - row "🟠 Automation Agency 🛠️ DIY (The \"App Stack\" Trap) 🌏 Full-Time VA (Overseas) 🏢 Traditional Agency" [ref=e385]:
+                - columnheader [ref=e386]
+                - columnheader "🟠 Automation Agency" [ref=e387]:
+                  - generic [ref=e388]:
+                    - generic [ref=e390]: 🟠
+                    - generic [ref=e391]: Automation Agency
+                - columnheader "🛠️ DIY (The \"App Stack\" Trap)" [ref=e392]:
+                  - generic [ref=e393]:
+                    - generic [ref=e394]: 🛠️
+                    - generic [ref=e395]:
+                      - text: DIY
+                      - text: (The "App Stack" Trap)
+                - columnheader "🌏 Full-Time VA (Overseas)" [ref=e396]:
+                  - generic [ref=e397]:
+                    - generic [ref=e398]: 🌏
+                    - generic [ref=e399]:
+                      - text: Full-Time VA
+                      - text: (Overseas)
+                - columnheader "🏢 Traditional Agency" [ref=e400]:
+                  - generic [ref=e401]:
+                    - generic [ref=e402]: 🏢
+                    - generic [ref=e403]: Traditional Agency
+            - rowgroup [ref=e404]:
+              - row "The \"Real\" Cost Flat Monthly Rate (Predictable & All-in-one) Subscription Fatigue ($29 here, $49 there... it adds up to hundreds fast) $600 - $1,500 /mo (+ tools, training, bonuses & babysitting) $3,000 - $10,000 /mo (High retainers & long contracts)" [ref=e405]:
+                - cell "The \"Real\" Cost" [ref=e406]
+                - cell "Flat Monthly Rate (Predictable & All-in-one)" [ref=e407]:
+                  - generic [ref=e408]: Flat Monthly Rate
+                  - text: (Predictable & All-in-one)
+                - cell "Subscription Fatigue ($29 here, $49 there... it adds up to hundreds fast)" [ref=e409]:
+                  - generic [ref=e410]: Subscription Fatigue
+                  - text: ($29 here, $49 there... it adds up to hundreds fast)
+                - cell "$600 - $1,500 /mo (+ tools, training, bonuses & babysitting)" [ref=e411]:
+                  - generic [ref=e412]: $600 - $1,500 /mo
+                  - text: (+ tools, training, bonuses & babysitting)
+                - cell "$3,000 - $10,000 /mo (High retainers & long contracts)" [ref=e413]:
+                  - generic [ref=e414]: $3,000 - $10,000 /mo
+                  - text: (High retainers & long contracts)
+              - row "Who does the work? AI + Human Experts (We prompt, polish, & deliver) You do it all (You are the writer, editor, and tech support) Junior Generalist (Requires constant guidance from you) Senior Team (Great quality, but you pay for their overhead)" [ref=e415]:
+                - cell "Who does the work?" [ref=e416]
+                - cell "AI + Human Experts (We prompt, polish, & deliver)" [ref=e417]:
+                  - generic [ref=e418]: AI + Human Experts
+                  - text: (We prompt, polish, & deliver)
+                - cell "You do it all (You are the writer, editor, and tech support)" [ref=e419]:
+                  - generic [ref=e420]: You do it all
+                  - text: (You are the writer, editor, and tech support)
+                - cell "Junior Generalist (Requires constant guidance from you)" [ref=e421]:
+                  - generic [ref=e422]: Junior Generalist
+                  - text: (Requires constant guidance from you)
+                - cell "Senior Team (Great quality, but you pay for their overhead)" [ref=e423]:
+                  - generic [ref=e424]: Senior Team
+                  - text: (Great quality, but you pay for their overhead)
+              - row "Learning Curve Zero (Just tell us what you need) Never Ending (Every tool works differently and updates weekly) High (You must teach them how to use the tools) Low (They handle it, but slowly)" [ref=e425]:
+                - cell "Learning Curve" [ref=e426]
+                - cell "Zero (Just tell us what you need)" [ref=e427]:
+                  - generic [ref=e428]: Zero
+                  - text: (Just tell us what you need)
+                - cell "Never Ending (Every tool works differently and updates weekly)" [ref=e429]:
+                  - generic [ref=e430]: Never Ending
+                  - text: (Every tool works differently and updates weekly)
+                - cell "High (You must teach them how to use the tools)" [ref=e431]:
+                  - generic [ref=e432]: High
+                  - text: (You must teach them how to use the tools)
+                - cell "Low (They handle it, but slowly)" [ref=e433]:
+                  - generic [ref=e434]: Low
+                  - text: (They handle it, but slowly)
+              - row "The Workflow All In One Place (One team, one dashboard) Disjointed Chaos (Copy-pasting between 10 different tabs) Manual (Human error in moving data) Siloed (They hold the keys, not you)" [ref=e435]:
+                - cell "The Workflow" [ref=e436]
+                - cell "All In One Place (One team, one dashboard)" [ref=e437]:
+                  - generic [ref=e438]: All In One Place
+                  - text: (One team, one dashboard)
+                - cell "Disjointed Chaos (Copy-pasting between 10 different tabs)" [ref=e439]:
+                  - generic [ref=e440]: Disjointed Chaos
+                  - text: (Copy-pasting between 10 different tabs)
+                - cell "Manual (Human error in moving data)" [ref=e441]:
+                  - generic [ref=e442]: Manual
+                  - text: (Human error in moving data)
+                - cell "Siloed (They hold the keys, not you)" [ref=e443]:
+                  - generic [ref=e444]: Siloed
+                  - text: (They hold the keys, not you)
+              - row "Reliability Systemized (Redundancy built-in) Distracting (Easy to get lost tweaking settings instead of working) Single Point of Failure (Sick days, power outages, ghosting) High (But generally slower)" [ref=e445]:
+                - cell "Reliability" [ref=e446]
+                - cell "Systemized (Redundancy built-in)" [ref=e447]:
+                  - generic [ref=e448]: Systemized
+                  - text: (Redundancy built-in)
+                - cell "Distracting (Easy to get lost tweaking settings instead of working)" [ref=e449]:
+                  - generic [ref=e450]: Distracting
+                  - text: (Easy to get lost tweaking settings instead of working)
+                - cell "Single Point of Failure (Sick days, power outages, ghosting)" [ref=e451]:
+                  - generic [ref=e452]: Single Point of Failure
+                  - text: (Sick days, power outages, ghosting)
+                - cell "High (But generally slower)" [ref=e453]:
+                  - generic [ref=e454]: High
+                  - text: (But generally slower)
+      - generic [ref=e457]:
+        - generic [ref=e458]:
+          - generic [ref=e459]: 698,000+
+          - generic [ref=e460]: Tasks Completed
+        - generic [ref=e461]:
+          - generic [ref=e462]: 1,025+
+          - generic [ref=e463]: Happy Businesses
+        - generic [ref=e464]:
+          - generic [ref=e465]: Since 2014
+          - generic [ref=e466]: Industry Experience
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - generic [ref=e469]: "4.5"
+            - img [ref=e470]
+          - link "Trustpilot Rating" [ref=e473] [cursor=pointer]:
+            - /url: https://au.trustpilot.com/review/automationagency.com
+      - generic [ref=e476]:
+        - generic [ref=e477]:
+          - generic [ref=e478]:
+            - img [ref=e479]
+            - img [ref=e481]
+            - img [ref=e483]
+            - img [ref=e485]
+            - img [ref=e487]
+          - paragraph [ref=e489]: "\"Bang for buck, speed and quality of service - you can't beat Automation Agency. I've hired people on upwork, fiverr, freelancers and tried quite a few services... nothing compares to Automation Agency.\""
+          - generic [ref=e490]:
+            - paragraph [ref=e491]: David Jenyns
+            - paragraph [ref=e492]: Trustpilot Review
+        - generic [ref=e493]:
+          - generic [ref=e494]:
+            - img [ref=e495]
+            - img [ref=e497]
+            - img [ref=e499]
+            - img [ref=e501]
+            - img [ref=e503]
+          - paragraph [ref=e505]: "\"Game changer! We've been with AA for about 4 years. They've played a massive part in the growth of our business. Reliable and produce quality work.\""
+          - generic [ref=e506]:
+            - paragraph [ref=e507]: Nick Fitzpatrick
+            - paragraph [ref=e508]: 4 Year Client
+        - generic [ref=e509]:
+          - generic [ref=e510]:
+            - img [ref=e511]
+            - img [ref=e513]
+            - img [ref=e515]
+            - img [ref=e517]
+            - img [ref=e519]
+          - paragraph [ref=e521]: "\"Automation Agency has been stellar. The quality of work and talent of their team is beyond my expectations. They have truly helped take a heavy work load off of my plate.\""
+          - generic [ref=e522]:
+            - paragraph [ref=e523]: Francesca Kober Sauls
+            - paragraph [ref=e524]: Business Scaled
+      - generic [ref=e526]:
+        - generic [ref=e527]:
+          - heading "Compare Plans" [level=2] [ref=e528]
+          - paragraph [ref=e529]: Detailed breakdown of features and capacity.
+        - table [ref=e531]:
+          - rowgroup [ref=e532]:
+            - row "Feature Category Assist $249/mo Delegate $499/mo Elevate $1495/mo" [ref=e533]:
+              - columnheader "Feature Category" [ref=e534]
+              - columnheader "Assist $249/mo" [ref=e535]:
+                - generic [ref=e536]: Assist
+                - generic [ref=e537]: $249/mo
+              - columnheader "Delegate $499/mo" [ref=e538]:
+                - generic [ref=e539]: Delegate
+                - generic [ref=e540]: $499/mo
+              - columnheader "Elevate $1495/mo" [ref=e541]:
+                - generic [ref=e542]: Elevate
+                - generic [ref=e543]: $1495/mo
+          - rowgroup [ref=e544]:
+            - row "The AI Team (Unlimited)" [ref=e545]:
+              - cell "The AI Team (Unlimited)" [ref=e546]
+            - row "Strategy & Chat (Alex, Sam) Unlimited Unlimited Unlimited" [ref=e547]:
+              - cell "Strategy & Chat (Alex, Sam)" [ref=e548]
+              - cell "Unlimited" [ref=e549]:
+                - img [ref=e550]
+                - text: Unlimited
+              - cell "Unlimited" [ref=e552]:
+                - img [ref=e553]
+                - text: Unlimited
+              - cell "Unlimited" [ref=e555]:
+                - img [ref=e556]
+                - text: Unlimited
+            - row "Copywriting (Clara) Unlimited Unlimited Unlimited" [ref=e558]:
+              - cell "Copywriting (Clara)" [ref=e559]
+              - cell "Unlimited" [ref=e560]:
+                - img [ref=e561]
+                - text: Unlimited
+              - cell "Unlimited" [ref=e563]:
+                - img [ref=e564]
+                - text: Unlimited
+              - cell "Unlimited" [ref=e566]:
+                - img [ref=e567]
+                - text: Unlimited
+            - row "AI Execution Capacity" [ref=e569]:
+              - cell "AI Execution Capacity" [ref=e570]
+            - row "Design & Video (Debbie/Vinnie) Light Use Capacity (Daily social posts) Standard Capacity (Campaign assets) Power User Capacity (High volume)" [ref=e571]:
+              - cell "Design & Video (Debbie/Vinnie)" [ref=e572]
+              - cell "Light Use Capacity (Daily social posts)" [ref=e573]:
+                - generic [ref=e574]: Light Use Capacity
+                - text: (Daily social posts)
+              - cell "Standard Capacity (Campaign assets)" [ref=e575]:
+                - generic [ref=e576]: Standard Capacity
+                - text: (Campaign assets)
+              - cell "Power User Capacity (High volume)" [ref=e577]:
+                - generic [ref=e578]: Power User Capacity
+                - text: (High volume)
+            - row "Social Media Mgmt (Sally) Daily Posting (One platform) Strategic Campaigns (Multi-platform) Multi-Channel Growth (High volume)" [ref=e579]:
+              - cell "Social Media Mgmt (Sally)" [ref=e580]
+              - cell "Daily Posting (One platform)" [ref=e581]:
+                - generic [ref=e582]: Daily Posting
+                - text: (One platform)
+              - cell "Strategic Campaigns (Multi-platform)" [ref=e583]:
+                - generic [ref=e584]: Strategic Campaigns
+                - text: (Multi-platform)
+              - cell "Multi-Channel Growth (High volume)" [ref=e585]:
+                - generic [ref=e586]: Multi-Channel Growth
+                - text: (High volume)
+            - row "Proactive Analysis Not Included Included Included" [ref=e587]:
+              - cell "Proactive Analysis" [ref=e588]
+              - cell "Not Included" [ref=e589]:
+                - img [ref=e590]
+                - text: Not Included
+              - cell "Included" [ref=e593]:
+                - img [ref=e594]
+                - text: Included
+              - cell "Included" [ref=e596]:
+                - img [ref=e597]
+                - text: Included
+            - row "Human Specialists" [ref=e599]:
+              - cell "Human Specialists" [ref=e600]
+            - row "Active Task Capacity 1 Task 3 Tasks 5 Tasks" [ref=e601]:
+              - cell "Active Task Capacity" [ref=e602]
+              - cell "1 Task" [ref=e603]
+              - cell "3 Tasks" [ref=e604]
+              - cell "5 Tasks" [ref=e605]
+            - row "Turnaround Time 2–4 Business Days 2–4 Business Days Priority 1–3 Days" [ref=e606]:
+              - cell "Turnaround Time" [ref=e607]
+              - cell "2–4 Business Days" [ref=e608]
+              - cell "2–4 Business Days" [ref=e609]
+              - cell "Priority 1–3 Days" [ref=e610]
+            - row "Dedicated Project Manager (Self-Managed) (Self-Managed) Dedicated PM (Integrated into your workflow)" [ref=e611]:
+              - cell "Dedicated Project Manager" [ref=e612]
+              - cell "(Self-Managed)" [ref=e613]:
+                - img [ref=e614]
+                - text: (Self-Managed)
+              - cell "(Self-Managed)" [ref=e617]:
+                - img [ref=e618]
+                - text: (Self-Managed)
+              - cell "Dedicated PM (Integrated into your workflow)" [ref=e621]:
+                - generic [ref=e622]:
+                  - img [ref=e623]
+                  - text: Dedicated PM
+                - text: (Integrated into your workflow)
+            - row "Strategy & Support" [ref=e625]:
+              - cell "Strategy & Support" [ref=e626]
+            - row "Strategy Calls Via \"Automation Lab\" Add-on Via \"Automation Lab\" Add-on Weekly 1:1 Calls" [ref=e627]:
+              - cell "Strategy Calls" [ref=e628]
+              - cell "Via \"Automation Lab\" Add-on" [ref=e629]
+              - cell "Via \"Automation Lab\" Add-on" [ref=e630]
+              - cell "Weekly 1:1 Calls" [ref=e631]:
+                - img [ref=e632]
+                - text: Weekly 1:1 Calls
+            - row "Support Channel Email & AI Chat Email & AI Chat Your Preferred App (Slack, Teams, WhatsApp, etc.)" [ref=e634]:
+              - cell "Support Channel" [ref=e635]
+              - cell "Email & AI Chat" [ref=e636]
+              - cell "Email & AI Chat" [ref=e637]
+              - cell "Your Preferred App (Slack, Teams, WhatsApp, etc.)" [ref=e638]:
+                - generic [ref=e639]: Your Preferred App
+                - text: (Slack, Teams, WhatsApp, etc.)
+            - row "Onboarding 1:1 Kickoff Call + 30-Day Check-in 1:1 Kickoff Call + 30-Day Check-in 1:1 Kickoff Call + 30-Day Check-in" [ref=e640]:
+              - cell "Onboarding" [ref=e641]
+              - cell "1:1 Kickoff Call + 30-Day Check-in" [ref=e642]:
+                - text: 1:1 Kickoff Call
+                - text: + 30-Day Check-in
+              - cell "1:1 Kickoff Call + 30-Day Check-in" [ref=e643]:
+                - text: 1:1 Kickoff Call
+                - text: + 30-Day Check-in
+              - cell "1:1 Kickoff Call + 30-Day Check-in" [ref=e644]:
+                - text: 1:1 Kickoff Call
+                - text: + 30-Day Check-in
+            - row "Technology" [ref=e645]:
+              - cell "Technology" [ref=e646]
+            - row "GoHighLevel Platform Included ($97 Value) Included ($97 Value) Included ($97 Value)" [ref=e647]:
+              - cell "GoHighLevel Platform" [ref=e648]
+              - cell "Included ($97 Value)" [ref=e649]:
+                - img [ref=e650]
+                - text: Included ($97 Value)
+              - cell "Included ($97 Value)" [ref=e652]:
+                - img [ref=e653]
+                - text: Included ($97 Value)
+              - cell "Included ($97 Value)" [ref=e655]:
+                - img [ref=e656]
+                - text: Included ($97 Value)
+            - row "SMS/Email Wallet $30/mo Credit $30/mo Credit $30/mo Credit" [ref=e658]:
+              - cell "SMS/Email Wallet" [ref=e659]
+              - cell "$30/mo Credit" [ref=e660]
+              - cell "$30/mo Credit" [ref=e661]
+              - cell "$30/mo Credit" [ref=e662]
+            - row [ref=e663]:
+              - cell [ref=e664]
+              - cell [ref=e665]
+              - cell [ref=e666]
+              - cell [ref=e667]
+      - generic [ref=e670]:
+        - generic [ref=e671]:
+          - img "Carl Taylor, Founder of Automation Agency" [ref=e673]
+          - generic [ref=e674]:
+            - heading "Carl Taylor" [level=3] [ref=e675]
+            - paragraph [ref=e676]: Founder
+        - generic [ref=e677]:
+          - generic: "\""
+          - paragraph [ref=e678]: Listen to the nudge
+          - generic [ref=e679]:
+            - paragraph [ref=e680]: If you've found yourself here—scrolling through these plans and weighing the options—it's not a coincidence.
+            - paragraph [ref=e681]: "It's happening because your inner voice is finally being honest with you: You can't keep doing this alone. You are exhausted from being the bottleneck, and you're ready for your business to move faster than your own two hands can carry it."
+            - paragraph [ref=e682]: When you feel that slight pull toward one of these plans, that's not a "sales pitch" working—that's your intuition telling you it's time to breathe. It wants you to focus on the big ideas while Automation Agency handles the execution.
+            - paragraph [ref=e683]: It knows that "doing it yourself" is actually costing you more than any of these plans ever will.
+            - paragraph [ref=e684]: Don't silence that nudge. Choose the path that feels most aligned with where you want to go, and let's start executing.
+      - generic [ref=e686]:
+        - generic [ref=e687]:
+          - heading "Frequently Asked Questions" [level=2] [ref=e688]
+          - paragraph [ref=e689]: Everything you need to know about getting started.
+        - generic [ref=e691]:
+          - heading "What does my AI team actually do?" [level=3] [ref=e693]:
+            - button "What does my AI team actually do?" [ref=e694]:
+              - text: What does my AI team actually do?
+              - img [ref=e695]
+          - heading "When does my work get done by AI vs. a human specialist?" [level=3] [ref=e698]:
+            - button "When does my work get done by AI vs. a human specialist?" [ref=e699]:
+              - text: When does my work get done by AI vs. a human specialist?
+              - img [ref=e700]
+          - heading "Can I use my own software and tools?" [level=3] [ref=e703]:
+            - button "Can I use my own software and tools?" [ref=e704]:
+              - text: Can I use my own software and tools?
+              - img [ref=e705]
+          - heading "What if I don't like the work?" [level=3] [ref=e708]:
+            - button "What if I don't like the work?" [ref=e709]:
+              - text: What if I don't like the work?
+              - img [ref=e710]
+          - heading "Is there a contract?" [level=3] [ref=e713]:
+            - button "Is there a contract?" [ref=e714]:
+              - text: Is there a contract?
+              - img [ref=e715]
+      - generic [ref=e719]:
+        - img [ref=e721]
+        - heading "30-Day Money-Back Guarantee" [level=2] [ref=e724]
+        - generic [ref=e725]:
+          - paragraph [ref=e726]: We offer a 30-day money-back guarantee — because it's been working for 1,000+ businesses since 2014.
+          - paragraph [ref=e727]: Once you experience the speed of AI + the quality of human experts, you won't want to go back to the old way.
+          - paragraph [ref=e728]: But if for any reason you're not thrilled within the first 30 days, simply let us know and we'll refund 100% of your investment.
+        - generic [ref=e729]:
+          - generic [ref=e730]:
+            - img [ref=e731]
+            - text: Proven by 1,000+ Businesses
+          - generic [ref=e733]:
+            - img [ref=e734]
+            - text: Since 2014
+        - link "See what our customers say" [ref=e737] [cursor=pointer]:
+          - /url: /customers
+          - text: See what our customers say
+          - img [ref=e738]
+      - generic [ref=e742]:
+        - heading "Need a Website First?" [level=2] [ref=e743]
+        - paragraph [ref=e744]: If you don't have a website yet, our Kickstart projects can get you set up with a professional WordPress site before you start your Concierge membership.
+        - link "Learn About Kickstart Projects" [ref=e745] [cursor=pointer]:
+          - /url: /kickstart-kit
+          - button "Learn About Kickstart Projects" [ref=e746]:
+            - text: Learn About Kickstart Projects
+            - img
+    - contentinfo [ref=e747]:
+      - generic [ref=e748]:
+        - generic [ref=e749]:
+          - generic [ref=e750]:
+            - generic [ref=e751]:
+              - img "Automation Agency logo" [ref=e752]
+              - generic [ref=e753]: Automation Agency
+            - paragraph [ref=e754]: Your AI + Human hybrid marketing team. Execute faster, smarter, and better.
+          - generic [ref=e755]:
+            - heading "Product" [level=4] [ref=e756]
+            - list [ref=e757]:
+              - listitem [ref=e758]:
+                - link "How It Works" [ref=e759] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=e760]:
+                - link "Capabilities" [ref=e761] [cursor=pointer]:
+                  - /url: /capabilities
+              - listitem [ref=e762]:
+                - link "Kickstart Kits" [ref=e763] [cursor=pointer]:
+                  - /url: /kickstart-kit
+              - listitem [ref=e764]:
+                - link "Meet the Team" [ref=e765] [cursor=pointer]:
+                  - /url: /team
+              - listitem [ref=e766]:
+                - link "Pricing" [ref=e767] [cursor=pointer]:
+                  - /url: /pricing
+          - generic [ref=e768]:
+            - heading "Capabilities" [level=4] [ref=e769]
+            - list [ref=e770]:
+              - listitem [ref=e771]:
+                - link "Graphic Design" [ref=e772] [cursor=pointer]:
+                  - /url: /capabilities/graphic-design
+              - listitem [ref=e773]:
+                - link "Video Editing" [ref=e774] [cursor=pointer]:
+                  - /url: /capabilities/video-editing
+              - listitem [ref=e775]:
+                - link "Copywriting" [ref=e776] [cursor=pointer]:
+                  - /url: /capabilities/copywriting
+              - listitem [ref=e777]:
+                - link "Marketing Automation" [ref=e778] [cursor=pointer]:
+                  - /url: /capabilities/marketing-automation
+              - listitem [ref=e779]:
+                - link "Marketing Strategy" [ref=e780] [cursor=pointer]:
+                  - /url: /capabilities/strategy
+              - listitem [ref=e781]:
+                - link "Social Media" [ref=e782] [cursor=pointer]:
+                  - /url: /capabilities/social-media
+              - listitem [ref=e783]:
+                - link "Website Development" [ref=e784] [cursor=pointer]:
+                  - /url: /capabilities/website-development
+              - listitem [ref=e785]:
+                - link "Project Management" [ref=e786] [cursor=pointer]:
+                  - /url: /capabilities/project-management
+          - generic [ref=e787]:
+            - heading "Industries" [level=4] [ref=e788]
+            - list [ref=e789]:
+              - listitem [ref=e790]:
+                - link "Coaches & Speakers" [ref=e791] [cursor=pointer]:
+                  - /url: /for/coaches
+              - listitem [ref=e792]:
+                - link "Content Creators" [ref=e793] [cursor=pointer]:
+                  - /url: /for/creators
+              - listitem [ref=e794]:
+                - link "Agencies & Consultants" [ref=e795] [cursor=pointer]:
+                  - /url: /for/agencies
+              - listitem [ref=e796]:
+                - link "Accountants & Advisors" [ref=e797] [cursor=pointer]:
+                  - /url: /for/accountants
+              - listitem [ref=e798]:
+                - link "Service Businesses" [ref=e799] [cursor=pointer]:
+                  - /url: /for/service-businesses
+              - listitem [ref=e800]:
+                - link "Real Estate & Property" [ref=e801] [cursor=pointer]:
+                  - /url: /for/real-estate
+              - listitem [ref=e802]:
+                - link "Health Practitioners" [ref=e803] [cursor=pointer]:
+                  - /url: /for/health-practitioners
+              - listitem [ref=e804]:
+                - link "Dental Practices" [ref=e805] [cursor=pointer]:
+                  - /url: /for/dental
+              - listitem [ref=e806]:
+                - link "Trades & Home Services" [ref=e807] [cursor=pointer]:
+                  - /url: /for/trades
+              - listitem [ref=e808]:
+                - link "View All Industries →" [ref=e809] [cursor=pointer]:
+                  - /url: /for
+          - generic [ref=e810]:
+            - heading "Platform Expertise" [level=4] [ref=e811]
+            - list [ref=e812]:
+              - listitem [ref=e813]:
+                - link "GoHighLevel" [ref=e814] [cursor=pointer]:
+                  - /url: /platforms/gohighlevel
+              - listitem [ref=e815]:
+                - link "ActiveCampaign" [ref=e816] [cursor=pointer]:
+                  - /url: /platforms/activecampaign
+              - listitem [ref=e817]:
+                - link "Keap" [ref=e818] [cursor=pointer]:
+                  - /url: /platforms/keap
+              - listitem [ref=e819]:
+                - link "Mailchimp" [ref=e820] [cursor=pointer]:
+                  - /url: /platforms/mailchimp
+              - listitem [ref=e821]:
+                - link "Zapier" [ref=e822] [cursor=pointer]:
+                  - /url: /platforms/zapier
+              - listitem [ref=e823]:
+                - link "Make" [ref=e824] [cursor=pointer]:
+                  - /url: /platforms/make
+              - listitem [ref=e825]:
+                - link "View All Platforms →" [ref=e826] [cursor=pointer]:
+                  - /url: /supported-platforms
+          - generic [ref=e827]:
+            - heading "Company" [level=4] [ref=e828]
+            - list [ref=e829]:
+              - listitem [ref=e830]:
+                - link "About Us" [ref=e831] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e832]:
+                - link "Customer Stories" [ref=e833] [cursor=pointer]:
+                  - /url: /customers
+              - listitem [ref=e834]:
+                - link "Blog" [ref=e835] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e836]:
+                - link "Partner Program" [ref=e837] [cursor=pointer]:
+                  - /url: /affiliate
+              - listitem [ref=e838]:
+                - link "Creator Program" [ref=e839] [cursor=pointer]:
+                  - /url: /creator-program
+              - listitem [ref=e840]:
+                - link "Free Tools" [ref=e841] [cursor=pointer]:
+                  - /url: /tools
+              - listitem [ref=e842]:
+                - link "Contact" [ref=e843] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e844]:
+            - heading "Legal" [level=4] [ref=e845]
+            - list [ref=e846]:
+              - listitem [ref=e847]:
+                - link "Privacy Policy" [ref=e848] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e849]:
+                - link "Terms of Service" [ref=e850] [cursor=pointer]:
+                  - /url: /terms-of-service
+              - listitem [ref=e851]:
+                - link "Fair Usage Policy" [ref=e852] [cursor=pointer]:
+                  - /url: /fair-usage
+              - listitem [ref=e853]:
+                - link "Cookie Policy" [ref=e854] [cursor=pointer]:
+                  - /url: /cookie-policy
+        - generic [ref=e855]:
+          - paragraph [ref=e856]: © 2026 Automation Agency. All rights reserved.
+          - generic [ref=e857]:
+            - link "YouTube" [ref=e858] [cursor=pointer]:
+              - /url: https://www.youtube.com/@Automationagency
+              - img [ref=e859]
+            - link "Facebook" [ref=e861] [cursor=pointer]:
+              - /url: https://www.facebook.com/automationagency/
+              - img [ref=e862]
+            - link "X (Twitter)" [ref=e864] [cursor=pointer]:
+              - /url: https://twitter.com/automationagenc
+              - img [ref=e865]
+            - link "LinkedIn" [ref=e867] [cursor=pointer]:
+              - /url: https://au.linkedin.com/company/automation-agency
+              - img [ref=e868]
+            - link "Instagram" [ref=e870] [cursor=pointer]:
+              - /url: https://www.instagram.com/automationagency/
+              - img [ref=e871]
+          - link "Client Login" [ref=e874] [cursor=pointer]:
+            - /url: https://portal.automationagency.com
+            - button "Client Login" [ref=e875]:
+              - img
+              - text: Client Login

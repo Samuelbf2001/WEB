@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'poppins': ['Poppins', 'sans-serif'], // Para títulos
 				'lato': ['Lato', 'sans-serif'], // Para párrafos y texto general
+				'serif': ['"Instrument Serif"', 'Georgia', 'serif'], // V2 — highlights en itálica
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -72,6 +73,28 @@ export default {
 					teal: 'hsl(var(--sixteam-teal))',
 					navy: 'hsl(var(--sixteam-navy))',
 					gray: 'hsl(var(--sixteam-gray))'
+				},
+				// Sixteam V2 — Boutique Intelligence (light theme)
+				v2: {
+					surface: '#fdfcf8',
+					'surface-alt': '#f4f3ee',
+					'surface-cream': '#faf9f5',
+					'surface-white': '#ffffff',
+					'surface-navy-mist': '#f4f6f8',
+					'surface-teal-mist': '#ecf7f5',
+					'surface-sand-mist': '#f7f3e8',
+					'ink-heading': '#0a2342',
+					'ink-body': '#334155',
+					'ink-muted': '#74777e',
+					'ink-inverse': '#faf9f5',
+					'accent-teal': '#00bfa5',
+					'accent-teal-deep': '#009b86',
+					'accent-blue': '#1d70a2',
+					'accent-blue-soft': '#768baf',
+					'accent-sand': '#d4c9a8',
+					'accent-sand-soft': '#f0ead8',
+					'border-subtle': 'rgba(10, 35, 66, 0.08)',
+					'border-medium': 'rgba(10, 35, 66, 0.16)',
 				}
 			},
 			borderRadius: {

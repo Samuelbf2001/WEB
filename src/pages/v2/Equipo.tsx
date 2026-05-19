@@ -8,6 +8,15 @@ import {
   Zap,
   BarChart2,
   Check,
+  Search,
+  RefreshCw,
+  Bell,
+  Target,
+  Calendar,
+  TrendingUp,
+  Filter,
+  Send,
+  Activity,
 } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
@@ -20,34 +29,100 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const aiAgents = [
   {
+    icon: Search,
+    name: "Agente SDR",
+    tagline: "Primer contacto y calificación",
+    description:
+      "Identifica, contacta y califica prospectos con metodología BANT sin intervención humana.",
+    capabilities: [
+      "Calificación BANT automática por WhatsApp o email",
+      "Agenda reuniones directo al calendario del vendedor",
+      "Detecta señales de intención y prioriza el pipeline",
+      "Handoff instantáneo al humano cuando el lead está listo",
+    ],
+    tools: ["HubSpot", "WhatsApp API", "Google Calendar"],
+    color: "from-[#1d70a2]/20 to-[#00bfa5]/10",
+    borderColor: "hover:border-[#00bfa5]/50",
+  },
+  {
     icon: Mail,
-    name: "Agente de Email",
-    specialty: "Diseña, programa y envía campañas.",
+    name: "Agente de Nurturing",
+    tagline: "Secuencias que convierten",
+    description:
+      "Diseña, programa y optimiza secuencias de email personalizadas para cada etapa del funnel.",
+    capabilities: [
+      "Secuencias de bienvenida, follow-up y reactivación",
+      "A/B testing automático de asuntos y contenido",
+      "Pausa secuencias cuando el lead responde",
+      "Reporta tasas de apertura, clics y conversión",
+    ],
+    tools: ["Mailchimp", "ActiveCampaign", "Make.com"],
+    color: "from-[#1d70a2]/20 to-[#1d70a2]/5",
+    borderColor: "hover:border-[#1d70a2]/60",
   },
   {
     icon: MessageCircle,
-    name: "Agente de WhatsApp",
-    specialty: "Opera la bandeja, responde y escala.",
+    name: "Agente WhatsApp",
+    tagline: "Atención 24/7 sin pausas",
+    description:
+      "Opera la bandeja completa: responde, entiende contexto, escala a humano cuando es necesario.",
+    capabilities: [
+      "Responde FAQs con contexto de CRM en tiempo real",
+      "Gestiona agendas, reagendas y confirmaciones",
+      "Escala a humano con resumen de la conversación",
+      "Reporta mensajes sin respuesta y cuellos de botella",
+    ],
+    tools: ["WhatsApp Business API", "Twilio", "GHL"],
+    color: "from-[#00bfa5]/15 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#00bfa5]/50",
   },
   {
     icon: Database,
-    name: "Agente CRM",
-    specialty: "Limpia datos, enruta leads, actualiza el pipeline.",
-  },
-  {
-    icon: UserCheck,
-    name: "Agente de Calificación",
-    specialty: "Califica leads con BANT automáticamente.",
+    name: "Agente CRM Ops",
+    tagline: "Pipeline siempre limpio",
+    description:
+      "Mantiene el CRM ordenado, los datos consistentes y las etapas del pipeline actualizadas automáticamente.",
+    capabilities: [
+      "Limpia duplicados y normaliza campos de contacto",
+      "Mueve oportunidades según actividad real del lead",
+      "Crea tareas automáticas para el equipo de ventas",
+      "Alerta sobre deals sin actividad por más de X días",
+    ],
+    tools: ["HubSpot", "Salesforce", "Pipedrive"],
+    color: "from-[#0a5c78]/20 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#1d70a2]/50",
   },
   {
     icon: Zap,
-    name: "Agente de Automatización",
-    specialty: "Diseña y corre workflows.",
+    name: "Agente de Workflows",
+    tagline: "Automatizaciones sin código",
+    description:
+      "Diseña, ejecuta y monitora workflows entre todas tus herramientas. Sin errores, sin configuración manual.",
+    capabilities: [
+      "Conecta CRM, email, WhatsApp y calendario en un flujo",
+      "Detecta y repara errores de automatización proactivamente",
+      "Adapta workflows según cambios en el proceso del negocio",
+      "Documenta y versiona cada automatización activa",
+    ],
+    tools: ["Make.com", "n8n", "Zapier"],
+    color: "from-[#1d70a2]/15 to-[#00bfa5]/10",
+    borderColor: "hover:border-[#00bfa5]/40",
   },
   {
     icon: BarChart2,
-    name: "Agente de Reportes",
-    specialty: "Genera el reporte ejecutivo cada lunes.",
+    name: "Agente de Inteligencia",
+    tagline: "Decisiones basadas en datos",
+    description:
+      "Genera reportes ejecutivos, detecta anomalías y anticipa tendencias del pipeline cada semana.",
+    capabilities: [
+      "Reporte ejecutivo listo cada lunes a las 9am",
+      "Alerta cuando una métrica clave cae fuera del rango",
+      "Proyección de cierre del mes con datos reales",
+      "Identifica los canales y vendedores con mejor rendimiento",
+    ],
+    tools: ["Google Looker", "HubSpot Reports", "Slack"],
+    color: "from-[#7b5ea7]/15 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#7b5ea7]/50",
   },
 ];
 
@@ -118,8 +193,7 @@ const Equipo = () => {
             variant="teal"
             style={{
               opacity: 0,
-              transform: "translateY(12px)",
-              animation: "v2-hero-entry 0.5s ease forwards 0ms",
+              animation: "v2-fade-up 0.5s ease forwards 0ms",
             }}
           >
             Tu equipo externo
@@ -132,8 +206,7 @@ const Equipo = () => {
               lineHeight: "1.07",
               letterSpacing: "-0.02em",
               opacity: 0,
-              transform: "translateY(16px)",
-              animation: "v2-hero-entry 0.55s ease forwards 80ms",
+              animation: "v2-fade-up 0.55s ease forwards 80ms",
             }}
           >
             No contratas personas.{" "}
@@ -148,8 +221,7 @@ const Equipo = () => {
             className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[680px] mx-auto"
             style={{
               opacity: 0,
-              transform: "translateY(16px)",
-              animation: "v2-hero-entry 0.55s ease forwards 200ms",
+              animation: "v2-fade-up 0.55s ease forwards 200ms",
             }}
           >
             Desde el día uno tienes acceso a agentes de IA entrenados y expertos
@@ -161,8 +233,7 @@ const Equipo = () => {
             className="mt-10 flex flex-wrap gap-3 justify-center"
             style={{
               opacity: 0,
-              transform: "translateY(12px)",
-              animation: "v2-hero-entry 0.5s ease forwards 340ms",
+              animation: "v2-fade-up 0.5s ease forwards 340ms",
             }}
           >
             {[
@@ -206,37 +277,68 @@ const Equipo = () => {
                 Los agentes IA de tu cuenta
               </h2>
               <p className="v2-fade v2-d3 font-lato text-[17px] text-white/65 mt-4 leading-[1.65]">
-                Operan 24/7. No se enferman. No rotan. Mejoran cada semana.
+                Cada agente está especializado en una función crítica. Operan en paralelo,
+                se coordinan entre sí y mejoran cada semana.
               </p>
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {aiAgents.map((agent, i) => {
                 const Icon = agent.icon;
                 return (
                   <div
                     key={agent.name}
-                    className={`v2-reveal v2-d${Math.min(i + 2, 6)} group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-1 hover:border-v2-accent-teal/50 hover:shadow-[0_0_32px_rgba(0,191,165,0.12)] transition-[transform,border-color,box-shadow] duration-300`}
+                    className={`v2-reveal v2-d${Math.min(i + 2, 6)} group relative border border-white/10 rounded-2xl p-6 bg-gradient-to-br ${agent.color} ${agent.borderColor} hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(0,191,165,0.10)] transition-[transform,border-color,box-shadow] duration-300`}
                   >
-                    {/* Avatar */}
-                    <div className="w-12 h-12 rounded-xl bg-v2-accent-teal/15 border border-v2-accent-teal/25 flex items-center justify-center mb-5">
-                      <Icon className="h-5 w-5 text-v2-accent-teal" strokeWidth={1.8} />
+                    {/* Header row */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center">
+                        <Icon className="h-5 w-5 text-v2-accent-teal" strokeWidth={1.8} />
+                      </div>
+                      <div className="inline-flex items-center gap-1.5 bg-v2-accent-teal/10 border border-v2-accent-teal/20 rounded-full px-2.5 py-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-v2-accent-teal animate-pulse" />
+                        <span className="font-lato text-[10px] font-semibold uppercase tracking-widest text-v2-accent-teal">
+                          24/7
+                        </span>
+                      </div>
                     </div>
 
+                    {/* Name + tagline */}
                     <h3 className="font-poppins font-bold text-[17px] text-white leading-tight">
                       {agent.name}
                     </h3>
-                    <p className="font-lato text-[14px] text-white/60 mt-2 leading-[1.55]">
-                      {agent.specialty}
+                    <p className="font-lato text-[12px] font-semibold text-v2-accent-teal/80 uppercase tracking-wide mt-0.5">
+                      {agent.tagline}
+                    </p>
+                    <p className="font-lato text-[13.5px] text-white/55 mt-3 leading-[1.55]">
+                      {agent.description}
                     </p>
 
-                    {/* Badge */}
-                    <div className="mt-5 inline-flex items-center gap-1.5 bg-v2-accent-teal/10 border border-v2-accent-teal/20 rounded-full px-3 py-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-v2-accent-teal animate-pulse" />
-                      <span className="font-lato text-[11px] font-semibold uppercase tracking-widest text-v2-accent-teal">
-                        Disponible 24/7
-                      </span>
+                    {/* Capabilities */}
+                    <ul className="mt-4 flex flex-col gap-2">
+                      {agent.capabilities.map((cap) => (
+                        <li key={cap} className="flex items-start gap-2.5">
+                          <span className="mt-[3px] flex-shrink-0 w-4 h-4 rounded-full bg-v2-accent-teal/15 border border-v2-accent-teal/25 flex items-center justify-center">
+                            <Check className="h-2.5 w-2.5 text-v2-accent-teal" strokeWidth={2.5} />
+                          </span>
+                          <span className="font-lato text-[12.5px] text-white/70 leading-[1.5]">
+                            {cap}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Tools */}
+                    <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-1.5">
+                      {agent.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="font-lato text-[10.5px] font-semibold text-white/50 bg-white/5 border border-white/10 rounded-full px-2.5 py-0.5"
+                        >
+                          {tool}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 );
@@ -277,7 +379,6 @@ const Equipo = () => {
                   key={expert.name}
                   className={`v2-reveal v2-d${Math.min(i + 2, 6)} bg-white border border-v2-border-subtle rounded-2xl p-6 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,191,165,0.09)] transition-[transform,box-shadow] duration-300`}
                 >
-                  {/* Avatar circle with initials */}
                   <div
                     className={`w-14 h-14 rounded-full ${expert.color} flex items-center justify-center mb-5`}
                   >
@@ -293,7 +394,6 @@ const Equipo = () => {
                     {expert.role}
                   </p>
 
-                  {/* Tags */}
                   <div className="mt-4 flex flex-wrap gap-2">
                     {expert.tags.map((tag) => (
                       <span
@@ -385,7 +485,6 @@ const Equipo = () => {
 
       {/* ── Section 5 — CTA ── */}
       <Section surface="navy-dark" size="default" className="overflow-hidden">
-        {/* Aurora orb */}
         <div
           className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] opacity-15"
           style={{ background: "radial-gradient(ellipse, #00bfa5 0%, transparent 70%)" }}
@@ -395,18 +494,19 @@ const Equipo = () => {
         <Container size="narrow" className="relative text-center">
           <Eyebrow
             variant="teal"
-            style={{
-              opacity: 0,
-              transform: "translateY(12px)",
-              animation: "v2-hero-entry 0.5s ease forwards 0ms",
-            }}
+            style={{ opacity: 0, animation: "v2-fade-up 0.5s ease forwards 0ms" }}
           >
             Empieza hoy
           </Eyebrow>
 
           <h2
             className="font-poppins font-bold text-white mt-4"
-            style={{ fontSize: "clamp(28px, 4.5vw, 48px)", lineHeight: "1.12" }}
+            style={{
+              fontSize: "clamp(28px, 4.5vw, 48px)",
+              lineHeight: "1.12",
+              opacity: 0,
+              animation: "v2-fade-up 0.55s ease forwards 100ms",
+            }}
           >
             ¿Listo para{" "}
             <em className="font-serif italic font-normal text-v2-accent-teal">
@@ -415,12 +515,18 @@ const Equipo = () => {
             ?
           </h2>
 
-          <p className="font-lato text-[17px] text-white/65 mt-5 max-w-[500px] mx-auto leading-[1.65]">
+          <p
+            className="font-lato text-[17px] text-white/65 mt-5 max-w-[500px] mx-auto leading-[1.65]"
+            style={{ opacity: 0, animation: "v2-fade-up 0.5s ease forwards 200ms" }}
+          >
             Empieza con el Radar gratuito — en 48 horas sabes exactamente qué
             puede operar tu equipo desde el día uno.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+          <div
+            className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
+            style={{ opacity: 0, animation: "v2-fade-up 0.5s ease forwards 300ms" }}
+          >
             <Link to="/v2/radar">
               <ButtonV2 variant="primary" size="lg">
                 Radar gratis

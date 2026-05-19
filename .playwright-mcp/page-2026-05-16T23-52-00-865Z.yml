@@ -1,0 +1,125 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Foaster" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: Foaster
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8] [cursor=pointer]:
+            - text: Solutions
+            - img [ref=e9]
+          - generic:
+            - link "AI Transformation Assessment Map how your company works and where AI should change it.":
+              - /url: /solutions/ai-transformation-assessment
+              - generic: AI Transformation Assessment
+              - generic: Map how your company works and where AI should change it.
+            - link "Continuous AI Transformation Ongoing monthly support to drive adoption and monitor progress.":
+              - /url: /solutions/continuous-ai-transformation
+              - generic: Continuous AI Transformation
+              - generic: Ongoing monthly support to drive adoption and monitor progress.
+            - link "Enterprise Deployment Forward-deployed engineers and dedicated transformation team.":
+              - /url: /solutions/enterprise-deployment
+              - generic: Enterprise Deployment
+              - generic: Forward-deployed engineers and dedicated transformation team.
+        - link "How it works" [ref=e11] [cursor=pointer]:
+          - /url: /how-it-works
+        - link "Case study" [ref=e12] [cursor=pointer]:
+          - /url: /case-study
+        - generic [ref=e13]:
+          - generic [ref=e14] [cursor=pointer]:
+            - text: Resources
+            - img [ref=e15]
+          - generic:
+            - link "Blog Insights on AI transformation and operations.":
+              - /url: /blog
+              - generic: Blog
+              - generic: Insights on AI transformation and operations.
+            - link "Research Benchmarks and studies on AI model capabilities.":
+              - /url: /research
+              - generic: Research
+              - generic: Benchmarks and studies on AI model capabilities.
+        - link "About" [ref=e17] [cursor=pointer]:
+          - /url: /about
+        - link "Book a demo" [ref=e18] [cursor=pointer]:
+          - /url: /contact
+  - generic [ref=e19]:
+    - generic [ref=e20]: Case Study
+    - heading "How a 350-person company built its AI roadmap in 9 days" [level=1] [ref=e21]:
+      - text: How a 350-person company built its
+      - emphasis [ref=e22]: AI roadmap
+      - text: in 9 days
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - strong [ref=e25]: Industry
+        - text: Professional Services
+      - generic [ref=e26]:
+        - strong [ref=e27]: Employees
+        - text: 350 across 2 offices
+      - generic [ref=e28]:
+        - strong [ref=e29]: Duration
+        - text: 9 days
+      - generic [ref=e30]:
+        - strong [ref=e31]: Interviews
+        - text: 280 people
+  - img "Company overview" [ref=e33]
+  - generic [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e38]: The challenge
+      - heading "From strategic paralysis to operational clarity." [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: The company had grown to 350 employees across two offices. Leadership wanted to move on AI, but had no clear picture of where it would create the most value. Every team had different pain points, different tools, different levels of readiness.
+        - paragraph [ref=e42]: Without a structured way to assess the entire organization, identifying the real leverage points was impossible. They needed to understand how work actually happened before they could decide where AI should change it.
+    - img "Leadership discussion" [ref=e44]
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - generic [ref=e49]: "280"
+      - generic [ref=e50]: employees interviewed across 12 departments
+    - generic [ref=e51]:
+      - generic [ref=e52]: 1,200+
+      - generic [ref=e53]: processes mapped and assessed for transformation
+    - generic [ref=e54]:
+      - generic [ref=e55]: "8"
+      - generic [ref=e56]: high-impact leverage points identified and prioritized
+    - generic [ref=e57]:
+      - generic [ref=e58]: 9 days
+      - generic [ref=e59]: from kickoff to transformation blueprint
+  - generic [ref=e61]:
+    - generic [ref=e62]: The approach
+    - heading "Three phases, nine days, zero disruption" [level=2] [ref=e63]
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]: "01"
+        - heading "Leadership alignment" [level=3] [ref=e67]
+        - paragraph [ref=e68]: Two sessions with the executive team to define the scope and transformation readiness, setting the frame for the entire organization.
+      - generic [ref=e69]:
+        - generic [ref=e70]: "02"
+        - heading "AI-led interviews" [level=3] [ref=e71]
+        - paragraph [ref=e72]: 280 employees interviewed by Foaster’s AI agents over 5 days. Every role captured in parallel, with no operational disruption.
+      - generic [ref=e73]:
+        - generic [ref=e74]: "03"
+        - heading "Transformation blueprint" [level=3] [ref=e75]
+        - paragraph [ref=e76]: 1,200+ processes mapped and synthesized into 8 high-impact leverage points with clear ownership, timelines, and expert validation.
+  - generic [ref=e78]:
+    - blockquote [ref=e79]: "\"We knew AI mattered, but we had no idea where to focus. In 9 days, Foaster gave us a clear transformation blueprint. For the first time, the entire leadership team was aligned on where AI would actually move the business.\""
+    - generic [ref=e80]:
+      - strong [ref=e81]: Chief Operating Officer
+      - text: · 350-person professional services firm
+  - generic [ref=e83]:
+    - generic [ref=e84]:
+      - heading "Begin your AI transformation." [level=2] [ref=e85]
+      - paragraph [ref=e86]: Book a call with our founders. They'll take the time to understand your needs and how Foaster can help.
+    - generic [ref=e90]:
+      - status "Loading" [ref=e93]
+      - iframe [ref=e104]:
+        - img [ref=f7e1]
+        - img [ref=f7e3] [cursor=pointer]
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - generic [ref=e107]: Backed by
+      - img "Y Combinator" [ref=e108]
+    - generic [ref=e109]:
+      - link "LinkedIn" [ref=e110] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/foaster-ai
+      - link "X" [ref=e111] [cursor=pointer]:
+        - /url: https://x.com/Foaster_ai

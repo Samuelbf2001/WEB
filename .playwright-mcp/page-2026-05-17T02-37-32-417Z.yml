@@ -1,0 +1,143 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Sixteam.pro" [ref=e6] [cursor=pointer]:
+          - /url: /v2
+          - generic [ref=e7]: Sixteam.pro
+        - button "Abrir menú" [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+    - main [ref=e10]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Servicio
+        - heading "CRM Ventas operado, no instalado." [level=1] [ref=e14]:
+          - text: CRM Ventas
+          - emphasis [ref=e15]: operado
+          - text: ", no instalado."
+        - paragraph [ref=e16]: Pipeline limpio, leads enrutados, reportes que llegan los lunes. Tu equipo comercial deja de hacer admin y vuelve a vender.
+        - generic [ref=e17]:
+          - link "Diagnóstico gratis" [ref=e18] [cursor=pointer]:
+            - /url: /v2/radar
+            - button "Diagnóstico gratis" [ref=e19]:
+              - text: Diagnóstico gratis
+              - img [ref=e20]
+          - link "Hablar con un experto" [ref=e22] [cursor=pointer]:
+            - /url: /v2/contacto
+            - button "Hablar con un experto" [ref=e23]
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: Qué operamos
+          - heading "Lo que el equipo de Sixteam hace por ti cada semana." [level=2] [ref=e28]:
+            - text: Lo que el equipo de Sixteam hace por ti
+            - emphasis [ref=e29]: cada semana
+            - text: .
+        - generic [ref=e30]:
+          - generic [ref=e32]:
+            - img [ref=e34]
+            - generic [ref=e36]:
+              - heading "Limpieza y de-duplicación" [level=3] [ref=e37]
+              - paragraph [ref=e38]: Operamos el CRM para que la data sea confiable. Sin duplicados, sin contactos huérfanos.
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - generic [ref=e44]:
+              - heading "Routing automático de leads" [level=3] [ref=e45]
+              - paragraph [ref=e46]: Cada lead aterriza en la pipa correcta con el dueño correcto. En segundos, no en horas.
+          - generic [ref=e48]:
+            - img [ref=e50]
+            - generic [ref=e52]:
+              - heading "Dashboards y reportes" [level=3] [ref=e53]
+              - paragraph [ref=e54]: Reportes semanales accionables. Pipeline, velocity, conversion, sin que armes nada.
+          - generic [ref=e56]:
+            - img [ref=e58]
+            - generic [ref=e60]:
+              - heading "Automatizaciones operadas" [level=3] [ref=e61]
+              - paragraph [ref=e62]: Diseñamos, montamos y mantenemos los workflows. Cuando algo cambia, lo ajustamos.
+          - generic [ref=e64]:
+            - img [ref=e66]
+            - generic [ref=e68]:
+              - heading "Coaching del stack" [level=3] [ref=e69]
+              - paragraph [ref=e70]: Tu equipo aprende a usar lo que opera Sixteam. Documentación viva y sesiones cortas.
+          - generic [ref=e72]:
+            - img [ref=e74]
+            - generic [ref=e76]:
+              - heading "Single point of contact" [level=3] [ref=e77]
+              - paragraph [ref=e78]: Una persona dedicada que conoce tu cuenta. Slack, WhatsApp, Loom. Sin tickets.
+      - generic [ref=e80]:
+        - heading "¿Listo para que tu pipeline se opere solo?" [level=2] [ref=e81]:
+          - text: ¿Listo para que tu pipeline
+          - emphasis [ref=e82]: se opere solo
+          - text: "?"
+        - paragraph [ref=e83]: Empieza con el Radar gratis. 48h para saber dónde está la fuga.
+        - link "Hacer mi auditoría" [ref=e85] [cursor=pointer]:
+          - /url: /v2/radar
+          - button "Hacer mi auditoría" [ref=e86]:
+            - text: Hacer mi auditoría
+            - img [ref=e87]
+    - contentinfo [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - link "Sixteam.pro" [ref=e93] [cursor=pointer]:
+              - /url: /v2
+              - generic [ref=e94]: Sixteam.pro
+            - paragraph [ref=e95]: El motor de Revenue invisible en tu empresa.
+            - paragraph [ref=e96]: Diseñamos, operamos y evolucionamos sistemas de Revenue Operations para empresas que ya pasaron de la idea al ingreso real.
+            - generic [ref=e97]:
+              - link "hola@sixteam.pro" [ref=e98] [cursor=pointer]:
+                - /url: mailto:hola@sixteam.pro
+                - text: hola@sixteam.pro
+                - img [ref=e99]
+              - link "WhatsApp +57 300 418 8522" [ref=e102] [cursor=pointer]:
+                - /url: https://wa.me/573004188522
+                - text: WhatsApp +57 300 418 8522
+                - img [ref=e103]
+          - generic [ref=e106]:
+            - heading "Servicios" [level=4] [ref=e107]
+            - list [ref=e108]:
+              - listitem [ref=e109]:
+                - link "CRM Ventas" [ref=e110] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-ventas
+              - listitem [ref=e111]:
+                - link "CRM Atención" [ref=e112] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-atencion
+              - listitem [ref=e113]:
+                - link "CRM Marketing" [ref=e114] [cursor=pointer]:
+                  - /url: /v2/servicios/crm-marketing
+              - listitem [ref=e115]:
+                - link "Chatbot IA" [ref=e116] [cursor=pointer]:
+                  - /url: /v2/servicios/chatbot-ia
+              - listitem [ref=e117]:
+                - link "Soporte & Operaciones" [ref=e118] [cursor=pointer]:
+                  - /url: /v2/servicios/soporte-operaciones
+          - generic [ref=e119]:
+            - heading "Compañía" [level=4] [ref=e120]
+            - list [ref=e121]:
+              - listitem [ref=e122]:
+                - link "Nosotros" [ref=e123] [cursor=pointer]:
+                  - /url: /v2/nosotros
+              - listitem [ref=e124]:
+                - link "Casos de éxito" [ref=e125] [cursor=pointer]:
+                  - /url: /v2/casos
+              - listitem [ref=e126]:
+                - link "Industrias" [ref=e127] [cursor=pointer]:
+                  - /url: /v2/industrias
+              - listitem [ref=e128]:
+                - link "Radar gratis" [ref=e129] [cursor=pointer]:
+                  - /url: /v2/radar
+          - generic [ref=e130]:
+            - heading "Legal" [level=4] [ref=e131]
+            - list [ref=e132]:
+              - listitem [ref=e133]:
+                - link "Política de privacidad" [ref=e134] [cursor=pointer]:
+                  - /url: /politicas
+              - listitem [ref=e135]:
+                - link "Términos & condiciones" [ref=e136] [cursor=pointer]:
+                  - /url: /terminos
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: © 2026 Sixteam.pro · Colombia & Latam · Hecho con método.
+          - paragraph [ref=e139]: Process + Technology + People = Growth
+  - button "Contactar por WhatsApp" [ref=e142] [cursor=pointer]:
+    - img [ref=e143]

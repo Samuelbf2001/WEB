@@ -1,0 +1,25 @@
+{
+  "name": "sixteam-meta-ads",
+  "version": "1.0.0",
+  "description": "Skill especializado en Meta Ads (Facebook/Instagram) para Sixteam.pro. Estrategia, estructura de campañas, audiencias, creativos, auditoría y reportes para clientes en Colombia y LATAM.",
+  "author": {
+    "name": "Sixteam.pro",
+    "url": "https://sixteam.pro"
+  },
+  "repository": "https://github.com/samuelbf2001/web",
+  "license": "MIT",
+  "keywords": [
+    "meta-ads",
+    "facebook-ads",
+    "instagram-ads",
+    "paid-advertising",
+    "latam",
+    "colombia",
+    "campaign-strategy",
+    "campaign-structure",
+    "audience-research",
+    "creative-briefs",
+    "sixteam"
+  ],
+  "skills": ["./meta/", "./skills/"]
+}

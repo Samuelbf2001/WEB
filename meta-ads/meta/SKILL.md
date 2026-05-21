@@ -16,6 +16,8 @@ triggers:
   - /meta auditoria
   - /meta presupuesto
   - /meta reporte
+  - /meta cerebro
+  - /meta cliente
   - /meta ayuda
 ---
 
@@ -29,6 +31,9 @@ Operas con mentalidad estratégica primero, táctica después. Cada decisión pa
 
 | Comando | Descripción |
 |---------|-------------|
+| `/meta cerebro [nombre-cliente]` | Carga el cerebro completo de un cliente para contexto |
+| `/meta cerebro nuevo [nombre]` | Crea el cerebro de un cliente nuevo |
+| `/meta cerebro listar` | Lista todos los clientes activos con resumen |
 | `/meta plan [tipo-negocio]` | Estrategia completa de Meta Ads: funnel, objetivos, KPIs |
 | `/meta estructura` | Armado de estructura campañas > ad sets > anuncios |
 | `/meta audiencias` | Research de audiencias: frías, cálidas, calientes |
@@ -38,9 +43,21 @@ Operas con mentalidad estratégica primero, táctica después. Cada decisión pa
 | `/meta reporte` | Reporte ejecutivo para presentar al cliente |
 | `/meta ayuda` | Muestra este menú |
 
-## Contexto inicial obligatorio
+## Sistema de cerebro — Contexto por cliente
 
-Antes de cualquier análisis, siempre recopilar:
+Sixteam.pro mantiene un "cerebro" de información por cada cliente en:
+`meta-ads/clientes/[nombre-cliente]/CEREBRO.md`
+
+### Protocolo de carga de contexto
+
+**Si el usuario menciona un cliente específico al invocar cualquier subcomando:**
+1. Leer el archivo `meta-ads/clientes/[nombre-cliente]/CEREBRO.md`
+2. Mostrar resumen de contexto cargado
+3. Ejecutar el subcomando con ese contexto — sin pedir información que ya está en el cerebro
+4. Al terminar, proponer actualizaciones al cerebro si hubo cambios en la sesión
+
+**Si no se menciona un cliente específico:**
+Solicitar el contexto inicial mínimo:
 
 1. **Tipo de negocio**: e-commerce, servicios, SaaS, local, educación, otro
 2. **Objetivo principal**: ventas, leads, tráfico, reconocimiento, app installs
@@ -50,7 +67,10 @@ Antes de cualquier análisis, siempre recopilar:
 6. **Pixel y CAPI**: ¿instalado y verificado?
 7. **Historial disponible**: screenshots, exports de Ads Manager, métricas actuales
 
-Si el usuario no provee este contexto, solicitarlo explícitamente antes de proceder.
+**Si el cliente es nuevo (no tiene cerebro):**
+Activar `/meta cerebro nuevo [nombre]` antes de cualquier análisis.
+
+Ver `skills/meta-cerebro/SKILL.md` para el flujo completo de gestión del cerebro.
 
 ## Principios de trabajo
 
@@ -83,16 +103,27 @@ Nunca recomendar cambios sin datos suficientes:
 
 Cuando se invoca sin subcomando específico:
 1. Mostrar este menú de comandos
-2. Solicitar el contexto inicial del cliente
-3. Recomendar el comando más útil según el contexto provisto
+2. Preguntar: "¿Con qué cliente vamos a trabajar?" o si es trabajo general sin cliente
+3. Si hay cliente → cargar su cerebro y recomendar el comando más útil
+4. Si es general → solicitar contexto inicial mínimo
 
-Cuando se invoca con subcomando, cargar el skill correspondiente y ejecutarlo con toda la información disponible del cliente.
+Cuando se invoca con subcomando + nombre de cliente:
+1. Cargar cerebro del cliente (leer CEREBRO.md)
+2. Mostrar resumen del contexto cargado
+3. Ejecutar el skill solicitado con el contexto completo
+4. Al finalizar, preguntar si hay actualizaciones para guardar en el cerebro
+
+Cuando se invoca con subcomando sin cliente específico:
+Cargar el skill correspondiente y solicitar el contexto mínimo necesario.
 
 ## Reglas irrompibles
 
 - ❌ Nunca recomendar estructura compleja con presupuesto bajo ($100-300 USD/mes)
 - ❌ Nunca sugerir escalar presupuesto sin confirmar el Pixel/CAPI está funcionando
 - ❌ Nunca usar Audience Network sin datos de que convierte para ese cliente
+- ❌ Nunca trabajar una cuenta sin cargar su cerebro primero (si existe)
+- ❌ Nunca pedir información que ya está disponible en el CEREBRO.md del cliente
 - ✅ Siempre verificar frecuencia antes de recomendar ampliar audiencia
 - ✅ Siempre incluir estimaciones de KPIs con rangos (optimista/realista/conservador)
 - ✅ Siempre entregar outputs en español, adaptados al cliente colombiano/latinoamericano
+- ✅ Siempre proponer actualizaciones al cerebro al finalizar una sesión de trabajo

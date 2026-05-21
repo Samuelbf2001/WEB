@@ -21,5 +21,6 @@
     "creative-briefs",
     "sixteam"
   ],
-  "skills": ["./meta/", "./skills/"]
+  "skills": ["./meta/", "./skills/"],
+  "knowledge": ["./clientes/"]
 }

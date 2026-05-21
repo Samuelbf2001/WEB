@@ -72,6 +72,8 @@ meta-ads/
 ├── meta/
 │   └── SKILL.md              # Orquestador principal
 ├── skills/
+│   ├── meta-cerebro/
+│   │   └── SKILL.md          # Gestión del cerebro de clientes ← NUEVO
 │   ├── meta-plan/
 │   │   └── SKILL.md          # Estrategia por tipo de negocio
 │   ├── meta-estructura/
@@ -86,6 +88,14 @@ meta-ads/
 │   │   └── SKILL.md          # Distribución y proyecciones
 │   └── meta-reporte/
 │       └── SKILL.md          # Reportes para clientes
+├── clientes/                 # ← NUEVO — Cerebros por cliente
+│   ├── README.md             # Instrucciones del sistema
+│   ├── _plantilla/
+│   │   ├── CEREBRO.md        # Plantilla del cerebro (clonar para nuevo cliente)
+│   │   └── SESION.md         # Plantilla de log de sesión
+│   └── [nombre-cliente]/     # Una carpeta por cliente
+│       ├── CEREBRO.md        # Contexto completo del cliente
+│       └── SESION.md         # Log cronológico de sesiones
 ├── install.sh
 └── README.md
 ```

@@ -1,83 +1,81 @@
-import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  Briefcase,
-  MessageSquare,
-  Megaphone,
-  Bot,
-  Wrench,
+  Search, ClipboardCheck, Map, TrendingUp,
+  Database, Workflow, Link2, Bot,
+  Activity, BarChart3, FileText, RefreshCw,
   LucideIcon,
 } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
+import { Underlined } from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-interface ServiceCard {
-  title: string;
-  href: string;
-  icon: LucideIcon;
+/* ── types ── */
+interface ServiceItem {
+  name: string;
   desc: string;
-  accent: string;
+  icon: LucideIcon;
 }
 
-const services: ServiceCard[] = [
+interface Layer {
+  eyebrow: string;
+  eyebrowColor: string;
+  title: string;
+  description: string;
+  iconBg: string;
+  iconColor: string;
+  services: ServiceItem[];
+}
+
+/* ── data ── */
+const layers: Layer[] = [
   {
-    title: "CRM Ventas",
-    href: "/v2/servicios/crm-ventas",
-    icon: Briefcase,
-    desc: "Pipeline operado, leads enrutados, dashboards vivos. El comercial deja de hacer admin.",
-    accent: "teal",
+    eyebrow: "01 · Consultar",
+    eyebrowColor: "text-v2-accent-teal-deep",
+    title: "Mapear cómo opera tu negocio hoy.",
+    description:
+      "Sam mapea el flujo real y cuantifica las fugas. Alex traduce los hallazgos en un roadmap priorizado.",
+    iconBg: "bg-v2-surface-teal-mist",
+    iconColor: "text-v2-accent-teal-deep",
+    services: [
+      { name: "Diagnóstico Sixteam", desc: "Mapeo agéntico de tu operación en 2 semanas.", icon: Search },
+      { name: "Auditoría de stack actual", desc: "Revisamos qué tienes, qué falta y qué sobra.", icon: ClipboardCheck },
+      { name: "Roadmap cuantificado", desc: "Plan priorizado por impacto en revenue.", icon: Map },
+      { name: "Recomendación de inversión", desc: "Cuánto invertir, en qué, y en qué orden.", icon: TrendingUp },
+    ],
   },
   {
-    title: "CRM Atención",
-    href: "/v2/servicios/crm-atencion",
-    icon: MessageSquare,
-    desc: "WhatsApp, email y chat en una sola bandeja. SLA medible, sin hilos perdidos.",
-    accent: "blue",
+    eyebrow: "02 · Implementar",
+    eyebrowColor: "text-v2-accent-blue",
+    title: "Construir el sistema operativo de tu RevOps.",
+    description:
+      "Debbie monta el CRM, las automatizaciones y los workflows. Vinnie conecta tus herramientas para que se hablen entre sí.",
+    iconBg: "bg-v2-accent-blue/10",
+    iconColor: "text-v2-accent-blue",
+    services: [
+      { name: "Setup de CRM", desc: "HubSpot, Pipedrive o GHL — montado y listo.", icon: Database },
+      { name: "Automatizaciones y workflows", desc: "Make, Zapier, n8n. Lo repetitivo, en piloto.", icon: Workflow },
+      { name: "Integraciones", desc: "WhatsApp + CRM + pago + analítica conectados.", icon: Link2 },
+      { name: "Agentes IA en producción", desc: "Bots que califican, responden y agendan 24/7.", icon: Bot },
+    ],
   },
   {
-    title: "CRM Marketing",
-    href: "/v2/servicios/crm-marketing",
-    icon: Megaphone,
-    desc: "Campañas, nurturing y atribución conectados al CRM. Para que MKT y Sales hablen el mismo idioma.",
-    accent: "sand",
-  },
-  {
-    title: "Chatbot IA",
-    href: "/v2/servicios/chatbot-ia",
-    icon: Bot,
-    desc: "Agentes que califican, agendan y resuelven. Operan con tu base de conocimiento, no con magia.",
-    accent: "teal",
-  },
-  {
-    title: "Soporte & Operaciones",
-    href: "/v2/servicios/soporte-operaciones",
-    icon: Wrench,
-    desc: "El equipo que mantiene vivo el sistema. Mejoras, ajustes y nuevas automatizaciones cada semana.",
-    accent: "blue",
+    eyebrow: "03 · Operar",
+    eyebrowColor: "text-v2-accent-teal-deep",
+    title: "Correr tu RevOps mes a mes, sin pausa.",
+    description:
+      "Sally opera el pipeline a diario. Clara mide y reporta cada lunes. No te dejamos solo después del go-live.",
+    iconBg: "bg-v2-surface-teal-mist",
+    iconColor: "text-v2-accent-teal-deep",
+    services: [
+      { name: "Operación diaria del pipeline", desc: "Leads ruteados, follow-ups disparados, deals movidos.", icon: Activity },
+      { name: "Dashboard de revenue en vivo", desc: "Métricas reales, no powerpoints de status.", icon: BarChart3 },
+      { name: "Reporte ejecutivo semanal", desc: "Cada lunes 9am, sin que tengas que pedirlo.", icon: FileText },
+      { name: "Sprint semanal de mejoras", desc: "Ajustes y crecimiento del sistema continuo.", icon: RefreshCw },
+    ],
   },
 ];
 
-const accentStyles: Record<string, { icon: string; iconHover: string; number: string }> = {
-  teal: {
-    icon: "bg-v2-surface-teal-mist text-v2-accent-teal-deep",
-    iconHover: "group-hover:bg-v2-accent-teal group-hover:text-white",
-    number: "text-v2-accent-teal-deep/[0.06] group-hover:text-v2-accent-teal/[0.10]",
-  },
-  blue: {
-    icon: "bg-v2-surface-navy-mist text-v2-accent-blue",
-    iconHover: "group-hover:bg-v2-accent-blue group-hover:text-white",
-    number: "text-v2-accent-blue/[0.06] group-hover:text-v2-accent-blue/[0.10]",
-  },
-  sand: {
-    icon: "bg-v2-surface-sand-mist text-[#8a7a4f]",
-    iconHover: "group-hover:bg-[#d4a853] group-hover:text-white",
-    number: "text-[#d4a853]/[0.08] group-hover:text-[#d4a853]/[0.14]",
-  },
-};
-
-const delays = ["v2-d1", "v2-d2", "v2-d3", "v2-d2", "v2-d3"];
-
+/* ── component ── */
 export const ServicesGridV2 = () => {
   const ref = useScrollReveal<HTMLDivElement>();
 
@@ -85,86 +83,80 @@ export const ServicesGridV2 = () => {
     <Section surface="cream" size="default">
       <Container>
         <div ref={ref}>
+
+          {/* ── header ── */}
           <div className="text-center max-w-[760px] mx-auto v2-reveal">
-            <Eyebrow variant="navy">El sistema en partes</Eyebrow>
+            <Eyebrow variant="navy">Todo lo que operamos por ti</Eyebrow>
             <h2
               className="font-poppins font-bold text-v2-ink-heading mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Cinco{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                servicios
-              </em>{" "}
-              que se operan juntos.
+              Tres capas.{" "}
+              <Underlined color="teal" variant="scribble">
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+                  Una cadena cerrada.
+                </em>
+              </Underlined>
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[640px] mx-auto mt-4 leading-[1.6]">
-              Cada pieza se contrata por separado o como sistema completo. La que mejor te conviene
-              depende de dónde está la fuga.
+              Consultamos cómo opera tu negocio, implementamos los sistemas que faltan,
+              y los operamos mes a mes. No vendemos una pieza — vendemos la cadena completa.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-            {services.map((service, i) => {
-              const Icon = service.icon;
-              const isLast = i === services.length - 1;
-              const accent = accentStyles[service.accent];
-              const num = String(i + 1).padStart(2, "0");
-              const delayClass = delays[i];
+          {/* ── 3-layer grid ── */}
+          <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
+            {layers.map((layer, i) => (
+              <div key={layer.eyebrow} className={`v2-reveal v2-d${i + 1} flex flex-col gap-4`}>
 
-              return (
-                <Link
-                  key={service.title}
-                  to={service.href}
-                  className={[
-                    "v2-reveal",
-                    delayClass,
-                    "group relative bg-white border border-v2-border-subtle rounded-2xl p-7",
-                    "hover:border-v2-accent-teal/30 hover:shadow-[0_16px_48px_rgba(0,191,165,0.10)] hover:-translate-y-1",
-                    "transition-[transform,box-shadow,border-color,background-color] duration-300 flex flex-col overflow-hidden",
-                    isLast ? "lg:col-span-2" : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                >
-                  {/* Watermark number */}
+                {/* layer header */}
+                <div className="mb-1">
                   <span
-                    className={[
-                      "pointer-events-none select-none absolute -right-2 -top-3",
-                      "font-serif italic text-[88px] leading-none",
-                      "transition-colors duration-300",
-                      accent.number,
-                    ].join(" ")}
-                    aria-hidden
+                    className={`font-lato text-[11px] font-semibold uppercase tracking-widest ${layer.eyebrowColor}`}
                   >
-                    {num}
+                    {layer.eyebrow}
                   </span>
-
-                  {/* Icon */}
-                  <div
-                    className={[
-                      "relative w-12 h-12 rounded-xl flex items-center justify-center",
-                      "transition-colors duration-300",
-                      accent.icon,
-                      accent.iconHover,
-                    ].join(" ")}
-                  >
-                    <Icon className="h-[22px] w-[22px] transition-colors duration-300" aria-hidden />
-                  </div>
-
-                  <h3 className="font-poppins font-bold text-[19px] text-v2-ink-heading mt-5 leading-[1.25]">
-                    {service.title}
+                  <h3 className="font-poppins font-bold text-[18px] text-v2-ink-heading mt-1.5 leading-[1.25]">
+                    {layer.title}
                   </h3>
-                  <p className="font-lato text-[14px] text-v2-ink-body leading-[1.6] mt-2 flex-1">
-                    {service.desc}
+                  <p className="font-lato text-[13px] text-v2-ink-muted leading-relaxed mt-2">
+                    {layer.description}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 font-lato text-[13px] font-semibold uppercase tracking-widest text-v2-accent-teal-deep mt-6 group-hover:gap-2.5 transition-[gap] duration-200">
-                    Ver servicio
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
-              );
-            })}
+                </div>
+
+                {/* service cards */}
+                {layer.services.map((svc) => {
+                  const Icon = svc.icon;
+                  return (
+                    <div
+                      key={svc.name}
+                      className="group bg-white border border-v2-border-subtle rounded-xl p-4 hover:border-v2-accent-teal/40 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,191,165,0.10)] transition-[transform,box-shadow,border-color] duration-200"
+                    >
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div
+                          className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${layer.iconBg} ${layer.iconColor}`}
+                        >
+                          <Icon className="h-4 w-4" aria-hidden />
+                        </div>
+                        <span className="font-poppins font-bold text-[13px] text-v2-ink-heading leading-tight">
+                          {svc.name}
+                        </span>
+                      </div>
+                      <p className="font-lato text-[12px] text-v2-ink-muted leading-relaxed pl-[37px]">
+                        {svc.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
           </div>
+
+          {/* ── closing line ── */}
+          <p className="v2-reveal v2-d4 font-serif italic text-[15px] text-v2-ink-muted leading-relaxed text-center mt-12 max-w-[640px] mx-auto">
+            "No te entregamos un sistema y nos vamos. La cadena se cierra cada semana — y vuelve a empezar la siguiente."
+          </p>
+
         </div>
       </Container>
     </Section>

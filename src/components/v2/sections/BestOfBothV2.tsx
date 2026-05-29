@@ -13,10 +13,10 @@ const aiItems = [
 
 const expertItems = [
   "Diseño de arquitectura de datos y blueprints",
-  "Alineación estratégica Sales ↔ Marketing",
+  "Alineación estratégica entre áreas del negocio",
   "Resolución de casos complejos y auditorías",
   "Entrenamiento al equipo cuando alguien rota",
-  "QBR trimestral de roadmap de revenue",
+  "QBR trimestral de roadmap de operación",
 ];
 
 export const BestOfBothV2 = () => {

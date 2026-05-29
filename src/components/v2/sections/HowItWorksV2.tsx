@@ -136,7 +136,7 @@ export const HowItWorksV2 = () => {
               No implementamos y desaparecemos.
             </p>
             <p className="font-lato text-[15px] text-white/60 leading-[1.65] mt-3">
-              Operamos tu pipeline, tus leads, tu seguimiento y tu retención —
+              Operamos tu tecnología — pipeline, automatizaciones, agentes IA, reportes —
               mes a mes. Si algo se rompe, lo arreglamos. Si tu equipo cambia,
               entrenamos al nuevo.
             </p>
@@ -144,7 +144,7 @@ export const HowItWorksV2 = () => {
           <div className="relative flex flex-col items-start md:items-end">
             <p className="font-serif italic text-[18px] md:text-[20px] text-white/80 leading-[1.4] max-w-[340px] md:text-right">
               "No te vendemos un proyecto. Te vendemos un equipo que opera tu
-              comercial sin pedirte ayuda."
+              tecnología sin pedirte ayuda."
             </p>
             <div className="mt-6">
               <Link to="/v2/radar">

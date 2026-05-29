@@ -4,23 +4,23 @@ import Section, { Eyebrow } from "@/components/v2/Section";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const beforeItems = [
-  { text: "Actualizar CRM con notas de ayer", urgent: true },
-  { text: "Responder leads del fin de semana", urgent: true },
-  { text: "Enviar propuesta que quedó pendiente" },
-  { text: "Reenviar correo sin respuesta desde hace 8 días" },
-  { text: "Revisar qué oportunidades están vencidas", urgent: true },
-  { text: "Armar reporte de ventas para el jefe" },
-  { text: "Reunión de status de 1 hora para ver qué pasó" },
+  { text: "Ideas que se quedaron en una libreta — nadie las implementa.", urgent: true },
+  { text: "Herramientas compradas que nunca se integraron." },
+  { text: "Procesos manuales que solo una persona sabe hacer.", urgent: true },
+  { text: "Reportes que tardan días en armarse a mano." },
+  { text: "El CRM con datos viejos — nadie quiere actualizarlo." },
+  { text: "Cada cambio tecnológico depende de contratar a alguien externo.", urgent: true },
+  { text: "El equipo apaga incendios — no construye." },
 ];
 
 const afterItems = [
-  { text: "Pipeline limpio y actualizado al abrir el CRM" },
-  { text: "Leads del fin de semana enrutados y en seguimiento" },
-  { text: "Propuesta enviada automáticamente con recordatorio programado" },
-  { text: "Seguimiento ejecutado por la automatización" },
-  { text: "Alertas enviadas a cada rep con sus oportunidades vencidas" },
-  { text: "Reporte ejecutivo en tu inbox desde las 9am" },
-  { text: "Reporte listo — la reunión dura 15 minutos" },
+  { text: "Ideas convertidas en automatizaciones funcionando en días." },
+  { text: "Stack integrado — CRM, email, WhatsApp, ads, web, todo conectado." },
+  { text: "Procesos documentados y automatizados — no dependen de personas." },
+  { text: "Dashboards en vivo — el reporte ya está listo cuando lo abres." },
+  { text: "CRM limpio y actualizado solo, sin que nadie lo toque." },
+  { text: "Cambios y mejoras ejecutados por tu equipo Sixteam, sin contratar." },
+  { text: "Tu equipo se enfoca en vender y construir, no en operar herramientas." },
 ];
 
 export const MondayV2 = () => {
@@ -36,14 +36,15 @@ export const MondayV2 = () => {
               className="font-poppins font-bold text-v2-ink-heading mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Lunes sin Sixteam.{" "}
+              Tu negocio sin Sixteam.{" "}
               <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                Lunes con Sixteam.
+                Tu negocio con Sixteam.
               </em>
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[580px] mx-auto mt-4 leading-[1.6]">
-              El mismo equipo, el mismo lunes. Lo único que cambia es si el sistema
-              trabaja contigo o contra ti.
+              El mismo equipo, la misma operación. Lo único que cambia es si la
+              tecnología trabaja por tu negocio — o si tu equipo trabaja para
+              mantener la tecnología viva.
             </p>
           </div>
 
@@ -66,7 +67,7 @@ export const MondayV2 = () => {
                     Sin Sixteam
                   </p>
                   <p className="font-lato text-[12px] text-v2-ink-muted mt-0.5">
-                    Lista mental del lunes por la mañana
+                    Cómo se ve la operación tech del día a día
                   </p>
                 </div>
               </div>
@@ -100,7 +101,7 @@ export const MondayV2 = () => {
                 ))}
 
                 <p className="font-serif italic text-[13px] text-v2-ink-muted pt-2 leading-relaxed">
-                  "Y esto sin contar los imprevistos que aparecen antes del mediodía."
+                  "Y lo peor: ya pagaste por la mayoría de esas herramientas."
                 </p>
               </div>
             </div>
@@ -126,7 +127,7 @@ export const MondayV2 = () => {
                     Con Sixteam
                   </p>
                   <p className="font-lato text-[12px] text-v2-ink-muted mt-0.5">
-                    Lo que ya está hecho cuando llegas
+                    Cómo se ve cuando tu tech corre operado
                   </p>
                 </div>
               </div>
@@ -158,7 +159,7 @@ export const MondayV2 = () => {
                     </span>
                   </div>
                   <p className="font-serif italic text-[13px] text-v2-accent-teal-deep leading-relaxed">
-                    "El sistema operó todo el fin de semana sin que nadie lo supervisara."
+                    "Tu idea entra el lunes. El sistema la está ejecutando el viernes."
                   </p>
                 </div>
               </div>
@@ -170,9 +171,9 @@ export const MondayV2 = () => {
             <p className="font-lato text-[15px] text-v2-ink-muted leading-relaxed max-w-[540px] mx-auto">
               Eso no es magia. Es{" "}
               <strong className="text-v2-ink-heading font-semibold">
-                un sistema bien operado
+                un equipo de tecnología externo
               </strong>{" "}
-              que trabaja mientras tú duermes.
+              que convierte tus ideas en sistemas que corren — todos los días — sin que tengas que operarlos tú.
             </p>
           </div>
         </div>

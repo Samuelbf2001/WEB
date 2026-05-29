@@ -50,20 +50,18 @@ export const FinalCtaV2 = () => {
             className="v2-reveal v2-d1 font-poppins font-bold text-white mt-5"
             style={{ fontSize: "clamp(36px, 6vw, 60px)", lineHeight: "1.05", letterSpacing: "-0.025em" }}
           >
-            Tu CRM se merece{" "}
+            Empieza por el Diagnóstico.{" "}
             <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal">algo mejor</em>
-            </Underlined>{" "}
-            que ser un cementerio.
+              <em className="font-serif italic font-normal text-v2-accent-teal">Sale del paso 2 con el sistema montado.</em>
+            </Underlined>
           </h2>
           <p className="v2-reveal v2-d2 font-lato text-[18px] md:text-[20px] text-white/75 leading-[1.65] max-w-[640px] mx-auto mt-7">
-            Empieza con el Radar gratis. 48 horas para saber dónde está la fuga de revenue. Sin venta,
-            sin compromiso, sin propuesta de 30 páginas.
+            Dos semanas. Mapeamos tu operación, te entregamos el roadmap y dejamos la plataforma montada. $2,500 USD único. Después decides si quieres que la operemos.
           </p>
           <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/v2/radar">
               <ButtonV2 variant="primary" size="lg">
-                Hacer mi auditoría gratis
+                Solicitar Diagnóstico — $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
@@ -73,12 +71,12 @@ export const FinalCtaV2 = () => {
                 size="lg"
                 className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
               >
-                Agendar llamada de 30 min
+                Agendar una llamada antes
               </ButtonV2>
             </Link>
           </div>
           <p className="v2-reveal v2-d4 font-serif italic text-[13px] text-white/40 mt-8">
-            "Si después de 48h te queda solo el diagnóstico y nos dices que no, nos quedamos amigos."
+            "Si después de las dos semanas te queda solo el mapa y nos dices que no, nos quedamos amigos."
           </p>
         </div>
       </Container>

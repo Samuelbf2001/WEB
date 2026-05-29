@@ -1,36 +1,38 @@
 import { Clock, BarChart2, Zap, BookOpen } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
+import Underlined from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
+/* ── cadence horizons — agent-mapped ── */
 const horizons = [
   {
-    cadence: "Cada semana",
-    emphasis: "30 minutos.",
+    cadence: "Lunes 9am",
+    emphasis: "Reporte ejecutivo.",
     description:
-      "Reunión de 30 minutos. Revisamos qué se trabó y lo ajustamos. Nada acumula.",
-    detail: "No esperamos al mes para saber que algo falló.",
-    icon: Clock,
+      "Clara entrega el reporte automático: pipeline, conversión, alertas y prioridades de la semana. Llegas a tu lunes con todo el contexto.",
+    detail: "Sin dashboards de 40 KPIs que nadie lee.",
+    icon: BarChart2,
     accent: "teal" as const,
     size: "large" as const,
   },
   {
-    cadence: "Cada mes",
-    emphasis: "3 métricas — no 40.",
+    cadence: "Mar – Jue",
+    emphasis: "El equipo opera.",
     description:
-      "Reporte claro de pipeline, conversión y retención. Solo las métricas que mueven decisiones.",
-    detail: "Sin dashboards de 40 KPIs que nadie lee.",
-    icon: BarChart2,
+      "Sally opera el pipeline a diario. Debbie y Vinnie ejecutan los builds del sprint. Tu Slack está activo.",
+    detail: "Sin tickets, sin portales que aprender.",
+    icon: Zap,
     accent: "blue" as const,
     size: "medium" as const,
   },
   {
-    cadence: "Cada día",
-    emphasis: "Estamos disponibles.",
+    cadence: "Viernes",
+    emphasis: "Cierre y siguiente sprint.",
     description:
-      "Si algo se rompe o hay una oportunidad, no esperas a la otra semana. Respondemos hoy.",
-    detail: "Por Slack, WhatsApp o email — como funcione para ti.",
-    icon: Zap,
+      "Sam revisa qué se trabajó, qué cambió, qué ajustar. Cierra el sprint y planifica el siguiente.",
+    detail: "Nada acumula al mes siguiente.",
+    icon: Clock,
     accent: "sand" as const,
     size: "medium" as const,
   },
@@ -67,21 +69,22 @@ export const CadenceV2 = () => {
           {/* Header */}
           <div className="text-center max-w-[780px] mx-auto">
             <div className="v2-reveal">
-              <Eyebrow variant="navy">Cómo operamos juntos</Eyebrow>
+              <Eyebrow variant="navy">Cómo se ve una semana con Sixteam</Eyebrow>
             </div>
             <h2
               className="v2-reveal v2-d1 mt-5 font-poppins font-bold text-v2-ink-heading leading-[1.1] tracking-[-0.03em]"
               style={{ fontSize: "clamp(30px, 4.5vw, 52px)" }}
             >
-              Una cadencia que mantiene{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                todo en movimiento.
-              </em>
+              Cómo se ve una semana{" "}
+              <Underlined color="teal" variant="scribble">
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+                  con Sixteam operando.
+                </em>
+              </Underlined>
             </h2>
             <p className="v2-reveal v2-d2 font-lato text-[17px] text-v2-ink-body leading-[1.65] mt-5 max-w-[620px] mx-auto">
-              No implementamos y desaparecemos. Tenemos una estructura de trabajo
-              semanal, mensual y diaria — para que nada se trabe sin que alguien
-              lo atienda.
+              Sin reuniones de status que no llevan a nada. Sin tickets. Sin portales.
+              Slack abierto, sprint semanal, reporte ejecutivo cada lunes.
             </p>
           </div>
 
@@ -181,19 +184,19 @@ export const CadenceV2 = () => {
             </div>
           </div>
 
-          {/* Closing line — the documentation promise */}
+          {/* Closing line — the "every day" agent promise */}
           <div className="v2-reveal v2-d5 mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 rounded-2xl border border-v2-ink-heading/8 bg-white/60">
             <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-v2-surface-sand-mist border border-v2-accent-sand/25 flex items-center justify-center">
               <BookOpen className="h-5 w-5 text-[#8a7a4f]" aria-hidden />
             </div>
             <div>
               <p className="font-poppins font-bold text-[16px] text-v2-ink-heading leading-[1.3]">
-                Todo queda documentado.
+                Cada día — Alex está disponible.
               </p>
               <p className="font-lato text-[14px] text-v2-ink-muted leading-[1.6] mt-1">
-                Si alguien se va de tu equipo, el conocimiento no se va con
-                ellos. El proceso, los playbooks y la historia quedan en tu
-                operación — no en la cabeza de una persona.
+                No te vendemos proyectos. Te vendemos un equipo que opera sin que tengas
+                que pedirlo. Alex recibe tus pedidos en Slack o WhatsApp — sin esperas
+                hasta la próxima reunión.
               </p>
             </div>
           </div>

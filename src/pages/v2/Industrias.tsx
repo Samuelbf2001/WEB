@@ -32,22 +32,22 @@ const industries = [
     icon: GraduationCap,
     name: "Educación",
     desc: "Captación, nurturing por programa y operación de aplicaciones académicas.",
-    href: "/v2/contacto",
-    live: false,
+    href: "/v2/industrias/educacion",
+    live: true,
   },
   {
     icon: Building2,
     name: "SaaS B2B",
     desc: "Funnel TOFU→PQL, scoring de actividad in-app y handoff a CSM cuando aplica.",
-    href: "/v2/contacto",
-    live: false,
+    href: "/v2/industrias/saas-b2b",
+    live: true,
   },
   {
     icon: ShoppingBag,
     name: "Retail / E-commerce",
     desc: "Recovery de carritos, NPS automatizado y atención multicanal con un solo equipo.",
-    href: "/v2/contacto",
-    live: false,
+    href: "/v2/industrias/retail",
+    live: true,
   },
 ];
 

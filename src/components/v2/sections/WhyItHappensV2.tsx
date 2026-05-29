@@ -4,20 +4,20 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const crafts = [
   {
-    label: "Calificar un lead",
-    description: "Determinar cuál vale tiempo y cuál no, sin gastar el de tu equipo.",
+    label: "Integrar tu stack",
+    description: "Que tu CRM, email, WhatsApp, ads y web hablen entre sí — sin copy-paste manual.",
   },
   {
-    label: "Estructurar el seguimiento",
-    description: "Cuándo, cómo y por qué canal — no cada uno como cree que se hace.",
+    label: "Automatizar lo repetitivo",
+    description: "Workflows que liberan tiempo del equipo, no que se lo agregan al final del día.",
   },
   {
-    label: "Medir la conversión",
-    description: "No visitas al Excel los lunes. Métricas que mueven decisiones.",
+    label: "Diseñar agentes IA con criterio",
+    description: "Que califican, responden y agendan — con tu tono, no con voz de robot genérico.",
   },
   {
-    label: "Mantener un cliente activo",
-    description: "Retención no es CX. Es pipeline. Es operación. Es oficio.",
+    label: "Medir lo que sí mueve el negocio",
+    description: "Dashboards que apuntan a decisiones — no más reuniones para ver qué pasó.",
   },
 ];
 
@@ -38,10 +38,11 @@ export const WhyItHappensV2 = () => {
             className="v2-reveal v2-d1 mt-5 font-poppins font-bold text-v2-ink-heading leading-[1.05] tracking-[-0.03em] max-w-[900px]"
             style={{ fontSize: "clamp(36px, 5.5vw, 62px)" }}
           >
-            Aprendiste tu oficio.{" "}
+            Eres experto en tu negocio.{" "}
             <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-              No el oficio de operar ventas.
+              No tienes por qué serlo de la tecnología que lo multiplica.
             </em>
+            {" "}📈
           </h2>
 
           {/* Two-column layout: insight text + craft list */}
@@ -49,18 +50,19 @@ export const WhyItHappensV2 = () => {
             {/* LEFT — Explanatory text */}
             <div className="v2-reveal v2-d2">
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.7]">
-                Probablemente eres muy bueno en lo que vendes. Tus clientes lo
-                saben. Pero operar un equipo comercial — con pipeline limpio,
-                seguimiento sistemático y reportes que sirven — eso es un{" "}
+                Probablemente eres muy bueno en lo que vendes o construyes. Tus clientes
+                lo saben. Pero operar tecnología moderna — integrar tu CRM con email,
+                WhatsApp y ads; automatizar lo repetitivo; diseñar agentes IA que
+                califiquen leads; armar dashboards que sí mueven decisiones — eso es un{" "}
                 <strong className="text-v2-ink-heading font-semibold">
                   oficio completamente aparte.
                 </strong>
               </p>
 
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.7] mt-6">
-                No se aprende en el día a día de vender. Se construye con
-                metodología, herramientas y — sobre todo — con alguien que lo
-                haya hecho antes.
+                No se aprende mientras corres tu negocio. Se construye con stack,
+                metodología y — sobre todo — con un equipo que vive operándolo todos
+                los días.
               </p>
 
               {/* The big contrast statement */}
@@ -89,7 +91,7 @@ export const WhyItHappensV2 = () => {
                 >
                   Tienen mejor{" "}
                   <em className="font-serif italic font-normal text-v2-accent-teal">
-                    sistema comercial.
+                    stack tecnológico operado.
                   </em>
                 </p>
               </div>

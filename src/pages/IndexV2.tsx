@@ -1,10 +1,13 @@
 import LayoutV2 from "@/components/v2/LayoutV2";
 import HeroV2 from "@/components/v2/sections/HeroV2";
-import LogoCloudV2 from "@/components/v2/sections/LogoCloudV2";
+import LogoSliderV2 from "@/components/v2/sections/LogoSliderV2";
 import ProblemStatV2 from "@/components/v2/sections/ProblemStatV2";
 import WhyItHappensV2 from "@/components/v2/sections/WhyItHappensV2";
+import NoSomosV2 from "@/components/v2/sections/NoSomosV2";
 import MondayV2 from "@/components/v2/sections/MondayV2";
-import FlowStepsV2 from "@/components/v2/sections/FlowStepsV2";
+import TuEquipoV2 from "@/components/v2/sections/TuEquipoV2";
+import TodoListoV2 from "@/components/v2/sections/TodoListoV2";
+import ComparativaV2 from "@/components/v2/sections/ComparativaV2";
 import CrmComparisonV2 from "@/components/v2/sections/CrmComparisonV2";
 import BestOfBothV2 from "@/components/v2/sections/BestOfBothV2";
 import ServicesGridV2 from "@/components/v2/sections/ServicesGridV2";
@@ -22,11 +25,14 @@ const IndexV2 = () => {
   return (
     <LayoutV2>
       <HeroV2 />
-      <LogoCloudV2 />
+      <LogoSliderV2 />
       <ProblemStatV2 />
       <WhyItHappensV2 />
+      <NoSomosV2 />
       <MondayV2 />
-      <FlowStepsV2 />
+      <TuEquipoV2 />
+      <ComparativaV2 />
+      <TodoListoV2 />
       <CrmComparisonV2 />
       <BestOfBothV2 />
       <ServicesGridV2 />

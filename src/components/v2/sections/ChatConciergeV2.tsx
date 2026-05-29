@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
+import Underlined from "@/components/v2/UnderlineSvg";
 import { CHATBOT_CONFIG, validateWebhookConfig } from "@/config/chatbot";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -15,10 +16,11 @@ interface Message {
   isTyping?: boolean;
 }
 
+/* ── quick chips — 3 layers → 3 agents ── */
 const quickQuestions = [
-  "¿Cómo puedo automatizar mi proceso de ventas?",
-  "Necesito ayuda con mi CRM",
-  "¿Qué es RevOps?",
+  "¿Pueden auditar mi CRM actual?",
+  "¿Pueden montar una integración HubSpot + WhatsApp?",
+  "¿Pueden operar mi pipeline esta semana?",
 ];
 
 export const ChatConciergeV2 = () => {
@@ -163,19 +165,22 @@ export const ChatConciergeV2 = () => {
         <div ref={ref}>
           {/* Section header */}
           <div className="text-center max-w-[640px] mx-auto mb-14 v2-reveal">
-            <Eyebrow variant="teal">Asistente IA</Eyebrow>
+            <Eyebrow variant="teal">Agente Concierge — Capa Consultoría</Eyebrow>
             <h2
               className="font-poppins font-bold text-white mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Pregúntale a nuestro{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">
-                Asistente.
-              </em>
+              Habla con Alex.{" "}
+              <Underlined color="teal" variant="scribble">
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+                  Coordina tu cuenta antes de que lo pidas.
+                </em>
+              </Underlined>
             </h2>
             <p className="font-lato text-[17px] text-white/55 max-w-[520px] mx-auto mt-4 leading-relaxed">
-              Respuestas inmediatas sobre CRM, automatización, IA y RevOps.
-              Sin formularios, sin esperar a ventas.
+              Alex es el agente IA que recibe tus mensajes en Slack o WhatsApp, decide qué
+              especialista del equipo lo opera, y te devuelve el trabajo hecho. Sin tickets,
+              sin portales que aprender.
             </p>
           </div>
 
@@ -452,10 +457,10 @@ export const ChatConciergeV2 = () => {
                 </p>
                 <ul className="flex flex-col gap-2.5">
                   {[
-                    "¿Cuánto cuesta implementar un CRM?",
-                    "¿Cuánto tiempo tarda la implementación?",
-                    "¿Qué pasa si mi equipo no adopta el sistema?",
-                    "¿Pueden integrarse con HubSpot / Salesforce?",
+                    "¿Pueden auditar mi CRM actual?",
+                    "¿Pueden montar una integración HubSpot + WhatsApp?",
+                    "¿Pueden operar mi pipeline esta semana?",
+                    "¿Cómo funciona el Diagnóstico Sixteam?",
                     "¿Cómo se diferencia Sixteam.pro de una agencia?",
                   ].map((q, i) => (
                     <li key={i} className="flex items-start gap-2">
@@ -482,19 +487,19 @@ export const ChatConciergeV2 = () => {
                 }}
               >
                 <p className="font-lato text-[11px] uppercase tracking-widest text-v2-accent-teal mb-3">
-                  ¿Prefieres hablar directo?
+                  ¿Listo para arrancar?
                 </p>
                 <p className="font-lato text-[14px] text-white/70 leading-relaxed mb-4">
-                  Si tienes una situación concreta que quieres discutir con un experto, agenda una
-                  llamada de 30 minutos sin costo.
+                  El Diagnóstico Sixteam es una auditoría de 2 semanas: auditamos tu operación,
+                  mapeamos el stack y entregamos un plan ejecutable. $2,500 USD.
                 </p>
-                <Link to="/v2/contacto">
+                <Link to="/v2/radar">
                   <ButtonV2
                     variant="outline"
                     size="sm"
                     className="!text-white !border-white/25 !bg-white/5 hover:!bg-white/10 hover:!border-white/40 w-full justify-center"
                   >
-                    Agendar llamada gratis
+                    Solicitar Diagnóstico — $2,500
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </ButtonV2>
                 </Link>

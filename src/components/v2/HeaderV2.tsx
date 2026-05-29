@@ -5,6 +5,14 @@ import { cn } from "@/lib/utils";
 import Container from "./Container";
 import ButtonV2 from "./ButtonV2";
 
+const soluciones = [
+  { label: "Las tres soluciones", to: "/v2/soluciones" },
+  { label: "Assessment · $1,200", to: "/v2/soluciones#assessment" },
+  { label: "Transform · desde $1,500", to: "/v2/soluciones#transform" },
+  { label: "Ops Core · $700/mes", to: "/v2/soluciones#ops" },
+  { label: "Ops Growth · $1,500/mes", to: "/v2/soluciones#ops" },
+];
+
 const servicios = [
   { label: "CRM Ventas", to: "/v2/servicios/crm-ventas" },
   { label: "CRM Atención al Cliente", to: "/v2/servicios/crm-atencion" },
@@ -13,36 +21,59 @@ const servicios = [
   { label: "Soporte & Operaciones", to: "/v2/servicios/soporte-operaciones" },
 ];
 
+const industrias = [
+  { label: "Agencias de viaje",   to: "/industrias/agencias-de-viaje" },
+  { label: "Inmobiliarias",       to: "/industrias/inmobiliarias" },
+  { label: "Servicios B2B",       to: "/industrias/servicios-generales" },
+  { label: "Educación",           to: "/v2/industrias/educacion" },
+  { label: "SaaS B2B",            to: "/v2/industrias/saas-b2b" },
+  { label: "Retail / E-commerce", to: "/v2/industrias/retail" },
+];
+
 const empresa = [
-  { label: "Nosotros", to: "/v2/nosotros" },
-  { label: "Equipo", to: "/v2/equipo" },
-  { label: "Operación Continua", to: "/v2/operacion-continua" },
+  { label: "Nosotros",          to: "/v2/nosotros" },
+  { label: "Equipo",            to: "/v2/equipo" },
+  { label: "Casos de éxito",    to: "/v2/casos" },
+  { label: "Operación Continua",to: "/v2/operacion-continua" },
+  { label: "Cómo funciona",     to: "/v2/como-funciona" },
 ];
 
 const navLinks = [
-  { label: "Cómo funciona", to: "/v2/como-funciona" },
-  { label: "Casos", to: "/v2/casos" },
-  { label: "Industrias", to: "/v2/industrias" },
+  { label: "Soluciones", to: "/v2/soluciones" },
 ];
 
 const mobileAll = [
+  { label: "Soluciones", to: "/v2/soluciones" },
   { label: "Cómo funciona", to: "/v2/como-funciona" },
   { label: "Casos", to: "/v2/casos" },
-  { label: "Industrias", to: "/v2/industrias" },
-  null, // separator
+  null,
+  // Soluciones sub
+  { label: "Assessment · $1,200", to: "/v2/soluciones", sub: true },
+  { label: "Transform · desde $1,500", to: "/v2/soluciones", sub: true },
+  { label: "Ops Core · $700/mes", to: "/v2/soluciones", sub: true },
+  { label: "Ops Growth · $1,500/mes", to: "/v2/soluciones", sub: true },
+  null,
+  // Servicios
   { label: "CRM Ventas", to: "/v2/servicios/crm-ventas", sub: true },
-  { label: "CRM Atención al Cliente", to: "/v2/servicios/crm-atencion", sub: true },
+  { label: "CRM Atención", to: "/v2/servicios/crm-atencion", sub: true },
   { label: "CRM Marketing", to: "/v2/servicios/crm-marketing", sub: true },
   { label: "Chatbot IA", to: "/v2/servicios/chatbot-ia", sub: true },
   { label: "Soporte & Operaciones", to: "/v2/servicios/soporte-operaciones", sub: true },
   null,
+  // Industrias
+  { label: "Agencias de viaje", to: "/industrias/agencias-de-viaje", sub: true },
+  { label: "Inmobiliarias", to: "/industrias/inmobiliarias", sub: true },
+  { label: "Servicios B2B", to: "/industrias/servicios-generales", sub: true },
+  { label: "Educación", to: "/v2/industrias/educacion", sub: true },
+  { label: "SaaS B2B", to: "/v2/industrias/saas-b2b", sub: true },
+  { label: "Retail / E-commerce", to: "/v2/industrias/retail", sub: true },
+  null,
+  // Empresa
   { label: "Nosotros", to: "/v2/nosotros", sub: true },
   { label: "Equipo", to: "/v2/equipo", sub: true },
   { label: "Operación Continua", to: "/v2/operacion-continua", sub: true },
   null,
-  { label: "Diagnóstico Sixteam", to: "/v2/diagnostico" },
-  { label: "Radar gratis", to: "/v2/radar" },
-  { label: "Radar 360°", to: "/v2/radar-pro", accent: true },
+  { label: "Radar gratis", to: "/v2/radar", accent: true },
 ];
 
 function Dropdown({
@@ -155,49 +186,20 @@ export const HeaderV2 = () => {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navLinks.map((item) => {
-            const isActive = location.pathname === item.to;
-            return (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="relative font-lato text-[14px] font-medium text-v2-ink-body hover:text-v2-ink-heading transition-colors duration-200 group"
-              >
-                {item.label}
-                <span
-                  className={cn(
-                    "absolute -bottom-1 left-0 h-[1.5px] bg-v2-accent-teal rounded-full transition-[width] duration-300 ease-out",
-                    isActive ? "w-full" : "w-0 group-hover:w-full"
-                  )}
-                />
-              </Link>
-            );
-          })}
-
-          <Dropdown label="Servicios" items={servicios} basePaths={["/v2/servicios"]} />
-          <Dropdown label="Empresa" items={empresa} basePaths={["/v2/nosotros", "/v2/equipo", "/v2/operacion-continua"]} />
+        <nav className="hidden md:flex items-center gap-6 lg:gap-7">
+          <Dropdown label="Soluciones" items={soluciones} basePaths={["/v2/soluciones"]} />
+          <Dropdown label="Servicios"  items={servicios}  basePaths={["/v2/servicios"]} />
+          <Dropdown label="Industrias" items={industrias} basePaths={["/v2/industrias", "/industrias"]} />
+          <Dropdown label="Empresa"    items={empresa}    basePaths={["/v2/nosotros", "/v2/equipo", "/v2/operacion-continua", "/v2/casos", "/v2/como-funciona"]} />
         </nav>
 
         {/* Desktop right CTAs */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <Link
-            to="/v2/diagnostico"
-            className="font-lato text-[13px] font-medium text-v2-ink-body hover:text-v2-ink-heading transition-colors"
-          >
-            Diagnóstico
-          </Link>
-          <Link
             to="/v2/radar"
-            className="font-lato text-[13px] font-medium text-v2-ink-body hover:text-v2-ink-heading transition-colors"
-          >
-            Radar gratis
-          </Link>
-          <Link
-            to="/v2/radar-pro"
             className="font-lato text-[13px] font-medium text-v2-accent-teal-deep hover:text-v2-ink-heading transition-colors"
           >
-            Radar 360°
+            Radar gratis
           </Link>
           <Link to="/v2/contacto">
             <ButtonV2 variant="navy" size="sm" className="group">

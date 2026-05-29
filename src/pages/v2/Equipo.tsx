@@ -1,22 +1,13 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  Mail,
-  MessageCircle,
-  Database,
-  UserCheck,
-  Zap,
-  BarChart2,
   Check,
+  Compass,
   Search,
-  RefreshCw,
-  Bell,
-  Target,
-  Calendar,
-  TrendingUp,
-  Filter,
-  Send,
+  Wrench,
+  Link2,
   Activity,
+  BarChart3,
 } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
@@ -28,101 +19,122 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 /* ─── Data ─────────────────────────────────────────────────── */
 
 const aiAgents = [
+  /* ── CONSULTORÍA ── */
+  {
+    icon: Compass,
+    name: "Alex",
+    role: "Estratega & Concierge IA",
+    tagline: "Consultoría · Estrategia de revenue",
+    quote: "Coordino todo y traduzco tu objetivo de negocio en un plan que el equipo ejecuta.",
+    description:
+      "Primer punto de contacto: hace el triage de cada solicitud y diseña el roadmap de revenue.",
+    capabilities: [
+      "Triage de cada solicitud entrante y clasificación por urgencia",
+      "Diseño del roadmap de revenue alineado al objetivo del negocio",
+      "Ruteo al especialista correcto en el momento exacto",
+      "Seguimiento del ciclo completo: desde la consulta hasta el cierre del loop",
+    ],
+    tools: ["Notion", "Slack", "Linear"],
+    color: "from-[#1d70a2]/20 to-[#00bfa5]/10",
+    borderColor: "hover:border-[#1d70a2]/60",
+    avatar: "#1d70a2",
+  },
   {
     icon: Search,
-    name: "Agente SDR",
-    tagline: "Primer contacto y calificación",
+    name: "Sam",
+    role: "Diagnóstico IA",
+    tagline: "Consultoría · Auditoría operacional",
+    quote: "Mapeo la verdad real de tu operación, no el organigrama teórico — y te muestro dónde pierdes dinero.",
     description:
-      "Identifica, contacta y califica prospectos con metodología BANT sin intervención humana.",
+      "Audita el flujo comercial de forma agéntica y cuantifica las fugas de revenue con datos reales.",
     capabilities: [
-      "Calificación BANT automática por WhatsApp o email",
-      "Agenda reuniones directo al calendario del vendedor",
-      "Detecta señales de intención y prioriza el pipeline",
-      "Handoff instantáneo al humano cuando el lead está listo",
+      "Mapeo agéntico del flujo comercial end-to-end",
+      "Cuantificación de fugas de revenue por etapa del pipeline",
+      "Roadmap priorizado de acciones con impacto estimado",
+      "Comparación de métricas actuales vs benchmarks del sector",
     ],
-    tools: ["HubSpot", "WhatsApp API", "Google Calendar"],
-    color: "from-[#1d70a2]/20 to-[#00bfa5]/10",
-    borderColor: "hover:border-[#00bfa5]/50",
+    tools: ["Hex", "Make.com", "OpenAI"],
+    color: "from-[#0d6659]/20 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#0d6659]/60",
+    avatar: "#0d6659",
+  },
+  /* ── IMPLEMENTACIÓN ── */
+  {
+    icon: Wrench,
+    name: "Debbie",
+    role: "Constructora de Sistemas IA",
+    tagline: "Implementación · CRM & workflows",
+    quote: "Configuro y dejo funcionando tu CRM, tus automatizaciones y tus flujos — sin que tengas que tocar nada técnico.",
+    description:
+      "Hace el setup y build completo del CRM, automatizaciones y estructura de pipeline.",
+    capabilities: [
+      "Setup y configuración inicial del CRM según el proceso comercial",
+      "Build de automatizaciones y workflows internos del pipeline",
+      "Estructura de etapas, propiedades y vistas del pipeline",
+      "Documentación técnica de cada sistema construido",
+    ],
+    tools: ["HubSpot", "GoHighLevel", "Pipedrive"],
+    color: "from-[#7b5ea7]/20 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#7b5ea7]/55",
+    avatar: "#7b5ea7",
   },
   {
-    icon: Mail,
-    name: "Agente de Nurturing",
-    tagline: "Secuencias que convierten",
+    icon: Link2,
+    name: "Vinnie",
+    role: "Especialista de Integraciones IA",
+    tagline: "Implementación · Integraciones & APIs",
+    quote: "Conecto todas tus herramientas para que se hablen entre sí y dejen de costarte horas.",
     description:
-      "Diseña, programa y optimiza secuencias de email personalizadas para cada etapa del funnel.",
+      "Conecta WhatsApp, CRM, pagos y cualquier API — e incrusta agentes IA en el flujo operativo.",
     capabilities: [
-      "Secuencias de bienvenida, follow-up y reactivación",
-      "A/B testing automático de asuntos y contenido",
-      "Pausa secuencias cuando el lead responde",
-      "Reporta tasas de apertura, clics y conversión",
+      "Integraciones WhatsApp + CRM + pasarela de pago en un solo flujo",
+      "Conexión de APIs entre herramientas del stack del cliente",
+      "Agentes IA embebidos directamente en el flujo operativo",
+      "Monitoreo activo de integraciones y reparación proactiva de errores",
     ],
-    tools: ["Mailchimp", "ActiveCampaign", "Make.com"],
-    color: "from-[#1d70a2]/20 to-[#1d70a2]/5",
-    borderColor: "hover:border-[#1d70a2]/60",
+    tools: ["Make.com", "Zapier", "n8n"],
+    color: "from-[#c2680a]/20 to-[#1d70a2]/10",
+    borderColor: "hover:border-[#c2680a]/50",
+    avatar: "#c2680a",
   },
+  /* ── OPERACIÓN ── */
   {
-    icon: MessageCircle,
-    name: "Agente WhatsApp",
-    tagline: "Atención 24/7 sin pausas",
+    icon: Activity,
+    name: "Sally",
+    role: "Operadora de Revenue IA",
+    tagline: "Operación · Pipeline diario",
+    quote: "Corro tu pipeline todos los días: ningún lead calificado se cae, ningún follow-up se olvida.",
     description:
-      "Opera la bandeja completa: responde, entiende contexto, escala a humano cuando es necesario.",
+      "Opera el pipeline día a día: califica, hace follow-up y alerta al equipo comercial.",
     capabilities: [
-      "Responde FAQs con contexto de CRM en tiempo real",
-      "Gestiona agendas, reagendas y confirmaciones",
-      "Escala a humano con resumen de la conversación",
-      "Reporta mensajes sin respuesta y cuellos de botella",
+      "Operación diaria del pipeline: avance, bloqueos y oportunidades",
+      "Calificación automática de leads entrantes con contexto del CRM",
+      "Follow-up automático por WhatsApp o email en el momento exacto",
+      "Alertas al equipo comercial cuando un deal requiere atención humana",
     ],
-    tools: ["WhatsApp Business API", "Twilio", "GHL"],
+    tools: ["HubSpot", "WhatsApp API", "Twilio"],
     color: "from-[#00bfa5]/15 to-[#1d70a2]/10",
-    borderColor: "hover:border-[#00bfa5]/50",
+    borderColor: "hover:border-[#00bfa5]/55",
+    avatar: "#00bfa5",
   },
   {
-    icon: Database,
-    name: "Agente CRM Ops",
-    tagline: "Pipeline siempre limpio",
+    icon: BarChart3,
+    name: "Clara",
+    role: "Analista de Operación IA",
+    tagline: "Operación · Inteligencia de revenue",
+    quote: "Te muestro en tiempo real cómo va tu revenue y dónde está el próximo cuello de botella.",
     description:
-      "Mantiene el CRM ordenado, los datos consistentes y las etapas del pipeline actualizadas automáticamente.",
+      "Genera el dashboard de revenue en vivo, el reporte semanal y detecta anomalías antes de que escalen.",
     capabilities: [
-      "Limpia duplicados y normaliza campos de contacto",
-      "Mueve oportunidades según actividad real del lead",
-      "Crea tareas automáticas para el equipo de ventas",
-      "Alerta sobre deals sin actividad por más de X días",
+      "Dashboard de revenue en vivo actualizado en tiempo real",
+      "Reporte semanal de salud operacional cada lunes a las 9am",
+      "Detección de anomalías y oportunidades en el pipeline",
+      "Devuelve hallazgos clave a Alex para cerrar el ciclo cada semana",
     ],
-    tools: ["HubSpot", "Salesforce", "Pipedrive"],
-    color: "from-[#0a5c78]/20 to-[#1d70a2]/10",
-    borderColor: "hover:border-[#1d70a2]/50",
-  },
-  {
-    icon: Zap,
-    name: "Agente de Workflows",
-    tagline: "Automatizaciones sin código",
-    description:
-      "Diseña, ejecuta y monitora workflows entre todas tus herramientas. Sin errores, sin configuración manual.",
-    capabilities: [
-      "Conecta CRM, email, WhatsApp y calendario en un flujo",
-      "Detecta y repara errores de automatización proactivamente",
-      "Adapta workflows según cambios en el proceso del negocio",
-      "Documenta y versiona cada automatización activa",
-    ],
-    tools: ["Make.com", "n8n", "Zapier"],
-    color: "from-[#1d70a2]/15 to-[#00bfa5]/10",
-    borderColor: "hover:border-[#00bfa5]/40",
-  },
-  {
-    icon: BarChart2,
-    name: "Agente de Inteligencia",
-    tagline: "Decisiones basadas en datos",
-    description:
-      "Genera reportes ejecutivos, detecta anomalías y anticipa tendencias del pipeline cada semana.",
-    capabilities: [
-      "Reporte ejecutivo listo cada lunes a las 9am",
-      "Alerta cuando una métrica clave cae fuera del rango",
-      "Proyección de cierre del mes con datos reales",
-      "Identifica los canales y vendedores con mejor rendimiento",
-    ],
-    tools: ["Google Looker", "HubSpot Reports", "Slack"],
-    color: "from-[#7b5ea7]/15 to-[#1d70a2]/10",
-    borderColor: "hover:border-[#7b5ea7]/50",
+    tools: ["Looker Studio", "Hex", "Slack"],
+    color: "from-[#1d70a2]/20 to-[#0a2342]/40",
+    borderColor: "hover:border-[#1d70a2]/60",
+    avatar: "#1d70a2",
   },
 ];
 
@@ -131,29 +143,37 @@ const experts = [
     initials: "CM",
     name: "Carlos M.",
     role: "RevOps Strategist",
+    quote: "Diseño el sistema de revenue antes de tocar una sola herramienta. La arquitectura correcta es la diferencia entre un CRM que crece y uno que abandona.",
     tags: ["HubSpot", "Salesforce", "Revenue Architecture"],
     color: "bg-[#1d70a2]",
+    specialties: ["Arquitectura de CRM", "Pipeline design", "Forecasting"],
   },
   {
     initials: "VR",
     name: "Valentina R.",
     role: "CRM & Automation Lead",
+    quote: "Una automatización bien hecha es invisible. El equipo opera y ni siente que hay algo corriendo detrás — hasta que ve los resultados el lunes.",
     tags: ["Make.com", "n8n", "Email Marketing"],
     color: "bg-[#00bfa5]",
+    specialties: ["Automatizaciones complejas", "Email sequences", "Integraciones API"],
   },
   {
     initials: "AP",
     name: "Andrés P.",
     role: "AI & Chatbot Engineer",
+    quote: "Construyo agentes que entienden el negocio, no bots que siguen un script. Si el contexto cambia, el agente lo maneja — sin que nadie tenga que reprogramarlo.",
     tags: ["Agentes IA", "WhatsApp API", "Integraciones"],
     color: "bg-[#0a5c78]",
+    specialties: ["Agentes de IA", "WhatsApp Business", "Integraciones en tiempo real"],
   },
   {
     initials: "LC",
     name: "Laura C.",
     role: "Account & Operations Manager",
+    quote: "Mi trabajo es que el cliente nunca tenga que perseguirnos. Cada semana hay un entregable claro, y si algo cambia, ellos lo saben antes de preguntar.",
     tags: ["Onboarding", "Sprints", "Reportes"],
     color: "bg-[#7b5ea7]",
+    specialties: ["Gestión de cuentas", "Sprint planning", "Customer success"],
   },
 ];
 
@@ -224,7 +244,7 @@ const Equipo = () => {
               animation: "v2-fade-up 0.55s ease forwards 200ms",
             }}
           >
-            Desde el día uno tienes acceso a agentes de IA entrenados y expertos
+            Desde el día uno tienes acceso a 6 agentes de IA entrenados y expertos
             humanos senior — operando tu tecnología mes a mes.
           </p>
 
@@ -237,10 +257,10 @@ const Equipo = () => {
             }}
           >
             {[
-              "IA + humanos trabajando juntos",
+              "6 agentes IA · 3 capas",
               "Sprint semanal",
               "Slack directo",
-              "Sin contratos de permanencia",
+              "Diagnóstico desde $2,500",
             ].map((pill) => (
               <span
                 key={pill}
@@ -266,7 +286,7 @@ const Equipo = () => {
         <div ref={agentsRef}>
           <Container className="relative">
             {/* Header */}
-            <div className="text-center max-w-[640px] mx-auto mb-14">
+            <div className="text-center max-w-[680px] mx-auto mb-14">
               <Eyebrow variant="teal" className="v2-fade v2-d1">
                 Inteligencia artificial
               </Eyebrow>
@@ -274,11 +294,11 @@ const Equipo = () => {
                 className="v2-reveal v2-d2 font-poppins font-bold text-white mt-3"
                 style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15" }}
               >
-                Los agentes IA de tu cuenta
+                6 agentes IA. 3 capas. Un ciclo cerrado.
               </h2>
               <p className="v2-fade v2-d3 font-lato text-[17px] text-white/65 mt-4 leading-[1.65]">
-                Cada agente está especializado en una función crítica. Operan en paralelo,
-                se coordinan entre sí y mejoran cada semana.
+                Alex y Sam consultan. Debbie y Vinnie implementan. Sally y Clara operan.
+                Clara devuelve los hallazgos a Alex — y el ciclo vuelve a empezar cada semana.
               </p>
             </div>
 
@@ -293,10 +313,19 @@ const Equipo = () => {
                   >
                     {/* Header row */}
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center">
-                        <Icon className="h-5 w-5 text-v2-accent-teal" strokeWidth={1.8} />
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-10 h-10 rounded-full flex items-center justify-center text-white font-poppins font-bold text-[14px] flex-shrink-0"
+                          style={{ backgroundColor: agent.avatar }}
+                        >
+                          {agent.name[0]}
+                        </div>
+                        <div>
+                          <p className="font-poppins font-bold text-[15px] text-white leading-tight">{agent.name}</p>
+                          <p className="font-lato text-[11px] text-white/50 mt-0.5">{agent.role}</p>
+                        </div>
                       </div>
-                      <div className="inline-flex items-center gap-1.5 bg-v2-accent-teal/10 border border-v2-accent-teal/20 rounded-full px-2.5 py-1">
+                      <div className="inline-flex items-center gap-1.5 bg-v2-accent-teal/10 border border-v2-accent-teal/20 rounded-full px-2.5 py-1 flex-shrink-0">
                         <span className="w-1.5 h-1.5 rounded-full bg-v2-accent-teal animate-pulse" />
                         <span className="font-lato text-[10px] font-semibold uppercase tracking-widest text-v2-accent-teal">
                           24/7
@@ -304,15 +333,14 @@ const Equipo = () => {
                       </div>
                     </div>
 
-                    {/* Name + tagline */}
-                    <h3 className="font-poppins font-bold text-[17px] text-white leading-tight">
-                      {agent.name}
-                    </h3>
-                    <p className="font-lato text-[12px] font-semibold text-v2-accent-teal/80 uppercase tracking-wide mt-0.5">
+                    {/* Quote */}
+                    <blockquote className="font-lato text-[13px] text-white/65 italic leading-[1.6] border-l-2 border-v2-accent-teal/40 pl-3 mb-4">
+                      "{agent.quote}"
+                    </blockquote>
+
+                    {/* Tagline */}
+                    <p className="font-lato text-[11px] font-bold text-v2-accent-teal/80 uppercase tracking-widest mb-1">
                       {agent.tagline}
-                    </p>
-                    <p className="font-lato text-[13.5px] text-white/55 mt-3 leading-[1.55]">
-                      {agent.description}
                     </p>
 
                     {/* Capabilities */}
@@ -394,7 +422,23 @@ const Equipo = () => {
                     {expert.role}
                   </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <blockquote className="font-lato text-[13px] text-v2-ink-body italic leading-[1.6] border-l-2 border-v2-accent-teal/40 pl-3 mt-3 mb-4">
+                    "{expert.quote}"
+                  </blockquote>
+
+                  <div className="mt-3">
+                    <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-2">Especialidades</p>
+                    <div className="flex flex-col gap-1.5">
+                      {expert.specialties.map((s) => (
+                        <div key={s} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-v2-accent-teal flex-shrink-0" />
+                          <span className="font-lato text-[12px] text-v2-ink-body">{s}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-v2-border-subtle flex flex-wrap gap-2">
                     {expert.tags.map((tag) => (
                       <span
                         key={tag}

@@ -1,297 +1,528 @@
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  Briefcase,
-  MessageSquare,
-  Megaphone,
-  Bot,
-  Wrench,
-  Plane,
-  Home,
-  Cog,
+  ArrowRight, Search, Hammer, Zap, Check, Bot, Users,
+  BarChart3, MessageSquare, Brain, Wrench, Star, ChevronRight,
 } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Underlined from "@/components/v2/UnderlineSvg";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+/* ── Primitives ──────────────────────────────────────────────────── */
 
-const services = [
-  {
-    icon: Briefcase,
-    title: "CRM Ventas",
-    href: "/v2/servicios/crm-ventas",
-    desc: "Pipeline operado, leads enrutados, dashboards vivos. Tu equipo comercial deja de hacer admin y vuelve a vender.",
-    bullets: ["Routing automático de leads", "Dashboards semanales", "Limpieza de datos continua"],
-    accent: "teal",
-  },
-  {
-    icon: MessageSquare,
-    title: "CRM Atención",
-    href: "/v2/servicios/crm-atencion",
-    desc: "WhatsApp, email y chat en una sola bandeja operada. SLA medible, sin hilos perdidos.",
-    bullets: ["Bandeja unificada multicanal", "SLA automatizado", "Escalamiento sin fricción"],
-    accent: "blue",
-  },
-  {
-    icon: Megaphone,
-    title: "CRM Marketing",
-    href: "/v2/servicios/crm-marketing",
-    desc: "Campañas, nurturing y atribución conectados al CRM. Para que MKT y Sales hablen el mismo idioma.",
-    bullets: ["Secuencias de nurturing", "Atribución de revenue", "Segmentación dinámica"],
-    accent: "sand",
-  },
-  {
-    icon: Bot,
-    title: "Chatbot IA",
-    href: "/v2/servicios/chatbot-ia",
-    desc: "Agentes que califican, agendan y resuelven. Operan con tu base de conocimiento, no con magia.",
-    bullets: ["Calificación automática 24/7", "Agendamiento sin intervención", "Escalamiento inteligente"],
-    accent: "teal",
-  },
-  {
-    icon: Wrench,
-    title: "Soporte & Operaciones",
-    href: "/v2/servicios/soporte-operaciones",
-    desc: "El equipo que mantiene vivo el sistema. Mejoras, ajustes y nuevas automatizaciones cada semana.",
-    bullets: ["Sprint semanal continuo", "Mantenimiento del stack", "Nuevas automatizaciones on demand"],
-    accent: "blue",
-  },
-];
+const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
+  <div className="flex items-start gap-2.5">
+    <div className="w-4 h-4 rounded-full bg-v2-surface-teal-mist border border-v2-accent-teal/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+      <Check className="h-2.5 w-2.5 text-v2-accent-teal-deep" />
+    </div>
+    <span className="font-lato text-[14px] text-v2-ink-body leading-snug">{text}</span>
+  </div>
+);
 
-const industries = [
-  {
-    icon: Plane,
-    title: "Agencias de Viaje",
-    href: "/industrias/agencias-de-viaje",
-    desc: "Pipeline de cotización, seguimientos post-venta y operación de WhatsApp Business para equipos de turismo.",
-  },
-  {
-    icon: Home,
-    title: "Inmobiliarias",
-    href: "/inmobiliarias",
-    desc: "Calificación de leads, agendamiento de visitas y handoff a brokers sin perder el hilo.",
-  },
-  {
-    icon: Cog,
-    title: "Servicios B2B",
-    href: "/industrias/servicios-generales",
-    desc: "Pipeline de proyectos, automatización de propuestas y reportes de revenue por línea de servicio.",
-  },
-];
+const SectionBadge: React.FC<{ n: string; label: string; color?: "blue" | "teal" }> = ({ n, label, color = "teal" }) => (
+  <div className="flex items-center gap-3 mb-8">
+    <div className={`flex items-center gap-2.5 px-4 py-2 rounded-full border ${
+      color === "blue"
+        ? "bg-v2-surface-navy-mist border-v2-accent-blue/25 text-v2-accent-blue"
+        : "bg-v2-surface-teal-mist border-v2-accent-teal/25 text-v2-accent-teal-deep"
+    }`}>
+      <span className="font-lato text-[10px] font-bold uppercase tracking-widest opacity-60">{n}</span>
+      <span className="font-lato text-[11px] font-bold uppercase tracking-widest">{label}</span>
+    </div>
+    <div className="h-px flex-1 bg-v2-border-subtle" />
+  </div>
+);
 
-const accentIcon: Record<string, string> = {
-  teal: "bg-v2-surface-teal-mist text-v2-accent-teal-deep group-hover:bg-v2-accent-teal group-hover:text-white",
-  blue: "bg-v2-surface-navy-mist text-v2-accent-blue group-hover:bg-v2-accent-blue group-hover:text-white",
-  sand: "bg-v2-surface-sand-mist text-[#8a7a4f] group-hover:bg-[#d4a853] group-hover:text-white",
-};
+/* ── Ops comparison row (light) ─────────────────────────────────── */
+const OpsRow: React.FC<{ label: string; base: React.ReactNode; avanzado: React.ReactNode; highlight?: boolean }> = ({
+  label, base, avanzado, highlight,
+}) => (
+  <div className={`grid grid-cols-[1fr_auto_auto] items-center gap-4 py-3 border-b border-v2-border-subtle last:border-0 ${highlight ? "bg-v2-surface-teal-mist/50 -mx-5 px-5 rounded-lg" : ""}`}>
+    <span className="font-lato text-[13px] text-v2-ink-muted">{label}</span>
+    <span className="font-lato text-[13px] text-v2-ink-body text-right w-[110px]">{base}</span>
+    <span className="font-lato text-[13px] text-v2-accent-teal-deep font-semibold text-right w-[130px]">{avanzado}</span>
+  </div>
+);
 
-const accentNum: Record<string, string> = {
-  teal: "text-v2-accent-teal/[0.06] group-hover:text-v2-accent-teal/[0.10]",
-  blue: "text-v2-accent-blue/[0.06] group-hover:text-v2-accent-blue/[0.10]",
-  sand: "text-[#d4a853]/[0.08] group-hover:text-[#d4a853]/[0.14]",
-};
+/* ═══════════════════════════════════════════════════════════════════ */
 
 const Soluciones = () => {
-  const ref1 = useScrollReveal<HTMLDivElement>();
-  const ref2 = useScrollReveal<HTMLDivElement>();
-  const ref3 = useScrollReveal<HTMLDivElement>();
-
   return (
     <LayoutV2>
-      {/* Hero */}
+
+      {/* ── HERO ──────────────────────────────────────────────────── */}
       <Section surface="default" size="spacious" className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full opacity-40"
-          style={{
-            background: "radial-gradient(circle, rgba(29,112,162,0.12) 0%, transparent 70%)",
-            animation: "v2-aurora-2 16s ease-in-out infinite",
-          }}
-        />
-        <Container size="narrow" className="text-center pt-8">
-          <Eyebrow variant="teal">Soluciones</Eyebrow>
-          <h1
-            className="font-poppins font-bold text-v2-ink-heading mt-4"
-            style={{ fontSize: "clamp(40px, 7vw, 68px)", lineHeight: "1.05", letterSpacing: "-0.025em" }}
-          >
-            Cinco servicios que se{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">operan</em>
-            </Underlined>{" "}
-            juntos.
-          </h1>
-          <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto">
-            Cada pieza se contrata por separado o como sistema completo. La que mejor te conviene
-            depende de dónde está la fuga de revenue.
-          </p>
-          <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
-              <ButtonV2 variant="primary" size="lg">
-                Diagnóstico gratis
-                <ArrowRight className="h-4 w-4" />
-              </ButtonV2>
-            </Link>
-            <Link to="/v2/como-funciona">
-              <ButtonV2 variant="outline" size="lg">
-                Ver cómo funciona
-              </ButtonV2>
-            </Link>
+        <div aria-hidden className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full opacity-25"
+          style={{ background: "radial-gradient(circle, rgba(29,112,162,0.10) 0%, transparent 70%)" }} />
+        <div aria-hidden className="pointer-events-none absolute -bottom-16 -right-16 w-[360px] h-[360px] rounded-full opacity-20"
+          style={{ background: "radial-gradient(circle, rgba(0,191,165,0.10) 0%, transparent 70%)" }} />
+
+        <Container size="narrow" className="relative text-center pt-8">
+          <div>
+            <div>
+              <Eyebrow variant="teal">Las tres soluciones</Eyebrow>
+              <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
+                style={{ fontSize: "clamp(38px, 6.5vw, 64px)", lineHeight: "1.06", letterSpacing: "-0.025em" }}>
+                Entender.{" "}
+                <Underlined color="teal" variant="scribble">
+                  <em className="font-serif italic font-normal text-v2-accent-teal-deep">Construir.</em>
+                </Underlined>{" "}
+                Operar.
+              </h1>
+              <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">
+                Sixteam no vende productos sueltos. Vende un recorrido donde cada solución prepara
+                la siguiente — y la tercera es donde vive el negocio real.
+              </p>
+            </div>
+
+            {/* Journey pills */}
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-2">
+              {[
+                { n: "01", label: "Assessment", sub: "$1,200 · único",     cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
+                { n: "02", label: "Transform",  sub: "Desde $1,500 · proyecto", cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
+                { n: "03", label: "Ops ⭐",     sub: "Desde $700/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
+              ].map((step, i) => (
+                <div key={step.n} className="flex items-center gap-2">
+                  <div className={`flex flex-col items-center px-5 py-3.5 rounded-2xl border transition-transform hover:-translate-y-0.5 duration-200 ${step.cls}`}>
+                    <span className="font-lato text-[10px] font-bold uppercase tracking-widest opacity-50">{step.n}</span>
+                    <span className={`font-poppins font-bold text-[15px] mt-0.5 ${step.bold ? "text-v2-accent-teal-deep" : ""}`}>{step.label}</span>
+                    <span className="font-lato text-[11px] mt-0.5 opacity-60">{step.sub}</span>
+                  </div>
+                  {i < 2 && <ChevronRight className="h-4 w-4 text-v2-ink-muted/40 flex-shrink-0 hidden sm:block" />}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+              <Link to="/v2/radar">
+                <ButtonV2 variant="primary" size="lg">
+                  Diagnóstico gratis <ArrowRight className="h-4 w-4" />
+                </ButtonV2>
+              </Link>
+              <Link to="/v2/contacto">
+                <ButtonV2 variant="outline" size="lg">Hablar con un experto</ButtonV2>
+              </Link>
+            </div>
           </div>
         </Container>
       </Section>
 
-      {/* Services grid */}
+      {/* ── SOLUCIÓN 1: ASSESSMENT ────────────────────────────────── */}
       <Section surface="cream" size="default">
         <Container>
-          <div ref={ref1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s, i) => {
-              const Icon = s.icon;
-              const isLast = i === services.length - 1;
-              const num = String(i + 1).padStart(2, "0");
-              return (
-                <Link
-                  key={s.title}
-                  to={s.href}
-                  className={[
-                    "v2-reveal",
-                    `v2-d${Math.min(i + 1, 5)}`,
-                    "group relative bg-white border border-v2-border-subtle rounded-2xl p-7",
-                    "hover:border-v2-accent-teal/30 hover:shadow-[0_16px_48px_rgba(0,191,165,0.10)] hover:-translate-y-1",
-                    "transition-[transform,box-shadow,border-color] duration-300 flex flex-col overflow-hidden",
-                    isLast ? "lg:col-span-2" : "",
-                  ].filter(Boolean).join(" ")}
-                >
-                  {/* Watermark */}
-                  <span
-                    className={`pointer-events-none select-none absolute -right-2 -top-3 font-serif italic text-[88px] leading-none transition-colors duration-300 ${accentNum[s.accent]}`}
-                    aria-hidden
-                  >
-                    {num}
-                  </span>
+          <div>
+            <SectionBadge n="Solución 01" label="Assessment · $1,200 USD · ~10 días · pago único" color="blue" />
 
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300 ${accentIcon[s.accent]}`}>
-                    <Icon className="h-[22px] w-[22px] transition-colors duration-300" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+              {/* Left */}
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-11 h-11 rounded-xl bg-v2-surface-navy-mist border border-v2-accent-blue/20 flex items-center justify-center flex-shrink-0">
+                    <Search className="h-5 w-5 text-v2-accent-blue" />
                   </div>
+                  <div>
+                    <h2 className="font-poppins font-bold text-[30px] md:text-[36px] text-v2-ink-heading leading-tight">
+                      Sixteam Assessment
+                    </h2>
+                    <p className="font-lato text-[13px] text-v2-ink-muted">Evaluación de Transformación con IA</p>
+                  </div>
+                </div>
 
-                  <h3 className="font-poppins font-bold text-[20px] text-v2-ink-heading mt-5 leading-[1.2]">
-                    {s.title}
-                  </h3>
-                  <p className="font-lato text-[14px] text-v2-ink-body leading-[1.6] mt-2">{s.desc}</p>
+                <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7]">
+                  La mayoría de las transformaciones fallan porque las empresas se saltan lo más difícil:
+                  entender cómo opera <em className="text-v2-ink-heading not-italic font-semibold">realmente</em> el negocio
+                  antes de decidir qué cambiar. El Assessment elimina esa incertidumbre.
+                </p>
 
-                  <ul className="mt-5 flex flex-col gap-1.5">
-                    {s.bullets.map((b) => (
-                      <li key={b} className="flex items-center gap-2">
-                        <span className="w-1 h-1 rounded-full bg-v2-accent-teal flex-shrink-0" />
-                        <span className="font-lato text-[13px] text-v2-ink-muted">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <span className="inline-flex items-center gap-1.5 font-lato text-[13px] font-semibold uppercase tracking-widest text-v2-accent-teal-deep mt-6 group-hover:gap-2.5 transition-[gap] duration-200">
-                    Ver servicio
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Industries */}
-      <Section surface="sand-mist" size="default">
-        <Container>
-          <div ref={ref2}>
-            <div className="text-center max-w-[640px] mx-auto mb-12 v2-reveal">
-              <Eyebrow variant="sand">Por industria</Eyebrow>
-              <h2
-                className="font-poppins font-bold text-v2-ink-heading mt-3"
-                style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15" }}
-              >
-                Sabemos cómo opera{" "}
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">tu industria</em>.
-              </h2>
-              <p className="font-lato text-[17px] text-v2-ink-body leading-[1.6] mt-4">
-                No vendemos templates genéricos. Cada vertical tiene su propio motor.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {industries.map((ind, i) => {
-                const Icon = ind.icon;
-                return (
-                  <Link
-                    key={ind.title}
-                    to={ind.href}
-                    className={`v2-reveal v2-d${i + 1} group bg-white border border-v2-border-subtle rounded-2xl p-7 hover:border-v2-accent-teal/30 hover:shadow-[0_12px_40px_rgba(10,35,66,0.07)] hover:-translate-y-1 transition-[transform,box-shadow,border-color] duration-300 flex flex-col`}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-v2-surface-teal-mist group-hover:bg-v2-accent-teal flex items-center justify-center transition-colors duration-300">
-                      <Icon className="h-5 w-5 text-v2-accent-teal-deep group-hover:text-white transition-colors duration-300" />
+                <div className="mt-7 flex flex-col gap-4">
+                  {[
+                    { n: "1", t: "Definimos tus metas",      d: "Las prioridades del dueño moldean todo lo que sigue." },
+                    { n: "2", t: "Mapeamos la operación real",d: "Agentes de IA + experto Sixteam reconstruyen cada flujo, cada fricción, cada lead caído." },
+                    { n: "3", t: "Identificamos las palancas",d: "3 a 7 iniciativas de mayor impacto para tu contexto específico." },
+                    { n: "4", t: "Entregamos la estrategia", d: "Roadmap priorizado + presentación de hallazgos al dueño." },
+                  ].map((s) => (
+                    <div key={s.n} className="flex items-start gap-3.5">
+                      <div className="w-7 h-7 rounded-full bg-v2-surface-navy-mist border border-v2-accent-blue/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="font-poppins font-bold text-[12px] text-v2-accent-blue">{s.n}</span>
+                      </div>
+                      <div>
+                        <p className="font-poppins font-bold text-[14px] text-v2-ink-heading">{s.t}</p>
+                        <p className="font-lato text-[13px] text-v2-ink-body mt-0.5 leading-relaxed">{s.d}</p>
+                      </div>
                     </div>
-                    <h3 className="font-poppins font-bold text-[19px] text-v2-ink-heading mt-5">
-                      {ind.title}
-                    </h3>
-                    <p className="font-lato text-[14px] text-v2-ink-body leading-[1.6] mt-2 flex-1">
-                      {ind.desc}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 font-lato text-[13px] font-semibold uppercase tracking-widest text-v2-accent-teal-deep mt-6 group-hover:gap-2.5 transition-[gap] duration-200">
-                      Ver vertical
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </Container>
-      </Section>
+                  ))}
+                </div>
 
-      {/* CTA */}
-      <Section surface="navy-dark" size="default" className="overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full opacity-40"
-          style={{
-            background: "radial-gradient(circle, rgba(0,191,165,0.16) 0%, transparent 65%)",
-            animation: "v2-aurora-1 18s ease-in-out infinite",
-          }}
-        />
-        <Container size="narrow" className="text-center relative">
-          <div ref={ref3}>
-            <div className="v2-reveal">
-              <h2
-                className="font-poppins font-bold text-white"
-                style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15" }}
-              >
-                ¿No sabes por dónde empezar?{" "}
-                <em className="font-serif italic font-normal text-v2-accent-teal">El Radar te lo dice</em>.
-              </h2>
-              <p className="font-lato text-[17px] text-white/70 mt-5 max-w-[500px] mx-auto">
-                Un diagnóstico ejecutivo en 48 horas. Decides después. Cero compromiso.
-              </p>
-              <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-                <Link to="/v2/radar">
-                  <ButtonV2 variant="primary" size="lg">
-                    Pedir Radar gratis
-                    <ArrowRight className="h-4 w-4" />
-                  </ButtonV2>
-                </Link>
-                <Link to="/v2/contacto">
-                  <ButtonV2
-                    variant="outline"
-                    size="lg"
-                    className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
-                  >
-                    Hablar con un experto
-                  </ButtonV2>
-                </Link>
+                <div className="mt-8">
+                  <Link to="/v2/contacto">
+                    <ButtonV2 variant="navy" size="md">
+                      Solicitar Assessment <ArrowRight className="h-4 w-4" />
+                    </ButtonV2>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right — deliverables */}
+              <div className="bg-white border border-v2-border-subtle rounded-2xl p-7 shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-blue mb-5">
+                  Qué se lleva el cliente
+                </p>
+                <div className="flex flex-col gap-3.5">
+                  {[
+                    { icon: <Brain className="h-4 w-4" />,      t: "Mapa operativo vivo",         d: "Cómo funciona su negocio hoy, navegable y consultable." },
+                    { icon: <BarChart3 className="h-4 w-4" />,  t: "Palancas de IA priorizadas",  d: "Qué cambiar, en qué orden y con qué impacto esperado." },
+                    { icon: <Wrench className="h-4 w-4" />,     t: "Blueprints de implementación",d: "Para cada iniciativa: qué cambia, qué se necesita, cuál es el resultado." },
+                    { icon: <Bot className="h-4 w-4" />,        t: "Agente de IA persistente",    d: "Conoce tu operación y queda disponible para consultar después." },
+                  ].map((d) => (
+                    <div key={d.t} className="flex items-start gap-3.5 p-3.5 rounded-xl bg-v2-surface border border-v2-border-subtle">
+                      <div className="w-8 h-8 rounded-lg bg-v2-surface-navy-mist flex items-center justify-center text-v2-accent-blue flex-shrink-0">
+                        {d.icon}
+                      </div>
+                      <div>
+                        <p className="font-poppins font-bold text-[13px] text-v2-ink-heading">{d.t}</p>
+                        <p className="font-lato text-[12px] text-v2-ink-body mt-0.5">{d.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 p-4 rounded-xl bg-v2-surface-navy-mist border border-v2-accent-blue/20">
+                  <p className="font-lato text-[12px] text-v2-accent-blue leading-relaxed">
+                    No es un deck que se archiva. Es un mapa vivo con un copiloto que se queda —
+                    la consultoría tradicional cobra más, entrevista a menos y se va.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </Container>
       </Section>
+
+      {/* ── SOLUCIÓN 2: TRANSFORM ─────────────────────────────────── */}
+      <Section surface="default" size="default">
+        <Container>
+          <div>
+            <SectionBadge n="Solución 02" label="Transform · Desde $1,500 USD · pago por proyecto" color="teal" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+              {/* Left */}
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-11 h-11 rounded-xl bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center flex-shrink-0">
+                    <Hammer className="h-5 w-5 text-v2-accent-teal-deep" />
+                  </div>
+                  <div>
+                    <h2 className="font-poppins font-bold text-[30px] md:text-[36px] text-v2-ink-heading leading-tight">
+                      Sixteam Transform
+                    </h2>
+                    <p className="font-lato text-[13px] text-v2-ink-muted">Transformación Digital</p>
+                  </div>
+                </div>
+
+                <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7]">
+                  Es la construcción. Sixteam implementa lo que el negocio necesita: sistemas, agentes
+                  de IA y mejoras de proceso. El alcance sale del Assessment, o de necesidades que el
+                  cliente ya tiene claras.
+                </p>
+
+                <div className="mt-5 p-4 rounded-xl border border-v2-accent-teal/20 bg-v2-surface-teal-mist">
+                  <p className="font-lato text-[13px] text-v2-accent-teal-deep leading-relaxed">
+                    Transform no es para explorar — es para construir. Quien todavía no sabe qué necesita,
+                    primero hace el Assessment.
+                  </p>
+                </div>
+
+                <div className="mt-7 flex flex-col gap-2.5">
+                  {[
+                    "Implementación de CRM, automatizaciones e integraciones",
+                    "Agentes de IA específicos para la operación del negocio",
+                    "Rediseño de los procesos que frenan el crecimiento",
+                    "Alcance definido y cerrado antes de empezar — sin sorpresas",
+                    "Al terminar: operación montada y funcionando, no un manual",
+                  ].map((i) => <CheckItem key={i} text={i} />)}
+                </div>
+
+                <div className="mt-8">
+                  <Link to="/v2/contacto">
+                    <ButtonV2 variant="primary" size="md">
+                      Solicitar Transform <ArrowRight className="h-4 w-4" />
+                    </ButtonV2>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right */}
+              <div className="flex flex-col gap-4">
+                <div className="bg-white border border-v2-border-subtle rounded-2xl p-7 shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                  <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep mb-4">
+                    Su rol en el recorrido
+                  </p>
+                  <div className="flex items-center justify-center gap-2 mb-5">
+                    {["Assessment", "Transform", "Ops ⭐"].map((step, i) => (
+                      <div key={step} className="flex items-center gap-2">
+                        <span className={`font-lato text-[11px] font-semibold px-2.5 py-1 rounded-full border ${
+                          step === "Transform"
+                            ? "bg-v2-accent-teal text-white border-v2-accent-teal"
+                            : "text-v2-ink-muted border-v2-border-subtle bg-v2-surface"
+                        }`}>{step}</span>
+                        {i < 2 && <ChevronRight className="h-3 w-3 text-v2-ink-muted/40" />}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="font-lato text-[14px] text-v2-ink-body leading-[1.65]">
+                    Transform convierte el mapa del Assessment en una operación real. Casi todo cliente
+                    que termina Transform debe continuar en Ops — un sistema montado sin quien lo opere
+                    se degrada solo.
+                  </p>
+                </div>
+
+                <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                  <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted mb-2">Precio</p>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">Desde $1,500</span>
+                    <span className="font-lato text-[14px] text-v2-ink-muted">USD</span>
+                  </div>
+                  <p className="font-lato text-[13px] text-v2-ink-body mt-2 leading-relaxed">
+                    Precio según alcance, definido antes de empezar. Construido por humanos expertos
+                    + agentes de IA de construcción.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── SOLUCIÓN 3: OPS ★ — LIGHT THEME ─────────────────────── */}
+      <Section surface="alt" size="default">
+        <Container>
+          <div>
+            {/* Section label con badge destacado */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-v2-accent-teal/10 border border-v2-accent-teal/35 text-v2-accent-teal-deep">
+                <Star className="h-3.5 w-3.5" />
+                <span className="font-lato text-[10px] font-bold uppercase tracking-widest">Solución 03 · La estrella</span>
+              </div>
+              <div className="h-px flex-1 bg-v2-border-subtle" />
+              <span className="font-lato text-[12px] text-v2-ink-muted">Recurrente mensual · contrato anual</span>
+            </div>
+
+            {/* Header */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-11 h-11 rounded-xl bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-5 w-5 text-v2-accent-teal-deep" />
+                  </div>
+                  <div>
+                    <h2 className="font-poppins font-bold text-[30px] md:text-[38px] text-v2-ink-heading leading-tight">
+                      Sixteam Ops
+                    </h2>
+                    <p className="font-lato text-[13px] text-v2-ink-muted">Soporte y Operaciones</p>
+                  </div>
+                </div>
+                <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7]">
+                  Sixteam no entrega y se va: opera y soporta los sistemas, agentes y procesos mes a mes,
+                  para siempre. La plataforma GoHighLevel viene incluida — no es un extra.
+                </p>
+                <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
+                  Aquí está el ingreso recurrente y el crecimiento escalable. Toda conversación de Sixteam,
+                  sin importar por dónde entró el cliente, termina apuntando a Ops.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: <Bot className="h-4 w-4" />,          l: "Agente IA especializado",   d: "Conoce tus sistemas e implementaciones" },
+                  { icon: <Users className="h-4 w-4" />,        l: "Humanos expertos incluidos",d: "Horas de trabajo real cada mes" },
+                  { icon: <BarChart3 className="h-4 w-4" />,    l: "Métricas del negocio",      d: "Visibilidad real, no tres números sueltos" },
+                  { icon: <MessageSquare className="h-4 w-4" />,l: "GoHighLevel incluida",       d: "CRM, funnels, email y automatizaciones" },
+                ].map((a) => (
+                  <div key={a.l} className="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-v2-border-subtle">
+                    <div className="w-7 h-7 rounded-lg bg-v2-surface-teal-mist flex items-center justify-center text-v2-accent-teal-deep flex-shrink-0">
+                      {a.icon}
+                    </div>
+                    <div>
+                      <p className="font-lato text-[12px] font-bold text-v2-ink-heading">{a.l}</p>
+                      <p className="font-lato text-[11px] text-v2-ink-muted mt-0.5">{a.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Plan cards — light */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+              {/* Ops Core */}
+              <div className="bg-white border border-v2-border-medium rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                <div className="px-7 pt-7 pb-5 border-b border-v2-border-subtle">
+                  <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
+                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Core</h3>
+                  <div className="flex items-baseline gap-1.5 mt-2">
+                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$700</span>
+                    <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
+                  </div>
+                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
+                  <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
+                    Para negocios que ya tienen el sistema montado y necesitan que alguien lo mantenga vivo.
+                  </p>
+                </div>
+                <div className="px-7 py-6 flex flex-col gap-2.5">
+                  {[
+                    "5 horas de trabajo humano experto / mes",
+                    "1 agente de IA especializado en tu operación",
+                    "GoHighLevel incluida",
+                    "1 tarea humana en progreso a la vez",
+                    "Turnaround 2–4 días hábiles",
+                    "Soporte vía chat IA + correo",
+                    "Onboarding + revisión a 30 días",
+                  ].map((i) => <CheckItem key={i} text={i} />)}
+                </div>
+                <div className="px-7 pb-7">
+                  <Link to="/v2/contacto">
+                    <ButtonV2 variant="outline" size="md" className="w-full justify-center">
+                      Empezar con Ops Core <ArrowRight className="h-4 w-4" />
+                    </ButtonV2>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Ops Growth — featured */}
+              <div className="relative bg-white border-2 border-v2-accent-teal rounded-2xl overflow-hidden shadow-[0_0_0_4px_rgba(0,191,165,0.08),0_16px_48px_rgba(0,191,165,0.12)]">
+                <div className="absolute -top-4 inset-x-0 flex justify-center">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-v2-accent-teal text-white font-lato font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_16px_rgba(0,191,165,0.35)]">
+                    <Star className="h-3 w-3" /> Recomendado
+                  </span>
+                </div>
+                <div className="px-7 pt-10 pb-5 border-b border-v2-border-subtle mt-1">
+                  <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
+                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Growth</h3>
+                  <div className="flex items-baseline gap-1.5 mt-2">
+                    <span className="font-poppins font-black text-[40px] text-v2-accent-teal-deep leading-none">$1,500</span>
+                    <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
+                  </div>
+                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
+                  <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
+                    Para negocios que quieren a Sixteam operando activamente su crecimiento, no solo manteniendo el sistema.
+                  </p>
+                </div>
+                <div className="px-7 py-6 flex flex-col gap-2.5">
+                  {[
+                    { t: "20 horas de trabajo humano experto / mes", bold: true },
+                    { t: "Agente IA + agentes de gestión y métricas", bold: true },
+                    { t: "GoHighLevel incluida", bold: false },
+                    { t: "Hasta 3 tareas humanas en paralelo", bold: true },
+                    { t: "Turnaround prioritario 1–3 días", bold: true },
+                    { t: "Métricas avanzadas — visibilidad real del negocio", bold: true },
+                    { t: "Reuniones de growth semanales", bold: true },
+                    { t: "Segundo Cerebro: baúl vivo del conocimiento", bold: true },
+                    { t: "Análisis proactivo — Sixteam detecta y propone", bold: true },
+                    { t: "Soporte por canal preferido (WhatsApp / Slack)", bold: true },
+                  ].map((i) => <CheckItem key={i.t} text={i.bold ? <strong className="text-v2-ink-heading">{i.t}</strong> : i.t} />)}
+                </div>
+                <div className="px-7 pb-7">
+                  <Link to="/v2/contacto">
+                    <ButtonV2 variant="primary" size="md" className="w-full justify-center shadow-[0_8px_24px_rgba(0,191,165,0.25)]">
+                      Empezar con Ops Growth <ArrowRight className="h-4 w-4" />
+                    </ButtonV2>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Comparison table — light */}
+            <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 md:p-8 shadow-[0_4px_16px_rgba(10,35,66,0.04)]">
+              <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted mb-5">
+                Comparación de planes
+              </p>
+              <div className="grid grid-cols-[1fr_auto_auto] gap-4 mb-3 pb-3 border-b border-v2-border-subtle">
+                <span />
+                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted text-right w-[110px]">Ops Core</span>
+                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep text-right w-[130px]">Ops Growth</span>
+              </div>
+              <OpsRow label="Precio mensual"                  base="$700 USD"         avanzado="$1,500 USD" />
+              <OpsRow label="Horas humanas expertas / mes"    base="5 h"              avanzado="20 h"        highlight />
+              <OpsRow label="Agente de IA"                    base="1 especializado"  avanzado="+ gestión y métricas" />
+              <OpsRow label="Tareas humanas en paralelo"      base="1 a la vez"       avanzado="Hasta 3"    highlight />
+              <OpsRow label="Turnaround"                      base="2–4 días"         avanzado="1–3 días" />
+              <OpsRow label="Métricas avanzadas"              base="—"                avanzado="Sí"         highlight />
+              <OpsRow label="Reuniones de growth"             base="—"                avanzado="Semanales" />
+              <OpsRow label="Segundo Cerebro"                 base="—"                avanzado="Construido y mantenido" highlight />
+              <OpsRow label="Análisis proactivo"              base="—"                avanzado="Sí" />
+              <OpsRow label="Soporte"                         base="Chat IA + correo" avanzado="Canal preferido" highlight />
+              <OpsRow label="GoHighLevel incluida"            base="Sí"               avanzado="Sí" />
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── MOTOR COMÚN ──────────────────────────────────────────── */}
+      <Section surface="default" size="compact">
+        <Container>
+          <div>
+            <div className="text-center max-w-[580px] mx-auto mb-10">
+              <Eyebrow variant="teal">El hilo común</Eyebrow>
+              <h2 className="font-poppins font-bold text-v2-ink-heading mt-3"
+                style={{ fontSize: "clamp(24px, 3.5vw, 36px)", lineHeight: "1.2" }}>
+                Humanos expertos +{" "}
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">agentes de IA</em>
+              </h2>
+              <p className="font-lato text-[15px] text-v2-ink-body leading-[1.65] mt-3">
+                Las tres soluciones comparten el mismo motor. La IA ejecuta; los expertos dirigen.
+                Ese es el diferenciador.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { icon: <Wrench className="h-5 w-5" />,      name: "Agentes de trabajo",   desc: "Ejecutan y construyen. Operan 24/7 sin fatiga.", color: "teal" },
+                { icon: <Brain className="h-5 w-5" />,       name: "Agentes de gestión",   desc: "Organizan, planifican, mantienen el orden operativo.", color: "blue" },
+                { icon: <MessageSquare className="h-5 w-5"/>,name: "Agentes de apoyo",     desc: "Guían, responden y alinean ideas con el negocio.", color: "teal" },
+                { icon: <BarChart3 className="h-5 w-5" />,   name: "Agentes de métricas",  desc: "Miden, detectan anomalías y alertan a tiempo.", color: "blue" },
+              ].map((a, i) => (
+                <div key={a.name} className="bg-white border border-v2-border-subtle rounded-2xl p-6 text-center hover:shadow-[0_8px_32px_rgba(0,191,165,0.08)] hover:-translate-y-0.5 transition-all duration-300">
+                  <div className={`w-10 h-10 rounded-xl mx-auto flex items-center justify-center mb-4 ${
+                    a.color === "teal" ? "bg-v2-surface-teal-mist text-v2-accent-teal-deep" : "bg-v2-surface-navy-mist text-v2-accent-blue"
+                  }`}>
+                    {a.icon}
+                  </div>
+                  <h3 className="font-poppins font-bold text-[14px] text-v2-ink-heading">{a.name}</h3>
+                  <p className="font-lato text-[13px] text-v2-ink-body mt-2 leading-relaxed">{a.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── CTA — único bloque oscuro ─────────────────────────────── */}
+      <Section surface="navy-dark" size="compact" className="overflow-hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="w-[600px] h-[300px] rounded-full opacity-20"
+            style={{ background: "radial-gradient(ellipse, rgba(0,191,165,0.4) 0%, transparent 70%)" }} />
+        </div>
+        <Container size="narrow" className="text-center relative">
+          <Eyebrow variant="teal">Punto de entrada</Eyebrow>
+          <h2 className="font-poppins font-bold text-white mt-3"
+            style={{ fontSize: "clamp(26px, 4vw, 42px)", lineHeight: "1.15" }}>
+            ¿No sabes por dónde empezar?{" "}
+            <em className="font-serif italic font-normal text-v2-accent-teal">El Radar te lo dice</em>.
+          </h2>
+          <p className="font-lato text-[16px] text-white/65 leading-[1.65] mt-5 max-w-[460px] mx-auto">
+            Diagnóstico ejecutivo gratuito en 48 horas. Descubres la fuga de revenue y tu punto de entrada.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link to="/v2/radar">
+              <ButtonV2 variant="primary" size="lg">Pedir Radar gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
+            </Link>
+            <Link to="/v2/contacto">
+              <ButtonV2 variant="outline" size="lg" className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10">
+                Hablar con un experto
+              </ButtonV2>
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
     </LayoutV2>
   );
 };

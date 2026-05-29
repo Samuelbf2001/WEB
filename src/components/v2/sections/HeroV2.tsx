@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, Play, Star,
-  BarChart2, Mail, MessageCircle, Bot, RefreshCw, Cpu, Users2,
+  ArrowRight, Calendar, Star,
+  BarChart2, Mail, Database, Bot, RefreshCw, Cpu, Users2,
   Globe, Megaphone,
 } from "lucide-react";
 import Container from "@/components/v2/Container";
@@ -16,22 +16,21 @@ const avatars = [
 ];
 
 /* Who handles each item */
-type Handler = "ia" | "human" | "both";
+type Handler = "ia" | "human";
 
 const ops: { icon: React.ElementType; label: string; status: string; handler: Handler }[] = [
-  { icon: Mail,          label: "Email marketing",     status: "3 campañas activas · 2 en cola", handler: "ia" },
-  { icon: MessageCircle, label: "WhatsApp Business",   status: "Bandeja unificada · SLA OK",     handler: "both" },
-  { icon: Bot,           label: "Chatbot IA",          status: "Calificando leads 24/7",          handler: "ia" },
-  { icon: Globe,         label: "Web & landing pages", status: "Actualizada el martes",           handler: "human" },
-  { icon: Megaphone,     label: "Pauta digital",       status: "3 campañas activas",              handler: "both" },
-  { icon: RefreshCw,     label: "Automatizaciones",    status: "6 workflows corriendo",           handler: "ia" },
-  { icon: BarChart2,     label: "Reporte ejecutivo",   status: "Enviado · Lun 9:01am",            handler: "human" },
+  { icon: Database,  label: "CRM",                        status: "Pipeline limpio · 12 deals activos", handler: "human" },
+  { icon: Bot,       label: "Chatbot IA",                 status: "Calificando leads 24/7",           handler: "ia" },
+  { icon: Globe,     label: "Web & landing pages",        status: "Actualizada el martes",            handler: "human" },
+  { icon: Megaphone, label: "Pauta digital",              status: "3 campañas activas",               handler: "human" },
+  { icon: RefreshCw, label: "Automatizaciones y agentes IA", status: "6 workflows corriendo",        handler: "ia" },
+  { icon: BarChart2, label: "Reporte ejecutivo",          status: "Enviado · Lun 9:01am",             handler: "human" },
+  { icon: Mail,      label: "Email y WhatsApp marketing", status: "3 campañas activas · 2 en cola",   handler: "ia" },
 ];
 
 const handlerLabel: Record<Handler, { label: string; dot: string; text: string }> = {
-  ia:    { label: "IA",           dot: "bg-v2-accent-teal",  text: "text-v2-accent-teal-deep" },
-  human: { label: "Experto",      dot: "bg-v2-accent-blue",  text: "text-v2-accent-blue" },
-  both:  { label: "IA + Experto", dot: "bg-[#d4a853]",       text: "text-[#8a7a4f]" },
+  ia:    { label: "IA",          dot: "bg-v2-accent-teal", text: "text-v2-accent-teal-deep" },
+  human: { label: "Humano + IA", dot: "bg-[#d4a853]",      text: "text-[#8a7a4f]" },
 };
 
 /* ── Weekly ops card mockup ── */
@@ -324,7 +323,7 @@ export const HeroV2 = () => {
                   ))}
                 </div>
                 <span className="font-lato text-[11px] font-semibold uppercase tracking-[0.13em] text-v2-accent-teal-deep">
-                  30+ equipos en LATAM
+                  30+ clientes
                 </span>
               </div>
             </div>
@@ -339,13 +338,12 @@ export const HeroV2 = () => {
                 animationDelay: "100ms",
               }}
             >
-              Ya no tienes que
-              <br />
-              operar{" "}
+              Somos el equipo de{" "}
               <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">solo</em>
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">tecnología</em>
               </Underlined>
-              .
+              <br />
+              que tu empresa necesita para crecer.
             </h1>
 
             {/* Stacked promise lines */}
@@ -353,18 +351,19 @@ export const HeroV2 = () => {
               className="v2-hero-entry mt-7 flex flex-col gap-2"
               style={{ animationDelay: "220ms" }}
             >
-              {[
-                "Tu email sale. Tu WhatsApp responde. Tu chatbot califica.",
-                "Tu web se actualiza. Tus automatizaciones corren.",
-              ].map((line) => (
-                <p key={line} className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
-                  {line}
-                </p>
-              ))}
+              <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
+                Ya no tienes que hacerlo todo tú. Tampoco pagar a todo un equipo interno (+10k USD/mes) 📈
+              </p>
+              <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
+                AI, automatizaciones, CRM, web y reportes — todo operado por nosotros.
+              </p>
+              <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
+                <strong className="text-v2-ink-heading font-semibold">Implementamos Y operamos</strong> — no te dejamos solo después del go-live.
+              </p>
               <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-heading font-semibold leading-[1.55]">
                 Tú&hellip;{" "}
-                <Underlined color="teal" variant="straight">
-                  <span className="text-v2-accent-teal-deep">solo tienes que crecer.</span>
+                <Underlined color="teal">
+                  <span className="text-v2-accent-teal-deep">solo enfócate en vender y crecer.</span>
                 </Underlined>
               </p>
             </div>
@@ -376,16 +375,23 @@ export const HeroV2 = () => {
             >
               <Link to="/v2/radar">
                 <ButtonV2 variant="primary" size="lg" className="group">
-                  Hacer mi auditoría gratis
+                  Solicitar Diagnóstico — $2,500
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </ButtonV2>
               </Link>
               <Link to="/v2/contacto">
                 <ButtonV2 variant="outline" size="lg" className="inline-flex items-center gap-2">
-                  <Play className="h-4 w-4 fill-current opacity-70" />
-                  30 min, en español
+                  <Calendar className="h-4 w-4 opacity-70" />
+                  Agendar una llamada
                 </ButtonV2>
               </Link>
+            </div>
+
+            <div
+              className="v2-hero-entry"
+              style={{ animationDelay: "400ms" }}
+            >
+              <p className="font-lato text-[11px] text-v2-ink-muted mt-2">2 semanas · mapa de operación + roadmap + plataforma montada</p>
             </div>
 
             {/* Testimonial mini-card */}
@@ -426,9 +432,9 @@ export const HeroV2 = () => {
             >
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                 {[
-                  "4+ años en LATAM",
-                  "CRM · Email · WhatsApp · IA · Web",
-                  "Desde $300 USD/mes",
+                  "4+ años operando RevOps en LATAM",
+                  "Consultar · Implementar · Operar",
+                  "Diagnóstico desde $2,500 · Ops desde $1,500/mes",
                 ].map((item, i) => (
                   <span key={item} className="flex items-center gap-2 font-lato text-[11px] text-v2-ink-muted uppercase tracking-widest">
                     {i > 0 && <span className="w-1 h-1 rounded-full bg-v2-border-subtle inline-block" aria-hidden />}

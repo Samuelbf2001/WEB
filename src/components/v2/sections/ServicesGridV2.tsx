@@ -29,48 +29,48 @@ interface Layer {
 /* ── data ── */
 const layers: Layer[] = [
   {
-    eyebrow: "01 · Consultar",
+    eyebrow: "01 · Entender",
     eyebrowColor: "text-v2-accent-teal-deep",
-    title: "Mapear cómo opera tu negocio hoy.",
+    title: "Primero entendemos tu negocio.",
     description:
-      "Sam mapea el flujo real y cuantifica las fugas. Alex traduce los hallazgos en un roadmap priorizado.",
+      "Antes de configurar cualquier cosa, analizamos cómo funciona tu operativa actual: qué no está funcionando bien, qué está haciéndote perder dinero y qué tiene potencial de mejora.",
     iconBg: "bg-v2-surface-teal-mist",
     iconColor: "text-v2-accent-teal-deep",
     services: [
-      { name: "Diagnóstico Sixteam", desc: "Mapeo agéntico de tu operación en 2 semanas.", icon: Search },
-      { name: "Auditoría de stack actual", desc: "Revisamos qué tienes, qué falta y qué sobra.", icon: ClipboardCheck },
-      { name: "Roadmap cuantificado", desc: "Plan priorizado por impacto en revenue.", icon: Map },
-      { name: "Recomendación de inversión", desc: "Cuánto invertir, en qué, y en qué orden.", icon: TrendingUp },
+      { name: "Diagnóstico gratuito", desc: "Te mostramos en 2 semanas exactamente qué está frenando tu crecimiento.", icon: Search },
+      { name: "Revisión de herramientas", desc: "Identificamos qué tienes, qué no usas y qué te hace falta.", icon: ClipboardCheck },
+      { name: "Plan de acción claro", desc: "Una hoja de ruta con prioridades: qué hacer primero y por qué.", icon: Map },
+      { name: "Presupuesto justificado", desc: "Sabes cuánto invertir y qué resultado esperar antes de arrancar.", icon: TrendingUp },
     ],
   },
   {
-    eyebrow: "02 · Implementar",
+    eyebrow: "02 · Construir",
     eyebrowColor: "text-v2-accent-blue",
-    title: "Construir el sistema operativo de tu RevOps.",
+    title: "Construimos el sistema que tu negocio necesita.",
     description:
-      "Debbie monta el CRM, las automatizaciones y los workflows. Vinnie conecta tus herramientas para que se hablen entre sí.",
+      "Configuramos tus herramientas, conectamos tus canales y automatizamos lo que hoy se hace a mano, para que tu equipo se enfoque en lo que importa.",
     iconBg: "bg-v2-accent-blue/10",
     iconColor: "text-v2-accent-blue",
     services: [
-      { name: "Setup de CRM", desc: "HubSpot, Pipedrive o GHL — montado y listo.", icon: Database },
-      { name: "Automatizaciones y workflows", desc: "Make, Zapier, n8n. Lo repetitivo, en piloto.", icon: Workflow },
-      { name: "Integraciones", desc: "WhatsApp + CRM + pago + analítica conectados.", icon: Link2 },
-      { name: "Agentes IA en producción", desc: "Bots que califican, responden y agendan 24/7.", icon: Bot },
+      { name: "Tu proceso de ventas ordenado", desc: "Sin leads perdidos ni seguimientos olvidados.", icon: Database },
+      { name: "Tareas que corren solas", desc: "Lo que hoy hace tu equipo a mano, lo automatizamos: sin errores ni demoras.", icon: Workflow },
+      { name: "Todo conectado", desc: "WhatsApp, pagos, correo y reportes hablando entre sí, sin pasos manuales.", icon: Link2 },
+      { name: "Asistente IA activo 24/7", desc: "Atiende, califica y agenda clientes aunque no haya nadie disponible.", icon: Bot },
     ],
   },
   {
-    eyebrow: "03 · Operar",
+    eyebrow: "03 · Mantener",
     eyebrowColor: "text-v2-accent-teal-deep",
-    title: "Correr tu RevOps mes a mes, sin pausa.",
+    title: "Nos quedamos operando contigo.",
     description:
-      "Sally opera el pipeline a diario. Clara mide y reporta cada lunes. No te dejamos solo después del go-live.",
+      "No te entregamos un sistema y nos vamos. Alguien del equipo lo opera día a día para que nunca se detenga.",
     iconBg: "bg-v2-surface-teal-mist",
     iconColor: "text-v2-accent-teal-deep",
     services: [
-      { name: "Operación diaria del pipeline", desc: "Leads ruteados, follow-ups disparados, deals movidos.", icon: Activity },
-      { name: "Dashboard de revenue en vivo", desc: "Métricas reales, no powerpoints de status.", icon: BarChart3 },
-      { name: "Reporte ejecutivo semanal", desc: "Cada lunes 9am, sin que tengas que pedirlo.", icon: FileText },
-      { name: "Sprint semanal de mejoras", desc: "Ajustes y crecimiento del sistema continuo.", icon: RefreshCw },
+      { name: "Seguimiento diario a tus ventas", desc: "Tus prospectos son contactados a tiempo y los negocios avanzan.", icon: Activity },
+      { name: "Resultados visibles en tiempo real", desc: "Ves el desempeño de tu negocio en un tablero claro, sin ser experto.", icon: BarChart3 },
+      { name: "Reporte semanal sin pedirlo", desc: "Cada lunes recibes un resumen de lo que pasó y lo que viene.", icon: FileText },
+      { name: "Mejoras continuas", desc: "Cada semana ajustamos y hacemos crecer el sistema junto contigo.", icon: RefreshCw },
     ],
   },
 ];
@@ -86,21 +86,21 @@ export const ServicesGridV2 = () => {
 
           {/* ── header ── */}
           <div className="text-center max-w-[760px] mx-auto v2-reveal">
-            <Eyebrow variant="navy">Todo lo que operamos por ti</Eyebrow>
+            <Eyebrow variant="navy">Nuestra forma de solucionar</Eyebrow>
             <h2
               className="font-poppins font-bold text-v2-ink-heading mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Tres capas.{" "}
+              Nuestra Metodología:{" "}
               <Underlined color="teal" variant="scribble">
                 <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                  Una cadena cerrada.
+                  Entender, Construir, Mantener.
                 </em>
               </Underlined>
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[640px] mx-auto mt-4 leading-[1.6]">
-              Consultamos cómo opera tu negocio, implementamos los sistemas que faltan,
-              y los operamos mes a mes. No vendemos una pieza — vendemos la cadena completa.
+              Primero entendemos cómo funciona tu negocio, así construimos la solución a medida
+              y lo que queda es mantener la operativa para que los resultados no se detengan.
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export const ServicesGridV2 = () => {
 
           {/* ── closing line ── */}
           <p className="v2-reveal v2-d4 font-serif italic text-[15px] text-v2-ink-muted leading-relaxed text-center mt-12 max-w-[640px] mx-auto">
-            "No te entregamos un sistema y nos vamos. La cadena se cierra cada semana — y vuelve a empezar la siguiente."
+            "No te entregamos un sistema y desaparecemos. Nos quedamos para que lo que construimos funcione, y siga mejorando."
           </p>
 
         </div>

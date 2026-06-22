@@ -8,21 +8,21 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const cards = [
   {
     index: "01",
-    title: "Una agencia",
+    title: "Una agencia tradicional",
     body: "Las agencias implementan, te entregan un sistema y se van. Cobran igual funcione o no. Después del go-live, los problemas son tuyos.",
-    yes: "SÍ implementamos — pero nos quedamos operando lo que montamos.",
+    yes: "Además de que implementamos, nos encargamos de que se use lo que montamos.",
   },
   {
     index: "02",
-    title: "Un consultor",
+    title: "Un consultor común",
     body: "Los consultores entregan un PDF con recomendaciones. La ejecución queda de tu lado. Pagas por saber qué hacer, sin tener quién lo haga.",
-    yes: "SÍ diagnosticamos — pero después corremos lo que recomendamos.",
+    yes: "Además de que diagnosticamos, ejecutamos lo que recomendamos.",
   },
   {
     index: "03",
-    title: "Un software",
-    body: "La herramienta sola no opera. El cliente promedio usa el 10% de su CRM. Compras la potencia, pero falta el conductor.",
-    yes: "SÍ la usamos — pero el motor con conductor, no la herramienta sola.",
+    title: "Un software cualquiera",
+    body: "Para cada solución existen decenas de herramientas que puedan servir. Pero pocos saben identificar el potencial de cada una para generar soluciones que generen resultados.",
+    yes: "Además de que lo usamos, no nos casamos con una herramienta sino con los resultados que genera.",
   },
 ];
 
@@ -67,21 +67,14 @@ export const NoSomosV2 = () => {
               className="mt-6 font-poppins font-bold text-white leading-[1.1] tracking-[-0.03em]"
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
-              No somos una agencia. No somos consultores.{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal">
-                  No somos software.
-                </em>
-              </Underlined>
+              No somos una{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">agencia tradicional</em>
+              {" "}ni{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">consultores comunes</em>
+              , tampoco te ofrecemos un{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">software cualquiera</em>
             </h2>
 
-            <p
-              className="mt-6 font-lato text-white/70 leading-[1.65] mx-auto max-w-[600px]"
-              style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}
-            >
-              Vendemos que tu operación funcione, mes a mes — con o sin que tu
-              equipo esté completo. Esa es la única diferencia que importa.
-            </p>
           </div>
 
           {/* ── three cards ── */}
@@ -113,16 +106,8 @@ export const NoSomosV2 = () => {
                 <div className="border-t border-white/10 mt-5 pt-4 flex items-start gap-2">
                   <Check className="h-3.5 w-3.5 text-v2-accent-teal flex-shrink-0 mt-[3px]" />
                   <p className="font-lato text-[13px] text-white/90 leading-[1.55]">
-                    {card.yes.split("SÍ").map((part, j, arr) =>
-                      j < arr.length - 1 ? (
-                        <span key={j}>
-                          {part}
-                          <strong className="font-bold text-v2-accent-teal">SÍ</strong>
-                        </span>
-                      ) : (
-                        <span key={j}>{part}</span>
-                      )
-                    )}
+                    <strong className="font-bold text-v2-accent-teal">Además</strong>
+                    {card.yes.replace("Además", "")}
                   </p>
                 </div>
               </div>
@@ -136,16 +121,21 @@ export const NoSomosV2 = () => {
             </span>
             <p
               className="mt-4 font-poppins font-bold text-white leading-[1.2] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(24px, 3vw, 36px)" }}
+              style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
-              Somos tu equipo externo de tecnología.{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal not-italic">
-                  Implementamos Y operamos.
-                </em>
-              </Underlined>
-              <br />
-              Mes a mes. No te dejamos solo después del go-live.
+              Somos el{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">equipo de tecnología</em>
+              {" "}que siempre has necesitado. Implementamos{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">estratégicamente</em>
+              {" "}y operamos{" "}
+              <em className="font-serif italic font-normal text-v2-accent-teal">entendiendo</em>
+              {" "}el contexto de tu negocio.
+            </p>
+            <p
+              className="mt-5 font-lato text-white/70 leading-[1.65] mx-auto max-w-[560px]"
+              style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}
+            >
+              Somos los socios estratégicos que desarrollan soluciones basadas en la realidad de tu negocio.
             </p>
           </div>
 

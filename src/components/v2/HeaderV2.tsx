@@ -172,14 +172,15 @@ export const HeaderV2 = () => {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl rounded-2xl transition-all duration-300",
         scrolled
-          ? "backdrop-blur-md bg-v2-surface/85 border-b border-v2-border-subtle"
-          : "bg-transparent"
+          ? "bg-white/92 backdrop-blur-md border border-v2-border-subtle shadow-[0_8px_32px_rgba(10,35,66,0.10)]"
+          : "bg-white/75 backdrop-blur-md border border-v2-border-subtle/50 shadow-[0_4px_20px_rgba(10,35,66,0.06)]"
       )}
     >
-      <Container className="flex h-16 md:h-20 items-center justify-between">
+      <Container className="flex h-14 items-center justify-between">
         <Link to="/v2" className="group flex items-center gap-2 shrink-0">
+          <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-8 w-8 object-contain" />
           <span className="font-poppins font-bold text-[20px] md:text-[22px] tracking-tight text-v2-ink-heading">
             Sixteam<span className="text-v2-accent-teal">.</span>pro
           </span>
@@ -221,7 +222,7 @@ export const HeaderV2 = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-v2-border-subtle bg-v2-surface/95 backdrop-blur-md max-h-[80vh] overflow-y-auto">
+        <div className="md:hidden border-t border-v2-border-subtle/50 bg-white/95 backdrop-blur-md max-h-[80vh] overflow-y-auto rounded-b-2xl">
           <Container className="py-4 flex flex-col">
             {mobileAll.map((item, i) => {
               if (item === null) {

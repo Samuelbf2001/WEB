@@ -1,6 +1,5 @@
 import LayoutV2 from "@/components/v2/LayoutV2";
 import HeroV2 from "@/components/v2/sections/HeroV2";
-import LogoSliderV2 from "@/components/v2/sections/LogoSliderV2";
 import ProblemStatV2 from "@/components/v2/sections/ProblemStatV2";
 import WhyItHappensV2 from "@/components/v2/sections/WhyItHappensV2";
 import NoSomosV2 from "@/components/v2/sections/NoSomosV2";
@@ -25,24 +24,23 @@ const IndexV2 = () => {
   return (
     <LayoutV2>
       <HeroV2 />
-      <LogoSliderV2 />
-      <ProblemStatV2 />
-      <WhyItHappensV2 />
       <NoSomosV2 />
+      <ServicesGridV2 />
+      {/* <HowItWorksV2 /> */}
+      <PricingV2 />
+      {/* <ProblemStatV2 /> */}
+      {/* <WhyItHappensV2 /> */}
       <MondayV2 />
       <TuEquipoV2 />
-      <ComparativaV2 />
-      <TodoListoV2 />
-      <CrmComparisonV2 />
-      <BestOfBothV2 />
-      <ServicesGridV2 />
+      {/* <ComparativaV2 /> */}
+      {/* <TodoListoV2 /> */}
+      {/* <CrmComparisonV2 /> */}
+      {/* <BestOfBothV2 /> */}
       <IndustriesV2 />
-      <HowItWorksV2 />
-      <CadenceV2 />
+      {/* <CadenceV2 /> */}
       <CasesV2 />
       <TestimonialsV2 />
       <ChatConciergeV2 />
-      <PricingV2 />
       <FaqV2 />
       <FinalCtaV2 />
     </LayoutV2>

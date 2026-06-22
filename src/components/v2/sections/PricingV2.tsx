@@ -95,47 +95,47 @@ export const PricingV2 = () => {
   const plans = [
     {
       id: "arranque",
-      name: "Arranque",
+      name: "Esencial",
       topBadge: null,
       highlight: false,
       price: { mensual: 1500, anual: 1250 },
-      tagline: "Una pieza del sistema. La fuga más urgente, primero — sin contratar.",
+      tagline: "Lo que no puede faltar. Ideal para emprendimientos y negocios que buscan empezar en el mundo de la automatización potenciada con Inteligencia Artificial",
       aiTier: "Esencial",
       aiDesc: "Operación de leads + follow-up. Para el frente más urgente.",
       humanLabel: "1 frente en operación a la vez",
       humanSub: "Entregado en 2–4 días hábiles",
-      cta: "Empezar con Arranque",
+      cta: "Empezar con Esencial",
       ctaVariant: "outline" as const,
     },
     {
       id: "core",
-      name: "Core",
+      name: "Integral",
       topBadge: "MEJOR VALOR (3× CAPACIDAD)",
       highlight: true,
       price: { mensual: 3000, anual: 2500 },
-      tagline: "El punto óptimo para empresas que crecen. 3 frentes operando en paralelo — sin levantar un dedo.",
+      tagline: "El punto óptimo para las empresas en crecimiento: suficiente inteligencia artificial y capacidad humana para gestionar los cuellos de botella que frenan el crecimiento de tu negocio",
       aiTier: "Estándar",
       aiDesc: "Operación multi-canal (CRM + WhatsApp + Email) funcionando en paralelo.",
       humanLabel: "3 frentes en operación a la vez",
-      humanSub: "3× capacidad de Arranque",
+      humanSub: "3× capacidad de Esencial",
       deliverySub: "Entregado en 2–4 días hábiles",
       showBonus: true,
-      cta: "Empezar con Core",
+      cta: "Empezar con Integral",
       ctaVariant: "primary" as const,
     },
     {
       id: "plus",
-      name: "Plus",
+      name: "Total",
       topBadge: "SERVICIO DEDICADO",
       highlight: false,
       price: { mensual: 5500, anual: 4580 },
-      tagline: "Un departamento de RevOps completo — con PM dedicado y llamada semanal de estrategia.",
+      tagline: "Un departamento de tecnología completo con inteligencia artificial y personal humano coexistiendo en el mismo ecosistema digital, un gestor de proyectos dedicado y reuniones estratégicas de crecimiento semanales.",
       aiTier: "Alto Volumen",
       aiDesc: "Operación multi-área, alto volumen, para empresas de mayor escala.",
       humanLabel: "5 frentes en operación a la vez",
       humanSub: "PM Dedicado en tu workflow",
       deliverySub: "Respuesta prioritaria 1–3 días",
-      cta: "Empezar con Plus",
+      cta: "Empezar con Total",
       ctaVariant: "navy" as const,
     },
   ];
@@ -224,7 +224,10 @@ export const PricingV2 = () => {
                   >
                     {/* Card header */}
                     <div className={`px-6 pt-6 pb-5 ${isCore ? "bg-white" : "bg-white"}`}>
-                      <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading leading-tight">
+                      <h3
+                        className="font-serif italic font-bold text-[24px] leading-tight"
+                        style={{ color: "#C9A84C", textShadow: "0 1px 2px rgba(201,168,76,0.15)" }}
+                      >
                         {plan.name}
                       </h3>
                       <div className="flex items-baseline gap-1 mt-1">

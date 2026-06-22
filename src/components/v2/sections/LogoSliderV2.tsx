@@ -26,10 +26,10 @@ const sliderLogos = [...defaultLogos, ...defaultLogos];
 
 export const LogoSliderV2 = () => {
   return (
-    <Section surface="default" size="compact" className="py-14 md:py-16">
+    <Section surface="sand-mist" size="compact" className="py-14 md:py-16">
       <Container size="default">
         <div className="flex flex-col items-center text-center">
-          <Eyebrow variant="navy">Equipos ya operando con Sixteam</Eyebrow>
+          <Eyebrow variant="navy">Negocios que han confiado en Sixteam como sus Partners solucionadores</Eyebrow>
           <div className="logo-slider-wrapper py-2 mt-8 w-full">
             <div className="logo-slider-track">
               {sliderLogos.map((logo, i) => (

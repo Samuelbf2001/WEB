@@ -319,7 +319,7 @@ export const HeroV2 = () => {
             className="v2-hero-entry font-serif italic text-[20px] md:text-[23px] text-[#1d70a2] leading-[1.45] mt-6 max-w-2xl"
             style={{ animationDelay: "220ms" }}
           >
-            Somos el equipo de tecnología que tu empresa todavía no tiene.
+            Somos el equipo de tecnología con Inteligencia Artificial que tu empresa todavía no tiene.
           </p>
 
           {/* Scroll button */}

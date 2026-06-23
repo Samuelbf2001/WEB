@@ -152,17 +152,13 @@ export const PricingV2 = () => {
               className="font-poppins font-bold text-v2-ink-heading mt-3"
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
             >
-              Un equipo completo.{" "}
+              Un equipo de tecnología entero{" "}
               <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">Sin contratar.</em>
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">sin contratar personal adicional.</em>
               </Underlined>
             </h2>
             <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
-              Precio por operación continua. Sin contrato de permanencia. Empieza cuando el{" "}
-              <Link to="/v2/radar" className="text-v2-accent-teal-deep font-semibold hover:underline">
-                Radar gratis
-              </Link>{" "}
-              te indique cuál es tu punto de entrada.
+              Cuenta mensualmente con un equipo de tecnología externo que administra y opera tus sistemas, además, potenciado con Inteligencia Artificial. Sin contratar personal adicional a tu nómina.
             </p>
           </div>
 

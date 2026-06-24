@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, MessageSquare, Bot, Users, Gift, Package, Shield } from "lucide-react";
+import { ArrowRight, Check, MessageSquare, Users, Gift, Package, Shield, Zap } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
@@ -29,7 +29,7 @@ const useCountdown = () => {
   return `${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m ${String(s).padStart(2, "0")}s`;
 };
 
-/* ── Section pill header (replicates AA's section dividers) ── */
+/* ── Section pill header ── */
 const PillHeader: React.FC<{
   icon: React.ReactNode;
   label: string;
@@ -62,7 +62,7 @@ const PillHeader: React.FC<{
 };
 
 /* ── Agent row ── */
-const AgentRow: React.FC<{ color: string; name: string; role: string; highlight?: boolean }> = ({ color, name, role, highlight }) => (
+const AgentRow: React.FC<{ color: string; name: string; role: string }> = ({ color, name, role }) => (
   <div className="flex items-center gap-2.5">
     <div
       className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0"
@@ -70,73 +70,87 @@ const AgentRow: React.FC<{ color: string; name: string; role: string; highlight?
     >
       {name[0]}
     </div>
-    <span className={`font-lato text-[13px] ${highlight ? "text-white/80" : "text-v2-ink-body"}`}>
-      <strong className={highlight ? "text-white" : "text-v2-ink-heading"}>{name}</strong>{" "}
-      <span className={highlight ? "text-white/50" : "text-v2-ink-muted"}>({role})</span>
+    <span className="font-lato text-[13px] text-v2-ink-body">
+      <strong className="text-v2-ink-heading">{name}</strong>{" "}
+      <span className="text-v2-ink-muted">({role})</span>
     </span>
   </div>
 );
 
 /* ── Feature row ── */
-const FeatureRow: React.FC<{ text: React.ReactNode; highlight?: boolean; strong?: boolean }> = ({ text, highlight, strong }) => (
+const FeatureRow: React.FC<{ text: React.ReactNode; strong?: boolean }> = ({ text, strong }) => (
   <div className="flex items-start gap-2">
-    <Check className={`h-3.5 w-3.5 flex-shrink-0 mt-0.5 ${highlight ? "text-v2-accent-teal" : "text-v2-accent-teal-deep"}`} />
-    <span className={`font-lato text-[13px] leading-snug ${strong ? "font-semibold" : ""} ${highlight ? "text-white/80" : "text-v2-ink-body"}`}>
+    <Check className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-v2-accent-teal-deep" />
+    <span className={`font-lato text-[13px] leading-snug ${strong ? "font-semibold" : ""} text-v2-ink-body`}>
       {text}
     </span>
   </div>
 );
+
+type PlanPrice = { mensual: number; anual: number };
+type PlanCredits = { prefix: string; amount: number; note: string };
+type PlanCustomPrice = { display: string; sub: string; note: string };
+
+interface Plan {
+  id: string;
+  name: string;
+  topBadge: string | null;
+  highlight: boolean;
+  price: PlanPrice | null;
+  priceCustom: PlanCustomPrice | null;
+  tagline: string;
+  teamDesc: string;
+  credits: PlanCredits;
+  showBonus?: boolean;
+  cta: string;
+  ctaVariant: "outline" | "primary" | "navy";
+}
 
 export const PricingV2 = () => {
   const [anual, setAnual] = useState(false);
   const countdown = useCountdown();
   const ref = useScrollReveal<HTMLDivElement>();
 
-  const plans = [
+  const plans: Plan[] = [
     {
       id: "arranque",
-      name: "Arranque",
+      name: "Esencial",
       topBadge: null,
       highlight: false,
-      price: { mensual: 1500, anual: 1250 },
-      tagline: "Una pieza del sistema. La fuga más urgente, primero — sin contratar.",
-      aiTier: "Esencial",
-      aiDesc: "Operación de leads + follow-up. Para el frente más urgente.",
-      humanLabel: "1 frente en operación a la vez",
-      humanSub: "Entregado en 2–4 días hábiles",
-      cta: "Empezar con Arranque",
-      ctaVariant: "outline" as const,
+      price: { mensual: 199, anual: 165 },
+      priceCustom: null,
+      tagline: "Para emprendedores y negocios pequeños que quieren empezar a trabajar con tecnología e IA sin complicaciones ni grandes inversiones.",
+      teamDesc: "Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos.",
+      credits: { prefix: "", amount: 60, note: "No acumulables" },
+      cta: "Empezar con Esencial",
+      ctaVariant: "outline",
     },
     {
       id: "core",
-      name: "Core",
-      topBadge: "MEJOR VALOR (3× CAPACIDAD)",
+      name: "Integral",
+      topBadge: "MEJOR VALOR",
       highlight: true,
-      price: { mensual: 3000, anual: 2500 },
-      tagline: "El punto óptimo para empresas que crecen. 3 frentes operando en paralelo — sin levantar un dedo.",
-      aiTier: "Estándar",
-      aiDesc: "Operación multi-canal (CRM + WhatsApp + Email) funcionando en paralelo.",
-      humanLabel: "3 frentes en operación a la vez",
-      humanSub: "3× capacidad de Arranque",
-      deliverySub: "Entregado en 2–4 días hábiles",
+      price: { mensual: 499, anual: 415 },
+      priceCustom: null,
+      tagline: "Para clientes que ya han trabajado con Sixteam y buscan expandir su ecosistema digital, o empresas que requieren configuraciones y automatizaciones más complejas.",
+      teamDesc: "Agentes IA operando en multi-canal (CRM + WhatsApp + Email) + equipo de especialistas para integraciones, automatizaciones avanzadas y nuevas configuraciones.",
+      credits: { prefix: "", amount: 160, note: "No acumulables" },
       showBonus: true,
-      cta: "Empezar con Core",
-      ctaVariant: "primary" as const,
+      cta: "Empezar con Integral",
+      ctaVariant: "primary",
     },
     {
       id: "plus",
-      name: "Plus",
+      name: "Total",
       topBadge: "SERVICIO DEDICADO",
       highlight: false,
-      price: { mensual: 5500, anual: 4580 },
-      tagline: "Un departamento de RevOps completo — con PM dedicado y llamada semanal de estrategia.",
-      aiTier: "Alto Volumen",
-      aiDesc: "Operación multi-área, alto volumen, para empresas de mayor escala.",
-      humanLabel: "5 frentes en operación a la vez",
-      humanSub: "PM Dedicado en tu workflow",
-      deliverySub: "Respuesta prioritaria 1–3 días",
-      cta: "Empezar con Plus",
-      ctaVariant: "navy" as const,
+      price: null,
+      priceCustom: { display: "Desde $1,200", sub: "USD / mes", note: "A cotizar según requerimientos" },
+      tagline: "Para clientes que ya tienen a Sixteam como su equipo de tecnología permanente. Capacidad total, PM dedicado y estrategia continua de crecimiento.",
+      teamDesc: "Agentes IA de alto volumen en todos tus sistemas + PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales.",
+      credits: { prefix: "Desde ", amount: 400, note: "Acumulables según solicitud" },
+      cta: "Cotizar plan Total",
+      ctaVariant: "navy",
     },
   ];
 
@@ -147,22 +161,18 @@ export const PricingV2 = () => {
 
           {/* Header */}
           <div className="text-center max-w-[700px] mx-auto v2-reveal mb-10">
-            <Eyebrow variant="navy">Planes y Precios</Eyebrow>
+            <Eyebrow variant="navy">Servicio de Soporte, Operaciones y Mejora Continua</Eyebrow>
             <h2
               className="font-poppins font-bold text-v2-ink-heading mt-3"
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
             >
-              Un equipo completo.{" "}
+              Un equipo de tecnología entero{" "}
               <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">Sin contratar.</em>
+                <em className="font-serif italic font-normal text-v2-accent-teal-deep">sin contratar personal adicional.</em>
               </Underlined>
             </h2>
             <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
-              Precio por operación continua. Sin contrato de permanencia. Empieza cuando el{" "}
-              <Link to="/v2/radar" className="text-v2-accent-teal-deep font-semibold hover:underline">
-                Radar gratis
-              </Link>{" "}
-              te indique cuál es tu punto de entrada.
+              Cuenta mensualmente con un equipo de tecnología externo que administra y opera tus sistemas, además, potenciado con Inteligencia Artificial. Sin contratar personal adicional a tu nómina.
             </p>
           </div>
 
@@ -191,7 +201,6 @@ export const PricingV2 = () => {
           {/* Cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 items-start">
             {plans.map((plan, i) => {
-              const price = anual ? plan.price.anual : plan.price.mensual;
               const isCore = plan.id === "core";
               const isPlus = plan.id === "plus";
 
@@ -202,7 +211,7 @@ export const PricingV2 = () => {
                 >
                   {/* Top badge */}
                   {plan.topBadge && (
-                    <div className={`absolute -top-3.5 inset-x-0 flex justify-center z-10`}>
+                    <div className="absolute -top-3.5 inset-x-0 flex justify-center z-10">
                       <span
                         className={`inline-flex items-center px-4 py-1.5 rounded-full font-lato font-bold text-[10px] uppercase tracking-widest shadow-sm ${
                           isCore
@@ -223,21 +232,43 @@ export const PricingV2 = () => {
                     } ${plan.topBadge ? "mt-3" : ""} bg-white`}
                   >
                     {/* Card header */}
-                    <div className={`px-6 pt-6 pb-5 ${isCore ? "bg-white" : "bg-white"}`}>
-                      <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading leading-tight">
+                    <div className="px-6 pt-6 pb-5">
+                      <h3
+                        className="font-serif italic font-bold text-[24px] leading-tight"
+                        style={{ color: "#C9A84C", textShadow: "0 1px 2px rgba(201,168,76,0.15)" }}
+                      >
                         {plan.name}
                       </h3>
-                      <div className="flex items-baseline gap-1 mt-1">
-                        <span className="font-poppins font-black text-[42px] leading-none text-v2-ink-heading">
-                          ${price.toLocaleString("en-US")}
-                        </span>
-                        <span className="font-lato text-[14px] text-v2-ink-muted pb-1">/mes</span>
-                      </div>
-                      {anual && (
-                        <p className="font-lato text-[11px] text-v2-accent-teal-deep font-semibold mt-0.5">
-                          Facturado anualmente · 2 meses gratis
-                        </p>
+
+                      {/* Price display */}
+                      {plan.priceCustom ? (
+                        <>
+                          <div className="flex items-baseline gap-1.5 mt-1 flex-wrap">
+                            <span className="font-poppins font-black text-[36px] leading-none text-v2-ink-heading">
+                              {plan.priceCustom.display}
+                            </span>
+                            <span className="font-lato text-[14px] text-v2-ink-muted pb-1">{plan.priceCustom.sub}</span>
+                          </div>
+                          <p className="font-lato text-[11px] text-v2-ink-muted mt-1">
+                            {plan.priceCustom.note}
+                          </p>
+                        </>
+                      ) : (
+                        <>
+                          <div className="flex items-baseline gap-1 mt-1">
+                            <span className="font-poppins font-black text-[42px] leading-none text-v2-ink-heading">
+                              ${(anual ? plan.price!.anual : plan.price!.mensual).toLocaleString("en-US")}
+                            </span>
+                            <span className="font-lato text-[14px] text-v2-ink-muted pb-1">USD /mes</span>
+                          </div>
+                          {anual && (
+                            <p className="font-lato text-[11px] text-v2-accent-teal-deep font-semibold mt-0.5">
+                              Facturado anualmente · 2 meses gratis
+                            </p>
+                          )}
+                        </>
                       )}
+
                       <p className={`font-lato text-[13px] leading-relaxed mt-3 ${isCore ? "text-v2-ink-body" : "text-v2-ink-muted"}`}>
                         {plan.tagline}
                       </p>
@@ -255,57 +286,48 @@ export const PricingV2 = () => {
                         />
                         <p className="font-lato text-[12px] text-v2-ink-body mt-2 leading-relaxed pl-1">
                           Acceso inmediato a{" "}
-                          <strong className="text-v2-ink-heading">Aura, Sam y tu equipo</strong>{" "}
+                          <strong className="text-v2-ink-heading">Alfa, Bravo y tu equipo</strong>{" "}
                           para planificación, copy y estrategia.
                         </p>
                       </div>
 
-                      {/* Agentes IA */}
-                      <div className="rounded-xl border border-v2-border-subtle bg-v2-surface p-3.5">
-                        <PillHeader
-                          icon={<Bot className="h-3.5 w-3.5" />}
-                          label="Agentes IA en producción"
-                          color="navy"
-                          badge={plan.aiTier}
-                        />
-                        <p className="font-lato text-[12px] text-v2-ink-muted mt-2 mb-3 leading-relaxed pl-1">
-                          {plan.aiDesc}
-                        </p>
-                        <div className="flex flex-col gap-2 pl-1">
-                          <AgentRow color="#1d70a2" name="Aura" role="Concierge" />
-                          <AgentRow color="#00bfa5" name="Carlos" role="CRM & Pipeline" />
-                          <AgentRow color="#0d6659" name="Laura" role="WhatsApp 24/7" />
-                        </div>
-                      </div>
-
-                      {/* Especialistas humanos */}
+                      {/* Equipo de Especialistas + Agentes IA */}
                       <div className="rounded-xl border border-v2-border-subtle bg-v2-surface p-3.5">
                         <PillHeader
                           icon={<Users className="h-3.5 w-3.5" />}
-                          label="Especialistas Humanos"
+                          label="Especialistas + Agentes IA"
                           color="navy"
                         />
-                        <div className="flex flex-col gap-1.5 mt-3 pl-1">
-                          <FeatureRow
-                            text={<><strong className={isCore ? "" : ""}>{plan.humanLabel}</strong></>}
-                            strong
-                          />
-                          {isCore && (
-                            <p className="font-lato text-[11px] text-v2-accent-teal-deep font-semibold pl-5">
-                              {plan.humanSub}
-                            </p>
-                          )}
-                          {isPlus && (
-                            <FeatureRow text={<><strong>PM Dedicado</strong> en tu workflow</>} />
-                          )}
-                          <FeatureRow text={plan.deliverySub ?? "Entregado en 2–4 días hábiles"} />
-                          {isPlus && (
-                            <FeatureRow text={<><strong>Llamada 1:1 semanal</strong> de estrategia</>} />
-                          )}
+                        <p className="font-lato text-[12px] text-v2-ink-muted mt-2 mb-3 leading-relaxed pl-1">
+                          {plan.teamDesc}
+                        </p>
+                        <div className="flex flex-col gap-2 pl-1">
+                          <AgentRow color="#1d70a2" name="Alfa" role="Concierge" />
+                          <AgentRow color="#00bfa5" name="Delta" role="CRM & Pipeline" />
+                          <AgentRow color="#0d6659" name="Echo" role="WhatsApp 24/7" />
                         </div>
                       </div>
 
-                      {/* Bono VIP — solo Core */}
+                      {/* Créditos */}
+                      <div className="rounded-xl border border-v2-accent-blue/25 bg-[#f0f7ff] p-3.5">
+                        <PillHeader
+                          icon={<Zap className="h-3.5 w-3.5" />}
+                          label="Sistema de Créditos"
+                          color="navy"
+                        />
+                        <div className="flex items-baseline gap-1.5 pl-1 mt-3">
+                          <span className="font-poppins font-black text-[30px] leading-none text-v2-accent-blue">
+                            {plan.credits.prefix}{plan.credits.amount}
+                          </span>
+                          <span className="font-lato text-[13px] text-v2-ink-muted">créditos / mes</span>
+                        </div>
+                        <p className="font-lato text-[11px] text-v2-ink-muted mt-1.5 pl-1">
+                          <span className="font-semibold text-v2-ink-body">{plan.credits.note}.</span>{" "}
+                          Cada solicitud descuenta créditos según su complejidad.
+                        </p>
+                      </div>
+
+                      {/* Bono VIP — solo Integral */}
                       {plan.showBonus && (
                         <div className="rounded-xl border-2 border-[#fb923c]/40 bg-[#fff7ed] p-3.5">
                           <PillHeader
@@ -316,7 +338,7 @@ export const PricingV2 = () => {
                           <div className="flex flex-col gap-1.5 mt-3 pl-1">
                             <FeatureRow text="Llamada de estrategia 1:1 — mapea tus primeros 90 días" />
                             <FeatureRow text="Setup completo de marca/sistema hecho por nosotros" />
-                            <FeatureRow text="Primeros 3 frentes fast-track (1–2 días de entrega)" />
+                            <FeatureRow text="Configuración fast-track de tus primeras automatizaciones" />
                           </div>
                           <div className="mt-3 flex items-center gap-2 pl-1">
                             <span className="font-lato text-[11px] text-[#c2680a] font-semibold">
@@ -356,7 +378,7 @@ export const PricingV2 = () => {
 
                       {/* CTA */}
                       <div className="mt-1">
-                        <Link to="/v2/radar" className="block">
+                        <Link to={isPlus ? "/v2/radar" : "/v2/radar"} className="block">
                           <ButtonV2
                             variant={plan.ctaVariant}
                             size="md"
@@ -366,15 +388,17 @@ export const PricingV2 = () => {
                             <ArrowRight className="h-4 w-4" />
                           </ButtonV2>
                         </Link>
-                        <div className="flex items-center justify-center gap-1.5 mt-2.5">
-                          <Shield className="h-3 w-3 text-v2-ink-muted" />
-                          <Link
-                            to="/v2/radar"
-                            className="font-lato text-[11px] text-v2-ink-muted hover:text-v2-accent-teal-deep transition-colors underline underline-offset-2"
-                          >
-                            Garantía 30 días money-back
-                          </Link>
-                        </div>
+                        {!isPlus && (
+                          <div className="flex items-center justify-center gap-1.5 mt-2.5">
+                            <Shield className="h-3 w-3 text-v2-ink-muted" />
+                            <Link
+                              to="/v2/radar"
+                              className="font-lato text-[11px] text-v2-ink-muted hover:text-v2-accent-teal-deep transition-colors underline underline-offset-2"
+                            >
+                              Garantía 30 días money-back
+                            </Link>
+                          </div>
+                        )}
                       </div>
 
                     </div>
@@ -384,25 +408,21 @@ export const PricingV2 = () => {
             })}
           </div>
 
-          {/* Diagnóstico card */}
+          {/* Asesoría gratuita card */}
           <div className="v2-reveal v2-d2 mt-10 max-w-2xl mx-auto">
             <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <div className="flex-1">
                 <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep mb-1">
-                  Punto de entrada recomendado
+                  ¿Aún no sabes por dónde iniciar?
                 </p>
                 <h3 className="font-poppins font-bold text-[18px] text-v2-ink-heading">
-                  Diagnóstico Sixteam
+                  Adquiere una asesoría gratuita
                 </h3>
-                <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-1">
-                  Mapeo agéntico de tu operación + roadmap cuantificado.{" "}
-                  <strong className="text-v2-ink-heading">$2,500 USD</strong> one-time — el ~50% convierte a suscripción.
-                </p>
               </div>
               <div className="flex-shrink-0 w-full sm:w-auto">
                 <Link to="/v2/radar">
                   <ButtonV2 variant="navy" size="sm" className="w-full sm:w-auto whitespace-nowrap group">
-                    Solicitar Diagnóstico
+                    Agendar asesoría
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </ButtonV2>
                 </Link>
@@ -411,8 +431,15 @@ export const PricingV2 = () => {
           </div>
 
           {/* Footer note */}
-          <p className="v2-reveal v2-d3 text-center font-lato text-[13px] text-v2-ink-muted italic mt-8">
-            Todos los planes incluyen Radar gratis previo · Sin contrato de permanencia · Factura mensual
+          <p className="v2-reveal v2-d3 text-center font-lato text-[13px] text-v2-ink-muted mt-8">
+            ¿Cómo funciona el sistema de Créditos Sixteam?{" "}
+            <Link
+              to="/v2/soluciones#sixteam-ops"
+              className="font-semibold text-v2-accent-teal-deep hover:underline underline-offset-2 inline-flex items-center gap-1"
+            >
+              Conoce Sixteam Ops
+              <ArrowRight className="h-3 w-3" />
+            </Link>
           </p>
 
         </div>

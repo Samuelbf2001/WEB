@@ -86,8 +86,8 @@ export const CasesV2 = () => {
               .
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body leading-[1.65] mt-4">
-              No es un benchmark de industria. Es lo que pasó cuando estos equipos cambiaron de
-              cementerio de datos a motor de revenue.
+              No es un benchmark de industria. Es lo que pasó cuando estos equipos empezaron a operar
+              su tecnología en lugar de dejarla sin quien la mueva.
             </p>
           </div>
 

@@ -156,7 +156,7 @@ export const CrmComparisonV2 = () => {
               <div className="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 relative flex items-start gap-3">
                 <RefreshCw className="h-4 w-4 text-v2-accent-teal mt-0.5 flex-shrink-0" aria-hidden />
                 <p className="font-lato text-[13px] text-white/65 leading-[1.6]">
-                  Vendemos que tu operación comercial{" "}
+                  Operamos tu tecnología para que tu negocio{" "}
                   <strong className="text-white">funcione</strong>, mes a mes — con
                   o sin que tu equipo esté completo.
                 </p>

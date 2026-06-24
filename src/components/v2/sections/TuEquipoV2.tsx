@@ -16,24 +16,24 @@ const layers = [
     label: "CONSULTORÍA",
     humanRole: "Revenue Strategist (Samuel)",
     agents: [
-      { icon: Compass, name: "Alex",  role: "Estratega & Concierge IA", color: "#1d70a2" },
-      { icon: Search,  name: "Sam",   role: "Diagnóstico IA",            color: "#0d6659" },
+      { icon: Compass, name: "Alfa",   role: "Estratega & Concierge IA", color: "#1d70a2" },
+      { icon: Search,  name: "Bravo",  role: "Diagnóstico IA",            color: "#0d6659" },
     ],
   },
   {
     label: "IMPLEMENTACIÓN",
     humanRole: "Systems Engineer (Ernesto)",
     agents: [
-      { icon: Wrench,  name: "Debbie", role: "Constructora de Sistemas IA",       color: "#7b5ea7" },
-      { icon: Link2,   name: "Vinnie", role: "Especialista de Integraciones IA",  color: "#c2680a" },
+      { icon: Wrench,  name: "Charlie", role: "Constructora de Sistemas IA",       color: "#7b5ea7" },
+      { icon: Link2,   name: "Delta",   role: "Especialista de Integraciones IA",  color: "#c2680a" },
     ],
   },
   {
     label: "OPERACIÓN",
     humanRole: "Revenue Ops Manager",
     agents: [
-      { icon: Activity,  name: "Sally", role: "Operadora de Revenue IA",  color: "#00bfa5" },
-      { icon: BarChart3, name: "Clara", role: "Analista de Operación IA", color: "#1d70a2" },
+      { icon: Activity,  name: "Echo",    role: "Operadora de Revenue IA",  color: "#00bfa5" },
+      { icon: BarChart3, name: "Foxtrot", role: "Analista de Operación IA", color: "#1d70a2" },
     ],
   },
 ];

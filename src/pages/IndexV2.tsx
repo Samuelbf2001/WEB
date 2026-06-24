@@ -4,7 +4,6 @@ import ProblemStatV2 from "@/components/v2/sections/ProblemStatV2";
 import WhyItHappensV2 from "@/components/v2/sections/WhyItHappensV2";
 import NoSomosV2 from "@/components/v2/sections/NoSomosV2";
 import MondayV2 from "@/components/v2/sections/MondayV2";
-import TuEquipoV2 from "@/components/v2/sections/TuEquipoV2";
 import TodoListoV2 from "@/components/v2/sections/TodoListoV2";
 import ComparativaV2 from "@/components/v2/sections/ComparativaV2";
 import CrmComparisonV2 from "@/components/v2/sections/CrmComparisonV2";
@@ -16,6 +15,8 @@ import CadenceV2 from "@/components/v2/sections/CadenceV2";
 import CasesV2 from "@/components/v2/sections/CasesV2";
 import TestimonialsV2 from "@/components/v2/sections/TestimonialsV2";
 import ChatConciergeV2 from "@/components/v2/sections/ChatConciergeV2";
+import TransformacionDigitalV2 from "@/components/v2/sections/TransformacionDigitalV2";
+import NuestroEnfoqueV2 from "@/components/v2/sections/NuestroEnfoqueV2";
 import PricingV2 from "@/components/v2/sections/PricingV2";
 import FaqV2 from "@/components/v2/sections/FaqV2";
 import FinalCtaV2 from "@/components/v2/sections/FinalCtaV2";
@@ -25,13 +26,14 @@ const IndexV2 = () => {
     <LayoutV2>
       <HeroV2 />
       <NoSomosV2 />
+      <TransformacionDigitalV2 />
       <ServicesGridV2 />
+      <NuestroEnfoqueV2 />
       {/* <HowItWorksV2 /> */}
       <PricingV2 />
       {/* <ProblemStatV2 /> */}
       {/* <WhyItHappensV2 /> */}
-      <MondayV2 />
-      <TuEquipoV2 />
+      {/* <MondayV2 /> */}
       {/* <ComparativaV2 /> */}
       {/* <TodoListoV2 /> */}
       {/* <CrmComparisonV2 /> */}

@@ -10,7 +10,7 @@ const horizons = [
     cadence: "Lunes 9am",
     emphasis: "Reporte ejecutivo.",
     description:
-      "Clara entrega el reporte automático: pipeline, conversión, alertas y prioridades de la semana. Llegas a tu lunes con todo el contexto.",
+      "Foxtrot entrega el reporte automático: pipeline, conversión, alertas y prioridades de la semana. Llegas a tu lunes con todo el contexto.",
     detail: "Sin dashboards de 40 KPIs que nadie lee.",
     icon: BarChart2,
     accent: "teal" as const,
@@ -20,7 +20,7 @@ const horizons = [
     cadence: "Mar – Jue",
     emphasis: "El equipo opera.",
     description:
-      "Sally opera el pipeline a diario. Debbie y Vinnie ejecutan los builds del sprint. Tu Slack está activo.",
+      "Echo opera el pipeline a diario. Charlie y Delta ejecutan los builds del sprint. Tu Slack está activo.",
     detail: "Sin tickets, sin portales que aprender.",
     icon: Zap,
     accent: "blue" as const,
@@ -30,7 +30,7 @@ const horizons = [
     cadence: "Viernes",
     emphasis: "Cierre y siguiente sprint.",
     description:
-      "Sam revisa qué se trabajó, qué cambió, qué ajustar. Cierra el sprint y planifica el siguiente.",
+      "Bravo revisa qué se trabajó, qué cambió, qué ajustar. Cierra el sprint y planifica el siguiente.",
     detail: "Nada acumula al mes siguiente.",
     icon: Clock,
     accent: "sand" as const,
@@ -191,11 +191,11 @@ export const CadenceV2 = () => {
             </div>
             <div>
               <p className="font-poppins font-bold text-[16px] text-v2-ink-heading leading-[1.3]">
-                Cada día — Alex está disponible.
+                Cada día — Alfa está disponible.
               </p>
               <p className="font-lato text-[14px] text-v2-ink-muted leading-[1.6] mt-1">
                 No te vendemos proyectos. Te vendemos un equipo que opera sin que tengas
-                que pedirlo. Alex recibe tus pedidos en Slack o WhatsApp — sin esperas
+                que pedirlo. Alfa recibe tus pedidos en Slack o WhatsApp — sin esperas
                 hasta la próxima reunión.
               </p>
             </div>

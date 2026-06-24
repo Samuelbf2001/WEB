@@ -1,7 +1,6 @@
 import { Check } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
-import Underlined from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /* ── cards data ── */
@@ -30,23 +29,23 @@ export const NoSomosV2 = () => {
   const ref = useScrollReveal<HTMLDivElement>();
 
   return (
-    <Section surface="navy-dark" size="default">
-      {/* ── aurora orbs ── */}
+    <Section surface="alt" size="default" className="overflow-hidden">
+
+      {/* Gold aurora orb — top right */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 right-0 w-[600px] h-[600px] opacity-30"
+        className="pointer-events-none absolute -top-24 -right-32 w-[600px] h-[600px] rounded-full opacity-25"
         style={{
-          background:
-            "radial-gradient(circle at 70% 30%, rgba(0,191,165,0.18) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(212,168,83,0.22) 0%, transparent 70%)",
           animation: "v2-aurora-1 12s ease-in-out infinite",
         }}
       />
+      {/* Blue orb — bottom left */}
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 w-[500px] h-[500px] opacity-25"
+        className="pointer-events-none absolute bottom-0 -left-24 w-[500px] h-[500px] rounded-full opacity-10"
         style={{
-          background:
-            "radial-gradient(circle at 30% 70%, rgba(29,112,162,0.22) 0%, transparent 65%)",
+          background: "radial-gradient(circle at 30% 70%, rgba(29,112,162,0.30) 0%, transparent 65%)",
           animation: "v2-aurora-2 16s ease-in-out infinite",
         }}
       />
@@ -56,25 +55,21 @@ export const NoSomosV2 = () => {
 
           {/* ── header ── */}
           <div className="v2-reveal text-center mx-auto max-w-[720px]">
-            <Eyebrow
-              variant="teal"
-              className="bg-white/10 px-4 py-1.5 rounded-full text-white"
-            >
-              Lo que NO somos
-            </Eyebrow>
+            <Eyebrow variant="sand">Lo que NO somos</Eyebrow>
 
             <h2
-              className="mt-6 font-poppins font-bold text-white leading-[1.1] tracking-[-0.03em]"
+              className="mt-6 font-poppins font-bold text-v2-ink-heading leading-[1.1] tracking-[-0.03em]"
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
               No somos una{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">agencia tradicional</em>
-              {" "}ni{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">consultores comunes</em>
-              , tampoco te ofrecemos un{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">software cualquiera</em>
+              <em className="font-serif italic font-normal text-[#8a7a4f]">agencia tradicional</em>
+              <br />
+              ni{" "}
+              <em className="font-serif italic font-normal text-[#8a7a4f]">consultores comunes</em>
+              ,<br />
+              tampoco te ofrecemos un{" "}
+              <em className="font-serif italic font-normal text-[#8a7a4f]">software cualquiera</em>
             </h2>
-
           </div>
 
           {/* ── three cards ── */}
@@ -82,31 +77,36 @@ export const NoSomosV2 = () => {
             {cards.map((card, i) => (
               <div
                 key={card.index}
-                className={`v2-reveal v2-d${i + 1} bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] hover:border-v2-accent-teal/30 transition-colors duration-300 flex flex-col`}
+                className={`v2-reveal v2-d${i + 1} bg-white border border-v2-border-subtle rounded-2xl p-7 hover:border-[rgba(212,168,83,0.35)] hover:shadow-[0_16px_48px_rgba(212,168,83,0.09)] hover:-translate-y-1 transition-[transform,box-shadow,border-color] duration-300 flex flex-col`}
               >
                 {/* label */}
-                <span className="font-lato text-[11px] uppercase tracking-widest text-white/40">
+                <span className="font-lato text-[11px] uppercase tracking-widest text-v2-ink-muted">
                   Lo que NO somos · {card.index}
                 </span>
 
                 {/* strikethrough title */}
                 <p
-                  className="mt-3 font-poppins font-bold text-[20px] text-white/80 line-through decoration-v2-accent-teal/40"
+                  className="mt-3 font-poppins font-bold text-[20px] text-v2-ink-body line-through decoration-[#d4a853]/50"
                   style={{ textDecorationThickness: "2px" }}
                 >
                   {card.title}
                 </p>
 
                 {/* body */}
-                <p className="font-lato text-[14px] text-white/65 leading-[1.65] mt-3 flex-1">
+                <p className="font-lato text-[14px] text-v2-ink-body leading-[1.65] mt-3 flex-1">
                   {card.body}
                 </p>
 
                 {/* divider + yes line */}
-                <div className="border-t border-white/10 mt-5 pt-4 flex items-start gap-2">
-                  <Check className="h-3.5 w-3.5 text-v2-accent-teal flex-shrink-0 mt-[3px]" />
-                  <p className="font-lato text-[13px] text-white/90 leading-[1.55]">
-                    <strong className="font-bold text-v2-accent-teal">Además</strong>
+                <div className="border-t border-v2-border-subtle mt-5 pt-4 flex items-start gap-2">
+                  <div
+                    className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-[2px]"
+                    style={{ background: "rgba(212,168,83,0.14)" }}
+                  >
+                    <Check className="h-2.5 w-2.5" style={{ color: "#8a7a4f" }} />
+                  </div>
+                  <p className="font-lato text-[13px] text-v2-ink-body leading-[1.55]">
+                    <strong className="font-bold text-[#8a7a4f]">Además</strong>
                     {card.yes.replace("Además", "")}
                   </p>
                 </div>
@@ -116,26 +116,16 @@ export const NoSomosV2 = () => {
 
           {/* ── bottom punchline ── */}
           <div className="v2-reveal v2-d4 mt-12 text-center max-w-[700px] mx-auto">
-            <span className="font-lato text-[11px] uppercase tracking-widest text-v2-accent-teal">
+            <span className="font-lato text-[11px] uppercase tracking-widest text-[#8a7a4f]">
               Entonces qué somos
             </span>
             <p
-              className="mt-4 font-poppins font-bold text-white leading-[1.2] tracking-[-0.02em]"
+              className="mt-4 font-poppins font-bold text-v2-ink-heading leading-[1.2] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
               Somos el{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">equipo de tecnología</em>
-              {" "}que siempre has necesitado. Implementamos{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">estratégicamente</em>
-              {" "}y operamos{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal">entendiendo</em>
-              {" "}el contexto de tu negocio.
-            </p>
-            <p
-              className="mt-5 font-lato text-white/70 leading-[1.65] mx-auto max-w-[560px]"
-              style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}
-            >
-              Somos los socios estratégicos que desarrollan soluciones basadas en la realidad de tu negocio.
+              <em className="font-serif italic font-normal text-[#8a7a4f]">equipo de tecnología</em>
+              {" "}que siempre has necesitado.
             </p>
           </div>
 

@@ -39,7 +39,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "¿Quién opera mi cuenta — ustedes o un junior?",
-    a: "Samuel y Ernesto, todo el tiempo. No hay rotación de cuenta ni handoff a juniors. Más 6 agentes IA especializados (Alex, Sam, Debbie, Vinnie, Sally, Clara) que ejecutan lo cotidiano 24/7. El criterio senior es responsabilidad personal, no un escalado interno.",
+    a: "Samuel y Ernesto, todo el tiempo. No hay rotación de cuenta ni handoff a juniors. Más 6 agentes IA especializados (Alfa, Bravo, Charlie, Delta, Echo, Foxtrot) que ejecutan lo cotidiano 24/7. El criterio senior es responsabilidad personal, no un escalado interno.",
   },
   {
     q: "¿Y si después de un mes no me gusta?",

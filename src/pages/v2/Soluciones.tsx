@@ -8,6 +8,7 @@ import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Underlined from "@/components/v2/UnderlineSvg";
+import TuEquipoV2 from "@/components/v2/sections/TuEquipoV2";
 /* ── Primitives ──────────────────────────────────────────────────── */
 
 const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
@@ -295,7 +296,7 @@ const Soluciones = () => {
       {/* ── SOLUCIÓN 3: OPS ★ — LIGHT THEME ─────────────────────── */}
       <Section surface="alt" size="default">
         <Container>
-          <div>
+          <div id="sixteam-ops">
             {/* Section label con badge destacado */}
             <div className="flex items-center gap-3 mb-8">
               <div className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-v2-accent-teal/10 border border-v2-accent-teal/35 text-v2-accent-teal-deep">
@@ -493,6 +494,8 @@ const Soluciones = () => {
           </div>
         </Container>
       </Section>
+
+      <TuEquipoV2 />
 
       {/* ── CTA — único bloque oscuro ─────────────────────────────── */}
       <Section surface="navy-dark" size="compact" className="overflow-hidden">

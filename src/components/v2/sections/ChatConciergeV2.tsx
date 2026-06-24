@@ -170,7 +170,7 @@ export const ChatConciergeV2 = () => {
               className="font-poppins font-bold text-white mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
-              Habla con Alex.{" "}
+              Habla con Alfa.{" "}
               <Underlined color="teal" variant="scribble">
                 <em className="font-serif italic font-normal text-v2-accent-teal-deep">
                   Coordina tu cuenta antes de que lo pidas.
@@ -178,7 +178,7 @@ export const ChatConciergeV2 = () => {
               </Underlined>
             </h2>
             <p className="font-lato text-[17px] text-white/55 max-w-[520px] mx-auto mt-4 leading-relaxed">
-              Alex es el agente IA que recibe tus mensajes en Slack o WhatsApp, decide qué
+              Alfa es el agente IA que recibe tus mensajes en Slack o WhatsApp, decide qué
               especialista del equipo lo opera, y te devuelve el trabajo hecho. Sin tickets,
               sin portales que aprender.
             </p>

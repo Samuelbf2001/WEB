@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sixteam.pro — Brand Book v2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Lato:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── CSS VARIABLES ── */
+    :root {
+      /* Surfaces */
+      --v2-surface:            #fdfcf8;
+      --v2-surface-alt:        #f4f3ee;
+      --v2-surface-cream:      #faf9f5;
+      --v2-surface-white:      #ffffff;
+      --v2-surface-navy-mist:  #f4f6f8;
+      --v2-surface-teal-mist:  #ecf7f5;
+      --v2-surface-sand-mist:  #f7f3e8;
+
+      /* Ink (text) */
+      --v2-ink-heading:  #0a2342;
+      --v2-ink-body:     #334155;
+      --v2-ink-muted:    #74777e;
+      --v2-ink-inverse:  #faf9f5;
+
+      /* Accents */
+      --v2-accent-teal:       #00bfa5;
+      --v2-accent-teal-deep:  #009b86;
+      --v2-accent-blue:       #1d70a2;
+      --v2-accent-blue-soft:  #768baf;
+      --v2-accent-sand:       #d4c9a8;
+      --v2-accent-sand-soft:  #f0ead8;
+
+      /* Borders */
+      --v2-border-subtle:  rgba(10,35,66,0.08);
+      --v2-border-medium:  rgba(10,35,66,0.16);
+
+      /* Extra brand colors (legacy / v1 compat) */
+      --navy: #0a2342;
+      --blue: #1d70a2;
+      --teal: #00bfa5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--v2-surface);
+      color: var(--v2-ink-body);
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 80px 0; border-bottom: 1px solid var(--v2-border-subtle); }
+    section:last-child { border-bottom: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,252,248,.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--v2-border-subtle);
+      padding: 0 28px;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--v2-ink-heading);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--v2-accent-teal); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--v2-ink-muted);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--v2-ink-heading); }
+
+    /* ── HERO SECTION ── */
+    #hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--v2-surface);
+      padding: 80px 28px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .hero-blob-1 {
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at 45% 45%, rgba(0,191,165,.10) 0%, rgba(29,112,162,.05) 40%, transparent 70%);
+      animation: aurora-1 14s ease-in-out infinite;
+    }
+    .hero-blob-2 {
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at 55% 55%, rgba(29,112,162,.08) 0%, rgba(0,191,165,.04) 45%, transparent 70%);
+      animation: aurora-2 18s ease-in-out infinite;
+    }
+    .dot-grid {
+      position: absolute;
+      inset: 0;
+      opacity: .028;
+      background-image: radial-gradient(circle, #0a2342 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    @keyframes aurora-1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(30px,-20px) scale(1.05)} 66%{transform:translate(-20px,15px) scale(.97)} }
+    @keyframes aurora-2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-25px,15px) scale(1.04)} 66%{transform:translate(20px,-10px) scale(.98)} }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--v2-surface-teal-mist);
+      border: 1px solid rgba(0,191,165,.2);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--v2-accent-teal-deep);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--v2-accent-teal);
+    }
+    #hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900;
+      color: var(--v2-ink-heading);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin-bottom: 20px;
+    }
+    #hero h1 em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--v2-accent-teal-deep);
+    }
+    #hero p.lead {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.1rem;
+      color: var(--v2-ink-body);
+      max-width: 540px;
+      margin-bottom: 36px;
+    }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ── SECTION HEADINGS ── */
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--v2-accent-teal-deep);
+      margin-bottom: 12px;
+    }
+    .eyebrow.navy { color: var(--v2-accent-blue); }
+    .eyebrow.sand { color: #8a7a4f; }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      color: var(--v2-ink-heading);
+      margin-bottom: 8px;
+      line-height: 1.15;
+    }
+    .section-sub {
+      font-family: 'Lato', sans-serif;
+      color: var(--v2-ink-muted);
+      max-width: 560px;
+      margin-bottom: 52px;
+      font-size: 1rem;
+    }
+
+    /* ── COLORS ── */
+    .color-group { margin-bottom: 40px; }
+    .color-group-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--v2-ink-muted);
+      margin-bottom: 16px;
+    }
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .color-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--v2-border-subtle);
+      box-shadow: 0 2px 12px rgba(10,35,66,.06);
+    }
+    .color-swatch { height: 96px; }
+    .color-info {
+      background: #fff;
+      padding: 14px;
+    }
+    .color-info h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--v2-ink-heading);
+      margin-bottom: 3px;
+    }
+    .color-info code {
+      font-family: 'Courier New', monospace;
+      font-size: .75rem;
+      color: var(--v2-accent-teal-deep);
+    }
+    .color-info .token {
+      font-family: 'Courier New', monospace;
+      font-size: .68rem;
+      color: var(--v2-ink-muted);
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .type-grid { display: grid; gap: 24px; }
+    .type-row {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 14px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 12px rgba(10,35,66,.04);
+    }
+    .type-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .badge {
+      background: var(--v2-surface-alt);
+      border: 1px solid var(--v2-border-medium);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: .7rem;
+      font-family: 'Lato', sans-serif;
+      color: var(--v2-ink-muted);
+    }
+    .badge.teal { border-color: rgba(0,191,165,.35); color: var(--v2-accent-teal-deep); background: var(--v2-surface-teal-mist); }
+    .badge.blue { border-color: rgba(29,112,162,.35); color: var(--v2-accent-blue); background: var(--v2-surface-navy-mist); }
+
+    /* ── BUTTONS ── */
+    .btn-showcase { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 40px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      border-radius: 999px;
+      padding: 10px 24px;
+      cursor: default;
+      border: none;
+      transition: all .2s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #1d70a2, #00bfa5);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,191,165,.22);
+    }
+    .btn-navy {
+      background: #0a2342;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(10,35,66,.18);
+    }
+    .btn-outline {
+      background: rgba(255,255,255,.6);
+      border: 1px solid var(--v2-border-medium);
+      color: var(--v2-ink-heading);
+      backdrop-filter: blur(4px);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--v2-ink-heading);
+      border: none;
+    }
+    .btn-sm  { padding: 7px 16px; font-size: .8rem; }
+    .btn-lg  { padding: 14px 28px; font-size: 1rem; }
+
+    /* ── CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card-white {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 24px rgba(10,35,66,.06);
+    }
+    .card-white h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--v2-ink-heading);
+      margin-bottom: 8px;
+    }
+    .card-white p {
+      font-size: .875rem;
+      color: var(--v2-ink-muted);
+      line-height: 1.65;
+    }
+
+    .card-elevated {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 32px 80px rgba(10,35,66,.12);
+    }
+    .card-elevated h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--v2-ink-heading);
+      margin-bottom: 8px;
+    }
+    .card-elevated p { font-size: .875rem; color: var(--v2-ink-muted); line-height: 1.65; }
+
+    .card-teal-mist {
+      background: var(--v2-surface-teal-mist);
+      border: 1px solid rgba(0,191,165,.2);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .card-teal-mist h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--v2-ink-heading);
+      margin-bottom: 8px;
+    }
+    .card-teal-mist p { font-size: .875rem; color: var(--v2-ink-muted); line-height: 1.65; }
+
+    .card-dark {
+      background: var(--v2-ink-heading);
+      border-radius: 16px;
+      padding: 28px;
+      color: var(--v2-ink-inverse);
+    }
+    .card-dark h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card-dark p { font-size: .875rem; color: rgba(250,249,245,.6); line-height: 1.65; }
+
+    .card-icon {
+      width: 40px; height: 40px;
+      background: var(--v2-surface-teal-mist);
+      border: 1px solid rgba(0,191,165,.25);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--v2-accent-teal-deep);
+      font-size: 18px;
+    }
+
+    /* ── PILLS & BADGES ── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      font-family: 'Lato', sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 5px 14px;
+    }
+    .pill-teal {
+      background: var(--v2-surface-teal-mist);
+      border: 1px solid rgba(0,191,165,.25);
+      color: var(--v2-accent-teal-deep);
+    }
+    .pill-blue {
+      background: var(--v2-surface-navy-mist);
+      border: 1px solid rgba(29,112,162,.25);
+      color: var(--v2-accent-blue);
+    }
+    .pill-sand {
+      background: var(--v2-surface-sand-mist);
+      border: 1px solid rgba(212,201,168,.5);
+      color: #8a7a4f;
+    }
+    .pill-dark {
+      background: rgba(10,35,66,.08);
+      border: 1px solid var(--v2-border-medium);
+      color: var(--v2-ink-heading);
+    }
+    .pill-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+    .handler-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Lato', sans-serif;
+      font-size: .65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .handler-ia    .handler-dot { background: var(--v2-accent-teal); }
+    .handler-human .handler-dot { background: var(--v2-accent-blue); }
+    .handler-both  .handler-dot { background: #d4a853; }
+    .handler-ia    { color: var(--v2-accent-teal-deep); }
+    .handler-human { color: var(--v2-accent-blue); }
+    .handler-both  { color: #8a7a4f; }
+    .handler-dot   { width: 7px; height: 7px; border-radius: 50%; }
+
+    /* ── SURFACES SHOWCASE ── */
+    .surfaces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .surface-chip {
+      height: 80px;
+      border-radius: 12px;
+      border: 1px solid var(--v2-border-subtle);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px;
+    }
+    .surface-chip span {
+      font-family: 'Courier New', monospace;
+      font-size: .65rem;
+      color: var(--v2-ink-muted);
+      text-align: center;
+      line-height: 1.3;
+    }
+    .surface-label {
+      font-family: 'Lato', sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--v2-ink-muted);
+    }
+
+    /* ── LOGO ── */
+    .logo-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: center;
+    }
+    .logo-light {
+      background: var(--v2-surface);
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 14px;
+      padding: 32px 48px;
+    }
+    .logo-dark {
+      background: var(--v2-ink-heading);
+      border-radius: 14px;
+      padding: 32px 48px;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -.02em;
+    }
+    .logo-text .dot { color: var(--v2-accent-teal); }
+    .logo-text.on-light { color: var(--v2-ink-heading); }
+    .logo-text.on-dark  { color: #fff; }
+
+    /* ── SPACING ── */
+    .spacing-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+    }
+    .spacing-item { text-align: center; }
+    .spacing-block {
+      background: linear-gradient(135deg, var(--v2-accent-blue), var(--v2-accent-teal));
+      border-radius: 4px;
+      margin: 0 auto 8px;
+    }
+    .spacing-item span { font-size: .7rem; color: var(--v2-ink-muted); font-family: 'Courier New', monospace; display: block; }
+
+    /* ── RADIUS ── */
+    .radius-grid { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+    .radius-item { text-align: center; }
+    .radius-box {
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, var(--v2-accent-blue), var(--v2-accent-teal));
+      margin: 0 auto 8px;
+    }
+    .radius-item span { font-size: .7rem; color: var(--v2-ink-muted); font-family: 'Courier New', monospace; }
+
+    /* ── SECTION SURFACE EXAMPLES ── */
+    .section-examples {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .section-swatch {
+      height: 100px;
+      border-radius: 14px;
+      border: 1px solid var(--v2-border-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-swatch .tag {
+      font-family: 'Courier New', monospace;
+      font-size: .68rem;
+      color: var(--v2-ink-muted);
+      display: block;
+    }
+    .section-swatch .val {
+      font-family: 'Lato', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--v2-ink-heading);
+      margin-top: 2px;
+    }
+
+    /* ── CONTAINER SIZES ── */
+    .container-demo { margin-bottom: 12px; }
+    .container-bar {
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      border: 1.5px dashed;
+    }
+
+    /* ── ANIMATIONS ── */
+    .animation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .anim-card {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(10,35,66,.04);
+    }
+    .anim-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--v2-ink-heading);
+      margin-bottom: 6px;
+    }
+    .anim-card code {
+      font-family: 'Courier New', monospace;
+      font-size: .75rem;
+      color: var(--v2-accent-teal-deep);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .anim-card p { font-size: .8rem; color: var(--v2-ink-muted); }
+
+    /* ── DO / DONT ── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 640px) { .rules-grid { grid-template-columns: 1fr; } }
+    .rule-card {
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid;
+    }
+    .rule-do   { border-color: rgba(0,191,165,.3);   background: rgba(0,191,165,.04); }
+    .rule-dont { border-color: rgba(255,80,80,.3);   background: rgba(255,80,80,.04); }
+    .rule-header {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rule-do   .rule-header { color: var(--v2-accent-teal-deep); }
+    .rule-dont .rule-header { color: #e05252; }
+    .rule-card ul { padding-left: 18px; }
+    .rule-card li {
+      font-size: .875rem;
+      color: var(--v2-ink-body);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--v2-ink-heading);
+      color: var(--v2-ink-inverse);
+      padding: 60px 28px;
+      text-align: center;
+    }
+    footer .foot-logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    footer .foot-logo span { color: var(--v2-accent-teal); }
+    footer .formula {
+      font-family: 'Lato', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: rgba(250,249,245,.35);
+      margin-top: 8px;
+    }
+    footer .serif-tagline {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: rgba(250,249,245,.75);
+      margin-bottom: 6px;
+    }
+
+    /* ── MISC HELPERS ── */
+    .gradient-text {
+      background: linear-gradient(90deg, var(--v2-accent-blue), var(--v2-accent-teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .divider { border: none; border-top: 1px solid var(--v2-border-subtle); margin: 40px 0; }
+    code.inline {
+      font-family: 'Courier New', monospace;
+      font-size: .8em;
+      background: var(--v2-surface-alt);
+      border: 1px solid var(--v2-border-medium);
+      border-radius: 4px;
+      padding: 1px 6px;
+      color: var(--v2-accent-teal-deep);
+    }
+    .fonts-demo { display: grid; gap: 24px; }
+    .font-row {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid var(--v2-border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(10,35,66,.04);
+    }
+    .stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--v2-accent-blue), var(--v2-accent-teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .stat-label { font-size: .85rem; color: var(--v2-ink-muted); margin-top: 6px; }
+
+    /* ── TOPO SVG ACCENT ── */
+    .topo-accent {
+      position: absolute;
+      top: 0; right: 0;
+      opacity: .12;
+      pointer-events: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      section { padding: 56px 0; }
+      #hero { min-height: auto; padding: 80px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Sixteam<span>.</span>pro</a>
+    <ul class="nav-links">
+      <li><a href="#identidad">Identidad</a></li>
+      <li><a href="#colores">Colores</a></li>
+      <li><a href="#tipografia">Tipografía</a></li>
+      <li><a href="#botones">Botones</a></li>
+      <li><a href="#cards">Cards</a></li>
+      <li><a href="#layout">Layout</a></li>
+      <li><a href="#patrones">Patrones</a></li>
+      <li><a href="#reglas">Reglas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-blob-1"></div>
+    <div class="hero-blob-2"></div>
+    <div class="dot-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Brand Book v2 · Boutique Intelligence
+    </div>
+    <h1>
+      Sixteam<span style="color:var(--v2-accent-teal)">.</span>pro<br>
+      <em>Design System</em>
+    </h1>
+    <p class="lead">
+      Guía completa de identidad visual, tokens de diseño, componentes y reglas de uso para la web v2. Light-first · Editorial · Boutique.
+    </p>
+    <div class="hero-cta-row">
+      <a href="#colores" class="btn btn-primary">Ver colores →</a>
+      <a href="#tipografia" class="btn btn-outline">Tipografía</a>
+      <a href="#reglas" class="btn btn-ghost">Reglas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── IDENTIDAD ── -->
+<section id="identidad">
+  <div class="container">
+    <span class="eyebrow">01 — Identidad</span>
+    <h2 class="section-title">Marca &amp; Concepto</h2>
+    <p class="section-sub">La v2 pivota de dark-navy a una estética Boutique Intelligence: clara, cálida, editorial.</p>
+
+    <div class="stat-grid" style="margin-bottom:40px">
+      <div class="stat-card">
+        <div class="stat-num">v2</div>
+        <p class="stat-label">Boutique Intelligence</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3</div>
+        <p class="stat-label">Fuentes del sistema</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">16</div>
+        <p class="stat-label">Tokens de color</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Light</div>
+        <p class="stat-label">Tema base (vs dark v1)</p>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card-white">
+        <div class="card-icon">🎯</div>
+        <h3>Nombre</h3>
+        <p>Sixteam.pro — siempre con punto. El punto va en color teal <code class="inline">#00bfa5</code>. Nunca "Sixteam" a solas, nunca "sixteam" en minúscula al inicio.</p>
+      </div>
+      <div class="card-white">
+        <div class="card-icon">💡</div>
+        <h3>Tagline</h3>
+        <p>"Ya no tienes que operar solo." — Mensaje empático y directo. En hero se usa la palabra <em style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--v2-accent-teal-deep)">solo</em> en serif italic con underline teal.</p>
+      </div>
+      <div class="card-white">
+        <div class="card-icon">🌎</div>
+        <h3>Mercado</h3>
+        <p>Colombia &amp; Latinoamérica. Siempre en español. Tono profesional, tecnológico, directo y cercano. Precio desde $300 USD/mes.</p>
+      </div>
+      <div class="card-white">
+        <div class="card-icon">📐</div>
+        <h3>Fórmula</h3>
+        <p style="font-family:'Lato',sans-serif;font-weight:600;color:var(--v2-ink-heading)">Process + Technology + People = Growth</p>
+        <p style="margin-top:8px">Aparece en el footer en uppercase tracking-wide, opacity 35%.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Logo showcase -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Logo</h3>
+    <div class="logo-showcase">
+      <div class="logo-light">
+        <div class="logo-text on-light">Sixteam<span class="dot">.</span>pro</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.7rem;color:var(--v2-ink-muted);margin-top:8px;text-transform:uppercase;letter-spacing:.12em">Sobre fondo claro</div>
+      </div>
+      <div class="logo-dark">
+        <div class="logo-text on-dark">Sixteam<span class="dot">.</span>pro</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.7rem;color:rgba(250,249,245,.4);margin-top:8px;text-transform:uppercase;letter-spacing:.12em">Sobre fondo oscuro</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#1d70a2,#00bfa5);border-radius:14px;padding:32px 48px;">
+        <div class="logo-text on-dark">Sixteam<span class="dot">.</span>pro</div>
+        <div style="font-family:'Lato',sans-serif;font-size:.7rem;color:rgba(255,255,255,.6);margin-top:8px;text-transform:uppercase;letter-spacing:.12em">Sobre gradiente</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COLORES ── -->
+<section id="colores" style="background:var(--v2-surface-alt)">
+  <div class="container">
+    <span class="eyebrow">02 — Colores</span>
+    <h2 class="section-title">Tokens de Color</h2>
+    <p class="section-sub">La paleta v2 es light-first. Navy como tinta, teal como acento, blanco/crema como superficie.</p>
+
+    <!-- Superficies -->
+    <div class="color-group">
+      <div class="color-group-title">Surfaces — Fondos</div>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#fdfcf8;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Surface</h4><code>#fdfcf8</code><span class="token">v2-surface</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#f4f3ee;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Surface Alt</h4><code>#f4f3ee</code><span class="token">v2-surface-alt</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#faf9f5;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Surface Cream</h4><code>#faf9f5</code><span class="token">v2-surface-cream</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#ffffff;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Surface White</h4><code>#ffffff</code><span class="token">v2-surface-white</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#f4f6f8;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Navy Mist</h4><code>#f4f6f8</code><span class="token">v2-surface-navy-mist</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#ecf7f5;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Teal Mist</h4><code>#ecf7f5</code><span class="token">v2-surface-teal-mist</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#f7f3e8;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Sand Mist</h4><code>#f7f3e8</code><span class="token">v2-surface-sand-mist</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tinta -->
+    <div class="color-group">
+      <div class="color-group-title">Ink — Texto</div>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#0a2342"></div>
+          <div class="color-info"><h4>Ink Heading</h4><code>#0a2342</code><span class="token">v2-ink-heading</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#334155"></div>
+          <div class="color-info"><h4>Ink Body</h4><code>#334155</code><span class="token">v2-ink-body</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#74777e"></div>
+          <div class="color-info"><h4>Ink Muted</h4><code>#74777e</code><span class="token">v2-ink-muted</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#faf9f5;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Ink Inverse</h4><code>#faf9f5</code><span class="token">v2-ink-inverse</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acentos -->
+    <div class="color-group">
+      <div class="color-group-title">Accents — Colores de acción</div>
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#00bfa5"></div>
+          <div class="color-info"><h4>Teal</h4><code>#00bfa5</code><span class="token">v2-accent-teal</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#009b86"></div>
+          <div class="color-info"><h4>Teal Deep</h4><code>#009b86</code><span class="token">v2-accent-teal-deep</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1d70a2"></div>
+          <div class="color-info"><h4>Blue</h4><code>#1d70a2</code><span class="token">v2-accent-blue</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#768baf"></div>
+          <div class="color-info"><h4>Blue Soft</h4><code>#768baf</code><span class="token">v2-accent-blue-soft</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#d4c9a8"></div>
+          <div class="color-info"><h4>Sand</h4><code>#d4c9a8</code><span class="token">v2-accent-sand</span></div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#f0ead8;border-bottom:1px solid var(--v2-border-subtle)"></div>
+          <div class="color-info"><h4>Sand Soft</h4><code>#f0ead8</code><span class="token">v2-accent-sand-soft</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gradientes -->
+    <div class="color-group">
+      <div class="color-group-title">Gradientes estándar</div>
+      <div class="color-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+        <div class="color-card" style="border:none">
+          <div class="color-swatch" style="background:linear-gradient(90deg,#1d70a2,#00bfa5);display:flex;align-items:flex-end;padding:12px">
+            <span style="font-family:'Courier New',monospace;font-size:.7rem;color:rgba(255,255,255,.8);background:rgba(0,0,0,.3);padding:3px 8px;border-radius:5px">blue → teal (90°)</span>
+          </div>
+          <div class="color-info"><h4>CTA / Primario</h4><code>from-[#1d70a2] to-[#00bfa5]</code></div>
+        </div>
+        <div class="color-card" style="border:none">
+          <div class="color-swatch" style="background:linear-gradient(135deg,#0a2342,#1d70a2);display:flex;align-items:flex-end;padding:12px">
+            <span style="font-family:'Courier New',monospace;font-size:.7rem;color:rgba(255,255,255,.8);background:rgba(0,0,0,.3);padding:3px 8px;border-radius:5px">navy → blue (135°)</span>
+          </div>
+          <div class="color-info"><h4>Fondo oscuro</h4><code>from-[#0a2342] to-[#1d70a2]</code></div>
+        </div>
+        <div class="color-card" style="border:none">
+          <div class="color-swatch" style="background:linear-gradient(135deg,#1d70a2,#00bfa5);display:flex;align-items:flex-end;padding:12px">
+            <span style="font-family:'Courier New',monospace;font-size:.7rem;color:rgba(255,255,255,.8);background:rgba(0,0,0,.3);padding:3px 8px;border-radius:5px">blue → teal (135°)</span>
+          </div>
+          <div class="color-info"><h4>Iconos / Marca</h4><code>from-[#1d70a2] to-[#00bfa5]</code></div>
+        </div>
+        <div class="color-card" style="border:none;overflow:hidden">
+          <div class="color-swatch" style="background:var(--v2-surface-white);display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.5rem;background:linear-gradient(90deg,#1d70a2,#00bfa5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Texto gradiente</span>
+          </div>
+          <div class="color-info"><h4>Texto destacado</h4><code>bg-clip-text text-transparent</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIPOGRAFÍA ── -->
+<section id="tipografia">
+  <div class="container">
+    <span class="eyebrow">03 — Tipografía</span>
+    <h2 class="section-title">Sistema de Fuentes</h2>
+    <p class="section-sub">Tres fuentes exactas. Nunca usar Inter, Roboto u otras sin justificación.</p>
+
+    <div class="fonts-demo">
+
+      <!-- Poppins -->
+      <div class="font-row">
+        <div class="type-meta">
+          <span class="badge teal">Poppins</span>
+          <span class="badge">Headings · H1–H6</span>
+          <span class="badge">Google Fonts</span>
+          <span class="badge blue">font-poppins</span>
+        </div>
+        <div style="font-family:'Poppins',sans-serif;margin-bottom:16px">
+          <div style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;color:var(--v2-ink-heading);line-height:1.05;letter-spacing:-.03em;margin-bottom:8px">H1 Hero — 900</div>
+          <div style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--v2-ink-heading);margin-bottom:8px">H2 Sección — 800</div>
+          <div style="font-size:1.5rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:8px">H3 — 700</div>
+          <div style="font-size:1.1rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:8px">H4 Card — 700</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">weight: 600 · 700 · 800 · 900</span>
+          <span class="badge">letter-spacing: -0.03em en H1</span>
+          <span class="badge">line-height: 1.04–1.15</span>
+        </div>
+      </div>
+
+      <!-- Lato -->
+      <div class="font-row">
+        <div class="type-meta">
+          <span class="badge teal">Lato</span>
+          <span class="badge">Body · Labels · Botones · Nav</span>
+          <span class="badge">Google Fonts</span>
+          <span class="badge blue">font-lato</span>
+        </div>
+        <div style="font-family:'Lato',sans-serif;margin-bottom:16px">
+          <div style="font-size:1.125rem;font-weight:400;color:var(--v2-ink-body);margin-bottom:6px;line-height:1.6">Body regular — 400 · 17–18px en hero, 16px en secciones</div>
+          <div style="font-size:.875rem;font-weight:400;color:var(--v2-ink-muted);margin-bottom:6px;line-height:1.65">Caption / muted — 400 · 13–14px</div>
+          <div style="font-size:.7rem;font-weight:600;color:var(--v2-accent-teal-deep);text-transform:uppercase;letter-spacing:.18em;margin-bottom:6px">EYEBROW / LABEL — 600 · 11px · uppercase · tracking-[0.18em]</div>
+          <div style="font-size:.9rem;font-weight:600;color:var(--v2-ink-heading);margin-bottom:6px">Botones / semibold — 600</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">weight: 300 · 400 · 500 · 600</span>
+          <span class="badge">Eyebrow: uppercase tracking-[0.18em]</span>
+        </div>
+      </div>
+
+      <!-- Instrument Serif -->
+      <div class="font-row">
+        <div class="type-meta">
+          <span class="badge teal">Instrument Serif</span>
+          <span class="badge">Highlights · Quotes · Énfasis</span>
+          <span class="badge">Google Fonts</span>
+          <span class="badge blue">font-serif italic</span>
+          <span class="badge" style="border-color:rgba(212,201,168,.5);color:#8a7a4f;background:var(--v2-surface-sand-mist)">Nuevo en v2 ✦</span>
+        </div>
+        <div style="margin-bottom:16px">
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.5rem,4vw,3rem);color:var(--v2-ink-heading);margin-bottom:12px;line-height:1.2">
+            Ya no tienes que operar <span style="color:var(--v2-accent-teal-deep)">solo</span>.
+          </div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:1.4rem;color:rgba(10,35,66,.75);margin-bottom:12px">
+            "El equipo de ops que siempre necesitamos."
+          </div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:1.3rem;color:rgba(250,249,245,.75);background:var(--v2-ink-heading);padding:20px 24px;border-radius:12px">
+            El motor de Revenue invisible en tu empresa.
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge">Solo italic · Nunca en textos largos</span>
+          <span class="badge">Hero headings · Taglines · Testimonios · Footer</span>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider">
+
+    <!-- Escala tipográfica -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Escala completa</h3>
+    <div class="type-grid">
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="badge teal">H1 Hero</span>
+          <span class="badge">clamp(40px, 6vw, 68px)</span>
+          <span class="badge">Poppins 900</span>
+          <span class="badge">letter-spacing: -0.03em</span>
+        </div>
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,4rem);color:var(--v2-ink-heading);line-height:1.05;letter-spacing:-.03em">Ya no tienes que operar solo.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="badge teal">H2 Sección</span>
+          <span class="badge">clamp(1.8rem, 3.5vw, 2.5rem)</span>
+          <span class="badge">Poppins 800</span>
+        </div>
+        <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--v2-ink-heading);line-height:1.15">Diseñado para crecer, no para sobrevivir.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="badge teal">Eyebrow</span>
+          <span class="badge">11px</span>
+          <span class="badge">Lato 600</span>
+          <span class="badge">uppercase tracking-[0.18em]</span>
+        </div>
+        <div>
+          <span class="eyebrow">Revenue Operations · Resultados reales</span>
+          <span class="eyebrow navy" style="margin-left:20px">Servicios</span>
+          <span class="eyebrow sand" style="margin-left:20px">Casos de éxito</span>
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="badge teal">Body</span>
+          <span class="badge">17–18px hero / 16px sección</span>
+          <span class="badge">Lato 400</span>
+          <span class="badge">line-height: 1.55–1.65</span>
+        </div>
+        <p style="font-size:1.05rem;color:var(--v2-ink-body);line-height:1.6">Tu email sale. Tu WhatsApp responde. Tu chatbot califica. Tu web se actualiza. Tus automatizaciones corren. Tú… solo tienes que crecer.</p>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="badge teal">Caption / Muted</span>
+          <span class="badge">11–13px</span>
+          <span class="badge">Lato 400</span>
+          <span class="badge">color: v2-ink-muted</span>
+        </div>
+        <div>
+          <p style="font-size:13px;color:var(--v2-ink-muted)">Juan Restrepo · CEO, MasterViajes · 4+ años en LATAM</p>
+          <p style="font-size:11px;color:var(--v2-ink-muted);text-transform:uppercase;letter-spacing:.13em;margin-top:4px">30+ EQUIPOS EN LATAM · DESDE $300 USD/MES</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOTONES ── -->
+<section id="botones" style="background:var(--v2-surface-alt)">
+  <div class="container">
+    <span class="eyebrow">04 — Botones</span>
+    <h2 class="section-title">Button System</h2>
+    <p class="section-sub">Siempre <code class="inline">rounded-full</code>. Siempre <code class="inline">font-lato font-semibold</code>. Cinco variantes.</p>
+
+    <div class="btn-showcase">
+      <button class="btn btn-primary">Hacer mi auditoría →</button>
+      <button class="btn btn-navy">Agendar llamada →</button>
+      <button class="btn btn-outline">▶ 30 min, en español</button>
+      <button class="btn btn-ghost">Ver más</button>
+    </div>
+
+    <div class="type-grid">
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">primary</span><span class="badge">CTA principal</span></div>
+        <button class="btn btn-primary btn-sm" style="margin-right:12px">Small →</button>
+        <button class="btn btn-primary" style="margin-right:12px">Default →</button>
+        <button class="btn btn-primary btn-lg">Large →</button>
+        <div style="margin-top:16px">
+          <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted)">bg: linear-gradient(90deg, #1d70a2, #00bfa5) · shadow: 0 8px 24px rgba(0,191,165,.22)</code>
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">navy</span><span class="badge">CTA secundario</span></div>
+        <button class="btn btn-navy btn-sm" style="margin-right:12px">Small</button>
+        <button class="btn btn-navy" style="margin-right:12px">Default</button>
+        <button class="btn btn-navy btn-lg">Large</button>
+        <div style="margin-top:16px">
+          <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted)">bg: #0a2342 · shadow: 0 4px 16px rgba(10,35,66,.18)</code>
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">outline</span><span class="badge">Alternativo sobre fondo claro</span></div>
+        <button class="btn btn-outline btn-sm" style="margin-right:12px">Small</button>
+        <button class="btn btn-outline" style="margin-right:12px">Default</button>
+        <button class="btn btn-outline btn-lg">Large</button>
+        <div style="margin-top:16px">
+          <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted)">border: 1px solid v2-border-medium · bg: white/60 blur</code>
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">ghost</span><span class="badge">Texto / nav</span></div>
+        <button class="btn btn-ghost">Ghost default</button>
+        <div style="margin-top:16px">
+          <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted)">bg: transparent · hover: bg-ink-heading/5</code>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Tamaños -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:16px">Tamaños</h3>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-family:'Lato',sans-serif;font-size:.875rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--v2-border-medium)">
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Tamaño</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Height</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Padding</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Font size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:10px 16px"><code class="inline">sm</code></td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">h-9 (36px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">px-4 (16px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">text-sm (14px)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:10px 16px"><code class="inline">md</code> (default)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">h-11 (44px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">px-6 (24px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">text-[15px]</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px"><code class="inline">lg</code></td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">h-13 (52px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">px-7 py-3.5</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">text-base (16px)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CARDS ── -->
+<section id="cards">
+  <div class="container">
+    <span class="eyebrow">05 — Cards</span>
+    <h2 class="section-title">Card System</h2>
+    <p class="section-sub">Cuatro variantes según el contexto. Todas con <code class="inline">rounded-2xl</code> o <code class="inline">rounded-3xl</code>.</p>
+
+    <div class="cards-grid">
+      <!-- Card white -->
+      <div>
+        <p style="font-family:'Lato',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--v2-ink-muted);margin-bottom:12px">Card White — estándar</p>
+        <div class="card-white">
+          <div class="card-icon">📊</div>
+          <h3>CRM Ventas</h3>
+          <p>Pipeline unificado, seguimiento de oportunidades y automatización de follow-ups para tu equipo comercial.</p>
+          <div style="margin-top:16px">
+            <span class="pill pill-teal"><span class="pill-dot" style="background:var(--v2-accent-teal)"></span>IA</span>
+          </div>
+        </div>
+        <code style="display:block;font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted);margin-top:12px">bg-white · border-v2-border-subtle · rounded-2xl · shadow-[0_4px_24px_rgba(10,35,66,.06)]</code>
+      </div>
+
+      <!-- Card elevated -->
+      <div>
+        <p style="font-family:'Lato',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--v2-ink-muted);margin-bottom:12px">Card Elevated — hero mockups</p>
+        <div class="card-elevated">
+          <div class="card-icon">⚡</div>
+          <h3>Tu operación esta semana</h3>
+          <p>Email marketing · WhatsApp · Chatbot · Automatizaciones — todo monitoreado y en verde.</p>
+          <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="pill pill-teal"><span class="pill-dot" style="background:var(--v2-accent-teal)"></span>Todo en orden</span>
+          </div>
+        </div>
+        <code style="display:block;font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted);margin-top:12px">bg-white · rounded-3xl · shadow-[0_32px_80px_rgba(10,35,66,.16)]</code>
+      </div>
+
+      <!-- Card teal mist -->
+      <div>
+        <p style="font-family:'Lato',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--v2-ink-muted);margin-bottom:12px">Card Teal Mist — énfasis suave</p>
+        <div class="card-teal-mist">
+          <div class="card-icon">🤖</div>
+          <h3>Chatbot IA 24/7</h3>
+          <p>Califica leads, responde preguntas frecuentes y agenda reuniones automáticamente.</p>
+          <div style="margin-top:16px">
+            <span class="pill pill-teal">Activo · 98% uptime</span>
+          </div>
+        </div>
+        <code style="display:block;font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted);margin-top:12px">bg-v2-surface-teal-mist · border rgba(0,191,165,.2) · rounded-2xl</code>
+      </div>
+
+      <!-- Card dark -->
+      <div>
+        <p style="font-family:'Lato',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--v2-ink-muted);margin-bottom:12px">Card Dark — footer / CTA final</p>
+        <div class="card-dark">
+          <div style="color:var(--v2-accent-teal);font-size:24px;margin-bottom:12px">🚀</div>
+          <h3>¿Listo para crecer?</h3>
+          <p>Agendar una llamada de 30 minutos para entender tu operación actual y proponer un plan a medida.</p>
+          <div style="margin-top:20px">
+            <button class="btn btn-primary btn-sm">Agendar llamada →</button>
+          </div>
+        </div>
+        <code style="display:block;font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted);margin-top:12px">bg-v2-ink-heading · rounded-2xl · text-v2-ink-inverse</code>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Pills y badges -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Pills &amp; Badges</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:32px">
+      <span class="pill pill-teal"><span class="pill-dot" style="background:var(--v2-accent-teal)"></span>Todo en orden</span>
+      <span class="pill pill-teal">30+ equipos LATAM</span>
+      <span class="pill pill-blue">CRM · Email · IA</span>
+      <span class="pill pill-sand">Desde $300 USD/mes</span>
+      <span class="pill pill-dark">4+ años</span>
+    </div>
+
+    <!-- Handler badges -->
+    <h4 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:12px;font-size:.9rem">Handler badges (WeeklyCard)</h4>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+      <span class="handler-badge handler-ia"><span class="handler-dot"></span>IA</span>
+      <span class="handler-badge handler-human"><span class="handler-dot"></span>Experto</span>
+      <span class="handler-badge handler-both"><span class="handler-dot"></span>IA + Experto</span>
+    </div>
+
+    <!-- Stat cards -->
+    <hr class="divider">
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Stat Cards</h3>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-num">30+</div><p class="stat-label">Equipos en LATAM</p></div>
+      <div class="stat-card"><div class="stat-num">4+</div><p class="stat-label">Años de operación</p></div>
+      <div class="stat-card"><div class="stat-num">98%</div><p class="stat-label">Uptime garantizado</p></div>
+      <div class="stat-card"><div class="stat-num">$300</div><p class="stat-label">USD/mes desde</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LAYOUT ── -->
+<section id="layout" style="background:var(--v2-surface-alt)">
+  <div class="container">
+    <span class="eyebrow">06 — Layout</span>
+    <h2 class="section-title">Grid, Container &amp; Section</h2>
+    <p class="section-sub">Sistema de contenedores, secciones y espaciado coherente en toda la web.</p>
+
+    <!-- Containers -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Container</h3>
+    <div style="margin-bottom:40px">
+      <div class="container-demo">
+        <div class="container-bar" style="max-width:100%;background:rgba(0,191,165,.06);border-color:rgba(0,191,165,.3);color:var(--v2-accent-teal-deep)">
+          <span style="font-family:'Courier New',monospace">wide — max-w-[1320px] · px-6 md:px-8 lg:px-12</span>
+        </div>
+      </div>
+      <div class="container-demo">
+        <div class="container-bar" style="max-width:91%;background:rgba(29,112,162,.06);border-color:rgba(29,112,162,.3);color:var(--v2-accent-blue)">
+          <span style="font-family:'Courier New',monospace">default — max-w-[1200px] (más usado)</span>
+        </div>
+      </div>
+      <div class="container-demo">
+        <div class="container-bar" style="max-width:66%;background:rgba(212,201,168,.15);border-color:rgba(212,201,168,.5);color:#8a7a4f">
+          <span style="font-family:'Courier New',monospace">narrow — max-w-[880px] · textos largos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section surfaces -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Section surfaces</h3>
+    <div class="section-examples" style="margin-bottom:40px">
+      <div class="section-swatch" style="background:#fdfcf8"><span class="tag">surface="default"</span><span class="val">#fdfcf8</span></div>
+      <div class="section-swatch" style="background:#f4f3ee"><span class="tag">surface="alt"</span><span class="val">#f4f3ee</span></div>
+      <div class="section-swatch" style="background:#faf9f5"><span class="tag">surface="cream"</span><span class="val">#faf9f5</span></div>
+      <div class="section-swatch" style="background:#ffffff;border:1px solid var(--v2-border-subtle)"><span class="tag">surface="white"</span><span class="val">#ffffff</span></div>
+      <div class="section-swatch" style="background:#f4f6f8"><span class="tag">surface="navy-mist"</span><span class="val">#f4f6f8</span></div>
+      <div class="section-swatch" style="background:#ecf7f5"><span class="tag">surface="teal-mist"</span><span class="val">#ecf7f5</span></div>
+      <div class="section-swatch" style="background:#f7f3e8"><span class="tag">surface="sand-mist"</span><span class="val">#f7f3e8</span></div>
+      <div class="section-swatch" style="background:#0a2342"><span class="tag" style="color:rgba(250,249,245,.5)">surface="navy-dark"</span><span class="val" style="color:rgba(250,249,245,.8)">#0a2342</span></div>
+    </div>
+
+    <!-- Section sizes -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:16px">Section sizes (padding vertical)</h3>
+    <div style="overflow-x:auto;margin-bottom:40px">
+      <table style="width:100%;border-collapse:collapse;font-family:'Lato',sans-serif;font-size:.875rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--v2-border-medium)">
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">size</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Mobile</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Tablet</th>
+            <th style="text-align:left;padding:10px 16px;color:var(--v2-ink-heading);font-weight:700">Desktop</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:10px 16px"><code class="inline">compact</code></td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-16 (64px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-20 (80px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-20 (80px)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:10px 16px"><code class="inline">default</code></td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-20 (80px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-28 (112px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-32 (128px)</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 16px"><code class="inline">spacious</code></td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-24 (96px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-32 (128px)</td>
+            <td style="padding:10px 16px;color:var(--v2-ink-muted)">py-40 (160px)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Spacing -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Escala de espaciado (múltiplos de 4px)</h3>
+    <div class="spacing-grid" style="margin-bottom:40px">
+      <div class="spacing-item"><div class="spacing-block" style="width:4px;height:4px"></div><span>4px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:8px;height:8px"></div><span>8px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:12px;height:12px"></div><span>12px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:16px;height:16px"></div><span>16px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:20px;height:20px"></div><span>20px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:24px;height:24px"></div><span>24px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:32px;height:32px"></div><span>32px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:40px;height:40px"></div><span>40px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:48px;height:48px"></div><span>48px</span></div>
+      <div class="spacing-item"><div class="spacing-block" style="width:64px;height:64px"></div><span>64px</span></div>
+    </div>
+
+    <!-- Border radius -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Border radius</h3>
+    <div class="radius-grid">
+      <div class="radius-item"><div class="radius-box" style="border-radius:0"></div><span>0</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:6px"></div><span>6px</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:8px"></div><span>8px · rounded-lg</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:12px"></div><span>12px · rounded-xl</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:16px"></div><span>16px · rounded-2xl ★</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:24px"></div><span>24px · rounded-3xl</span></div>
+      <div class="radius-item"><div class="radius-box" style="border-radius:999px"></div><span>999px · pills / btns</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PATRONES ── -->
+<section id="patrones">
+  <div class="container">
+    <span class="eyebrow">07 — Patrones</span>
+    <h2 class="section-title">Patrones visuales &amp; Animaciones</h2>
+    <p class="section-sub">Las capas de fondo del Hero y las animaciones que crean profundidad visual.</p>
+
+    <!-- Hero BG layers -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Capas de fondo del Hero (5 niveles)</h3>
+    <div class="type-grid" style="margin-bottom:48px">
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">Capa 1</span><span class="badge">Gradient mesh</span></div>
+        <p style="font-size:.875rem;color:var(--v2-ink-body);margin-bottom:8px">Dos radial-gradients con teal y blue animados lentamente.</p>
+        <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted);display:block">radial-gradient(ellipse, rgba(0,191,165,.11), transparent) — animation: v2-aurora-1 14s</code>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">Capa 2</span><span class="badge">Dot grid</span></div>
+        <p style="font-size:.875rem;color:var(--v2-ink-body);margin-bottom:8px">Grid de puntos navy sutiles. Opacity 0.028.</p>
+        <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted);display:block">radial-gradient(circle, #0a2342 1px, transparent 1px) · backgroundSize: 28px</code>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">Capa 3</span><span class="badge">Topographic contours</span></div>
+        <p style="font-size:.875rem;color:var(--v2-ink-body);margin-bottom:8px">SVG con ellipses concéntricas rotadas animadas. Opacity 0.13.</p>
+        <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted);display:block">stroke="#009b86" strokeWidth="1" — animation: v2-topo-drift 40s linear infinite</code>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">Capa 4</span><span class="badge">Floating geometric accents</span></div>
+        <p style="font-size:.875rem;color:var(--v2-ink-body);margin-bottom:8px">Diamantes, círculos, cruces y cuadrados rotados flotando. Cada uno con delay distinto.</p>
+        <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted);display:block">border-v2-accent-teal/50 rotate-45 — animation: v2-float 8s ease-in-out infinite</code>
+      </div>
+      <div class="type-row">
+        <div class="type-meta"><span class="badge teal">Capa 5</span><span class="badge">Noise grain</span></div>
+        <p style="font-size:.875rem;color:var(--v2-ink-body);margin-bottom:8px">SVG fractalNoise para textura paper sutil. Opacity 0.018.</p>
+        <code style="font-family:'Courier New',monospace;font-size:.75rem;color:var(--v2-ink-muted);display:block">feTurbulence baseFrequency=".75" numOctaves=4 — backgroundSize: 200px</code>
+      </div>
+    </div>
+
+    <!-- Animaciones -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Keyframes del sistema</h3>
+    <div class="animation-grid">
+      <div class="anim-card">
+        <h4>v2-float</h4>
+        <code>6–16s ease-in-out infinite</code>
+        <p>Levita elementos decorativos 8px verticales. Usado en mockup card y accents geométricos.</p>
+      </div>
+      <div class="anim-card">
+        <h4>v2-aurora-1 / 2</h4>
+        <code>14s / 18s ease-in-out infinite</code>
+        <p>Mueve los blobs de gradiente +30px en X/Y con escala 1.05. Crea resplandor orgánico.</p>
+      </div>
+      <div class="anim-card">
+        <h4>v2-topo-drift</h4>
+        <code>40s–55s linear infinite</code>
+        <p>Rota los SVG de líneas topográficas. Se usa también en reverse para el segundo SVG.</p>
+      </div>
+      <div class="anim-card">
+        <h4>v2-hero-entry</h4>
+        <code>fade-in + delay por elemento</code>
+        <p>Entrada en cascada: badge 0ms → H1 100ms → copy 220ms → CTAs 340ms → mini-card 440ms.</p>
+      </div>
+      <div class="anim-card">
+        <h4>animate-ping</h4>
+        <code>Tailwind default</code>
+        <p>Pulso en el dot de estado "Todo en orden" dentro de la WeeklyCard.</p>
+      </div>
+      <div class="anim-card">
+        <h4>fade-in (global)</h4>
+        <code>0.6s ease-out</code>
+        <p>translateY(20px) → translateY(0) + opacity 0→1. Secciones en scroll.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Sombras -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Sombras estándar</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px">
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 2px 8px rgba(10,35,66,.06)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:6px">XS</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 2px 8px rgba(10,35,66,.06)</code>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 24px rgba(10,35,66,.06)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:6px">SM</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 4px 24px rgba(10,35,66,.06)</code>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 32px rgba(10,35,66,.08)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:6px">MD</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 8px 32px rgba(10,35,66,.08)</code>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 16px 48px rgba(10,35,66,.10)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:6px">LG</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 16px 48px rgba(10,35,66,.10)</code>
+      </div>
+      <div style="background:#fff;border-radius:24px;padding:28px;box-shadow:0 32px 80px rgba(10,35,66,.12)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-ink-heading);margin-bottom:6px">XL (elevated cards)</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 32px 80px rgba(10,35,66,.12)</code>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 24px rgba(0,191,165,.22)">
+        <p style="font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700;color:var(--v2-accent-teal-deep);margin-bottom:6px">Teal glow (primary btn)</p>
+        <code style="font-family:'Courier New',monospace;font-size:.7rem;color:var(--v2-ink-muted)">0 8px 24px rgba(0,191,165,.22)</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── V1 vs V2 ── -->
+<section style="background:var(--v2-surface-alt)">
+  <div class="container">
+    <span class="eyebrow">08 — Comparativa</span>
+    <h2 class="section-title">v1 → v2: Diferencias clave</h2>
+    <p class="section-sub">El pivote de dark-navy a Boutique Intelligence.</p>
+
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-family:'Lato',sans-serif;font-size:.9rem">
+        <thead>
+          <tr style="border-bottom:2px solid var(--v2-border-medium)">
+            <th style="text-align:left;padding:12px 16px;font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading)">Aspecto</th>
+            <th style="text-align:left;padding:12px 16px;font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-muted)">v1</th>
+            <th style="text-align:left;padding:12px 16px;font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-accent-teal-deep)">v2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Tema base</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">Dark navy <code class="inline">#0a2342</code></td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">Light cream <code class="inline">#fdfcf8</code></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Fuentes</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">Poppins + Lato</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">Poppins + Lato + <strong>Instrument Serif italic</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Botones</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)"><code class="inline">rounded-lg</code> (8px)</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)"><code class="inline">rounded-full</code> (999px)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Cards</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">Gradient oscuro navy→blue</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">bg-white + shadow sutil</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Bordes</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)"><code class="inline">rgba(29,112,162,.3)</code></td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)"><code class="inline">rgba(10,35,66,0.08)</code> — más fino</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Estética</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">Tecnológico-impactante</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">Editorial-boutique</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--v2-border-subtle)">
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Glassmorphism</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">Sobre dark — <code class="inline">backdrop-blur</code></td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">Header scroll — <code class="inline">bg-v2-surface/85 blur</code></td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;font-weight:600;color:var(--v2-ink-heading)">Mensaje</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-muted)">"Transformamos tu negocio con CRM, automatizaciones e IA"</td>
+            <td style="padding:12px 16px;color:var(--v2-ink-body)">"Ya no tienes que operar solo."</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── REGLAS ── -->
+<section id="reglas">
+  <div class="container">
+    <span class="eyebrow">09 — Reglas</span>
+    <h2 class="section-title">Do's &amp; Don'ts</h2>
+    <p class="section-sub">Normas de uso que garantizan coherencia visual en toda la web.</p>
+
+    <div class="rules-grid">
+      <div class="rule-card rule-do">
+        <div class="rule-header">✅ HACER</div>
+        <ul>
+          <li>Usar <strong>fondo cream</strong> <code class="inline">#fdfcf8</code> como base — light-first en v2</li>
+          <li>Usar <strong>Poppins</strong> para todos los headings H1–H6</li>
+          <li>Usar <strong>Lato</strong> para body, labels, botones y nav</li>
+          <li>Usar <strong>Instrument Serif italic</strong> solo para palabras clave en hero y citas</li>
+          <li>Usar <strong>rounded-full</strong> en todos los botones</li>
+          <li>El punto del logo siempre en <strong>teal #00bfa5</strong></li>
+          <li>Eyebrows en <strong>11px uppercase tracking-[0.18em]</strong></li>
+          <li>Cards principales en <strong>bg-white</strong> con shadow sutil</li>
+          <li>Teal como <strong>único acento CTA</strong> y highlights</li>
+          <li>Diseñar <strong>mobile-first</strong> siempre</li>
+          <li>Header con <strong>glassmorphism</strong> al hacer scroll</li>
+        </ul>
+      </div>
+      <div class="rule-card rule-dont">
+        <div class="rule-header">❌ NUNCA HACER</div>
+        <ul>
+          <li>Usar <strong>fondos navy oscuros</strong> en secciones principales (solo footer y navy-dark)</li>
+          <li>Usar fuentes distintas a Poppins, Lato o Instrument Serif</li>
+          <li>Usar <strong>Instrument Serif</strong> en textos largos o body</li>
+          <li>Usar <strong>rounded-lg</strong> en botones — siempre rounded-full</li>
+          <li>Usar más de <strong>2 colores de acento</strong> en un mismo componente</li>
+          <li>Usar colores <strong>fuera de los tokens</strong> sin justificación</li>
+          <li>Diseñar <strong>solo para desktop</strong> — siempre mobile-first</li>
+          <li>Omitir <strong>hover states</strong> en elementos interactivos</li>
+          <li>Usar la palabra Sixteam sin el <strong>.pro</strong></li>
+          <li>Usar <strong>Inter, Roboto</strong> u otras fuentes genéricas</li>
+          <li>Gradiente dark en cards sobre fondo claro — usar bg-white</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Quick reference -->
+    <h3 style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--v2-ink-heading);margin-bottom:20px">Quick Reference — Tailwind</h3>
+    <div style="background:var(--v2-ink-heading);border-radius:16px;padding:28px;overflow-x:auto">
+      <pre style="font-family:'Courier New',monospace;font-size:.8rem;color:rgba(250,249,245,.8);line-height:1.8;white-space:pre-wrap"><span style="color:#00bfa5">/* Fondos */</span>
+bg-v2-surface           <span style="color:rgba(250,249,245,.4)">/* #fdfcf8 — base */</span>
+bg-v2-surface-alt       <span style="color:rgba(250,249,245,.4)">/* #f4f3ee — alterno */</span>
+bg-v2-surface-teal-mist <span style="color:rgba(250,249,245,.4)">/* #ecf7f5 — badges teal */</span>
+bg-v2-ink-heading       <span style="color:rgba(250,249,245,.4)">/* #0a2342 — footer, dark sections */</span>
+
+<span style="color:#00bfa5">/* Texto */</span>
+text-v2-ink-heading     <span style="color:rgba(250,249,245,.4)">/* #0a2342 — títulos */</span>
+text-v2-ink-body        <span style="color:rgba(250,249,245,.4)">/* #334155 — párrafos */</span>
+text-v2-ink-muted       <span style="color:rgba(250,249,245,.4)">/* #74777e — captions */</span>
+text-v2-accent-teal     <span style="color:rgba(250,249,245,.4)">/* #00bfa5 — íconos, estrellas */</span>
+text-v2-accent-teal-deep<span style="color:rgba(250,249,245,.4)">/* #009b86 — eyebrows, links activos */</span>
+text-v2-accent-blue     <span style="color:rgba(250,249,245,.4)">/* #1d70a2 — acento secundario */</span>
+
+<span style="color:#00bfa5">/* Bordes */</span>
+border-v2-border-subtle <span style="color:rgba(250,249,245,.4)">/* rgba(10,35,66,.08) */</span>
+border-v2-border-medium <span style="color:rgba(250,249,245,.4)">/* rgba(10,35,66,.16) */</span>
+
+<span style="color:#00bfa5">/* Tipografía */</span>
+font-poppins font-bold  <span style="color:rgba(250,249,245,.4)">/* Headings */</span>
+font-lato               <span style="color:rgba(250,249,245,.4)">/* Body y labels */</span>
+font-serif italic       <span style="color:rgba(250,249,245,.4)">/* Instrument Serif — énfasis */</span>
+
+<span style="color:#00bfa5">/* Gradiente texto */</span>
+bg-gradient-to-r from-v2-accent-blue to-v2-accent-teal bg-clip-text text-transparent
+
+<span style="color:#00bfa5">/* Botón primario */</span>
+bg-gradient-to-r from-v2-accent-blue to-v2-accent-teal
+rounded-full font-lato font-semibold
+shadow-[0_8px_24px_rgba(0,191,165,0.22)]</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-logo">Sixteam<span>.</span>pro</div>
+  <p class="serif-tagline">El motor de Revenue invisible en tu empresa.</p>
+  <p class="formula">Process + Technology + People = Growth</p>
+  <p style="font-family:'Lato',sans-serif;font-size:.75rem;color:rgba(250,249,245,.3);margin-top:20px">Brand Book v2 · Boutique Intelligence · © 2025 Sixteam.pro · Colombia &amp; Latam</p>
+</footer>
+
+</body>
+</html>

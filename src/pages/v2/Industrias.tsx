@@ -4,7 +4,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 
 const industries = [
   {
@@ -61,9 +60,7 @@ const Industrias = () => (
           style={{ fontSize: "clamp(40px, 7vw, 68px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
         >
           Sabemos cómo opera tu{" "}
-          <Underlined color="teal" variant="scribble">
-            <em className="font-serif italic font-normal text-v2-accent-teal-deep">industria</em>
-          </Underlined>
+          <em className="font-serif italic font-normal">industria</em>
           .
         </h1>
         <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7">

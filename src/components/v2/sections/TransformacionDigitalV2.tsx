@@ -119,7 +119,7 @@ export const TransformacionDigitalV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 46px)" }}
             >
               Implementamos{" "}
-              <em className="font-serif italic font-normal text-[#8a7a4f]">estratégicamente</em>
+              <em className="not-italic text-[#8a7a4f]">estratégicamente</em>
               {" "}y operamos entendiendo el contexto de tu negocio.
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[660px] mx-auto mt-5 leading-[1.65]">

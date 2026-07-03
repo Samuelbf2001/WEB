@@ -172,7 +172,7 @@ export const ChatConciergeV2 = () => {
             >
               Habla con Alfa.{" "}
               <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+                <em className="not-italic text-v2-accent-teal-deep">
                   Coordina tu cuenta antes de que lo pidas.
                 </em>
               </Underlined>

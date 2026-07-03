@@ -90,9 +90,7 @@ const ViajesV2 = () => {
           <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
             style={{ fontSize: "clamp(36px, 5.5vw, 58px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
             Tu agencia opera{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">como agencia de viajes</em>
-            </Underlined>
+            <em className="font-serif italic font-normal">como agencia de viajes</em>
             . No como gestor de Excel.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">

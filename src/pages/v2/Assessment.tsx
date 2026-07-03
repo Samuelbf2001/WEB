@@ -110,11 +110,9 @@ export const AssessmentV2 = () => {
           >
             Lanza tu transformación con IA
             <br />
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                con la estrategia correcta.
-              </em>
-            </Underlined>
+            <em className="font-serif italic font-normal">
+              con la estrategia correcta.
+            </em>
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[640px] mx-auto">
             El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de IA — y te entregamos el plan ejecutable. Antes de mover una sola pieza.

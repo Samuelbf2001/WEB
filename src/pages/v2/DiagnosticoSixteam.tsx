@@ -177,7 +177,7 @@ const DiagnosticoSixteam = () => {
             }}
           >
             Sabe{" "}
-            <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+            <em className="font-serif italic font-normal">
               exactamente
             </em>{" "}
             dónde está dejando dinero sobre la mesa.

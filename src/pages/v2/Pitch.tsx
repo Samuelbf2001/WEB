@@ -489,9 +489,7 @@ const PitchV2 = () => {
               }}
             >
               Consultamos, implementamos y{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">operamos</em>
-              </Underlined>
+              <em className="font-serif italic font-normal">operamos</em>
               <br />
               el RevOps de empresas de servicio.
             </h1>

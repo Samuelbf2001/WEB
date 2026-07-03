@@ -7,7 +7,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 import TuEquipoV2 from "@/components/v2/sections/TuEquipoV2";
 /* ── Primitives ──────────────────────────────────────────────────── */
 
@@ -65,9 +64,7 @@ const Soluciones = () => {
               <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
                 style={{ fontSize: "clamp(38px, 6.5vw, 64px)", lineHeight: "1.06", letterSpacing: "-0.025em" }}>
                 Entender.{" "}
-                <Underlined color="teal" variant="scribble">
-                  <em className="font-serif italic font-normal text-v2-accent-teal-deep">Construir.</em>
-                </Underlined>{" "}
+                <em className="font-serif italic font-normal">Construir.</em>{" "}
                 Operar.
               </h1>
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">

@@ -111,7 +111,7 @@ const CrmAtencionV2 = () => {
             style={{ fontSize: "clamp(36px, 6vw, 60px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
           >
             Atención al cliente{" "}
-            <em className="font-serif italic font-normal text-v2-accent-blue">orquestada</em>, no
+            <em className="font-serif italic font-normal">orquestada</em>, no
             caótica.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">

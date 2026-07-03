@@ -4,7 +4,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const pains = [
@@ -44,9 +43,7 @@ const Educacion = () => {
           <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
             style={{ fontSize: "clamp(38px, 6vw, 62px)", lineHeight: "1.07", letterSpacing: "-0.02em" }}>
             Más admisiones.{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">Menos caos</em>
-            </Underlined>
+            <em className="font-serif italic font-normal">Menos caos</em>
             .
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">

@@ -42,7 +42,7 @@ export const FinalCtaV2 = () => {
       <Container size="narrow" className="relative text-center">
         <div ref={ref}>
           <div className="v2-reveal">
-            <Eyebrow variant="teal" className="text-v2-accent-teal">
+            <Eyebrow variant="sand" className="text-[#d4a853]">
               Empieza por aquí
             </Eyebrow>
           </div>
@@ -51,8 +51,8 @@ export const FinalCtaV2 = () => {
             style={{ fontSize: "clamp(36px, 6vw, 60px)", lineHeight: "1.05", letterSpacing: "-0.025em" }}
           >
             Empieza por el Diagnóstico.{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal">Sale del paso 2 con el sistema montado.</em>
+            <Underlined color="sand" variant="scribble">
+              <em className="font-serif italic font-normal text-[#d4a853]">Sale del paso 2 con el sistema montado.</em>
             </Underlined>
           </h2>
           <p className="v2-reveal v2-d2 font-lato text-[18px] md:text-[20px] text-white/75 leading-[1.65] max-w-[640px] mx-auto mt-7">

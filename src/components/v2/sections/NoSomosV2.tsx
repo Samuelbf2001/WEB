@@ -62,13 +62,13 @@ export const NoSomosV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
               No somos una{" "}
-              <em className="font-serif italic font-normal text-[#8a7a4f]">agencia tradicional</em>
+              <em className="not-italic text-[#8a7a4f]">agencia tradicional</em>
               <br />
               ni{" "}
-              <em className="font-serif italic font-normal text-[#8a7a4f]">consultores comunes</em>
+              <em className="not-italic text-[#8a7a4f]">consultores comunes</em>
               ,<br />
               tampoco te ofrecemos un{" "}
-              <em className="font-serif italic font-normal text-[#8a7a4f]">software cualquiera</em>
+              <em className="not-italic text-[#8a7a4f]">software cualquiera</em>
             </h2>
           </div>
 

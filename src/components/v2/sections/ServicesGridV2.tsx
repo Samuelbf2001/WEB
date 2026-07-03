@@ -30,12 +30,12 @@ interface Layer {
 const layers: Layer[] = [
   {
     eyebrow: "01 · Entender",
-    eyebrowColor: "text-v2-accent-teal-deep",
+    eyebrowColor: "text-[#8a7a4f]",
     title: "Primero entendemos tu negocio.",
     description:
       "Antes de configurar cualquier cosa, analizamos cómo funciona tu operativa actual: qué no está funcionando bien, qué está haciéndote perder dinero y qué tiene potencial de mejora.",
-    iconBg: "bg-v2-surface-teal-mist",
-    iconColor: "text-v2-accent-teal-deep",
+    iconBg: "bg-v2-surface-sand-mist",
+    iconColor: "text-[#8a7a4f]",
     services: [
       { name: "Diagnóstico gratuito", desc: "Te mostramos en 2 semanas exactamente qué está frenando tu crecimiento.", icon: Search },
       { name: "Revisión de herramientas", desc: "Identificamos qué tienes, qué no usas y qué te hace falta.", icon: ClipboardCheck },
@@ -60,12 +60,12 @@ const layers: Layer[] = [
   },
   {
     eyebrow: "03 · Mantener",
-    eyebrowColor: "text-v2-accent-teal-deep",
+    eyebrowColor: "text-[#8a7a4f]",
     title: "Nos quedamos operando contigo.",
     description:
       "No te entregamos un sistema y nos vamos. Alguien del equipo lo opera día a día para que nunca se detenga.",
-    iconBg: "bg-v2-surface-teal-mist",
-    iconColor: "text-v2-accent-teal-deep",
+    iconBg: "bg-v2-surface-sand-mist",
+    iconColor: "text-[#8a7a4f]",
     services: [
       { name: "Seguimiento diario a tus ventas", desc: "Tus prospectos son contactados a tiempo y los negocios avanzan.", icon: Activity },
       { name: "Resultados visibles en tiempo real", desc: "Ves el desempeño de tu negocio en un tablero claro, sin ser experto.", icon: BarChart3 },
@@ -92,8 +92,8 @@ export const ServicesGridV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
               Nuestra Metodología:{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+              <Underlined color="sand" variant="scribble">
+                <em className="not-italic text-[#8a7a4f]">
                   Entender, Construir, Mantener.
                 </em>
               </Underlined>
@@ -130,7 +130,7 @@ export const ServicesGridV2 = () => {
                   return (
                     <div
                       key={svc.name}
-                      className="group bg-white border border-v2-border-subtle rounded-xl p-4 hover:border-v2-accent-teal/40 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,191,165,0.10)] transition-[transform,box-shadow,border-color] duration-200"
+                      className="group bg-white border border-v2-border-subtle rounded-xl p-4 hover:border-[#d4a853]/40 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(212,168,83,0.10)] transition-[transform,box-shadow,border-color] duration-200"
                     >
                       <div className="flex items-center gap-2.5 mb-1.5">
                         <div

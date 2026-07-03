@@ -90,9 +90,7 @@ const InmobiliariasV2New = () => {
           <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
             style={{ fontSize: "clamp(36px, 5.5vw, 58px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
             Inmobiliaria que{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">convierte leads en ventas</em>
-            </Underlined>{" "}
+            <em className="font-serif italic font-normal">convierte leads en ventas</em>{" "}
             — no en una lista en Excel.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">

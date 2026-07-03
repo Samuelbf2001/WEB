@@ -154,11 +154,9 @@ const PreciosV2 = () => {
               style={{ fontSize: "clamp(36px, 7vw, 64px)", lineHeight: "1.05", letterSpacing: "-0.025em" }}
             >
               Un equipo de tecnología completo.{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                  Por menos que un solo hire.
-                </em>
-              </Underlined>
+              <em className="font-serif italic font-normal">
+                Por menos que un solo hire.
+              </em>
             </h1>
             <p className="v2-reveal v2-d2 font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto">
               Reemplaza +$10K USD/mes en contrataciones internas. Humanos senior + agentes IA operando tu stack. Sin contratos de permanencia, sin sorpresas.

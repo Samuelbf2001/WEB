@@ -111,7 +111,7 @@ const SoporteOperacionesV2 = () => {
             style={{ fontSize: "clamp(36px, 6vw, 60px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
           >
             El equipo que{" "}
-            <em className="font-serif italic font-normal text-v2-accent-blue">mantiene vivo</em> tu
+            <em className="font-serif italic font-normal">mantiene vivo</em> tu
             sistema.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">

@@ -37,13 +37,13 @@ const PillHeader: React.FC<{
   badge?: string;
 }> = ({ icon, label, color = "teal", badge }) => {
   const colors = {
-    teal:   "text-v2-accent-teal-deep bg-v2-surface-teal-mist border-v2-accent-teal/20",
+    teal:   "text-[#8a7a4f] bg-v2-surface-sand-mist border-[#d4a853]/20",
     navy:   "text-v2-accent-blue bg-v2-surface-navy-mist border-v2-accent-blue/20",
     orange: "text-[#c2680a] bg-[#fff7ed] border-[#fdba74]/30",
     purple: "text-[#6d28d9] bg-[#f5f3ff] border-[#c4b5fd]/30",
   };
   const badgeColors = {
-    teal:   "bg-v2-accent-teal/15 text-v2-accent-teal-deep",
+    teal:   "bg-[#d4a853]/15 text-[#8a7a4f]",
     navy:   "bg-v2-accent-blue/15 text-v2-accent-blue",
     orange: "bg-[#fed7aa] text-[#9a3412]",
     purple: "bg-[#ddd6fe] text-[#5b21b6]",
@@ -80,7 +80,7 @@ const AgentRow: React.FC<{ color: string; name: string; role: string }> = ({ col
 /* ── Feature row ── */
 const FeatureRow: React.FC<{ text: React.ReactNode; strong?: boolean }> = ({ text, strong }) => (
   <div className="flex items-start gap-2">
-    <Check className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-v2-accent-teal-deep" />
+    <Check className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-[#8a7a4f]" />
     <span className={`font-lato text-[13px] leading-snug ${strong ? "font-semibold" : ""} text-v2-ink-body`}>
       {text}
     </span>
@@ -167,8 +167,8 @@ export const PricingV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
             >
               Un equipo de tecnología entero{" "}
-              <Underlined color="teal" variant="scribble">
-                <em className="font-serif italic font-normal text-v2-accent-teal-deep">sin contratar personal adicional.</em>
+              <Underlined color="sand" variant="scribble">
+                <em className="not-italic text-[#8a7a4f]">sin contratar personal adicional.</em>
               </Underlined>
             </h2>
             <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
@@ -183,7 +183,7 @@ export const PricingV2 = () => {
             </span>
             <button
               onClick={() => setAnual((v) => !v)}
-              className={`relative w-11 h-6 rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-v2-accent-teal ${anual ? "bg-v2-accent-teal" : "bg-[#d1d5db]"}`}
+              className={`relative w-11 h-6 rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d4a853] ${anual ? "bg-[#d4a853]" : "bg-[#d1d5db]"}`}
               aria-label="Toggle facturación anual"
             >
               <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform duration-300 ${anual ? "translate-x-5" : "translate-x-0"}`} />
@@ -192,7 +192,7 @@ export const PricingV2 = () => {
               Anual
             </span>
             {anual && (
-              <span className="inline-flex items-center px-2.5 py-1 bg-v2-surface-teal-mist border border-v2-accent-teal/25 rounded-full font-lato text-[10px] font-bold text-v2-accent-teal-deep uppercase tracking-wider">
+              <span className="inline-flex items-center px-2.5 py-1 bg-v2-surface-sand-mist border border-[#d4a853]/25 rounded-full font-lato text-[10px] font-bold text-[#8a7a4f] uppercase tracking-wider">
                 Ahorro de 2 meses
               </span>
             )}
@@ -215,7 +215,7 @@ export const PricingV2 = () => {
                       <span
                         className={`inline-flex items-center px-4 py-1.5 rounded-full font-lato font-bold text-[10px] uppercase tracking-widest shadow-sm ${
                           isCore
-                            ? "bg-v2-accent-teal text-white shadow-[0_4px_12px_rgba(0,191,165,0.35)]"
+                            ? "bg-[#d4a853] text-white shadow-[0_4px_12px_rgba(212,168,83,0.40)]"
                             : "bg-v2-ink-heading text-white shadow-[0_4px_12px_rgba(10,35,66,0.3)]"
                         }`}
                       >
@@ -227,7 +227,7 @@ export const PricingV2 = () => {
                   <div
                     className={`rounded-2xl flex flex-col overflow-hidden ${
                       isCore
-                        ? "border-2 border-v2-accent-teal shadow-[0_0_0_4px_rgba(0,191,165,0.08),0_24px_64px_rgba(0,191,165,0.12)]"
+                        ? "border-2 border-[#d4a853] shadow-[0_0_0_4px_rgba(212,168,83,0.10),0_24px_64px_rgba(212,168,83,0.14)]"
                         : "border border-v2-border-medium shadow-[0_8px_32px_rgba(10,35,66,0.06)]"
                     } ${plan.topBadge ? "mt-3" : ""} bg-white`}
                   >
@@ -262,7 +262,7 @@ export const PricingV2 = () => {
                             <span className="font-lato text-[14px] text-v2-ink-muted pb-1">USD /mes</span>
                           </div>
                           {anual && (
-                            <p className="font-lato text-[11px] text-v2-accent-teal-deep font-semibold mt-0.5">
+                            <p className="font-lato text-[11px] text-[#8a7a4f] font-semibold mt-0.5">
                               Facturado anualmente · 2 meses gratis
                             </p>
                           )}
@@ -278,7 +278,7 @@ export const PricingV2 = () => {
                     <div className="px-5 pb-6 flex flex-col gap-3 flex-1">
 
                       {/* Estrategia & Chat IA */}
-                      <div className="rounded-xl border border-v2-accent-teal/20 bg-v2-surface-teal-mist p-3.5">
+                      <div className="rounded-xl border border-[#d4a853]/20 bg-v2-surface-sand-mist p-3.5">
                         <PillHeader
                           icon={<MessageSquare className="h-3.5 w-3.5" />}
                           label="Estrategia & Chat IA"
@@ -361,7 +361,7 @@ export const PricingV2 = () => {
                             text={
                               <>
                                 <strong>Plataforma CRM all-in-one</strong>{" "}
-                                <span className="text-v2-accent-teal-deep font-semibold">(valor $97/mes)</span>
+                                <span className="text-[#8a7a4f] font-semibold">(valor $97/mes)</span>
                                 {" "}— CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
                               </>
                             }
@@ -382,7 +382,7 @@ export const PricingV2 = () => {
                           <ButtonV2
                             variant={plan.ctaVariant}
                             size="md"
-                            className={`w-full justify-center ${isCore ? "shadow-[0_8px_24px_rgba(0,191,165,0.25)]" : ""}`}
+                            className={`w-full justify-center ${isCore ? "shadow-[0_8px_24px_rgba(212,168,83,0.28)]" : ""}`}
                           >
                             {plan.cta}
                             <ArrowRight className="h-4 w-4" />
@@ -393,7 +393,7 @@ export const PricingV2 = () => {
                             <Shield className="h-3 w-3 text-v2-ink-muted" />
                             <Link
                               to="/v2/radar"
-                              className="font-lato text-[11px] text-v2-ink-muted hover:text-v2-accent-teal-deep transition-colors underline underline-offset-2"
+                              className="font-lato text-[11px] text-v2-ink-muted hover:text-[#8a7a4f] transition-colors underline underline-offset-2"
                             >
                               Garantía 30 días money-back
                             </Link>
@@ -412,7 +412,7 @@ export const PricingV2 = () => {
           <div className="v2-reveal v2-d2 mt-10 max-w-2xl mx-auto">
             <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <div className="flex-1">
-                <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep mb-1">
+                <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-[#8a7a4f] mb-1">
                   ¿Aún no sabes por dónde iniciar?
                 </p>
                 <h3 className="font-poppins font-bold text-[18px] text-v2-ink-heading">
@@ -435,7 +435,7 @@ export const PricingV2 = () => {
             ¿Cómo funciona el sistema de Créditos Sixteam?{" "}
             <Link
               to="/v2/soluciones#sixteam-ops"
-              className="font-semibold text-v2-accent-teal-deep hover:underline underline-offset-2 inline-flex items-center gap-1"
+              className="font-semibold text-[#8a7a4f] hover:underline underline-offset-2 inline-flex items-center gap-1"
             >
               Conoce Sixteam Ops
               <ArrowRight className="h-3 w-3" />

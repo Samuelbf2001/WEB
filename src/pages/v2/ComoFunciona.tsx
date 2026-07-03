@@ -154,9 +154,7 @@ const ComoFunciona = () => {
             style={{ fontSize: "clamp(36px, 7vw, 62px)" }}
           >
             No tienes que aprender{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">un sistema nuevo.</em>
-            </Underlined>
+            <em className="font-serif italic font-normal">un sistema nuevo.</em>
           </h1>
           <p className="font-lato text-[18px] md:text-[19px] text-v2-ink-body leading-[1.65] mt-7 max-w-[560px] mx-auto">
             Tú dices qué necesitas en Slack, WhatsApp o Loom. Nosotros decidimos si lo hace IA o un humano — y te lo entregamos.

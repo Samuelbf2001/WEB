@@ -4,7 +4,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 
 /* ── deliverables ── */
 const includes = [
@@ -101,11 +100,9 @@ const Radar = () => {
           >
             Diagnóstico Sixteam.{" "}
             <br className="hidden sm:block" />
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                Te entregamos el sistema montado.
-              </em>
-            </Underlined>
+            <em className="font-serif italic font-normal">
+              Te entregamos el sistema montado.
+            </em>
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7">
             Dos semanas. $2,500 USD único. No es un PDF — es el mapa de cómo opera tu negocio, dónde

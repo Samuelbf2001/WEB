@@ -62,6 +62,7 @@ const InmobiliariasV2New = lazy(() => import('./pages/v2/industrias/Inmobiliaria
 const PreciosV2 = lazy(() => import('./pages/v2/Precios'));
 const AssessmentV2 = lazy(() => import('./pages/v2/Assessment'));
 const PitchV2 = lazy(() => import('./pages/v2/Pitch'));
+const OpsLandingV2 = lazy(() => import('./pages/v2/OpsLanding'));
 
 const queryClient = new QueryClient();
 
@@ -129,6 +130,7 @@ const App = () => {
               <Route path="/v2/industrias/inmobiliarias" element={<InmobiliariasV2New />} />
               <Route path="/v2/assessment" element={<AssessmentV2 />} />
               <Route path="/v2/pitch" element={<PitchV2 />} />
+              <Route path="/v2/ops" element={<OpsLandingV2 />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

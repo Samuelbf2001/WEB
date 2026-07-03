@@ -49,12 +49,12 @@ const cases: CaseCard[] = [
 
 const accentConfig = {
   teal: {
-    bar: "bg-v2-accent-teal",
-    num: "text-v2-accent-teal",
-    border: "hover:border-v2-accent-teal/40",
-    shadow: "hover:shadow-[0_20px_60px_rgba(0,191,165,0.10)]",
-    badge: "bg-v2-surface-teal-mist text-v2-accent-teal-deep",
-    link: "text-v2-accent-teal-deep",
+    bar: "bg-[#d4a853]",
+    num: "text-[#8a7a4f]",
+    border: "hover:border-[#d4a853]/45",
+    shadow: "hover:shadow-[0_20px_60px_rgba(212,168,83,0.12)]",
+    badge: "bg-v2-surface-sand-mist text-[#8a7a4f]",
+    link: "text-[#8a7a4f]",
   },
   blue: {
     bar: "bg-v2-accent-blue",
@@ -80,7 +80,7 @@ export const CasesV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
             >
               Empresas reales,{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+              <em className="not-italic text-[#8a7a4f]">
                 números reales
               </em>
               .
@@ -150,7 +150,7 @@ export const CasesV2 = () => {
           <div className="v2-reveal v2-d3 flex justify-center mt-12">
             <Link
               to="/v2/casos"
-              className="group inline-flex items-center gap-2 font-lato text-[14px] font-semibold uppercase tracking-widest text-v2-ink-heading hover:text-v2-accent-teal-deep transition-colors"
+              className="group inline-flex items-center gap-2 font-lato text-[14px] font-semibold uppercase tracking-widest text-v2-ink-heading hover:text-[#8a7a4f] transition-colors"
             >
               Ver todos los casos
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />

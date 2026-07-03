@@ -4,7 +4,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const principles = [
@@ -101,9 +100,7 @@ const Nosotros = () => {
             }}
           >
             Un estudio que{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">opera</em>
-            </Underlined>{" "}
+            <em className="font-serif italic font-normal">opera</em>{" "}
             tu RevOps.
           </h1>
           <p

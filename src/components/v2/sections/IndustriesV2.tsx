@@ -50,7 +50,7 @@ export const IndustriesV2 = () => {
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
             >
               No somos para todo el mundo.{" "}
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
+              <em className="not-italic text-[#8a7a4f]">
                 Para estos sí, en serio.
               </em>
             </h2>
@@ -70,13 +70,13 @@ export const IndustriesV2 = () => {
                   "v2-reveal",
                   `v2-d${i + 1}`,
                   "group relative bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col",
-                  "hover:border-v2-accent-teal/35 hover:shadow-[0_16px_48px_rgba(0,191,165,0.09)] hover:-translate-y-1",
+                  "hover:border-[#d4a853]/40 hover:shadow-[0_16px_48px_rgba(212,168,83,0.10)] hover:-translate-y-1",
                   "transition-[transform,box-shadow,border-color] duration-300",
                 ].join(" ")}
               >
                 {/* icon badge */}
-                <div className="w-12 h-12 rounded-xl bg-v2-surface-teal-mist flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                  <ind.Icon className="h-6 w-6 text-v2-accent-teal-deep" aria-hidden />
+                <div className="w-12 h-12 rounded-xl bg-v2-surface-sand-mist flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <ind.Icon className="h-6 w-6 text-[#8a7a4f]" aria-hidden />
                 </div>
 
                 <h3 className="font-poppins font-bold text-[16px] text-v2-ink-heading leading-[1.25]">
@@ -86,7 +86,7 @@ export const IndustriesV2 = () => {
                   {ind.desc}
                 </p>
 
-                <span className="inline-flex items-center gap-1 font-lato text-[12px] font-semibold uppercase tracking-widest text-v2-accent-teal-deep mt-5 group-hover:gap-2 transition-[gap] duration-200">
+                <span className="inline-flex items-center gap-1 font-lato text-[12px] font-semibold uppercase tracking-widest text-[#8a7a4f] mt-5 group-hover:gap-2 transition-[gap] duration-200">
                   Ver cómo
                   <ArrowRight
                     className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5"
@@ -100,7 +100,7 @@ export const IndustriesV2 = () => {
           {/* ── closing line ── */}
           <p className="font-lato text-[15px] text-v2-ink-muted text-center max-w-[640px] mx-auto mt-12 v2-reveal v2-d4">
             ¿No estás en estos tres? El{" "}
-            <Link to="/v2/radar" className="text-v2-accent-teal-deep font-semibold hover:underline">
+            <Link to="/v2/radar" className="text-[#8a7a4f] font-semibold hover:underline">
               Diagnóstico
             </Link>{" "}
             evalúa el encaje. Si tu negocio no calza en el playbook, no lo tomamos — aunque tengas

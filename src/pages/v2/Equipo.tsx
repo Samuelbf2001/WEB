@@ -13,7 +13,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /* ─── Data ─────────────────────────────────────────────────── */
@@ -230,11 +229,9 @@ const Equipo = () => {
             }}
           >
             No contratas personas.{" "}
-            <Underlined color="teal" variant="scribble">
-              <em className="font-serif italic font-normal text-v2-accent-teal-deep">
-                Activas un equipo.
-              </em>
-            </Underlined>
+            <em className="font-serif italic font-normal">
+              Activas un equipo.
+            </em>
           </h1>
 
           <p

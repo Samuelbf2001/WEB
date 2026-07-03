@@ -4,7 +4,6 @@ import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 
 const cases = [
   {
@@ -43,9 +42,7 @@ const Casos = () => (
           style={{ fontSize: "clamp(40px, 7vw, 68px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
         >
           Empresas reales,{" "}
-          <Underlined color="teal" variant="scribble">
-            <em className="font-serif italic font-normal text-v2-accent-teal-deep">números reales</em>
-          </Underlined>
+          <em className="font-serif italic font-normal">números reales</em>
           .
         </h1>
         <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7">

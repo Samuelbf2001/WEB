@@ -52,6 +52,7 @@ const PreciosV2 = lazy(() => import('./pages/v2/Precios'));
 const AssessmentV2 = lazy(() => import('./pages/v2/Assessment'));
 const PitchV2 = lazy(() => import('./pages/v2/Pitch'));
 const OpsLandingV2 = lazy(() => import('./pages/v2/OpsLanding'));
+const AssessmentLanding = lazy(() => import('./pages/v2/AssessmentLanding'));
 
 // Las rutas /v2/* eran el prefijo interno del rediseño; ahora viven en la raíz.
 // Se conserva query string (UTMs de pauta apuntando a /v2/ops) y hash.
@@ -93,6 +94,7 @@ const App = () => {
               <Route path="/assessment" element={<AssessmentV2 />} />
               <Route path="/pitch" element={<PitchV2 />} />
               <Route path="/ops" element={<OpsLandingV2 />} />
+              <Route path="/lp/assessment" element={<AssessmentLanding />} />
               <Route path="/industrias" element={<IndustriasV2 />} />
               <Route path="/industrias/educacion" element={<EducacionV2 />} />
               <Route path="/industrias/saas-b2b" element={<SaasB2BV2 />} />

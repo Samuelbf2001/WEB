@@ -35,6 +35,16 @@
 
 ## 2. Decisiones de negocio pendientes
 
+- **2026-07-04 · Precio del Assessment inconsistente en el sitio** `[pendiente]` — `/assessment`
+  dice **$2,500 USD** (hero, comparativa y CTA final) pero `/soluciones` (Solución 01) dice
+  **$1,200 USD · ~10 días**. La landing nueva `/lp/assessment` usa $2,500 (2 fuentes vs 1).
+  Definir el precio canónico y corregir la página que quede desalineada.
+- **2026-07-04 · Precio de Ops inconsistente en el sitio** `[pendiente]` — `/soluciones` dice
+  Ops Core **$700** / Ops Growth **$1,500**, pero `/assessment` (sección "Después del
+  Assessment") dice "Ops mensual **($1,500-$5,500/mes)**", y el pricing del home
+  (`PricingV2`) muestra Esencial $199 / Integral $499 / Total desde $1,200. Tres esquemas de
+  precio conviven públicamente — unificar.
+
 - **2026-07-03 · Logo del schema.org apunta a 404** `[pendiente]` — Los JSON-LD de
   `src/pages/Index.tsx` y `src/pages/HomeAA.tsx` declaran `"logo": "https://sixteam.pro/LOGO.png"`,
   pero ese archivo no existe en `public/`. Decidir el logo canónico (¿`logo-sixteam.png`?) y

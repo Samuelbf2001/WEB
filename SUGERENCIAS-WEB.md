@@ -35,6 +35,15 @@
 
 ## 2. Decisiones de negocio pendientes
 
+- **2026-07-03 · Logo del schema.org apunta a 404** `[pendiente]` — Los JSON-LD de
+  `src/pages/Index.tsx` y `src/pages/HomeAA.tsx` declaran `"logo": "https://sixteam.pro/LOGO.png"`,
+  pero ese archivo no existe en `public/`. Decidir el logo canónico (¿`logo-sixteam.png`?) y
+  actualizar las dos referencias — afecta rich results de Google.
+- **2026-07-03 · Scripts de tracking rotos en index.html** `[pendiente]` — `external-tracking.js`
+  (web.sixteam.pro) falla en cada página por falta de `data-tracking-id`, y el pixel de
+  `aplo-evnt.com` responde 400. Decidir: configurar el tracking-id correcto o retirar ambos
+  scripts (hoy solo generan errores de consola y latencia).
+
 - **2026-07-03 · Número colombiano para Sofía** `[pendiente]` — Conseguir número local CO en
   GHL y reemplazar la constante `SOFIA_PHONE` en `src/pages/v2/OpsLanding.tsx`. Además,
   verificar en GHL que el número actual acepte llamadas ENTRANTES (Sofía está configurada

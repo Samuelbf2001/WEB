@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight, Bot, Check, ChevronDown, Compass, FileText, Map, MessageCircle,
@@ -51,10 +51,53 @@ const WaButton: React.FC<{
 
 /* ── Contenido canónico (verbatim de /assessment y /soluciones) ──── */
 const stats = [
-  { number: "95%", label: "de pilotos de IA enterprise fracasan", source: "MIT, 2025" },
-  { number: "42%", label: "de empresas abandonaron sus iniciativas de IA en 2025", source: "S&P Global, 2025" },
-  { number: "39%", label: "logra impacto real en EBIT cuando hay estrategia correcta", source: "McKinsey, 2025" },
+  { value: 95, suffix: "%", label: "de pilotos de IA enterprise fracasan", source: "MIT, 2025" },
+  { value: 42, suffix: "%", label: "de empresas abandonaron sus iniciativas de IA en 2025", source: "S&P Global, 2025" },
+  { value: 39, suffix: "%", label: "logra impacto real en EBIT cuando hay estrategia correcta", source: "McKinsey, 2025" },
 ];
+
+/* Cuenta ascendente al entrar al viewport; con prefers-reduced-motion salta al valor final */
+const CountUp: React.FC<{ value: number; suffix: string; className?: string; style?: React.CSSProperties }> = ({
+  value, suffix, className, style,
+}) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [display, setDisplay] = useState(0);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || started.current) return;
+        started.current = true;
+        io.disconnect();
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setDisplay(value);
+          return;
+        }
+        const t0 = performance.now();
+        const dur = 900;
+        const tick = (t: number) => {
+          const p = Math.min((t - t0) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 4);
+          setDisplay(Math.round(eased * value));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      },
+      { threshold: 0.5 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [value]);
+
+  return (
+    <span ref={ref} className={className} style={style}>
+      {display}{suffix}
+    </span>
+  );
+};
 
 const steps = [
   {
@@ -189,6 +232,15 @@ const AssessmentLanding = () => {
   const ref = useScrollReveal<HTMLDivElement>();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
+  // La barra fija móvil entra solo después de pasar el hero — no tapa el primer CTA
+  const [showSticky, setShowSticky] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowSticky(window.scrollY > 480);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   // Atribución de pauta: los UTM de la URL van al dataLayer para cruzarlos con whatsapp_click en GTM
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -232,10 +284,12 @@ const AssessmentLanding = () => {
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,191,165,0.07),transparent_60%)]"
             />
             <Container size="narrow" className="relative text-center">
-              <Eyebrow variant="teal">Sixteam Assessment · Evaluación de Transformación con IA</Eyebrow>
+              <div className="v2-hero-entry" style={{ animationDelay: "0ms" }}>
+                <Eyebrow variant="teal">Sixteam Assessment · Evaluación de Transformación con IA</Eyebrow>
+              </div>
               <h1
-                className="font-poppins font-black text-v2-ink-heading mt-5 leading-[1.06] tracking-[-0.025em]"
-                style={{ fontSize: "clamp(34px, 6.5vw, 60px)" }}
+                className="v2-hero-entry font-poppins font-black text-v2-ink-heading mt-5 leading-[1.06] tracking-[-0.025em]"
+                style={{ fontSize: "clamp(34px, 6.5vw, 60px)", animationDelay: "90ms" }}
               >
                 Lanza tu transformación con IA
                 <br />
@@ -245,12 +299,15 @@ const AssessmentLanding = () => {
                   </em>
                 </Underlined>
               </h1>
-              <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[640px] mx-auto">
+              <p
+                className="v2-hero-entry font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[640px] mx-auto"
+                style={{ animationDelay: "190ms" }}
+              >
                 El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo
                 opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de
                 IA — y te entregamos el plan ejecutable. Antes de mover una sola pieza.
               </p>
-              <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="v2-hero-entry mt-9 flex flex-col sm:flex-row gap-3 justify-center" style={{ animationDelay: "290ms" }}>
                 <WaButton source="asm_hero" className="w-full sm:w-auto">
                   Solicitar Assessment — $2,500
                   <ArrowRight className="h-4 w-4" />
@@ -265,7 +322,10 @@ const AssessmentLanding = () => {
                   Llama y habla con Sofía (IA)
                 </ButtonV2>
               </div>
-              <p className="mt-5 font-lato text-[11px] font-medium uppercase tracking-widest text-v2-accent-teal-deep">
+              <p
+                className="v2-hero-entry mt-5 font-lato text-[11px] font-medium uppercase tracking-widest text-v2-accent-teal-deep"
+                style={{ animationDelay: "380ms" }}
+              >
                 10–14 días · 100% cobertura del equipo · Mapa + Palancas + Roadmap + Agente IA persistente
               </p>
             </Container>
@@ -280,12 +340,12 @@ const AssessmentLanding = () => {
                     key={stat.source}
                     className={`v2-reveal ${["", "v2-d1", "v2-d2"][i]} px-8 py-8 text-center flex flex-col items-center`}
                   >
-                    <span
-                      className="font-poppins font-black text-v2-accent-teal-deep leading-none"
+                    <CountUp
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      className="font-poppins font-black text-v2-accent-teal-deep leading-none tabular-nums"
                       style={{ fontSize: "clamp(38px, 5vw, 54px)" }}
-                    >
-                      {stat.number}
-                    </span>
+                    />
                     <p className="font-lato text-[14px] text-v2-ink-body leading-[1.55] mt-3 max-w-[220px]">
                       {stat.label}
                     </p>
@@ -354,7 +414,7 @@ const AssessmentLanding = () => {
                   return (
                     <div
                       key={step.title}
-                      className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-7`}
+                      className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-7 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,35,66,0.08)] transition-[transform,box-shadow] duration-300`}
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-9 h-9 rounded-full bg-v2-accent-teal/15 border border-v2-accent-teal/30 flex items-center justify-center flex-shrink-0">
@@ -480,7 +540,7 @@ const AssessmentLanding = () => {
                   return (
                     <div
                       key={d.title}
-                      className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-7`}
+                      className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-7 hover:-translate-y-1 hover:border-v2-accent-teal/30 hover:shadow-[0_8px_28px_rgba(0,191,165,0.09)] transition-[transform,box-shadow,border-color] duration-300`}
                     >
                       <div className="w-11 h-11 rounded-xl bg-v2-surface-teal-mist flex items-center justify-center mb-5">
                         <Icon className="h-5 w-5 text-v2-accent-teal-deep" aria-hidden />
@@ -525,6 +585,12 @@ const AssessmentLanding = () => {
                   nosotros. El otro 50% opera el roadmap por su cuenta y sigue siendo cliente del
                   Assessment de nuevo cuando el negocio cambia.
                 </p>
+              </div>
+              <div className="v2-reveal v2-d2 mt-10">
+                <WaButton source="asm_decides" className="w-full sm:w-auto">
+                  Solicitar Assessment — $2,500
+                  <ArrowRight className="h-4 w-4" />
+                </WaButton>
               </div>
             </Container>
           </Section>
@@ -629,8 +695,13 @@ const AssessmentLanding = () => {
         </Container>
       </footer>
 
-      {/* ── Barra CTA fija — solo móvil ── */}
-      <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-v2-border-subtle px-4 py-3">
+      {/* ── Barra CTA fija — solo móvil, entra tras pasar el hero ── */}
+      <div
+        className={`fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-v2-border-subtle px-4 py-3 transition-transform duration-300 ${
+          showSticky ? "translate-y-0" : "translate-y-full"
+        }`}
+        style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
+      >
         <WaButton source="asm_sticky" size="md" className="w-full justify-center">
           <MessageCircle className="h-4 w-4" />
           Hablar por WhatsApp

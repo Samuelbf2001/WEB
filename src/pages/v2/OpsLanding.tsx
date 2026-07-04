@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, BarChart3, Bot, Check, ChevronDown, MessageCircle, Package, Users,
+  ArrowRight, BarChart3, Bot, Check, ChevronDown, Code2, Database, Globe, Hammer,
+  Mail, Megaphone, MessageCircle, Package, Phone, Play, Plug, Radar, Search, Users, Workflow,
 } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
@@ -25,6 +26,21 @@ const MSG_GENERAL =
   "Hola, vengo de la página de Sixteam Ops y quiero saber cómo funcionaría en mi negocio.";
 const MSG_CORE = "Hola, me interesa el plan Ops Core de Sixteam Ops. ¿Podemos hablar?";
 const MSG_GROWTH = "Hola, me interesa el plan Ops Growth de Sixteam Ops. ¿Podemos hablar?";
+const MSG_ASSESSMENT = "Hola, me interesa el Sixteam Assessment (consultoría). ¿Podemos hablar?";
+const MSG_TRANSFORM = "Hola, me interesa una implementación con Sixteam Transform. ¿Podemos hablar?";
+
+/* Sofía — agente de IA de voz (GHL Voice AI).
+   Número actual de EE. UU.; reemplazar por el número local CO cuando exista. */
+const SOFIA_PHONE = "+16627057434";
+
+const callSofia = (source: string) => {
+  gtm.ctaClick("sofia_call", source);
+  window.location.href = `tel:${SOFIA_PHONE}`;
+};
+
+/* Video vertical del fundador — colocar el archivo en public/videos/fundador-sixteam.mp4.
+   Mientras el archivo no exista, el slot muestra la foto real del equipo fundador. */
+const FOUNDER_VIDEO_SRC = "/videos/fundador-sixteam.mp4";
 
 /* ── Primitivas locales ──────────────────────────────────────────── */
 const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
@@ -53,6 +69,71 @@ const WaButton: React.FC<{
     {children}
   </ButtonV2>
 );
+
+/* ── Video vertical del fundador (9:16) ──────────────────────────── */
+const FounderVideo = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [available, setAvailable] = useState(true);
+  const [playing, setPlaying] = useState(false);
+
+  const start = () => {
+    gtm.ctaClick("founder_video_play", "ops_hero");
+    videoRef.current?.play();
+    setPlaying(true);
+  };
+
+  return (
+    <figure className="w-full max-w-[280px] md:max-w-[310px] mx-auto lg:mr-0">
+      <div className="relative aspect-[9/16] rounded-3xl overflow-hidden border border-v2-border-medium bg-v2-ink-heading shadow-[0_24px_64px_rgba(10,35,66,0.18)] rotate-[1.5deg]">
+        {available ? (
+          <>
+            <video
+              ref={videoRef}
+              src={FOUNDER_VIDEO_SRC}
+              className="absolute inset-0 w-full h-full object-cover"
+              playsInline
+              controls={playing}
+              preload="metadata"
+              onError={() => setAvailable(false)}
+              onEnded={() => setPlaying(false)}
+            />
+            {!playing && (
+              <button
+                onClick={start}
+                aria-label="Reproducir video del fundador"
+                className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-t from-[#0a2342]/80 via-[#0a2342]/20 to-transparent cursor-pointer group"
+              >
+                <span className="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-110">
+                  <Play className="h-6 w-6 text-v2-ink-heading ml-1" fill="currentColor" />
+                </span>
+                <span className="font-lato text-[13px] font-semibold text-white px-4 text-center">
+                  Ver mensaje del fundador
+                </span>
+              </button>
+            )}
+          </>
+        ) : (
+          <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-[#f4ecd8] to-[#e6d9b8]">
+            <img
+              src="/founders.png"
+              alt="Equipo fundador de Sixteam.pro"
+              className="absolute bottom-0 inset-x-0 h-[74%] w-full object-cover object-top"
+            />
+            <div className="relative mt-auto px-5 pb-5 pt-16 bg-gradient-to-t from-[#0a2342]/85 via-[#0a2342]/35 to-transparent">
+              <p className="font-poppins font-bold text-[15px] text-white">El equipo fundador</p>
+              <p className="font-lato text-[12px] text-white/75">Sixteam.pro</p>
+            </div>
+          </div>
+        )}
+      </div>
+      <figcaption className="font-lato text-[12.5px] text-v2-ink-muted text-center mt-4 lg:pr-2">
+        {available
+          ? "Samuel Burgos · Director General de Sixteam.pro"
+          : "El equipo fundador de Sixteam.pro"}
+      </figcaption>
+    </figure>
+  );
+};
 
 /* ── FAQ (respuestas canónicas de manejo de objeciones) ──────────── */
 const faqs = [
@@ -164,34 +245,47 @@ const OpsLanding = () => {
               />
             </div>
 
-            <Container size="narrow" className="relative z-10 text-center">
+            <Container size="wide" className="relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-12 lg:gap-16 items-center">
+              <div className="text-center lg:text-left">
               <Eyebrow variant="sand">Sixteam Ops · Soporte y operaciones continuas</Eyebrow>
               <h1
                 className="font-poppins font-bold text-v2-ink-heading mt-5"
-                style={{ fontSize: "clamp(32px, 6vw, 62px)", lineHeight: "1.08", letterSpacing: "-0.025em" }}
+                style={{ fontSize: "clamp(30px, 4.8vw, 54px)", lineHeight: "1.08", letterSpacing: "-0.025em" }}
               >
                 El equipo de tecnología e IA que tu empresa todavía no tiene, operando{" "}
                 <em className="font-serif italic font-normal">mes a mes</em>
                 .
               </h1>
-              <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto">
+              <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto lg:mx-0">
                 Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y
                 métricas. Tú diriges el negocio; nosotros mantenemos la máquina viva. Sin contratar
                 personal adicional a tu nómina.
               </p>
 
-              <div className="mt-9 flex flex-col items-center gap-3">
-                <WaButton source="ops_hero" className="w-full sm:w-auto">
-                  Hablar con un experto por WhatsApp
-                  <ArrowRight className="h-4 w-4" />
-                </WaButton>
+              <div className="mt-9 flex flex-col items-center lg:items-start gap-3">
+                <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                  <WaButton source="ops_hero" className="w-full sm:w-auto">
+                    Hablar con un experto por WhatsApp
+                    <ArrowRight className="h-4 w-4" />
+                  </WaButton>
+                  <ButtonV2
+                    variant="outline"
+                    size="lg"
+                    className="w-full sm:w-auto"
+                    onClick={() => callSofia("ops_hero")}
+                  >
+                    <Phone className="h-4 w-4" />
+                    Llama y habla con Sofía (IA)
+                  </ButtonV2>
+                </div>
                 <p className="font-lato text-[13px] text-v2-ink-muted">
                   Respondemos en horas, en horario laboral Colombia · Sin compromiso
                 </p>
               </div>
 
               {/* Prueba social temprana */}
-              <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+              <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-3">
                 {[
                   ["50+", "proyectos"],
                   ["15+", "sectores"],
@@ -202,6 +296,11 @@ const OpsLanding = () => {
                     <span className="font-lato text-[13px] text-v2-ink-muted uppercase tracking-wider">{label}</span>
                   </div>
                 ))}
+              </div>
+              </div>
+
+              {/* Video vertical del fundador */}
+              <FounderVideo />
               </div>
             </Container>
           </Section>
@@ -321,6 +420,41 @@ const OpsLanding = () => {
                   </div>
                 ))}
               </div>
+              {/* Todo lo que puedes pedirle a tu equipo */}
+              <div className="mt-16 max-w-[880px] mx-auto text-center v2-reveal">
+                <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7a4f]">
+                  Lo que puedes pedirle a tu equipo
+                </p>
+                <h3 className="font-poppins font-bold text-[22px] md:text-[26px] text-v2-ink-heading mt-2">
+                  Un solo equipo, todos los frentes de tu tecnología.
+                </h3>
+                <div className="flex flex-wrap justify-center gap-2.5 mt-7">
+                  {[
+                    { icon: <Database className="h-3.5 w-3.5" />, t: "CRM: ventas, atención y marketing" },
+                    { icon: <Mail className="h-3.5 w-3.5" />, t: "Email marketing y secuencias" },
+                    { icon: <MessageCircle className="h-3.5 w-3.5" />, t: "WhatsApp Business y mensajería" },
+                    { icon: <Bot className="h-3.5 w-3.5" />, t: "Agentes de IA y chatbots" },
+                    { icon: <Phone className="h-3.5 w-3.5" />, t: "IA de voz — como Sofía" },
+                    { icon: <Globe className="h-3.5 w-3.5" />, t: "Webs y landing pages" },
+                    { icon: <Megaphone className="h-3.5 w-3.5" />, t: "Pauta digital" },
+                    { icon: <Workflow className="h-3.5 w-3.5" />, t: "Automatizaciones (Make / n8n)" },
+                    { icon: <BarChart3 className="h-3.5 w-3.5" />, t: "Dashboards y reportes" },
+                    { icon: <Plug className="h-3.5 w-3.5" />, t: "Integraciones entre sistemas" },
+                    { icon: <Code2 className="h-3.5 w-3.5" />, t: "Desarrollo a medida" },
+                  ].map((p) => (
+                    <span
+                      key={p.t}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-v2-border-subtle font-lato text-[13.5px] text-v2-ink-body"
+                    >
+                      <span className="text-[#8a7a4f]">{p.icon}</span>
+                      {p.t}
+                    </span>
+                  ))}
+                </div>
+                <p className="font-lato text-[14px] text-v2-ink-muted mt-6">
+                  Lo pides por tu canal, se prioriza y se ejecuta dentro de tus horas del mes.
+                </p>
+              </div>
             </Container>
           </Section>
 
@@ -366,6 +500,31 @@ const OpsLanding = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Banda de contacto directo */}
+              <div className="v2-reveal v2-d3 mt-12 rounded-2xl border border-v2-border-subtle bg-white p-7 md:p-8 text-center">
+                <p className="font-poppins font-bold text-[19px] text-v2-ink-heading">
+                  ¿Prefieres hablar ya mismo?
+                </p>
+                <p className="font-lato text-[14px] text-v2-ink-muted mt-1.5">
+                  Escríbenos por WhatsApp o llama a Sofía, nuestra agente de IA de voz.
+                </p>
+                <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+                  <WaButton source="ops_mid" size="md" className="w-full sm:w-auto">
+                    <MessageCircle className="h-4 w-4" />
+                    Hablar por WhatsApp
+                  </WaButton>
+                  <ButtonV2
+                    variant="outline"
+                    size="md"
+                    className="w-full sm:w-auto"
+                    onClick={() => callSofia("ops_mid")}
+                  >
+                    <Phone className="h-4 w-4" />
+                    Llamar a Sofía
+                  </ButtonV2>
+                </div>
               </div>
             </Container>
           </Section>
@@ -481,6 +640,83 @@ const OpsLanding = () => {
               <p className="v2-reveal v2-d2 text-center font-lato text-[13px] text-v2-ink-muted mt-8">
                 ¿No sabes cuál te corresponde? Escríbenos y lo definimos en la llamada de 30 minutos.
               </p>
+
+              {/* Otros caminos: Radar · Assessment · Transform */}
+              <div className="v2-reveal v2-d3 mt-14 max-w-[1020px] mx-auto">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="h-px flex-1 bg-v2-border-subtle" />
+                  <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7a4f] text-center">
+                    ¿Todavía no estás para Ops? Otros caminos
+                  </p>
+                  <div className="h-px flex-1 bg-v2-border-subtle" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+
+                  {/* Radar — gratis */}
+                  <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col">
+                    <div className="w-9 h-9 rounded-lg bg-v2-surface-sand-mist border border-[#d4a853]/25 flex items-center justify-center text-[#8a7a4f]">
+                      <Radar className="h-4 w-4" />
+                    </div>
+                    <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Radar</h3>
+                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">Gratis · 48 horas</p>
+                    <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
+                      Diagnóstico ejecutivo de tu operación. Decides después si quieres conversar. Cero compromiso.
+                    </p>
+                    <Link
+                      to="/v2/radar"
+                      onClick={() => gtm.ctaClick("radar", "ops_otros_caminos")}
+                      className="block mt-5"
+                    >
+                      <ButtonV2 variant="navy" size="sm" className="w-full justify-center">
+                        Hacer el Radar gratis <ArrowRight className="h-3.5 w-3.5" />
+                      </ButtonV2>
+                    </Link>
+                  </div>
+
+                  {/* Assessment — consultoría */}
+                  <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col">
+                    <div className="w-9 h-9 rounded-lg bg-v2-surface-navy-mist border border-v2-accent-blue/25 flex items-center justify-center text-v2-accent-blue">
+                      <Search className="h-4 w-4" />
+                    </div>
+                    <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Sixteam Assessment</h3>
+                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">$1,200 USD · pago único · ~10 días</p>
+                    <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
+                      Consultoría: evaluación de transformación con IA. Mapa operativo vivo y palancas priorizadas.
+                    </p>
+                    <WaButton
+                      source="ops_assessment"
+                      message={MSG_ASSESSMENT}
+                      variant="outline"
+                      size="sm"
+                      className="w-full justify-center mt-5"
+                    >
+                      Preguntar por Assessment <ArrowRight className="h-3.5 w-3.5" />
+                    </WaButton>
+                  </div>
+
+                  {/* Transform — implementaciones */}
+                  <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col">
+                    <div className="w-9 h-9 rounded-lg bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center text-v2-accent-teal-deep">
+                      <Hammer className="h-4 w-4" />
+                    </div>
+                    <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Sixteam Transform</h3>
+                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">Desde $1,500 USD · por proyecto</p>
+                    <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
+                      Implementación de sistemas específicos: CRM, agentes de IA, automatizaciones e integraciones.
+                    </p>
+                    <WaButton
+                      source="ops_transform"
+                      message={MSG_TRANSFORM}
+                      variant="outline"
+                      size="sm"
+                      className="w-full justify-center mt-5"
+                    >
+                      Preguntar por Transform <ArrowRight className="h-3.5 w-3.5" />
+                    </WaButton>
+                  </div>
+
+                </div>
+              </div>
             </Container>
           </Section>
 
@@ -542,11 +778,20 @@ const OpsLanding = () => {
                 Cuéntanos cómo opera tu negocio hoy. Te decimos, sin compromiso, cómo lo operaría
                 Sixteam Ops — y con qué plan arrancar.
               </p>
-              <div className="v2-reveal v2-d3 mt-10 flex justify-center">
+              <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
                 <WaButton source="ops_final" className="w-full sm:w-auto">
                   Hablar con un experto por WhatsApp
                   <ArrowRight className="h-4 w-4" />
                 </WaButton>
+                <ButtonV2
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto !text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
+                  onClick={() => callSofia("ops_final")}
+                >
+                  <Phone className="h-4 w-4" />
+                  Llamar y hablar con Sofía
+                </ButtonV2>
               </div>
               <p className="v2-reveal v2-d4 font-lato text-[13px] text-white/40 mt-6">
                 Respondemos en horas, en horario laboral Colombia.

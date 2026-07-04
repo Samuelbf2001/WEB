@@ -115,8 +115,9 @@ const FounderVideo = () => {
         ) : (
           <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-[#f4ecd8] to-[#e6d9b8]">
             <img
-              src="/founders.png"
+              src="/founders-slot.webp"
               alt="Equipo fundador de Sixteam.pro"
+              decoding="async"
               className="absolute bottom-0 inset-x-0 h-[74%] w-full object-cover object-top"
             />
             <div className="relative mt-auto px-5 pb-5 pt-16 bg-gradient-to-t from-[#0a2342]/85 via-[#0a2342]/35 to-transparent">

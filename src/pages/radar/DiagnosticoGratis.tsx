@@ -181,10 +181,7 @@ const DiagnosticoGratis = () => {
 
             {/* Headline */}
             <h1 className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
-              Tu diagnóstico gratuito{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                en 48 horas
-              </span>
+              Tu diagnóstico gratuito en 48 horas
             </h1>
 
             {/* Subheadline */}
@@ -241,10 +238,7 @@ const DiagnosticoGratis = () => {
               Lo que incluye
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-              5 entregables concretos,{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                no consejos genéricos
-              </span>
+              5 entregables concretos, no consejos genéricos
             </h2>
             <p className="text-[#e0e0e0] text-lg leading-relaxed">
               Cada diagnóstico se construye sobre tu caso real. No usamos plantillas ni
@@ -322,10 +316,7 @@ const DiagnosticoGratis = () => {
               ¿Para quién es?
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white">
-              Diseñado para empresas que reconocen{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                esta situación
-              </span>
+              Diseñado para empresas que reconocen esta situación
             </h2>
           </div>
 
@@ -407,10 +398,7 @@ const DiagnosticoGratis = () => {
                   Solicita tu diagnóstico
                 </p>
                 <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white leading-tight">
-                  Empieza hoy.{' '}
-                  <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                    Resultados en 48 horas.
-                  </span>
+                  Empieza hoy. Resultados en 48 horas.
                 </h2>
                 <p className="text-[#e0e0e0] leading-relaxed">
                   Completa el formulario o escríbenos directamente por WhatsApp.

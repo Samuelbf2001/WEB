@@ -22,8 +22,7 @@ export default function ServicesGrid() {
               — Qué implementamos
             </p>
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
-              Ocho líneas de servicio que cubren{' '}
-              <span className="text-[#00bfa5]">ventas, servicio, marketing y operación</span>.
+              Ocho líneas de servicio que cubren ventas, servicio, marketing y operación.
             </h2>
           </div>
           <p className="max-w-md font-lato text-sm leading-relaxed text-white/55 lg:text-right">

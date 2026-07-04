@@ -17,7 +17,7 @@ export default function TripleCTA({ onAction }: Props) {
             — Tu siguiente paso
           </p>
           <h2 className="font-poppins text-[clamp(1.85rem,4vw,2.85rem)] font-extrabold leading-tight text-white">
-            Elegí <span className="text-[#00bfa5]">por dónde</span> empezamos.
+            Elegí por dónde empezamos.
           </h2>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/65 sm:text-lg">
             No tenés que tener todo claro. En la primera conversación aterrizamos contigo qué pieza mueve más la aguja en tu negocio hoy.
@@ -38,10 +38,7 @@ export default function TripleCTA({ onAction }: Props) {
                 </div>
 
                 <h3 className="font-poppins text-xl font-extrabold leading-tight text-white sm:text-2xl">
-                  {title}{' '}
-                  <span className="block bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                    {highlight}
-                  </span>
+                  {title} <span className="block">{highlight}</span>
                 </h3>
 
                 <p className="mt-3 flex-1 font-lato text-sm leading-relaxed text-white/60 sm:text-[15px]">

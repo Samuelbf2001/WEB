@@ -21,10 +21,7 @@ export default function JourneySteps() {
           <div className="relative">
             <div className="pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 rounded-3xl bg-gradient-to-r from-[#1d70a2]/10 to-[#00bfa5]/8 blur-3xl" />
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
-              La transformación no pasa por arte de magia.{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                Pasa por método.
-              </span>
+              La transformación no pasa por arte de magia. Pasa por método.
             </h2>
           </div>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/60 sm:text-lg">

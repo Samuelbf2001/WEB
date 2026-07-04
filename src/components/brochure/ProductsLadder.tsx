@@ -17,11 +17,7 @@ export default function ProductsLadder({ onCta }: Props) {
           <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
             Tres productos para avanzar desde{' '}
             <span className="italic font-light text-white/50">atender mejor</span>{' '}
-            hasta{' '}
-            <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-              crecer en serio
-            </span>
-            .
+            hasta crecer en serio.
           </h2>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/60">
             Empezás por una necesidad puntual y crecés sin cambiar de lógica ni de acompañamiento. La inversión escala con el negocio, no antes.
@@ -101,7 +97,7 @@ export default function ProductsLadder({ onCta }: Props) {
         <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#1d70a2]/12 via-white/[0.02] to-transparent p-6 text-center sm:flex-row sm:justify-between sm:text-left lg:p-8">
           <div className="max-w-xl">
             <h3 className="font-poppins text-lg font-bold leading-snug text-white sm:text-xl">
-              ¿Tu prioridad es <span className="text-[#00bfa5]">{cta.highlight}</span>?
+              ¿Tu prioridad es {cta.highlight}?
             </h3>
             <p className="mt-1 font-lato text-sm text-white/60">
               {cta.copy}

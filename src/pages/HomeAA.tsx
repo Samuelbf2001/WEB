@@ -108,9 +108,7 @@ const HomeAA = () => {
 
           <Reveal delay={100}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins font-black leading-[1.1] tracking-[-0.04em] mb-6 sm:mb-8 text-[#06070a]">
-              No Eres{' '}
-              <HandDrawnUnderline className="italic font-serif">Solo Tú</HandDrawnUnderline>{' '}
-              Otra Vez.
+              No Eres Solo Tú Otra Vez.
             </h1>
           </Reveal>
 
@@ -273,7 +271,7 @@ const HomeAA = () => {
           <Reveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-16 sm:mb-20 lg:mb-24">
               Toda la Tecnología que tu Negocio Necesita.<br />
-              <span className="text-[#b2b8c2]">Ninguno del Caos.</span>
+              Ninguno del Caos.
             </h2>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16 sm:mb-20">
@@ -311,7 +309,7 @@ const HomeAA = () => {
         <Reveal><div className="text-center mb-12 sm:mb-16"><EyebrowPill>Imagina Esto</EyebrowPill></div></Reveal>
         <Reveal delay={100}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white text-center leading-tight tracking-[-0.03em] mb-12 sm:mb-16 lg:mb-20">
-            Es Lunes en la Mañana. <span className="text-[#00bfa5]">Todo Ya Está Hecho.</span>
+            Es Lunes en la Mañana. Todo Ya Está Hecho.
           </h2>
         </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
@@ -397,7 +395,7 @@ const HomeAA = () => {
           <Reveal><div className="text-center mb-4"><EyebrowPill>Lo Que Corre Por Ti</EyebrowPill></div></Reveal>
           <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-              Toda Tu Tecnología — <span className="text-[#00bfa5]">Operada.</span>
+              Toda Tu Tecnología — Operada.
             </h2>
           </Reveal>
           <Reveal delay={150}>
@@ -440,7 +438,7 @@ const HomeAA = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-            Tú Dices Qué Necesitas. <span className="text-[#00bfa5]">Se Hace.</span>
+            Tú Dices Qué Necesitas. Se Hace.
           </h2>
         </Reveal>
         <Reveal delay={100}>
@@ -503,7 +501,7 @@ const HomeAA = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-            Mira Cómo Funciona <span className="text-[#00bfa5]">en Vivo</span>
+            Mira Cómo Funciona en Vivo
           </h2>
         </Reveal>
         <Reveal delay={100}>
@@ -539,7 +537,7 @@ const HomeAA = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-2">
-              Conoce <span className="text-[#00bfa5]">Sixteam Ops</span>
+              Conoce Sixteam Ops
             </h2>
             <p className="text-center text-[#989fab] text-base sm:text-lg mb-4">Confiado por <span className="text-[#06070a] font-semibold">+50</span> negocios en Latam</p>
           </Reveal>
@@ -601,7 +599,7 @@ const HomeAA = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-            Empieza con IA. <span className="text-[#00bfa5]">Escala al Humano Senior cuando se Necesite.</span>
+            Empieza con IA. Escala al Humano Senior cuando se Necesite.
           </h2>
         </Reveal>
         <Reveal delay={100}>
@@ -664,7 +662,7 @@ const HomeAA = () => {
           <Reveal><div className="text-center mb-4"><EyebrowPill>Construido Para Ti</EyebrowPill></div></Reveal>
           <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-              Construido Para <span className="text-[#00bfa5]">Tu Industria</span>
+              Construido Para Tu Industria
             </h2>
           </Reveal>
           <Reveal delay={150}>
@@ -731,7 +729,7 @@ const HomeAA = () => {
               <Reveal key={agent.name} delay={i * 60}>
                 <div className="bg-[#f3f4f6] border border-[#e6e8eb] rounded-2xl p-5 sm:p-6 text-center hover:border-[#00bfa5]/40 transition-colors">
                   <div className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4" style={{ backgroundColor: agent.color }}>{agent.name[0]}</div>
-                  <h4 className="text-[#06070a] font-poppins font-bold text-base mb-1">{agent.name} — <span className="text-[#00bfa5]">{agent.role}</span></h4>
+                  <h4 className="text-[#06070a] font-poppins font-bold text-base mb-1">{agent.name} — {agent.role}</h4>
                   <p className="text-[#7f8694] text-sm">{agent.desc}</p>
                 </div>
               </Reveal>
@@ -861,8 +859,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-              Simple. Predecible.{' '}
-              <em className="italic font-serif text-[#00bfa5]">Sin Sorpresas.</em>
+              Simple. Predecible. Sin Sorpresas.
             </h2>
           </Reveal>
           <Reveal delay={150}>
@@ -1067,8 +1064,7 @@ const HomeAA = () => {
         <div className="max-w-3xl mx-auto text-center">
           <Reveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-black text-white leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-              Finalmente. Tecnología que{' '}
-              <em className="italic font-serif text-[#00bfa5]">Realmente Opera.</em>
+              Finalmente. Tecnología que Realmente Opera.
             </h2>
           </Reveal>
           <Reveal delay={100}>

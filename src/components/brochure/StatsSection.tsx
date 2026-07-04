@@ -30,11 +30,7 @@ export default function StatsSection() {
           </p>
           <div className="relative">
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-[#0a2342]">
-              No vendemos software.{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                Implementamos operaciones digitales
-              </span>{' '}
-              que tu equipo realmente usa.
+              No vendemos software. Implementamos operaciones digitales que tu equipo realmente usa.
             </h2>
           </div>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-[#0a2342]/65">

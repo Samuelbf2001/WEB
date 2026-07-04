@@ -41,10 +41,8 @@ const StudentTravelCenter = () => {
             <span className="block text-[clamp(3.5rem,10vw,9rem)] text-white">
               buscar un
             </span>
-            <span className="block text-[clamp(3.5rem,10vw,9rem)]">
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                proveedor.
-              </span>
+            <span className="block text-[clamp(3.5rem,10vw,9rem)] text-white">
+              proveedor.
             </span>
           </h1>
 
@@ -136,9 +134,7 @@ const StudentTravelCenter = () => {
               <h2 className="font-poppins font-black text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] tracking-tight">
                 Nos volvimos
                 <br />
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  parte de su
-                </span>
+                parte de su
                 <br />
                 operación.
               </h2>
@@ -255,9 +251,7 @@ const StudentTravelCenter = () => {
               <h2 className="font-poppins font-black text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] tracking-tight">
                 ¿Buscas un partner
                 <br />
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  que crezca contigo?
-                </span>
+                que crezca contigo?
               </h2>
             </div>
             <div>

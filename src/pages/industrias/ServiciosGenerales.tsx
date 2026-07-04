@@ -272,10 +272,7 @@ const ServiciosGenerales = () => {
               </div>
 
               <h1 className="font-poppins font-black text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
-                Crece un 40% sin{' '}
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  añadir más personal
-                </span>
+                Crece un 40% sin añadir más personal
               </h1>
 
               <p className="text-[#e0e0e0] text-lg leading-relaxed mb-4">
@@ -380,10 +377,7 @@ const ServiciosGenerales = () => {
               <span className="text-[#00bfa5] text-sm font-medium">Cómo lo resolvemos</span>
             </div>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Cada problema tiene una{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                solución concreta
-              </span>
+              Cada problema tiene una solución concreta
             </h2>
             <p className="text-[#e0e0e0] text-lg">
               No vendemos software genérico. Automatizamos los procesos exactos donde tu empresa pierde tiempo y dinero.
@@ -421,10 +415,7 @@ const ServiciosGenerales = () => {
               <span className="text-[#1d70a2] text-sm font-medium">Herramientas especializadas</span>
             </div>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Una plataforma que ordena tu operación{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                de principio a fin
-              </span>
+              Una plataforma que ordena tu operación de principio a fin
             </h2>
             <p className="text-[#e0e0e0] text-lg">
               No es un CRM genérico. Lo configuramos para el proceso real de una empresa de servicios — propuestas, recurrencia y cobro incluidos.
@@ -504,10 +495,7 @@ const ServiciosGenerales = () => {
               <span className="text-[#1d70a2] text-sm font-medium">Planes y precios</span>
             </div>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Empieza con el plan que{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                necesitas hoy
-              </span>
+              Empieza con el plan que necesitas hoy
             </h2>
             <p className="text-[#e0e0e0] text-lg">Sin contratos anuales. Sin costos ocultos. Creces de plan cuando quieras.</p>
           </div>

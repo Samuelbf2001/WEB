@@ -12,11 +12,7 @@ export default function FAQAccordion() {
           <div className="relative">
             <div className="pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 rounded-3xl bg-gradient-to-r from-[#1d70a2]/10 to-[#00bfa5]/8 blur-3xl" />
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
-              Lo que más nos preguntan{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                en la primera reunión
-              </span>
-              .
+              Lo que más nos preguntan en la primera reunión.
             </h2>
           </div>
         </div>

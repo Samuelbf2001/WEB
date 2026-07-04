@@ -462,10 +462,8 @@ const AgenciasDeViaje = () => {
                 <h1 className="font-poppins font-black text-white leading-[1.05]" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>
                   Más{' '}
                   <span className="inline-block relative">
-                    <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent whitespace-nowrap">
-                      {displayText}
-                    </span>
-                    <span className="text-[#00bfa5] ml-0.5 animate-pulse">|</span>
+                    <span className="whitespace-nowrap">{displayText}</span>
+                    <span className="ml-0.5 animate-pulse">|</span>
                   </span>
                   {' '}para tu agencia
                   <br />
@@ -556,8 +554,7 @@ const AgenciasDeViaje = () => {
               <span className="text-red-400 text-xs font-medium uppercase tracking-wider">¿Te suena familiar?</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Por qué las agencias pierden reservas{' '}
-              <span className="text-red-400">cada semana</span>
+              Por qué las agencias pierden reservas cada semana
             </h2>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Estos no son problemas genéricos. Son exactamente lo que frena a las agencias de viaje en LATAM.
@@ -611,10 +608,7 @@ const AgenciasDeViaje = () => {
               <span className="text-[#00bfa5] text-xs font-medium uppercase tracking-wider">Cómo lo resolvemos</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Cada problema tiene una{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                solución concreta
-              </span>
+              Cada problema tiene una solución concreta
             </h2>
           </div>
 
@@ -664,10 +658,7 @@ const AgenciasDeViaje = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl mx-auto text-center mb-14">
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Así funciona para{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                tu agencia
-              </span>
+              Así funciona para tu agencia
             </h2>
             <p className="text-[#e0e0e0]/70 text-base">De la primera consulta a la reserva confirmada — todo automatizado.</p>
           </div>
@@ -831,10 +822,7 @@ const AgenciasDeViaje = () => {
               <span className="text-[#1d70a2] text-xs font-medium uppercase tracking-wider">Lo que puedes lograr</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Resultados reales para{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                agencias de viaje
-              </span>
+              Resultados reales para agencias de viaje
             </h2>
           </div>
 
@@ -863,10 +851,7 @@ const AgenciasDeViaje = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl mx-auto text-center mb-14">
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Lo que dicen las{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                agencias que lo usan
-              </span>
+              Lo que dicen las agencias que lo usan
             </h2>
           </div>
 
@@ -922,10 +907,7 @@ const AgenciasDeViaje = () => {
               <span className="text-[#1d70a2] text-xs font-medium uppercase tracking-wider">Planes y precios</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
-              Empieza con el plan que{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                necesitas hoy
-              </span>
+              Empieza con el plan que necesitas hoy
             </h2>
             <p className="text-[#e0e0e0]/70">Sin contratos anuales · Sin costos ocultos · Creces de plan cuando quieras</p>
           </div>
@@ -1113,10 +1095,7 @@ const AgenciasDeViaje = () => {
               <span className="text-[#00bfa5] text-sm font-medium">Asesorías disponibles esta semana</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-5" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-              Agenda tu asesoría{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                gratuita
-              </span>
+              Agenda tu asesoría gratuita
             </h2>
             <p className="text-[#e0e0e0]/70 text-lg max-w-xl mx-auto">
               30 minutos, sin compromiso. Te mostramos la plataforma configurada para agencias de viaje y resolvemos tus preguntas.
@@ -1163,10 +1142,7 @@ const AgenciasDeViaje = () => {
               <span className="text-[#1d70a2] text-xs font-medium uppercase tracking-wider">Resolvemos tus dudas</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>
-              Preguntas{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                frecuentes
-              </span>
+              Preguntas frecuentes
             </h2>
             <p className="text-[#e0e0e0]/55">Todo lo que necesitas saber antes de empezar.</p>
           </div>

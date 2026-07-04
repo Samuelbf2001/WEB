@@ -163,10 +163,7 @@ const AntesDeInvertir = () => {
 
             {/* Headline */}
             <h1 className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
-              ¿Vale la pena invertir{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                en CRM ahora?
-              </span>
+              ¿Vale la pena invertir en CRM ahora?
             </h1>
 
             {/* Subheadline */}
@@ -248,10 +245,7 @@ const AntesDeInvertir = () => {
               Errores más comunes
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white leading-tight">
-              ¿Estás cometiendo estos errores{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                antes de comprar CRM?
-              </span>
+              ¿Estás cometiendo estos errores antes de comprar CRM?
             </h2>
             <p className="text-[#e0e0e0] text-lg leading-relaxed">
               Los vemos todos los días en empresas que ya invirtieron sin diagnosticar.
@@ -291,10 +285,7 @@ const AntesDeInvertir = () => {
               Lo que descubres
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white leading-tight">
-              5 cosas que el diagnóstico{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                te revela antes de invertir
-              </span>
+              5 cosas que el diagnóstico te revela antes de invertir
             </h2>
           </div>
 
@@ -457,10 +448,7 @@ const AntesDeInvertir = () => {
               No implementes a ciegas
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-              Diagnostica antes de comprar.{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                Es gratis.
-              </span>
+              Diagnostica antes de comprar. Es gratis.
             </h2>
             <p className="text-[#e0e0e0] text-lg leading-relaxed max-w-2xl mx-auto">
               Antes de gastar en CRM, IA o automatización, invierte 10 minutos en

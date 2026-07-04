@@ -204,10 +204,7 @@ const Plataforma = () => {
               </div>
 
               <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
-                Una sola plataforma para{' '}
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  vender, atender y crecer
-                </span>
+                Una sola plataforma para vender, atender y crecer
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed">

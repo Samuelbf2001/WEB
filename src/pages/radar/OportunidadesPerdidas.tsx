@@ -203,10 +203,7 @@ const OportunidadesPerdidas = () => {
 
             {/* Headline */}
             <h1 className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
-              ¿Cuánto dinero estás{' '}
-              <span className="bg-gradient-to-r from-red-400 to-[#00bfa5] bg-clip-text text-transparent">
-                perdiendo sin saberlo?
-              </span>
+              ¿Cuánto dinero estás perdiendo sin saberlo?
             </h1>
 
             {/* Subheadline */}
@@ -292,10 +289,7 @@ const OportunidadesPerdidas = () => {
               Escenarios de pérdida
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white leading-tight">
-              5 formas en que tu empresa{' '}
-              <span className="bg-gradient-to-r from-red-400 to-[#00bfa5] bg-clip-text text-transparent">
-                pierde dinero todos los días
-              </span>
+              5 formas en que tu empresa pierde dinero todos los días
             </h2>
             <p className="text-[#e0e0e0] text-lg leading-relaxed">
               No es mala suerte. Es un problema de proceso que tiene solución concreta.
@@ -383,10 +377,7 @@ const OportunidadesPerdidas = () => {
               Transformación
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Cómo cambia tu operación{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                después del diagnóstico
-              </span>
+              Cómo cambia tu operación después del diagnóstico
             </h2>
           </div>
 
@@ -524,10 +515,7 @@ const OportunidadesPerdidas = () => {
               Actúa ahora
             </p>
             <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-              Cada día sin diagnóstico es{' '}
-              <span className="bg-gradient-to-r from-red-400 to-[#00bfa5] bg-clip-text text-transparent">
-                otro día perdiendo oportunidades
-              </span>
+              Cada día sin diagnóstico es otro día perdiendo oportunidades
             </h2>
             <p className="text-[#e0e0e0] text-lg leading-relaxed max-w-2xl mx-auto">
               No necesitas más leads. Necesitas saber cuántos ya tienes y por qué

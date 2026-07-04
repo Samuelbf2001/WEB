@@ -123,10 +123,7 @@ export default function EcosystemTimeline() {
             — Cómo trabajamos
           </p>
           <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
-            Somos solucionadores de problemas.{' '}
-            <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-              La tecnología es el cómo.
-            </span>
+            Somos solucionadores de problemas. La tecnología es el cómo.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/55">
             No llegamos con un stack predefinido. Llegamos a entender qué está frenando tu negocio, y aplicamos la tecnología exacta para resolverlo. Capa por capa, hasta que el ecosistema trabaja solo.

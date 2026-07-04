@@ -93,10 +93,7 @@ const MasterViajes = () => {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Cómo Master Viajes pasó del caos operativo al{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-              control total de su negocio
-            </span>
+            Cómo Master Viajes pasó del caos operativo al control total de su negocio
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
             En menos de 4 meses, Master Viajes centralizó sus canales de venta, organizó sus dos

@@ -35,8 +35,7 @@ export default function MockupsGallery() {
           <div className="relative">
             <div className="pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 rounded-3xl bg-gradient-to-r from-[#1d70a2]/10 to-[#00bfa5]/8 blur-3xl" />
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
-              No implementamos y desaparecemos.{' '}
-              <span className="text-[#00bfa5]">Nos quedamos contigo.</span>
+              No implementamos y desaparecemos. Nos quedamos contigo.
             </h2>
           </div>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/60 sm:text-lg">

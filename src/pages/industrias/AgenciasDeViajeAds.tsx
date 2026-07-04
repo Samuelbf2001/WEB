@@ -358,11 +358,7 @@ const AgenciasDeViajeAds = () => {
 
               {/* Headline */}
               <h1 className="font-poppins font-black text-white leading-[1.08] mb-5" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3.6rem)' }}>
-                Tu agencia pierde reservas{' '}
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  cada semana
-                </span>{' '}
-                — y no lo notas
+                Tu agencia pierde reservas cada semana — y no lo notas
               </h1>
 
               <p className="text-[#e0e0e0]/75 text-base sm:text-lg leading-relaxed mb-6 max-w-lg">
@@ -484,8 +480,7 @@ const AgenciasDeViajeAds = () => {
               <span className="text-red-400 text-xs font-poppins font-semibold uppercase tracking-wider">¿Te suena familiar?</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-3" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)' }}>
-              Por qué tu agencia pierde dinero{' '}
-              <span className="text-red-400">sin darse cuenta</span>
+              Por qué tu agencia pierde dinero sin darse cuenta
             </h2>
             <p className="text-[#e0e0e0]/55 text-base max-w-xl mx-auto">
               No es falta de esfuerzo. Es que el proceso manual tiene huecos por donde se escapa el revenue.
@@ -532,10 +527,7 @@ const AgenciasDeViajeAds = () => {
               <span className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-wider">Tu diagnóstico gratuito incluye</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-3" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)' }}>
-              Todo esto,{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                sin costo
-              </span>
+              Todo esto, sin costo
             </h2>
             <p className="text-[#e0e0e0]/55 text-base">Valor total: <span className="line-through text-[#e0e0e0]/35">$490 USD</span> → <span className="text-[#00bfa5] font-bold">$0 para agencias calificadas</span></p>
           </div>
@@ -590,8 +582,7 @@ const AgenciasDeViajeAds = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="text-center mb-10">
             <h2 className="font-poppins font-black text-white" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)' }}>
-              Antes vs.{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">con Sixteam</span>
+              Antes vs. con Sixteam
             </h2>
           </div>
 
@@ -652,8 +643,7 @@ const AgenciasDeViajeAds = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
           <div className="text-center mb-10">
             <h2 className="font-poppins font-black text-white mb-2" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)' }}>
-              Agencias que ya{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">automatizaron sus reservas</span>
+              Agencias que ya automatizaron sus reservas
             </h2>
             <p className="text-[#e0e0e0]/50 text-sm">Resultados reales de clientes en Colombia, Chile y México.</p>
           </div>
@@ -730,8 +720,7 @@ const AgenciasDeViajeAds = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="text-center mb-10">
             <h2 className="font-poppins font-black text-white mb-2" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)' }}>
-              3 pasos para{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">automatizar tu agencia</span>
+              3 pasos para automatizar tu agencia
             </h2>
           </div>
 
@@ -774,8 +763,7 @@ const AgenciasDeViajeAds = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
           <div className="text-center mb-8">
             <h2 className="font-poppins font-black text-white mb-2" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)' }}>
-              Preguntas{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">frecuentes</span>
+              Preguntas frecuentes
             </h2>
           </div>
 
@@ -828,10 +816,7 @@ const AgenciasDeViajeAds = () => {
                 <span className="text-[#00bfa5] text-xs font-poppins font-semibold uppercase tracking-wider">Agente IA disponible ahora</span>
               </div>
               <h2 className="font-poppins font-black text-white mb-3" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)' }}>
-                ¿Tienes preguntas{' '}
-                <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
-                  antes de agendar?
-                </span>
+                ¿Tienes preguntas antes de agendar?
               </h2>
               <p className="text-[#e0e0e0]/60 text-base leading-relaxed mb-5">
                 Nuestro asistente IA conoce el sistema al detalle. Pregúntale sobre precios, integración con tu WhatsApp, temporada alta o lo que necesites saber.
@@ -888,8 +873,7 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
               <span className="text-[#00bfa5] text-sm font-medium">Asesorías disponibles esta semana</span>
             </div>
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}>
-              Agenda tu{' '}
-              <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">diagnóstico ahora</span>
+              Agenda tu diagnóstico ahora
             </h2>
             <p className="text-[#e0e0e0]/65 text-base max-w-md mx-auto mb-6">
               30 minutos con un especialista por videollamada, llamada o WhatsApp — tú eliges el formato. Te mostramos exactamente cómo quedará tu agencia automatizada.

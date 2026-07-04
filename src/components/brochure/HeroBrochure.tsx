@@ -37,9 +37,7 @@ export default function HeroBrochure() {
             Convertimos tu negocio en una
           </span>
           <span className="block text-[clamp(2.25rem,6vw,4.5rem)]">
-            <span className="bg-gradient-to-r from-[#1d70a2] via-[#00bfa5] to-[#7de8d8] bg-clip-text text-transparent">
-              operación digital
-            </span>
+            operación digital
           </span>
           <span className="block text-[clamp(2.25rem,6vw,4.5rem)]">
             que centraliza, vende y escala.

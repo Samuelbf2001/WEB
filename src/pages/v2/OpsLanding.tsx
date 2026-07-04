@@ -19,7 +19,7 @@ const WA_PHONE = "573004188522";
 const openWhatsApp = (source: string, message: string) => {
   gtm.whatsappClick(source);
   gtm.ctaClick("whatsapp_ops", source);
-  window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`, "_blank");
+  window.open(`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
 };
 
 const MSG_GENERAL =
@@ -160,14 +160,15 @@ const faqs = [
   },
 ];
 
-const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => void }> = ({
-  q, a, open, onToggle,
+const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => void; panelId: string }> = ({
+  q, a, open, onToggle, panelId,
 }) => (
   <div className="bg-white border border-v2-border-subtle rounded-2xl overflow-hidden">
     <button
       onClick={onToggle}
       className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
       aria-expanded={open}
+      aria-controls={panelId}
     >
       <span className="font-poppins font-semibold text-[16px] text-v2-ink-heading">{q}</span>
       <ChevronDown
@@ -175,6 +176,9 @@ const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => v
       />
     </button>
     <div
+      id={panelId}
+      role="region"
+      aria-label={q}
       className="grid transition-[grid-template-rows] duration-300 ease-out"
       style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
     >
@@ -756,6 +760,7 @@ const OpsLanding = () => {
                     a={f.a}
                     open={openFaq === i}
                     onToggle={() => setOpenFaq(openFaq === i ? null : i)}
+                    panelId={`ops-faq-panel-${i}`}
                   />
                 ))}
               </div>

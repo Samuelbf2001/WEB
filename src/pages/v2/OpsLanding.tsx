@@ -679,7 +679,7 @@ const OpsLanding = () => {
                       Diagnóstico ejecutivo de tu operación. Decides después si quieres conversar. Cero compromiso.
                     </p>
                     <Link
-                      to="/v2/radar"
+                      to="/radar"
                       onClick={() => gtm.ctaClick("radar", "ops_otros_caminos")}
                       className="block mt-5"
                     >

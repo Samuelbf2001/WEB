@@ -6,74 +6,74 @@ import Container from "./Container";
 import ButtonV2 from "./ButtonV2";
 
 const soluciones = [
-  { label: "Las tres soluciones", to: "/v2/soluciones" },
-  { label: "Assessment · $1,200", to: "/v2/soluciones#assessment" },
-  { label: "Transform · desde $1,500", to: "/v2/soluciones#transform" },
-  { label: "Ops Core · $700/mes", to: "/v2/soluciones#ops" },
-  { label: "Ops Growth · $1,500/mes", to: "/v2/soluciones#ops" },
+  { label: "Las tres soluciones", to: "/soluciones" },
+  { label: "Assessment · $1,200", to: "/soluciones#assessment" },
+  { label: "Transform · desde $1,500", to: "/soluciones#transform" },
+  { label: "Ops Core · $700/mes", to: "/soluciones#ops" },
+  { label: "Ops Growth · $1,500/mes", to: "/soluciones#ops" },
 ];
 
 const servicios = [
-  { label: "CRM Ventas", to: "/v2/servicios/crm-ventas" },
-  { label: "CRM Atención al Cliente", to: "/v2/servicios/crm-atencion" },
-  { label: "CRM Marketing", to: "/v2/servicios/crm-marketing" },
-  { label: "Chatbot IA", to: "/v2/servicios/chatbot-ia" },
-  { label: "Soporte & Operaciones", to: "/v2/servicios/soporte-operaciones" },
+  { label: "CRM Ventas", to: "/servicios/crm-ventas" },
+  { label: "CRM Atención al Cliente", to: "/servicios/crm-atencion" },
+  { label: "CRM Marketing", to: "/servicios/crm-marketing" },
+  { label: "Chatbot IA", to: "/servicios/chatbot-ia" },
+  { label: "Soporte & Operaciones", to: "/servicios/soporte-operaciones" },
 ];
 
 const industrias = [
   { label: "Agencias de viaje",   to: "/industrias/agencias-de-viaje" },
   { label: "Inmobiliarias",       to: "/industrias/inmobiliarias" },
   { label: "Servicios B2B",       to: "/industrias/servicios-generales" },
-  { label: "Educación",           to: "/v2/industrias/educacion" },
-  { label: "SaaS B2B",            to: "/v2/industrias/saas-b2b" },
-  { label: "Retail / E-commerce", to: "/v2/industrias/retail" },
+  { label: "Educación",           to: "/industrias/educacion" },
+  { label: "SaaS B2B",            to: "/industrias/saas-b2b" },
+  { label: "Retail / E-commerce", to: "/industrias/retail" },
 ];
 
 const empresa = [
-  { label: "Nosotros",          to: "/v2/nosotros" },
-  { label: "Equipo",            to: "/v2/equipo" },
-  { label: "Casos de éxito",    to: "/v2/casos" },
-  { label: "Operación Continua",to: "/v2/operacion-continua" },
-  { label: "Cómo funciona",     to: "/v2/como-funciona" },
+  { label: "Nosotros",          to: "/nosotros" },
+  { label: "Equipo",            to: "/equipo" },
+  { label: "Casos de éxito",    to: "/casos" },
+  { label: "Operación Continua",to: "/operacion-continua" },
+  { label: "Cómo funciona",     to: "/como-funciona" },
 ];
 
 const navLinks = [
-  { label: "Soluciones", to: "/v2/soluciones" },
+  { label: "Soluciones", to: "/soluciones" },
 ];
 
 const mobileAll = [
-  { label: "Soluciones", to: "/v2/soluciones" },
-  { label: "Cómo funciona", to: "/v2/como-funciona" },
-  { label: "Casos", to: "/v2/casos" },
+  { label: "Soluciones", to: "/soluciones" },
+  { label: "Cómo funciona", to: "/como-funciona" },
+  { label: "Casos", to: "/casos" },
   null,
   // Soluciones sub
-  { label: "Assessment · $1,200", to: "/v2/soluciones", sub: true },
-  { label: "Transform · desde $1,500", to: "/v2/soluciones", sub: true },
-  { label: "Ops Core · $700/mes", to: "/v2/soluciones", sub: true },
-  { label: "Ops Growth · $1,500/mes", to: "/v2/soluciones", sub: true },
+  { label: "Assessment · $1,200", to: "/soluciones", sub: true },
+  { label: "Transform · desde $1,500", to: "/soluciones", sub: true },
+  { label: "Ops Core · $700/mes", to: "/soluciones", sub: true },
+  { label: "Ops Growth · $1,500/mes", to: "/soluciones", sub: true },
   null,
   // Servicios
-  { label: "CRM Ventas", to: "/v2/servicios/crm-ventas", sub: true },
-  { label: "CRM Atención", to: "/v2/servicios/crm-atencion", sub: true },
-  { label: "CRM Marketing", to: "/v2/servicios/crm-marketing", sub: true },
-  { label: "Chatbot IA", to: "/v2/servicios/chatbot-ia", sub: true },
-  { label: "Soporte & Operaciones", to: "/v2/servicios/soporte-operaciones", sub: true },
+  { label: "CRM Ventas", to: "/servicios/crm-ventas", sub: true },
+  { label: "CRM Atención", to: "/servicios/crm-atencion", sub: true },
+  { label: "CRM Marketing", to: "/servicios/crm-marketing", sub: true },
+  { label: "Chatbot IA", to: "/servicios/chatbot-ia", sub: true },
+  { label: "Soporte & Operaciones", to: "/servicios/soporte-operaciones", sub: true },
   null,
   // Industrias
   { label: "Agencias de viaje", to: "/industrias/agencias-de-viaje", sub: true },
   { label: "Inmobiliarias", to: "/industrias/inmobiliarias", sub: true },
   { label: "Servicios B2B", to: "/industrias/servicios-generales", sub: true },
-  { label: "Educación", to: "/v2/industrias/educacion", sub: true },
-  { label: "SaaS B2B", to: "/v2/industrias/saas-b2b", sub: true },
-  { label: "Retail / E-commerce", to: "/v2/industrias/retail", sub: true },
+  { label: "Educación", to: "/industrias/educacion", sub: true },
+  { label: "SaaS B2B", to: "/industrias/saas-b2b", sub: true },
+  { label: "Retail / E-commerce", to: "/industrias/retail", sub: true },
   null,
   // Empresa
-  { label: "Nosotros", to: "/v2/nosotros", sub: true },
-  { label: "Equipo", to: "/v2/equipo", sub: true },
-  { label: "Operación Continua", to: "/v2/operacion-continua", sub: true },
+  { label: "Nosotros", to: "/nosotros", sub: true },
+  { label: "Equipo", to: "/equipo", sub: true },
+  { label: "Operación Continua", to: "/operacion-continua", sub: true },
   null,
-  { label: "Radar gratis", to: "/v2/radar", accent: true },
+  { label: "Radar gratis", to: "/radar", accent: true },
 ];
 
 function Dropdown({
@@ -179,7 +179,7 @@ export const HeaderV2 = () => {
       )}
     >
       <Container className="flex h-14 items-center justify-between">
-        <Link to="/v2" className="group flex items-center gap-2 shrink-0">
+        <Link to="/" className="group flex items-center gap-2 shrink-0">
           <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-8 w-8 object-contain" />
           <span className="font-poppins font-bold text-[20px] md:text-[22px] tracking-tight text-v2-ink-heading">
             Sixteam<span className="text-v2-accent-teal">.</span>pro
@@ -188,21 +188,21 @@ export const HeaderV2 = () => {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-7">
-          <Dropdown label="Soluciones" items={soluciones} basePaths={["/v2/soluciones"]} />
-          <Dropdown label="Servicios"  items={servicios}  basePaths={["/v2/servicios"]} />
-          <Dropdown label="Industrias" items={industrias} basePaths={["/v2/industrias", "/industrias"]} />
-          <Dropdown label="Empresa"    items={empresa}    basePaths={["/v2/nosotros", "/v2/equipo", "/v2/operacion-continua", "/v2/casos", "/v2/como-funciona"]} />
+          <Dropdown label="Soluciones" items={soluciones} basePaths={["/soluciones"]} />
+          <Dropdown label="Servicios"  items={servicios}  basePaths={["/servicios"]} />
+          <Dropdown label="Industrias" items={industrias} basePaths={["/industrias", "/industrias"]} />
+          <Dropdown label="Empresa"    items={empresa}    basePaths={["/nosotros", "/equipo", "/operacion-continua", "/casos", "/como-funciona"]} />
         </nav>
 
         {/* Desktop right CTAs */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <Link
-            to="/v2/radar"
+            to="/radar"
             className="font-lato text-[13px] font-medium text-v2-accent-teal-deep hover:text-v2-ink-heading transition-colors"
           >
             Radar gratis
           </Link>
-          <Link to="/v2/contacto">
+          <Link to="/contacto">
             <ButtonV2 variant="navy" size="sm" className="group">
               Agendar llamada
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -251,7 +251,7 @@ export const HeaderV2 = () => {
               );
             })}
             <div className="pt-4">
-              <Link to="/v2/contacto">
+              <Link to="/contacto">
                 <ButtonV2 variant="navy" size="md" className="w-full">
                   Agendar llamada
                   <ArrowRight className="h-4 w-4" />

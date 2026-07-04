@@ -378,7 +378,7 @@ export const PricingV2 = () => {
 
                       {/* CTA */}
                       <div className="mt-1">
-                        <Link to={isPlus ? "/v2/radar" : "/v2/radar"} className="block">
+                        <Link to={isPlus ? "/radar" : "/radar"} className="block">
                           <ButtonV2
                             variant={plan.ctaVariant}
                             size="md"
@@ -392,7 +392,7 @@ export const PricingV2 = () => {
                           <div className="flex items-center justify-center gap-1.5 mt-2.5">
                             <Shield className="h-3 w-3 text-v2-ink-muted" />
                             <Link
-                              to="/v2/radar"
+                              to="/radar"
                               className="font-lato text-[11px] text-v2-ink-muted hover:text-[#8a7a4f] transition-colors underline underline-offset-2"
                             >
                               Garantía 30 días money-back
@@ -420,7 +420,7 @@ export const PricingV2 = () => {
                 </h3>
               </div>
               <div className="flex-shrink-0 w-full sm:w-auto">
-                <Link to="/v2/radar">
+                <Link to="/radar">
                   <ButtonV2 variant="navy" size="sm" className="w-full sm:w-auto whitespace-nowrap group">
                     Agendar asesoría
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -434,7 +434,7 @@ export const PricingV2 = () => {
           <p className="v2-reveal v2-d3 text-center font-lato text-[13px] text-v2-ink-muted mt-8">
             ¿Cómo funciona el sistema de Créditos Sixteam?{" "}
             <Link
-              to="/v2/soluciones#sixteam-ops"
+              to="/soluciones#sixteam-ops"
               className="font-semibold text-[#8a7a4f] hover:underline underline-offset-2 inline-flex items-center gap-1"
             >
               Conoce Sixteam Ops

@@ -70,7 +70,7 @@ export const FaqV2 = () => {
                 ¿No ves tu pregunta? Escríbenos por WhatsApp. Respondemos el mismo día — somos Samuel o Ernesto del otro lado, no un chatbot ni un SDR.
               </p>
               <div className="mt-6">
-                <Link to="/v2/contacto">
+                <Link to="/contacto">
                   <ButtonV2 variant="outline" size="md">
                     Solicitar Diagnóstico — $2,500
                     <ArrowRight className="h-4 w-4" />

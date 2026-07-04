@@ -92,12 +92,12 @@ const Soluciones = () => {
             </div>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to="/v2/radar">
+              <Link to="/radar">
                 <ButtonV2 variant="primary" size="lg">
                   Diagnóstico gratis <ArrowRight className="h-4 w-4" />
                 </ButtonV2>
               </Link>
-              <Link to="/v2/contacto">
+              <Link to="/contacto">
                 <ButtonV2 variant="outline" size="lg">Hablar con un experto</ButtonV2>
               </Link>
             </div>
@@ -152,7 +152,7 @@ const Soluciones = () => {
                 </div>
 
                 <div className="mt-8">
-                  <Link to="/v2/contacto">
+                  <Link to="/contacto">
                     <ButtonV2 variant="navy" size="md">
                       Solicitar Assessment <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
@@ -240,7 +240,7 @@ const Soluciones = () => {
                 </div>
 
                 <div className="mt-8">
-                  <Link to="/v2/contacto">
+                  <Link to="/contacto">
                     <ButtonV2 variant="primary" size="md">
                       Solicitar Transform <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
@@ -376,7 +376,7 @@ const Soluciones = () => {
                   ].map((i) => <CheckItem key={i} text={i} />)}
                 </div>
                 <div className="px-7 pb-7">
-                  <Link to="/v2/contacto">
+                  <Link to="/contacto">
                     <ButtonV2 variant="outline" size="md" className="w-full justify-center">
                       Empezar con Ops Core <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
@@ -418,7 +418,7 @@ const Soluciones = () => {
                   ].map((i) => <CheckItem key={i.t} text={i.bold ? <strong className="text-v2-ink-heading">{i.t}</strong> : i.t} />)}
                 </div>
                 <div className="px-7 pb-7">
-                  <Link to="/v2/contacto">
+                  <Link to="/contacto">
                     <ButtonV2 variant="primary" size="md" className="w-full justify-center shadow-[0_8px_24px_rgba(0,191,165,0.25)]">
                       Empezar con Ops Growth <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
@@ -511,10 +511,10 @@ const Soluciones = () => {
             Diagnóstico ejecutivo gratuito en 48 horas. Descubres la fuga de revenue y tu punto de entrada.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Pedir Radar gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg" className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10">
                 Hablar con un experto
               </ButtonV2>

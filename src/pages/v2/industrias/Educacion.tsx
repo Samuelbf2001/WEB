@@ -51,10 +51,10 @@ const Educacion = () => {
             para que cada prospecto reciba respuesta — y el asesor se enfoque en cerrar.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Diagnóstico gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con un experto</ButtonV2>
             </Link>
           </div>
@@ -202,10 +202,10 @@ const Educacion = () => {
             El Radar gratuito te muestra en 48h exactamente dónde está la fuga — y qué cambia si la tapas.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Pedir Radar gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg" className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10">
                 Hablar con un experto
               </ButtonV2>

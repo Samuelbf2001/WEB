@@ -31,21 +31,21 @@ const industries = [
     icon: GraduationCap,
     name: "Educación",
     desc: "Captación, nurturing por programa y operación de aplicaciones académicas.",
-    href: "/v2/industrias/educacion",
+    href: "/industrias/educacion",
     live: true,
   },
   {
     icon: Building2,
     name: "SaaS B2B",
     desc: "Funnel TOFU→PQL, scoring de actividad in-app y handoff a CSM cuando aplica.",
-    href: "/v2/industrias/saas-b2b",
+    href: "/industrias/saas-b2b",
     live: true,
   },
   {
     icon: ShoppingBag,
     name: "Retail / E-commerce",
     desc: "Recovery de carritos, NPS automatizado y atención multicanal con un solo equipo.",
-    href: "/v2/industrias/retail",
+    href: "/industrias/retail",
     live: true,
   },
 ];
@@ -125,7 +125,7 @@ const Industrias = () => (
           Trabajamos con cualquier vertical B2B que tenga proceso comercial. Cuéntanos el tuyo.
         </p>
         <div className="mt-9">
-          <Link to="/v2/contacto">
+          <Link to="/contacto">
             <ButtonV2 variant="primary" size="lg">
               Hablar con un experto
               <ArrowRight className="h-4 w-4" />

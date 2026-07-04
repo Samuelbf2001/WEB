@@ -149,7 +149,7 @@ export const CasesV2 = () => {
 
           <div className="v2-reveal v2-d3 flex justify-center mt-12">
             <Link
-              to="/v2/casos"
+              to="/casos"
               className="group inline-flex items-center gap-2 font-lato text-[14px] font-semibold uppercase tracking-widest text-v2-ink-heading hover:text-[#8a7a4f] transition-colors"
             >
               Ver todos los casos

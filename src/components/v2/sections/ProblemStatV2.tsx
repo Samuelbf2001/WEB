@@ -97,7 +97,7 @@ export const ProblemStatV2 = () => {
               </div>
 
               <Link
-                to="/v2/radar"
+                to="/radar"
                 className="group inline-flex items-center gap-2 mt-8 font-lato text-[13px] uppercase tracking-widest text-v2-accent-teal hover:text-white transition-colors duration-200"
               >
                 Diagnóstica tu operación gratis

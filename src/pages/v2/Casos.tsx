@@ -104,7 +104,7 @@ const Casos = () => (
           Empieza con el Radar gratis. En 48h sabremos si tu sistema tiene cura.
         </p>
         <div className="mt-9">
-          <Link to="/v2/radar">
+          <Link to="/radar">
             <ButtonV2 variant="primary" size="lg">
               Pedir Radar gratis
               <ArrowRight className="h-4 w-4" />

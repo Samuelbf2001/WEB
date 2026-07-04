@@ -493,7 +493,7 @@ export const ChatConciergeV2 = () => {
                   El Diagnóstico Sixteam es una auditoría de 2 semanas: auditamos tu operación,
                   mapeamos el stack y entregamos un plan ejecutable. $2,500 USD.
                 </p>
-                <Link to="/v2/radar">
+                <Link to="/radar">
                   <ButtonV2
                     variant="outline"
                     size="sm"

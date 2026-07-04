@@ -59,13 +59,13 @@ export const FinalCtaV2 = () => {
             Dos semanas. Mapeamos tu operación, te entregamos el roadmap y dejamos la plataforma montada. $2,500 USD único. Después decides si quieres que la operemos.
           </p>
           <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Diagnóstico — $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2
                 variant="outline"
                 size="lg"

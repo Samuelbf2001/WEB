@@ -131,13 +131,13 @@ export const NuestroEnfoqueV2 = () => (
 
         {/* CTA row */}
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-3">
-          <Link to="/v2/radar">
+          <Link to="/radar">
             <ButtonV2 variant="primary" size="lg" className="group">
               Agenda tu diagnóstico gratuito
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </ButtonV2>
           </Link>
-          <Link to="/v2/contacto">
+          <Link to="/contacto">
             <ButtonV2 variant="outline" size="lg" className="inline-flex items-center gap-2">
               <Calendar className="h-4 w-4 opacity-70" />
               Agendar una llamada

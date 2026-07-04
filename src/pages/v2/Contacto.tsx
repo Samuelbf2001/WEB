@@ -97,7 +97,7 @@ const Contacto = () => (
           compromiso.
         </p>
         <div className="mt-8">
-          <Link to="/v2/radar">
+          <Link to="/radar">
             <ButtonV2 variant="primary" size="lg">
               Pedir Radar gratis
               <ArrowRight className="h-4 w-4" />

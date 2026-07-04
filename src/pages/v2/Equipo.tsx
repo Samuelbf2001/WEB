@@ -568,13 +568,13 @@ const Equipo = () => {
             className="mt-10 flex flex-col sm:flex-row gap-3 justify-center"
             style={{ opacity: 0, animation: "v2-fade-up 0.5s ease forwards 300ms" }}
           >
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
                 Radar gratis
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2
                 variant="outline"
                 size="lg"

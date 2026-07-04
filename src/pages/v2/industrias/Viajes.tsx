@@ -98,10 +98,10 @@ const ViajesV2 = () => {
             Sixteam opera tu pipeline turístico — desde la solicitud hasta la post-venta — para que vendas más viajes con el mismo equipo.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
             </Link>
           </div>
@@ -224,10 +224,10 @@ const ViajesV2 = () => {
             Implementamos y operamos. No te dejamos solo después del go-live.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
             </Link>
           </div>

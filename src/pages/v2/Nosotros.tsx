@@ -290,13 +290,13 @@ const Nosotros = () => {
             Sin pitch. Sin venta. Te contamos cómo trabajamos y vemos si encajamos contigo.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Agendar llamada
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2
                 variant="outline"
                 size="lg"

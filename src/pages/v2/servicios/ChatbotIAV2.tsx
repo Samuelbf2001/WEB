@@ -133,13 +133,13 @@ const ChatbotIAV2 = () => {
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
                 Diagnóstico gratis
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">
                 Hablar con un experto
               </ButtonV2>
@@ -254,13 +254,13 @@ const ChatbotIAV2 = () => {
               Te mostramos un demo del agente con tu propia data en menos de 2 semanas.
             </p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to="/v2/radar">
+              <Link to="/radar">
                 <ButtonV2 variant="primary" size="lg">
                   Hacer mi auditoría
                   <ArrowRight className="h-4 w-4" />
                 </ButtonV2>
               </Link>
-              <Link to="/v2/contacto">
+              <Link to="/contacto">
                 <ButtonV2 variant="outline" size="lg">
                   Hablar con un experto
                 </ButtonV2>

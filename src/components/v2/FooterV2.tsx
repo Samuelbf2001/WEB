@@ -3,37 +3,37 @@ import { ArrowUpRight } from "lucide-react";
 import Container from "./Container";
 
 const soluciones = [
-  { label: "Sixteam Assessment", to: "/v2/soluciones#assessment" },
-  { label: "Sixteam Transform",  to: "/v2/soluciones#transform" },
-  { label: "Ops Core",           to: "/v2/soluciones#ops" },
-  { label: "Ops Growth",         to: "/v2/soluciones#ops" },
-  { label: "Diagnóstico gratis", to: "/v2/radar" },
-  { label: "Radar 360°",         to: "/v2/radar-pro" },
+  { label: "Sixteam Assessment", to: "/soluciones#assessment" },
+  { label: "Sixteam Transform",  to: "/soluciones#transform" },
+  { label: "Ops Core",           to: "/soluciones#ops" },
+  { label: "Ops Growth",         to: "/soluciones#ops" },
+  { label: "Diagnóstico gratis", to: "/radar" },
+  { label: "Radar 360°",         to: "/radar-pro" },
 ];
 
 const servicios = [
-  { label: "CRM Ventas",           to: "/v2/servicios/crm-ventas" },
-  { label: "CRM Atención",         to: "/v2/servicios/crm-atencion" },
-  { label: "CRM Marketing",        to: "/v2/servicios/crm-marketing" },
-  { label: "Chatbot IA",           to: "/v2/servicios/chatbot-ia" },
-  { label: "Soporte & Operaciones",to: "/v2/servicios/soporte-operaciones" },
+  { label: "CRM Ventas",           to: "/servicios/crm-ventas" },
+  { label: "CRM Atención",         to: "/servicios/crm-atencion" },
+  { label: "CRM Marketing",        to: "/servicios/crm-marketing" },
+  { label: "Chatbot IA",           to: "/servicios/chatbot-ia" },
+  { label: "Soporte & Operaciones",to: "/servicios/soporte-operaciones" },
 ];
 
 const industrias = [
   { label: "Agencias de viaje",  to: "/industrias/agencias-de-viaje" },
   { label: "Inmobiliarias",      to: "/industrias/inmobiliarias" },
   { label: "Servicios B2B",      to: "/industrias/servicios-generales" },
-  { label: "Educación",          to: "/v2/industrias/educacion" },
-  { label: "SaaS B2B",           to: "/v2/industrias/saas-b2b" },
-  { label: "Retail / E-commerce",to: "/v2/industrias/retail" },
+  { label: "Educación",          to: "/industrias/educacion" },
+  { label: "SaaS B2B",           to: "/industrias/saas-b2b" },
+  { label: "Retail / E-commerce",to: "/industrias/retail" },
 ];
 
 const empresa = [
-  { label: "Cómo funciona",  to: "/v2/como-funciona" },
-  { label: "Nosotros",       to: "/v2/nosotros" },
-  { label: "Nuestro equipo", to: "/v2/equipo" },
-  { label: "Casos de éxito", to: "/v2/casos" },
-  { label: "Agendar llamada",to: "/v2/contacto" },
+  { label: "Cómo funciona",  to: "/como-funciona" },
+  { label: "Nosotros",       to: "/nosotros" },
+  { label: "Nuestro equipo", to: "/equipo" },
+  { label: "Casos de éxito", to: "/casos" },
+  { label: "Agendar llamada",to: "/contacto" },
   { label: "Política de privacidad", to: "/politicas" },
   { label: "Términos & condiciones", to: "/terminos" },
 ];
@@ -63,7 +63,7 @@ export const FooterV2 = () => {
 
           {/* Brand */}
           <div className="md:col-span-3">
-            <Link to="/v2" className="inline-block">
+            <Link to="/" className="inline-block">
               <span className="font-poppins font-bold text-[26px] tracking-tight text-white">
                 Sixteam<span className="text-v2-accent-teal">.</span>pro
               </span>

@@ -147,7 +147,7 @@ export const HowItWorksV2 = () => {
               tecnología sin pedirte ayuda."
             </p>
             <div className="mt-6">
-              <Link to="/v2/radar">
+              <Link to="/radar">
                 <ButtonV2 variant="primary" size="lg">
                   Empezar con el Radar gratis
                   <ArrowRight className="h-4 w-4" />

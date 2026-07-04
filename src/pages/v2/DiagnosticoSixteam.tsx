@@ -189,7 +189,7 @@ const DiagnosticoSixteam = () => {
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg" className="group">
                 Solicitar Diagnóstico
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
@@ -570,13 +570,13 @@ const DiagnosticoSixteam = () => {
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                <Link to="/v2/contacto">
+                <Link to="/contacto">
                   <ButtonV2 variant="primary" size="lg" className="group">
                     Agendar sesión gratuita
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                   </ButtonV2>
                 </Link>
-                <Link to="/v2/operacion-continua">
+                <Link to="/operacion-continua">
                   <ButtonV2 variant="secondary" size="lg">
                     Ver planes de operación
                     <ChevronRight className="h-4 w-4" />

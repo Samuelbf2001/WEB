@@ -160,13 +160,13 @@ const ComoFunciona = () => {
             Tú dices qué necesitas en Slack, WhatsApp o Loom. Nosotros decidimos si lo hace IA o un humano — y te lo entregamos.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Agendar una llamada
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="outline" size="lg">
                 Hacer mi auditoría gratis
               </ButtonV2>
@@ -451,7 +451,7 @@ const ComoFunciona = () => {
                   Si en los primeros 30 días no ves valor operacional concreto, te devolvemos el 100%. Sin discusión, sin formularios largos.
                 </p>
                 <div className="mt-6">
-                  <Link to="/v2/radar">
+                  <Link to="/radar">
                     <ButtonV2 variant="primary" size="md">
                       Hacer mi auditoría gratis
                       <ArrowRight className="h-4 w-4" />
@@ -625,13 +625,13 @@ const ComoFunciona = () => {
                 Empieza con la auditoría gratis. 48 horas para ver dónde tu tecnología está sin operar — y cuánto está costando.
               </p>
               <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-                <Link to="/v2/radar">
+                <Link to="/radar">
                   <ButtonV2 variant="primary" size="lg">
                     Hacer mi auditoría gratis
                     <ArrowRight className="h-4 w-4" />
                   </ButtonV2>
                 </Link>
-                <Link to="/v2/contacto">
+                <Link to="/contacto">
                   <ButtonV2
                     variant="outline"
                     size="lg"

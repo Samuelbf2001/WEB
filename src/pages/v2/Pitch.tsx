@@ -273,7 +273,7 @@ const PitchV2 = () => {
 
       {/* ── Sticky minimal pitch bar ── */}
       <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-10 h-14 bg-[#0a2342]/95 backdrop-blur-sm border-b border-white/8">
-        <Link to="/v2" className="font-poppins font-black text-[15px] text-white tracking-tight">
+        <Link to="/" className="font-poppins font-black text-[15px] text-white tracking-tight">
           SIXTEAM<span className="text-[#00bfa5]">.</span>
         </Link>
         <a
@@ -1892,7 +1892,7 @@ const PitchV2 = () => {
                   <ArrowRight className="w-4 h-4" />
                 </ButtonV2>
               </a>
-              <Link to="/v2">
+              <Link to="/">
                 <ButtonV2
                   variant="outline"
                   size="lg"

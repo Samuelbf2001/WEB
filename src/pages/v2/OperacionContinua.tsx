@@ -142,7 +142,7 @@ const OperacionContinua = () => {
             marketing y servicio al cliente — mes tras mes — mientras tú te enfocas en crecer.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
                 Empezar con el Radar
                 <ArrowRight className="h-4 w-4" />
@@ -334,7 +334,7 @@ const OperacionContinua = () => {
                   </p>
                 </blockquote>
                 <div className="mt-8">
-                  <Link to="/v2/nosotros">
+                  <Link to="/nosotros">
                     <ButtonV2 variant="outline" size="md">
                       Conocer al equipo
                       <ChevronRight className="h-4 w-4" />
@@ -501,7 +501,7 @@ const OperacionContinua = () => {
                     {plan.desc}
                   </p>
                   <div className="mt-6">
-                    <Link to="/v2/contacto">
+                    <Link to="/contacto">
                       <ButtonV2
                         variant={plan.featured ? "primary" : "outline"}
                         size="sm"
@@ -517,7 +517,7 @@ const OperacionContinua = () => {
             </div>
 
             <div className="text-center mt-10 v2-reveal v2-d3">
-              <Link to="/v2/radar">
+              <Link to="/radar">
                 <ButtonV2 variant="primary" size="lg">
                   Empezar con el Radar gratis
                   <ArrowRight className="h-4 w-4" />

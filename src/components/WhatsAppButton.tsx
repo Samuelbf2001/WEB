@@ -6,8 +6,22 @@ const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { pathname } = useLocation();
 
-  // V2 uses its own contact patterns — hide the V1 WhatsApp on V2 routes
-  if (pathname.startsWith('/v2')) {
+  // La web pública (V2) tiene sus propios CTAs de contacto; este botón flotante
+  // solo aplica a las landings V1 que siguen publicadas
+  const V1_ROUTES = [
+    '/plataforma',
+    '/brochure',
+    '/home-aa',
+    '/viajes',
+    '/inmobiliarias',
+    '/industrias/agencias-de-viaje',
+    '/industrias/servicios-generales',
+    '/casos/',
+    '/radar/',
+    '/politicas',
+    '/terminos',
+  ];
+  if (!V1_ROUTES.some((route) => pathname.startsWith(route))) {
     return null;
   }
 

@@ -98,10 +98,10 @@ const InmobiliariasV2New = () => {
             Sixteam opera tu pipeline inmobiliario — desde la captura hasta el cierre y la post-venta — para que cada propiedad tenga su comprador.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
             </Link>
           </div>
@@ -224,10 +224,10 @@ const InmobiliariasV2New = () => {
             Implementamos y operamos. No te dejamos solo después del go-live.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
             </Link>
           </div>

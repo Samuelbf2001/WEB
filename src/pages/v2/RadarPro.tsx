@@ -271,7 +271,7 @@ const RadarPro = () => {
 
                 <div className="mt-8 pt-6 border-t border-v2-border-subtle">
                   <Link
-                    to="/v2/radar"
+                    to="/radar"
                     className="font-lato text-[14px] font-medium text-v2-accent-blue hover:text-v2-ink-heading transition-colors inline-flex items-center gap-1"
                   >
                     Pedir el Radar gratis
@@ -546,7 +546,7 @@ const RadarPro = () => {
                   ¿Prefieres el diagnóstico gratuito primero?
                 </p>
                 <Link
-                  to="/v2/radar"
+                  to="/radar"
                   className="inline-flex items-center gap-1 font-lato text-[14px] font-medium text-v2-accent-blue hover:text-v2-ink-heading transition-colors mt-1"
                 >
                   → Radar gratis en 48h
@@ -591,7 +591,7 @@ const RadarPro = () => {
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2
                 variant="outline"
                 size="lg"

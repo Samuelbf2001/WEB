@@ -118,13 +118,13 @@ export const AssessmentV2 = () => {
             El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de IA — y te entregamos el plan ejecutable. Antes de mover una sola pieza.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/v2/contacto">
+            <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Assessment — $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>
-            <a href="/v2/contacto">
+            <a href="/contacto">
               <ButtonV2 variant="outline" size="lg">
                 Hablar con Samuel antes
               </ButtonV2>
@@ -447,13 +447,13 @@ export const AssessmentV2 = () => {
                 Solicita tu Assessment. Si después de la llamada inicial decidimos que no encajas con el playbook — te lo decimos directamente y no cobramos nada.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="/v2/contacto">
+                <a href="/contacto">
                   <ButtonV2 variant="primary" size="lg">
                     Solicitar Assessment — $2,500
                     <ArrowRight className="h-4 w-4" />
                   </ButtonV2>
                 </a>
-                <a href="/v2/contacto">
+                <a href="/contacto">
                   <ButtonV2
                     variant="outline"
                     size="lg"

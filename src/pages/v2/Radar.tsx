@@ -109,13 +109,13 @@ const Radar = () => {
             pierdes dinero y la plataforma base ya implementada para arrancar.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/v2/contacto">
+            <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Diagnóstico — $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>
-            <a href="/v2/contacto">
+            <a href="/contacto">
               <ButtonV2 variant="outline" size="lg">
                 Hablar con Samuel antes
               </ButtonV2>
@@ -360,7 +360,7 @@ const Radar = () => {
             $2,500 USD pago único. Mapa de operación, cuantificación de fugas, roadmap priorizado y plataforma base montada. Todo en 14 días.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/v2/contacto">
+            <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Diagnóstico — $2,500
                 <ArrowRight className="h-4 w-4" />

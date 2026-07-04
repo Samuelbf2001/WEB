@@ -51,10 +51,10 @@ const Retail = () => {
             para que el e-commerce crezca sin crecer el equipo de operaciones.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Diagnóstico gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con un experto</ButtonV2>
             </Link>
           </div>
@@ -202,10 +202,10 @@ const Retail = () => {
             El Radar gratuito calcula en 48h cuánto dinero te cuesta no tener recovery activo — y qué cambia si lo operas.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">Pedir Radar gratis <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg" className="!text-white !border-white/30 !bg-white/5 hover:!bg-white/10">
                 Hablar con un experto
               </ButtonV2>

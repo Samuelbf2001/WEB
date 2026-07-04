@@ -179,7 +179,7 @@ const PreciosV2 = () => {
             </div>
 
             <div className="v2-reveal v2-d4 mt-9">
-              <Link to="/v2/radar">
+              <Link to="/radar">
                 <ButtonV2 variant="primary" size="lg">
                   Empezar con auditoría gratis
                   <ArrowRight className="h-4 w-4" />
@@ -437,13 +437,13 @@ const PreciosV2 = () => {
             En 48 horas te decimos dónde está la fuga, qué plan encaja con tu momento y cuánto podrías ahorrar vs armar el equipo internamente.
           </p>
           <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/v2/radar">
+            <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
                 Hacer mi auditoría gratis
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/v2/contacto">
+            <Link to="/contacto">
               <ButtonV2
                 variant="outline"
                 size="lg"

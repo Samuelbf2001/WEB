@@ -17,19 +17,19 @@ const industries: Industry[] = [
   {
     label: "Agencias de viaje y turismo",
     Icon: Plane,
-    href: "/v2/industrias/viajes",
+    href: "/industrias/viajes",
     desc: "Pipeline de cotizaciones, CRM con datos de pasajero y cliente, follow-up automático, retención de viajeros frecuentes. Sin que se pierda ni una solicitud.",
   },
   {
     label: "Servicios profesionales con cita",
     Icon: CalendarCheck,
-    href: "/v2/industrias/servicios-con-cita",
+    href: "/industrias/servicios-con-cita",
     desc: "Salud, legal, estético, contable. Agendamiento automático, recordatorios por WhatsApp, no-shows minimizados, expediente de cliente vivo en el CRM.",
   },
   {
     label: "Inmobiliarias y constructoras",
     Icon: Building2,
-    href: "/v2/industrias/inmobiliarias",
+    href: "/industrias/inmobiliarias",
     desc: "Captura de leads desde portales, calificación automática por presupuesto y zona, seguimiento del comprador hasta el cierre, reportes a inversionistas.",
   },
 ];
@@ -100,7 +100,7 @@ export const IndustriesV2 = () => {
           {/* ── closing line ── */}
           <p className="font-lato text-[15px] text-v2-ink-muted text-center max-w-[640px] mx-auto mt-12 v2-reveal v2-d4">
             ¿No estás en estos tres? El{" "}
-            <Link to="/v2/radar" className="text-[#8a7a4f] font-semibold hover:underline">
+            <Link to="/radar" className="text-[#8a7a4f] font-semibold hover:underline">
               Diagnóstico
             </Link>{" "}
             evalúa el encaje. Si tu negocio no calza en el playbook, no lo tomamos — aunque tengas

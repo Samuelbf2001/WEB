@@ -211,7 +211,7 @@ export const TransformacionDigitalV2 = () => {
 
               {/* CTA */}
               <div className="flex-shrink-0 w-full sm:w-auto">
-                <Link to="/v2/soluciones">
+                <Link to="/soluciones">
                   <ButtonV2
                     variant="outline"
                     size="sm"

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight, BarChart3, Bot, Check, ChevronDown, Code2, Database, Globe, Hammer,
@@ -199,6 +199,17 @@ const OpsLanding = () => {
 
   const ref = useScrollReveal<HTMLDivElement>();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  // Atribución de pauta: los UTM de la URL van al dataLayer para cruzarlos con whatsapp_click en GTM
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utm: Record<string, string> = {};
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach((k) => {
+      const v = params.get(k);
+      if (v) utm[k] = v;
+    });
+    if (Object.keys(utm).length) gtm.push("ops_landing_utm", utm);
+  }, []);
 
   return (
     <div className="min-h-screen bg-v2-surface text-v2-ink-body font-lato antialiased">

@@ -48,9 +48,10 @@
 
 ## 3. Técnicas — el ciclo de mejora puede implementarlas (sin tocar contenido)
 
-- **2026-07-03 · UTM passthrough al mensaje de WhatsApp** `[pendiente]` — Leer
-  `utm_campaign`/`utm_content` de la URL en `/v2/ops` y anexarlos al `dataLayer` (no al texto
-  visible del mensaje) para atribuir conversaciones por anuncio.
+- **2026-07-03 · UTM passthrough al dataLayer** `[hecha 2026-07-03]` — `/v2/ops` ahora empuja
+  `utm_source/medium/campaign/content/term` de la URL al `dataLayer` (evento
+  `ops_landing_utm`) para atribuir conversaciones por anuncio. Falta en GTM: guardar esos
+  valores en variables y adjuntarlos al evento `whatsapp_click` (ver sección 2).
 - **2026-07-03 · Precarga del poster del video** `[pendiente]` — Cuando exista el mp4, generar
   un poster estático (primer frame) y pasarlo al `<video poster>` para evitar flash oscuro.
 - **2026-07-03 · `fetchpriority` en logo/hero** `[pendiente]` — Revisar LCP de `/v2/ops` en

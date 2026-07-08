@@ -24,8 +24,9 @@ const openWhatsApp = (source: string, message: string) => {
 
 const MSG_GENERAL =
   "Hola, vengo de la página de Sixteam Ops y quiero saber cómo funcionaría en mi negocio.";
-const MSG_CORE = "Hola, me interesa el plan Ops Core de Sixteam Ops. ¿Podemos hablar?";
-const MSG_GROWTH = "Hola, me interesa el plan Ops Growth de Sixteam Ops. ¿Podemos hablar?";
+const MSG_ESENCIAL = "Hola, me interesa el plan Esencial de Sixteam Ops. ¿Podemos hablar?";
+const MSG_INTEGRAL = "Hola, me interesa el plan Integral de Sixteam Ops. ¿Podemos hablar?";
+const MSG_TOTAL = "Hola, quiero cotizar el plan Total de Sixteam Ops. ¿Podemos hablar?";
 const MSG_ASSESSMENT = "Hola, me interesa el Sixteam Assessment (consultoría). ¿Podemos hablar?";
 const MSG_TRANSFORM = "Hola, me interesa una implementación con Sixteam Transform. ¿Podemos hablar?";
 
@@ -90,6 +91,7 @@ const FounderVideo = () => {
             <video
               ref={videoRef}
               src={FOUNDER_VIDEO_SRC}
+              poster="/videos/fundador-poster.jpg"
               className="absolute inset-0 w-full h-full object-cover"
               playsInline
               controls={playing}
@@ -156,7 +158,7 @@ const faqs = [
   },
   {
     q: "¿Cómo es el contrato?",
-    a: "Contrato anual con pago mensual. El alcance se define antes de empezar y todo el trabajo queda documentado: el conocimiento de tu operación es tuyo, no nuestro.",
+    a: "Plan mensual con aviso de 30 días — no hay letra chica. El alcance se define antes de empezar y todo el trabajo queda documentado: el conocimiento de tu operación es tuyo, no nuestro.",
   },
 ];
 
@@ -198,7 +200,7 @@ const OpsLanding = () => {
   useSEO({
     title: "Sixteam Ops — Tu equipo de tecnología e IA, mes a mes | Sixteam.pro",
     description:
-      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Desde $700 USD/mes.",
+      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Desde $199 USD/mes.",
     noindex: true,
   });
 
@@ -566,92 +568,131 @@ const OpsLanding = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[900px] mx-auto items-start">
-                {/* Ops Core */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 max-w-[1080px] mx-auto items-start">
+                {/* Esencial */}
                 <div className="v2-reveal bg-white border border-v2-border-medium rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
-                  <div className="px-7 pt-7 pb-5 border-b border-v2-border-subtle">
+                  <div className="px-6 pt-6 pb-5 border-b border-v2-border-subtle">
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
-                    <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Core</h3>
+                    <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Esencial</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$700</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$199</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
-                    <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
-                    <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
-                      Para negocios que ya tienen el sistema montado y necesitan que alguien lo
-                      mantenga vivo.
+                    <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
+                      Para emprendedores y negocios pequeños que quieren empezar a trabajar con
+                      tecnología e IA sin complicaciones ni grandes inversiones.
                     </p>
                   </div>
-                  <div className="px-7 py-6 flex flex-col gap-2.5">
+                  <div className="px-6 py-5 flex flex-col gap-2.5">
                     {[
-                      "5 horas de trabajo humano experto / mes",
-                      "1 agente de IA especializado en tu operación",
-                      "GoHighLevel incluida",
-                      "Turnaround 2–4 días hábiles",
-                      "Soporte vía chat IA + correo",
-                      "Onboarding + revisión a 30 días",
+                      "Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos",
+                      "60 créditos / mes — no acumulables",
+                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                      "$30/mes Wallet de mensajería",
                     ].map((t) => <CheckItem key={t} text={t} />)}
                   </div>
-                  <div className="px-7 pb-7">
+                  <div className="px-6 pb-6">
                     <WaButton
-                      source="ops_plan_core"
-                      message={MSG_CORE}
+                      source="ops_plan_esencial"
+                      message={MSG_ESENCIAL}
                       variant="outline"
                       size="md"
                       className="w-full justify-center"
                     >
-                      Empezar con Ops Core <ArrowRight className="h-4 w-4" />
+                      Empezar con Esencial <ArrowRight className="h-4 w-4" />
                     </WaButton>
+                    <p className="font-lato text-[11px] text-v2-ink-muted text-center mt-2.5">
+                      Garantía 30 días money-back
+                    </p>
                   </div>
                 </div>
 
-                {/* Ops Growth — destacado */}
+                {/* Integral — destacado */}
                 <div className="v2-reveal v2-d1 relative bg-white border-2 border-[#d4a853] rounded-2xl overflow-hidden shadow-[0_0_0_4px_rgba(212,168,83,0.10),0_24px_64px_rgba(212,168,83,0.14)]">
                   <div className="absolute -top-0 inset-x-0 flex justify-center">
                     <span className="inline-flex items-center px-4 py-1.5 rounded-b-xl bg-[#d4a853] text-white font-lato font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_12px_rgba(212,168,83,0.40)]">
-                      Recomendado
+                      Mejor valor
                     </span>
                   </div>
-                  <div className="px-7 pt-10 pb-5 border-b border-v2-border-subtle">
+                  <div className="px-6 pt-10 pb-5 border-b border-v2-border-subtle">
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
-                    <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Growth</h3>
+                    <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Integral</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[40px] text-[#8a7a4f] leading-none">$1,500</span>
+                      <span className="font-poppins font-black text-[38px] text-[#8a7a4f] leading-none">$499</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
-                    <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
-                    <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
-                      Para negocios que quieren a Sixteam operando activamente su crecimiento, no
-                      solo manteniendo el sistema.
+                    <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
+                      Para clientes que ya han trabajado con Sixteam y buscan expandir su ecosistema
+                      digital, o empresas que requieren configuraciones y automatizaciones más
+                      complejas.
                     </p>
                   </div>
-                  <div className="px-7 py-6 flex flex-col gap-2.5">
+                  <div className="px-6 py-5 flex flex-col gap-2.5">
                     {[
-                      "20 horas de trabajo humano experto / mes",
-                      "Agente IA + agentes de gestión y métricas",
-                      "GoHighLevel incluida",
-                      "Hasta 3 tareas humanas en paralelo",
-                      "Turnaround prioritario 1–3 días",
-                      "Métricas avanzadas — visibilidad real del negocio",
-                      "Reuniones de growth semanales",
-                      "Análisis proactivo — Sixteam detecta y propone",
-                      "Soporte por canal preferido (WhatsApp / Slack)",
+                      "Agentes IA operando en multi-canal (CRM + WhatsApp + Email) + equipo de especialistas para integraciones, automatizaciones avanzadas y nuevas configuraciones",
+                      "160 créditos / mes — no acumulables",
+                      "Bono Onboarding VIP: llamada de estrategia 1:1 + setup de marca/sistema + fast-track de automatizaciones",
+                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                      "$30/mes Wallet de mensajería",
                     ].map((t) => (
                       <CheckItem key={t} text={<strong className="text-v2-ink-heading font-semibold">{t}</strong>} />
                     ))}
                   </div>
-                  <div className="px-7 pb-7">
+                  <div className="px-6 pb-6">
                     <WaButton
-                      source="ops_plan_growth"
-                      message={MSG_GROWTH}
+                      source="ops_plan_integral"
+                      message={MSG_INTEGRAL}
                       size="md"
                       className="w-full justify-center"
                     >
-                      Empezar con Ops Growth <ArrowRight className="h-4 w-4" />
+                      Empezar con Integral <ArrowRight className="h-4 w-4" />
+                    </WaButton>
+                    <p className="font-lato text-[11px] text-v2-ink-muted text-center mt-2.5">
+                      Garantía 30 días money-back
+                    </p>
+                  </div>
+                </div>
+
+                {/* Total */}
+                <div className="v2-reveal v2-d2 bg-white border border-v2-border-medium rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                  <div className="px-6 pt-6 pb-5 border-b border-v2-border-subtle">
+                    <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
+                    <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Total</h3>
+                    <div className="flex items-baseline gap-1.5 mt-2 flex-wrap">
+                      <span className="font-poppins font-black text-[30px] text-v2-ink-heading leading-none">Desde $1,200</span>
+                      <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
+                    </div>
+                    <p className="font-lato text-[11px] text-v2-ink-muted mt-1">A cotizar según requerimientos</p>
+                    <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
+                      Para clientes que ya tienen a Sixteam como su equipo de tecnología permanente.
+                      Capacidad total, PM dedicado y estrategia continua de crecimiento.
+                    </p>
+                  </div>
+                  <div className="px-6 py-5 flex flex-col gap-2.5">
+                    {[
+                      "Agentes IA de alto volumen en todos tus sistemas + PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales",
+                      "Desde 400 créditos / mes — acumulables según solicitud",
+                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                      "$30/mes Wallet de mensajería",
+                    ].map((t) => <CheckItem key={t} text={t} />)}
+                  </div>
+                  <div className="px-6 pb-6">
+                    <WaButton
+                      source="ops_plan_total"
+                      message={MSG_TOTAL}
+                      variant="navy"
+                      size="md"
+                      className="w-full justify-center"
+                    >
+                      Cotizar plan Total <ArrowRight className="h-4 w-4" />
                     </WaButton>
                   </div>
                 </div>
               </div>
+
+              <p className="v2-reveal v2-d3 text-center font-lato text-[12px] text-v2-ink-muted mt-6">
+                Cada solicitud descuenta créditos según su complejidad.
+              </p>
 
               <p className="v2-reveal v2-d2 text-center font-lato text-[13px] text-v2-ink-muted mt-8">
                 ¿No sabes cuál te corresponde? Escríbenos y lo definimos en la llamada de 30 minutos.

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, BarChart3, Bot, Check, ChevronDown, Code2, Database, Globe, Hammer,
+  ArrowRight, BarChart3, Bot, CalendarDays, Check, ChevronDown, Code2, Database, Globe, Hammer,
   Mail, Megaphone, MessageCircle, Package, Phone, Play, Plug, Radar, Search, Users, Workflow,
 } from "lucide-react";
 import Container from "@/components/v2/Container";
@@ -13,8 +13,11 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useSEO } from "@/hooks/useSEO";
 import { gtm } from "@/lib/gtm";
 
-/* ── WhatsApp — única acción de conversión de la landing ─────────── */
+/* ── Acciones de conversión de la landing ─────────── */
 const WA_PHONE = "573004188522";
+const BOOKING_IFRAME_SRC = "https://web.sixteam.pro/widget/booking/9Fq9Yo6eGNv9cnc7YRc2";
+const BOOKING_IFRAME_ID = "9Fq9Yo6eGNv9cnc7YRc2_1783637690382";
+const FORM_EMBED_SCRIPT_SRC = "https://web.sixteam.pro/js/form_embed.js";
 
 const openWhatsApp = (source: string, message: string) => {
   gtm.whatsappClick(source);
@@ -29,15 +32,6 @@ const MSG_INTEGRAL = "Hola, me interesa el plan Integral de Sixteam Ops. ¿Podem
 const MSG_TOTAL = "Hola, quiero cotizar el plan Total de Sixteam Ops. ¿Podemos hablar?";
 const MSG_ASSESSMENT = "Hola, me interesa el Sixteam Assessment (consultoría). ¿Podemos hablar?";
 const MSG_TRANSFORM = "Hola, me interesa una implementación con Sixteam Transform. ¿Podemos hablar?";
-
-/* Sofía — agente de IA de voz (GHL Voice AI).
-   Número actual de EE. UU.; reemplazar por el número local CO cuando exista. */
-const SOFIA_PHONE = "+16627057434";
-
-const callSofia = (source: string) => {
-  gtm.ctaClick("sofia_call", source);
-  window.location.href = `tel:${SOFIA_PHONE}`;
-};
 
 /* Video vertical del fundador — colocar el archivo en public/videos/fundador-sixteam.mp4.
    Mientras el archivo no exista, el slot muestra la foto real del equipo fundador. */
@@ -68,6 +62,20 @@ const WaButton: React.FC<{
     onClick={() => openWhatsApp(source, message)}
   >
     {children}
+  </ButtonV2>
+);
+
+const AgendaButton: React.FC<{
+  source: string;
+  variant?: "primary" | "outline" | "navy";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  children: React.ReactNode;
+}> = ({ source, variant = "outline", size = "lg", className, children }) => (
+  <ButtonV2 asChild variant={variant} size={size} className={className}>
+    <a href="#agenda" onClick={() => gtm.ctaClick("booking_ops", source)}>
+      {children}
+    </a>
   </ButtonV2>
 );
 
@@ -193,7 +201,7 @@ const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => v
 
 /* ═══════════════════════════════════════════════════════════════════
    Landing de pauta — Sixteam Ops
-   Sin navegación (cero fugas), un solo destino de conversión (WhatsApp),
+   Sin navegación (cero fugas), acciones de conversión claras (agenda y WhatsApp),
    prueba social temprana, precios transparentes, FAQ anti-objeción.
    ═══════════════════════════════════════════════════════════════════ */
 const OpsLanding = () => {
@@ -218,6 +226,17 @@ const OpsLanding = () => {
     if (Object.keys(utm).length) gtm.push("ops_landing_utm", utm);
   }, []);
 
+  useEffect(() => {
+    const script = document.querySelector<HTMLScriptElement>(`script[src="${FORM_EMBED_SCRIPT_SRC}"]`);
+    if (script) return;
+
+    const embedScript = document.createElement("script");
+    embedScript.src = FORM_EMBED_SCRIPT_SRC;
+    embedScript.type = "text/javascript";
+    embedScript.async = true;
+    document.body.appendChild(embedScript);
+  }, []);
+
   return (
     <div className="min-h-screen bg-v2-surface text-v2-ink-body font-lato antialiased">
 
@@ -233,10 +252,10 @@ const OpsLanding = () => {
               Sixteam Ops
             </span>
           </div>
-          <WaButton source="ops_header" size="sm">
-            <MessageCircle className="h-3.5 w-3.5" />
-            WhatsApp
-          </WaButton>
+          <AgendaButton source="ops_header" size="sm" variant="navy">
+            <CalendarDays className="h-3.5 w-3.5" />
+            Agendar
+          </AgendaButton>
         </Container>
       </header>
 
@@ -287,15 +306,10 @@ const OpsLanding = () => {
                     Hablar con un experto por WhatsApp
                     <ArrowRight className="h-4 w-4" />
                   </WaButton>
-                  <ButtonV2
-                    variant="outline"
-                    size="lg"
-                    className="w-full sm:w-auto"
-                    onClick={() => callSofia("ops_hero")}
-                  >
-                    <Phone className="h-4 w-4" />
-                    Llama y habla con Sofía (IA)
-                  </ButtonV2>
+                  <AgendaButton source="ops_hero" className="w-full sm:w-auto">
+                    <CalendarDays className="h-4 w-4" />
+                    Agendar llamada
+                  </AgendaButton>
                 </div>
                 <p className="font-lato text-[13px] text-v2-ink-muted">
                   Respondemos en horas, en horario laboral Colombia · Sin compromiso
@@ -526,22 +540,17 @@ const OpsLanding = () => {
                   ¿Prefieres hablar ya mismo?
                 </p>
                 <p className="font-lato text-[14px] text-v2-ink-muted mt-1.5">
-                  Escríbenos por WhatsApp o llama a Sofía, nuestra agente de IA de voz.
+                  Escríbenos por WhatsApp o reserva una llamada corta en nuestra agenda.
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
                   <WaButton source="ops_mid" size="md" className="w-full sm:w-auto">
                     <MessageCircle className="h-4 w-4" />
                     Hablar por WhatsApp
                   </WaButton>
-                  <ButtonV2
-                    variant="outline"
-                    size="md"
-                    className="w-full sm:w-auto"
-                    onClick={() => callSofia("ops_mid")}
-                  >
-                    <Phone className="h-4 w-4" />
-                    Llamar a Sofía
-                  </ButtonV2>
+                  <AgendaButton source="ops_mid" size="md" className="w-full sm:w-auto">
+                    <CalendarDays className="h-4 w-4" />
+                    Agendar llamada
+                  </AgendaButton>
                 </div>
               </div>
             </Container>
@@ -841,19 +850,59 @@ const OpsLanding = () => {
                   Hablar con un experto por WhatsApp
                   <ArrowRight className="h-4 w-4" />
                 </WaButton>
-                <ButtonV2
-                  variant="outline"
+                <AgendaButton
+                  source="ops_final"
                   size="lg"
                   className="w-full sm:w-auto !text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
-                  onClick={() => callSofia("ops_final")}
                 >
-                  <Phone className="h-4 w-4" />
-                  Llamar y hablar con Sofía
-                </ButtonV2>
+                  <CalendarDays className="h-4 w-4" />
+                  Agendar llamada
+                </AgendaButton>
               </div>
               <p className="v2-reveal v2-d4 font-lato text-[13px] text-white/40 mt-6">
                 Respondemos en horas, en horario laboral Colombia.
               </p>
+            </Container>
+          </Section>
+
+          {/* ── AGENDA ── */}
+          <Section id="agenda" surface="default" size="default" className="scroll-mt-24">
+            <Container size="wide">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] gap-10 lg:gap-14 items-start">
+                <div className="v2-reveal lg:sticky lg:top-28">
+                  <Eyebrow variant="sand">Agenda</Eyebrow>
+                  <h2
+                    className="font-poppins font-bold text-v2-ink-heading mt-3"
+                    style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
+                  >
+                    Reserva una llamada con Sixteam Ops.
+                  </h2>
+                  <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
+                    Elige el horario que mejor te funcione. Revisamos tu operación actual, prioridades
+                    y el plan más razonable para empezar sin sobredimensionar el proyecto.
+                  </p>
+                  <div className="mt-6 flex flex-col gap-3 text-[14px] text-v2-ink-muted">
+                    {[
+                      "30 minutos de diagnóstico inicial",
+                      "Sin compromiso ni pitch agresivo",
+                      "Horario laboral Colombia",
+                    ].map((item) => (
+                      <CheckItem key={item} text={item} />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="v2-reveal v2-d1 calendar-embed-wrapper bg-white">
+                  <iframe
+                    src={BOOKING_IFRAME_SRC}
+                    id={BOOKING_IFRAME_ID}
+                    title="Agenda de Sixteam Ops"
+                    style={{ width: "100%", border: "none", overflow: "hidden" }}
+                    scrolling="no"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </Container>
           </Section>
 
@@ -882,10 +931,10 @@ const OpsLanding = () => {
 
       {/* ── Barra CTA fija — solo móvil ── */}
       <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-v2-border-subtle px-4 py-3">
-        <WaButton source="ops_sticky" size="md" className="w-full justify-center">
-          <MessageCircle className="h-4 w-4" />
-          Hablar por WhatsApp
-        </WaButton>
+        <AgendaButton source="ops_sticky" size="md" variant="navy" className="w-full justify-center">
+          <CalendarDays className="h-4 w-4" />
+          Agendar llamada
+        </AgendaButton>
       </div>
 
     </div>

@@ -10,7 +10,7 @@ const industries = [
     icon: Plane,
     name: "Agencias de viaje",
     desc: "Operamos pipelines de cotización, seguimientos post-venta y operación de WhatsApp Business.",
-    href: "/industrias/agencias-de-viaje",
+    href: "/industrias/viajes",
     live: true,
   },
   {
@@ -22,9 +22,9 @@ const industries = [
   },
   {
     icon: Wrench,
-    name: "Servicios B2B",
+    name: "Servicios con cita",
     desc: "Pipeline de proyectos, automatización de propuestas y reportes de revenue por línea de servicio.",
-    href: "/industrias/servicios-generales",
+    href: "/industrias/servicios-con-cita",
     live: true,
   },
   {

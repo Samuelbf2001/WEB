@@ -81,20 +81,20 @@ const agentPills = ["Aura", "Carlos", "Laura", "Emma", "Daniel", "Diana"];
 
 const plans = [
   {
-    name: "Arranque",
-    price: "$1,500",
-    desc: "Para empresas que están implementando su primer sistema de revenue.",
+    name: "Esencial",
+    price: "$200",
+    desc: "Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA.",
   },
   {
-    name: "Core",
-    price: "$3,000",
-    desc: "Operación completa de CRM, automatizaciones y agentes IA.",
+    name: "Integral",
+    price: "$499",
+    desc: "Operación multi-canal con CRM, automatizaciones, integraciones y agentes IA.",
     featured: true,
   },
   {
-    name: "Plus",
-    price: "$5,500",
-    desc: "RevOps completo con pauta, integraciones avanzadas y soporte extendido.",
+    name: "Total",
+    price: "Desde $1,200",
+    desc: "Capacidad dedicada, PM y estrategia continua para operaciones de mayor volumen.",
   },
 ];
 

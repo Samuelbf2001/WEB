@@ -41,9 +41,9 @@ CÓMO FUNCIONA (4 pasos):
 4. Cliente cerrado: activación de recordatorios de renovación y programa de referidos
 
 PLANES Y PRECIOS:
-- Sixteam Inbox + IA: $180 USD/mes + $360 USD implementación. Bandeja omnicanal, IA 24/7, captura de solicitudes, 2 usuarios
-- CRM Sixteam Core: $240 USD/mes + $720 USD implementación. Todo lo anterior + pipeline de propuestas, automatizaciones de seguimiento y renovación, secuencias de cobro, pipeline de referidos, 3 usuarios
-- RevOps Externo: desde $180 USD/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica
+- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
+- Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 RESULTADOS ESPERADOS: +28% tasa de cierre de propuestas, -60% tiempo administrativo, crecimiento del 40% sin añadir personal, nunca más un seguimiento olvidado.
 
@@ -503,19 +503,19 @@ const ServiciosGenerales = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 flex flex-col hover:border-[#1d70a2]/60 transition-all duration-300">
               <div className="mb-6">
-                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inbox + IA</p>
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Esencial</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$180</span>
+                  <span className="font-poppins font-black text-white text-4xl">$200</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/60 text-xs">+ $300 USD implementación única</p>
+                <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 60 créditos</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
                   'Bandeja omnicanal (WhatsApp, email, IG, web)',
                   'Agente IA 24/7 para primera atención',
                   'Captura y asignación de solicitudes',
-                  '2 usuarios incluidos',
+                  'Wallet inicial de mensajería',
                   'Soporte en español',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
@@ -534,21 +534,21 @@ const ServiciosGenerales = () => {
                 <span className="bg-[#00bfa5] text-[#0a2342] text-xs font-poppins font-bold px-4 py-1 rounded-full">MÁS POPULAR</span>
               </div>
               <div className="mb-6">
-                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">CRM Core</p>
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Integral</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$240</span>
+                  <span className="font-poppins font-black text-white text-4xl">$499</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/60 text-xs">+ $600 USD implementación única</p>
+                <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 160 créditos</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
-                  'Todo lo de Inbox + IA',
+                  'Todo lo de Ops Esencial',
                   'Pipeline de propuestas con seguimiento automático',
                   'Automatización de renovaciones y recurrencia',
                   'Secuencias de cobro automáticas',
                   'Pipeline de referidos rastreable',
-                  '3 usuarios incluidos',
+                  'Onboarding VIP incluido',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
                     <CheckCircle className="w-4 h-4 text-[#00bfa5] mt-0.5 flex-shrink-0" />
@@ -563,20 +563,20 @@ const ServiciosGenerales = () => {
 
             <div className="bg-gradient-to-br from-[#0d2d52] to-[#0a2342] border border-[#1d70a2]/30 rounded-2xl p-8 flex flex-col hover:border-[#1d70a2]/60 transition-all duration-300">
               <div className="mb-6">
-                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">RevOps Externo</p>
+                <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Total</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$180</span>
+                  <span className="font-poppins font-black text-white text-4xl">$1,200</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/60 text-xs">Desde · operación mensual incluida</p>
+                <p className="text-[#e0e0e0]/60 text-xs">Desde · a cotizar según requerimientos</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
-                  'CRM operado por el equipo Sixteam',
-                  'Seguimiento de propuestas y renovaciones',
-                  'Mejoras proactivas cada mes',
-                  'SLA de respuesta 4 horas',
-                  'Reunión estratégica mensual',
+                  'Desde 400 créditos mensuales',
+                  'PM dedicado',
+                  'Equipo completo de especialistas',
+                  'Automatización avanzada de renovaciones',
+                  'Llamadas estratégicas semanales',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-[#e0e0e0]">
                     <CheckCircle className="w-4 h-4 text-[#00bfa5] mt-0.5 flex-shrink-0" />

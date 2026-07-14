@@ -23,7 +23,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "¿Cuánto cuesta operar con ustedes mes a mes?",
-    a: "Después del Diagnóstico, los planes de Ops van desde $1,500 USD/mes (Arranque, hasta $1M de facturación), $3,000/mes (Core, $1M–$3M) y $5,500/mes (Plus, $3M–$8M). Precio fijo, público, sin cotizaciones a medida. Facturamos mensual; contrato anual porque un BPO necesita tiempo para estabilizarse.",
+    a: "Después del Diagnóstico, los planes de Ops son Esencial (regular $300 USD/mes, promo desde $200 USD/mes por 20 cupos), Integral ($499 USD/mes) y Total (desde $1,200 USD/mes, a cotizar según requerimientos). Integral tiene precio público y Total se define por alcance. Facturamos mensual y puedes ajustar el plan con 30 días de aviso.",
   },
   {
     q: "¿En qué se diferencian de una agencia de marketing o CRM?",
@@ -70,7 +70,7 @@ export const FaqV2 = () => {
                 ¿No ves tu pregunta? Escríbenos por WhatsApp. Respondemos el mismo día — somos Samuel o Ernesto del otro lado, no un chatbot ni un SDR.
               </p>
               <div className="mt-6">
-                <Link to="/contacto">
+                <Link to="/contacto#agenda">
                   <ButtonV2 variant="outline" size="md">
                     Solicitar Diagnóstico — $2,500
                     <ArrowRight className="h-4 w-4" />

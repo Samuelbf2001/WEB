@@ -117,7 +117,7 @@ export const PricingV2 = () => {
       name: "Esencial",
       topBadge: null,
       highlight: false,
-      price: { mensual: 199, anual: 165 },
+      price: { mensual: 200, anual: 170 },
       priceCustom: null,
       tagline: "Para emprendedores y negocios pequeños que quieren empezar a trabajar con tecnología e IA sin complicaciones ni grandes inversiones.",
       teamDesc: "Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos.",

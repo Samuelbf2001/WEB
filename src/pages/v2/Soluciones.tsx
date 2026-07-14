@@ -76,9 +76,9 @@ const Soluciones = () => {
             {/* Journey pills */}
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-2">
               {[
-                { n: "01", label: "Assessment", sub: "$1,200 · único",     cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
+                { n: "01", label: "Assessment", sub: "$2,500 · único",     cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
                 { n: "02", label: "Transform",  sub: "Desde $1,500 · proyecto", cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
-                { n: "03", label: "Ops ⭐",     sub: "Desde $700/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
+                { n: "03", label: "Ops ⭐",     sub: "Promo desde $200/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
               ].map((step, i) => (
                 <div key={step.n} className="flex items-center gap-2">
                   <div className={`flex flex-col items-center px-5 py-3.5 rounded-2xl border transition-transform hover:-translate-y-0.5 duration-200 ${step.cls}`}>
@@ -106,10 +106,10 @@ const Soluciones = () => {
       </Section>
 
       {/* ── SOLUCIÓN 1: ASSESSMENT ────────────────────────────────── */}
-      <Section surface="cream" size="default">
+      <Section surface="cream" size="default" id="assessment" className="scroll-mt-24">
         <Container>
           <div>
-            <SectionBadge n="Solución 01" label="Assessment · $1,200 USD · ~10 días · pago único" color="blue" />
+            <SectionBadge n="Solución 01" label="Assessment · $2,500 USD · 10-14 días · pago único" color="blue" />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
               {/* Left */}
@@ -196,7 +196,7 @@ const Soluciones = () => {
       </Section>
 
       {/* ── SOLUCIÓN 2: TRANSFORM ─────────────────────────────────── */}
-      <Section surface="default" size="default">
+      <Section surface="default" size="default" id="transform" className="scroll-mt-24">
         <Container>
           <div>
             <SectionBadge n="Solución 02" label="Transform · Desde $1,500 USD · pago por proyecto" color="teal" />
@@ -291,7 +291,7 @@ const Soluciones = () => {
       </Section>
 
       {/* ── SOLUCIÓN 3: OPS ★ — LIGHT THEME ─────────────────────── */}
-      <Section surface="alt" size="default">
+      <Section surface="alt" size="default" id="ops" className="scroll-mt-24">
         <Container>
           <div id="sixteam-ops">
             {/* Section label con badge destacado */}
@@ -301,7 +301,7 @@ const Soluciones = () => {
                 <span className="font-lato text-[10px] font-bold uppercase tracking-widest">Solución 03 · La estrella</span>
               </div>
               <div className="h-px flex-1 bg-v2-border-subtle" />
-              <span className="font-lato text-[12px] text-v2-ink-muted">Recurrente mensual · contrato anual</span>
+              <span className="font-lato text-[12px] text-v2-ink-muted">Recurrente mensual · sin permanencia</span>
             </div>
 
             {/* Header */}
@@ -349,42 +349,40 @@ const Soluciones = () => {
             </div>
 
             {/* Plan cards — light */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-              {/* Ops Core */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+              {/* Ops Esencial */}
               <div className="bg-white border border-v2-border-medium rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
                 <div className="px-7 pt-7 pb-5 border-b border-v2-border-subtle">
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
-                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Core</h3>
+                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Esencial</h3>
                   <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$700</span>
+                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$200</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
-                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
+                  <p className="font-lato text-[12px] text-v2-accent-teal-deep font-semibold mt-1">promo limitada · regular $300 · 20 cupos</p>
                   <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
-                    Para negocios que ya tienen el sistema montado y necesitan que alguien lo mantenga vivo.
+                    Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA sin grandes inversiones.
                   </p>
                 </div>
                 <div className="px-7 py-6 flex flex-col gap-2.5">
                   {[
-                    "5 horas de trabajo humano experto / mes",
-                    "1 agente de IA especializado en tu operación",
-                    "GoHighLevel incluida",
-                    "1 tarea humana en progreso a la vez",
-                    "Turnaround 2–4 días hábiles",
-                    "Soporte vía chat IA + correo",
-                    "Onboarding + revisión a 30 días",
+                    "Un agente IA activo en tu canal más urgente",
+                    "60 créditos / mes — no acumulables",
+                    "Especialista humano dentro de tu plan de créditos",
+                    "Plataforma CRM all-in-one incluida",
+                    "$30/mes Wallet de mensajería",
                   ].map((i) => <CheckItem key={i} text={i} />)}
                 </div>
                 <div className="px-7 pb-7">
                   <Link to="/contacto">
                     <ButtonV2 variant="outline" size="md" className="w-full justify-center">
-                      Empezar con Ops Core <ArrowRight className="h-4 w-4" />
+                      Empezar con Esencial <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
                   </Link>
                 </div>
               </div>
 
-              {/* Ops Growth — featured */}
+              {/* Ops Integral — featured */}
               <div className="relative bg-white border-2 border-v2-accent-teal rounded-2xl overflow-hidden shadow-[0_0_0_4px_rgba(0,191,165,0.08),0_16px_48px_rgba(0,191,165,0.12)]">
                 <div className="absolute -top-4 inset-x-0 flex justify-center">
                   <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-v2-accent-teal text-white font-lato font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_16px_rgba(0,191,165,0.35)]">
@@ -393,34 +391,62 @@ const Soluciones = () => {
                 </div>
                 <div className="px-7 pt-10 pb-5 border-b border-v2-border-subtle mt-1">
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
-                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Growth</h3>
+                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Integral</h3>
                   <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-poppins font-black text-[40px] text-v2-accent-teal-deep leading-none">$1,500</span>
+                    <span className="font-poppins font-black text-[40px] text-v2-accent-teal-deep leading-none">$499</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
-                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">contrato anual · pago mensual</p>
+                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">pago mensual · sin permanencia</p>
                   <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
-                    Para negocios que quieren a Sixteam operando activamente su crecimiento, no solo manteniendo el sistema.
+                    Para empresas que requieren configuraciones, integraciones y automatizaciones más complejas.
                   </p>
                 </div>
                 <div className="px-7 py-6 flex flex-col gap-2.5">
                   {[
-                    { t: "20 horas de trabajo humano experto / mes", bold: true },
-                    { t: "Agente IA + agentes de gestión y métricas", bold: true },
-                    { t: "GoHighLevel incluida", bold: false },
-                    { t: "Hasta 3 tareas humanas en paralelo", bold: true },
-                    { t: "Turnaround prioritario 1–3 días", bold: true },
-                    { t: "Métricas avanzadas — visibilidad real del negocio", bold: true },
-                    { t: "Reuniones de growth semanales", bold: true },
-                    { t: "Segundo Cerebro: baúl vivo del conocimiento", bold: true },
-                    { t: "Análisis proactivo — Sixteam detecta y propone", bold: true },
-                    { t: "Soporte por canal preferido (WhatsApp / Slack)", bold: true },
+                    { t: "Agentes IA operando en multi-canal", bold: true },
+                    { t: "160 créditos / mes — no acumulables", bold: true },
+                    { t: "Integraciones, automatizaciones avanzadas y nuevas configuraciones", bold: true },
+                    { t: "Bono Onboarding VIP", bold: true },
+                    { t: "Plataforma CRM all-in-one incluida", bold: false },
+                    { t: "$30/mes Wallet de mensajería", bold: true },
                   ].map((i) => <CheckItem key={i.t} text={i.bold ? <strong className="text-v2-ink-heading">{i.t}</strong> : i.t} />)}
                 </div>
                 <div className="px-7 pb-7">
                   <Link to="/contacto">
                     <ButtonV2 variant="primary" size="md" className="w-full justify-center shadow-[0_8px_24px_rgba(0,191,165,0.25)]">
-                      Empezar con Ops Growth <ArrowRight className="h-4 w-4" />
+                      Empezar con Integral <ArrowRight className="h-4 w-4" />
+                    </ButtonV2>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Ops Total */}
+              <div className="bg-white border border-v2-border-medium rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(10,35,66,0.06)]">
+                <div className="px-7 pt-7 pb-5 border-b border-v2-border-subtle">
+                  <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
+                  <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Total</h3>
+                  <div className="flex items-baseline gap-1.5 mt-2 flex-wrap">
+                    <span className="font-poppins font-black text-[32px] text-v2-ink-heading leading-none">Desde $1,200</span>
+                    <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
+                  </div>
+                  <p className="font-lato text-[12px] text-v2-ink-muted mt-1">a cotizar según requerimientos</p>
+                  <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
+                    Para clientes que tienen a Sixteam como su equipo de tecnología permanente.
+                  </p>
+                </div>
+                <div className="px-7 py-6 flex flex-col gap-2.5">
+                  {[
+                    "Agentes IA de alto volumen en todos tus sistemas",
+                    "Desde 400 créditos / mes — acumulables según solicitud",
+                    "PM dedicado y equipo completo de especialistas",
+                    "Llamadas estratégicas semanales",
+                    "Plataforma CRM all-in-one incluida",
+                  ].map((i) => <CheckItem key={i} text={i} />)}
+                </div>
+                <div className="px-7 pb-7">
+                  <Link to="/contacto">
+                    <ButtonV2 variant="navy" size="md" className="w-full justify-center">
+                      Cotizar Ops Total <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
                   </Link>
                 </div>
@@ -434,20 +460,16 @@ const Soluciones = () => {
               </p>
               <div className="grid grid-cols-[1fr_auto_auto] gap-4 mb-3 pb-3 border-b border-v2-border-subtle">
                 <span />
-                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted text-right w-[110px]">Ops Core</span>
-                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep text-right w-[130px]">Ops Growth</span>
+                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted text-right w-[110px]">Ops Esencial</span>
+                <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep text-right w-[130px]">Ops Integral</span>
               </div>
-              <OpsRow label="Precio mensual"                  base="$700 USD"         avanzado="$1,500 USD" />
-              <OpsRow label="Horas humanas expertas / mes"    base="5 h"              avanzado="20 h"        highlight />
-              <OpsRow label="Agente de IA"                    base="1 especializado"  avanzado="+ gestión y métricas" />
-              <OpsRow label="Tareas humanas en paralelo"      base="1 a la vez"       avanzado="Hasta 3"    highlight />
-              <OpsRow label="Turnaround"                      base="2–4 días"         avanzado="1–3 días" />
-              <OpsRow label="Métricas avanzadas"              base="—"                avanzado="Sí"         highlight />
-              <OpsRow label="Reuniones de growth"             base="—"                avanzado="Semanales" />
-              <OpsRow label="Segundo Cerebro"                 base="—"                avanzado="Construido y mantenido" highlight />
-              <OpsRow label="Análisis proactivo"              base="—"                avanzado="Sí" />
-              <OpsRow label="Soporte"                         base="Chat IA + correo" avanzado="Canal preferido" highlight />
-              <OpsRow label="GoHighLevel incluida"            base="Sí"               avanzado="Sí" />
+              <OpsRow label="Precio mensual"                  base="$200 USD promo"         avanzado="$499 USD" />
+              <OpsRow label="Créditos / mes"                  base="60"               avanzado="160"       highlight />
+              <OpsRow label="Agentes de IA"                   base="1 canal"          avanzado="Multi-canal" />
+              <OpsRow label="Configuraciones avanzadas"       base="Según créditos"   avanzado="Incluidas" highlight />
+              <OpsRow label="Bono Onboarding VIP"             base="—"                avanzado="Sí" />
+              <OpsRow label="Plataforma CRM incluida"         base="Sí"               avanzado="Sí"        highlight />
+              <OpsRow label="Wallet de mensajería"            base="$30/mes"          avanzado="$30/mes" />
             </div>
           </div>
         </Container>

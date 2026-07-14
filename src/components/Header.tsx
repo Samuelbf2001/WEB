@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,6 +8,7 @@ const Header = () => {
   const [mobileExpandedItem, setMobileExpandedItem] = useState<string | null>(null);
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { name: 'Inicio', path: '/' },
@@ -52,6 +53,17 @@ const Header = () => {
 
   const toggleMobileExpand = (name: string) => {
     setMobileExpandedItem(prev => (prev === name ? null : name));
+  };
+
+  const goToSchedule = () => {
+    const agenda = document.getElementById('agenda-asesoria');
+
+    if (agenda) {
+      agenda.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    navigate('/contacto');
   };
 
   return (
@@ -126,7 +138,7 @@ const Header = () => {
             {/* CTA solo desktop */}
             <a
               href="#agenda-asesoria"
-              onClick={(e) => { e.preventDefault(); document.getElementById('agenda-asesoria')?.scrollIntoView({ behavior: 'smooth' }); }}
+              onClick={(e) => { e.preventDefault(); goToSchedule(); }}
               className="hidden lg:inline-flex items-center gap-2 bg-[#00bfa5] hover:bg-[#00a08a] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
             >
               Agenda tu asesoría
@@ -207,7 +219,7 @@ const Header = () => {
               <div className="mt-3 pt-3 border-t border-white/10">
                 <a
                   href="#agenda-asesoria"
-                  onClick={(e) => { e.preventDefault(); closeMobile(); setTimeout(() => document.getElementById('agenda-asesoria')?.scrollIntoView({ behavior: 'smooth' }), 300); }}
+                  onClick={(e) => { e.preventDefault(); closeMobile(); setTimeout(goToSchedule, 300); }}
                   className="flex items-center justify-center gap-2 bg-[#00bfa5] hover:bg-[#00a08a] text-white text-sm font-semibold px-4 py-3 rounded-lg transition-colors"
                 >
                   Agenda tu asesoría

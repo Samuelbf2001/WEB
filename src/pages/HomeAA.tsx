@@ -88,7 +88,7 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
 const HomeAA = () => {
   useSEO({
     title: 'Sixteam | Tu Equipo de Tecnología & IA, Operando 24/7',
-    description: 'Implementación y operación continua de la tecnología e IA de tu negocio — CRM, WhatsApp, automatizaciones, agentes IA, pauta. Para empresas $300K-$8M USD. Desde $1,000/mes.',
+    description: 'Implementación y operación continua de la tecnología e IA de tu negocio — CRM, WhatsApp, automatizaciones, agentes IA, pauta. Promo desde $200 USD/mes.',
     canonical: 'https://sixteam.pro',
     ogUrl: 'https://sixteam.pro',
   });
@@ -777,72 +777,64 @@ const HomeAA = () => {
     const planes = [
       {
         id: 'arranque',
-        nombre: 'Arranque',
+        nombre: 'Esencial',
         badge: null,
         highlight: false,
-        para: 'Empresas $300k–$1M ARR',
-        precioMensual: 1500,
-        precioAnual: 1250,
-        frentes: '1 frente de RevOps operado',
+        para: 'Emprendedores y negocios pequeños',
+        precioMensual: 200,
+        precioAnual: 165,
+        frentes: '1 agente IA activo',
         items: [
-          { label: 'Estrategia & chat IA (Aura, Sam)', value: 'Ilimitado' },
-          { label: 'Agentes IA', value: 'Operación esencial (leads + follow-up)' },
-          { label: 'Velocidad de respuesta', value: '2–4 días hábiles' },
-          { label: 'Gestión de cuenta', value: 'Auto-gestionado' },
-          { label: 'Cadencia estratégica', value: 'Vía add-on "Lab"' },
-          { label: 'Canal de comunicación', value: 'Email + chat IA' },
+          { label: 'Créditos mensuales', value: '60 no acumulables' },
+          { label: 'Agente IA', value: 'Canal más urgente' },
+          { label: 'Equipo humano', value: 'Especialista dentro del plan de créditos' },
+          { label: 'Solicitudes', value: 'Se descuentan según complejidad' },
           { label: 'Plataforma CRM all-in-one', value: 'Incluida (valor $97/mes)' },
           { label: 'Wallet mensajería (SMS/email/voz)', value: '$30/mes' },
-          { label: 'Onboarding', value: 'Kickoff 1:1 + check-in 30 días' },
+          { label: 'Onboarding', value: 'Activación inicial guiada' },
         ],
-        cta: 'Empezar con Arranque',
+        cta: 'Empezar con Esencial',
         ctaVariant: 'outline' as const,
       },
       {
         id: 'core',
-        nombre: 'Core',
+        nombre: 'Integral',
         badge: 'Más elegido',
         highlight: true,
-        para: 'Empresas $1M–$3M ARR',
-        precioMensual: 3000,
-        precioAnual: 2500,
-        frentes: '3 frentes de RevOps en paralelo',
-        subtitulo: '3× capacidad de Arranque',
+        para: 'Operaciones multi-canal',
+        precioMensual: 499,
+        precioAnual: 415,
+        frentes: 'Agentes IA multi-canal',
+        subtitulo: 'Más capacidad que Esencial',
         items: [
-          { label: 'Estrategia & chat IA', value: 'Ilimitado' },
-          { label: 'Agentes IA', value: 'Operación estándar (multi-canal)' },
-          { label: 'Velocidad de respuesta', value: '2–4 días hábiles' },
-          { label: 'Gestión de cuenta', value: 'Auto-gestionado' },
-          { label: 'Cadencia estratégica', value: 'Vía add-on "Lab"' },
-          { label: 'Canal de comunicación', value: 'Email + chat IA' },
+          { label: 'Créditos mensuales', value: '160 no acumulables' },
+          { label: 'Canales operados', value: 'CRM + WhatsApp + Email' },
+          { label: 'Equipo humano', value: 'Especialistas para integraciones y automatizaciones' },
+          { label: 'Onboarding VIP', value: 'Estrategia 1:1 + setup + fast-track' },
           { label: 'Plataforma CRM all-in-one', value: 'Incluida' },
           { label: 'Wallet mensajería', value: '$30/mes' },
-          { label: 'Onboarding', value: 'Setup de marca/sistema hecho por nosotros' },
         ],
-        cta: 'Empezar con Core',
+        cta: 'Empezar con Integral',
         ctaVariant: 'primary' as const,
       },
       {
         id: 'plus',
-        nombre: 'Plus',
+        nombre: 'Total',
         badge: null,
         highlight: false,
-        para: 'Empresas $3M–$8M ARR',
-        precioMensual: 5500,
-        precioAnual: 4580,
-        frentes: '5 frentes de RevOps en paralelo',
+        para: 'Operaciones de mayor volumen',
+        precioMensual: 1200,
+        precioAnual: 1200,
+        frentes: 'Equipo dedicado',
         items: [
-          { label: 'Estrategia & chat IA', value: 'Ilimitado' },
-          { label: 'Agentes IA', value: 'Alto volumen (multi-área)' },
-          { label: 'Velocidad de respuesta', value: 'Prioridad 1–3 días' },
-          { label: 'Gestión de cuenta', value: 'PM dedicado en tu workflow' },
-          { label: 'Cadencia estratégica', value: 'Llamada 1:1 semanal' },
-          { label: 'Canal de comunicación', value: 'Tu app (Slack/Teams/WhatsApp)' },
+          { label: 'Créditos mensuales', value: 'Desde 400, acumulables según solicitud' },
+          { label: 'Agentes IA', value: 'Alto volumen en todos tus sistemas' },
+          { label: 'Equipo humano', value: 'PM dedicado + equipo completo' },
+          { label: 'Estrategia', value: 'Llamadas estratégicas semanales' },
           { label: 'Plataforma CRM all-in-one', value: 'Incluida' },
           { label: 'Wallet mensajería', value: '$30/mes' },
-          { label: 'Onboarding', value: 'Primeros 3 frentes fast-track' },
         ],
-        cta: 'Empezar con Plus',
+        cta: 'Cotizar Total',
         ctaVariant: 'outline' as const,
       },
     ];
@@ -984,8 +976,8 @@ const HomeAA = () => {
             <div className="max-w-2xl mx-auto mb-12 sm:mb-16">
               <div className="bg-[#e6faf7] border border-[#00bfa5]/30 rounded-2xl p-5 sm:p-6 text-center">
                 <p className="text-[#0d6659] text-sm sm:text-base leading-relaxed">
-                  <strong className="text-[#06070a]">Bono de Onboarding VIP</strong> (valor $1,500):{' '}
-                  Firma <strong className="text-[#00bfa5]">Core esta semana</strong> → setup completo gratis + llamada de estrategia 1:1 + primeros frentes acelerados.
+                  <strong className="text-[#06070a]">Bono de Onboarding VIP</strong>:{' '}
+                  Firma <strong className="text-[#00bfa5]">Integral esta semana</strong> → setup completo gratis + llamada de estrategia 1:1 + primeros frentes acelerados.
                 </p>
               </div>
             </div>
@@ -1069,7 +1061,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[#e0e0e0]/70 text-base sm:text-lg mb-8 sm:mb-10">
-              Planes desde <strong className="text-white">$1,000 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong> — porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
+              Promo desde <strong className="text-white">$200 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong> — porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
             </p>
           </Reveal>
           <Reveal delay={200}>

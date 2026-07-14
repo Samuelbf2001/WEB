@@ -137,7 +137,7 @@ export const NuestroEnfoqueV2 = () => (
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </ButtonV2>
           </Link>
-          <Link to="/contacto">
+          <Link to="/contacto#agenda">
             <ButtonV2 variant="outline" size="lg" className="inline-flex items-center gap-2">
               <Calendar className="h-4 w-4 opacity-70" />
               Agendar una llamada
@@ -151,7 +151,7 @@ export const NuestroEnfoqueV2 = () => (
             {[
               "4+ años acompañando empresas en LATAM",
               "Consultar · Implementar · Operar",
-              "Diagnóstico gratuito · Operación desde $1,500/mes",
+              "Diagnóstico gratuito · Promo desde $200/mes",
             ].map((item, i) => (
               <span key={item} className="flex items-center gap-2 font-lato text-[11px] text-v2-ink-muted uppercase tracking-widest">
                 {i > 0 && <span className="w-1 h-1 rounded-full bg-v2-border-subtle inline-block" aria-hidden />}

@@ -1020,7 +1020,7 @@ const Index = () => {
           {/* Pricing escalera */}
           <div className="mt-16 sm:mt-20 lg:mt-24 max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Planes CRM by Sixteam.pro</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Planes Sixteam Ops</h3>
               <p className="text-gray-300 text-base sm:text-lg">Elige el plan que se adapta al tamaño y necesidades de tu negocio</p>
             </div>
 
@@ -1029,27 +1029,27 @@ const Index = () => {
               <div className="relative bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300">
                 <div className="mb-6">
                   <p className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Entrada</p>
-                  <h4 className="text-white text-xl font-bold mb-1">Sixteam Inbox + IA</h4>
-                  <p className="text-gray-400 text-sm">Bandeja unificada con agente IA incluido</p>
+                  <h4 className="text-white text-xl font-bold mb-1">Ops Esencial</h4>
+                  <p className="text-gray-400 text-sm">CRM, bandeja unificada y agente IA incluido</p>
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$180</span>
+                    <span className="text-3xl font-bold text-white">$200</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">+ créditos IA | Implementación desde $300 USD | 2 usuarios</p>
+                  <p className="text-gray-500 text-xs">60 créditos IA | 1 agente activo | sin setup obligatorio</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Bandeja unificada (WhatsApp, email, SMS)</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Agente IA WhatsApp 24/7</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Gestión de contactos</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />2 usuarios incluidos</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Wallet inicial de mensajería</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20Sixteam%20Inbox%20%2B%20IA', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20Ops%20Esencial', '_blank')}
                   className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
                 >
-                  Empezar con Inbox + IA
+                  Empezar con Esencial
                 </Button>
               </div>
 
@@ -1058,28 +1058,28 @@ const Index = () => {
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-teal-500 text-white text-xs font-bold px-4 py-1 rounded-full">MÁS POPULAR</div>
                 <div className="mb-6">
                   <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Crecimiento</p>
-                  <h4 className="text-white text-xl font-bold mb-1">CRM Core</h4>
-                  <p className="text-gray-400 text-sm">CRM completo para equipos de ventas</p>
+                  <h4 className="text-white text-xl font-bold mb-1">Ops Integral</h4>
+                  <p className="text-gray-400 text-sm">Operación completa para equipos comerciales</p>
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$240</span>
+                    <span className="text-3xl font-bold text-white">$499</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">Implementación desde $600 USD | 3 usuarios</p>
+                  <p className="text-gray-500 text-xs">160 créditos IA | integraciones avanzadas | onboarding VIP</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
-                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Todo lo del plan Inbox + IA</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Todo lo de Ops Esencial</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Pipeline de ventas visual</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Automatizaciones avanzadas</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Landing pages y formularios</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />3 usuarios incluidos</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />Onboarding VIP incluido</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Core%20de%20Sixteam.pro', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20Ops%20Integral%20de%20Sixteam.pro', '_blank')}
                   className="w-full bg-blue-500 hover:bg-blue-400 text-white rounded-xl py-3 font-semibold transition-all shadow-lg"
                 >
-                  Empezar con CRM Core
+                  Empezar con Integral
                 </Button>
               </div>
 
@@ -1087,33 +1087,33 @@ const Index = () => {
               <div className="relative bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-teal-400/50 transition-all duration-300">
                 <div className="mb-6">
                   <p className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Escala</p>
-                  <h4 className="text-white text-xl font-bold mb-1">CRM Growth</h4>
-                  <p className="text-gray-400 text-sm">Para equipos en expansión con IA avanzada</p>
+                  <h4 className="text-white text-xl font-bold mb-1">Ops Total</h4>
+                  <p className="text-gray-400 text-sm">Para equipos en expansión con operación gestionada</p>
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$360</span>
+                    <span className="text-3xl font-bold text-white">$1,200</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
-                  <p className="text-gray-500 text-xs">Implementación desde $960 USD | 5 usuarios</p>
+                  <p className="text-gray-500 text-xs">Desde | 400+ créditos IA | PM dedicado</p>
                 </div>
                 <ul className="space-y-2 mb-8 text-sm text-gray-300">
-                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Todo lo del plan Core</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Todo lo de Ops Integral</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Agente IA de llamadas 24/7</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Reportes y analytics avanzados</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Membresía y cursos integrados</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />5 usuarios incluidos</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400 flex-shrink-0" />Llamadas estratégicas semanales</li>
                 </ul>
                 <Button
-                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20CRM%20Growth%20de%20Sixteam.pro', '_blank')}
+                  onClick={() => window.open('https://wa.me/+573004188522?text=Hola%2C%20me%20interesa%20el%20plan%20Ops%20Total%20de%20Sixteam.pro', '_blank')}
                   className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl py-3 font-semibold transition-all"
                 >
-                  Empezar con CRM Growth
+                  Cotizar Ops Total
                 </Button>
               </div>
             </div>
 
-            <p className="text-center text-gray-500 text-xs mt-6">Usuarios adicionales desde $18 USD/mes. Precios en USD. Implementación cobrada una sola vez.</p>
+            <p className="text-center text-gray-500 text-xs mt-6">Precios en USD. Esencial e Integral tienen precio público; Total se cotiza según requerimientos.</p>
           </div>
         </div>
       </section>

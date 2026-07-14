@@ -5,6 +5,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import WhatsAppButton from "./components/WhatsAppButton";
+import PromoPricingModule from "./components/PromoPricingModule";
+import LocalTranslator from "./i18n/LocalTranslator";
+import { LocaleProvider } from "./i18n/LocaleProvider";
 
 const NotFound = lazy(() => import('./pages/NotFound'));
 const PoliticasPrivacidad = lazy(() => import('./pages/PoliticasPrivacidad'));
@@ -64,15 +67,59 @@ const LegacyV2Redirect = () => {
 
 const queryClient = new QueryClient();
 
+const v2PromoPaths = new Set([
+  "/",
+  "/soluciones",
+  "/servicios/crm-ventas",
+  "/servicios/crm-atencion",
+  "/servicios/crm-marketing",
+  "/servicios/chatbot-ia",
+  "/servicios/soporte-operaciones",
+  "/radar",
+  "/radar-pro",
+  "/contacto",
+  "/casos",
+  "/nosotros",
+  "/como-funciona",
+  "/operacion-continua",
+  "/diagnostico",
+  "/equipo",
+  "/precios",
+  "/assessment",
+  "/pitch",
+  "/ops",
+  "/lp/assessment",
+  "/industrias",
+  "/industrias/educacion",
+  "/industrias/saas-b2b",
+  "/industrias/retail",
+  "/industrias/viajes",
+  "/industrias/servicios-con-cita",
+  "/industrias/inmobiliarias",
+]);
+
+const LegacyPromoPricingSlot = () => {
+  const { pathname } = useLocation();
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+
+  if (normalizedPathname.startsWith("/v2") || v2PromoPaths.has(normalizedPathname)) {
+    return null;
+  }
+
+  return <PromoPricingModule />;
+};
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={<div className="min-h-screen bg-[#0a2342]" />}>
-            <Routes>
+        <LocaleProvider>
+          <LocalTranslator />
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Suspense fallback={<div className="min-h-screen bg-[#0a2342]" />}>
+              <Routes>
               {/* Web pública */}
               <Route path="/" element={<IndexV2 />} />
               <Route path="/soluciones" element={<SolucionesV2 />} />
@@ -128,12 +175,14 @@ const App = () => {
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+              </Routes>
+            </Suspense>
+            <LegacyPromoPricingSlot />
 
-          {/* Botón personalizado de WhatsApp con SVG */}
-          <WhatsAppButton />
-        </BrowserRouter>
+            {/* Botón personalizado de WhatsApp con SVG */}
+            <WhatsAppButton />
+          </BrowserRouter>
+        </LocaleProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

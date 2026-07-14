@@ -39,17 +39,16 @@ export const TestimonialsV2 = () => {
   const ref = useScrollReveal<HTMLDivElement>();
 
   return (
-    <Section surface="sand-mist" size="default">
+    <Section surface="teal-mist" size="default">
       <Container>
         <div ref={ref}>
           <div className="text-center max-w-[640px] mx-auto v2-reveal">
-            <Eyebrow variant="sand">Voces que importan</Eyebrow>
+            <Eyebrow variant="teal">Voces que importan</Eyebrow>
             <h2
               className="font-poppins font-bold text-v2-ink-heading mt-3"
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
             >
-              Lo que dicen los{" "}
-              <em className="not-italic text-[#8a7a4f]">founders</em>.
+              Lo que dicen los founders.
             </h2>
           </div>
 
@@ -66,13 +65,13 @@ export const TestimonialsV2 = () => {
                   "transition-[transform,box-shadow] duration-300",
                 ].join(" ")}
               >
-                <span className="font-serif italic text-[72px] leading-none text-[#d4a853]/35 group-hover:text-[#d4a853]/55 transition-colors duration-300 block -mt-2 -mb-3">
+                <span className="font-poppins font-bold text-[72px] leading-none text-v2-accent-teal/35 group-hover:text-v2-accent-teal/55 transition-colors duration-300 block -mt-2 -mb-3">
                   "
                 </span>
                 <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7]">{t.quote}</p>
 
                 <div className="mt-auto pt-6 border-t border-v2-border-subtle flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-v2-surface-sand-mist group-hover:bg-[#d4a853] transition-colors duration-300 flex items-center justify-center font-poppins font-bold text-[#8a7a4f] group-hover:text-white transition-[color] text-[14px] flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-v2-surface-teal-mist group-hover:bg-v2-accent-teal transition-colors duration-300 flex items-center justify-center font-poppins font-bold text-v2-accent-teal-deep group-hover:text-white text-[14px] flex-shrink-0">
                     {t.initials}
                   </div>
                   <div>

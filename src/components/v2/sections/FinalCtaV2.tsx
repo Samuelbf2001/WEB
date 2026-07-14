@@ -65,7 +65,7 @@ export const FinalCtaV2 = () => {
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>
-            <Link to="/contacto">
+            <Link to="/contacto#agenda">
               <ButtonV2
                 variant="outline"
                 size="lg"

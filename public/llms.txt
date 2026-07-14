@@ -22,65 +22,63 @@ Sixteam.pro es una consultora tecnológica fundada en 2021 en Bogotá, Colombia,
 
 ### 1. CRM para Ventas
 Implementación de pipeline visual, automatización de seguimiento, lead scoring y reportes de conversión. Plataformas: GoHighLevel, HubSpot, Kommo.
-- **Precio:** desde $2.880.000 COP
+- **Precio:** desde $1,500 USD por proyecto
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-ventas
 
 ### 2. CRM para Atención al Cliente
 Bandeja omnicanal unificada (WhatsApp, email, Instagram, web), tickets, SLAs y automatización de respuestas.
-- **Precio:** desde $2.160.000 COP
+- **Precio:** desde $1,500 USD por proyecto
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-atencion
 
 ### 3. CRM para Marketing
 Segmentación de base de datos, flujos de nurturing, campañas multicanal y atribución de fuentes.
-- **Precio:** desde $2.592.000 COP
+- **Precio:** desde $1,500 USD por proyecto
 - **Tiempo de entrega:** 4 semanas
 - **Más info:** https://sixteam.pro/servicios/crm-marketing
 
 ### 4. Chatbot / Agente IA para WhatsApp
 Agente conversacional con IA capaz de calificar leads, responder preguntas frecuentes, agendar citas y escalar a humanos.
-- **Precio implementación:** $1.152.000 COP (única vez)
+- **Precio implementación:** desde $1,500 USD por proyecto
 - **Tiempo de entrega:** 2–3 semanas
 - **Más info:** https://sixteam.pro/servicios/chatbot-ia
 
 ### 5. RevOps Externo (Soporte Mensual)
 Equipo externo de Revenue Operations: optimización continua de CRM, flujos, reportes, integraciones y estrategia comercial.
-- **Precio:** desde $720.000 COP/mes
+- **Precio:** Esencial $199 USD/mes, Integral $499 USD/mes, Total desde $1,200 USD/mes
 - **Más info:** https://sixteam.pro/servicios/soporte-operaciones
 
 ### 6. Integraciones entre Plataformas
 Conexión entre CRMs, ERPs, eCommerce, WhatsApp, formularios, Google Sheets y más. Herramientas: Make, n8n, Zapier.
-- **Precio:** $360.000 COP/hora
+- **Precio:** según alcance, normalmente dentro de Transform o Sixteam Ops
 - **Más info:** https://sixteam.pro/servicios
 
 ---
 
-## Planes CRM by Sixteam.pro
+## Planes Sixteam Ops
 
-Planes gestionados sobre GoHighLevel con configuración, soporte y actualizaciones incluidas.
+Planes de operación mensual con humanos expertos, agentes IA, plataforma CRM incluida y sistema de créditos.
 
-### Sixteam Inbox + IA — $180 USD/mes
-- 2 usuarios incluidos
-- Bandeja omnicanal unificada (WhatsApp, email, Instagram)
-- Agente IA para WhatsApp activado
-- Ideal para: equipos pequeños que quieren responder más rápido con IA
+### Ops Esencial — $199 USD/mes
+- 60 créditos mensuales
+- 1 agente IA activo en el canal más urgente
+- Plataforma CRM all-in-one incluida
+- Ideal para: emprendedores y negocios pequeños que quieren empezar con tecnología e IA
 
-### CRM Core — $240 USD/mes
-- 3 usuarios incluidos
-- Pipeline visual de ventas
-- Automatizaciones de seguimiento y recordatorios
-- Reportes básicos de conversión
-- Ideal para: empresas que inician su proceso de ventas estructurado
+### Ops Integral — $499 USD/mes
+- 160 créditos mensuales
+- Agentes IA operando en CRM, WhatsApp y email
+- Integraciones, automatizaciones avanzadas y bono Onboarding VIP
+- Ideal para: empresas que requieren configuraciones y automatizaciones más complejas
 
-### CRM Growth — $360 USD/mes
-- 5 usuarios incluidos
-- Todo lo de CRM Core
-- Agente IA de llamadas (voice AI)
-- Analytics avanzados y dashboards de revenue
-- Ideal para: equipos comerciales en crecimiento con volumen alto de leads
+### Ops Total — desde $1,200 USD/mes
+- Desde 400 créditos mensuales
+- PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales
+- Agentes IA de alto volumen en todos los sistemas
+- Ideal para: clientes que tienen a Sixteam como su equipo de tecnología permanente
 
-**Más información:** https://sixteam.pro/plataforma
+**Más información:** https://sixteam.pro/precios
 
 ---
 
@@ -151,7 +149,7 @@ Las implementaciones estándar toman entre 2 y 4 semanas. El tiempo varía segú
 No. Sixteam.pro capacita a todo el equipo, documenta los procesos y provee soporte continuo. Los CRMs que implementamos (especialmente GoHighLevel) tienen interfaces intuitivas diseñadas para equipos comerciales, no para técnicos.
 
 **¿Puedo tener un agente IA en WhatsApp para mi empresa?**
-Sí. Sixteam.pro implementa agentes de inteligencia artificial que responden en WhatsApp de forma automática: califican leads, responden FAQs, agendan citas y escalan a un asesor humano cuando es necesario. La implementación toma 2–3 semanas y el costo inicial es de $1.000.000 COP.
+Sí. Sixteam.pro implementa agentes de inteligencia artificial que responden en WhatsApp de forma automática: califican leads, responden FAQs, agendan citas y escalan a un asesor humano cuando es necesario. Los agentes pueden implementarse como proyecto Transform desde $1,500 USD o dentro de un plan Ops mensual.
 
 **¿Trabajan con empresas fuera de Colombia?**
 Sí. Sixteam.pro tiene clientes en México, Argentina, Chile y Perú. Todos los servicios se prestan de forma remota. Los precios en USD aplican para clientes fuera de Colombia.
@@ -163,7 +161,7 @@ El Radar es nuestro diagnóstico gratuito de madurez comercial. Evalúa el estad
 RevOps (Revenue Operations) es la disciplina que alinea los equipos de ventas, marketing y customer success bajo procesos, tecnología y datos compartidos. El objetivo es maximizar los ingresos eliminando fricciones entre áreas. Sixteam.pro ofrece RevOps como servicio mensual externo para empresas que no tienen este rol internamente.
 
 **¿Tienen planes mensuales sin costo de implementación?**
-Los planes CRM by Sixteam.pro (desde $149 USD/mes) incluyen la plataforma configurada, soporte y actualizaciones. Para implementaciones personalizadas sobre procesos propios del cliente, se cobra el proyecto de implementación por separado.
+Los planes Sixteam Ops empiezan en $199 USD/mes e incluyen plataforma configurada, soporte, agentes IA y operación mensual. Para implementaciones personalizadas sobre procesos propios del cliente, se cobra el proyecto Transform por separado desde $1,500 USD.
 
 **¿Cuáles son los métodos de pago?**
 Transferencia bancaria (Colombia), Nequi, Daviplata, Bancolombia, y para clientes internacionales: Stripe, PayPal o transferencia internacional. Los planes mensuales se cobran con tarjeta de crédito o débito.
@@ -196,4 +194,4 @@ Especialista en optimización de procesos con enfoque en automatización operati
 
 Este archivo sigue el estándar [llmstxt.org](https://llmstxt.org) para facilitar que modelos de lenguaje (ChatGPT, Perplexity, Claude, Google AI Overviews, Gemini) comprendan el contenido y los servicios de Sixteam.pro con precisión y lo citen correctamente en respuestas generadas.
 
-Última actualización: abril 2026
+Última actualización: julio 2026

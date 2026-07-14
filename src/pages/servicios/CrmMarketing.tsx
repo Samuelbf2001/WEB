@@ -27,7 +27,7 @@ QUÉ INCLUYE:
 - Atribución multicanal de ingresos (qué canal genera ventas)
 - Dashboard de ROI de campañas en tiempo real
 
-PRECIO: $2.592.000 COP implementación única.
+PRECIO: Desde $1,500 USD por proyecto Transform.
 TIEMPO: 4 semanas para estar operativo.
 
 RESULTADOS TÍPICOS: leads más calificados al equipo de ventas, ROI visible por canal, -60% tiempo en tareas manuales de nurturing.`;
@@ -237,7 +237,7 @@ const CrmMarketing = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#00bfa5]" />
-                  <span className="text-white font-semibold">$2.592.000 COP</span>
+                  <span className="text-white font-semibold">Desde $1,500 USD</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-[#1d70a2]" />
@@ -413,8 +413,8 @@ const CrmMarketing = () => {
             </div>
             <div className="bg-gradient-to-br from-[#0a2342] to-[#0d2d4f] border border-[#1d70a2]/30 rounded-2xl p-8 text-white sticky top-8">
               <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inversión</p>
-              <div className="text-5xl font-poppins font-black text-white mb-1">$2.160.000</div>
-              <p className="text-gray-300 text-sm mb-1">COP · Pago único por implementación completa</p>
+              <div className="text-5xl font-poppins font-black text-white mb-1">Desde $1,500</div>
+              <p className="text-gray-300 text-sm mb-1">USD · proyecto Transform</p>
               <p className="text-gray-400 text-xs mb-6">Incluye configuración, flujos, integraciones, capacitación y 30 días de soporte</p>
               <ul className="space-y-3 mb-8">
                 {[

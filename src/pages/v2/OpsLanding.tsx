@@ -7,7 +7,6 @@ import {
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
-import Underlined from "@/components/v2/UnderlineSvg";
 import TestimonialsV2 from "@/components/v2/sections/TestimonialsV2";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useSEO } from "@/hooks/useSEO";
@@ -40,8 +39,8 @@ const FOUNDER_VIDEO_SRC = "/videos/fundador-sixteam.mp4";
 /* ── Primitivas locales ──────────────────────────────────────────── */
 const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
   <div className="flex items-start gap-2.5">
-    <div className="w-4 h-4 rounded-full bg-v2-surface-sand-mist border border-[#d4a853]/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-      <Check className="h-2.5 w-2.5 text-[#8a7a4f]" />
+    <div className="w-4 h-4 rounded-full bg-v2-surface-teal-mist border border-v2-accent-teal/35 flex items-center justify-center flex-shrink-0 mt-0.5">
+      <Check className="h-2.5 w-2.5 text-v2-accent-teal-deep" />
     </div>
     <span className="font-lato text-[14px] text-v2-ink-body leading-snug">{text}</span>
   </div>
@@ -182,7 +181,7 @@ const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => v
     >
       <span className="font-poppins font-semibold text-[16px] text-v2-ink-heading">{q}</span>
       <ChevronDown
-        className={`h-4 w-4 text-[#8a7a4f] flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        className={`h-4 w-4 text-v2-accent-teal-deep flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
       />
     </button>
     <div
@@ -208,7 +207,7 @@ const OpsLanding = () => {
   useSEO({
     title: "Sixteam Ops — Tu equipo de tecnología e IA, mes a mes | Sixteam.pro",
     description:
-      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Desde $199 USD/mes.",
+      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Promo desde $200 USD/mes.",
     noindex: true,
   });
 
@@ -237,6 +236,14 @@ const OpsLanding = () => {
     document.body.appendChild(embedScript);
   }, []);
 
+  useEffect(() => {
+    if (window.location.hash !== "#agenda") return;
+
+    window.setTimeout(() => {
+      document.getElementById("agenda")?.scrollIntoView({ block: "start" });
+    }, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-v2-surface text-v2-ink-body font-lato antialiased">
 
@@ -246,9 +253,9 @@ const OpsLanding = () => {
           <div className="flex items-center gap-2.5">
             <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-7 w-7 object-contain" />
             <span className="font-poppins font-bold text-[16px] text-v2-ink-heading">
-              Sixteam<span className="text-[#d4a853]">.pro</span>
+              Sixteam<span className="text-v2-accent-teal-deep">.pro</span>
             </span>
-            <span className="hidden sm:inline-block ml-2 pl-3 border-l border-v2-border-subtle font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7a4f]">
+            <span className="hidden sm:inline-block ml-2 pl-3 border-l border-v2-border-subtle font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-blue">
               Sixteam Ops
             </span>
           </div>
@@ -269,7 +276,7 @@ const OpsLanding = () => {
                 className="absolute -top-40 right-[-10%] w-[760px] h-[760px] rounded-full"
                 style={{
                   background:
-                    "radial-gradient(circle, rgba(212,168,83,0.10) 0%, rgba(212,168,83,0.03) 42%, transparent 68%)",
+                    "radial-gradient(circle, rgba(0,191,165,0.10) 0%, rgba(29,112,162,0.05) 42%, transparent 68%)",
                 }}
               />
               <div
@@ -285,13 +292,13 @@ const OpsLanding = () => {
             <Container size="wide" className="relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-12 lg:gap-16 items-center">
               <div className="text-center lg:text-left">
-              <Eyebrow variant="sand">Sixteam Ops · Soporte y operaciones continuas</Eyebrow>
+              <Eyebrow variant="teal">Sixteam Ops · Soporte y operaciones continuas</Eyebrow>
               <h1
                 className="font-poppins font-bold text-v2-ink-heading mt-5"
                 style={{ fontSize: "clamp(30px, 4.8vw, 54px)", lineHeight: "1.08", letterSpacing: "-0.025em" }}
               >
                 El equipo de tecnología e IA que tu empresa todavía no tiene, operando{" "}
-                <em className="font-serif italic font-normal">mes a mes</em>
+                <span>mes a mes</span>
                 .
               </h1>
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto lg:mx-0">
@@ -302,17 +309,17 @@ const OpsLanding = () => {
 
               <div className="mt-9 flex flex-col items-center lg:items-start gap-3">
                 <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-                  <WaButton source="ops_hero" className="w-full sm:w-auto">
-                    Hablar con un experto por WhatsApp
-                    <ArrowRight className="h-4 w-4" />
-                  </WaButton>
-                  <AgendaButton source="ops_hero" className="w-full sm:w-auto">
+                  <AgendaButton source="ops_hero" variant="primary" className="w-full sm:w-auto">
                     <CalendarDays className="h-4 w-4" />
-                    Agendar llamada
+                    Agendar una llamada
                   </AgendaButton>
+                  <WaButton source="ops_hero" variant="outline" className="w-full sm:w-auto">
+                    WhatsApp
+                    <MessageCircle className="h-4 w-4" />
+                  </WaButton>
                 </div>
                 <p className="font-lato text-[13px] text-v2-ink-muted">
-                  Respondemos en horas, en horario laboral Colombia · Sin compromiso
+                  Para B2B en Estados Unidos priorizamos llamada agendada y correo; WhatsApp queda como canal secundario.
                 </p>
               </div>
 
@@ -342,45 +349,44 @@ const OpsLanding = () => {
             <Container>
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-16 items-start">
                 <div className="v2-reveal lg:sticky lg:top-28">
-                  <Eyebrow variant="sand">El problema</Eyebrow>
+                  <Eyebrow variant="teal">El problema</Eyebrow>
                   <h2
                     className="font-poppins font-bold text-v2-ink-heading mt-3"
                     style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
                   >
-                    Aprendiste tu oficio. No el oficio de{" "}
-                    <em className="not-italic text-[#8a7a4f]">operar la tecnología</em>.
+                    El problema no es comprar tecnología. Es operarla.
                   </h2>
                   <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
-                    La mayoría de negocios opera su parte comercial por intuición: el dueño responde
-                    WhatsApp, hace seguimiento de memoria y pierde clientes sin darse cuenta. No
-                    porque el producto sea malo — porque nadie opera la máquina.
+                    Tu negocio necesita sistemas que funcionen, se conecten y mejoren cada semana.
+                    Cuando nadie es dueño de esa operación, la web se queda quieta, el CRM se desordena,
+                    las automatizaciones fallan, los datos no cuadran y la IA se queda en experimentos.
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-4">
                   {[
                     {
-                      t: "Los leads te escriben y les responde quien pueda, cuando pueda.",
-                      d: "Un lead contactado en los primeros 5 minutos califica hasta 21 veces más que uno contactado a los 30 minutos.",
+                      t: "Tus herramientas no hablan entre sí.",
+                      d: "CRM, web, formularios, WhatsApp, email, pagos y reportes viven en silos. El equipo termina copiando datos o resolviendo a mano lo que debería fluir solo.",
                     },
                     {
-                      t: "El seguimiento vive en la memoria del dueño.",
-                      d: "Cerca del 80% de las ventas requieren 5 o más seguimientos. La mayoría de los equipos hace uno.",
+                      t: "Lo urgente se come la mejora del sistema.",
+                      d: "Hay procesos por automatizar, páginas por ajustar, integraciones pendientes y errores pequeños que se repiten, pero nadie tiene tiempo de convertirlos en soluciones.",
                     },
                     {
-                      t: "Compraste un CRM que nadie del equipo usa.",
-                      d: "El 38% de las implementaciones de CRM que fracasan se debe a baja adopción del equipo.",
+                      t: "Compraste tecnología que nadie mantiene.",
+                      d: "Un CRM, una web o una automatización no generan valor por existir. Necesitan configuración, adopción, soporte, documentación y mejora continua.",
                     },
                     {
-                      t: "Cada semana sale una IA nueva y no tienes tiempo de evaluarlas.",
-                      d: "No tienes que entenderlas todas. Nosotros las filtramos y aplicamos las que sirven a tu operación.",
+                      t: "La IA avanza más rápido que tu capacidad de implementarla.",
+                      d: "No necesitas probar todas las herramientas. Necesitas agentes, flujos y criterios claros para aplicar IA donde resuelve problemas reales de tu operación.",
                     },
                   ].map((p, i) => (
                     <div
                       key={p.t}
                       className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-6 flex gap-5`}
                     >
-                      <span className="font-serif italic text-[28px] leading-none text-[#d4a853] flex-shrink-0 mt-0.5">
+                      <span className="font-poppins font-bold text-[28px] leading-none text-v2-accent-teal-deep flex-shrink-0 mt-0.5">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <div>
@@ -392,7 +398,7 @@ const OpsLanding = () => {
                     </div>
                   ))}
                   <p className="v2-reveal v2-d4 font-lato text-[11px] text-v2-ink-muted mt-1 pl-1">
-                    Fuentes: Lead Response Management Study · Marketing Donut · Gartner.
+                    Cobertura: sistemas, web, automatización, datos, agentes de IA e integraciones.
                   </p>
                 </div>
               </div>
@@ -400,16 +406,16 @@ const OpsLanding = () => {
           </Section>
 
           {/* ── QUÉ ES SIXTEAM OPS ── */}
-          <Section surface="sand-mist" size="default">
+          <Section surface="teal-mist" size="default">
             <Container>
               <div className="text-center max-w-[680px] mx-auto v2-reveal">
-                <Eyebrow variant="sand">La solución</Eyebrow>
+                <Eyebrow variant="teal">La solución</Eyebrow>
                 <h2
                   className="font-poppins font-bold text-v2-ink-heading mt-3"
                   style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
                 >
                   Sixteam Ops: no entregamos y nos vamos.{" "}
-                  <em className="not-italic text-[#8a7a4f]">Operamos.</em>
+                  <span>Operamos.</span>
                 </h2>
                 <p className="font-lato text-[17px] text-v2-ink-body leading-[1.65] mt-5">
                   Operamos y soportamos tus sistemas, agentes y procesos mes a mes. La plataforma
@@ -444,7 +450,7 @@ const OpsLanding = () => {
                     key={f.t}
                     className={`v2-reveal ${["", "v2-d1", "v2-d2", "v2-d3"][i]} bg-white border border-v2-border-subtle rounded-2xl p-6`}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-v2-surface-sand-mist border border-[#d4a853]/25 flex items-center justify-center text-[#8a7a4f]">
+                    <div className="w-10 h-10 rounded-xl bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center text-v2-accent-teal-deep">
                       {f.icon}
                     </div>
                     <h3 className="font-poppins font-semibold text-[16px] text-v2-ink-heading mt-4">{f.t}</h3>
@@ -454,7 +460,7 @@ const OpsLanding = () => {
               </div>
               {/* Todo lo que puedes pedirle a tu equipo */}
               <div className="mt-16 max-w-[880px] mx-auto text-center v2-reveal">
-                <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7a4f]">
+                <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-blue">
                   Lo que puedes pedirle a tu equipo
                 </p>
                 <h3 className="font-poppins font-bold text-[22px] md:text-[26px] text-v2-ink-heading mt-2">
@@ -478,7 +484,7 @@ const OpsLanding = () => {
                       key={p.t}
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-v2-border-subtle font-lato text-[13.5px] text-v2-ink-body"
                     >
-                      <span className="text-[#8a7a4f]">{p.icon}</span>
+                      <span className="text-v2-accent-teal-deep">{p.icon}</span>
                       {p.t}
                     </span>
                   ))}
@@ -494,36 +500,35 @@ const OpsLanding = () => {
           <Section surface="default" size="default">
             <Container size="narrow">
               <div className="text-center v2-reveal">
-                <Eyebrow variant="sand">Cómo funciona</Eyebrow>
+                <Eyebrow variant="teal">Cómo funciona</Eyebrow>
                 <h2
                   className="font-poppins font-bold text-v2-ink-heading mt-3"
                   style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15" }}
                 >
-                  Tres pasos. El tercero{" "}
-                  <em className="not-italic text-[#8a7a4f]">no se acaba</em>.
+                  Así opera el servicio cada mes.
                 </h2>
               </div>
 
               <div className="flex flex-col gap-0 mt-12">
                 {[
                   {
-                    t: "Escríbenos por WhatsApp",
-                    d: "Nos cuentas cómo opera tu negocio hoy. Te respondemos en horas, en horario laboral Colombia.",
+                    t: "Mapeamos tus sistemas y prioridades",
+                    d: "Entendemos tu CRM, web, canales, automatizaciones, datos y problemas recurrentes. Dejamos claro qué está roto, qué falta y qué conviene resolver primero.",
                   },
                   {
-                    t: "Llamada de 30 minutos",
-                    d: "Conversación honesta, sin pitch agresivo. Sales con el plan correcto para tu operación y la inversión clara antes de empezar.",
+                    t: "Construimos y conectamos soluciones",
+                    d: "Ajustamos herramientas, creamos automatizaciones, integramos sistemas, levantamos páginas, configuramos agentes de IA y documentamos cómo debe operar cada pieza.",
                   },
                   {
-                    t: "Arrancamos y nos quedamos",
-                    d: "Onboarding, revisión a 30 días y operación continua: la IA ejecuta, los especialistas dirigen y todo queda documentado.",
+                    t: "Operamos, medimos y mejoramos",
+                    d: "Cada mes atendemos solicitudes, monitoreamos errores, optimizamos flujos y priorizamos nuevas mejoras. No es una entrega puntual, es una operación tecnológica continua.",
                   },
                 ].map((s, i) => (
                   <div
                     key={s.t}
                     className={`v2-reveal ${["", "v2-d1", "v2-d2"][i]} flex gap-6 py-7 ${i < 2 ? "border-b border-v2-border-subtle" : ""}`}
                   >
-                    <span className="font-poppins font-black text-[34px] leading-none text-[#d4a853] w-14 flex-shrink-0">
+                    <span className="font-poppins font-black text-[34px] leading-none text-v2-accent-teal-deep w-14 flex-shrink-0">
                       {i + 1}
                     </span>
                     <div>
@@ -540,12 +545,12 @@ const OpsLanding = () => {
                   ¿Prefieres hablar ya mismo?
                 </p>
                 <p className="font-lato text-[14px] text-v2-ink-muted mt-1.5">
-                  Escríbenos por WhatsApp o reserva una llamada corta en nuestra agenda.
+                  Reserva una llamada corta. Si prefieres mensajería inmediata, también puedes escribirnos por WhatsApp.
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
                   <WaButton source="ops_mid" size="md" className="w-full sm:w-auto">
                     <MessageCircle className="h-4 w-4" />
-                    Hablar por WhatsApp
+                    WhatsApp
                   </WaButton>
                   <AgendaButton source="ops_mid" size="md" className="w-full sm:w-auto">
                     <CalendarDays className="h-4 w-4" />
@@ -560,16 +565,12 @@ const OpsLanding = () => {
           <Section surface="alt" size="default">
             <Container>
               <div className="text-center max-w-[640px] mx-auto v2-reveal mb-12">
-                <Eyebrow variant="sand">Inversión</Eyebrow>
+                <Eyebrow variant="teal">Inversión</Eyebrow>
                 <h2
                   className="font-poppins font-bold text-v2-ink-heading mt-3"
                   style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15" }}
                 >
-                  Un equipo entero,{" "}
-                  <Underlined color="sand" variant="scribble">
-                    <em className="not-italic text-[#8a7a4f]">una sola línea</em>
-                  </Underlined>{" "}
-                  en tu presupuesto.
+                  Un equipo entero, una sola línea en tu presupuesto.
                 </h2>
                 <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
                   Armar esto en casa son 3 o 4 contrataciones, más reclutamiento, rotación y gestión.
@@ -584,9 +585,12 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Esencial</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$199</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$200</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
+                    <p className="font-lato text-[12px] font-semibold text-v2-accent-teal-deep mt-1">
+                      Promo limitada · regular $300 · 20 cupos · ya se están ocupando
+                    </p>
                     <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
                       Para emprendedores y negocios pequeños que quieren empezar a trabajar con
                       tecnología e IA sin complicaciones ni grandes inversiones.
@@ -611,15 +615,15 @@ const OpsLanding = () => {
                       Empezar con Esencial <ArrowRight className="h-4 w-4" />
                     </WaButton>
                     <p className="font-lato text-[11px] text-v2-ink-muted text-center mt-2.5">
-                      Garantía 30 días money-back
+                      Garantía 30 días money-back · precio promo bloqueado mientras mantengas el plan
                     </p>
                   </div>
                 </div>
 
                 {/* Integral — destacado */}
-                <div className="v2-reveal v2-d1 relative bg-white border-2 border-[#d4a853] rounded-2xl overflow-hidden shadow-[0_0_0_4px_rgba(212,168,83,0.10),0_24px_64px_rgba(212,168,83,0.14)]">
+                <div className="v2-reveal v2-d1 relative bg-white border-2 border-v2-accent-teal rounded-2xl overflow-hidden shadow-[0_0_0_4px_rgba(0,191,165,0.10),0_24px_64px_rgba(0,191,165,0.14)]">
                   <div className="absolute -top-0 inset-x-0 flex justify-center">
-                    <span className="inline-flex items-center px-4 py-1.5 rounded-b-xl bg-[#d4a853] text-white font-lato font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_12px_rgba(212,168,83,0.40)]">
+                    <span className="inline-flex items-center px-4 py-1.5 rounded-b-xl bg-v2-accent-teal text-white font-lato font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_12px_rgba(0,191,165,0.30)]">
                       Mejor valor
                     </span>
                   </div>
@@ -627,7 +631,7 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Integral</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[38px] text-[#8a7a4f] leading-none">$499</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$499</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
                     <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
@@ -711,7 +715,7 @@ const OpsLanding = () => {
               <div className="v2-reveal v2-d3 mt-14 max-w-[1020px] mx-auto">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="h-px flex-1 bg-v2-border-subtle" />
-                  <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8a7a4f] text-center">
+                  <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-blue text-center">
                     ¿Todavía no estás para Ops? Otros caminos
                   </p>
                   <div className="h-px flex-1 bg-v2-border-subtle" />
@@ -720,11 +724,11 @@ const OpsLanding = () => {
 
                   {/* Radar — gratis */}
                   <div className="bg-white border border-v2-border-subtle rounded-2xl p-6 flex flex-col">
-                    <div className="w-9 h-9 rounded-lg bg-v2-surface-sand-mist border border-[#d4a853]/25 flex items-center justify-center text-[#8a7a4f]">
+                    <div className="w-9 h-9 rounded-lg bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center text-v2-accent-teal-deep">
                       <Radar className="h-4 w-4" />
                     </div>
                     <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Radar</h3>
-                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">Gratis · 48 horas</p>
+                    <p className="font-lato text-[12px] font-semibold text-v2-accent-blue mt-0.5">Gratis · 48 horas</p>
                     <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
                       Diagnóstico ejecutivo de tu operación. Decides después si quieres conversar. Cero compromiso.
                     </p>
@@ -745,7 +749,7 @@ const OpsLanding = () => {
                       <Search className="h-4 w-4" />
                     </div>
                     <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Sixteam Assessment</h3>
-                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">$1,200 USD · pago único · ~10 días</p>
+                    <p className="font-lato text-[12px] font-semibold text-v2-accent-blue mt-0.5">$2,500 USD · pago único · 10-14 días</p>
                     <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
                       Consultoría: evaluación de transformación con IA. Mapa operativo vivo y palancas priorizadas.
                     </p>
@@ -766,7 +770,7 @@ const OpsLanding = () => {
                       <Hammer className="h-4 w-4" />
                     </div>
                     <h3 className="font-poppins font-bold text-[17px] text-v2-ink-heading mt-4">Sixteam Transform</h3>
-                    <p className="font-lato text-[12px] font-semibold text-[#8a7a4f] mt-0.5">Desde $1,500 USD · por proyecto</p>
+                    <p className="font-lato text-[12px] font-semibold text-v2-accent-blue mt-0.5">Desde $1,500 USD · por proyecto</p>
                     <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6] mt-2 flex-1">
                       Implementación de sistemas específicos: CRM, agentes de IA, automatizaciones e integraciones.
                     </p>
@@ -793,13 +797,13 @@ const OpsLanding = () => {
           <Section surface="default" size="default">
             <Container size="narrow">
               <div className="text-center v2-reveal">
-                <Eyebrow variant="sand">Preguntas frecuentes</Eyebrow>
+                <Eyebrow variant="teal">Preguntas frecuentes</Eyebrow>
                 <h2
                   className="font-poppins font-bold text-v2-ink-heading mt-3"
                   style={{ fontSize: "clamp(28px, 4vw, 40px)", lineHeight: "1.15" }}
                 >
                   Lo que nos preguntan{" "}
-                  <em className="not-italic text-[#8a7a4f]">antes de arrancar</em>.
+                  <span>antes de arrancar</span>.
                 </h2>
               </div>
               <div className="flex flex-col gap-3 mt-10 v2-reveal v2-d1">
@@ -824,43 +828,44 @@ const OpsLanding = () => {
               className="pointer-events-none absolute -top-32 -right-32 w-[640px] h-[640px] rounded-full"
               style={{
                 background:
-                  "radial-gradient(circle at 60% 40%, rgba(212,168,83,0.16) 0%, rgba(29,112,162,0.10) 45%, transparent 70%)",
+                  "radial-gradient(circle at 60% 40%, rgba(0,191,165,0.16) 0%, rgba(29,112,162,0.10) 45%, transparent 70%)",
               }}
             />
             <Container size="narrow" className="relative text-center">
               <div className="v2-reveal">
-                <Eyebrow variant="sand" className="text-[#d4a853]">Sixteam Ops</Eyebrow>
+                <Eyebrow variant="teal" className="text-v2-accent-teal">Sixteam Ops</Eyebrow>
               </div>
               <h2
                 className="v2-reveal v2-d1 font-poppins font-bold text-white mt-5"
                 style={{ fontSize: "clamp(34px, 6vw, 58px)", lineHeight: "1.08", letterSpacing: "-0.02em" }}
               >
-                Ya no tienes que operar solo.{" "}
-                <em className="font-serif italic font-normal text-[#d4a853]">
-                  Tú solo tienes que{" "}
-                  <Underlined color="sand" variant="scribble">crecer.</Underlined>
-                </em>
+                Ya no tienes que operar solo. Tú solo tienes que crecer.
               </h2>
               <p className="v2-reveal v2-d2 font-lato text-[18px] md:text-[20px] text-white/75 leading-[1.65] max-w-[600px] mx-auto mt-7">
                 Cuéntanos cómo opera tu negocio hoy. Te decimos, sin compromiso, cómo lo operaría
                 Sixteam Ops — y con qué plan arrancar.
               </p>
               <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                <WaButton source="ops_final" className="w-full sm:w-auto">
-                  Hablar con un experto por WhatsApp
-                  <ArrowRight className="h-4 w-4" />
-                </WaButton>
                 <AgendaButton
                   source="ops_final"
+                  variant="primary"
                   size="lg"
-                  className="w-full sm:w-auto !text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
+                  className="w-full sm:w-auto"
                 >
                   <CalendarDays className="h-4 w-4" />
-                  Agendar llamada
+                  Agendar una llamada
                 </AgendaButton>
+                <WaButton
+                  source="ops_final"
+                  variant="outline"
+                  className="w-full sm:w-auto !text-white !border-white/30 !bg-white/5 hover:!bg-white/10 hover:!border-white/50"
+                >
+                  WhatsApp
+                  <MessageCircle className="h-4 w-4" />
+                </WaButton>
               </div>
               <p className="v2-reveal v2-d4 font-lato text-[13px] text-white/40 mt-6">
-                Respondemos en horas, en horario laboral Colombia.
+                En B2B USA, el medio principal es llamada agendada y correo. WhatsApp funciona como apoyo cuando el cliente ya lo usa.
               </p>
             </Container>
           </Section>
@@ -870,7 +875,7 @@ const OpsLanding = () => {
             <Container size="wide">
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] gap-10 lg:gap-14 items-start">
                 <div className="v2-reveal lg:sticky lg:top-28">
-                  <Eyebrow variant="sand">Agenda</Eyebrow>
+                  <Eyebrow variant="teal">Agenda</Eyebrow>
                   <h2
                     className="font-poppins font-bold text-v2-ink-heading mt-3"
                     style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
@@ -878,14 +883,14 @@ const OpsLanding = () => {
                     Reserva una llamada con Sixteam Ops.
                   </h2>
                   <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
-                    Elige el horario que mejor te funcione. Revisamos tu operación actual, prioridades
+                    Elige el horario que mejor te funcione. Para empresas en Estados Unidos, este es el canal principal de contacto: una llamada B2B clara, seguida por correo. Revisamos tu operación actual, prioridades
                     y el plan más razonable para empezar sin sobredimensionar el proyecto.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 text-[14px] text-v2-ink-muted">
                     {[
                       "30 minutos de diagnóstico inicial",
                       "Sin compromiso ni pitch agresivo",
-                      "Horario laboral Colombia",
+                      "Seguimiento por correo después de la llamada",
                     ].map((item) => (
                       <CheckItem key={item} text={item} />
                     ))}

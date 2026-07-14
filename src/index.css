@@ -678,17 +678,21 @@
 /* ── Calendario iframe embed ── */
 .calendar-embed-wrapper {
   width: 100%;
-  max-width: 700px;
+  max-width: 860px;
   margin: 0 auto;
   border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 60px rgba(0, 191, 165, 0.12);
+  overflow: auto;
+  box-shadow: 0 18px 60px rgba(10, 35, 66, 0.10), 0 0 40px rgba(0, 191, 165, 0.08);
   border: 1px solid rgba(0, 191, 165, 0.2);
+  background: #ffffff;
+  min-height: clamp(760px, 82vh, 920px);
+  -webkit-overflow-scrolling: touch;
 }
 
 .calendar-embed-wrapper iframe {
   width: 100%;
-  min-height: 680px;
+  height: clamp(760px, 82vh, 920px);
+  min-height: 760px;
   border: none;
   display: block;
 }

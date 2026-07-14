@@ -48,7 +48,7 @@ const tableRows = [
     label: "Costo mensual",
     interno: "$10K–18K USD",
     freelance: "$3K–5K USD",
-    sixteam: "$3K USD",
+    sixteam: "$499 USD",
     sixteamCheck: false,
   },
   {
@@ -113,7 +113,7 @@ const faqs = [
     a: "USD. Aceptamos tarjeta internacional, transferencia bancaria y PayPal. Para clientes en Colombia, también ofrecemos facturación local.",
   },
   {
-    q: "¿Y si necesito más de lo que cubre Plus?",
+    q: "¿Y si necesito más de lo que cubre Total?",
     a: "Tenemos un Enterprise hecho a medida. Equipo dedicado, SLA personalizado, integraciones específicas. Habla con nosotros para una propuesta.",
   },
   {
@@ -174,7 +174,7 @@ const PreciosV2 = () => {
               </div>
               <div className="w-full sm:w-auto px-6 py-4 text-center bg-v2-surface-teal-mist">
                 <p className="font-lato text-[13px] text-v2-accent-teal-deep font-semibold">Sixteam</p>
-                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $1,500 /mes · arrancamos en 48h</p>
+                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $200 /mes · arrancamos en 48h</p>
               </div>
             </div>
 
@@ -220,7 +220,7 @@ const PreciosV2 = () => {
                     <th className="py-4 px-5 font-lato text-[13px] font-bold text-v2-ink-heading text-center">Contratar interno</th>
                     <th className="py-4 px-5 font-lato text-[13px] font-bold text-v2-ink-heading text-center">Freelancers sueltos</th>
                     <th className="py-4 px-5 font-lato text-[13px] font-bold text-v2-accent-teal-deep text-center rounded-t-xl bg-v2-surface-teal-mist border-t border-x border-v2-accent-teal/20">
-                      Sixteam Core
+                      Sixteam Integral
                     </th>
                   </tr>
                 </thead>

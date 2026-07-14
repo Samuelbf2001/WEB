@@ -161,7 +161,7 @@ const Contacto = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { q: '¿Cuánto tiempo toma un proyecto?', a: 'Depende del alcance. Nuestras implementaciones de CRM tardan entre 2 y 4 semanas. El chatbot IA entre 2 y 3 semanas.' },
-                { q: '¿Ofrecen soporte post-implementación?', a: 'Sí, incluimos 30 días de soporte en cada implementación. También tenemos planes de soporte mensual desde $720.000 COP.' },
+                { q: '¿Ofrecen soporte post-implementación?', a: 'Sí, incluimos 30 días de soporte en cada implementación. También tenemos planes Ops en promo desde $200 USD/mes.' },
                 { q: '¿Trabajan con empresas de todos los tamaños?', a: 'Sí, adaptamos nuestras soluciones para startups y PYMEs en crecimiento, principalmente en Colombia y Latinoamérica.' },
                 { q: '¿Cómo garantizan los resultados?', a: 'Definimos métricas claras desde el inicio y monitoreamos el progreso continuamente. La primera consultoría es sin costo.' },
               ].map((faq, i) => (

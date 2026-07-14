@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { translateCopy } from '@/i18n/dictionary';
+import { useLocale } from '@/i18n/LocaleContext';
 
 const DEFAULT_OG_IMAGE = 'https://sixteam.pro/og-image.jpg';
 
@@ -12,8 +14,13 @@ interface SEOProps {
 }
 
 export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex }: SEOProps) => {
+  const { locale } = useLocale();
+
   useEffect(() => {
-    document.title = title;
+    const localizedTitle = translateCopy(title, locale);
+    const localizedDescription = translateCopy(description, locale);
+
+    document.title = localizedTitle;
 
     const setMeta = (selector: string, attr: string, value: string) => {
       let el = document.querySelector(selector);
@@ -27,7 +34,7 @@ export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex 
     };
 
     // Core meta
-    setMeta('meta[name="description"]', 'content', description);
+    setMeta('meta[name="description"]', 'content', localizedDescription);
 
     // Robots
     if (noindex) {
@@ -35,9 +42,9 @@ export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex 
     }
 
     // Open Graph
-    setMeta('meta[property="og:title"]', 'content', title);
-    setMeta('meta[property="og:description"]', 'content', description);
-    setMeta('meta[property="og:locale"]', 'content', 'es_CO');
+    setMeta('meta[property="og:title"]', 'content', localizedTitle);
+    setMeta('meta[property="og:description"]', 'content', localizedDescription);
+    setMeta('meta[property="og:locale"]', 'content', locale === 'es' ? 'es_CO' : 'en_US');
 
     const resolvedOgImage = ogImage ?? DEFAULT_OG_IMAGE;
     setMeta('meta[property="og:image"]', 'content', resolvedOgImage);
@@ -48,8 +55,8 @@ export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex 
     }
 
     // Twitter
-    setMeta('meta[name="twitter:title"]', 'content', title);
-    setMeta('meta[name="twitter:description"]', 'content', description);
+    setMeta('meta[name="twitter:title"]', 'content', localizedTitle);
+    setMeta('meta[name="twitter:description"]', 'content', localizedDescription);
     setMeta('meta[name="twitter:image"]', 'content', resolvedOgImage);
 
     // Canonical
@@ -62,5 +69,5 @@ export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex 
       }
       link.href = canonical;
     }
-  }, [title, description, canonical, ogImage, ogUrl, noindex]);
+  }, [title, description, canonical, ogImage, ogUrl, noindex, locale]);
 };

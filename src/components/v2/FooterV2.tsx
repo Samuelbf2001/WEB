@@ -5,8 +5,9 @@ import Container from "./Container";
 const soluciones = [
   { label: "Sixteam Assessment", to: "/soluciones#assessment" },
   { label: "Sixteam Transform",  to: "/soluciones#transform" },
-  { label: "Ops Core",           to: "/soluciones#ops" },
-  { label: "Ops Growth",         to: "/soluciones#ops" },
+  { label: "Ops Esencial",       to: "/soluciones#ops" },
+  { label: "Ops Integral",       to: "/soluciones#ops" },
+  { label: "Ops Total",          to: "/soluciones#ops" },
   { label: "Diagnóstico gratis", to: "/radar" },
   { label: "Radar 360°",         to: "/radar-pro" },
 ];
@@ -20,9 +21,9 @@ const servicios = [
 ];
 
 const industrias = [
-  { label: "Agencias de viaje",  to: "/industrias/agencias-de-viaje" },
+  { label: "Agencias de viaje",  to: "/industrias/viajes" },
   { label: "Inmobiliarias",      to: "/industrias/inmobiliarias" },
-  { label: "Servicios B2B",      to: "/industrias/servicios-generales" },
+  { label: "Servicios con cita", to: "/industrias/servicios-con-cita" },
   { label: "Educación",          to: "/industrias/educacion" },
   { label: "SaaS B2B",           to: "/industrias/saas-b2b" },
   { label: "Retail / E-commerce",to: "/industrias/retail" },
@@ -33,7 +34,7 @@ const empresa = [
   { label: "Nosotros",       to: "/nosotros" },
   { label: "Nuestro equipo", to: "/equipo" },
   { label: "Casos de éxito", to: "/casos" },
-  { label: "Agendar llamada",to: "/contacto" },
+  { label: "Agendar llamada",to: "/contacto#agenda" },
   { label: "Política de privacidad", to: "/politicas" },
   { label: "Términos & condiciones", to: "/terminos" },
 ];
@@ -64,7 +65,7 @@ export const FooterV2 = () => {
           {/* Brand */}
           <div className="md:col-span-3">
             <Link to="/" className="inline-block">
-              <span className="font-poppins font-bold text-[26px] tracking-tight text-white">
+              <span className="notranslate font-poppins font-bold text-[26px] tracking-tight text-white">
                 Sixteam<span className="text-v2-accent-teal">.</span>pro
               </span>
             </Link>

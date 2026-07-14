@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Slot } from "@radix-ui/react-slot";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 
 interface ButtonV2Props extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,9 +28,11 @@ const sizeMap = {
 };
 
 export const ButtonV2 = forwardRef<HTMLButtonElement, ButtonV2Props>(
-  ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
+  ({ asChild = false, className, variant = "primary", size = "md", children, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+
     return (
-      <button
+      <Comp
         ref={ref}
         className={cn(
           "inline-flex items-center justify-center gap-2 rounded-full font-lato font-semibold transition-[transform,box-shadow,background-color,border-color,opacity] duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-v2-accent-teal focus-visible:ring-offset-2 focus-visible:ring-offset-v2-surface disabled:opacity-50",
@@ -40,7 +43,7 @@ export const ButtonV2 = forwardRef<HTMLButtonElement, ButtonV2Props>(
         {...props}
       >
         {children}
-      </button>
+      </Comp>
     );
   }
 );

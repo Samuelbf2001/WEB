@@ -411,7 +411,7 @@ export const AssessmentV2 = () => {
             </div>
             <div className="v2-reveal v2-d1 mt-8 space-y-5 max-w-[700px]">
               <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
-                Al terminar el Assessment puedes hacer 3 cosas, sin presión nuestra: (a) Operar el roadmap con tu equipo interno — te quedas con todo y nos quedamos amigos. (b) Contratarnos para construir las primeras palancas como proyecto. (c) Suscribirte a Ops mensual ($1,500-$5,500/mes) y dejamos todo operado.
+                Al terminar el Assessment puedes hacer 3 cosas, sin presión nuestra: (a) Operar el roadmap con tu equipo interno — te quedas con todo y nos quedamos amigos. (b) Contratarnos para construir las primeras palancas como proyecto. (c) Suscribirte a Ops mensual (promo desde $200/mes; regular $300/mes; Total desde $1,200/mes) y dejamos todo operado.
               </p>
               <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
                 Como referencia: ~50% de los clientes que terminan el Assessment continúan con nosotros. El otro 50% opera el roadmap por su cuenta y sigue siendo cliente del Assessment de nuevo cuando el negocio cambia.

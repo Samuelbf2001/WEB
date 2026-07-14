@@ -26,7 +26,7 @@ QUÉ INCLUYE:
 - Dashboard de KPIs: tiempo de respuesta, resolución, CSAT por agente
 - Capacitación del equipo de servicio
 
-PRECIO: $2.160.000 COP implementación única.
+PRECIO: Desde $1,500 USD por proyecto Transform.
 TIEMPO: 3 semanas para estar operativo.
 
 RESULTADOS TÍPICOS: -50% en tiempo de respuesta, +30 puntos CSAT, 0 tickets perdidos.`;
@@ -236,7 +236,7 @@ const CrmAtencion = () => {
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#00bfa5]" />
-                  <span className="text-white font-semibold">$2.160.000 COP</span>
+                  <span className="text-white font-semibold">Desde $1,500 USD</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-[#1d70a2]" />
@@ -413,8 +413,8 @@ const CrmAtencion = () => {
             </div>
             <div className="bg-gradient-to-br from-[#0a2342] to-[#0d2d4f] border border-[#1d70a2]/30 rounded-2xl p-8 text-white sticky top-8">
               <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Inversión</p>
-              <div className="text-5xl font-poppins font-black text-white mb-1">$2.160.000</div>
-              <p className="text-gray-300 text-sm mb-1">COP · Pago único por implementación completa</p>
+              <div className="text-5xl font-poppins font-black text-white mb-1">Desde $1,500</div>
+              <p className="text-gray-300 text-sm mb-1">USD · proyecto Transform</p>
               <p className="text-gray-400 text-xs mb-6">Incluye configuración, integraciones, capacitación y 30 días de soporte</p>
               <ul className="space-y-3 mb-8">
                 {[

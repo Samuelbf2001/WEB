@@ -43,10 +43,9 @@ CÓMO FUNCIONA (4 pasos):
 4. Post-viaje: encuesta de satisfacción y reactivación para próxima temporada
 
 PLANES Y PRECIOS:
-- Sixteam Inbox + IA: $180 USD/mes + $300 USD implementación. Incluye bandeja omnicanal, IA 24/7, captura de datos de viaje, 2 usuarios
-- CRM Sixteam.pro Core: $240 USD/mes + $600 USD implementación, 3 usuarios. CRM completo: pipelines, workflows, smart lists, reportes por asesor.
-- CRM Sixteam.pro Growth: $360 USD/mes + $960 USD implementación, 5 usuarios. Plataforma completa: CRM + marketing + automatización. Incluye calendarios, funnels, email marketing, social planner, blog SEO, reputation management, workflows
-- Servicio RevOps: desde $720.000 COP/mes. Operación mensual del CRM, mejoras proactivas, SLA 4 horas, reunión mensual estratégica. Compatible con cualquier plan.
+- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
+- Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 RESULTADOS ESPERADOS: mejora significativa en tasa de conversión de cotización a reserva, reducción drástica del tiempo de respuesta al lead, multiplicar leads atendidos por asesor sin aumentar equipo.
 
@@ -913,16 +912,16 @@ const AgenciasDeViaje = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto mb-6">
-            {/* Plan 1 — Inbox + IA */}
+            {/* Plan 1 */}
             <div className="rounded-2xl p-6 border border-[#1d70a2]/30 hover:border-[#1d70a2]/55 transition-all duration-300 flex flex-col"
               style={{ background: 'linear-gradient(135deg, #0d2d52 0%, #0a2342 100%)' }}>
               <div className="mb-5">
-                <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Inbox + IA</span>
+                <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Esencial</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$180</span>
+                  <span className="font-poppins font-black text-white text-4xl">$200</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $300 USD implementación · 2 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 60 créditos</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
@@ -947,7 +946,7 @@ const AgenciasDeViaje = () => {
               </button>
             </div>
 
-            {/* Plan 2 — CRM Core */}
+            {/* Plan 2 */}
             <div className="rounded-2xl p-6 border border-[#00bfa5]/40 hover:border-[#00bfa5]/70 transition-all duration-300 flex flex-col relative"
               style={{ background: 'linear-gradient(135deg, rgba(0,191,165,0.08) 0%, #0a2342 100%)' }}>
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
@@ -956,16 +955,16 @@ const AgenciasDeViaje = () => {
                 </span>
               </div>
               <div className="mb-5 mt-1">
-                <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">CRM Core</span>
+                <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">Ops Integral</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$240</span>
+                  <span className="font-poppins font-black text-white text-4xl">$499</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $600 USD implementación · 3 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 160 créditos</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
-                  'Todo lo de Inbox + IA incluido',
+                  'Todo lo de Ops Esencial incluido',
                   'CRM de contactos con campos personalizados',
                   'Pipelines y oportunidades visuales',
                   'Smart Lists: segmentación dinámica',
@@ -995,16 +994,16 @@ const AgenciasDeViaje = () => {
             <div className="rounded-2xl p-6 border border-[#1d70a2]/30 hover:border-[#1d70a2]/55 transition-all duration-300 flex flex-col"
               style={{ background: 'linear-gradient(135deg, #0d2d52 0%, #0a2342 100%)' }}>
               <div className="mb-5">
-                <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">CRM Growth</span>
+                <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Total</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$360</span>
+                  <span className="font-poppins font-black text-white text-4xl">$1,200</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">+ $960 USD implementación · 5 usuarios</p>
+                <p className="text-[#e0e0e0]/40 text-xs">Desde $1,200 USD/mes · a cotizar según requerimientos</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
-                  'Todo lo de CRM Core incluido',
+                  'Todo lo de Ops Integral incluido',
                   'Calendarios y agendamiento automático',
                   'Funnels, websites y landing pages',
                   'Email Marketing drag-and-drop',
@@ -1040,14 +1039,14 @@ const AgenciasDeViaje = () => {
                   </span>
                   <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">Servicio Profesional</span>
                 </div>
-                <h3 className="font-poppins font-bold text-white text-xl mb-2">Servicio de Operaciones RevOps</h3>
+                <h3 className="font-poppins font-bold text-white text-xl mb-2">Operación mensual Sixteam Ops</h3>
                 <p className="text-[#e0e0e0]/70 text-sm leading-relaxed max-w-lg">
-                  Nuestro equipo opera tu CRM mensualmente: optimizaciones proactivas, reportes ejecutivos, SLA 4h y reunión estratégica mensual. Compatible con cualquier plan.
+                  Nuestro equipo opera tu CRM mensualmente con especialistas, agentes IA, automatizaciones y reportes. Escala de Esencial a Integral o Total según volumen.
                 </p>
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$720k COP</p>
+                  <p className="text-white font-poppins font-black text-2xl">$200 USD promo</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button

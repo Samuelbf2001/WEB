@@ -39,7 +39,7 @@ const rows: Row[] = [
       "VP Sales + VP Ops + dev + analista. ~$600K USD/año en salarios. Meses para armarlo. Difícil de retener. Y sin la capa de IA.",
     leftReaction: "no tengo ese presupuesto ni ese tiempo.",
     rightBody:
-      "Reemplazamos esa función completa desde $1,500/mes. Operando desde la primera semana. Con IA incluida — sin nómina, sin rotación.",
+      "Reemplazamos esa función completa con promo desde $200/mes. Operando desde la primera semana. Con IA incluida — sin nómina, sin rotación.",
     rightAnchor: "Función completa, fracción del costo",
   },
   {

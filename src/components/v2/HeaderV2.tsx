@@ -4,13 +4,15 @@ import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Container from "./Container";
 import ButtonV2 from "./ButtonV2";
+import LanguageToggle from "@/i18n/LanguageToggle";
 
 const soluciones = [
   { label: "Las tres soluciones", to: "/soluciones" },
-  { label: "Assessment · $1,200", to: "/soluciones#assessment" },
+  { label: "Assessment · $2,500", to: "/soluciones#assessment" },
   { label: "Transform · desde $1,500", to: "/soluciones#transform" },
-  { label: "Ops Core · $700/mes", to: "/soluciones#ops" },
-  { label: "Ops Growth · $1,500/mes", to: "/soluciones#ops" },
+  { label: "Ops Esencial · desde $200/mes", to: "/soluciones#ops" },
+  { label: "Ops Integral · $499/mes", to: "/soluciones#ops" },
+  { label: "Ops Total · desde $1,200/mes", to: "/soluciones#ops" },
 ];
 
 const servicios = [
@@ -22,9 +24,9 @@ const servicios = [
 ];
 
 const industrias = [
-  { label: "Agencias de viaje",   to: "/industrias/agencias-de-viaje" },
+  { label: "Agencias de viaje",   to: "/industrias/viajes" },
   { label: "Inmobiliarias",       to: "/industrias/inmobiliarias" },
-  { label: "Servicios B2B",       to: "/industrias/servicios-generales" },
+  { label: "Servicios con cita",  to: "/industrias/servicios-con-cita" },
   { label: "Educación",           to: "/industrias/educacion" },
   { label: "SaaS B2B",            to: "/industrias/saas-b2b" },
   { label: "Retail / E-commerce", to: "/industrias/retail" },
@@ -48,10 +50,11 @@ const mobileAll = [
   { label: "Casos", to: "/casos" },
   null,
   // Soluciones sub
-  { label: "Assessment · $1,200", to: "/soluciones", sub: true },
-  { label: "Transform · desde $1,500", to: "/soluciones", sub: true },
-  { label: "Ops Core · $700/mes", to: "/soluciones", sub: true },
-  { label: "Ops Growth · $1,500/mes", to: "/soluciones", sub: true },
+  { label: "Assessment · $2,500", to: "/soluciones#assessment", sub: true },
+  { label: "Transform · desde $1,500", to: "/soluciones#transform", sub: true },
+  { label: "Ops Esencial · desde $200/mes", to: "/soluciones#ops", sub: true },
+  { label: "Ops Integral · $499/mes", to: "/soluciones#ops", sub: true },
+  { label: "Ops Total · desde $1,200/mes", to: "/soluciones#ops", sub: true },
   null,
   // Servicios
   { label: "CRM Ventas", to: "/servicios/crm-ventas", sub: true },
@@ -61,9 +64,9 @@ const mobileAll = [
   { label: "Soporte & Operaciones", to: "/servicios/soporte-operaciones", sub: true },
   null,
   // Industrias
-  { label: "Agencias de viaje", to: "/industrias/agencias-de-viaje", sub: true },
+  { label: "Agencias de viaje", to: "/industrias/viajes", sub: true },
   { label: "Inmobiliarias", to: "/industrias/inmobiliarias", sub: true },
-  { label: "Servicios B2B", to: "/industrias/servicios-generales", sub: true },
+  { label: "Servicios con cita", to: "/industrias/servicios-con-cita", sub: true },
   { label: "Educación", to: "/industrias/educacion", sub: true },
   { label: "SaaS B2B", to: "/industrias/saas-b2b", sub: true },
   { label: "Retail / E-commerce", to: "/industrias/retail", sub: true },
@@ -102,7 +105,7 @@ function Dropdown({
 
   useEffect(() => {
     setOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <div ref={ref} className="relative">
@@ -131,7 +134,10 @@ function Dropdown({
       {open && (
         <div className="absolute top-full left-0 mt-3 min-w-[220px] rounded-xl border border-v2-border-subtle bg-v2-surface/95 backdrop-blur-md shadow-xl py-2 z-50">
           {items.map((item) => {
-            const active = location.pathname === item.to;
+            const [itemPath, itemHash] = item.to.split("#");
+            const active =
+              location.pathname === itemPath &&
+              (!itemHash || location.hash === `#${itemHash}`);
             return (
               <Link
                 key={item.to}
@@ -167,7 +173,21 @@ export const HeaderV2 = () => {
 
   useEffect(() => {
     setMenuOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    const scrollTimer = window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 80);
+
+    return () => window.clearTimeout(scrollTimer);
+  }, [location.pathname, location.hash]);
 
   return (
     <header
@@ -181,7 +201,7 @@ export const HeaderV2 = () => {
       <Container className="flex h-14 items-center justify-between">
         <Link to="/" className="group flex items-center gap-2 shrink-0">
           <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-8 w-8 object-contain" />
-          <span className="font-poppins font-bold text-[20px] md:text-[22px] tracking-tight text-v2-ink-heading">
+          <span className="notranslate font-poppins font-bold text-[20px] md:text-[22px] tracking-tight text-v2-ink-heading">
             Sixteam<span className="text-v2-accent-teal">.</span>pro
           </span>
         </Link>
@@ -196,18 +216,19 @@ export const HeaderV2 = () => {
 
         {/* Desktop right CTAs */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
+          <LanguageToggle compact />
           <Link
             to="/radar"
             className="font-lato text-[13px] font-medium text-v2-accent-teal-deep hover:text-v2-ink-heading transition-colors"
           >
             Radar gratis
           </Link>
-          <Link to="/contacto">
-            <ButtonV2 variant="navy" size="sm" className="group">
+          <ButtonV2 asChild variant="navy" size="sm" className="group">
+            <Link to="/contacto#agenda">
               Agendar llamada
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </ButtonV2>
-          </Link>
+            </Link>
+          </ButtonV2>
         </div>
 
         {/* Mobile hamburger */}
@@ -251,12 +272,13 @@ export const HeaderV2 = () => {
               );
             })}
             <div className="pt-4">
-              <Link to="/contacto">
-                <ButtonV2 variant="navy" size="md" className="w-full">
+              <LanguageToggle className="mb-3 w-full" />
+              <ButtonV2 asChild variant="navy" size="md" className="w-full">
+                <Link to="/contacto#agenda">
                   Agendar llamada
                   <ArrowRight className="h-4 w-4" />
-                </ButtonV2>
-              </Link>
+                </Link>
+              </ButtonV2>
             </div>
           </Container>
         </div>

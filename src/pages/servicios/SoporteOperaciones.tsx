@@ -27,9 +27,9 @@ QUÉ HACEMOS CADA MES:
 - Alineamos ventas, marketing y servicio al cliente
 
 PLANES:
-- RevOps Starter: $720.000 COP/mes — 5 horas, SLA 4h
-- RevOps Operativo: desde $1.440.000 COP/mes — 10 horas, SLA 4h + reunión mensual estratégica
-- RevOps Avanzado: desde $2.880.000 COP/mes — 20-30 horas, equipo dedicado, roadmap completo
+- Ops Esencial: promo desde $200 USD/mes — 60 créditos, 1 agente IA activo, CRM incluido
+- Ops Integral: $499 USD/mes — 160 créditos, agentes IA multi-canal, integraciones avanzadas
+- Ops Total: desde $1,200 USD/mes — 400+ créditos, PM dedicado, equipo completo
 
 DIFERENCIAL: No somos soporte reactivo. Somos proactivos — cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
 SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
@@ -46,7 +46,7 @@ const WA_BASE = 'https://wa.me/+573004188522?text=';
 const SoporteOperaciones = () => {
   useSEO({
     title: "RevOps y Soporte de Operaciones — Sixteam.pro | Operación CRM Mensual",
-    description: "Operación mensual de tu CRM con mejoras proactivas, reportes ejecutivos y SLA de 4 horas. Acompañamiento RevOps desde $720.000 COP/mes.",
+    description: "Operación mensual de tu CRM con mejoras proactivas, agentes IA, reportes ejecutivos y soporte. planes Ops con promo desde $200 USD/mes.",
     canonical: "https://sixteam.pro/servicios/soporte-operaciones",
     ogUrl: "https://sixteam.pro/servicios/soporte-operaciones",
   });
@@ -59,57 +59,51 @@ const SoporteOperaciones = () => {
 
   const planes = [
     {
-      nombre: 'RevOps Starter',
-      horas: '5 horas/mes',
-      precio: '$720.000 COP/mes',
-      horaExtra: '$216.000 COP/hora adicional',
-      descripcion: 'Para equipos que ya tienen base implementada y necesitan un aliado técnico que mantenga y mejore la operación.',
+      nombre: 'Ops Esencial',
+      horas: '60 créditos/mes',
+      precio: 'promo desde $200 USD/mes',
+      horaExtra: 'Sin setup obligatorio',
+      descripcion: 'Para activar una operación base con CRM, agente IA y acompañamiento mensual.',
       incluye: [
-        'Hasta 5 horas de operación RevOps al mes',
-        'SLA de respuesta: 4 horas en días hábiles',
-        'Ajustes de configuración y tarjetas en el CRM',
-        'Cambios en flujos y automatizaciones existentes',
-        'Diagnóstico mensual con recomendaciones de mejora',
-        'Atención de urgencias fines de semana',
+        '1 agente IA activo',
+        '60 créditos mensuales no acumulables',
+        'Plataforma CRM all-in-one incluida',
+        '$30/mes Wallet de mensajería',
+        'Especialista humano dentro del plan de créditos',
       ],
-      waMsg: 'Hola, quiero el plan RevOps Starter de Sixteam.pro',
+      waMsg: 'Hola, quiero el plan Ops Esencial de Sixteam.pro',
       highlight: false,
     },
     {
-      nombre: 'RevOps Operativo',
-      horas: '10 horas/mes',
-      precio: 'Desde $1.440.000 COP/mes',
-      horaExtra: '$144.000 COP/hora adicional',
-      descripcion: 'Para equipos en crecimiento que necesitan un socio técnico activo que opere, automatice y evolucione su stack mensualmente.',
+      nombre: 'Ops Integral',
+      horas: '160 créditos/mes',
+      precio: '$499 USD/mes',
+      horaExtra: 'Onboarding VIP incluido',
+      descripcion: 'Para operar agentes IA en CRM, WhatsApp y email con integraciones y automatizaciones avanzadas.',
       incluye: [
-        'Hasta 10 horas de operación RevOps al mes',
-        'SLA de respuesta: 4 horas en días hábiles',
-        'Nuevas automatizaciones y cambios en el CRM',
-        'Apoyo estratégico en envíos de email y WhatsApp',
-        'Identificación mensual de oportunidades de mejora',
-        'Reunión mensual de alineación estratégica + reporte',
-        'Atención de urgencias fines de semana',
+        'Agentes IA operando en CRM, WhatsApp y email',
+        '160 créditos mensuales no acumulables',
+        'Integraciones y automatizaciones avanzadas',
+        'Bono Onboarding VIP',
+        'Plataforma CRM all-in-one incluida',
       ],
-      waMsg: 'Hola, quiero el plan RevOps Operativo de Sixteam.pro',
+      waMsg: 'Hola, quiero el plan Ops Integral de Sixteam.pro',
       highlight: true,
     },
     {
-      nombre: 'RevOps Avanzado',
-      horas: '20–30 horas/mes',
-      precio: 'Desde $2.880.000 COP/mes',
-      horaExtra: '$144.000 COP/hora adicional',
-      descripcion: 'Sixteam actúa como tu equipo de RevOps externo dedicado: opera, diseña e impulsa la madurez de toda la operación de revenue.',
+      nombre: 'Ops Total',
+      horas: '400+ créditos/mes',
+      precio: 'Desde $1,200 USD/mes',
+      horaExtra: 'Se cotiza según alcance',
+      descripcion: 'Para operaciones de mayor volumen con PM dedicado, equipo completo y estrategia continua.',
       incluye: [
-        'Hasta 20–30 horas de operación RevOps al mes',
-        'SLA prioritario en días hábiles',
-        'Diseño y ejecución de nuevas automatizaciones',
-        'Gestión completa del CRM: tarjetas, pipelines, vistas',
-        'Estrategia y ejecución de campañas email y WhatsApp',
-        'Recomendaciones proactivas de oportunidades de mejora',
-        'Roadmap mensual de operaciones + reporte ejecutivo',
-        'Atención de urgencias fines de semana',
+        'Desde 400 créditos mensuales',
+        'PM dedicado',
+        'Equipo completo de especialistas',
+        'Llamadas estratégicas semanales',
+        'Agentes IA de alto volumen',
       ],
-      waMsg: 'Hola, quiero el plan RevOps Avanzado de Sixteam.pro',
+      waMsg: 'Hola, quiero cotizar Ops Total de Sixteam.pro',
       highlight: false,
     },
   ];
@@ -151,14 +145,14 @@ const SoporteOperaciones = () => {
     {
       icon: Zap,
       titulo: 'Automatizaciones avanzadas de Revenue',
-      precio: '$260.000 COP / hora',
+      precio: 'Desde $1,500 USD',
       desc: 'Workflows complejos, lógica de procesos a medida y automatizaciones que conectan ventas, marketing y servicio en un solo flujo de ingresos.',
       waMsg: 'Hola, quiero cotizar automatizaciones avanzadas de RevOps',
     },
     {
       icon: Globe,
       titulo: 'Integraciones entre sistemas',
-      precio: '$360.000 COP / hora',
+      precio: 'Desde $1,500 USD',
       desc: 'Conectamos tu CRM con ERP, e-commerce, herramientas de marketing o cualquier sistema externo (Shopify, NetSuite, HubSpot, Mailchimp y más) vía API o Webhook.',
       waMsg: 'Hola, quiero cotizar una integración de sistemas',
     },
@@ -172,7 +166,7 @@ const SoporteOperaciones = () => {
     {
       icon: Layers,
       titulo: 'Desarrollo de plataforma a medida',
-      precio: '$432.000 COP / hora',
+      precio: 'Según alcance',
       desc: 'Diseñamos y construimos módulos o funcionalidades personalizadas que ningún software estándar cubre, alineados a tu flujo operativo único.',
       waMsg: 'Hola, quiero cotizar desarrollo de plataforma personalizada',
     },
@@ -192,8 +186,8 @@ const SoporteOperaciones = () => {
       a: 'Idealmente sí. Este servicio está pensado para organizaciones que ya cuentan con una base de CRM o plataforma digital y quieren operarla y evolucionarla de forma continua. Si aún no tienes implementación, comenzamos con un proyecto de implementación base.',
     },
     {
-      q: '¿Las horas de operación se acumulan si no las uso?',
-      a: 'No. Las horas mensuales no son acumulables — el plan garantiza disponibilidad y SLA para todos los clientes. Las horas adicionales se pueden contratar cuando el mes lo requiera.',
+      q: '¿Los créditos mensuales se acumulan si no los uso?',
+      a: 'No. Los créditos mensuales no son acumulables. Si tu operación requiere más capacidad, ajustamos el alcance dentro de Integral o Total.',
     },
     {
       q: '¿Qué incluye la reunión mensual de alineación estratégica?',
@@ -464,7 +458,7 @@ const SoporteOperaciones = () => {
           <div className="text-center mb-12 space-y-4">
             <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase">Precios</p>
             <h2 className="font-poppins font-bold text-gray-900 text-3xl sm:text-4xl lg:text-5xl">
-              Planes de RevOps mensual
+              Planes Sixteam Ops
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Elige según la madurez de tu operación y el nivel de acompañamiento que necesita tu equipo.
@@ -522,7 +516,7 @@ const SoporteOperaciones = () => {
           </div>
 
           <p className="text-center text-gray-500 text-sm mt-6">
-            Las horas mensuales no son acumulables · Horas adicionales disponibles según el plan contratado.
+            Los créditos mensuales no son acumulables · Total se cotiza según requerimientos.
           </p>
         </div>
       </section>

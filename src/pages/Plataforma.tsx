@@ -17,17 +17,16 @@ Página: /plataforma
 PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
-1. Sixteam Inbox + IA — $180 USD/mes + $300 USD implementación (2 usuarios)
-   Incluye: bandeja omnicanal (WhatsApp, Instagram, Facebook, email, SMS), IA conversacional 24/7, entrenamiento del bot, handoff IA→humano, widget de chat web.
+1. Ops Esencial — promo desde $200 USD/mes
+   Incluye: 60 créditos mensuales, 1 agente IA activo, plataforma CRM incluida y wallet de mensajería.
 
-2. CRM Sixteam.pro Core — $240 USD/mes + $600 USD implementación (3 usuarios)
-   Incluye: todo lo de Inbox + CRM de contactos, pipelines y oportunidades, Smart Lists, Workflows de automatización, deduplicación.
+2. Ops Integral — $499 USD/mes
+   Incluye: 160 créditos mensuales, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 
-3. CRM Sixteam.pro Growth — $360 USD/mes + $960 USD implementación (5 usuarios)
-   Incluye: todo lo de Core + calendarios y agendamiento, funnels y landing pages, email marketing, social planner, reputation management.
+3. Ops Total — desde $1,200 USD/mes
+   Incluye: desde 400 créditos mensuales, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
-USUARIOS ADICIONALES: $36 USD/usuario/mes (operativo) o $18 USD/usuario/mes (administrativo/visor).
-TIEMPO DE IMPLEMENTACIÓN: Inbox 2-3 semanas; Core y Growth 3-6 semanas.
+TIEMPO DE IMPLEMENTACIÓN: según alcance del plan y stack actual.
 TECNOLOGÍA BASE: Infraestructura de clase enterprise configurada y operada por Sixteam.pro.
 
 DIFERENCIAL: No vendemos acceso a software — configuramos, implementamos y operamos la plataforma bajo tu proceso de negocio.`;
@@ -43,8 +42,8 @@ const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%
 
 const Plataforma = () => {
   useSEO({
-    title: "Plataforma CRM — Sixteam.pro | Planes desde $180 USD/mes",
-    description: "Planes CRM todo-en-uno desde $180 USD/mes. Bandeja omnicanal, agente IA 24/7, pipeline de ventas y automatizaciones para empresas de servicios en Colombia.",
+    title: "Plataforma CRM — Sixteam.pro | Promo desde $200 USD/mes",
+    description: "Planes Ops todo-en-uno con promo desde $200 USD/mes. CRM, agentes IA, automatizaciones y operación mensual para empresas de servicios en Colombia.",
     canonical: "https://sixteam.pro/plataforma",
     ogUrl: "https://sixteam.pro/plataforma",
   });
@@ -62,76 +61,66 @@ const Plataforma = () => {
   const plans = [
     {
       id: 'inbox',
-      name: 'Sixteam Inbox + IA',
-      tagline: 'Tu primer paso hacia la automatización',
-      desc: 'Centraliza todas tus conversaciones en una sola bandeja y deja que la IA atienda, clasifique y haga seguimiento 24/7.',
-      price: '180',
-      impl: '300',
-      users: '2',
+      name: 'Ops Esencial',
+      tagline: 'Tu primer paso con tecnología e IA',
+      desc: 'Activa un agente IA en tu canal más urgente y opera solicitudes con un equipo especialista dentro de tu plan de créditos.',
+      price: '200',
+      impl: 'Sin setup obligatorio',
+      users: '60 créditos/mes',
       accent: '#1d70a2',
       badge: 'Producto gancho',
       icon: Inbox,
       features: [
-        'Bandeja omnicanal unificada (WhatsApp, Instagram, Facebook, email, SMS)',
-        'IA conversacional en modo sugerido o piloto automático',
-        'Entrenamiento del bot con tu web, FAQs y documentos',
-        'Handoff automático de IA a asesor humano',
-        'Widget de chat para tu sitio web',
-        'Historial multicanal por contacto en un solo hilo',
-        'Seguimiento y reactivación conversacional con IA',
-        'Capacitación del equipo en uso del inbox',
+        '1 agente IA activo en tu canal más urgente',
+        '60 créditos mensuales no acumulables',
+        'Plataforma CRM all-in-one incluida',
+        '$30/mes Wallet de mensajería',
+        'Especialista humano dentro del plan de créditos',
       ],
-      notIncluded: ['CRM de contactos completo', 'Pipelines y oportunidades', 'Automatizaciones avanzadas de workflow'],
-      waMsg: 'Hola, quiero conocer más sobre Sixteam Inbox + IA',
+      notIncluded: ['Integraciones avanzadas', 'PM dedicado', 'Capacidad de alto volumen'],
+      waMsg: 'Hola, quiero conocer más sobre Ops Esencial',
     },
     {
       id: 'core',
-      name: 'CRM Sixteam.pro Core',
-      tagline: 'Ordena tu operación, cierra más negocios',
-      desc: 'CRM operativo completo para equipos de ventas o servicio al cliente. Pipelines, seguimientos automáticos y visibilidad total de tu proceso.',
-      price: '240',
-      impl: '600',
-      users: '3',
+      name: 'Ops Integral',
+      tagline: 'Operación multi-canal con más capacidad',
+      desc: 'Agentes IA operando CRM, WhatsApp y email, con integraciones, automatizaciones avanzadas y nuevas configuraciones.',
+      price: '499',
+      impl: 'Sin setup obligatorio',
+      users: '160 créditos/mes',
       accent: '#00bfa5',
       badge: 'Más popular',
       icon: BarChart3,
       features: [
-        'Todo lo de Inbox + IA incluido',
-        'CRM de contactos con campos estándar y personalizados',
-        'Pipelines y oportunidades con etapas, valor y trazabilidad',
-        'Smart Lists: segmentación dinámica de contactos',
-        'Workflows: automatización con triggers, condiciones y acciones',
-        'Deduplicación y captura estructurada de datos',
-        'Vistas, filtros y listas operativas por equipo',
-        'Roles de trabajo, pruebas de calidad y entrenamiento',
+        'Agentes IA operando en CRM, WhatsApp y email',
+        '160 créditos mensuales no acumulables',
+        'Integraciones y automatizaciones avanzadas',
+        'Bono Onboarding VIP',
+        'Plataforma CRM all-in-one incluida',
       ],
-      notIncluded: ['Calendario de agendamiento', 'Email marketing', 'Funnels y sitios web', 'Gestión de reputación'],
-      waMsg: 'Hola, quiero conocer más sobre CRM Sixteam.pro Core',
+      notIncluded: ['PM dedicado', 'Capacidad total de alto volumen'],
+      waMsg: 'Hola, quiero conocer más sobre Ops Integral',
     },
     {
       id: 'growth',
-      name: 'CRM Sixteam.pro Growth',
-      tagline: 'Capta, nutre, convierte y crece',
-      desc: 'La plataforma completa: CRM + marketing + automatización en una sola operación digital para escalar tu negocio.',
-      price: '360',
-      impl: '960',
-      users: '5',
+      name: 'Ops Total',
+      tagline: 'Equipo de tecnología permanente',
+      desc: 'Capacidad dedicada para operaciones de mayor volumen, con PM, equipo completo y estrategia continua de crecimiento.',
+      price: '1,200',
+      impl: 'Desde $1,200 USD/mes',
+      users: '400+ créditos/mes',
       accent: '#00bfa5',
       badge: 'Plataforma completa',
       icon: TrendingUp,
       features: [
-        'Todo lo de CRM Core incluido',
-        'Calendarios y agendamiento automático con recordatorios',
-        'Funnels, websites y landing pages (desde cero o templates)',
-        'Forms & Surveys para captura y calificación de leads',
-        'Blog con SEO, categorías y publicación programada',
-        'Email Marketing con editor drag-and-drop y campañas',
-        'Social Planner: programación y publicación en redes',
-        'Reputation Management: reseñas por SMS/email, centralización de reviews',
-        'Campañas y secuencias con Workflows + Email + canales',
+        'Desde 400 créditos mensuales',
+        'PM dedicado',
+        'Equipo completo de especialistas',
+        'Llamadas estratégicas semanales',
+        'Agentes IA de alto volumen',
       ],
       notIncluded: [],
-      waMsg: 'Hola, quiero conocer más sobre CRM Sixteam.pro Growth',
+      waMsg: 'Hola, quiero conocer más sobre Ops Total',
     },
   ];
 
@@ -158,8 +147,8 @@ const Plataforma = () => {
       a: 'La plataforma Sixteam.pro está construida sobre infraestructura de clase enterprise usada por miles de agencias y negocios digitales en el mundo. Sixteam configura, adapta y opera toda la plataforma bajo tu marca y proceso.',
     },
     {
-      q: '¿Puedo empezar con Inbox + IA y escalar después?',
-      a: 'Sí. La propuesta está diseñada como una escalera de valor: comienzas con la bandeja conversacional + IA, y cuando estés listo escalas a CRM Core o Growth sin perder el trabajo previo configurado.',
+      q: '¿Puedo empezar con Ops Esencial y escalar después?',
+      a: 'Sí. La propuesta está diseñada como una escalera de valor: comienzas con Ops Esencial y, cuando estés listo, escalas a Integral o Total sin perder el trabajo previo configurado.',
     },
     {
       q: '¿Qué canales puedo conectar?',
@@ -171,7 +160,7 @@ const Plataforma = () => {
     },
     {
       q: '¿Cuántos usuarios adicionales puedo agregar?',
-      a: 'Puedes agregar usuarios operativos adicionales por $36 USD/usuario/mes. Los usuarios administrativos, visores o de marketing tienen un costo de $18 USD/usuario/mes según aplique.',
+      a: 'Los planes actuales se estructuran por créditos, agentes y alcance operativo. Si necesitas usuarios o frentes adicionales, lo definimos dentro del plan Integral o Total.',
     },
     {
       q: '¿Las integraciones con sistemas externos están incluidas?',
@@ -179,7 +168,7 @@ const Plataforma = () => {
     },
     {
       q: '¿En cuánto tiempo queda operativa la plataforma?',
-      a: 'Depende del plan y la complejidad del proyecto. El proceso incluye configuración, pruebas de calidad, ajustes y capacitación del equipo. Inbox + IA puede estar listo en 2–3 semanas; CRM Core y Growth entre 3–6 semanas.',
+      a: 'Depende del plan y la complejidad del proyecto. El proceso incluye configuración, pruebas de calidad, ajustes y capacitación del equipo. El punto de partida se define en la llamada de alineación.',
     },
   ];
 
@@ -306,7 +295,7 @@ const Plataforma = () => {
                       <span className="font-poppins font-black text-white text-4xl">{plan.price}</span>
                       <span className="text-gray-400 text-sm">/mes</span>
                     </div>
-                    <div className="text-gray-400 text-sm">Implementación desde USD {plan.impl} · {plan.users} usuarios</div>
+                    <div className="text-gray-400 text-sm">{plan.impl} · {plan.users}</div>
                   </div>
 
                   <ul className="space-y-2.5 flex-1 mb-8">
@@ -341,7 +330,7 @@ const Plataforma = () => {
           </div>
 
           <p className="text-center text-gray-400 text-sm mt-8">
-            Usuario adicional operativo: USD 36/mes · Usuario admin/visor: USD 18/mes
+            Planes mensuales en USD. Total se cotiza según requerimientos.
           </p>
         </div>
       </section>
@@ -440,9 +429,9 @@ const Plataforma = () => {
               <thead>
                 <tr className="border-b border-white/10">
                   <th className="text-left py-3 px-3 sm:py-4 sm:px-4 text-gray-400 font-poppins font-semibold text-xs sm:text-sm w-1/2">Módulo / Capacidad</th>
-                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-gray-300 font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">Inbox + IA</th>
-                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-gray-300 font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">CRM Core</th>
-                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-[#00bfa5] font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">Growth</th>
+                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-gray-300 font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">Ops Esencial</th>
+                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-gray-300 font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">Ops Integral</th>
+                  <th className="text-center py-3 px-2 sm:py-4 sm:px-4 text-[#00bfa5] font-poppins font-semibold text-xs sm:text-sm whitespace-nowrap">Ops Total</th>
                 </tr>
               </thead>
               <tbody>

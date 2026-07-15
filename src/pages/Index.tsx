@@ -13,7 +13,7 @@ import SchemaOrg from '@/components/SchemaOrg';
 
 const Index = () => {
   useSEO({
-    title: 'Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia',
+    title: 'Sixteam.pro: CRM, Automatizaciones e IA para Empresas | Colombia',
     description: 'Transformamos tu negocio con CRM, automatizaciones e IA. Implementamos GoHighLevel, pipelines de ventas, chatbots IA y RevOps para empresas en Colombia y Latinoamérica.',
     canonical: 'https://sixteam.pro',
     ogUrl: 'https://sixteam.pro',
@@ -849,7 +849,7 @@ const Index = () => {
               <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">en una sola plataforma</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Comercializamos nuestro propio CRM bajo la marca <span className="text-white font-semibold">CRM by Sixteam.pro</span> — una plataforma todo-en-uno que une ventas, marketing, atención al cliente y agentes de IA en un único ecosistema.
+              Comercializamos nuestro propio CRM bajo la marca <span className="text-white font-semibold">CRM by Sixteam.pro</span>: una plataforma todo-en-uno que une ventas, marketing, atención al cliente y agentes de IA en un único ecosistema.
             </p>
           </div>
 
@@ -941,7 +941,7 @@ const Index = () => {
                   icon: <Bot className="w-5 h-5 text-teal-400" />,
                   bg: 'bg-teal-500/10 border-teal-500/30',
                   title: 'Agente IA para WhatsApp',
-                  desc: 'Responde mensajes de WhatsApp automáticamente con IA conversacional. Califica leads, responde preguntas frecuentes y agenda citas — sin que tu equipo intervenga.',
+                  desc: 'Responde mensajes de WhatsApp automáticamente con IA conversacional. Califica leads, responde preguntas frecuentes y agenda citas, sin que tu equipo intervenga.',
                   badge: 'Destacado',
                   badgeColor: 'bg-teal-400/20 text-teal-300 border-teal-400/30',
                 },
@@ -965,7 +965,7 @@ const Index = () => {
                   icon: <MessageCircle className="w-5 h-5 text-green-400" />,
                   bg: 'bg-green-500/10 border-green-500/30',
                   title: 'Bandeja Unificada de Conversaciones',
-                  desc: 'Todas las conversaciones — WhatsApp, email, SMS, llamadas — en un solo perfil de cliente. Cero dispersión, contexto completo en tiempo real.',
+                  desc: 'Todas las conversaciones (WhatsApp, email, SMS, llamadas) en un solo perfil de cliente. Cero dispersión, contexto completo en tiempo real.',
                   badge: null,
                   badgeColor: '',
                 },
@@ -973,7 +973,7 @@ const Index = () => {
                   icon: <Zap className="w-5 h-5 text-yellow-400" />,
                   bg: 'bg-yellow-500/10 border-yellow-500/30',
                   title: 'Páginas, Formularios y Pagos',
-                  desc: 'Crea landing pages, formularios de captura, calendarios de citas y procesa pagos — todo dentro del mismo CRM, sin herramientas externas.',
+                  desc: 'Crea landing pages, formularios de captura, calendarios de citas y procesa pagos, todo dentro del mismo CRM, sin herramientas externas.',
                   badge: null,
                   badgeColor: '',
                 },
@@ -1034,7 +1034,7 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$200</span>
+                    <span className="text-3xl font-bold text-white">$199</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
                   <p className="text-gray-500 text-xs">60 créditos IA | 1 agente activo | sin setup obligatorio</p>
@@ -1182,7 +1182,7 @@ const Index = () => {
 
             {/* Izquierda — texto + diferenciadores */}
             <div>
-              <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-6">— Por qué Sixteam</p>
+              <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-6">Por qué Sixteam</p>
               <h2 className="font-poppins font-black text-[clamp(2rem,5vw,3.5rem)] text-[#0a2342] leading-tight mb-8">
                 Más que implementadores,
                 <br />
@@ -1192,7 +1192,7 @@ const Index = () => {
                 Antes de tocar una sola herramienta, invertimos tiempo en entender tu operación desde adentro. Mapeamos procesos, entrevistamos al equipo, identificamos qué automatizar y qué eliminar.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                Y nos quedamos junto a ti mucho después de la implementación — en tu WhatsApp, en tus reuniones, ideando contigo cada semana.
+                Y nos quedamos junto a ti mucho después de la implementación: en tu WhatsApp, en tus reuniones, ideando contigo cada semana.
               </p>
               <div className="space-y-3">
                 {[
@@ -1200,7 +1200,7 @@ const Index = () => {
                   'Mapeamos procesos reales antes de recomendar herramientas',
                   'Diseñamos la arquitectura antes de cualquier configuración',
                   'Medimos éxito en resultados de negocio, no en funcionalidades',
-                  'Soporte continuo post-implementación — somos parte de tu equipo',
+                  'Soporte continuo post-implementación, somos parte de tu equipo',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-4 bg-[#0a2342]/3 border border-[#1d70a2]/15 rounded-lg hover:border-[#00bfa5]/40 transition-all">
                     <CheckCircle className="w-5 h-5 text-[#00bfa5] flex-shrink-0 mt-0.5" />
@@ -1252,7 +1252,7 @@ const Index = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
           <div className="text-center mb-14">
-            <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-4">— Resultados reales</p>
+            <p className="text-[#00bfa5] text-xs font-bold tracking-[0.2em] uppercase mb-4">Resultados reales</p>
             <h2 className="font-poppins font-black text-[clamp(2rem,5vw,3.5rem)] text-white leading-tight">
               Empresas que ya transformaron
               <br className="hidden sm:block" />

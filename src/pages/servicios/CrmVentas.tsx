@@ -37,7 +37,7 @@ const EXAMPLE_QUESTIONS = [
 
 const CrmVentas = () => {
   useSEO({
-    title: "CRM de Ventas — Sixteam.pro | Pipeline y Automatización Comercial",
+    title: "CRM de Ventas | Sixteam.pro | Pipeline y Automatización Comercial",
     description: "Implementamos tu módulo de ventas en CRM con pipeline visual, seguimiento automático de leads y reportes en tiempo real. Desde $1,500 USD por proyecto.",
     canonical: "https://sixteam.pro/servicios/crm-ventas",
     ogUrl: "https://sixteam.pro/servicios/crm-ventas",
@@ -270,7 +270,7 @@ const CrmVentas = () => {
               ))}
             </div>
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              * Los resultados de conversión y cierre dependen del proceso comercial y el seguimiento de tu equipo — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+              * Los resultados de conversión y cierre dependen del proceso comercial y el seguimiento de tu equipo, no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
             </p>
           </div>
         </div>

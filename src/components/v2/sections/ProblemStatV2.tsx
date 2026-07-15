@@ -6,7 +6,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const problemItems = [
   "Pagas licencias mensuales de herramientas que nadie en el equipo abre.",
-  "Los procesos viven en la cabeza de una persona — no en un sistema.",
+  "Los procesos viven en la cabeza de una persona, no en un sistema.",
   "Las tareas repetitivas se hacen a mano todos los días.",
   "Cada área tiene su propio software y ninguno conversa con el otro.",
 ];
@@ -56,7 +56,7 @@ export const ProblemStatV2 = () => {
             className="v2-reveal v2-d1 mt-5 font-poppins font-bold text-white leading-[1.1] tracking-[-0.03em] max-w-[800px]"
             style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
           >
-            Las empresas que no operan tecnología en cada proceso —{" "}
+            Las empresas que no operan tecnología en cada proceso,{" "}
             <em className="font-serif italic font-normal text-v2-accent-teal">
               no crecen.
             </em>
@@ -152,7 +152,7 @@ export const ProblemStatV2 = () => {
                 "No es tener la herramienta.
                 <br />
                 <em className="text-v2-accent-teal not-italic font-serif italic">
-                  Es saberla operar — todos los días."
+                  Es saberla operar todos los días."
                 </em>
               </blockquote>
             </div>

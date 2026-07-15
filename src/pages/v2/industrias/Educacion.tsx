@@ -7,7 +7,7 @@ import ButtonV2 from "@/components/v2/ButtonV2";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const pains = [
-  { icon: MessageSquare, title: "Leads dispersos en mil canales", desc: "WhatsApp, Instagram, ferias, web — cada asesor gestiona los suyos y nadie tiene la foto completa. Aplicantes que preguntan y nunca reciben respuesta." },
+  { icon: MessageSquare, title: "Leads dispersos en mil canales", desc: "WhatsApp, Instagram, ferias, web: cada asesor gestiona los suyos y nadie tiene la foto completa. Aplicantes que preguntan y nunca reciben respuesta." },
   { icon: Clock,         title: "Procesos de admisión lentos",    desc: "Carpetas físicas o Excel, envíos manuales de documentos, entrevistas que tardan semanas. El candidato se cansa y se va a la competencia." },
   { icon: TrendingUp,    title: "Sin seguimiento post-inscripción",desc: "El CRM termina cuando el alumno paga. Nadie gestiona la retención, el upsell de programas ni la reactivación de los que no completaron." },
   { icon: Users,         title: "Equipos que no escalan",         desc: "En temporada de matrículas los asesores colapsan y la calidad de atención cae. No hay forma de absorber el volumen sin contratar." },
@@ -15,7 +15,7 @@ const pains = [
 
 const solutions = [
   { icon: Database,    title: "Pipeline de inscripción end-to-end", desc: "Interesado → Aplicación → Entrevista → Admitido → Matrícul: cada etapa con automatizaciones y alertas, sin que nadie se pierda." },
-  { icon: MessageSquare, title: "Agente IA calificador 24/7",      desc: "Responde dudas de programas, captura datos de contacto, pre-califica y agenda entrevistas — sin esperar al asesor." },
+  { icon: MessageSquare, title: "Agente IA calificador 24/7",      desc: "Responde dudas de programas, captura datos de contacto, pre-califica y agenda entrevistas, sin esperar al asesor." },
   { icon: Zap,           title: "Nurturing por programa",          desc: "Secuencias de email y WhatsApp diferenciadas para cada programa. El candidato recibe contenido relevante mientras decide, no mensajes genéricos." },
   { icon: BarChart3,     title: "Dashboards de admisiones",        desc: "Tasa de conversión por canal, programa y asesor. Cuántos se caen en cada etapa y por qué. Datos para decidir, no para archivar." },
 ];
@@ -48,7 +48,7 @@ const Educacion = () => {
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">
             Operamos tu proceso de admisiones con CRM, agentes de IA y automatizaciones
-            para que cada prospecto reciba respuesta — y el asesor se enfoque en cerrar.
+            para que cada prospecto reciba respuesta y el asesor se enfoque en cerrar.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
@@ -199,7 +199,7 @@ const Educacion = () => {
             <em className="font-serif italic font-normal text-v2-accent-teal">sin saberlo</em>?
           </h2>
           <p className="font-lato text-[17px] text-white/65 mt-5 max-w-[460px] mx-auto">
-            El Radar gratuito te muestra en 48h exactamente dónde está la fuga — y qué cambia si la tapas.
+            El Radar gratuito te muestra en 48h exactamente dónde está la fuga y qué cambia si la tapas.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">

@@ -19,7 +19,7 @@ const WA_LINK =
 
 export default function BrochurePage() {
   useSEO({
-    title: 'Portafolio Sixteam.pro — CRM, IA y Automatización para empresas en Latam',
+    title: 'Portafolio Sixteam.pro: CRM, IA y Automatización para empresas en Latam',
     description:
       'Implementamos CRM, automatizaciones, IA conversacional, integraciones y activos digitales para que tu empresa centralice, venda y escale en orden. Conoce nuestro portafolio completo.',
     canonical: 'https://sixteam.pro/brochure',

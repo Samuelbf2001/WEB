@@ -24,7 +24,7 @@ import { useSEO } from '@/hooks/useSEO';
 
 const DiagnosticoGratis = () => {
   useSEO({
-    title: "Diagnóstico Gratuito — Radar Sixteam | Resultados en 48 Horas",
+    title: "Diagnóstico Gratuito | Radar Sixteam | Resultados en 48 Horas",
     description: "Diagnóstico gratuito de tu operación comercial. En 48 horas recibes mapa de oportunidades, recomendaciones priorizadas y benchmark competitivo. Sin compromiso.",
     canonical: "https://sixteam.pro/radar/diagnostico-gratis",
     ogUrl: "https://sixteam.pro/radar/diagnostico-gratis",

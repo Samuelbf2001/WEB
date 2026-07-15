@@ -17,14 +17,14 @@ import { useSEO } from '@/hooks/useSEO';
 const PAGE_CONTEXT = `Estás en la landing page de Sixteam.pro especializada para agencias de viaje.
 Página: /industrias/agencias-de-viaje
 
-PROPUESTA DE VALOR: Ayudamos a agencias de viaje a escalar sus ventas, organizar su equipo y tomar el control de cada oportunidad con CRM, automatizaciones e IA — sin necesidad de contratar más personal.
+PROPUESTA DE VALOR: Ayudamos a agencias de viaje a escalar sus ventas, organizar su equipo y tomar el control de cada oportunidad con CRM, automatizaciones e IA, sin necesidad de contratar más personal.
 
 PROBLEMAS QUE RESOLVEMOS (pain points):
 - Cotizaciones manuales lentas: el cliente pide un paquete y la agencia tarda horas o días en responder, perdiendo la oportunidad frente a competidores más rápidos
 - Sin seguimiento post-cotización: se envía la cotización pero si el cliente no responde nadie hace follow-up a las 24h ni 72h
-- Leads perdidos en canales dispersos: WhatsApp personal, correo, DMs de Instagram y llamadas sin centralizar — alguno siempre se pierde
+- Leads perdidos en canales dispersos: WhatsApp personal, correo, DMs de Instagram y llamadas sin centralizar, alguno siempre se pierde
 - Temporada alta caótica: en diciembre y semana santa el equipo se ahoga, la calidad baja y se pierden reservas justo cuando más clientes hay
-- Sin historial del viajero: si el cliente llama de nuevo, el asesor tiene que preguntarle todo desde cero — destinos anteriores, presupuesto, preferencias
+- Sin historial del viajero: si el cliente llama de nuevo, el asesor tiene que preguntarle todo desde cero: destinos anteriores, presupuesto, preferencias
 - Clientes que no regresan: una vez el cliente viajó, no hay proceso de reactivación para la próxima temporada
 
 SOLUCIONES / FUNCIONALIDADES:
@@ -39,11 +39,11 @@ SOLUCIONES / FUNCIONALIDADES:
 CÓMO FUNCIONA (4 pasos):
 1. Lead entra por cualquier canal (WhatsApp, portal, web, Meta Ads)
 2. IA responde rápidamente, captura info y asigna al asesor correcto
-3. Asesor cotiza con seguimiento automático — nunca más un lead olvidado
+3. Asesor cotiza con seguimiento automático: nunca más un lead olvidado
 4. Post-viaje: encuesta de satisfacción y reactivación para próxima temporada
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
 - Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 - Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
@@ -65,7 +65,7 @@ const handleWA = () => window.open(WA_URL, '_blank');
 const painPoints = [
   {
     icon: Clock,
-    title: 'Cotizaciones que tardan horas — o días',
+    title: 'Cotizaciones que tardan horas, o días',
     desc: 'El cliente pregunta por Cartagena para 4 personas en diciembre. Tu asesor tarda 3–4 horas en armar la propuesta. Para entonces, el cliente encontró una respuesta más rápida.',
   },
   {
@@ -81,7 +81,7 @@ const painPoints = [
   {
     icon: Zap,
     title: 'Temporada alta caótica sin automatización',
-    desc: 'En diciembre y semana santa entran 5 veces más consultas. El equipo se ahoga, la calidad baja — justo cuando más clientes están listos para comprar.',
+    desc: 'En diciembre y semana santa entran 5 veces más consultas. El equipo se ahoga, la calidad baja, justo cuando más clientes están listos para comprar.',
   },
   {
     icon: Package,
@@ -313,7 +313,7 @@ const PipelineStep = ({ label, icon: Icon, index, total }: { label: string; icon
 
 const AgenciasDeViaje = () => {
   useSEO({
-    title: "CRM para Agencias de Viaje — Sixteam.pro | De 4 Horas a 2 Minutos",
+    title: "CRM para Agencias de Viaje | Sixteam.pro | De 4 Horas a 2 Minutos",
     description: "CRM, IA y automatizaciones para agencias de viaje en Latam. Responde en 2 minutos, seguimiento automático y convierte más cotizaciones en reservas.",
     canonical: "https://sixteam.pro/industrias/agencias-de-viaje",
     ogUrl: "https://sixteam.pro/industrias/agencias-de-viaje",
@@ -471,7 +471,7 @@ const AgenciasDeViaje = () => {
               </div>
 
               <p className="text-[#e0e0e0]/80 text-lg leading-relaxed mb-7 max-w-lg">
-                Responde leads en minutos, automatiza seguimientos y cierra más reservas — <strong className="text-white">sin contratar más personal</strong>.
+                Responde leads en minutos, automatiza seguimientos y cierra más reservas, <strong className="text-white">sin contratar más personal</strong>.
               </p>
 
               {/* Micro-features */}
@@ -659,7 +659,7 @@ const AgenciasDeViaje = () => {
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
               Así funciona para tu agencia
             </h2>
-            <p className="text-[#e0e0e0]/70 text-base">De la primera consulta a la reserva confirmada — todo automatizado.</p>
+            <p className="text-[#e0e0e0]/70 text-base">De la primera consulta a la reserva confirmada, todo automatizado.</p>
           </div>
 
           {/* Pipeline visual */}
@@ -918,7 +918,7 @@ const AgenciasDeViaje = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Esencial</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$199</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -1046,7 +1046,7 @@ const AgenciasDeViaje = () => {
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$200 USD promo</p>
+                  <p className="text-white font-poppins font-black text-2xl">$199 USD promo</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button

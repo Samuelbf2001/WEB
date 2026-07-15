@@ -1,36 +1,12 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { gtm } from '@/lib/gtm';
 
 const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { pathname } = useLocation();
-
-  // La web pública (V2) tiene sus propios CTAs de contacto; este botón flotante
-  // solo aplica a las landings V1 que siguen publicadas
-  const V1_ROUTES = [
-    '/plataforma',
-    '/brochure',
-    '/home-aa',
-    '/viajes',
-    '/inmobiliarias',
-    '/industrias/agencias-de-viaje',
-    '/industrias/servicios-generales',
-    '/casos/',
-    '/radar/',
-    '/politicas',
-    '/terminos',
-  ];
-  if (!V1_ROUTES.some((route) => pathname.startsWith(route))) {
-    return null;
-  }
 
   const handleWhatsAppClick = () => {
     gtm.whatsappClick('floating_button');
-    const phone = "+573004188522";
-    const message = "Hola. estoy interesado en un servicio para ...";
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    window.open('https://wa.me/573004188522', '_blank');
   };
 
   return (

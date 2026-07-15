@@ -43,7 +43,7 @@ const aiAgents = [
     name: "Sam",
     role: "Diagnóstico IA",
     tagline: "Consultoría · Auditoría operacional",
-    quote: "Mapeo la verdad real de tu operación, no el organigrama teórico — y te muestro dónde pierdes dinero.",
+    quote: "Mapeo la verdad real de tu operación, no el organigrama teórico, y te muestro dónde pierdes dinero.",
     description:
       "Audita el flujo comercial de forma agéntica y cuantifica las fugas de revenue con datos reales.",
     capabilities: [
@@ -63,7 +63,7 @@ const aiAgents = [
     name: "Debbie",
     role: "Constructora de Sistemas IA",
     tagline: "Implementación · CRM & workflows",
-    quote: "Configuro y dejo funcionando tu CRM, tus automatizaciones y tus flujos — sin que tengas que tocar nada técnico.",
+    quote: "Configuro y dejo funcionando tu CRM, tus automatizaciones y tus flujos, sin que tengas que tocar nada técnico.",
     description:
       "Hace el setup y build completo del CRM, automatizaciones y estructura de pipeline.",
     capabilities: [
@@ -84,7 +84,7 @@ const aiAgents = [
     tagline: "Implementación · Integraciones & APIs",
     quote: "Conecto todas tus herramientas para que se hablen entre sí y dejen de costarte horas.",
     description:
-      "Conecta WhatsApp, CRM, pagos y cualquier API — e incrusta agentes IA en el flujo operativo.",
+      "Conecta WhatsApp, CRM, pagos y cualquier API, e incrusta agentes IA en el flujo operativo.",
     capabilities: [
       "Integraciones WhatsApp + CRM + pasarela de pago en un solo flujo",
       "Conexión de APIs entre herramientas del stack del cliente",
@@ -151,7 +151,7 @@ const experts = [
     initials: "VR",
     name: "Valentina R.",
     role: "CRM & Automation Lead",
-    quote: "Una automatización bien hecha es invisible. El equipo opera y ni siente que hay algo corriendo detrás — hasta que ve los resultados el lunes.",
+    quote: "Una automatización bien hecha es invisible. El equipo opera y ni siente que hay algo corriendo detrás, hasta que ve los resultados el lunes.",
     tags: ["Make.com", "n8n", "Email Marketing"],
     color: "bg-[#00bfa5]",
     specialties: ["Automatizaciones complejas", "Email sequences", "Integraciones API"],
@@ -160,7 +160,7 @@ const experts = [
     initials: "AP",
     name: "Andrés P.",
     role: "AI & Chatbot Engineer",
-    quote: "Construyo agentes que entienden el negocio, no bots que siguen un script. Si el contexto cambia, el agente lo maneja — sin que nadie tenga que reprogramarlo.",
+    quote: "Construyo agentes que entienden el negocio, no bots que siguen un script. Si el contexto cambia, el agente lo maneja, sin que nadie tenga que reprogramarlo.",
     tags: ["Agentes IA", "WhatsApp API", "Integraciones"],
     color: "bg-[#0a5c78]",
     specialties: ["Agentes de IA", "WhatsApp Business", "Integraciones en tiempo real"],
@@ -242,7 +242,7 @@ const Equipo = () => {
             }}
           >
             Desde el día uno tienes acceso a 6 agentes de IA entrenados y expertos
-            humanos senior — operando tu tecnología mes a mes.
+            humanos senior que operan tu tecnología mes a mes.
           </p>
 
           {/* Pill badges */}
@@ -295,7 +295,7 @@ const Equipo = () => {
               </h2>
               <p className="v2-fade v2-d3 font-lato text-[17px] text-white/65 mt-4 leading-[1.65]">
                 Alex y Sam consultan. Debbie y Vinnie implementan. Sally y Clara operan.
-                Clara devuelve los hallazgos a Alex — y el ciclo vuelve a empezar cada semana.
+                Clara devuelve los hallazgos a Alex, y el ciclo vuelve a empezar cada semana.
               </p>
             </div>
 
@@ -560,7 +560,7 @@ const Equipo = () => {
             className="font-lato text-[17px] text-white/65 mt-5 max-w-[500px] mx-auto leading-[1.65]"
             style={{ opacity: 0, animation: "v2-fade-up 0.5s ease forwards 200ms" }}
           >
-            Empieza con el Radar gratuito — en 48 horas sabes exactamente qué
+            Empieza con el Radar gratuito: en 48 horas sabes exactamente qué
             puede operar tu equipo desde el día uno.
           </p>
 

@@ -116,7 +116,7 @@ const compDimensions = [
 const plans = [
   {
     name: "ESENCIAL",
-    price: "$200",
+    price: "$199",
     period: "/mes",
     target: "Negocios pequeños y equipos en arranque",
     features: ["1 agente IA activo", "60 créditos / mes", "CRM incluido", "Wallet de mensajería"],
@@ -211,7 +211,7 @@ function Chain({ dark }: { dark?: boolean }) {
       <span className={`px-3 py-1 rounded-full border border-[#00bfa5]/60 ${accent} bg-[#00bfa5]/10`}>
         OPERACIÓN
       </span>
-      <span className={`ml-1 text-[11px] ${dark ? "text-white/60" : "text-[#0a2342]/60"}`}>— la cadena completa</span>
+      <span className={`ml-1 text-[11px] ${dark ? "text-white/60" : "text-[#0a2342]/60"}`}>: la cadena completa</span>
     </div>
   );
 }
@@ -500,7 +500,7 @@ const PitchV2 = () => {
               style={{ animationDelay: "220ms" }}
             >
               <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
-                Cobertura completa: marketing, ventas y servicio al cliente — todo el revenue, no una pieza.
+                Cobertura completa: marketing, ventas y servicio al cliente, todo el revenue, no una pieza.
               </p>
               <p className="font-lato text-[17px] md:text-[18px] text-v2-ink-body leading-[1.55]">
                 Equipo AI-native: humanos senior + 6 agentes IA operando 24/7.
@@ -625,7 +625,7 @@ const PitchV2 = () => {
                   {
                     stat: "20–200",
                     label: "empleados: la trampa",
-                    desc: "Cuando una empresa crece, la comunicación informal — WhatsApp, aprobaciones verbales, Excel disperso — colapsa bajo el volumen.",
+                    desc: "Cuando una empresa crece, la comunicación informal (WhatsApp, aprobaciones verbales, Excel disperso) colapsa bajo el volumen.",
                     icon: Users,
                   },
                   {
@@ -727,7 +727,7 @@ const PitchV2 = () => {
                 <Underlined color="teal" variant="scribble">
                   <em className="font-serif italic font-normal text-[#00bfa5]">Elige entre Sixteam y uno de estos cuatro</em>
                 </Underlined>{" "}
-                — y ninguno cierra la cadena.
+                , y ninguno cierra la cadena.
               </h2>
 
               {/* Dimensions legend row */}
@@ -795,7 +795,7 @@ const PitchV2 = () => {
               {/* Punchline */}
               <div className="v2-reveal v2-d4 mt-7 border border-[#00bfa5]/25 bg-[#00bfa5]/6 rounded-2xl px-6 py-5">
                 <p className="font-poppins font-bold text-[16px] text-white">
-                  Sixteam es el único que consulta + implementa + opera de forma continua, AI-native, y cubre todo RevOps — sin escalar headcount linealmente.
+                  Sixteam es el único que consulta + implementa + opera de forma continua, AI-native, y cubre todo RevOps, sin escalar headcount linealmente.
                 </p>
               </div>
             </div>
@@ -845,7 +845,7 @@ const PitchV2 = () => {
                     num: "02",
                     label: "IMPLEMENTACIÓN",
                     headline: "Construimos el sistema",
-                    desc: "CRM, automatizaciones, desarrollo, pauta, integraciones, agentes IA — ya lo hacemos hoy. Todo bajo un techo.",
+                    desc: "CRM, automatizaciones, desarrollo, pauta, integraciones, agentes IA: ya lo hacemos hoy. Todo bajo un techo.",
                     color: "border-[#0a5c78]/30",
                     accent: "#0a5c78",
                   },
@@ -853,7 +853,7 @@ const PitchV2 = () => {
                     num: "03",
                     label: "OPERACIÓN",
                     headline: "Lo corremos mes a mes",
-                    desc: "Tu equipo externo permanente. Dashboard en vivo, cadencia semanal, WhatsApp diario, reajuste continuo. No un entregable — una operación.",
+                    desc: "Tu equipo externo permanente. Dashboard en vivo, cadencia semanal, WhatsApp diario, reajuste continuo. No un entregable, sino una operación.",
                     color: "border-[#00bfa5]/40",
                     accent: "#00bfa5",
                   },
@@ -941,7 +941,7 @@ const PitchV2 = () => {
                   {
                     icon: Target,
                     label: "IA agéntica ya opera flujos reales",
-                    desc: "Los agentes ya califican, responden, agendan, hacen follow-up y mueven pipeline — no solo asisten. La tecnología está lista.",
+                    desc: "Los agentes ya califican, responden, agendan, hacen follow-up y mueven pipeline, no solo asisten. La tecnología está lista.",
                     color: "#1d70a2",
                   },
                   {
@@ -953,7 +953,7 @@ const PitchV2 = () => {
                   {
                     icon: Globe,
                     label: "Colombia: hub nearshore AI-native para EEUU",
-                    desc: "Colombia ya es hub nearshore de BPO para EEUU: huso horario alineado, talento bilingüe, costo-ventaja. Sixteam nace AI-native ahí — puede operar para empresas gringas con una ventaja que ni las agencias de EEUU ni los BPO legacy igualan.",
+                    desc: "Colombia ya es hub nearshore de BPO para EEUU: huso horario alineado, talento bilingüe, costo-ventaja. Sixteam nace AI-native ahí, y puede operar para empresas gringas con una ventaja que ni las agencias de EEUU ni los BPO legacy igualan.",
                     color: "#1d70a2",
                   },
                 ].map((item, i) => {
@@ -1031,7 +1031,7 @@ const PitchV2 = () => {
                   className="font-poppins font-black text-[#0a2342]"
                   style={{ fontSize: "clamp(18px, 2.5vw, 24px)", lineHeight: "1.25" }}
                 >
-                  OpenAI lanza el <span className="text-[#1d70a2]">OpenAI Deployment Company</span> — para meter IA en la operación de las empresas. Consultar, implementar y operar. La misma cadena.
+                  OpenAI lanza el <span className="text-[#1d70a2]">OpenAI Deployment Company</span>, para meter IA en la operación de las empresas. Consultar, implementar y operar. La misma cadena.
                 </p>
 
                 {/* Stat chips */}
@@ -1075,7 +1075,7 @@ const PitchV2 = () => {
                 <div className="bg-[#00bfa5]/8 border border-[#00bfa5]/25 rounded-2xl p-6">
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-[#009b86] mb-3">Nuestra ventaja</p>
                   <p className="font-lato text-[15px] text-[#0a2342] leading-[1.7]">
-                    La misma tesis que OpenAI acaba de respaldar con $4B — pero nosotros{" "}
+                    La misma tesis que OpenAI acaba de respaldar con $4B, pero nosotros{" "}
                     <span className="font-semibold">la vivimos puertas adentro</span>, no solo se la vendemos al cliente. AI-native desde el primer día.
                   </p>
                 </div>
@@ -1227,7 +1227,7 @@ const PitchV2 = () => {
                 </Underlined>
               </h2>
               <p className="v2-reveal v2-d3 font-lato text-[16px] text-[#334155]/60 mt-2 max-w-[600px] leading-[1.6]">
-                La IA absorbe el trabajo repetitivo — la estructura de costo no crece linealmente con los clientes. Por eso el margen sube con la escala.
+                La IA absorbe el trabajo repetitivo, por lo que la estructura de costo no crece linealmente con los clientes. Por eso el margen sube con la escala.
               </p>
 
               {/* AI scaling argument */}
@@ -1247,7 +1247,7 @@ const PitchV2 = () => {
               <div className="v2-reveal v2-d3 mt-5 border border-[#1d70a2]/30 bg-[#1d70a2]/6 rounded-xl px-6 py-4 inline-flex flex-wrap gap-4 items-center">
                 <div>
                   <span className="font-lato text-[10px] font-bold uppercase tracking-widest text-[#1d70a2]">Producto entrada</span>
-                  <p className="font-poppins font-bold text-[18px] text-[#0a2342] mt-0.5">Radar / Diagnóstico — $2,500 one-time</p>
+                  <p className="font-poppins font-bold text-[18px] text-[#0a2342] mt-0.5">Radar / Diagnóstico: $2,500 one-time</p>
                 </div>
                 <span className="font-lato text-[13px] text-[#334155]/50">~50% convierte a suscripción</span>
               </div>
@@ -1345,19 +1345,19 @@ const PitchV2 = () => {
                   <div>
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-[#00bfa5] mb-2">Argumento central · Nueva era del trabajo con IA</p>
                     <h3 className="font-poppins font-bold text-[20px] text-white leading-[1.25]">
-                      Sixteam no solo implementa IA para sus clientes — Sixteam ES una empresa AI-native.
+                      Sixteam no solo implementa IA para sus clientes, sino que ES una empresa AI-native.
                     </h3>
                     <div className="mt-4 flex flex-col gap-4">
                       <div>
                         <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-[#00bfa5]/70 mb-1.5">Escala sin headcount lineal</p>
                         <p className="font-lato text-[14px] text-white/65 leading-[1.7]">
-                          Las agencias, consultoras y BPO escalan contratando una persona por cada cliente nuevo. Nosotros escalamos con IA — el mismo equipo opera más cuentas sin sumar nómina.
+                          Las agencias, consultoras y BPO escalan contratando una persona por cada cliente nuevo. Nosotros escalamos con IA: el mismo equipo opera más cuentas sin sumar nómina.
                         </p>
                       </div>
                       <div>
                         <p className="font-lato text-[11px] font-bold uppercase tracking-widest text-[#00bfa5]/70 mb-1.5">Ataca el costo #1: la nómina</p>
                         <p className="font-lato text-[14px] text-white/65 leading-[1.7]">
-                          El costo de empleados es el más alto de este rubro. La IA absorbe el trabajo repetitivo y baja nuestra estructura de costo — márgenes 50–70% que crecen con el tiempo.
+                          El costo de empleados es el más alto de este rubro. La IA absorbe el trabajo repetitivo y baja nuestra estructura de costo: márgenes 50–70% que crecen con el tiempo.
                         </p>
                       </div>
                     </div>
@@ -1544,7 +1544,7 @@ const PitchV2 = () => {
                 className="v2-reveal v2-d2 font-poppins font-black text-white mt-4"
                 style={{ fontSize: "clamp(26px, 4vw, 42px)", lineHeight: "1.12", maxWidth: "680px" }}
               >
-                Casos ancla en operación —{" "}
+                Casos ancla en operación:{" "}
                 <Underlined color="teal" variant="scribble">
                   <em className="font-serif italic font-normal text-[#00bfa5]">la cadena funciona.</em>
                 </Underlined>
@@ -1720,7 +1720,7 @@ const PitchV2 = () => {
                     name: "Samuel Burgos",
                     role: "Revenue Strategist · Co-founder",
                     color: "bg-[#1d70a2]",
-                    desc: "8+ años operando revenue real en empresas de servicio — no es consultor de CRM. Lidera consultoría y estrategia. Operó el pipeline comercial de clientes como MasterViajes y Student Travel Center.",
+                    desc: "8+ años operando revenue real en empresas de servicio, no es consultor de CRM. Lidera consultoría y estrategia. Operó el pipeline comercial de clientes como MasterViajes y Student Travel Center.",
                     tags: ["RevOps", "Estrategia de revenue", "Consultoría"],
                   },
                   {
@@ -1879,7 +1879,7 @@ const PitchV2 = () => {
             {/* Closing thesis */}
             <div className="v2-reveal v2-d5 mt-10 border border-[#00bfa5]/25 bg-[#00bfa5]/6 rounded-2xl p-7 text-left">
               <p className="font-lato text-[15px] text-white/75 leading-[1.75] italic">
-                "Cada empresa de servicio de LatAm — y cada SMB norteamericana que opera vía nearshore desde Colombia — tiene las mismas partes: marketing, ventas, servicio. Casi ninguna sabe operarlas. El laboratorio de IA más grande del mundo acaba de invertir $4B para construir exactamente este modelo. Ellos van por el Fortune 500. Nosotros vamos por las 200K+ empresas que quedan desatendidas."
+                "Cada empresa de servicio de LatAm (y cada SMB norteamericana que opera vía nearshore desde Colombia) tiene las mismas partes: marketing, ventas, servicio. Casi ninguna sabe operarlas. El laboratorio de IA más grande del mundo acaba de invertir $4B para construir exactamente este modelo. Ellos van por el Fortune 500. Nosotros vamos por las 200K+ empresas que quedan desatendidas."
               </p>
             </div>
 

@@ -6,16 +6,16 @@ import Underlined from "@/components/v2/UnderlineSvg";
 
 /* ── Live feed events ─────────────────────────────────────────── */
 const events = [
-  { icon: MessageCircle, color: "#00bfa5", label: "WhatsApp",      text: "Respuesta enviada a María G. — calificación BANT completada",         time: "hace 1 min" },
-  { icon: CheckCircle,   color: "#1d70a2", label: "Pipeline CRM",  text: "Deal «Software Corp» movido a Propuesta — $8,400 USD",                  time: "hace 3 min" },
-  { icon: Mail,          color: "#00bfa5", label: "Email",          text: "Secuencia nurturing enviada — 312 contactos · apertura 41%",            time: "hace 7 min" },
+  { icon: MessageCircle, color: "#00bfa5", label: "WhatsApp",      text: "Respuesta enviada a María G., calificación BANT completada",         time: "hace 1 min" },
+  { icon: CheckCircle,   color: "#1d70a2", label: "Pipeline CRM",  text: "Deal «Software Corp» movido a Propuesta: $8,400 USD",                  time: "hace 3 min" },
+  { icon: Mail,          color: "#00bfa5", label: "Email",          text: "Secuencia nurturing enviada a 312 contactos · apertura 41%",            time: "hace 7 min" },
   { icon: Zap,           color: "#7b5ea7", label: "Automatización", text: "3 duplicados eliminados del CRM · datos normalizados",                  time: "hace 12 min" },
-  { icon: BarChart3,     color: "#0d6659", label: "Reporte",        text: "Reporte ejecutivo generado — enviado al equipo a las 9:00am",           time: "hace 18 min" },
-  { icon: RefreshCw,     color: "#1d70a2", label: "Workflow",       text: "Lead reactivado tras 14 días sin respuesta — secuencia iniciada",       time: "hace 24 min" },
-  { icon: MessageCircle, color: "#00bfa5", label: "WhatsApp",       text: "Agendamiento confirmado con Juan P. — slot 3pm del viernes",            time: "hace 31 min" },
-  { icon: CheckCircle,   color: "#1d70a2", label: "Pipeline CRM",  text: "5 tareas de seguimiento creadas automáticamente — vencen mañana",       time: "hace 38 min" },
-  { icon: Mail,          color: "#00bfa5", label: "Email",          text: "A/B test resuelto — variante B sube 22% · activada como ganadora",      time: "hace 45 min" },
-  { icon: Zap,           color: "#7b5ea7", label: "Automatización", text: "Integración HubSpot ↔ WhatsApp sincronizada — 0 errores",               time: "hace 52 min" },
+  { icon: BarChart3,     color: "#0d6659", label: "Reporte",        text: "Reporte ejecutivo generado y enviado al equipo a las 9:00am",           time: "hace 18 min" },
+  { icon: RefreshCw,     color: "#1d70a2", label: "Workflow",       text: "Lead reactivado tras 14 días sin respuesta, secuencia iniciada",       time: "hace 24 min" },
+  { icon: MessageCircle, color: "#00bfa5", label: "WhatsApp",       text: "Agendamiento confirmado con Juan P., slot 3pm del viernes",            time: "hace 31 min" },
+  { icon: CheckCircle,   color: "#1d70a2", label: "Pipeline CRM",  text: "5 tareas de seguimiento creadas automáticamente, vencen mañana",       time: "hace 38 min" },
+  { icon: Mail,          color: "#00bfa5", label: "Email",          text: "A/B test resuelto: variante B sube 22% · activada como ganadora",      time: "hace 45 min" },
+  { icon: Zap,           color: "#7b5ea7", label: "Automatización", text: "Integración HubSpot ↔ WhatsApp sincronizada, 0 errores",               time: "hace 52 min" },
 ];
 
 /* ── Status modules ───────────────────────────────────────────── */
@@ -117,7 +117,7 @@ export const LiveDashboardV2 = () => {
             .
           </h2>
           <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
-            No es un demo. Es lo que pasa en las cuentas activas de Sixteam ahora mismo — agentes IA
+            No es un demo. Es lo que pasa en las cuentas activas de Sixteam ahora mismo: agentes IA
             y expertos humanos ejecutando sin parar.
           </p>
         </div>

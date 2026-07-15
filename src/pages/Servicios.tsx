@@ -10,7 +10,7 @@ import SchemaOrg from '@/components/SchemaOrg';
 
 const Servicios = () => {
   useSEO({
-    title: "Servicios de CRM, IA y Automatización — Sixteam.pro",
+    title: "Servicios de CRM, IA y Automatización | Sixteam.pro",
     description: "Implementación de CRM, chatbots IA para WhatsApp, automatizaciones y RevOps. Conoce todos nuestros servicios para transformar tu operación comercial en Colombia.",
     canonical: "https://sixteam.pro/servicios",
     ogUrl: "https://sixteam.pro/servicios",
@@ -112,9 +112,9 @@ const Servicios = () => {
       borderColor: 'border-[#1d70a2]/40',
       tag: 'RevOps',
       title: 'Tu equipo de RevOps externo',
-      price: 'promo desde $200 USD/mes',
+      price: 'promo desde $199 USD/mes',
       time: 'Mensual',
-      description: 'Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno. CRM, automatizaciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.',
+      description: 'Sixteam opera tu tecnología de revenue mes a mes, como si fuera tu propio equipo interno. CRM, automatizaciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.',
       deliverables: [
         'Operación mensual de CRM y automatizaciones',
         'Alineación de ventas, marketing y servicio',
@@ -138,7 +138,7 @@ const Servicios = () => {
     {
       icon: Clock,
       title: 'Soporte y operación mensual',
-      price: 'promo desde $200 USD/mes',
+      price: 'promo desde $199 USD/mes',
       description: 'Mantenimiento, actualizaciones, ajustes de flujos y soporte técnico continuo. Tu CRM siempre funcionando de manera óptima con un equipo especializado.',
     },
     {

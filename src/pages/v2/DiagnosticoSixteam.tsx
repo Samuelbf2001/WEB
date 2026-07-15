@@ -57,7 +57,7 @@ const processSteps = [
     number: "02",
     title: "Mapeo agéntico",
     when: "Días 2–7",
-    desc: "Nuestros agentes IA revisan tu stack actual, tu historial de leads, tus procesos documentados, y reconstruyen el flujo real de tu operación — no el organigrama teórico.",
+    desc: "Nuestros agentes IA revisan tu stack actual, tu historial de leads, tus procesos documentados, y reconstruyen el flujo real de tu operación, no el organigrama teórico.",
   },
   {
     number: "03",
@@ -87,7 +87,7 @@ const deliverables = [
   {
     icon: FileText,
     title: "Blueprint de implementación",
-    desc: "Para cada iniciativa: qué herramientas, qué procesos, qué automatizaciones. No hipótesis — un plan ejecutable con estimado de tiempo y costo.",
+    desc: "Para cada iniciativa: qué herramientas, qué procesos, qué automatizaciones. No hipótesis, sino un plan ejecutable con estimado de tiempo y costo.",
   },
   {
     icon: Zap,
@@ -184,8 +184,8 @@ const DiagnosticoSixteam = () => {
           </h1>
 
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[620px] mx-auto">
-            En 2 semanas, mapeamos tu operación de revenue completa — ventas, marketing y servicio al
-            cliente — y te entregamos el roadmap cuantificado de qué arreglar primero y cuánto vale.
+            En 2 semanas, mapeamos tu operación de revenue completa (ventas, marketing y servicio al
+            cliente) y te entregamos el roadmap cuantificado de qué arreglar primero y cuánto vale.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
@@ -289,7 +289,7 @@ const DiagnosticoSixteam = () => {
             <div className="v2-reveal v2-d4 max-w-[680px] mx-auto text-center">
               <p className="font-lato text-[17px] md:text-[19px] text-v2-ink-body leading-[1.7] italic">
                 "Implementar sin diagnóstico es como contratar un cirujano sin tomografía. Puede
-                operar — pero en el lugar equivocado."
+                operar, pero en el lugar equivocado."
               </p>
             </div>
           </div>

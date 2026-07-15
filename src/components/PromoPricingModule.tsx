@@ -2,15 +2,11 @@ import { ArrowRight, BadgePercent, CheckCircle2, Clock3, Users2 } from "lucide-r
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Container from "@/components/v2/Container";
 import { cn } from "@/lib/utils";
+import { PROMO_CLAIMED_SPOTS, PROMO_PROGRESS, PROMO_REMAINING_SPOTS } from "@/lib/promo";
 
 interface PromoPricingModuleProps {
   className?: string;
 }
-
-const totalSpots = 20;
-const claimedSpots = 14;
-const remainingSpots = totalSpots - claimedSpots;
-const progress = Math.round((claimedSpots / totalSpots) * 100);
 
 const highlights = [
   "Plan Esencial: CRM, automatizaciones e IA listos para operar.",
@@ -53,11 +49,11 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
             </div>
 
             <h2 className="mt-5 font-poppins text-[32px] font-black leading-[1.05] tracking-normal text-white sm:text-[42px] lg:text-[52px]">
-              Plan Esencial Sixteam Ops desde $200 USD/mes
+              Plan Esencial Sixteam Ops desde $199 USD/mes
             </h2>
 
             <p className="mt-5 max-w-2xl font-lato text-[17px] leading-[1.7] text-[#e0e0e0] sm:text-[18px]">
-              Precio regular $300 USD/mes. Promoción por cupos limitados desde $200 USD/mes para los primeros 20 clientes. Los cupos ya se están copando.
+              Precio regular $300 USD/mes. Promoción por cupos limitados desde $199 USD/mes para los primeros 20 clientes. Los cupos ya se están copando.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
@@ -95,7 +91,7 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
                 </p>
                 <div className="mt-3 flex items-end gap-2">
                   <span className="font-poppins text-[56px] font-black leading-none text-white sm:text-[68px]">
-                    $200
+                    $199
                   </span>
                   <span className="pb-2 font-lato text-lg font-semibold text-[#e0e0e0]">USD/mes</span>
                 </div>
@@ -120,12 +116,12 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
                 <div className="h-2 overflow-hidden rounded-full bg-white/12">
                   <div
                     className="h-full rounded-full bg-gradient-to-r from-[#1d70a2] to-[#00bfa5]"
-                    style={{ width: `${progress}%` }}
+                    style={{ width: `${PROMO_PROGRESS}%` }}
                   />
                 </div>
                 <div className="mt-3 flex items-center justify-between gap-3 font-lato text-sm">
-                  <span className="font-semibold text-white">{`Van ${claimedSpots}`}</span>
-                  <span className="text-[#8ff5e6]">{`Quedan ${remainingSpots} cupos`}</span>
+                  <span className="font-semibold text-white">{`Van ${PROMO_CLAIMED_SPOTS}`}</span>
+                  <span className="text-[#8ff5e6]">{`Quedan ${PROMO_REMAINING_SPOTS} cupos`}</span>
                 </div>
               </div>
 

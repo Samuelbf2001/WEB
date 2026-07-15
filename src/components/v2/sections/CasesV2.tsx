@@ -36,7 +36,7 @@ const cases: CaseCard[] = [
     industry: "Educación internacional",
     name: "Student Travel Center",
     description:
-      "Construimos el sistema operativo de revenue desde cero. Hoy procesan 6× más aplicaciones con el mismo equipo — sin contratar a nadie.",
+      "Construimos el sistema operativo de revenue desde cero. Hoy procesan 6× más aplicaciones con el mismo equipo, sin contratar a nadie.",
     stats: [
       { value: "6×", label: "Aplicaciones procesadas" },
       { value: "85%", label: "Reducción admin" },

@@ -16,7 +16,7 @@ const WA_BASE = 'https://wa.me/+573004188522?text=';
 
 const RadarSixteam = () => {
   useSEO({
-    title: "Radar Sixteam — Diagnóstico Gratuito de tu Operación Comercial",
+    title: "Radar Sixteam: Diagnóstico Gratuito de tu Operación Comercial",
     description: "Diagnóstico gratuito por WhatsApp en 5 minutos. Descubre dónde está el cuello de botella de tu empresa antes de invertir en CRM, IA o automatización.",
     canonical: "https://sixteam.pro/radar",
     ogUrl: "https://sixteam.pro/radar",
@@ -122,7 +122,7 @@ const RadarSixteam = () => {
 
   const steps = [
     { num: '01', icon: MessageCircle, title: 'Escríbenos por WhatsApp', desc: 'Sin formularios, sin reuniones largas al inicio. Iniciás una conversación simple que toma menos de 5 minutos.' },
-    { num: '02', icon: Search,        title: 'Respondés unas preguntas', desc: 'El diagnóstico es conversacional. Respondés según tu situación actual — no hay respuestas buenas ni malas.' },
+    { num: '02', icon: Search,        title: 'Respondés unas preguntas', desc: 'El diagnóstico es conversacional. Respondés según tu situación actual, no hay respuestas buenas ni malas.' },
     { num: '03', icon: Eye,           title: 'Recibís una lectura clara', desc: 'Te decimos dónde está tu mayor oportunidad de mejora, sin rodeos. Con datos concretos de lo que encontramos.' },
     { num: '04', icon: ArrowRight,    title: 'Definimos el siguiente paso', desc: 'Te recomendamos si conviene un diagnóstico más profundo, una ruta corta o una implementación directa. Sin presión.' },
   ];
@@ -130,11 +130,11 @@ const RadarSixteam = () => {
   const objections = [
     {
       q: '"Ya tenemos un CRM y herramientas. No necesitamos más software."',
-      a: 'El punto no es sumar más herramientas. Es entender si las que ya tienes están bien conectadas, si el proceso está ordenado y dónde sigue habiendo fricción. Muchas empresas tienen herramientas que casi nadie usa — Radar diagnostica por qué.',
+      a: 'El punto no es sumar más herramientas. Es entender si las que ya tienes están bien conectadas, si el proceso está ordenado y dónde sigue habiendo fricción. Muchas empresas tienen herramientas que casi nadie usa, y Radar diagnostica por qué.',
     },
     {
       q: '"Todavía no sé si esto me sirve."',
-      a: 'Precisamente por eso la idea es empezar por el diagnóstico. No te estamos pidiendo que compres nada — te pedimos 5 minutos para entender tu caso. Al final sabrás si tiene sentido avanzar o no, con criterio.',
+      a: 'Precisamente por eso la idea es empezar por el diagnóstico. No te estamos pidiendo que compres nada, te pedimos 5 minutos para entender tu caso. Al final sabrás si tiene sentido avanzar o no, con criterio.',
     },
     {
       q: '"No tengo tiempo para una consultoría larga."',
@@ -142,7 +142,7 @@ const RadarSixteam = () => {
     },
     {
       q: '"Quiero saber cuánto cuesta la implementación."',
-      a: 'Para darte una cifra responsable primero necesitamos validar alcance y prioridad. Sin un diagnóstico, cualquier precio que te damos es un número al azar — y terminás pagando por algo que quizás no resuelve el verdadero problema.',
+      a: 'Para darte una cifra responsable primero necesitamos validar alcance y prioridad. Sin un diagnóstico, cualquier precio que te damos es un número al azar, y terminás pagando por algo que quizás no resuelve el verdadero problema.',
     },
     {
       q: '"Ya intentamos implementar algo antes y no funcionó."',
@@ -184,7 +184,7 @@ const RadarSixteam = () => {
 
             <p className="text-[#e0e0e0] text-lg sm:text-xl max-w-3xl mx-auto mb-4 leading-relaxed">
               El 60% de las implementaciones de CRM, IA o automatización fallan porque la empresa no tenía claro qué problema resolver primero.
-              Radar Sixteam te da esa claridad — gratis, rápido y por WhatsApp.
+              Radar Sixteam te da esa claridad: gratis, rápido y por WhatsApp.
             </p>
 
             <p className="text-[#e0e0e0]/70 text-base max-w-2xl mx-auto mb-10">
@@ -270,7 +270,7 @@ const RadarSixteam = () => {
               className="bg-[#00bfa5] hover:bg-[#00a08a] text-white font-poppins font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Hacer mi diagnóstico gratis — 5 minutos
+              Hacer mi diagnóstico gratis (5 minutos)
             </Button>
           </div>
         </div>
@@ -289,7 +289,7 @@ const RadarSixteam = () => {
                 </span>
               </h2>
               <p className="text-[#e0e0e0] text-lg leading-relaxed mb-6">
-                Radar Sixteam es una puerta de entrada consultiva. No te vendemos software — te ayudamos a descubrir
+                Radar Sixteam es una puerta de entrada consultiva. No te vendemos software, te ayudamos a descubrir
                 <strong className="text-white"> dónde tiene sentido mejorar</strong> ventas, marketing, servicio o procesos en tu empresa.
               </p>
               <p className="text-[#e0e0e0] text-lg leading-relaxed mb-8">
@@ -298,7 +298,7 @@ const RadarSixteam = () => {
               <ul className="space-y-4">
                 {[
                   { text: 'Gratis, rápido y 100% por WhatsApp', icon: MessageCircle },
-                  { text: 'Adaptado a tu caso — no es un formulario genérico', icon: Target },
+                  { text: 'Adaptado a tu caso, no es un formulario genérico', icon: Target },
                   { text: 'No te obliga a contratar nada con Sixteam', icon: Shield },
                   { text: 'Construido para empresas de servicios en Latinoamérica', icon: Users },
                 ].map((item, i) => (
@@ -355,7 +355,7 @@ const RadarSixteam = () => {
           <div className="max-w-3xl mx-auto text-center mb-14">
             <span className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-4 block">¿Para quién es?</span>
             <h2 className="font-poppins font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">
-              Dueños y gerentes que saben que algo no funciona bien —{' '}
+              Dueños y gerentes que saben que algo no funciona bien{' '}
               <span className="bg-gradient-to-r from-[#1d70a2] to-[#00bfa5] bg-clip-text text-transparent">
                 pero no tienen claro por dónde empezar
               </span>
@@ -390,7 +390,7 @@ const RadarSixteam = () => {
                 sin saltos a ciegas
               </span>
             </h2>
-            <p className="text-[#e0e0e0] text-lg">Cada nivel te da más claridad. Vos decidís hasta dónde llegar — y cuándo.</p>
+            <p className="text-[#e0e0e0] text-lg">Cada nivel te da más claridad. Vos decidís hasta dónde llegar y cuándo.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
@@ -562,7 +562,7 @@ const RadarSixteam = () => {
               Antes de invertir, diagnostica.
             </h2>
             <p className="text-[#e0e0e0] text-lg mb-4 max-w-2xl mx-auto">
-              5 minutos por WhatsApp. Gratis. Y sabrás exactamente qué parte de tu empresa necesita atención primero — y cuál no.
+              5 minutos por WhatsApp. Gratis. Y sabrás exactamente qué parte de tu empresa necesita atención primero y cuál no.
             </p>
             <p className="text-[#e0e0e0]/60 text-sm mb-10 max-w-xl mx-auto">
               No te vamos a vender nada primero. Si después del diagnóstico tiene sentido avanzar, lo hacemos juntos. Si no, te lo decimos honestamente.

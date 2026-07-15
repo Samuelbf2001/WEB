@@ -40,7 +40,7 @@ const EXAMPLE_QUESTIONS = [
 
 const CrmAtencion = () => {
   useSEO({
-    title: "CRM de Atención al Cliente — Sixteam.pro | Tickets, SLA y Omnicanal",
+    title: "CRM de Atención al Cliente | Sixteam.pro | Tickets, SLA y Omnicanal",
     description: "Centraliza tickets, conversaciones y solicitudes en un solo lugar. Reduce tiempos de respuesta con automatizaciones de servicio al cliente. Implementación en 3 semanas.",
     canonical: "https://sixteam.pro/servicios/crm-atencion",
     ogUrl: "https://sixteam.pro/servicios/crm-atencion",
@@ -107,7 +107,7 @@ const CrmAtencion = () => {
     {
       icon: BarChart3,
       title: 'Dashboard de KPIs en tiempo real',
-      desc: 'Tiempo de primera respuesta, tiempo de resolución, tasa de satisfacción (CSAT), tickets por agente y canales más activos — todo en vivo.',
+      desc: 'Tiempo de primera respuesta, tiempo de resolución, tasa de satisfacción (CSAT), tickets por agente y canales más activos, todo en vivo.',
     },
     {
       icon: Bell,
@@ -387,7 +387,7 @@ const CrmAtencion = () => {
               ))}
             </div>
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              * Los resultados de satisfacción y retención dependen también de la calidad del servicio y el compromiso del equipo — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+              * Los resultados de satisfacción y retención dependen también de la calidad del servicio y el compromiso del equipo, no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { useSEO } from '@/hooks/useSEO';
 
 const TerminosCondiciones = () => {
   useSEO({
-    title: "Términos y Condiciones — Sixteam.pro",
+    title: "Términos y Condiciones | Sixteam.pro",
     description: "Términos y condiciones de uso de los servicios de Sixteam.pro S.A.S. Bogotá, Colombia. Vigentes desde marzo 2026.",
   });
 

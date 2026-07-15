@@ -215,7 +215,7 @@ const Nosotros = () => {
               </p>
               <p className="v2-fade v2-d4 font-lato text-[17px] text-white/75 leading-[1.7]">
                 No facturamos reuniones. No cobramos por ajustes menores. No desaparecemos entre
-                sprints. Eso no es diferenciación — es la base mínima para que el sistema funcione.
+                sprints. Eso no es diferenciación, sino la base mínima para que el sistema funcione.
               </p>
             </div>
           </Container>

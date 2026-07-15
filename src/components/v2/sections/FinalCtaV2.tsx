@@ -61,7 +61,7 @@ export const FinalCtaV2 = () => {
           <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
               <ButtonV2 variant="primary" size="lg">
-                Solicitar Diagnóstico — $2,500
+                Solicitar Diagnóstico ($2,500)
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </Link>

@@ -21,7 +21,7 @@ const rows: Row[] = [
       "Te montan el CRM, las automatizaciones, la web. Te entregan, cobran y se van. Después del go-live, los problemas son tuyos.",
     leftReaction: "ya me pasó la última vez.",
     rightBody:
-      "Implementamos igual — y lo decimos. Pero nos quedamos operándolo mes a mes. Si algo se rompe, lo arreglamos nosotros.",
+      "Implementamos igual, y lo decimos. Pero nos quedamos operándolo mes a mes. Si algo se rompe, lo arreglamos nosotros.",
     rightAnchor: "Implementamos Y operamos",
   },
   {
@@ -39,7 +39,7 @@ const rows: Row[] = [
       "VP Sales + VP Ops + dev + analista. ~$600K USD/año en salarios. Meses para armarlo. Difícil de retener. Y sin la capa de IA.",
     leftReaction: "no tengo ese presupuesto ni ese tiempo.",
     rightBody:
-      "Reemplazamos esa función completa con promo desde $200/mes. Operando desde la primera semana. Con IA incluida — sin nómina, sin rotación.",
+      "Reemplazamos esa función completa con promo desde $199/mes. Operando desde la primera semana. Con IA incluida, sin nómina, sin rotación.",
     rightAnchor: "Función completa, fracción del costo",
   },
   {
@@ -48,16 +48,16 @@ const rows: Row[] = [
       "Analiza, entrega un deck con recomendaciones. La implementación queda de tu lado. Vendes por saber qué hacer, sin tener quién lo haga.",
     leftReaction: "pago por el informe, sigo sin operación.",
     rightBody:
-      "No dejamos un PDF. Implementamos y operamos. Somos responsables de que el sistema funcione — no de que el informe se vea bien.",
+      "No dejamos un PDF. Implementamos y operamos. Somos responsables de que el sistema funcione, no de que el informe se vea bien.",
     rightAnchor: "Ejecutamos, no aconsejamos",
   },
   {
     leftLabel: "Un fractional VP / CFO",
     leftFailure:
-      "Estrategia y dirección senior por un retainer alto. Opera desde afuera — aconseja, no está dentro del pipeline. Sin tecnología, sin IA.",
+      "Estrategia y dirección senior por un retainer alto. Opera desde afuera: aconseja, no está dentro del pipeline. Sin tecnología, sin IA.",
     leftReaction: "buen criterio, pero sin manos.",
     rightBody:
-      "Criterio senior igual de bueno — pero con un motor de IA 24/7 ejecutando debajo. Conductor con motor, no conductor sin auto.",
+      "Criterio senior igual de bueno, pero con un motor de IA 24/7 ejecutando debajo. Conductor con motor, no conductor sin auto.",
     rightAnchor: "Criterio + motor IA",
   },
   {
@@ -66,7 +66,7 @@ const rows: Row[] = [
       "La herramienta o la IA sola. Potente, pero nadie la configura para tu negocio, nadie la opera, nadie le da criterio.",
     leftReaction: "compré, usé el 10%, dije que no funcionó.",
     rightBody:
-      "La misma potencia de IA — pero con operadores senior que la configuran para tu negocio, la dirigen y la ajustan cada semana. El motor con alguien al volante.",
+      "La misma potencia de IA, pero con operadores senior que la configuran para tu negocio, la dirigen y la ajustan cada semana. El motor con alguien al volante.",
     rightAnchor: "Motor con conductor",
   },
 ];
@@ -98,7 +98,7 @@ export const ComparativaV2 = () => {
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[620px] mx-auto mt-5 leading-[1.65]">
               Cada alternativa resuelve una pieza. Sixteam es la única que junta
               consultoría + implementación + operación + permanencia + IA +
-              criterio senior — a un precio que un negocio mediano sí puede pagar.
+              criterio senior, a un precio que un negocio mediano sí puede pagar.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export const ComparativaV2 = () => {
                   Sixteam es la única que las junta todas
                 </em>
               </Underlined>{" "}
-              — a un precio que un negocio mediano sí puede pagar.
+              a un precio que un negocio mediano sí puede pagar.
             </p>
           </div>
 

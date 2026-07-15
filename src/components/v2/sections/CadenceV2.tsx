@@ -191,11 +191,11 @@ export const CadenceV2 = () => {
             </div>
             <div>
               <p className="font-poppins font-bold text-[16px] text-v2-ink-heading leading-[1.3]">
-                Cada día — Alfa está disponible.
+                Cada día, Alfa está disponible.
               </p>
               <p className="font-lato text-[14px] text-v2-ink-muted leading-[1.6] mt-1">
                 No te vendemos proyectos. Te vendemos un equipo que opera sin que tengas
-                que pedirlo. Alfa recibe tus pedidos en Slack o WhatsApp — sin esperas
+                que pedirlo. Alfa recibe tus pedidos en Slack o WhatsApp, sin esperas
                 hasta la próxima reunión.
               </p>
             </div>

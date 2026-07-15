@@ -5,7 +5,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const beforeItems = [
   "El dueño responde leads desde su WhatsApp.",
-  "El seguimiento se hace de memoria — o no se hace.",
+  "El seguimiento se hace de memoria, o no se hace.",
   "El equipo opera 'como cada uno entendió'.",
   "Los reportes son una mezcla de Excel y cabeza.",
   "Vendedor dedica 40% del tiempo a tareas admin.",
@@ -124,7 +124,7 @@ export const CrmComparisonV2 = () => {
               {/* Live operations */}
               <div className="mt-7 relative">
                 <p className="font-lato text-[10px] uppercase tracking-widest text-v2-accent-teal mb-4">
-                  Lo que operamos — mes a mes
+                  Lo que operamos, mes a mes
                 </p>
                 {weDoItems.map((task, ti) => (
                   <div
@@ -157,7 +157,7 @@ export const CrmComparisonV2 = () => {
                 <RefreshCw className="h-4 w-4 text-v2-accent-teal mt-0.5 flex-shrink-0" aria-hidden />
                 <p className="font-lato text-[13px] text-white/65 leading-[1.6]">
                   Operamos tu tecnología para que tu negocio{" "}
-                  <strong className="text-white">funcione</strong>, mes a mes — con
+                  <strong className="text-white">funcione</strong>, mes a mes, con
                   o sin que tu equipo esté completo.
                 </p>
               </div>

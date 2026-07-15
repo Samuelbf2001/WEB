@@ -30,7 +30,7 @@ const items: ServiceItem[] = [
   {
     icon: BrainCircuit,
     title: "Conectado a tu CRM, calendario y base real",
-    desc: "Responde con contexto actual — no con scripts. Sabe qué hay en tu CRM antes de responder.",
+    desc: "Responde con contexto actual, no con scripts. Sabe qué hay en tu CRM antes de responder.",
   },
   {
     icon: Filter,
@@ -115,7 +115,7 @@ const ChatbotIAV2 = () => {
             solo responden.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">
-            Agentes que califican, agendan y resuelven — 24/7, conectados a tu base real.
+            Agentes que califican, agendan y resuelven 24/7, conectados a tu base real.
           </p>
 
           {/* Stat strip */}
@@ -230,7 +230,7 @@ const ChatbotIAV2 = () => {
                 </h2>
                 <p className="font-lato text-[16px] text-white/70 mt-5 leading-[1.7]">
                   El agente que construimos vive en tu CRM, conoce tu catálogo y entiende el contexto
-                  de cada conversación. No es IA decorativa — es IA que trabaja.
+                  de cada conversación. No es IA decorativa: es IA que trabaja.
                 </p>
               </div>
             </div>

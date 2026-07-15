@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, MessageSquare, Users, Gift, Package, Shield, Zap } from "lucide-react";
+import { ArrowRight, Check, Gift, Package, Shield, Zap } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Underlined from "@/components/v2/UnderlineSvg";
+import AgentsBlock from "@/components/v2/AgentsBlock";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /* ── Countdown hook (ends Sunday midnight) ── */
@@ -61,22 +62,6 @@ const PillHeader: React.FC<{
   );
 };
 
-/* ── Agent row ── */
-const AgentRow: React.FC<{ color: string; name: string; role: string }> = ({ color, name, role }) => (
-  <div className="flex items-center gap-2.5">
-    <div
-      className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0"
-      style={{ backgroundColor: color }}
-    >
-      {name[0]}
-    </div>
-    <span className="font-lato text-[13px] text-v2-ink-body">
-      <strong className="text-v2-ink-heading">{name}</strong>{" "}
-      <span className="text-v2-ink-muted">({role})</span>
-    </span>
-  </div>
-);
-
 /* ── Feature row ── */
 const FeatureRow: React.FC<{ text: React.ReactNode; strong?: boolean }> = ({ text, strong }) => (
   <div className="flex items-start gap-2">
@@ -117,7 +102,7 @@ export const PricingV2 = () => {
       name: "Esencial",
       topBadge: null,
       highlight: false,
-      price: { mensual: 200, anual: 170 },
+      price: { mensual: 199, anual: 170 },
       priceCustom: null,
       tagline: "Para emprendedores y negocios pequeños que quieren empezar a trabajar con tecnología e IA sin complicaciones ni grandes inversiones.",
       teamDesc: "Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos.",
@@ -277,36 +262,8 @@ export const PricingV2 = () => {
                     {/* Card body — sections */}
                     <div className="px-5 pb-6 flex flex-col gap-3 flex-1">
 
-                      {/* Estrategia & Chat IA */}
-                      <div className="rounded-xl border border-[#d4a853]/20 bg-v2-surface-sand-mist p-3.5">
-                        <PillHeader
-                          icon={<MessageSquare className="h-3.5 w-3.5" />}
-                          label="Estrategia & Chat IA"
-                          color="teal"
-                        />
-                        <p className="font-lato text-[12px] text-v2-ink-body mt-2 leading-relaxed pl-1">
-                          Acceso inmediato a{" "}
-                          <strong className="text-v2-ink-heading">Alfa, Bravo y tu equipo</strong>{" "}
-                          para planificación, copy y estrategia.
-                        </p>
-                      </div>
-
                       {/* Equipo de Especialistas + Agentes IA */}
-                      <div className="rounded-xl border border-v2-border-subtle bg-v2-surface p-3.5">
-                        <PillHeader
-                          icon={<Users className="h-3.5 w-3.5" />}
-                          label="Especialistas + Agentes IA"
-                          color="navy"
-                        />
-                        <p className="font-lato text-[12px] text-v2-ink-muted mt-2 mb-3 leading-relaxed pl-1">
-                          {plan.teamDesc}
-                        </p>
-                        <div className="flex flex-col gap-2 pl-1">
-                          <AgentRow color="#1d70a2" name="Alfa" role="Concierge" />
-                          <AgentRow color="#00bfa5" name="Delta" role="CRM & Pipeline" />
-                          <AgentRow color="#0d6659" name="Echo" role="WhatsApp 24/7" />
-                        </div>
-                      </div>
+                      <AgentsBlock teamDesc={plan.teamDesc} />
 
                       {/* Créditos */}
                       <div className="rounded-xl border border-v2-accent-blue/25 bg-[#f0f7ff] p-3.5">
@@ -336,7 +293,7 @@ export const PricingV2 = () => {
                             color="orange"
                           />
                           <div className="flex flex-col gap-1.5 mt-3 pl-1">
-                            <FeatureRow text="Llamada de estrategia 1:1 — mapea tus primeros 90 días" />
+                            <FeatureRow text="Llamada de estrategia 1:1 para mapear tus primeros 90 días" />
                             <FeatureRow text="Setup completo de marca/sistema hecho por nosotros" />
                             <FeatureRow text="Configuración fast-track de tus primeras automatizaciones" />
                           </div>
@@ -362,17 +319,19 @@ export const PricingV2 = () => {
                               <>
                                 <strong>Plataforma CRM all-in-one</strong>{" "}
                                 <span className="text-[#8a7a4f] font-semibold">(valor $97/mes)</span>
-                                {" "}— CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
+                                {" "}: CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.
                               </>
                             }
                           />
-                          <FeatureRow
-                            text={
-                              <>
-                                <strong>$30/mes Wallet de mensajería</strong> — Cubrimos tus primeros $30 de SMS, email y llamadas.
-                              </>
-                            }
-                          />
+                          {plan.id !== "arranque" && (
+                            <FeatureRow
+                              text={
+                                <>
+                                  <strong>$30/mes Wallet de mensajería</strong>: Cubrimos tus primeros $30 de SMS, email y llamadas.
+                                </>
+                              }
+                            />
+                          )}
                         </div>
                       </div>
 

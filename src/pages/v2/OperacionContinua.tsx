@@ -45,23 +45,23 @@ const pains = [
 const cadenceSteps = [
   {
     number: "01",
-    day: "Lunes — Reporte ejecutivo",
+    day: "Lunes: Reporte ejecutivo",
     desc: "Dashboard actualizado en tu inbox a las 9am. Métricas de pipeline, leads respondidos, conversiones, alertas de riesgo.",
   },
   {
     number: "02",
-    day: "Martes/Mié — Sprint de mejoras",
+    day: "Martes/Mié: Sprint de mejoras",
     desc: "Identificamos la fricción de la semana anterior y lanzamos el fix: automatización nueva, ajuste de secuencia, corrección de integración.",
   },
   {
     number: "03",
-    day: "Jueves — Sincronía de equipo",
+    day: "Jueves: Sincronía de equipo",
     desc: "Check-in con tu equipo vía Slack/WhatsApp. 20 minutos. Sin preparación previa de tu parte.",
   },
   {
     number: "04",
-    day: "Continuo — Agentes IA 24/7",
-    desc: "Calificación de leads, respuestas a WhatsApp, secuencias de nurturing, alertas de pipeline — corriendo sin parar.",
+    day: "Continuo: Agentes IA 24/7",
+    desc: "Calificación de leads, respuestas a WhatsApp, secuencias de nurturing, alertas de pipeline, corriendo sin parar.",
   },
 ];
 
@@ -82,7 +82,7 @@ const agentPills = ["Aura", "Carlos", "Laura", "Emma", "Daniel", "Diana"];
 const plans = [
   {
     name: "Esencial",
-    price: "$200",
+    price: "$199",
     desc: "Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA.",
   },
   {
@@ -139,7 +139,7 @@ const OperacionContinua = () => {
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[620px] mx-auto">
             No es un proyecto con fecha de entrega. Es tu equipo externo de RevOps operando ventas,
-            marketing y servicio al cliente — mes tras mes — mientras tú te enfocas en crecer.
+            marketing y servicio al cliente, mes tras mes, mientras tú te enfocas en crecer.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
@@ -398,7 +398,7 @@ const OperacionContinua = () => {
                     ))}
                   </div>
                   <p className="font-lato text-[12px] text-v2-ink-muted mt-3">
-                    Operan 24/7 — calificación, respuestas, nurturing y alertas.
+                    Operan 24/7: calificación, respuestas, nurturing y alertas.
                   </p>
                 </div>
               </div>
@@ -423,7 +423,7 @@ const OperacionContinua = () => {
                 "
               </span>
               <blockquote className="font-lato text-[18px] md:text-[20px] text-white/80 leading-[1.65] max-w-[620px] mx-auto">
-                Llevamos 2 años con Sixteam. Lo que más valoro no es el setup inicial — es que todos
+                Llevamos 2 años con Sixteam. Lo que más valoro no es el setup inicial, sino que todos
                 los lunes sé exactamente cómo está mi negocio y alguien ya está arreglando lo que
                 falló.
               </blockquote>

@@ -41,7 +41,7 @@ CÓMO FUNCIONA (4 pasos):
 4. Post-cierre: el sistema activa campañas de referidos y reactivación
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
 - Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 - Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
@@ -74,7 +74,7 @@ const painPoints = [
   {
     icon: Calendar,
     title: 'Visitas agendadas que el cliente no honra',
-    desc: 'Tu asesor sale a mostrar un inmueble y el cliente no llega. Sin confirmación automática ni recordatorio 24 horas antes, la tasa de inasistencia puede superar el 40% — tiempo y desplazamientos perdidos.',
+    desc: 'Tu asesor sale a mostrar un inmueble y el cliente no llega. Sin confirmación automática ni recordatorio 24 horas antes, la tasa de inasistencia puede superar el 40%: tiempo y desplazamientos perdidos.',
   },
   {
     icon: FileText,
@@ -89,7 +89,7 @@ const painPoints = [
   {
     icon: RefreshCw,
     title: 'Base de clientes inactiva que nadie trabaja',
-    desc: 'Tienes cientos de contactos que miraron propiedades pero no compraron, o que ya compraron y pueden referirte. Sin un sistema de reactivación, esa base vale cero — es dinero que está dormido.',
+    desc: 'Tienes cientos de contactos que miraron propiedades pero no compraron, o que ya compraron y pueden referirte. Sin un sistema de reactivación, esa base vale cero, es dinero que está dormido.',
   },
 ];
 
@@ -106,7 +106,7 @@ const solutionPairs = [
   },
   {
     pain: 'Visitas sin confirmar con alta tasa de inasistencia',
-    solution: 'El sistema envía confirmación al agendar, recordatorio 24h antes y mensaje el día de la visita. Las inasistencias bajan drásticamente — menos tiempo perdido en desplazamientos.',
+    solution: 'El sistema envía confirmación al agendar, recordatorio 24h antes y mensaje el día de la visita. Las inasistencias bajan drásticamente, con menos tiempo perdido en desplazamientos.',
     icon: ShieldCheck,
   },
   {
@@ -171,7 +171,7 @@ const steps = [
   {
     num: '01',
     title: 'Lead llega por cualquier canal',
-    desc: 'Portal, Meta Ads, tu web o WhatsApp directo. Todo entra a la misma bandeja centralizada — sin importar de dónde venga.',
+    desc: 'Portal, Meta Ads, tu web o WhatsApp directo. Todo entra a la misma bandeja centralizada, sin importar de dónde venga.',
     icon: Globe,
   },
   {
@@ -182,7 +182,7 @@ const steps = [
   },
   {
     num: '03',
-    title: 'Asesor agenda — el CRM hace el seguimiento',
+    title: 'Asesor agenda y el CRM hace el seguimiento',
     desc: 'Recordatorios de visita automáticos. Follow-up post-visita automático. El asesor solo se enfoca en mostrar y cerrar.',
     icon: Key,
   },
@@ -244,7 +244,7 @@ const faqs = [
 
 const Inmobiliarias = () => {
   useSEO({
-    title: "CRM para Inmobiliarias — Sixteam.pro | Duplica tus Cierres",
+    title: "CRM para Inmobiliarias | Sixteam.pro | Duplica tus Cierres",
     description: "CRM para inmobiliarias con pipeline de venta y arriendo, integración Metrocuadrado y Fincaraíz, recordatorios de visita automáticos. Colombia y Latinoamérica.",
     canonical: "https://sixteam.pro/industrias/inmobiliarias",
     ogUrl: "https://sixteam.pro/industrias/inmobiliarias",
@@ -353,7 +353,7 @@ const Inmobiliarias = () => {
               Por qué las inmobiliarias pierden negocios cada semana
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              Estos son los puntos exactos donde se escapan los cierres — y tienen solución.
+              Estos son los puntos exactos donde se escapan los cierres, y tienen solución.
             </p>
           </div>
 
@@ -427,7 +427,7 @@ const Inmobiliarias = () => {
               </span>
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              Cada módulo se configura para el proceso real de una inmobiliaria colombiana — no un CRM genérico adaptado.
+              Cada módulo se configura para el proceso real de una inmobiliaria colombiana, no un CRM genérico adaptado.
             </p>
           </div>
 
@@ -517,7 +517,7 @@ const Inmobiliarias = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Esencial</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$199</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -619,7 +619,7 @@ const Inmobiliarias = () => {
               Así funciona para tu inmobiliaria
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              Del primer mensaje al contrato firmado — con el menor esfuerzo manual posible.
+              Del primer mensaje al contrato firmado, con el menor esfuerzo manual posible.
             </p>
           </div>
 

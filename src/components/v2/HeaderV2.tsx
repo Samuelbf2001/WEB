@@ -10,7 +10,7 @@ const soluciones = [
   { label: "Las tres soluciones", to: "/soluciones" },
   { label: "Assessment · $2,500", to: "/soluciones#assessment" },
   { label: "Transform · desde $1,500", to: "/soluciones#transform" },
-  { label: "Ops Esencial · desde $200/mes", to: "/soluciones#ops" },
+  { label: "Ops Esencial · desde $199/mes", to: "/soluciones#ops" },
   { label: "Ops Integral · $499/mes", to: "/soluciones#ops" },
   { label: "Ops Total · desde $1,200/mes", to: "/soluciones#ops" },
 ];
@@ -52,7 +52,7 @@ const mobileAll = [
   // Soluciones sub
   { label: "Assessment · $2,500", to: "/soluciones#assessment", sub: true },
   { label: "Transform · desde $1,500", to: "/soluciones#transform", sub: true },
-  { label: "Ops Esencial · desde $200/mes", to: "/soluciones#ops", sub: true },
+  { label: "Ops Esencial · desde $199/mes", to: "/soluciones#ops", sub: true },
   { label: "Ops Integral · $499/mes", to: "/soluciones#ops", sub: true },
   { label: "Ops Total · desde $1,200/mes", to: "/soluciones#ops", sub: true },
   null,

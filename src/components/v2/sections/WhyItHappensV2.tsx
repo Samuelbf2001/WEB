@@ -5,7 +5,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const crafts = [
   {
     label: "Integrar tu stack",
-    description: "Que tu CRM, email, WhatsApp, ads y web hablen entre sí — sin copy-paste manual.",
+    description: "Que tu CRM, email, WhatsApp, ads y web hablen entre sí, sin copy-paste manual.",
   },
   {
     label: "Automatizar lo repetitivo",
@@ -13,11 +13,11 @@ const crafts = [
   },
   {
     label: "Diseñar agentes IA con criterio",
-    description: "Que califican, responden y agendan — con tu tono, no con voz de robot genérico.",
+    description: "Que califican, responden y agendan, con tu tono, no con voz de robot genérico.",
   },
   {
     label: "Medir lo que sí mueve el negocio",
-    description: "Dashboards que apuntan a decisiones — no más reuniones para ver qué pasó.",
+    description: "Dashboards que apuntan a decisiones, no más reuniones para ver qué pasó.",
   },
 ];
 
@@ -51,17 +51,18 @@ export const WhyItHappensV2 = () => {
             <div className="v2-reveal v2-d2">
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.7]">
                 Probablemente eres muy bueno en lo que vendes o construyes. Tus clientes
-                lo saben. Pero operar tecnología moderna — integrar tu CRM con email,
-                WhatsApp y ads; automatizar lo repetitivo; diseñar agentes IA que
-                califiquen leads; armar dashboards que sí mueven decisiones — eso es un{" "}
+                lo saben. Pero operar tecnología moderna es un{" "}
                 <strong className="text-v2-ink-heading font-semibold">
-                  oficio completamente aparte.
-                </strong>
+                  oficio completamente aparte:
+                </strong>{" "}
+                integrar tu CRM con email, WhatsApp y ads; automatizar lo repetitivo;
+                diseñar agentes IA que califiquen leads; armar dashboards que sí mueven
+                decisiones.
               </p>
 
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.7] mt-6">
                 No se aprende mientras corres tu negocio. Se construye con stack,
-                metodología y — sobre todo — con un equipo que vive operándolo todos
+                metodología y, sobre todo, con un equipo que vive operándolo todos
                 los días.
               </p>
 

@@ -88,7 +88,7 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
 const HomeAA = () => {
   useSEO({
     title: 'Sixteam | Tu Equipo de Tecnología & IA, Operando 24/7',
-    description: 'Implementación y operación continua de la tecnología e IA de tu negocio — CRM, WhatsApp, automatizaciones, agentes IA, pauta. Promo desde $200 USD/mes.',
+    description: 'Implementación y operación continua de la tecnología e IA de tu negocio: CRM, WhatsApp, automatizaciones, agentes IA, pauta. Promo desde $199 USD/mes.',
     canonical: 'https://sixteam.pro',
     ogUrl: 'https://sixteam.pro',
   });
@@ -149,7 +149,7 @@ const HomeAA = () => {
               {[
                 { icon: Star,   label: 'en reseñas reales',                value: '8+ años'  },
                 { icon: Clock,  label: 'operando tecnología desde 2017',   value: '0 rotación' },
-                { icon: Users,  label: 'de cuenta — siempre los mismos',   value: '30 días'  },
+                { icon: Users,  label: 'de cuenta, siempre los mismos',   value: '30 días'  },
                 { icon: Shield, label: 'de garantía sobre el diagnóstico', value: 'Garantía' },
               ].map((item) => (
                 <div key={item.value} className="text-center">
@@ -188,11 +188,11 @@ const HomeAA = () => {
               </div>
               <div className="space-y-3">
                 {[
-                  { area: 'Pipeline CRM',    status: 'Vivo — 47 oportunidades activas',      icon: BarChart3     },
-                  { area: 'WhatsApp',        status: '132 leads respondidos — TMR <2 min',   icon: Smartphone    },
-                  { area: 'Email',           status: '4 secuencias activas — 1.840 enviados', icon: Mail         },
-                  { area: 'Agentes IA',      status: '24/7 — 0 caídas esta semana',          icon: Bot           },
-                  { area: 'Pauta',           status: 'Optimizada lunes — CPL ↓ 11%',         icon: Megaphone     },
+                  { area: 'Pipeline CRM',    status: 'Vivo: 47 oportunidades activas',      icon: BarChart3     },
+                  { area: 'WhatsApp',        status: '132 leads respondidos: TMR <2 min',   icon: Smartphone    },
+                  { area: 'Email',           status: '4 secuencias activas, 1.840 enviados', icon: Mail         },
+                  { area: 'Agentes IA',      status: '24/7, 0 caídas esta semana',          icon: Bot           },
+                  { area: 'Pauta',           status: 'Optimizada lunes: CPL ↓ 11%',         icon: Megaphone     },
                   { area: 'Reporte semanal', status: 'En tu inbox cada lunes 7am',            icon: LayoutDashboard },
                 ].map((row) => (
                   <div key={row.area} className="flex items-center gap-3 sm:gap-4 bg-white/5 rounded-xl px-4 py-3 hover:bg-white/[0.08] transition-colors">
@@ -262,7 +262,7 @@ const HomeAA = () => {
       {
         title: 'Automatizaciones & Integraciones',
         quote: '"No empezaste tu negocio para perder los sábados configurando Zapier o entendiendo por qué el sistema dejó de hablarle al CRM otra vez."',
-        items: ['Sistemas que no se hablan entre sí', 'Procesos manuales que deberían correr solos', 'Errores que descubres semanas después — cuando ya pasó'],
+        items: ['Sistemas que no se hablan entre sí', 'Procesos manuales que deberían correr solos', 'Errores que descubres semanas después, cuando ya pasó'],
       },
     ];
     return (
@@ -335,21 +335,21 @@ const HomeAA = () => {
                 <CheckCircle2 className="w-5 h-5" /> Tu Lunes CON Sixteam
               </h3>
               <p className="text-[#e0e0e0]/60 text-sm mb-4">Abres el laptop con tu café. Una notificación:</p>
-              <p className="text-white text-sm font-medium mb-4 italic">"Esta semana — operada:"</p>
+              <p className="text-white text-sm font-medium mb-4 italic">"Esta semana, operada:"</p>
               <ul className="space-y-3 mb-6">
                 {[
                   { bold: '23 leads',              text: 'del fin de semana calificados y en pipeline' },
                   { bold: 'WhatsApp',              text: 'respondido en <2 min, día y noche' },
-                  { bold: 'Secuencia de recovery', text: 'enviada a 80 leads fríos — 7 abrieron, 2 ya agendaron' },
-                  { bold: 'Pauta',                 text: 'optimizada lunes — CPL bajó 11%' },
+                  { bold: 'Secuencia de recovery', text: 'enviada a 80 leads fríos: 7 abrieron, 2 ya agendaron' },
+                  { bold: 'Pauta',                 text: 'optimizada lunes: CPL bajó 11%' },
                   { bold: 'Agente IA de soporte',  text: 'resolvió 34 consultas sin escalar' },
                   { bold: 'Onboarding automático', text: 'disparado para 3 clientes nuevos' },
                   { bold: 'Reporte semanal',        text: 'en tu inbox a las 7am' },
-                  { bold: 'Integración Form→CRM',  text: 'monitoreada — 0 errores' },
+                  { bold: 'Integración Form→CRM',  text: 'monitoreada: 0 errores' },
                 ].map((item) => (
                   <li key={item.bold} className="flex items-start gap-2 text-[#e0e0e0]/80 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-[#00bfa5] flex-shrink-0 mt-0.5" />
-                    <span><strong className="text-white">{item.bold}</strong> — {item.text}</span>
+                    <span><strong className="text-white">{item.bold}</strong>, {item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -364,7 +364,7 @@ const HomeAA = () => {
         <Reveal>
           <div className="max-w-2xl mx-auto text-center mb-10">
             <p className="text-[#e0e0e0]/70 text-base sm:text-lg italic mb-4">"Yo dedicaba cada domingo en la noche a hacer la lista de lo que no había alcanzado a operar. Hoy esa lista la maneja Sixteam, y mi domingo es para mi familia."</p>
-            <p className="text-white font-semibold text-sm">Andrea L. <span className="text-[#e0e0e0]/50 font-normal">— Agencia de Viajes (CO)</span></p>
+            <p className="text-white font-semibold text-sm">Andrea L.<span className="text-[#e0e0e0]/50 font-normal">, Agencia de Viajes (CO)</span></p>
           </div>
         </Reveal>
         <Reveal>
@@ -383,9 +383,9 @@ const HomeAA = () => {
       { title: 'Tu WhatsApp, respondiendo 24/7',   icon: Smartphone,     items: ['Agentes IA que califican leads en minutos', 'Handoff al humano cuando el caso lo amerita', 'Cada conversación queda loggeada en el CRM', 'Plantillas optimizadas por tu industria'] },
       { title: 'Tus Emails, saliendo solos',        icon: Mail,           items: ['Secuencias de nurturing para leads fríos', 'Campañas de recovery para oportunidades estancadas', 'Newsletter operado con tu contenido y tu voz', 'Métricas reales: apertura, click, conversión a venta'] },
       { title: 'Tus Agentes IA, sin parar',         icon: Bot,            items: ['Recepcionista virtual que califica antes que tu equipo entre', 'Bot de soporte que resuelve básico, escala lo complejo', 'Agente de seguimiento que recupera leads dormidos', 'Asistentes internos para tu propio equipo'] },
-      { title: 'Tus Automatizaciones, sin caídas',  icon: Zap,            items: ['CRM, WhatsApp, email, web, pauta — todo conectado', 'Alertas cuando algo se rompe (antes que tú lo notes)', 'Workflows que reemplazan tareas manuales repetitivas', 'Onboarding automático de clientes nuevos'] },
+      { title: 'Tus Automatizaciones, sin caídas',  icon: Zap,            items: ['CRM, WhatsApp, email, web, pauta: todo conectado', 'Alertas cuando algo se rompe (antes que tú lo notes)', 'Workflows que reemplazan tareas manuales repetitivas', 'Onboarding automático de clientes nuevos'] },
       { title: 'Tus Dashboards & Reportes, listos', icon: LayoutDashboard, items: ['Métricas que importan, no vanidad', 'Dashboards en tiempo real accesibles desde el celular', 'Reporte semanal ejecutivo en tu inbox los lunes', 'Alertas proactivas cuando algo se sale de rango'] },
-      { title: 'Tu Pauta Digital, ejecutada',       icon: Megaphone,      items: ['Campañas en Meta, Google, TikTok, LinkedIn', 'Operadas con tu contenido y tus ideas', 'Optimización semanal de presupuesto', 'Reporting de costo por lead real — no clics'] },
+      { title: 'Tu Pauta Digital, ejecutada',       icon: Megaphone,      items: ['Campañas en Meta, Google, TikTok, LinkedIn', 'Operadas con tu contenido y tus ideas', 'Optimización semanal de presupuesto', 'Reporting de costo por lead real, no clics'] },
       { title: 'Tu Web & Desarrollo, mantenidos',   icon: Globe,          items: ['Landing pages para cada campaña nueva', 'Páginas actualizadas sin esperar al freelancer', 'Mobile-optimized y rápido', 'Integraciones a medida cuando tu negocio lo pide'] },
       { title: 'Tu Servicio al Cliente, sistematizado', icon: Headset,    items: ['Tickets organizados, asignados, resueltos', 'Escalación clara cuando necesita humano', 'Encuestas de satisfacción automáticas', 'Señales tempranas de churn detectadas por IA'] },
     ];
@@ -395,7 +395,7 @@ const HomeAA = () => {
           <Reveal><div className="text-center mb-4"><EyebrowPill>Lo Que Corre Por Ti</EyebrowPill></div></Reveal>
           <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-[#06070a] text-center leading-tight tracking-[-0.03em] mb-4 sm:mb-6">
-              Toda Tu Tecnología — Operada.
+              Toda Tu Tecnología, Operada.
             </h2>
           </Reveal>
           <Reveal delay={150}>
@@ -458,7 +458,7 @@ const HomeAA = () => {
             { name: 'Daniel', role: 'Estratega Senior',   action: 'Diseñando',   msg: 'Plan de recovery: segmentación por intent + 4 touches (WhatsApp + email alternados) + scoring de respuesta.' },
             { name: 'Aura',   role: 'Concierge IA',       action: 'Coordinando', msg: 'Asignando tareas a Laura (WhatsApp) y Emma (email). Trackeo en CRM por Carlos.' },
             { name: 'Laura',  role: 'Agente WhatsApp IA', action: 'Ejecutando',  msg: 'Mensajes personalizados saliendo en lotes de 30 con espacio para respuesta humana.' },
-            { name: 'Carlos', role: 'Agente CRM IA',      action: 'Trackeando',  msg: 'Pipeline "Recovery Abril" creado — etapas activas — 47 ya respondieron.' },
+            { name: 'Carlos', role: 'Agente CRM IA',      action: 'Trackeando',  msg: 'Pipeline "Recovery Abril" creado, etapas activas, 47 ya respondieron.' },
           ].map((agent, i) => (
             <Reveal key={agent.name} delay={200 + i * 80}>
               <div className="flex justify-end">
@@ -478,7 +478,7 @@ const HomeAA = () => {
             <div className="flex justify-center">
               <div className="bg-[#e6faf7] border border-[#00bfa5]/30 rounded-full px-5 py-2.5">
                 <p className="text-[#00bfa5] text-sm font-semibold flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" /> Campaña Activa — Listos los primeros 7 leads para que tu equipo llame.
+                  <CheckCircle2 className="w-4 h-4" /> Campaña Activa: listos los primeros 7 leads para que tu equipo llame.
                 </p>
               </div>
             </div>
@@ -516,7 +516,7 @@ const HomeAA = () => {
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a2342]/60 to-transparent" />
-              <p className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-[#e0e0e0]/50 text-xs sm:text-sm">2 min — Dashboard real + agentes + caso concreto</p>
+              <p className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-[#e0e0e0]/50 text-xs sm:text-sm">2 min: dashboard real + agentes + caso concreto</p>
             </div>
           </div>
         </Reveal>
@@ -543,7 +543,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-center text-[#7f8694] text-sm sm:text-base max-w-2xl mx-auto mb-12 sm:mb-16">
-              Experimenta el flujo completo — desde "necesito esto" a "está operando". <strong className="text-[#06070a]">Un solo lugar, todo operando.</strong>
+              Experimenta el flujo completo, desde "necesito esto" a "está operando". <strong className="text-[#06070a]">Un solo lugar, todo operando.</strong>
             </p>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12 sm:mb-16">
@@ -565,7 +565,7 @@ const HomeAA = () => {
                   <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">Aura — Concierge</p>
+                  <p className="text-white font-semibold text-sm">Aura, Concierge</p>
                   <p className="text-[#00bfa5] text-xs flex items-center gap-1"><span className="w-1.5 h-1.5 bg-[#00bfa5] rounded-full animate-pulse" /> Lista para empezar</p>
                 </div>
               </div>
@@ -585,7 +585,7 @@ const HomeAA = () => {
           <Reveal>
             <div className="max-w-2xl mx-auto text-center mb-10">
               <p className="text-[#7f8694] text-base sm:text-lg italic mb-4">"Sixteam es un salvavidas. Es tan fácil mandarles un brief de lo que necesito. Hacen el trabajo rápido y se aseguran de que esté bien antes de cerrar. Llevamos años y vamos a seguir."</p>
-              <p className="text-[#06070a] font-semibold text-sm">Hana D. <span className="text-[#989fab] font-normal">— Cliente Verificada (LATAM)</span></p>
+              <p className="text-[#06070a] font-semibold text-sm">Hana D.<span className="text-[#989fab] font-normal">, Cliente Verificada (LATAM)</span></p>
             </div>
           </Reveal>
         </div>
@@ -604,7 +604,7 @@ const HomeAA = () => {
         </Reveal>
         <Reveal delay={100}>
           <p className="text-center text-[#666c7a] text-base sm:text-lg max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20">
-            Velocidad y escala de IA con criterio y juicio de operadores senior — sin elegir entre los dos.
+            Velocidad y escala de IA con criterio y juicio de operadores senior, sin elegir entre los dos.
           </p>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto mb-12 sm:mb-16">
@@ -688,7 +688,7 @@ const HomeAA = () => {
           <Reveal>
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-[#7f8694] text-base sm:text-lg italic mb-4">"Probamos freelancers, agencias, hasta contratamos in-house. Nada nos dio la consistencia y velocidad de Sixteam. Nuestra tecnología finalmente opera como un negocio real, no como un Frankenstein."</p>
-              <p className="text-[#06070a] font-semibold text-sm">Miguel T. <span className="text-[#989fab] font-normal">— Agencia de Viajes (CO)</span></p>
+              <p className="text-[#06070a] font-semibold text-sm">Miguel T.<span className="text-[#989fab] font-normal">, Agencia de Viajes (CO)</span></p>
             </div>
           </Reveal>
         </div>
@@ -720,7 +720,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-center text-[#666c7a] text-base sm:text-lg max-w-2xl mx-auto mb-12 sm:mb-16">
-              <strong className="text-[#06070a]">6 Agentes IA + Operadores Senior</strong> trabajando detrás de la pantalla — para que tú no tengas que.
+              <strong className="text-[#06070a]">6 Agentes IA + Operadores Senior</strong> trabajando detrás de la pantalla, para que tú no tengas que.
             </p>
           </Reveal>
           <h3 className="text-[#00bfa5] font-poppins font-bold text-sm uppercase tracking-wider text-center mb-6 sm:mb-8">Tus 6 Agentes IA</h3>
@@ -729,7 +729,7 @@ const HomeAA = () => {
               <Reveal key={agent.name} delay={i * 60}>
                 <div className="bg-[#f3f4f6] border border-[#e6e8eb] rounded-2xl p-5 sm:p-6 text-center hover:border-[#00bfa5]/40 transition-colors">
                   <div className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4" style={{ backgroundColor: agent.color }}>{agent.name[0]}</div>
-                  <h4 className="text-[#06070a] font-poppins font-bold text-base mb-1">{agent.name} — {agent.role}</h4>
+                  <h4 className="text-[#06070a] font-poppins font-bold text-base mb-1">{agent.name}, {agent.role}</h4>
                   <p className="text-[#7f8694] text-sm">{agent.desc}</p>
                 </div>
               </Reveal>
@@ -781,7 +781,7 @@ const HomeAA = () => {
         badge: null,
         highlight: false,
         para: 'Emprendedores y negocios pequeños',
-        precioMensual: 200,
+        precioMensual: 199,
         precioAnual: 165,
         frentes: '1 agente IA activo',
         items: [
@@ -856,7 +856,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={150}>
             <p className="text-center text-[#666c7a] text-base sm:text-lg max-w-2xl mx-auto mb-4">
-              Empieza con el <strong className="text-[#06070a]">Diagnóstico Sixteam ($2,500)</strong> — mapeo agéntico de tu operación + roadmap cuantificado. El punto de entrada antes de cualquier plan.
+              Empieza con el <strong className="text-[#06070a]">Diagnóstico Sixteam ($2,500)</strong>: mapeo agéntico de tu operación + roadmap cuantificado. El punto de entrada antes de cualquier plan.
             </p>
           </Reveal>
 
@@ -1013,7 +1013,7 @@ const HomeAA = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[#00bfa5] flex-shrink-0" />
-                <span className="text-[#4e5361] text-sm"><strong className="text-[#06070a]">Sin contrato</strong> de permanencia — mes a mes</span>
+                <span className="text-[#4e5361] text-sm"><strong className="text-[#06070a]">Sin contrato</strong> de permanencia, mes a mes</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-[#00bfa5] flex-shrink-0" />
@@ -1061,7 +1061,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[#e0e0e0]/70 text-base sm:text-lg mb-8 sm:mb-10">
-              Promo desde <strong className="text-white">$200 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong> — porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
+              Promo desde <strong className="text-white">$199 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong>, porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
             </p>
           </Reveal>
           <Reveal delay={200}>

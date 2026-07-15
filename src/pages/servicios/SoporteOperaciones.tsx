@@ -27,11 +27,11 @@ QUÉ HACEMOS CADA MES:
 - Alineamos ventas, marketing y servicio al cliente
 
 PLANES:
-- Ops Esencial: promo desde $200 USD/mes — 60 créditos, 1 agente IA activo, CRM incluido
-- Ops Integral: $499 USD/mes — 160 créditos, agentes IA multi-canal, integraciones avanzadas
-- Ops Total: desde $1,200 USD/mes — 400+ créditos, PM dedicado, equipo completo
+- Ops Esencial: promo desde $199 USD/mes, 60 créditos, 1 agente IA activo, CRM incluido
+- Ops Integral: $499 USD/mes, 160 créditos, agentes IA multi-canal, integraciones avanzadas
+- Ops Total: desde $1,200 USD/mes, 400+ créditos, PM dedicado, equipo completo
 
-DIFERENCIAL: No somos soporte reactivo. Somos proactivos — cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
+DIFERENCIAL: No somos soporte reactivo. Somos proactivos: cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
 SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
 
 const EXAMPLE_QUESTIONS = [
@@ -45,8 +45,8 @@ const WA_BASE = 'https://wa.me/+573004188522?text=';
 
 const SoporteOperaciones = () => {
   useSEO({
-    title: "RevOps y Soporte de Operaciones — Sixteam.pro | Operación CRM Mensual",
-    description: "Operación mensual de tu CRM con mejoras proactivas, agentes IA, reportes ejecutivos y soporte. planes Ops con promo desde $200 USD/mes.",
+    title: "RevOps y Soporte de Operaciones | Sixteam.pro | Operación CRM Mensual",
+    description: "Operación mensual de tu CRM con mejoras proactivas, agentes IA, reportes ejecutivos y soporte. planes Ops con promo desde $199 USD/mes.",
     canonical: "https://sixteam.pro/servicios/soporte-operaciones",
     ogUrl: "https://sixteam.pro/servicios/soporte-operaciones",
   });
@@ -61,7 +61,7 @@ const SoporteOperaciones = () => {
     {
       nombre: 'Ops Esencial',
       horas: '60 créditos/mes',
-      precio: 'promo desde $200 USD/mes',
+      precio: 'promo desde $199 USD/mes',
       horaExtra: 'Sin setup obligatorio',
       descripcion: 'Para activar una operación base con CRM, agente IA y acompañamiento mensual.',
       incluye: [
@@ -127,12 +127,12 @@ const SoporteOperaciones = () => {
     {
       icon: Users,
       titulo: 'Alineamos ventas, marketing y servicio',
-      desc: 'Aseguramos que los tres equipos compartan la misma data, los mismos procesos y el mismo CRM — eliminando fricciones que generan pérdida de oportunidades.',
+      desc: 'Aseguramos que los tres equipos compartan la misma data, los mismos procesos y el mismo CRM, eliminando fricciones que generan pérdida de oportunidades.',
     },
     {
       icon: RefreshCcw,
       titulo: 'Evolucionamos contigo mes a mes',
-      desc: 'Cada mes revisamos prioridades, ejecutamos mejoras y proponemos iniciativas que impulsen el crecimiento. No somos reactivos — somos proactivos.',
+      desc: 'Cada mes revisamos prioridades, ejecutamos mejoras y proponemos iniciativas que impulsen el crecimiento. No somos reactivos, sino proactivos.',
     },
     {
       icon: ShieldCheck,
@@ -175,7 +175,7 @@ const SoporteOperaciones = () => {
   const faqs = [
     {
       q: '¿Qué es RevOps y por qué necesito un equipo externo?',
-      a: 'Revenue Operations (RevOps) es la función que alinea ventas, marketing y servicio al cliente alrededor de datos, procesos y tecnología compartidos para maximizar los ingresos. La mayoría de las empresas en Latam no pueden costear un equipo RevOps interno — Sixteam lo resuelve como aliado externo a una fracción del costo.',
+      a: 'Revenue Operations (RevOps) es la función que alinea ventas, marketing y servicio al cliente alrededor de datos, procesos y tecnología compartidos para maximizar los ingresos. La mayoría de las empresas en Latam no pueden costear un equipo RevOps interno, por eso Sixteam lo resuelve como aliado externo a una fracción del costo.',
     },
     {
       q: '¿En qué se diferencia esto de un soporte técnico tradicional?',
@@ -237,7 +237,7 @@ const SoporteOperaciones = () => {
               </h1>
 
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Sixteam opera tu tecnología de revenue mes a mes — como si fuera tu propio equipo interno, sin el costo de serlo. CRM, automatizaciones, integraciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.
+                Sixteam opera tu tecnología de revenue mes a mes, como si fuera tu propio equipo interno, sin el costo de serlo. CRM, automatizaciones, integraciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
@@ -337,7 +337,7 @@ const SoporteOperaciones = () => {
               Qué hace Sixteam como tu equipo RevOps
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              No resolvemos tickets — operamos tu tecnología de revenue de forma proactiva, como parte de tu equipo.
+              No resolvemos tickets, sino que operamos tu tecnología de revenue de forma proactiva, como parte de tu equipo.
             </p>
           </div>
 
@@ -361,7 +361,7 @@ const SoporteOperaciones = () => {
 
           <div className="max-w-5xl mx-auto mt-8 p-5 bg-blue-50 border border-[#1d70a2]/20 rounded-xl">
             <p className="text-[#0a2342] text-sm leading-relaxed">
-              <strong>Alcance del servicio:</strong> Operamos sobre configuraciones de plataforma (CRM, automatizaciones, flujos, reportería). Las caídas del servicio atribuibles al proveedor (HighLevel, HubSpot, etc.) se gestionan directamente con ellos — Sixteam acompaña la comunicación cuando aplique.
+              <strong>Alcance del servicio:</strong> Operamos sobre configuraciones de plataforma (CRM, automatizaciones, flujos, reportería). Las caídas del servicio atribuibles al proveedor (HighLevel, HubSpot, etc.) se gestionan directamente con ellos, pero Sixteam acompaña la comunicación cuando aplique.
             </p>
           </div>
         </div>
@@ -530,7 +530,7 @@ const SoporteOperaciones = () => {
               Iniciativas estratégicas
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Proyectos de mayor alcance que van más allá del retainer mensual — para escalar la madurez de tu operación de revenue.
+              Proyectos de mayor alcance que van más allá del retainer mensual, para escalar la madurez de tu operación de revenue.
             </p>
           </div>
 

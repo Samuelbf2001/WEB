@@ -94,7 +94,7 @@ export default function NotOnlySection() {
           <p className="font-lato text-base leading-relaxed text-white/60 sm:text-lg">
             Si tienes un proceso que hoy depende de{' '}
             <span className="font-semibold text-white">hojas de cálculo, mensajes sueltos o herramientas desconectadas</span>,
-            {' '}hay una solución estructural que lo mejora — sin importar el área.
+            {' '}hay una solución estructural que lo mejora, sin importar el área.
           </p>
         </div>
       </div>

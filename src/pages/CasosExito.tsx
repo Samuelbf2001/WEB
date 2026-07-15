@@ -9,7 +9,7 @@ import { useSEO } from '@/hooks/useSEO';
 
 const CasosExito = () => {
   useSEO({
-    title: "Casos de Éxito — Sixteam.pro | Resultados Reales en Colombia",
+    title: "Casos de Éxito | Sixteam.pro | Resultados Reales en Colombia",
     description: "Empresas que transformaron su operación con Sixteam.pro. CRM, automatizaciones e IA con resultados medibles: +65% conversión, -80% tiempo de respuesta.",
     canonical: "https://sixteam.pro/casos-exito",
     ogUrl: "https://sixteam.pro/casos-exito",

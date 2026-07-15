@@ -9,9 +9,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /* ── pain points ── */
 const pains = [
-  "Leads de Vivo Real, Metrocuadrado, Facebook Ads — y nadie los califica ni los llama a tiempo.",
+  "Leads de Vivo Real, Metrocuadrado, Facebook Ads, y nadie los califica ni los llama a tiempo.",
   "El comprador caliente se enfría porque nadie le hace seguimiento estructurado.",
-  "Cada agente lleva sus propias notas — no hay visibilidad del pipeline real.",
+  "Cada agente lleva sus propias notas, no hay visibilidad del pipeline real.",
   "La constructora no sabe cuántas unidades vendió hasta que arma el reporte a mano.",
 ];
 
@@ -48,7 +48,7 @@ const useCases = [
     icon: BarChart3,
     title: "Reporte ejecutivo a inversionistas",
     items: [
-      "Unidades vendidas, en reserva y en negociación — por proyecto, zona y agente.",
+      "Unidades vendidas, en reserva y en negociación: por proyecto, zona y agente.",
       "Reporte listo cada lunes a las 9am sin que nadie lo arme a mano.",
       "Operada por Clara.",
     ],
@@ -90,16 +90,15 @@ const InmobiliariasV2New = () => {
           <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
             style={{ fontSize: "clamp(36px, 5.5vw, 58px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
             Inmobiliaria que{" "}
-            <em className="font-serif italic font-normal">convierte leads en ventas</em>{" "}
-            — no en una lista en Excel.
+            <em className="font-serif italic font-normal">convierte leads en ventas</em>, no en una lista en Excel.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">
             Leads de portales que nadie llama, compradores calientes que se enfrían en una semana, agentes que pierden la trazabilidad del proceso.
-            Sixteam opera tu pipeline inmobiliario — desde la captura hasta el cierre y la post-venta — para que cada propiedad tenga su comprador.
+            Sixteam opera tu pipeline inmobiliario, desde la captura hasta el cierre y la post-venta, para que cada propiedad tenga su comprador.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
@@ -225,7 +224,7 @@ const InmobiliariasV2New = () => {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>

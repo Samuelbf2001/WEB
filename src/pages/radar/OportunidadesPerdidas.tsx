@@ -22,7 +22,7 @@ import { useSEO } from '@/hooks/useSEO';
 
 const OportunidadesPerdidas = () => {
   useSEO({
-    title: "Oportunidades de Venta Perdidas — Radar Sixteam | Auditoría RevOps",
+    title: "Oportunidades de Venta Perdidas: Radar Sixteam | Auditoría RevOps",
     description: "¿Cuánto dinero estás perdiendo sin saberlo? Auditamos fugas en tu pipeline, leads sin seguimiento y clientes que no regresan. Diagnóstico gratuito.",
     canonical: "https://sixteam.pro/radar/oportunidades-perdidas",
     ogUrl: "https://sixteam.pro/radar/oportunidades-perdidas",
@@ -501,7 +501,7 @@ const OportunidadesPerdidas = () => {
               para que lo que implementes tenga impacto real desde el primer día."
             </p>
             <p className="text-[#00bfa5] font-poppins font-semibold text-sm">
-              — Equipo Sixteam.pro
+              Equipo Sixteam.pro
             </p>
           </div>
         </div>

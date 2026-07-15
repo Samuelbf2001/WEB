@@ -47,7 +47,7 @@ export default function HeroBrochure() {
         <p className="mt-7 max-w-xl font-lato text-base leading-relaxed text-white/70 sm:text-lg">
           Diseñamos e implementamos soluciones de{' '}
           <span className="font-semibold text-white">CRM, automatizaciones y agentes de IA</span>{' '}
-          para ventas, operación, servicio y marketing — para que tu empresa deje de operar en silos y empiece a crecer con{' '}
+          para ventas, operación, servicio y marketing, para que tu empresa deje de operar en silos y empiece a crecer con{' '}
           <span className="font-semibold text-[#00bfa5]">orden, control y visibilidad real</span>.
         </p>
 

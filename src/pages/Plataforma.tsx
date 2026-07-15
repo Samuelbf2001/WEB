@@ -17,19 +17,19 @@ Página: /plataforma
 PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
-1. Ops Esencial — promo desde $200 USD/mes
+1. Ops Esencial: promo desde $199 USD/mes
    Incluye: 60 créditos mensuales, 1 agente IA activo, plataforma CRM incluida y wallet de mensajería.
 
-2. Ops Integral — $499 USD/mes
+2. Ops Integral: $499 USD/mes
    Incluye: 160 créditos mensuales, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 
-3. Ops Total — desde $1,200 USD/mes
+3. Ops Total: desde $1,200 USD/mes
    Incluye: desde 400 créditos mensuales, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 TIEMPO DE IMPLEMENTACIÓN: según alcance del plan y stack actual.
 TECNOLOGÍA BASE: Infraestructura de clase enterprise configurada y operada por Sixteam.pro.
 
-DIFERENCIAL: No vendemos acceso a software — configuramos, implementamos y operamos la plataforma bajo tu proceso de negocio.`;
+DIFERENCIAL: No vendemos acceso a software, sino que configuramos, implementamos y operamos la plataforma bajo tu proceso de negocio.`;
 
 const EXAMPLE_QUESTIONS = [
   '¿Cuál plan me recomiendas?',
@@ -42,8 +42,8 @@ const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%
 
 const Plataforma = () => {
   useSEO({
-    title: "Plataforma CRM — Sixteam.pro | Promo desde $200 USD/mes",
-    description: "Planes Ops todo-en-uno con promo desde $200 USD/mes. CRM, agentes IA, automatizaciones y operación mensual para empresas de servicios en Colombia.",
+    title: "Plataforma CRM: Sixteam.pro | Promo desde $199 USD/mes",
+    description: "Planes Ops todo-en-uno con promo desde $199 USD/mes. CRM, agentes IA, automatizaciones y operación mensual para empresas de servicios en Colombia.",
     canonical: "https://sixteam.pro/plataforma",
     ogUrl: "https://sixteam.pro/plataforma",
   });
@@ -64,7 +64,7 @@ const Plataforma = () => {
       name: 'Ops Esencial',
       tagline: 'Tu primer paso con tecnología e IA',
       desc: 'Activa un agente IA en tu canal más urgente y opera solicitudes con un equipo especialista dentro de tu plan de créditos.',
-      price: '200',
+      price: '199',
       impl: 'Sin setup obligatorio',
       users: '60 créditos/mes',
       accent: '#1d70a2',
@@ -198,7 +198,7 @@ const Plataforma = () => {
 
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed">
                 Sixteam.pro entrega una plataforma configurada, operativa y lista para tu equipo.
-                CRM, IA conversacional, automatizaciones y marketing en un solo lugar — sin fricción técnica.
+                CRM, IA conversacional, automatizaciones y marketing en un solo lugar, sin fricción técnica.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -343,7 +343,7 @@ const Plataforma = () => {
               ¿Qué implementa Sixteam en cada plan?
             </h2>
             <p className="text-[#e0e0e0] text-lg max-w-2xl mx-auto">
-              No solo te entregamos acceso a la plataforma — configuramos, probamos y capacitamos a tu equipo.
+              No solo te entregamos acceso a la plataforma, sino que configuramos, probamos y capacitamos a tu equipo.
             </p>
           </div>
 
@@ -475,14 +475,14 @@ const Plataforma = () => {
                   ¿Por qué elegir la plataforma de Sixteam.pro?
                 </h2>
                 <p className="text-[#e0e0e0] text-lg leading-relaxed">
-                  Construida sobre infraestructura de clase enterprise usada por miles de negocios digitales en el mundo. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo — para que obtengas resultados desde el primer día.
+                  Construida sobre infraestructura de clase enterprise usada por miles de negocios digitales en el mundo. Sixteam la configura y adapta a tu proceso de negocio, tu marca y tu equipo, para que obtengas resultados desde el primer día.
                 </p>
                 <ul className="space-y-4">
                   {[
                     { icon: Zap, title: 'Todo integrado de origen', desc: 'CRM, IA, marketing, automatizaciones y canales en un solo sistema. Sin integraciones frágiles entre herramientas separadas.' },
                     { icon: Bot, title: 'IA conversacional nativa', desc: 'Entrenada con tu información, conectada a tus canales, con handoff inteligente a tu equipo.' },
                     { icon: Globe, title: 'API y conectividad total', desc: 'Se conecta con ERPs, e-commerce y cualquier sistema externo vía API, Webhooks y Marketplace apps.' },
-                    { icon: Star, title: 'Sixteam lo configura por ti', desc: 'No compras acceso a una herramienta — contratas una operación lista para producción.' },
+                    { icon: Star, title: 'Sixteam lo configura por ti', desc: 'No compras acceso a una herramienta, sino que contratas una operación lista para producción.' },
                   ].map((item, i) => {
                     const Icon = item.icon;
                     return (

@@ -31,7 +31,7 @@ const useCases = [
     title: "Expediente vivo en el CRM",
     items: [
       "Cada cita queda registrada con historial, notas y próximos pasos.",
-      "Buscable por nombre, fecha o concepto — sin hojas sueltas.",
+      "Buscable por nombre, fecha o concepto, sin hojas sueltas.",
       "Operada por Debbie + Sam.",
     ],
   },
@@ -49,7 +49,7 @@ const useCases = [
     title: "Dashboard ejecutivo de ocupación",
     items: [
       "Ocupación por especialista, tasa de no-shows, ticket promedio y retención mensual.",
-      "Reporte listo cada lunes a las 9am — sin armar nada a mano.",
+      "Reporte listo cada lunes a las 9am, sin armar nada a mano.",
       "Operada por Clara.",
     ],
   },
@@ -89,17 +89,17 @@ const ServiciosConCitaV2 = () => {
           <Eyebrow variant="navy">Sixteam para Servicios Profesionales</Eyebrow>
           <h1 className="font-poppins font-bold text-v2-ink-heading mt-4"
             style={{ fontSize: "clamp(36px, 5.5vw, 58px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
-            Salud, legal, estético, contable —{" "}
+            Salud, legal, estético, contable:{" "}
             <em className="font-serif italic font-normal">donde la cita es el producto</em>
             .
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">
             Recordatorios olvidados, no-shows que se comen tu margen, expedientes en hojas sueltas, atención que depende del humor del recepcionista.
-            Sixteam opera el ciclo completo — desde la agenda hasta la retención — para que cobres por cada hora que el especialista trabaja.
+            Sixteam opera el ciclo completo, desde la agenda hasta la retención, para que cobres por cada hora que el especialista trabaja.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
@@ -225,7 +225,7 @@ const ServiciosConCitaV2 = () => {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>

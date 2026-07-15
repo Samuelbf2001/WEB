@@ -31,7 +31,7 @@ const freeItems = [
 const premiumItems = [
   "Auditoría completa de tech stack (CRM, email, WhatsApp, web, ads)",
   "Score de madurez digital 0–100 por área",
-  "AI Readiness Score — dónde puede entrar IA hoy",
+  "AI Readiness Score: dónde puede entrar IA hoy",
   "Mapa completo de automatizaciones y tiempo recuperable",
   "Análisis de brechas del equipo (skills gap)",
   "Roadmap priorizado de 90 días con quick wins semana 1",
@@ -93,7 +93,7 @@ const steps = [
     icon: Users,
     title: "Presentación en vivo",
     time: "Día 10",
-    desc: "60 minutos contigo y tu equipo. Repasamos cada hallazgo, respondemos dudas, acordamos primeros pasos. No es una presentación de slides — es una sesión de trabajo.",
+    desc: "60 minutos contigo y tu equipo. Repasamos cada hallazgo, respondemos dudas, acordamos primeros pasos. No es una presentación de slides, sino una sesión de trabajo.",
     items: [
       "60 minutos de sesión en vivo",
       "Revisión de todos los hallazgos",
@@ -144,7 +144,7 @@ const personas = [
   {
     icon: Search,
     title: "Empresa que va a invertir en tecnología",
-    desc: "Antes de contratar a alguien o firmar con una agencia, quieres saber exactamente qué necesitas — y qué no.",
+    desc: "Antes de contratar a alguien o firmar con una agencia, quieres saber exactamente qué necesitas, y qué no.",
   },
   {
     icon: AlertTriangle,
@@ -211,8 +211,8 @@ const RadarPro = () => {
             de tu tecnología.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[640px] mx-auto">
-            No es una auditoría de CRM. Es una radiografía de toda tu operación tecnológica — email,
-            WhatsApp, IA, automatizaciones, web y pauta — con un plan de acción priorizado.
+            No es una auditoría de CRM. Es una radiografía de toda tu operación tecnológica: email,
+            WhatsApp, IA, automatizaciones, web y pauta, con un plan de acción priorizado.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <a

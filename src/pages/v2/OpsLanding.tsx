@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight, BarChart3, Bot, CalendarDays, Check, ChevronDown, Code2, Database, Globe, Hammer,
-  Mail, Megaphone, MessageCircle, Package, Phone, Play, Plug, Radar, Search, Users, Workflow,
+  ArrowRight, BadgePercent, BarChart3, Bot, Briefcase, Building2, CalendarDays, Check, ChevronDown, Code2,
+  Database, Globe, Hammer, Mail, Megaphone, MessageCircle, Package, Phone, Play, Plug, Radar, Search, Star,
+  Users, Workflow,
 } from "lucide-react";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
+import AgentsBlock from "@/components/v2/AgentsBlock";
 import TestimonialsV2 from "@/components/v2/sections/TestimonialsV2";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useSEO } from "@/hooks/useSEO";
 import { gtm } from "@/lib/gtm";
+import { PROMO_REMAINING_SPOTS } from "@/lib/promo";
 
 /* ── Acciones de conversión de la landing ─────────── */
 const WA_PHONE = "573004188522";
@@ -145,6 +148,58 @@ const FounderVideo = () => {
   );
 };
 
+/* ── Tarjeta flotante de promoción (hero) ────────────────────────── */
+const HeroPromoCard = () => (
+  <div className="relative w-full max-w-[600px] mx-auto lg:mx-0 rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+    <div
+      aria-hidden
+      className="pointer-events-none absolute -inset-3 rounded-3xl opacity-70 blur-xl"
+      style={{ background: "radial-gradient(circle, rgba(0,191,165,0.25) 0%, transparent 70%)" }}
+    />
+    <div className="relative rounded-2xl border border-[#1d70a2]/40 bg-gradient-to-br from-[#0a2342] to-[#123a63] p-5 sm:p-6 shadow-[0_20px_48px_rgba(10,35,66,0.35)] flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7">
+      <div className="flex-1 min-w-0">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-[#00bfa5]/40 bg-[#00bfa5]/10 px-3 py-1 font-lato text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8ff5e6]">
+          <BadgePercent className="h-3 w-3" aria-hidden />
+          Promoción de lanzamiento
+        </div>
+
+        <p className="mt-2.5 font-poppins font-bold text-[18px] leading-snug text-white">
+          Plan Esencial desde <span className="text-[#00bfa5]">$199</span>{" "}
+          <span className="font-lato text-[13px] font-normal text-white/40 line-through">$300</span>
+          <span className="font-lato text-[12px] font-normal text-white/60"> USD/mes</span>
+        </p>
+
+        <p className="mt-1.5 font-lato text-[12.5px] leading-[1.5] text-white/70">
+          El equipo de tecnología e IA que siempre has necesitado, sin contratar personal
+          adicional.
+        </p>
+
+        <p className="mt-1.5 font-lato text-[11.5px] font-semibold text-[#8ff5e6]">
+          Cupos limitados para los primeros 20 clientes: quedan {PROMO_REMAINING_SPOTS}.
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center gap-2 flex-shrink-0 w-full sm:w-auto">
+        <WaButton
+          source="ops_hero_promo"
+          message={MSG_ESENCIAL}
+          size="sm"
+          className="w-full sm:w-auto justify-center whitespace-nowrap"
+        >
+          Tomar la promoción <ArrowRight className="h-3.5 w-3.5" />
+        </WaButton>
+        <a
+          href="#planes"
+          onClick={() => gtm.ctaClick("promo_hero_detalle", "ops_hero")}
+          className="text-center font-lato text-[11.5px] text-white/60 underline underline-offset-2 hover:text-white/80 transition-colors whitespace-nowrap"
+        >
+          Ver de qué se trata
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
 /* ── FAQ (respuestas canónicas de manejo de objeciones) ──────────── */
 const faqs = [
   {
@@ -161,11 +216,11 @@ const faqs = [
   },
   {
     q: "¿Cuánto demora ver resultados?",
-    a: "Los primeros cambios operativos — respuesta más rápida, seguimiento estructurado — se ven en las primeras 2 a 4 semanas. El impacto en métricas de negocio suele tomar 60 a 90 días.",
+    a: "Los primeros cambios operativos (respuesta más rápida, seguimiento estructurado) se ven en las primeras 2 a 4 semanas. El impacto en métricas de negocio suele tomar 60 a 90 días.",
   },
   {
     q: "¿Cómo es el contrato?",
-    a: "Plan mensual con aviso de 30 días — no hay letra chica. El alcance se define antes de empezar y todo el trabajo queda documentado: el conocimiento de tu operación es tuyo, no nuestro.",
+    a: "Plan mensual con aviso de 30 días: no hay letra chica. El alcance se define antes de empezar y todo el trabajo queda documentado: el conocimiento de tu operación es tuyo, no nuestro.",
   },
 ];
 
@@ -205,9 +260,9 @@ const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => v
    ═══════════════════════════════════════════════════════════════════ */
 const OpsLanding = () => {
   useSEO({
-    title: "Sixteam Ops — Tu equipo de tecnología e IA, mes a mes | Sixteam.pro",
+    title: "Sixteam Ops: Tu equipo de tecnología e IA, mes a mes | Sixteam.pro",
     description:
-      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Promo desde $200 USD/mes.",
+      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Promo desde $199 USD/mes.",
     noindex: true,
   });
 
@@ -292,22 +347,24 @@ const OpsLanding = () => {
             <Container size="wide" className="relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-12 lg:gap-16 items-center">
               <div className="text-center lg:text-left">
-              <Eyebrow variant="teal">Sixteam Ops · Soporte y operaciones continuas</Eyebrow>
+              <Eyebrow variant="teal">Sixteam Ops · Soporte y operaciones para mejora continua</Eyebrow>
               <h1
                 className="font-poppins font-bold text-v2-ink-heading mt-5"
                 style={{ fontSize: "clamp(30px, 4.8vw, 54px)", lineHeight: "1.08", letterSpacing: "-0.025em" }}
               >
-                El equipo de tecnología e IA que tu empresa todavía no tiene, operando{" "}
-                <span>mes a mes</span>
-                .
+                El equipo de tecnología con IA que tu negocio siempre ha necesitado.
               </h1>
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[600px] mx-auto lg:mx-0">
-                Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y
-                métricas. Tú diriges el negocio; nosotros mantenemos la máquina viva. Sin contratar
+                Un equipo compuesto por Personal Calificado y agentes de IA que te impulsan a sacar
+                provecho a tus sistemas y herramientas: CRM, ERP, WhatsApp, automatizaciones,
+                reportería.
+              </p>
+              <p className="font-lato text-[14px] text-v2-ink-muted leading-[1.6] mt-3 max-w-[600px] mx-auto lg:mx-0">
+                Obtén resultados como si tuvieras 6 expertos en tu equipo. Además, sin contratar
                 personal adicional a tu nómina.
               </p>
 
-              <div className="mt-9 flex flex-col items-center lg:items-start gap-3">
+              <div className="mt-9 flex flex-col items-center lg:items-start gap-6">
                 <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                   <AgendaButton source="ops_hero" variant="primary" className="w-full sm:w-auto">
                     <CalendarDays className="h-4 w-4" />
@@ -318,28 +375,31 @@ const OpsLanding = () => {
                     <MessageCircle className="h-4 w-4" />
                   </WaButton>
                 </div>
-                <p className="font-lato text-[13px] text-v2-ink-muted">
-                  Para B2B en Estados Unidos priorizamos llamada agendada y correo; WhatsApp queda como canal secundario.
-                </p>
-              </div>
-
-              {/* Prueba social temprana */}
-              <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-3">
-                {[
-                  ["50+", "proyectos"],
-                  ["15+", "sectores"],
-                  ["98%", "satisfacción"],
-                ].map(([n, label]) => (
-                  <div key={label} className="flex items-baseline gap-2">
-                    <span className="font-poppins font-black text-[26px] text-v2-ink-heading">{n}</span>
-                    <span className="font-lato text-[13px] text-v2-ink-muted uppercase tracking-wider">{label}</span>
-                  </div>
-                ))}
+                <HeroPromoCard />
               </div>
               </div>
 
-              {/* Video vertical del fundador */}
-              <FounderVideo />
+              {/* Video vertical del fundador + prueba social */}
+              <div className="flex flex-col items-center lg:items-end gap-6">
+                <FounderVideo />
+                <div className="w-full max-w-[280px] md:max-w-[310px] mx-auto lg:mr-0 grid grid-cols-3 gap-2 rounded-2xl border border-v2-border-subtle bg-white/70 backdrop-blur-sm px-4 py-4">
+                  {[
+                    { icon: <Briefcase className="h-3.5 w-3.5" />, n: "50+", label: "Proyectos" },
+                    { icon: <Building2 className="h-3.5 w-3.5" />, n: "15+", label: "Sectores" },
+                    { icon: <Star className="h-3.5 w-3.5" />, n: "98%", label: "Satisfacción" },
+                  ].map((s) => (
+                    <div key={s.label} className="flex flex-col items-center gap-1.5 text-center">
+                      <div className="w-7 h-7 rounded-lg bg-v2-surface-teal-mist border border-v2-accent-teal/25 flex items-center justify-center text-v2-accent-teal-deep flex-shrink-0">
+                        {s.icon}
+                      </div>
+                      <div>
+                        <p className="font-poppins font-black text-[17px] text-v2-ink-heading leading-none">{s.n}</p>
+                        <p className="font-lato text-[9px] text-v2-ink-muted uppercase tracking-wider mt-1">{s.label}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               </div>
             </Container>
           </Section>
@@ -349,12 +409,12 @@ const OpsLanding = () => {
             <Container>
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-16 items-start">
                 <div className="v2-reveal lg:sticky lg:top-28">
-                  <Eyebrow variant="teal">El problema</Eyebrow>
+                  <Eyebrow variant="teal">Problemas comunes en los proyectos de Transformación Digital</Eyebrow>
                   <h2
                     className="font-poppins font-bold text-v2-ink-heading mt-3"
                     style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
                   >
-                    El problema no es comprar tecnología. Es operarla.
+                    No es sólo invertir en tecnología sino usarla adecuadamente.
                   </h2>
                   <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
                     Tu negocio necesita sistemas que funcionen, se conecten y mejoren cada semana.
@@ -409,17 +469,16 @@ const OpsLanding = () => {
           <Section surface="teal-mist" size="default">
             <Container>
               <div className="text-center max-w-[680px] mx-auto v2-reveal">
-                <Eyebrow variant="teal">La solución</Eyebrow>
+                <Eyebrow variant="teal">Nuestra solución</Eyebrow>
                 <h2
                   className="font-poppins font-bold text-v2-ink-heading mt-3"
                   style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: "1.15", letterSpacing: "-0.01em" }}
                 >
-                  Sixteam Ops: no entregamos y nos vamos.{" "}
-                  <span>Operamos.</span>
+                  Sixteam Ops: un equipo de tecnología en la palma de tu mano.
                 </h2>
                 <p className="font-lato text-[17px] text-v2-ink-body leading-[1.65] mt-5">
-                  Operamos y soportamos tus sistemas, agentes y procesos mes a mes. La plataforma
-                  GoHighLevel viene incluida — no es un extra.
+                  Soporte y operación de tus sistemas por especialistas y agentes de IA para
+                  ahorrarte tiempo y dinero.
                 </p>
               </div>
 
@@ -438,7 +497,7 @@ const OpsLanding = () => {
                   {
                     icon: <BarChart3 className="h-5 w-5" />,
                     t: "Métricas del negocio",
-                    d: "Visibilidad real de tu operación — no tres números sueltos en un dashboard.",
+                    d: "Visibilidad real de tu operación, no tres números sueltos en un dashboard.",
                   },
                   {
                     icon: <Package className="h-5 w-5" />,
@@ -472,7 +531,7 @@ const OpsLanding = () => {
                     { icon: <Mail className="h-3.5 w-3.5" />, t: "Email marketing y secuencias" },
                     { icon: <MessageCircle className="h-3.5 w-3.5" />, t: "WhatsApp Business y mensajería" },
                     { icon: <Bot className="h-3.5 w-3.5" />, t: "Agentes de IA y chatbots" },
-                    { icon: <Phone className="h-3.5 w-3.5" />, t: "IA de voz — como Sofía" },
+                    { icon: <Phone className="h-3.5 w-3.5" />, t: "IA de voz (como Sofía)" },
                     { icon: <Globe className="h-3.5 w-3.5" />, t: "Webs y landing pages" },
                     { icon: <Megaphone className="h-3.5 w-3.5" />, t: "Pauta digital" },
                     { icon: <Workflow className="h-3.5 w-3.5" />, t: "Automatizaciones (Make / n8n)" },
@@ -562,7 +621,7 @@ const OpsLanding = () => {
           </Section>
 
           {/* ── PLANES ── */}
-          <Section surface="alt" size="default">
+          <Section id="planes" surface="alt" size="default" className="scroll-mt-24">
             <Container>
               <div className="text-center max-w-[640px] mx-auto v2-reveal mb-12">
                 <Eyebrow variant="teal">Inversión</Eyebrow>
@@ -585,7 +644,7 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Esencial</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$200</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$199</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
                     <p className="font-lato text-[12px] font-semibold text-v2-accent-teal-deep mt-1">
@@ -596,13 +655,14 @@ const OpsLanding = () => {
                       tecnología e IA sin complicaciones ni grandes inversiones.
                     </p>
                   </div>
-                  <div className="px-6 py-5 flex flex-col gap-2.5">
-                    {[
-                      "Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos",
-                      "60 créditos / mes — no acumulables",
-                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
-                      "$30/mes Wallet de mensajería",
-                    ].map((t) => <CheckItem key={t} text={t} />)}
+                  <div className="px-6 py-5 flex flex-col gap-3.5">
+                    <AgentsBlock teamDesc="Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos." />
+                    <div className="flex flex-col gap-2.5">
+                      {[
+                        "60 créditos / mes, no acumulables",
+                        "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                      ].map((t) => <CheckItem key={t} text={t} />)}
+                    </div>
                   </div>
                   <div className="px-6 pb-6">
                     <WaButton
@@ -640,16 +700,18 @@ const OpsLanding = () => {
                       complejas.
                     </p>
                   </div>
-                  <div className="px-6 py-5 flex flex-col gap-2.5">
-                    {[
-                      "Agentes IA operando en multi-canal (CRM + WhatsApp + Email) + equipo de especialistas para integraciones, automatizaciones avanzadas y nuevas configuraciones",
-                      "160 créditos / mes — no acumulables",
-                      "Bono Onboarding VIP: llamada de estrategia 1:1 + setup de marca/sistema + fast-track de automatizaciones",
-                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
-                      "$30/mes Wallet de mensajería",
-                    ].map((t) => (
-                      <CheckItem key={t} text={<strong className="text-v2-ink-heading font-semibold">{t}</strong>} />
-                    ))}
+                  <div className="px-6 py-5 flex flex-col gap-3.5">
+                    <AgentsBlock teamDesc="Agentes IA operando en multi-canal (CRM + WhatsApp + Email) + equipo de especialistas para integraciones, automatizaciones avanzadas y nuevas configuraciones." />
+                    <div className="flex flex-col gap-2.5">
+                      {[
+                        "160 créditos / mes, no acumulables",
+                        "Bono Onboarding VIP: llamada de estrategia 1:1 + setup de marca/sistema + fast-track de automatizaciones",
+                        "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                        "$30/mes Wallet de mensajería",
+                      ].map((t) => (
+                        <CheckItem key={t} text={<strong className="text-v2-ink-heading font-semibold">{t}</strong>} />
+                      ))}
+                    </div>
                   </div>
                   <div className="px-6 pb-6">
                     <WaButton
@@ -681,13 +743,15 @@ const OpsLanding = () => {
                       Capacidad total, PM dedicado y estrategia continua de crecimiento.
                     </p>
                   </div>
-                  <div className="px-6 py-5 flex flex-col gap-2.5">
-                    {[
-                      "Agentes IA de alto volumen en todos tus sistemas + PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales",
-                      "Desde 400 créditos / mes — acumulables según solicitud",
-                      "Plataforma CRM all-in-one incluida (valor $97/mes)",
-                      "$30/mes Wallet de mensajería",
-                    ].map((t) => <CheckItem key={t} text={t} />)}
+                  <div className="px-6 py-5 flex flex-col gap-3.5">
+                    <AgentsBlock teamDesc="Agentes IA de alto volumen en todos tus sistemas + PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales." />
+                    <div className="flex flex-col gap-2.5">
+                      {[
+                        "Desde 400 créditos / mes, acumulables según solicitud",
+                        "Plataforma CRM all-in-one incluida (valor $97/mes)",
+                        "$30/mes Wallet de mensajería",
+                      ].map((t) => <CheckItem key={t} text={t} />)}
+                    </div>
                   </div>
                   <div className="px-6 pb-6">
                     <WaButton
@@ -843,7 +907,7 @@ const OpsLanding = () => {
               </h2>
               <p className="v2-reveal v2-d2 font-lato text-[18px] md:text-[20px] text-white/75 leading-[1.65] max-w-[600px] mx-auto mt-7">
                 Cuéntanos cómo opera tu negocio hoy. Te decimos, sin compromiso, cómo lo operaría
-                Sixteam Ops — y con qué plan arrancar.
+                Sixteam Ops y con qué plan arrancar.
               </p>
               <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
                 <AgendaButton
@@ -920,7 +984,7 @@ const OpsLanding = () => {
           <div className="flex items-center gap-2.5">
             <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-6 w-6 object-contain" />
             <span className="font-lato text-[13px] text-v2-ink-muted">
-              © {new Date().getFullYear()} Sixteam.pro — Operamos la tecnología de tu empresa.
+              © {new Date().getFullYear()} Sixteam.pro. Operamos la tecnología de tu empresa.
             </span>
           </div>
           <div className="flex items-center gap-5">

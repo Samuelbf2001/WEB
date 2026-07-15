@@ -37,11 +37,11 @@ SOLUCIONES / FUNCIONALIDADES:
 CÓMO FUNCIONA (4 pasos):
 1. Lead o solicitud entra por WhatsApp, web, email o referido
 2. CRM captura y crea la oportunidad en el pipeline de propuestas
-3. El equipo envía la propuesta — el sistema hace el seguimiento automático
+3. El equipo envía la propuesta y el sistema hace el seguimiento automático
 4. Cliente cerrado: activación de recordatorios de renovación y programa de referidos
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
 - Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 - Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
@@ -69,12 +69,12 @@ const painPoints = [
   {
     icon: Repeat,
     title: 'Clientes recurrentes que se te escapan',
-    desc: 'Prestaste un servicio de 6 meses que vence pronto. Sin un sistema que te alerte y que le envíe al cliente una propuesta de renovación a tiempo, ese contrato simplemente no se renueva — y tienes que volver a cazarlo.',
+    desc: 'Prestaste un servicio de 6 meses que vence pronto. Sin un sistema que te alerte y que le envíe al cliente una propuesta de renovación a tiempo, ese contrato simplemente no se renueva y tienes que volver a cazarlo.',
   },
   {
     icon: DollarSign,
     title: 'Recordatorios de cobro manuales y vergonzosos',
-    desc: 'Tu equipo tiene que acordarse de enviar cada recordatorio de pago, una a una, por WhatsApp o correo. Se olvidan, se retrasan o simplemente evitan la incomodidad — y el flujo de caja sufre.',
+    desc: 'Tu equipo tiene que acordarse de enviar cada recordatorio de pago, una a una, por WhatsApp o correo. Se olvidan, se retrasan o simplemente evitan la incomodidad, y el flujo de caja sufre.',
   },
   {
     icon: Users,
@@ -95,7 +95,7 @@ const painPoints = [
 
 const solutionPairs = [
   {
-    pain: 'Propuesta enviada — y silencio total del cliente',
+    pain: 'Propuesta enviada, y silencio total del cliente',
     solution: 'El CRM activa automáticamente una secuencia: mensaje a las 24h, seguimiento a las 72h, recordatorio final al 7° día. El ejecutivo solo interviene cuando el cliente responde.',
     icon: Send,
   },
@@ -106,12 +106,12 @@ const solutionPairs = [
   },
   {
     pain: 'Cobros que dependen de que alguien se acuerde',
-    solution: 'Secuencias de cobro automáticas: recordatorio amable 3 días antes, aviso el día de vencimiento y alerta de mora al día 5. El equipo se desentiende del proceso — el sistema lo gestiona.',
+    solution: 'Secuencias de cobro automáticas: recordatorio amable 3 días antes, aviso el día de vencimiento y alerta de mora al día 5. El equipo se desentiende del proceso, el sistema lo gestiona.',
     icon: ShieldCheck,
   },
   {
     pain: 'Historial fragmentado en correos personales',
-    solution: 'Toda la relación con el cliente — propuestas, contratos, conversaciones, facturas — centralizada en un solo perfil. Cualquier miembro del equipo puede dar continuidad al instante.',
+    solution: 'Toda la relación con el cliente (propuestas, contratos, conversaciones, facturas) centralizada en un solo perfil. Cualquier miembro del equipo puede dar continuidad al instante.',
     icon: Inbox,
   },
 ];
@@ -163,7 +163,7 @@ const features = [
     icon: Zap,
     color: 'from-[#0a2342] to-[#1d70a2]',
     title: 'Bandeja omnicanal unificada',
-    desc: 'WhatsApp, email, Instagram y formulario web en una sola pantalla. El equipo responde todo desde un lugar — sin abrir 4 aplicaciones distintas.',
+    desc: 'WhatsApp, email, Instagram y formulario web en una sola pantalla. El equipo responde todo desde un lugar, sin abrir 4 aplicaciones distintas.',
   },
 ];
 
@@ -182,7 +182,7 @@ const steps = [
   },
   {
     num: '03',
-    title: 'Propuesta enviada — seguimiento automático',
+    title: 'Propuesta enviada: seguimiento automático',
     desc: 'El ejecutivo envía la propuesta. El sistema hace el follow-up solo: 24h, 72h, 7 días. El ejecutivo solo cierra.',
     icon: CheckCircle,
   },
@@ -244,7 +244,7 @@ const faqs = [
 
 const ServiciosGenerales = () => {
   useSEO({
-    title: "CRM para Empresas de Servicios — Sixteam.pro | Crece sin más Personal",
+    title: "CRM para Empresas de Servicios | Sixteam.pro | Crece sin más Personal",
     description: "Pipeline de propuestas, renovaciones automáticas y secuencias de cobro para consultoras y servicios profesionales. Crece un 40% sin contratar más personal.",
     canonical: "https://sixteam.pro/industrias/servicios-generales",
     ogUrl: "https://sixteam.pro/industrias/servicios-generales",
@@ -276,7 +276,7 @@ const ServiciosGenerales = () => {
               </h1>
 
               <p className="text-[#e0e0e0] text-lg leading-relaxed mb-4">
-                CRM y automatizaciones para empresas de servicios que quieren cerrar más propuestas, fidelizar clientes recurrentes y eliminar la carga administrativa — sin depender del esfuerzo manual del equipo.
+                CRM y automatizaciones para empresas de servicios que quieren cerrar más propuestas, fidelizar clientes recurrentes y eliminar la carga administrativa, sin depender del esfuerzo manual del equipo.
               </p>
 
               <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8 text-sm text-[#e0e0e0]">
@@ -418,7 +418,7 @@ const ServiciosGenerales = () => {
               Una plataforma que ordena tu operación de principio a fin
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              No es un CRM genérico. Lo configuramos para el proceso real de una empresa de servicios — propuestas, recurrencia y cobro incluidos.
+              No es un CRM genérico. Lo configuramos para el proceso real de una empresa de servicios: propuestas, recurrencia y cobro incluidos.
             </p>
           </div>
 
@@ -505,7 +505,7 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Esencial</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$199</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -607,7 +607,7 @@ const ServiciosGenerales = () => {
               Así funciona para tu empresa
             </h2>
             <p className="text-[#e0e0e0] text-lg">
-              De la primera solicitud al cliente fidelizado — con el menor esfuerzo manual posible.
+              De la primera solicitud al cliente fidelizado, con el menor esfuerzo manual posible.
             </p>
           </div>
 

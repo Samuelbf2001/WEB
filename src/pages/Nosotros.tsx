@@ -9,7 +9,7 @@ import SchemaOrg from '@/components/SchemaOrg';
 
 const Nosotros = () => {
   useSEO({
-    title: "Nosotros — Sixteam.pro | Equipo de CRM, IA y RevOps",
+    title: "Nosotros | Sixteam.pro | Equipo de CRM, IA y RevOps",
     description: "Somos el equipo detrás de Sixteam.pro. Expertos en CRM, automatización e inteligencia artificial para empresas de servicios en Colombia y Latinoamérica.",
     canonical: "https://sixteam.pro/nosotros",
     ogUrl: "https://sixteam.pro/nosotros",
@@ -86,11 +86,11 @@ const Nosotros = () => {
     },
     {
       q: '¿En qué países trabajan?',
-      a: 'Operamos principalmente en Colombia y atendemos clientes en toda Latinoamérica — México, Argentina, Chile, Perú y más. Trabajamos 100% remoto con empresas de cualquier país hispanohablante.',
+      a: 'Operamos principalmente en Colombia y atendemos clientes en toda Latinoamérica: México, Argentina, Chile, Perú y más. Trabajamos 100% remoto con empresas de cualquier país hispanohablante.',
     },
     {
       q: '¿Cuánto cuesta trabajar con Sixteam.pro?',
-      a: 'Nuestros planes Sixteam Ops comienzan con promo desde $200 USD/mes (Esencial), $499 USD/mes (Integral) y desde $1,200 USD/mes (Total). Las implementaciones personalizadas se cotizan como proyectos Transform desde $1,500 USD.',
+      a: 'Nuestros planes Sixteam Ops comienzan con promo desde $199 USD/mes (Esencial), $499 USD/mes (Integral) y desde $1,200 USD/mes (Total). Las implementaciones personalizadas se cotizan como proyectos Transform desde $1,500 USD.',
     },
     {
       q: '¿Qué es GoHighLevel y por qué lo usan?',
@@ -131,7 +131,7 @@ const Nosotros = () => {
           {
             "@type": "Question",
             "name": "¿Cuánto cuesta implementar un CRM con Sixteam.pro?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Los planes Sixteam Ops comienzan con promo desde $200 USD/mes (Esencial), $499 USD/mes (Integral) y desde $1,200 USD/mes (Total). Las implementaciones personalizadas se cotizan como proyectos Transform desde $1,500 USD."}
+            "acceptedAnswer": {"@type": "Answer", "text": "Los planes Sixteam Ops comienzan con promo desde $199 USD/mes (Esencial), $499 USD/mes (Integral) y desde $1,200 USD/mes (Total). Las implementaciones personalizadas se cotizan como proyectos Transform desde $1,500 USD."}
           },
           {
             "@type": "Question",
@@ -346,7 +346,7 @@ const Nosotros = () => {
               <div className="flex-1 flex items-end justify-center overflow-hidden p-2">
                 <img
                   src="/founders.png"
-                  alt="Sebastián, Ernesto y Samuel — Socios fundadores de Sixteam.pro"
+                  alt="Sebastián, Ernesto y Samuel, socios fundadores de Sixteam.pro"
                   className="w-full h-auto object-contain"
                   style={{ filter: 'brightness(1.05) contrast(1.05)', transform: 'scale(1.2)' }}
                 />

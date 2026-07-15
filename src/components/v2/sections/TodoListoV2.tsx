@@ -12,7 +12,7 @@ const categories = [
     items: [
       "Posts redactados, diseñados y agendados",
       "Carruseles listos para publicar",
-      "Copy que suena como tú — no como bot",
+      "Copy que suena como tú, no como bot",
       "Métricas medidas para saber qué funciona",
     ],
   },
@@ -21,7 +21,7 @@ const categories = [
     title: "Tus emails saliendo en piloto automático",
     items: [
       "Secuencias de nurturing calentando leads mientras duermes",
-      "Emails de venta que convierten — no acumulan polvo",
+      "Emails de venta que convierten, no acumulan polvo",
       "Newsletters que tu lista sí abre",
       "Follow-ups que nunca se pierden",
     ],
@@ -30,7 +30,7 @@ const categories = [
     icon: PenLine,
     title: "Tu copy escrito y listo para usar",
     items: [
-      "Páginas web que venden — no solo decoran",
+      "Páginas web que venden, no solo decoran",
       "Blog posts trayendo tráfico orgánico",
       "Copy de pauta testeado y optimizado",
       "Lead magnets que tu audiencia sí descarga",
@@ -71,7 +71,7 @@ const categories = [
     title: "Tu web actualizada y mantenida",
     items: [
       "Nuevas páginas y secciones construidas rápido",
-      "WordPress, Webflow o custom — lo operamos nosotros",
+      "WordPress, Webflow o custom: lo operamos nosotros",
       "Actualizaciones regulares para que nada quede viejo",
       "Optimizada para móvil y carga rápida",
     ],
@@ -164,7 +164,7 @@ export const TodoListoV2 = () => {
 
           {/* ── Closing line ── */}
           <p className="v2-reveal v2-d3 font-lato text-[15px] text-v2-ink-muted leading-relaxed max-w-[560px] mx-auto text-center mt-14">
-            …y mucho más. Si está en tu stack o lo necesitas en tu stack —{" "}
+            …y mucho más. Si está en tu stack o lo necesitas en tu stack:{" "}
             <strong className="text-v2-ink-heading font-semibold">nosotros lo operamos.</strong>
           </p>
 

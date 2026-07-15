@@ -101,6 +101,25 @@ Usar con frecuencia: automatización, CRM, inteligencia artificial, crecimiento,
 
 Evitar: "soluciones innovadoras", "de clase mundial", "líder del mercado", "sinergia", "ecosistema", "robusto".
 
+## Nunca usar guiones ("—" o "--") como conector entre frases
+
+No unas dos ideas con un guion largo o doble guion a modo de pausa ("Visibilidad real de tu operación — no tres números sueltos en un dashboard"). Ese patrón se lee como texto generado por IA, no como redacción humana. En su lugar, usa conectores lógicos (y, pero, sino, no obstante, porque, ya que), puntuación (coma, dos puntos, punto y seguido) o reestructura la frase para que fluya de forma natural.
+
+```
+❌ "Visibilidad real de tu operación — no tres números sueltos en un dashboard."
+✅ "Visibilidad real de tu operación, no tres números sueltos en un dashboard."
+✅ "Visibilidad real de tu operación y no sólo tres números sueltos en un dashboard."
+✅ "No sólo tres números sueltos en un dashboard, sino visibilidad real de tu operación."
+
+❌ "Plan mensual con aviso de 30 días — no hay letra chica."
+✅ "Plan mensual con aviso de 30 días: no hay letra chica."
+
+❌ "GoHighLevel viene incluida — no es un extra."
+✅ "GoHighLevel viene incluida, no es un extra."
+```
+
+Excepciones donde el guion corto sí es válido (no aplica esta regla): rangos numéricos o de horario ("9:00 AM - 1:00 PM", "60-90 días") y palabras compuestas.
+
 ## Checklist antes de entregar texto
 
 - [ ] ¿El beneficio está en el título, no la característica?
@@ -109,3 +128,4 @@ Evitar: "soluciones innovadoras", "de clase mundial", "líder del mercado", "sin
 - [ ] ¿Está en español latinoamericano neutro?
 - [ ] ¿Tiene menos de 20% de palabras "de relleno"?
 - [ ] ¿Si es SEO, tiene la keyword en los primeros 60 caracteres?
+- [ ] ¿No hay guiones ("—" o "--") usados como conector entre frases?

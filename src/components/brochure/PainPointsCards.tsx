@@ -12,7 +12,7 @@ export default function PainPointsCards() {
             <div className="pointer-events-none absolute -inset-x-4 -inset-y-3 -z-10 rounded-3xl bg-gradient-to-r from-[#1d70a2]/10 to-[#00bfa5]/8 blur-3xl" />
             <h2 className="font-poppins text-[clamp(1.75rem,3.5vw,2.6rem)] font-extrabold leading-tight text-white">
               Tu negocio crece, pero tu operación{' '}
-              <span className="text-white/40 font-light italic">— se queda atrás.</span>
+              <span className="text-white/40 font-light italic">se queda atrás.</span>
             </h2>
           </div>
           <p className="mt-4 max-w-2xl font-lato text-base leading-relaxed text-white/60 sm:text-lg">

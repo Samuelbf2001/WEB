@@ -41,7 +41,7 @@ const EXAMPLE_QUESTIONS = [
 
 const CrmMarketing = () => {
   useSEO({
-    title: "CRM de Marketing — Sixteam.pro | Campañas, Lead Scoring y Nurturing",
+    title: "CRM de Marketing | Sixteam.pro | Campañas, Lead Scoring y Nurturing",
     description: "Gestiona campañas multicanal, segmentación con IA y lead scoring. Automatiza el nurturing y mide el ROI de cada acción de marketing. Implementación en 4 semanas.",
     canonical: "https://sixteam.pro/servicios/crm-marketing",
     ogUrl: "https://sixteam.pro/servicios/crm-marketing",
@@ -113,7 +113,7 @@ const CrmMarketing = () => {
     {
       icon: BarChart3,
       title: 'Dashboard de ROI por campaña',
-      desc: 'Inversión vs. ingresos generados, costo por lead, costo por cliente adquirido y tasa de conversión por canal — todo en un dashboard ejecutivo en tiempo real.',
+      desc: 'Inversión vs. ingresos generados, costo por lead, costo por cliente adquirido y tasa de conversión por canal, todo en un dashboard ejecutivo en tiempo real.',
     },
     {
       icon: Users,
@@ -219,7 +219,7 @@ const CrmMarketing = () => {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Conecta tus campañas con resultados reales. Automatiza el seguimiento de leads y mide qué canales generan clientes — no solo clics.
+                Conecta tus campañas con resultados reales. Automatiza el seguimiento de leads y mide qué canales generan clientes, no solo clics.
               </p>
               <ul className="space-y-2 pt-2">
                 {[
@@ -387,7 +387,7 @@ const CrmMarketing = () => {
               ))}
             </div>
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              * Los resultados de conversión y ROI dependen también de la calidad de las campañas y la estrategia de contenido — no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
+              * Los resultados de conversión y ROI dependen también de la calidad de las campañas y la estrategia de contenido, no solo de la herramienta. Por eso acompañamos la implementación con capacitación y revisión de resultados.
             </p>
           </div>
         </div>

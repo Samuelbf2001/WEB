@@ -174,7 +174,7 @@ const PreciosV2 = () => {
               </div>
               <div className="w-full sm:w-auto px-6 py-4 text-center bg-v2-surface-teal-mist">
                 <p className="font-lato text-[13px] text-v2-accent-teal-deep font-semibold">Sixteam</p>
-                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $200 /mes · arrancamos en 48h</p>
+                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $199 /mes · arrancamos en 48h</p>
               </div>
             </div>
 
@@ -339,7 +339,7 @@ const PreciosV2 = () => {
               <em className="font-serif italic font-normal text-v2-accent-teal">Sin letra chica.</em>
             </h2>
             <p className="v2-reveal v2-d2 font-lato text-[17px] text-white/70 leading-[1.65] mt-6 max-w-[560px] mx-auto">
-              Si en los primeros 30 días no ves valor operacional concreto en tu cuenta — te devolvemos el 100% del primer mes. Sin formularios, sin discusión, sin retención de venta.
+              Si en los primeros 30 días no ves valor operacional concreto en tu cuenta, te devolvemos el 100% del primer mes. Sin formularios, sin discusión, sin retención de venta.
             </p>
             <div className="v2-reveal v2-d3 mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               {["🛡️ 30 días money-back", "📅 Mes a mes, cero permanencia", "💬 Slack directo con tu equipo"].map((pill) => (

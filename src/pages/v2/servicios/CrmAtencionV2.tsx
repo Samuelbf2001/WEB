@@ -115,7 +115,7 @@ const CrmAtencionV2 = () => {
             caótica.
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">
-            WhatsApp, email, chat — una sola bandeja operada con SLA medible.
+            WhatsApp, email, chat: una sola bandeja operada con SLA medible.
           </p>
 
           {/* Stat strip */}
@@ -230,7 +230,7 @@ const CrmAtencionV2 = () => {
                 </h2>
                 <p className="font-lato text-[16px] text-white/70 mt-5 leading-[1.7]">
                   No hay cliente que tolere caerse entre canales. Operamos la bandeja para que cada
-                  conversación tenga dueño, SLA y cierre — sin que tengas que supervisarlo.
+                  conversación tenga dueño, SLA y cierre, sin que tengas que supervisarlo.
                 </p>
               </div>
             </div>

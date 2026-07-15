@@ -15,7 +15,7 @@ const industries = [
     slug: '/industrias/agencias-de-viaje',
     tagline: 'De cotización a reserva en 2 minutos',
     description:
-      'Responde consultas al instante, automatiza el seguimiento post-cotización y gestiona todos tus canales — WhatsApp, Instagram, email — en una sola bandeja. Aumenta tu conversión sin contratar más personal.',
+      'Responde consultas al instante, automatiza el seguimiento post-cotización y gestiona todos tus canales (WhatsApp, Instagram, email) en una sola bandeja. Aumenta tu conversión sin contratar más personal.',
     highlights: ['Agente IA 24/7', 'Pipeline de reservas', 'Follow-up automático'],
     accentColor: 'from-[#1d70a2] to-[#00bfa5]',
     iconBg: 'bg-[#1d70a2]/20',
@@ -103,7 +103,7 @@ const IndustriasIndex = () => {
 
           <p className="text-[#e0e0e0]/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
             No vendemos software genérico. Implementamos CRM, automatizaciones e IA adaptados al flujo
-            real de tu negocio — para que cierres más sin trabajar más horas.
+            real de tu negocio, para que cierres más sin trabajar más horas.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

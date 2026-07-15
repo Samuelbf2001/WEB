@@ -20,14 +20,14 @@ const steps = [
     icon: MessageSquare,
     title: "Sam habla con todo tu equipo en paralelo",
     subtitle: "Entrevistas con agentes IA",
-    desc: "Sam (Diagnóstico IA) hace entrevistas de 20-30 minutos con cada persona clave de tu operación — comercial, marketing, servicio, ops. En paralelo, sin sesgo político, en una semana. Cobertura del 100%, no muestra del 20%.",
+    desc: "Sam (Diagnóstico IA) hace entrevistas de 20-30 minutos con cada persona clave de tu operación: comercial, marketing, servicio, ops. En paralelo, sin sesgo político, en una semana. Cobertura del 100%, no muestra del 20%.",
   },
   {
     number: "03",
     icon: Map,
     title: "Reconstruimos tu operación real",
     subtitle: "Mapa operativo agéntico",
-    desc: "Sam consolida cada flujo, cada herramienta, cada dependencia. No es el organigrama teórico — es cómo funciona tu negocio cuando nadie te está mirando. Un mapa vivo, navegable.",
+    desc: "Sam consolida cada flujo, cada herramienta, cada dependencia. No es el organigrama teórico, sino cómo funciona tu negocio cuando nadie te está mirando. Un mapa vivo, navegable.",
   },
   {
     number: "04",
@@ -43,7 +43,7 @@ const deliverables = [
   {
     icon: Map,
     title: "Mapa operativo vivo",
-    desc: "Cómo opera hoy tu negocio — comercial, marketing, servicio — navegable y consultable. No es un PDF estático. Lo actualizas cuando cambia algo.",
+    desc: "Cómo opera hoy tu negocio (comercial, marketing, servicio), navegable y consultable. No es un PDF estático. Lo actualizas cuando cambia algo.",
   },
   {
     icon: Sparkles,
@@ -58,7 +58,7 @@ const deliverables = [
   {
     icon: Bot,
     title: "Agente IA persistente",
-    desc: "Sam queda accesible después del Assessment. Conoce tu operación. Le preguntas cualquier cosa cuando quieras — sigue mapeando, sigue respondiendo.",
+    desc: "Sam queda accesible después del Assessment. Conoce tu operación. Le preguntas cualquier cosa cuando quieras: sigue mapeando, sigue respondiendo.",
   },
 ];
 
@@ -77,7 +77,7 @@ const sixteamPros = [
   "6 agentes IA + Samuel + Alex liderando",
   "10-14 días calendario",
   "Entrevistan 100% del equipo en paralelo",
-  "Cero sesgo político — los agentes no son tus colegas",
+  "Cero sesgo político: los agentes no son tus colegas",
   "Entregable: mapa vivo + agente IA persistente",
   "Sigue accesible cuando quieras preguntarle algo",
 ];
@@ -115,12 +115,12 @@ export const AssessmentV2 = () => {
             </em>
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7 max-w-[640px] mx-auto">
-            El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de IA — y te entregamos el plan ejecutable. Antes de mover una sola pieza.
+            El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de IA, y te entregamos el plan ejecutable. Antes de mover una sola pieza.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
-                Solicitar Assessment — $2,500
+                Solicitar Assessment: $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>
@@ -178,7 +178,7 @@ export const AssessmentV2 = () => {
               ))}
             </div>
             <p className="v2-reveal v2-d4 font-lato text-[16px] italic text-v2-ink-body text-center mt-10 max-w-[600px] mx-auto leading-[1.65]">
-              "La diferencia no es el modelo. Es cómo decides qué transformar — y en qué orden."
+              "La diferencia no es el modelo. Es cómo decides qué transformar, y en qué orden."
             </p>
           </div>
         </Container>
@@ -207,7 +207,7 @@ export const AssessmentV2 = () => {
                 La mayoría arranca al revés: compra una licencia de un LLM, lanza tres pilotos dispersos, pone a un becario a 'explorar IA'. Seis meses después no hay nada productivo y la conclusión es que 'la IA no funciona'.
               </p>
               <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
-                La trampa es operar con información parcial — el dueño cree que sabe cómo funciona su empresa, pero la operación real vive distribuida en 15 cabezas y 40 herramientas. El Assessment elimina esa ceguera ANTES de mover una sola pieza.
+                La trampa es operar con información parcial: el dueño cree que sabe cómo funciona su empresa, pero la operación real vive distribuida en 15 cabezas y 40 herramientas. El Assessment elimina esa ceguera ANTES de mover una sola pieza.
               </p>
             </div>
           </div>
@@ -342,7 +342,7 @@ export const AssessmentV2 = () => {
             </div>
 
             <p className="v2-reveal v2-d2 font-lato text-[15px] italic text-white/50 text-center mt-10 max-w-[640px] mx-auto leading-[1.65]">
-              "Lo que cuesta 30x menos y se hace 5x más rápido — porque los agentes IA hacen lo repetitivo, y los humanos hacen lo que solo un humano puede hacer: el criterio."
+              "Lo que cuesta 30x menos y se hace 5x más rápido, porque los agentes IA hacen lo repetitivo, y los humanos hacen lo que solo un humano puede hacer: el criterio."
             </p>
           </div>
         </Container>
@@ -411,7 +411,7 @@ export const AssessmentV2 = () => {
             </div>
             <div className="v2-reveal v2-d1 mt-8 space-y-5 max-w-[700px]">
               <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
-                Al terminar el Assessment puedes hacer 3 cosas, sin presión nuestra: (a) Operar el roadmap con tu equipo interno — te quedas con todo y nos quedamos amigos. (b) Contratarnos para construir las primeras palancas como proyecto. (c) Suscribirte a Ops mensual (promo desde $200/mes; regular $300/mes; Total desde $1,200/mes) y dejamos todo operado.
+                Al terminar el Assessment puedes hacer 3 cosas, sin presión nuestra: (a) Operar el roadmap con tu equipo interno, te quedas con todo y nos quedamos amigos. (b) Contratarnos para construir las primeras palancas como proyecto. (c) Suscribirte a Ops mensual (promo desde $199/mes; regular $300/mes; Total desde $1,200/mes) y dejamos todo operado.
               </p>
               <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
                 Como referencia: ~50% de los clientes que terminan el Assessment continúan con nosotros. El otro 50% opera el roadmap por su cuenta y sigue siendo cliente del Assessment de nuevo cuando el negocio cambia.
@@ -444,12 +444,12 @@ export const AssessmentV2 = () => {
                 </Underlined>
               </h2>
               <p className="font-lato text-[17px] text-white/65 leading-[1.65] mt-7 max-w-[520px] mx-auto">
-                Solicita tu Assessment. Si después de la llamada inicial decidimos que no encajas con el playbook — te lo decimos directamente y no cobramos nada.
+                Solicita tu Assessment. Si después de la llamada inicial decidimos que no encajas con el playbook, te lo decimos directamente y no cobramos nada.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
                 <a href="/contacto">
                   <ButtonV2 variant="primary" size="lg">
-                    Solicitar Assessment — $2,500
+                    Solicitar Assessment: $2,500
                     <ArrowRight className="h-4 w-4" />
                   </ButtonV2>
                 </a>

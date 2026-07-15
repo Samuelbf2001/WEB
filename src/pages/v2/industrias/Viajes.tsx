@@ -10,7 +10,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 /* ── pain points ── */
 const pains = [
   "Las cotizaciones se pierden entre WhatsApp, email y la cabeza del asesor.",
-  "El follow-up del pasajero se hace de memoria — o no se hace.",
+  "El follow-up del pasajero se hace de memoria, o no se hace.",
   "Las temporadas altas colapsan al equipo. Las bajas no se aprovechan.",
   "Las experiencias de pasajeros frecuentes no se documentan ni se reutilizan.",
 ];
@@ -95,11 +95,11 @@ const ViajesV2 = () => {
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">
             Cotizaciones que se pierden en WhatsApp, pasajeros sin seguimiento, paquetes que se arman a mano.
-            Sixteam opera tu pipeline turístico — desde la solicitud hasta la post-venta — para que vendas más viajes con el mismo equipo.
+            Sixteam opera tu pipeline turístico, desde la solicitud hasta la post-venta, para que vendas más viajes con el mismo equipo.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>
@@ -225,7 +225,7 @@ const ViajesV2 = () => {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
-              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico — $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
+              <ButtonV2 variant="primary" size="lg">Solicitar Diagnóstico: $2,500 <ArrowRight className="h-4 w-4" /></ButtonV2>
             </Link>
             <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">Hablar con Samuel</ButtonV2>

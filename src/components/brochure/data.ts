@@ -160,7 +160,7 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: primer paso para ordenar la atención y responder más rápido a leads o clientes.',
     highlighted: false,
-    price: 'promo desde $200 USD/mes',
+    price: 'promo desde $199 USD/mes',
     impl: 'Sin setup obligatorio',
   },
   {

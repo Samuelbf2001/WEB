@@ -7,16 +7,16 @@ import ButtonV2 from "@/components/v2/ButtonV2";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const pains = [
-  { icon: ShoppingCart, title: "Carritos abandonados sin recovery",  desc: "El 70% de los carritos se abandona. Sin una secuencia de recovery activa, ese revenue simplemente desaparece — sin que nadie lo persiga." },
-  { icon: MessageSquare,title: "Soporte disperso en mil canales",    desc: "WhatsApp, Instagram DMs, email, chat de web — cada canal tiene su propia cola. El cliente espera, se frustra y no regresa." },
+  { icon: ShoppingCart, title: "Carritos abandonados sin recovery",  desc: "El 70% de los carritos se abandona. Sin una secuencia de recovery activa, ese revenue simplemente desaparece, sin que nadie lo persiga." },
+  { icon: MessageSquare,title: "Soporte disperso en mil canales",    desc: "WhatsApp, Instagram DMs, email, chat de web: cada canal tiene su propia cola. El cliente espera, se frustra y no regresa." },
   { icon: TrendingUp,   title: "Sin LTV ni segmentación activa",     desc: "Todos los clientes reciben el mismo mensaje. Los que compraron 3 veces y los que compraron una. Sin segmentación, el ROI del email cae en picada." },
   { icon: Star,         title: "Reseñas y NPS sin gestionar",        desc: "El cliente tiene una mala experiencia, nadie lo detecta a tiempo. Se va en silencio y deja una reseña negativa semanas después." },
 ];
 
 const solutions = [
-  { icon: RefreshCw,    title: "Secuencia de cart recovery activa",  desc: "Email + WhatsApp coordinados a la 1h, 6h y 24h post-abandono. Mensajes con el carrito exacto, descuento condicionado y urgencia real — no genéricos." },
-  { icon: MessageSquare,title: "Bandeja unificada multicanal",       desc: "WhatsApp Business, Instagram, email y chat en un solo panel. El equipo de soporte trabaja desde un lugar — sin cambiar de pestaña, sin perder hilos." },
-  { icon: Zap,          title: "Segmentación y campañas por LTV",    desc: "Clientes VIP, compradores únicos, en riesgo de churn — cada segmento recibe mensajes y ofertas pensados para ellos. Automatizado, no manual." },
+  { icon: RefreshCw,    title: "Secuencia de cart recovery activa",  desc: "Email + WhatsApp coordinados a la 1h, 6h y 24h post-abandono. Mensajes con el carrito exacto, descuento condicionado y urgencia real, no genéricos." },
+  { icon: MessageSquare,title: "Bandeja unificada multicanal",       desc: "WhatsApp Business, Instagram, email y chat en un solo panel. El equipo de soporte trabaja desde un lugar, sin cambiar de pestaña, sin perder hilos." },
+  { icon: Zap,          title: "Segmentación y campañas por LTV",    desc: "Clientes VIP, compradores únicos, en riesgo de churn: cada segmento recibe mensajes y ofertas pensados para ellos. Automatizado, no manual." },
   { icon: BarChart3,    title: "NPS automatizado y gestión de reseñas",desc: "Post-compra y post-entrega: encuesta automática. Si el NPS es bajo, alerta inmediata al equipo. Si es alto, solicitud de reseña en el canal correcto." },
 ];
 
@@ -199,7 +199,7 @@ const Retail = () => {
             <em className="font-serif italic font-normal text-v2-accent-teal">en carritos abandonados</em>?
           </h2>
           <p className="font-lato text-[17px] text-white/65 mt-5 max-w-[460px] mx-auto">
-            El Radar gratuito calcula en 48h cuánto dinero te cuesta no tener recovery activo — y qué cambia si lo operas.
+            El Radar gratuito calcula en 48h cuánto dinero te cuesta no tener recovery activo y qué cambia si lo operas.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">

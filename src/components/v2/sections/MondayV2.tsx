@@ -4,20 +4,20 @@ import Section, { Eyebrow } from "@/components/v2/Section";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const beforeItems = [
-  { text: "Ideas que se quedaron en una libreta — nadie las implementa.", urgent: true },
+  { text: "Ideas que se quedaron en una libreta, nadie las implementa.", urgent: true },
   { text: "Herramientas compradas que nunca se integraron." },
   { text: "Procesos manuales que solo una persona sabe hacer.", urgent: true },
   { text: "Reportes que tardan días en armarse a mano." },
-  { text: "El CRM con datos viejos — nadie quiere actualizarlo." },
+  { text: "El CRM con datos viejos, nadie quiere actualizarlo." },
   { text: "Cada cambio tecnológico depende de contratar a alguien externo.", urgent: true },
-  { text: "El equipo apaga incendios — no construye." },
+  { text: "El equipo apaga incendios, no construye." },
 ];
 
 const afterItems = [
   { text: "Ideas convertidas en automatizaciones funcionando en días." },
-  { text: "Stack integrado — CRM, email, WhatsApp, ads, web, todo conectado." },
-  { text: "Procesos documentados y automatizados — no dependen de personas." },
-  { text: "Dashboards en vivo — el reporte ya está listo cuando lo abres." },
+  { text: "Stack integrado: CRM, email, WhatsApp, ads, web, todo conectado." },
+  { text: "Procesos documentados y automatizados, no dependen de personas." },
+  { text: "Dashboards en vivo: el reporte ya está listo cuando lo abres." },
   { text: "CRM limpio y actualizado solo, sin que nadie lo toque." },
   { text: "Cambios y mejoras ejecutados por tu equipo Sixteam, sin contratar." },
   { text: "Tu equipo se enfoca en vender y construir, no en operar herramientas." },
@@ -43,7 +43,7 @@ export const MondayV2 = () => {
             </h2>
             <p className="font-lato text-[17px] text-v2-ink-body max-w-[580px] mx-auto mt-4 leading-[1.6]">
               El mismo equipo, la misma operación. Lo único que cambia es si la
-              tecnología trabaja por tu negocio — o si tu equipo trabaja para
+              tecnología trabaja por tu negocio o si tu equipo trabaja para
               mantener la tecnología viva.
             </p>
           </div>
@@ -173,7 +173,7 @@ export const MondayV2 = () => {
               <strong className="text-v2-ink-heading font-semibold">
                 un equipo de tecnología externo
               </strong>{" "}
-              que convierte tus ideas en sistemas que corren — todos los días — sin que tengas que operarlos tú.
+              que convierte tus ideas en sistemas que corren todos los días, sin que tengas que operarlos tú.
             </p>
           </div>
         </div>

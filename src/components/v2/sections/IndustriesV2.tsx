@@ -103,7 +103,7 @@ export const IndustriesV2 = () => {
             <Link to="/radar" className="text-[#8a7a4f] font-semibold hover:underline">
               Diagnóstico
             </Link>{" "}
-            evalúa el encaje. Si tu negocio no calza en el playbook, no lo tomamos — aunque tengas
+            evalúa el encaje. Si tu negocio no calza en el playbook, no lo tomamos, aunque tengas
             el presupuesto.
           </p>
         </div>

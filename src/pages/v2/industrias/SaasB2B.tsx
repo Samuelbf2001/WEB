@@ -8,16 +8,16 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const pains = [
   { icon: TrendingDown, title: "Churn que nadie ve venir",          desc: "El cliente lleva semanas sin usar el producto y nadie lo detecta. La cancelación llega como sorpresa cuando ya es demasiado tarde para actuar." },
-  { icon: AlertCircle,  title: "PQLs que caen en el vacío",         desc: "El producto genera señales de intención poderosas — pero Sales no sabe cuáles son los accounts calientes. El handoff nunca ocurre bien." },
+  { icon: AlertCircle,  title: "PQLs que caen en el vacío",         desc: "El producto genera señales de intención poderosas, pero Sales no sabe cuáles son los accounts calientes. El handoff nunca ocurre bien." },
   { icon: Users,        title: "CS operando a ciegas",              desc: "Customer Success gestiona cuentas con intuición y notas dispersas. Sin datos de uso, no hay priorización posible y el tiempo se va en cuentas que no escalan." },
   { icon: Clock,        title: "Revenue de expansión desaprovechado",desc: "El upsell existe, pero el trigger para ofrecerlo nunca es el correcto. Se deja dinero en la mesa mes a mes porque no hay un proceso de expansión estructurado." },
 ];
 
 const solutions = [
-  { icon: Database, title: "Product-led scoring automático",   desc: "Cruzamos datos de uso in-app con el CRM para calcular un health score por cuenta. Sales sabe exactamente cuáles tocas primero — sin intuición, con datos." },
+  { icon: Database, title: "Product-led scoring automático",   desc: "Cruzamos datos de uso in-app con el CRM para calcular un health score por cuenta. Sales sabe exactamente cuáles tocas primero, sin intuición, con datos." },
   { icon: Target,   title: "Pipeline de PQL a PQS",            desc: "Cuando un usuario activa X features o llega a Y sesiones, el agente IA notifica a Sales con contexto completo: qué usa, con qué frecuencia, qué no ha activado aún." },
   { icon: Zap,      title: "CS automation y alertas de churn", desc: "Cuentas sin actividad >7 días reciben una secuencia de reactivación automática. Si no responden, el CSM recibe la alerta con todo el histórico." },
-  { icon: BarChart3,title: "MRR y expansion revenue dashboard",desc: "Visibilidad real del negocio: MRR, churn rate, NRR, accounts por health score. No tres números sueltos — la foto completa cada semana." },
+  { icon: BarChart3,title: "MRR y expansion revenue dashboard",desc: "Visibilidad real del negocio: MRR, churn rate, NRR, accounts por health score. No tres números sueltos, sino la foto completa cada semana." },
 ];
 
 const stats = [
@@ -48,7 +48,7 @@ const SaasB2B = () => {
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[600px] mx-auto">
             Operamos el Revenue Operations de tu SaaS: product-led scoring, alertas de churn,
-            handoff PQL→Sales y expansión revenue — todo conectado al CRM.
+            handoff PQL→Sales y expansión revenue, todo conectado al CRM.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/radar">
@@ -162,7 +162,7 @@ const SaasB2B = () => {
               </h2>
               <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-4">
                 Conectamos el producto con el CRM y el equipo. Cada señal de uso se convierte
-                en una acción — sin que nadie tenga que monitorear manualmente.
+                en una acción, sin que nadie tenga que monitorear manualmente.
               </p>
             </div>
             <div className="bg-white border border-v2-border-subtle rounded-2xl p-7 shadow-[0_8px_32px_rgba(10,35,66,0.06)]">

@@ -18,7 +18,7 @@ const metrics = [
 ];
 
 const antes = [
-  'Los asesores atendían desde sus WhatsApp personales — sin registro, sin control',
+  'Los asesores atendían desde sus WhatsApp personales, sin registro, sin control',
   'Cada cotización se hacía desde cero, sin historial del cliente',
   'Un viaje de quinceañera podía involucrar a 5 personas y el sistema no las relacionaba',
   'La gerencia no tenía forma de ver cuántas oportunidades había en curso ni en qué estado estaban',
@@ -26,7 +26,7 @@ const antes = [
 ];
 
 const despues = [
-  'Todos los canales llegan a una sola bandeja — el equipo nunca pierde un lead',
+  'Todos los canales llegan a una sola bandeja y el equipo nunca pierde un lead',
   'Cada oportunidad tiene historial: quién atendió, qué se cotizó, qué sigue',
   'Los viajes de Dreams 15 agrupan automáticamente a todos los involucrados del caso',
   'La gerencia ve en tiempo real: cuántas oportunidades hay, en qué etapa y quién las lleva',
@@ -42,7 +42,7 @@ const pasos = [
   {
     num: '02',
     title: 'Estructuramos cada línea de negocio',
-    desc: 'Dreams 15 y Origen son negocios distintos con clientes distintos. Les dimos a cada uno sus propias etapas de venta, su equipo asignado y sus métricas — dentro de un solo sistema.',
+    desc: 'Dreams 15 y Origen son negocios distintos con clientes distintos. Les dimos a cada uno sus propias etapas de venta, su equipo asignado y sus métricas, dentro de un solo sistema.',
   },
   {
     num: '03',
@@ -64,12 +64,12 @@ const logros = [
   'El negocio ya no depende de que una persona recuerde qué pasó con cada cliente',
   'Se eliminó la tarea de trasladar información manualmente entre herramientas',
   'Cada asesor tiene su cartera clara: sabe qué oportunidades lleva y en qué estado están',
-  'La base de datos de clientes crece ordenada — y se puede aprovechar para reactivaciones futuras',
+  'La base de datos de clientes crece ordenada y se puede aprovechar para reactivaciones futuras',
 ];
 
 const MasterViajes = () => {
   useSEO({
-    title: 'Caso de Éxito: Master Viajes — Sixteam.pro',
+    title: 'Caso de Éxito: Master Viajes | Sixteam.pro',
     description:
       'Cómo Master Viajes organizó su operación comercial, centralizó sus canales de venta y le dio a la gerencia visibilidad total del negocio con ayuda de Sixteam.pro.',
     canonical: "https://sixteam.pro/casos/master-viajes",
@@ -133,7 +133,7 @@ const MasterViajes = () => {
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Las conversaciones con clientes ocurrían en WhatsApp personal, Instagram, Messenger
-                y TikTok — sin ninguna conexión entre sí. Cada cotización se armaba de memoria.
+                y TikTok, sin ninguna conexión entre sí. Cada cotización se armaba de memoria.
                 Cada traspaso entre asesores significaba empezar desde cero. Y la gerencia no
                 tenía forma de saber cómo iba el negocio sin pedirle un reporte a alguien.
               </p>
@@ -289,7 +289,7 @@ const MasterViajes = () => {
           <div className="text-6xl text-teal-500 font-serif leading-none mb-6">"</div>
           <p className="text-xl md:text-2xl text-gray-700 leading-relaxed italic mb-8">
             El sistema pasó de registrar datos a representar con fidelidad cómo funciona el
-            negocio — con sus clientes, sus etapas y sus relaciones. Eso lo cambia todo para
+            negocio: con sus clientes, sus etapas y sus relaciones. Eso lo cambia todo para
             el equipo y para la gerencia.
           </p>
           <p className="text-sm text-gray-400 font-medium">
@@ -306,7 +306,7 @@ const MasterViajes = () => {
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Si tu equipo trabaja desde canales dispersos, pierde leads por falta de seguimiento
-            o la gerencia no tiene visibilidad real del negocio — podemos ayudarte.
+            o la gerencia no tiene visibilidad real del negocio, podemos ayudarte.
           </p>
           <Button
             onClick={handleWA}

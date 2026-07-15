@@ -40,7 +40,7 @@ const items: ServiceItem[] = [
   {
     icon: BarChart2,
     title: "ROAS por canal, cada semana",
-    desc: "Qué ads pagan, cuáles queman. Reportes conectados al CRM — sin interpretaciones de pasillo.",
+    desc: "Qué ads pagan, cuáles queman. Reportes conectados al CRM, sin interpretaciones de pasillo.",
   },
   {
     icon: Plug,

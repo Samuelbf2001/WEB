@@ -205,7 +205,7 @@ export const TransformacionDigitalV2 = () => {
                   No existe el sistema universal.
                 </h3>
                 <p className="font-lato text-[14px] text-v2-ink-body leading-[1.65] mt-2">
-                  Analizamos el stack, el equipo y el modelo de ingresos de cada negocio para diseñar una arquitectura que tenga sentido para su realidad específica — no una plantilla copiada de otro cliente.
+                  Analizamos el stack, el equipo y el modelo de ingresos de cada negocio para diseñar una arquitectura que tenga sentido para su realidad específica, no una plantilla copiada de otro cliente.
                 </p>
               </div>
 

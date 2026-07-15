@@ -5,7 +5,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 const NotFound = () => {
   useSEO({
-    title: "Página no encontrada — Sixteam.pro",
+    title: "Página no encontrada | Sixteam.pro",
     description: "La página que buscas no existe. Regresa al inicio o explora nuestros servicios de CRM, automatización e IA para empresas en Colombia.",
   });
 

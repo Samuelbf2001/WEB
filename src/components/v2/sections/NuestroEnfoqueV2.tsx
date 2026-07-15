@@ -151,7 +151,7 @@ export const NuestroEnfoqueV2 = () => (
             {[
               "4+ años acompañando empresas en LATAM",
               "Consultar · Implementar · Operar",
-              "Diagnóstico gratuito · Promo desde $200/mes",
+              "Diagnóstico gratuito · Promo desde $199/mes",
             ].map((item, i) => (
               <span key={item} className="flex items-center gap-2 font-lato text-[11px] text-v2-ink-muted uppercase tracking-widest">
                 {i > 0 && <span className="w-1 h-1 rounded-full bg-v2-border-subtle inline-block" aria-hidden />}

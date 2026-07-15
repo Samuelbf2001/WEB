@@ -64,7 +64,7 @@ const Industrias = () => (
           .
         </h1>
         <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7">
-          No vendemos templates genéricos. Cada vertical tiene su propio motor — automatizaciones,
+          No vendemos templates genéricos. Cada vertical tiene su propio motor: automatizaciones,
           flujos y modelos de datos pensados para ese negocio.
         </p>
       </Container>

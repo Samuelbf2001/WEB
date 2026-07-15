@@ -8,6 +8,8 @@ import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import TuEquipoV2 from "@/components/v2/sections/TuEquipoV2";
+import PromoFloatingV2 from "@/components/v2/PromoFloatingV2";
+import AgentsBlock from "@/components/v2/AgentsBlock";
 /* ── Primitives ──────────────────────────────────────────────────── */
 
 const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
@@ -56,6 +58,7 @@ const Soluciones = () => {
           style={{ background: "radial-gradient(circle, rgba(29,112,162,0.10) 0%, transparent 70%)" }} />
         <div aria-hidden className="pointer-events-none absolute -bottom-16 -right-16 w-[360px] h-[360px] rounded-full opacity-20"
           style={{ background: "radial-gradient(circle, rgba(0,191,165,0.10) 0%, transparent 70%)" }} />
+        <PromoFloatingV2 />
 
         <Container size="narrow" className="relative text-center pt-8">
           <div>
@@ -69,7 +72,7 @@ const Soluciones = () => {
               </h1>
               <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-6 max-w-[560px] mx-auto">
                 Sixteam no vende productos sueltos. Vende un recorrido donde cada solución prepara
-                la siguiente — y la tercera es donde vive el negocio real.
+                la siguiente, y la tercera es donde vive el negocio real.
               </p>
             </div>
 
@@ -78,7 +81,7 @@ const Soluciones = () => {
               {[
                 { n: "01", label: "Assessment", sub: "$2,500 · único",     cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
                 { n: "02", label: "Transform",  sub: "Desde $1,500 · proyecto", cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
-                { n: "03", label: "Ops ⭐",     sub: "Promo desde $200/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
+                { n: "03", label: "Ops ⭐",     sub: "Promo desde $199/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
               ].map((step, i) => (
                 <div key={step.n} className="flex items-center gap-2">
                   <div className={`flex flex-col items-center px-5 py-3.5 rounded-2xl border transition-transform hover:-translate-y-0.5 duration-200 ${step.cls}`}>
@@ -185,8 +188,8 @@ const Soluciones = () => {
                 </div>
                 <div className="mt-5 p-4 rounded-xl bg-v2-surface-navy-mist border border-v2-accent-blue/20">
                   <p className="font-lato text-[12px] text-v2-accent-blue leading-relaxed">
-                    No es un deck que se archiva. Es un mapa vivo con un copiloto que se queda —
-                    la consultoría tradicional cobra más, entrevista a menos y se va.
+                    No es un deck que se archiva. Es un mapa vivo con un copiloto que se queda,
+                    a diferencia de la consultoría tradicional, que cobra más, entrevista a menos y se va.
                   </p>
                 </div>
               </div>
@@ -224,7 +227,7 @@ const Soluciones = () => {
 
                 <div className="mt-5 p-4 rounded-xl border border-v2-accent-teal/20 bg-v2-surface-teal-mist">
                   <p className="font-lato text-[13px] text-v2-accent-teal-deep leading-relaxed">
-                    Transform no es para explorar — es para construir. Quien todavía no sabe qué necesita,
+                    Transform no es para explorar, es para construir. Quien todavía no sabe qué necesita,
                     primero hace el Assessment.
                   </p>
                 </div>
@@ -234,7 +237,7 @@ const Soluciones = () => {
                     "Implementación de CRM, automatizaciones e integraciones",
                     "Agentes de IA específicos para la operación del negocio",
                     "Rediseño de los procesos que frenan el crecimiento",
-                    "Alcance definido y cerrado antes de empezar — sin sorpresas",
+                    "Alcance definido y cerrado antes de empezar, sin sorpresas",
                     "Al terminar: operación montada y funcionando, no un manual",
                   ].map((i) => <CheckItem key={i} text={i} />)}
                 </div>
@@ -268,7 +271,7 @@ const Soluciones = () => {
                   </div>
                   <p className="font-lato text-[14px] text-v2-ink-body leading-[1.65]">
                     Transform convierte el mapa del Assessment en una operación real. Casi todo cliente
-                    que termina Transform debe continuar en Ops — un sistema montado sin quien lo opere
+                    que termina Transform debe continuar en Ops, porque un sistema montado sin quien lo opere
                     se degrada solo.
                   </p>
                 </div>
@@ -320,7 +323,7 @@ const Soluciones = () => {
                 </div>
                 <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7]">
                   Sixteam no entrega y se va: opera y soporta los sistemas, agentes y procesos mes a mes,
-                  para siempre. La plataforma GoHighLevel viene incluida — no es un extra.
+                  para siempre. La plataforma GoHighLevel viene incluida, no es un extra.
                 </p>
                 <p className="font-lato text-[16px] text-v2-ink-body leading-[1.7] mt-4">
                   Aquí está el ingreso recurrente y el crecimiento escalable. Toda conversación de Sixteam,
@@ -356,7 +359,7 @@ const Soluciones = () => {
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                   <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Esencial</h3>
                   <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$200</span>
+                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$199</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
                   <p className="font-lato text-[12px] text-v2-accent-teal-deep font-semibold mt-1">promo limitada · regular $300 · 20 cupos</p>
@@ -364,14 +367,14 @@ const Soluciones = () => {
                     Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA sin grandes inversiones.
                   </p>
                 </div>
-                <div className="px-7 py-6 flex flex-col gap-2.5">
-                  {[
-                    "Un agente IA activo en tu canal más urgente",
-                    "60 créditos / mes — no acumulables",
-                    "Especialista humano dentro de tu plan de créditos",
-                    "Plataforma CRM all-in-one incluida",
-                    "$30/mes Wallet de mensajería",
-                  ].map((i) => <CheckItem key={i} text={i} />)}
+                <div className="px-7 py-6 flex flex-col gap-3.5">
+                  <AgentsBlock teamDesc="Un agente IA activo en tu canal más urgente + especialista humano que ejecuta tus solicitudes dentro de tu plan de créditos." />
+                  <div className="flex flex-col gap-2.5">
+                    {[
+                      "60 créditos / mes, no acumulables",
+                      "Plataforma CRM all-in-one incluida",
+                    ].map((i) => <CheckItem key={i} text={i} />)}
+                  </div>
                 </div>
                 <div className="px-7 pb-7">
                   <Link to="/contacto">
@@ -401,15 +404,16 @@ const Soluciones = () => {
                     Para empresas que requieren configuraciones, integraciones y automatizaciones más complejas.
                   </p>
                 </div>
-                <div className="px-7 py-6 flex flex-col gap-2.5">
-                  {[
-                    { t: "Agentes IA operando en multi-canal", bold: true },
-                    { t: "160 créditos / mes — no acumulables", bold: true },
-                    { t: "Integraciones, automatizaciones avanzadas y nuevas configuraciones", bold: true },
-                    { t: "Bono Onboarding VIP", bold: true },
-                    { t: "Plataforma CRM all-in-one incluida", bold: false },
-                    { t: "$30/mes Wallet de mensajería", bold: true },
-                  ].map((i) => <CheckItem key={i.t} text={i.bold ? <strong className="text-v2-ink-heading">{i.t}</strong> : i.t} />)}
+                <div className="px-7 py-6 flex flex-col gap-3.5">
+                  <AgentsBlock teamDesc="Agentes IA operando en multi-canal (CRM + WhatsApp + Email) + equipo de especialistas para integraciones, automatizaciones avanzadas y nuevas configuraciones." />
+                  <div className="flex flex-col gap-2.5">
+                    {[
+                      { t: "160 créditos / mes, no acumulables", bold: true },
+                      { t: "Bono Onboarding VIP", bold: true },
+                      { t: "Plataforma CRM all-in-one incluida", bold: false },
+                      { t: "$30/mes Wallet de mensajería", bold: true },
+                    ].map((i) => <CheckItem key={i.t} text={i.bold ? <strong className="text-v2-ink-heading">{i.t}</strong> : i.t} />)}
+                  </div>
                 </div>
                 <div className="px-7 pb-7">
                   <Link to="/contacto">
@@ -434,14 +438,15 @@ const Soluciones = () => {
                     Para clientes que tienen a Sixteam como su equipo de tecnología permanente.
                   </p>
                 </div>
-                <div className="px-7 py-6 flex flex-col gap-2.5">
-                  {[
-                    "Agentes IA de alto volumen en todos tus sistemas",
-                    "Desde 400 créditos / mes — acumulables según solicitud",
-                    "PM dedicado y equipo completo de especialistas",
-                    "Llamadas estratégicas semanales",
-                    "Plataforma CRM all-in-one incluida",
-                  ].map((i) => <CheckItem key={i} text={i} />)}
+                <div className="px-7 py-6 flex flex-col gap-3.5">
+                  <AgentsBlock teamDesc="Agentes IA de alto volumen en todos tus sistemas + PM dedicado, equipo completo de especialistas y llamadas estratégicas semanales." />
+                  <div className="flex flex-col gap-2.5">
+                    {[
+                      "Desde 400 créditos / mes, acumulables según solicitud",
+                      "Plataforma CRM all-in-one incluida",
+                      "$30/mes Wallet de mensajería",
+                    ].map((i) => <CheckItem key={i} text={i} />)}
+                  </div>
                 </div>
                 <div className="px-7 pb-7">
                   <Link to="/contacto">
@@ -463,7 +468,7 @@ const Soluciones = () => {
                 <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted text-right w-[110px]">Ops Esencial</span>
                 <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep text-right w-[130px]">Ops Integral</span>
               </div>
-              <OpsRow label="Precio mensual"                  base="$200 USD promo"         avanzado="$499 USD" />
+              <OpsRow label="Precio mensual"                  base="$199 USD promo"         avanzado="$499 USD" />
               <OpsRow label="Créditos / mes"                  base="60"               avanzado="160"       highlight />
               <OpsRow label="Agentes de IA"                   base="1 canal"          avanzado="Multi-canal" />
               <OpsRow label="Configuraciones avanzadas"       base="Según créditos"   avanzado="Incluidas" highlight />

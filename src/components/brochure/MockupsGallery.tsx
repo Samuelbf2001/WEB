@@ -19,7 +19,7 @@ const EXPERIENCE_CARDS = [
     icon: Zap,
     label: 'Tecnología activa',
     title: 'Plataformas funcionando a tu favor',
-    copy: 'Tus herramientas configuradas, conectadas y monitoreadas para generar resultados reales. Plataformas que trabajan aunque no estés pendiente — no gastos que nadie administra.',
+    copy: 'Tus herramientas configuradas, conectadas y monitoreadas para generar resultados reales. Plataformas que trabajan aunque no estés pendiente, no gastos que nadie administra.',
     accent: '#7de8d8',
   },
 ] as const;

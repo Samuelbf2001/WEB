@@ -109,7 +109,7 @@ const faqs = [
   },
   {
     q: "¿Cómo deciden si lo hace IA o un humano?",
-    a: "Lo decidimos nosotros según la tarea. IA para lo repetitivo y de alto volumen. Humanos para lo que requiere criterio o creatividad. Tú no te enteras — solo recibes el resultado.",
+    a: "Lo decidimos nosotros según la tarea. IA para lo repetitivo y de alto volumen. Humanos para lo que requiere criterio o creatividad. Tú no te enteras, solo recibes el resultado.",
   },
   {
     q: "¿Puedo cambiar de plan?",
@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     q: "¿Trabajan con mi stack actual?",
-    a: "Sí. HubSpot, Pipedrive, Salesforce, GHL, Make, Zapier, n8n, WordPress, Webflow — y muchos más. Si no lo conocemos, lo aprendemos.",
+    a: "Sí. HubSpot, Pipedrive, Salesforce, GHL, Make, Zapier, n8n, WordPress, Webflow, y muchos más. Si no lo conocemos, lo aprendemos.",
   },
   {
     q: "¿Qué pasa si no estoy contento?",
@@ -157,7 +157,7 @@ const ComoFunciona = () => {
             <em className="font-serif italic font-normal">un sistema nuevo.</em>
           </h1>
           <p className="font-lato text-[18px] md:text-[19px] text-v2-ink-body leading-[1.65] mt-7 max-w-[560px] mx-auto">
-            Tú dices qué necesitas en Slack, WhatsApp o Loom. Nosotros decidimos si lo hace IA o un humano — y te lo entregamos.
+            Tú dices qué necesitas en Slack, WhatsApp o Loom. Nosotros decidimos si lo hace IA o un humano, y te lo entregamos.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/contacto">
@@ -379,10 +379,10 @@ const ComoFunciona = () => {
                     <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "#7b5ea730" }}>
                       <Database className="h-3 w-3" style={{ color: "#7b5ea7" }} aria-hidden />
                     </div>
-                    <span className="font-poppins font-bold text-[12px]" style={{ color: "#7b5ea7" }}>Sam — CRM Ops</span>
+                    <span className="font-poppins font-bold text-[12px]" style={{ color: "#7b5ea7" }}>Sam, CRM Ops</span>
                   </div>
                   <p className="font-lato text-[14px] text-white/80 leading-[1.65]">
-                    Pulé los datos de las 3 cuentas que escalaron este trimestre — los pasé a Clara con métricas reales.
+                    Pulé los datos de las 3 cuentas que escalaron este trimestre y los pasé a Clara con métricas reales.
                   </p>
                 </div>
                 <div className="w-9 h-9 rounded-full flex items-center justify-center font-poppins font-bold text-[12px] text-white flex-shrink-0 mt-0.5" style={{ background: "#7b5ea7" }}>
@@ -400,7 +400,7 @@ const ComoFunciona = () => {
                     <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "#0d665920" }}>
                       <Mail className="h-3 w-3" style={{ color: "#0d6659" }} aria-hidden />
                     </div>
-                    <span className="font-poppins font-bold text-[12px]" style={{ color: "#0d6659" }}>Clara — Nurturing</span>
+                    <span className="font-poppins font-bold text-[12px]" style={{ color: "#0d6659" }}>Clara, Nurturing</span>
                   </div>
                   <p className="font-lato text-[15px] text-v2-ink-body leading-[1.65]">
                     Listo: 4 posts redactados, dos carruseles diseñados, agendados para Mar–Vie. Aquí están los drafts ↓
@@ -622,7 +622,7 @@ const ComoFunciona = () => {
                 </Underlined>
               </h2>
               <p className="font-lato text-[17px] text-white/65 leading-[1.65] mt-6 max-w-[500px] mx-auto">
-                Empieza con la auditoría gratis. 48 horas para ver dónde tu tecnología está sin operar — y cuánto está costando.
+                Empieza con la auditoría gratis. 48 horas para ver dónde tu tecnología está sin operar y cuánto está costando.
               </p>
               <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
                 <Link to="/radar">

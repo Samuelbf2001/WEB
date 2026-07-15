@@ -47,7 +47,7 @@ const SpotCountdown = () => {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
         <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
       </span>
-      Solo {SPOTS_LEFT} cupos — se cierran en{' '}
+      Solo {SPOTS_LEFT} cupos, se cierran en{' '}
       <span className="font-mono tracking-tight">
         {pad(time.d)}:{pad(time.h)}:{pad(time.m)}:{pad(time.s)}
       </span>
@@ -80,7 +80,7 @@ const GHLFormEmbed = () => (
       src={`https://web.sixteam.pro/widget/form/${GHL_FORM_ID}`}
       id={`${GHL_FORM_ID}_landing_viajes`}
       scrolling="no"
-      title="Formulario diagnóstico gratuito — Sixteam.pro"
+      title="Formulario diagnóstico gratuito | Sixteam.pro"
     />
   </div>
 );
@@ -102,7 +102,7 @@ const UrgencyBar = () => (
       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00bfa5]" />
     </span>
     <p className="text-white text-xs sm:text-sm font-lato">
-      <strong className="font-poppins text-[#00bfa5]">Solo {SPOTS_LEFT} consultorías gratuitas esta semana</strong> — por videollamada, llamada o WhatsApp
+      <strong className="font-poppins text-[#00bfa5]">Solo {SPOTS_LEFT} consultorías gratuitas esta semana</strong>, por videollamada, llamada o WhatsApp
     </p>
     <button
       onClick={() => window.open(WA_URL, '_blank')}
@@ -152,7 +152,7 @@ const StickyBar = () => {
 /* ─── Main Component ─── */
 const AgenciasDeViajeAds = () => {
   useSEO({
-    title: "CRM para Agencias de Viaje — Diagnóstico Gratuito | Sixteam.pro",
+    title: "CRM para Agencias de Viaje: Diagnóstico Gratuito | Sixteam.pro",
     description: "Descubre cuántas reservas está perdiendo tu agencia. Diagnóstico gratuito personalizado: bot IA, seguimiento automático y pipeline de reservas en 2 semanas.",
     canonical: "https://sixteam.pro/viajes",
     ogUrl: "https://sixteam.pro/viajes",
@@ -176,7 +176,7 @@ const AgenciasDeViajeAds = () => {
       clearInterval(interval);
       isNotify = false;
       interval = setInterval(() => {
-        document.title = isNotify ? '(1) Nuevo mensaje — Sixteam.pro' : (originalTitle || document.title);
+        document.title = isNotify ? '(1) Nuevo mensaje | Sixteam.pro' : (originalTitle || document.title);
         isNotify = !isNotify;
       }, 1200);
     };
@@ -290,7 +290,7 @@ const AgenciasDeViajeAds = () => {
       a: 'Sí, 100% gratis. En la sesión analizamos tu negocio, entendemos tu proceso actual y te mostramos qué se podría resolver con tecnología. No conectamos nada ni vendemos nada en esa sesión. Si tiene sentido continuar, te presentamos un plan. Sin presión.',
     },
     {
-      q: '¿Cómo es la sesión — videollamada, llamada o WhatsApp?',
+      q: '¿Cómo es la sesión: videollamada, llamada o WhatsApp?',
       a: 'Tú eliges el formato que te quede más cómodo: videollamada (Zoom/Meet), llamada telefónica o por WhatsApp. Duración aproximada: 30 minutos. Uno de nuestros especialistas te confirma el horario antes de la sesión.',
     },
     {
@@ -358,7 +358,7 @@ const AgenciasDeViajeAds = () => {
 
               {/* Headline */}
               <h1 className="font-poppins font-black text-white leading-[1.08] mb-5" style={{ fontSize: 'clamp(2.2rem, 5.5vw, 3.6rem)' }}>
-                Tu agencia pierde reservas cada semana — y no lo notas
+                Tu agencia pierde reservas cada semana, y no lo notas
               </h1>
 
               <p className="text-[#e0e0e0]/75 text-base sm:text-lg leading-relaxed mb-6 max-w-lg">
@@ -423,7 +423,7 @@ const AgenciasDeViajeAds = () => {
                     <span className="text-[#00bfa5] font-bold">GRATIS</span> · Solo para agencias calificadas
                   </p>
                   <p className="text-[#e0e0e0]/50 text-xs flex items-center gap-1.5 mt-1.5">
-                    <span>📹 Videollamada · 📞 Llamada · 💬 WhatsApp — tú eliges</span>
+                    <span>📹 Videollamada · 📞 Llamada · 💬 WhatsApp, tú eliges</span>
                   </p>
                 </div>
                 {/* GHL form — fondo blanco */}
@@ -618,9 +618,9 @@ const AgenciasDeViajeAds = () => {
               </div>
               <div className="p-5 space-y-3" style={{ background: 'rgba(0,191,165,0.04)', border: '1px solid rgba(0,191,165,0.15)', borderTop: 'none', borderRadius: '0 0 16px 16px' }}>
                 {[
-                  'Bot IA responde en 2 minutos — 24/7, sin asesor',
+                  'Bot IA responde en 2 minutos, 24/7 y sin asesor',
                   'Follow-up automático a 24h, 48h y 7 días post-cotización',
-                  'Una bandeja: WhatsApp, IG, email, web — todo en pantalla',
+                  'Una bandeja con WhatsApp, IG, email y web, todo en pantalla',
                   'Temporada alta sin caos: el bot atiende el 80% solo',
                   'CRM centralizado: historial, preferencias, destinos anteriores',
                   'Dashboard en tiempo real por canal, asesor y destino',
@@ -840,7 +840,7 @@ const AgenciasDeViajeAds = () => {
                 pageContext={`Estás en la landing page de ads de Sixteam.pro para agencias de viaje.
 PROPUESTA DE VALOR: CRM, automatizaciones e IA para agencias de viaje que quieren cerrar más reservas sin contratar más personal.
 OFERTA ACTUAL: Diagnóstico gratuito (valor $490 USD) — análisis de canales, mapa de oportunidades, demo personalizada y plan de implementación.
-PLANES: Ops Esencial promo desde $200 USD/mes, Ops Integral $499 USD/mes, Ops Total desde $1,200 USD/mes.
+PLANES: Ops Esencial promo desde $199 USD/mes, Ops Integral $499 USD/mes, Ops Total desde $1,200 USD/mes.
 IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español.
 FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seguimiento automático post-cotización, pipeline visual de reservas, historial del viajero.`}
                 initialMessage="¡Hola! Soy el asistente de Sixteam 👋 Conozco el sistema al detalle. ¿Qué quieres saber antes de agendar tu diagnóstico gratuito?"
@@ -876,7 +876,7 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
               Agenda tu diagnóstico ahora
             </h2>
             <p className="text-[#e0e0e0]/65 text-base max-w-md mx-auto mb-6">
-              30 minutos con un especialista por videollamada, llamada o WhatsApp — tú eliges el formato. Te mostramos exactamente cómo quedará tu agencia automatizada.
+              30 minutos con un especialista por videollamada, llamada o WhatsApp, tú eliges el formato. Te mostramos exactamente cómo quedará tu agencia automatizada.
             </p>
 
             {/* WA alternative */}
@@ -896,7 +896,7 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
               src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
               style={{ width: '100%', border: 'none', overflow: 'hidden', display: 'block', minHeight: '500px' }}
               id="UFdsZhBQURUYkKpV0GEX_ads"
-              title="Agenda tu diagnóstico gratuito — Sixteam.pro"
+              title="Agenda tu diagnóstico gratuito | Sixteam.pro"
             />
           </div>
 
@@ -924,7 +924,7 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
           <span className="font-poppins font-black text-white text-lg">pro</span>
         </div>
         <p className="text-[#e0e0e0]/30 text-xs">CRM · Automatizaciones · IA para Agencias de Viaje · Colombia & LATAM</p>
-        <p className="text-[#e0e0e0]/20 text-xs mt-1">© {new Date().getFullYear()} Sixteam.pro — Todos los derechos reservados</p>
+        <p className="text-[#e0e0e0]/20 text-xs mt-1">© {new Date().getFullYear()} Sixteam.pro. Todos los derechos reservados</p>
       </footer>
 
       {/* Sticky mobile bottom bar */}

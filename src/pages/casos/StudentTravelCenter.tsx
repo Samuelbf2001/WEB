@@ -12,9 +12,9 @@ const handleWA = () =>
 
 const StudentTravelCenter = () => {
   useSEO({
-    title: 'Caso de Éxito: Student Travel Center — Sixteam.pro',
+    title: 'Caso de Éxito: Student Travel Center | Sixteam.pro',
     description:
-      'Cómo Student Travel Center pasó de operar disperso a tener a Sixteam como partner estratégico integrado en su día a día — CRM, IA, pauta, y crecimiento conjunto.',
+      'Cómo Student Travel Center pasó de operar disperso a tener a Sixteam como partner estratégico integrado en su día a día: CRM, IA, pauta, y crecimiento conjunto.',
     canonical: 'https://sixteam.pro/casos/student-travel-center',
     ogUrl: 'https://sixteam.pro/casos/student-travel-center',
   });
@@ -50,7 +50,7 @@ const StudentTravelCenter = () => {
             <div className="flex-1">
               <p className="text-xl sm:text-2xl text-white/75 leading-relaxed max-w-2xl">
                 Student Travel Center no contrató a Sixteam para instalar software.
-                Nos integramos en su operación día a día — WhatsApp, reuniones de sistema,
+                Nos integramos en su operación día a día: WhatsApp, reuniones de sistema,
                 pauta, ideación conjunta. Somos parte del equipo.
               </p>
             </div>
@@ -83,7 +83,7 @@ const StudentTravelCenter = () => {
               <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-6">Lo que hacían antes</p>
               <ul className="space-y-5">
                 {[
-                  'Leads llegaban de Meta, WhatsApp, eventos — sin unificar ni rastrear',
+                  'Leads llegaban de Meta, WhatsApp, eventos, sin unificar ni rastrear',
                   'Las asesoras perdían horas con prospectos que no encajaban',
                   'La gerencia decidía con información rezagada e incompleta',
                   'Herramientas desconectadas, información duplicada, silos por todos lados',
@@ -108,7 +108,7 @@ const StudentTravelCenter = () => {
                   'Agente de IA que perfila y filtra prospectos antes de llegar a la agenda',
                   'Dashboard ejecutivo con métricas reales, actualizadas en tiempo real',
                   'HubSpot + Meta Ads + Chat Center operando como un solo sistema coherente',
-                  'El conocimiento del negocio vive en el sistema — y en nosotros',
+                  'El conocimiento del negocio vive en el sistema y en nosotros',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <CheckCircle className="w-5 h-5 mt-0.5 text-[#00bfa5] flex-shrink-0" />
@@ -195,7 +195,7 @@ const StudentTravelCenter = () => {
               {
                 icon: '💬',
                 title: 'WhatsApp diario',
-                desc: 'Canal directo con el equipo. Dudas, urgencias, ideas nuevas — respondemos en minutos, no en días.',
+                desc: 'Canal directo con el equipo. Dudas, urgencias, ideas nuevas: respondemos en minutos, no en días.',
               },
               {
                 icon: '📊',
@@ -256,7 +256,7 @@ const StudentTravelCenter = () => {
             </div>
             <div>
               <p className="text-white/65 text-xl leading-relaxed mb-10">
-                No queremos ser tu proveedor. Queremos ser tu aliado estratégico — en tu WhatsApp, en tus reuniones, coordinando tu ecosistema digital mientras creces.
+                No queremos ser tu proveedor. Queremos ser tu aliado estratégico: en tu WhatsApp, en tus reuniones, coordinando tu ecosistema digital mientras creces.
               </p>
               <Button
                 onClick={handleWA}

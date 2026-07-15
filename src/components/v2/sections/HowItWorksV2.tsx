@@ -17,7 +17,7 @@ const steps: Step[] = [
     number: "01",
     title: "Radar gratis",
     description:
-      "Te enviamos un cuestionario corto. En 48h te devolvemos dónde está dejando dinero sobre la mesa tu operación — y qué se puede mejorar primero.",
+      "Te enviamos un cuestionario corto. En 48h te devolvemos dónde está dejando dinero sobre la mesa tu operación, y qué se puede mejorar primero.",
     eyebrow: "Qué incluye:",
     items: [
       "Auditoría de CRM y pipeline actual",
@@ -41,7 +41,7 @@ const steps: Step[] = [
     number: "03",
     title: "Arrancamos y nos quedamos",
     description:
-      "El equipo entra a tu operación. Sprints semanales. Reporte claro los lunes. Y si algo se rompe o alguien de tu equipo cambia — lo atendemos.",
+      "El equipo entra a tu operación. Sprints semanales. Reporte claro los lunes. Y si algo se rompe o alguien de tu equipo cambia, lo atendemos.",
     eyebrow: "Lo que ocurre:",
     items: [
       "Integración a tu Slack/WhatsApp",
@@ -68,7 +68,7 @@ export const HowItWorksV2 = () => {
           </h2>
           <p className="font-lato text-[17px] text-v2-ink-body max-w-[600px] mx-auto mt-4 leading-[1.6]">
             Sin propuestas de 30 páginas. Sin diagnósticos pagados. Hablamos,
-            validamos, ejecutamos — y{" "}
+            validamos, ejecutamos, y{" "}
             <strong className="text-v2-ink-heading">
               seguimos contigo mes a mes.
             </strong>
@@ -136,7 +136,7 @@ export const HowItWorksV2 = () => {
               No implementamos y desaparecemos.
             </p>
             <p className="font-lato text-[15px] text-white/60 leading-[1.65] mt-3">
-              Operamos tu tecnología — pipeline, automatizaciones, agentes IA, reportes —
+              Operamos tu tecnología (pipeline, automatizaciones, agentes IA, reportes)
               mes a mes. Si algo se rompe, lo arreglamos. Si tu equipo cambia,
               entrenamos al nuevo.
             </p>

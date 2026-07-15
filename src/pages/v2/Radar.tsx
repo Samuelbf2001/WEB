@@ -10,7 +10,7 @@ const includes = [
   {
     icon: Map,
     title: "Mapeo agéntico de tu operación",
-    desc: "Cómo funciona el flujo comercial real — no el organigrama teórico. Sam y Alex acceden a tu stack y mapean cada punto de contacto, fricción y decisión.",
+    desc: "Cómo funciona el flujo comercial real, no el organigrama teórico. Sam y Alex acceden a tu stack y mapean cada punto de contacto, fricción y decisión.",
   },
   {
     icon: TrendingDown,
@@ -25,7 +25,7 @@ const includes = [
   {
     icon: Wrench,
     title: "Plataforma montada al final",
-    desc: "No te quedas con un PDF. Sales con el sistema base ya en producción — listo para operar desde el día 15.",
+    desc: "No te quedas con un PDF. Sales con el sistema base ya en producción, listo para operar desde el día 15.",
   },
 ];
 
@@ -52,7 +52,7 @@ const steps = [
 const faqs = [
   {
     q: "¿Es reembolsable si no continúo con Ops?",
-    a: "El Diagnóstico no es reembolsable porque te quedas con el mapa de tu operación y la plataforma montada — entregables tangibles. Pero si decides no continuar con Ops, no hay penalidad: te quedas con lo que entregamos y lo operas tú.",
+    a: "El Diagnóstico no es reembolsable porque te quedas con el mapa de tu operación y la plataforma montada, entregables tangibles. Pero si decides no continuar con Ops, no hay penalidad: te quedas con lo que entregamos y lo operas tú.",
   },
   {
     q: "¿Qué accesos necesitan de mi lado?",
@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "¿Qué pasa después del Diagnóstico?",
-    a: "Presentamos los hallazgos y te damos dos opciones: continúas con un plan Ops mensual en promo desde $200/mes donde operamos el sistema por ti, o te quedas con el mapa y la plataforma montada y la operas internamente. Sin presión.",
+    a: "Presentamos los hallazgos y te damos dos opciones: continúas con un plan Ops mensual en promo desde $199/mes donde operamos el sistema por ti, o te quedas con el mapa y la plataforma montada y la operas internamente. Sin presión.",
   },
   {
     q: "¿Cuánto tiempo me toma a mí?",
@@ -105,13 +105,13 @@ const Radar = () => {
             </em>
           </h1>
           <p className="font-lato text-[18px] md:text-[20px] text-v2-ink-body leading-[1.65] mt-7">
-            Dos semanas. $2,500 USD único. No es un PDF — es el mapa de cómo opera tu negocio, dónde
+            Dos semanas. $2,500 USD único. No es un PDF: es el mapa de cómo opera tu negocio, dónde
             pierdes dinero y la plataforma base ya implementada para arrancar.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
-                Solicitar Diagnóstico — $2,500
+                Solicitar Diagnóstico ($2,500)
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>
@@ -140,7 +140,7 @@ const Radar = () => {
                 <em className="font-serif italic font-normal text-v2-accent-teal-deep">Cero pelusa</em>.
               </h2>
               <p className="font-lato text-[16px] text-v2-ink-body leading-[1.65] mt-5">
-                El Diagnóstico es lo que un equipo RevOps senior te entregaría en su primer mes — más
+                El Diagnóstico es lo que un equipo RevOps senior te entregaría en su primer mes, más
                 la plataforma ya montada para que no arranques de cero.
               </p>
               <div className="mt-8 flex flex-col gap-5">
@@ -257,7 +257,7 @@ const Radar = () => {
                     </div>
 
                     <ButtonV2 type="submit" variant="primary" size="lg" className="w-full mt-2">
-                      Solicitar Diagnóstico — $2,500
+                      Solicitar Diagnóstico ($2,500)
                       <ArrowRight className="h-4 w-4" />
                     </ButtonV2>
 
@@ -362,7 +362,7 @@ const Radar = () => {
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/contacto">
               <ButtonV2 variant="primary" size="lg">
-                Solicitar Diagnóstico — $2,500
+                Solicitar Diagnóstico ($2,500)
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
             </a>

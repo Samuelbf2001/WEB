@@ -37,7 +37,7 @@ SOLUCIONES / FUNCIONALIDADES:
 - Deduplicación automática de leads y reportes por asesor, canal e inmueble
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $200 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
 - Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 - Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
@@ -63,7 +63,7 @@ const painPoints = [
   {
     icon: Send,
     title: 'Whatsapps en celulares personales que el gerente no ve',
-    desc: 'Cada asesor recibe consultas en su propio número. Si alguien sale de vacaciones o renuncia, todos esos leads desaparecen con él — sin que la empresa sepa cuántos eran.',
+    desc: 'Cada asesor recibe consultas en su propio número. Si alguien sale de vacaciones o renuncia, todos esos leads desaparecen con él, sin que la empresa sepa cuántos eran.',
   },
   {
     icon: PhoneCall,
@@ -73,24 +73,24 @@ const painPoints = [
   {
     icon: Calendar,
     title: 'Visitas agendadas que el cliente no honra',
-    desc: 'El asesor se desplaza al inmueble y el cliente no aparece. Sin confirmación automática ni recordatorio 24h antes, la tasa de inasistencia supera el 40% — tiempo y gasolina perdidos.',
+    desc: 'El asesor se desplaza al inmueble y el cliente no aparece. Sin confirmación automática ni recordatorio 24h antes, la tasa de inasistencia supera el 40%: tiempo y gasolina perdidos.',
   },
   {
     icon: Eye,
     title: 'El gerente no sabe en qué estado está ningún negocio',
-    desc: 'Para saber si una promesa de compraventa avanzó, el gerente tiene que llamar a cada asesor. No hay pipeline visible — solo hojas de cálculo o notas sueltas.',
+    desc: 'Para saber si una promesa de compraventa avanzó, el gerente tiene que llamar a cada asesor. No hay pipeline visible, solo hojas de cálculo o notas sueltas.',
   },
   {
     icon: RefreshCw,
     title: 'Base de contactos que no se trabaja',
-    desc: 'Cientos de personas que miraron propiedades hace 6 meses y no compraron. Sin reactivación automática, esa base vale cero — y cada mes empiezan de cero pagando más pauta.',
+    desc: 'Cientos de personas que miraron propiedades hace 6 meses y no compraron. Sin reactivación automática, esa base vale cero, y cada mes empiezan de cero pagando más pauta.',
   },
 ];
 
 const solutionPairs = [
   {
     pain: 'Lead de portal sin respuesta en la primera hora',
-    solution: 'El agente IA responde en menos de 2 minutos: captura tipo de inmueble, zona y presupuesto. El asesor recibe el lead ya calificado — listo para proponer visita.',
+    solution: 'El agente IA responde en menos de 2 minutos: captura tipo de inmueble, zona y presupuesto. El asesor recibe el lead ya calificado, listo para proponer visita.',
     icon: Bot,
   },
   {
@@ -100,12 +100,12 @@ const solutionPairs = [
   },
   {
     pain: 'Visitas agendadas que el cliente no honra',
-    solution: 'Confirmación inmediata al agendar, recordatorio 24h antes y mensaje el día de la cita con la dirección. La inasistencia baja drásticamente — menos viajes en vano.',
+    solution: 'Confirmación inmediata al agendar, recordatorio 24h antes y mensaje el día de la cita con la dirección. La inasistencia baja drásticamente, con menos viajes en vano.',
     icon: ShieldCheck,
   },
   {
     pain: 'Pipeline invisible para el gerente',
-    solution: 'Dashboard en tiempo real: leads en cada etapa, visitas esta semana, ofertas pendientes y cierres proyectados por asesor y mes — sin llamar a nadie.',
+    solution: 'Dashboard en tiempo real: leads en cada etapa, visitas esta semana, ofertas pendientes y cierres proyectados por asesor y mes, sin llamar a nadie.',
     icon: BarChart3,
   },
 ];
@@ -118,7 +118,7 @@ const achievements = [
   { icon: Users, text: 'Que cada asesor gestione 3× más propiedades sin trabajar más' },
   { icon: BarChart3, text: 'Ver en tiempo real qué canal y qué asesor cierra más' },
   { icon: Sparkles, text: 'Reactivar automáticamente leads fríos con nuevos inmuebles' },
-  { icon: Target, text: 'Cero leads duplicados — deduplicación automática por teléfono y email' },
+  { icon: Target, text: 'Cero leads duplicados, con deduplicación automática por teléfono y email' },
 ];
 
 const testimonials = [
@@ -246,7 +246,7 @@ const useTypewriter = (words: string[]) => {
 
 const InmobiliariasV2 = () => {
   useSEO({
-    title: "CRM para Inmobiliarias — Sixteam.pro | Duplica tus Cierres",
+    title: "CRM para Inmobiliarias | Sixteam.pro | Duplica tus Cierres",
     description: "CRM para inmobiliarias con pipeline de venta y arriendo, integración Metrocuadrado y Fincaraíz, recordatorios de visita automáticos. Colombia y Latinoamérica.",
     canonical: "https://sixteam.pro/industrias/inmobiliarias",
     ogUrl: "https://sixteam.pro/industrias/inmobiliarias",
@@ -387,7 +387,7 @@ const InmobiliariasV2 = () => {
                   { icon: Zap, text: 'Respuesta automática al lead de portal en menos de 2 minutos' },
                   { icon: TrendingUp, text: '+45% de visitas que se convierten en oferta' },
                   { icon: Globe, text: 'Metrocuadrado, Fincaraíz, WhatsApp e Instagram en una pantalla' },
-                  { icon: ShieldCheck, text: 'Visibilidad total del pipeline — sin llamar a los asesores' },
+                  { icon: ShieldCheck, text: 'Visibilidad total del pipeline, sin llamar a los asesores' },
                 ].map((f, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-7 h-7 rounded-lg bg-[#00bfa5]/15 flex items-center justify-center flex-shrink-0">
@@ -483,7 +483,7 @@ const InmobiliariasV2 = () => {
               Por qué las inmobiliarias pierden negocios cada semana
             </h2>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Estos no son problemas genéricos — son exactamente lo que frena a las inmobiliarias en Colombia y LATAM.
+              Estos no son problemas genéricos, son exactamente lo que frena a las inmobiliarias en Colombia y LATAM.
             </p>
           </div>
 
@@ -581,7 +581,7 @@ const InmobiliariasV2 = () => {
             <h2 className="font-poppins font-black text-white mb-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
               Así funciona para tu inmobiliaria
             </h2>
-            <p className="text-[#e0e0e0]/70 text-base">Del primer clic en el anuncio al negocio cerrado — todo automatizado.</p>
+            <p className="text-[#e0e0e0]/70 text-base">Del primer clic en el anuncio al negocio cerrado, todo automatizado.</p>
           </div>
 
           {/* Pipeline visual */}
@@ -647,7 +647,7 @@ const InmobiliariasV2 = () => {
                 {
                   num: '03',
                   icon: Calendar,
-                  title: 'Asesor agenda — el CRM hace el seguimiento',
+                  title: 'Asesor agenda y el CRM hace el seguimiento',
                   desc: 'Recordatorio al agendar, recordatorio 24h antes, mensaje el día de la visita. Follow-up automático a las 24, 48 y 72h después.',
                 },
                 {
@@ -814,7 +814,7 @@ const InmobiliariasV2 = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Esencial</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$199</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -903,7 +903,7 @@ const InmobiliariasV2 = () => {
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$200 USD promo</p>
+                  <p className="text-white font-poppins font-black text-2xl">$199 USD promo</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button
@@ -960,7 +960,7 @@ const InmobiliariasV2 = () => {
               src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
               style={{ width: '100%', border: 'none', overflow: 'hidden', display: 'block' }}
               id="UFdsZhBQURUYkKpV0GEX_inmobiliarias"
-              title="Agenda tu asesoría con Sixteam.pro — Inmobiliarias"
+              title="Agenda tu asesoría con Sixteam.pro | Inmobiliarias"
             />
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-[#e0e0e0]/45 text-sm">

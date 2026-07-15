@@ -40,7 +40,7 @@ const EXAMPLE_QUESTIONS = [
 
 const ChatbotIA = () => {
   useSEO({
-    title: "Chatbot IA para WhatsApp — Sixteam.pro | Atención Automática 24/7",
+    title: "Chatbot IA para WhatsApp | Sixteam.pro | Atención Automática 24/7",
     description: "Desplegamos tu agente IA en WhatsApp Business: responde en menos de 5 segundos, califica leads y agenda citas sin intervención humana. Desde $1,500 USD por proyecto.",
     canonical: "https://sixteam.pro/servicios/chatbot-ia",
     ogUrl: "https://sixteam.pro/servicios/chatbot-ia",
@@ -59,7 +59,7 @@ const ChatbotIA = () => {
     {
       icon: AlertCircle,
       title: 'Pierdes leads porque no respondes fuera de horario',
-      desc: 'Un prospecto escribe a las 9 PM con interés de compra. Nadie responde. Al día siguiente ya olvidó por qué escribió — o ya compró en la competencia.',
+      desc: 'Un prospecto escribe a las 9 PM con interés de compra. Nadie responde. Al día siguiente ya olvidó por qué escribió, o ya compró en la competencia.',
     },
     {
       icon: Users,
@@ -82,7 +82,7 @@ const ChatbotIA = () => {
     {
       icon: Brain,
       title: 'Conversación natural con IA',
-      desc: 'El agente entiende lenguaje natural colombiano, contexto de la conversación y responde de forma coherente y personalizada — no con respuestas de árbol de decisión.',
+      desc: 'El agente entiende lenguaje natural colombiano, contexto de la conversación y responde de forma coherente y personalizada, no con respuestas de árbol de decisión.',
     },
     {
       icon: Zap,
@@ -117,7 +117,7 @@ const ChatbotIA = () => {
     {
       icon: BarChart3,
       title: 'Panel de supervisión y métricas',
-      desc: 'Dashboard con volumen de conversaciones, tasa de resolución automática, leads calificados generados y temas más consultados — para optimizar continuamente.',
+      desc: 'Dashboard con volumen de conversaciones, tasa de resolución automática, leads calificados generados y temas más consultados, para optimizar continuamente.',
     },
   ];
 
@@ -159,7 +159,7 @@ const ChatbotIA = () => {
     'Integración con tu CRM para registro automático de contactos',
     'Escalación a agente humano con contexto preservado',
     'Panel de supervisión y métricas de conversaciones',
-    'Soporte y operación mensual disponible dentro de Ops promo desde $200 USD/mes',
+    'Soporte y operación mensual disponible dentro de Ops promo desde $199 USD/mes',
   ];
 
   const faqs = [
@@ -181,7 +181,7 @@ const ChatbotIA = () => {
     },
     {
       q: '¿El plan mensual es obligatorio después de la implementación?',
-      a: 'No es obligatorio, pero sí muy recomendado. Ops promo desde $200 USD/mes incluye operación mensual, monitoreo, ajustes y soporte técnico según el plan contratado.',
+      a: 'No es obligatorio, pero sí muy recomendado. Ops promo desde $199 USD/mes incluye operación mensual, monitoreo, ajustes y soporte técnico según el plan contratado.',
     },
   ];
 
@@ -216,7 +216,7 @@ const ChatbotIA = () => {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-                Desplegamos tu agente de inteligencia artificial en WhatsApp Business: atiende 24/7, califica leads automáticamente, agenda citas y registra todo en el CRM — sin intervención humana.
+                Desplegamos tu agente de inteligencia artificial en WhatsApp Business: atiende 24/7, califica leads automáticamente, agenda citas y registra todo en el CRM, sin intervención humana.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
@@ -225,7 +225,7 @@ const ChatbotIA = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#1d70a2]" />
-                  <span className="text-white font-semibold">Ops promo desde $200 USD/mes</span>
+                  <span className="text-white font-semibold">Ops promo desde $199 USD/mes</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-[#00bfa5]" />
@@ -400,7 +400,7 @@ const ChatbotIA = () => {
               <div className="text-5xl font-poppins font-black text-white mb-1">Desde $1,500</div>
               <p className="text-gray-300 text-sm mb-1">USD · proyecto Transform</p>
               <div className="mt-4 mb-1">
-                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">Ops promo desde $200/mes</span>
+                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">Ops promo desde $199/mes</span>
               </div>
               <p className="text-gray-400 text-xs mb-6">Operación, actualizaciones y soporte mensual según plan</p>
               <ul className="space-y-3 mb-8">
@@ -443,7 +443,7 @@ const ChatbotIA = () => {
                 </div>
                 <div>
                   <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
-                    "El chatbot IA atiende el 80% de las consultas sin que mi equipo intervenga. Ahora respondemos en segundos a cualquier hora — incluso a las 2 AM — y los leads llegan calificados al CRM listos para que ventas los contacte. El ROI fue inmediato."
+                    "El chatbot IA atiende el 80% de las consultas sin que mi equipo intervenga. Ahora respondemos en segundos a cualquier hora, incluso a las 2 AM, y los leads llegan calificados al CRM listos para que ventas los contacte. El ROI fue inmediato."
                   </p>
                   <div>
                     <p className="font-poppins font-bold text-gray-900">Andrés Morales</p>

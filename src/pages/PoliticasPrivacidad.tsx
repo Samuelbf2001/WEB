@@ -6,7 +6,7 @@ import { useSEO } from '@/hooks/useSEO';
 
 const PoliticasPrivacidad = () => {
   useSEO({
-    title: "Política de Privacidad — Sixteam.pro",
+    title: "Política de Privacidad | Sixteam.pro",
     description: "Política de privacidad y tratamiento de datos personales de Sixteam.pro S.A.S. Bogotá, Colombia. Actualizada marzo 2026.",
   });
 
@@ -31,7 +31,7 @@ const PoliticasPrivacidad = () => {
               Política de Privacidad
             </h1>
             <p className="text-[#e0e0e0] text-base md:text-lg">
-              Tratamiento de Datos Personales — Sixteam.Pro
+              Tratamiento de Datos Personales de Sixteam.Pro
             </p>
             <p className="text-[#e0e0e0]/50 text-sm mt-3">
               Última actualización: marzo de 2026

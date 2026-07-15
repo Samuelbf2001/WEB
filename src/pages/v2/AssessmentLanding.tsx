@@ -110,13 +110,13 @@ const steps = [
     icon: MessageSquare,
     subtitle: "Entrevistas con agentes IA",
     title: "Sam habla con todo tu equipo en paralelo",
-    desc: "Sam (Diagnóstico IA) hace entrevistas de 20-30 minutos con cada persona clave de tu operación — comercial, marketing, servicio, ops. En paralelo, sin sesgo político, en una semana. Cobertura del 100%, no muestra del 20%.",
+    desc: "Sam (Diagnóstico IA) hace entrevistas de 20-30 minutos con cada persona clave de tu operación: comercial, marketing, servicio, ops. En paralelo, sin sesgo político, en una semana. Cobertura del 100%, no muestra del 20%.",
   },
   {
     icon: Map,
     subtitle: "Mapa operativo agéntico",
     title: "Reconstruimos tu operación real",
-    desc: "Sam consolida cada flujo, cada herramienta, cada dependencia. No es el organigrama teórico — es cómo funciona tu negocio cuando nadie te está mirando. Un mapa vivo, navegable.",
+    desc: "Sam consolida cada flujo, cada herramienta, cada dependencia. No es el organigrama teórico, sino cómo funciona tu negocio cuando nadie te está mirando. Un mapa vivo, navegable.",
   },
   {
     icon: Compass,
@@ -139,7 +139,7 @@ const sixteamPros = [
   "6 agentes IA + Samuel + Alex liderando",
   "10-14 días calendario",
   "Entrevistan 100% del equipo en paralelo",
-  "Cero sesgo político — los agentes no son tus colegas",
+  "Cero sesgo político: los agentes no son tus colegas",
   "Entregable: mapa vivo + agente IA persistente",
   "Sigue accesible cuando quieras preguntarle algo",
 ];
@@ -148,7 +148,7 @@ const deliverables = [
   {
     icon: Map,
     title: "Mapa operativo vivo",
-    desc: "Cómo opera hoy tu negocio — comercial, marketing, servicio — navegable y consultable. No es un PDF estático. Lo actualizas cuando cambia algo.",
+    desc: "Cómo opera hoy tu negocio (comercial, marketing, servicio), navegable y consultable. No es un PDF estático. Lo actualizas cuando cambia algo.",
   },
   {
     icon: Sparkles,
@@ -163,7 +163,7 @@ const deliverables = [
   {
     icon: Bot,
     title: "Agente IA persistente",
-    desc: "Sam queda accesible después del Assessment. Conoce tu operación. Le preguntas cualquier cosa cuando quieras — sigue mapeando, sigue respondiendo.",
+    desc: "Sam queda accesible después del Assessment. Conoce tu operación. Le preguntas cualquier cosa cuando quieras: sigue mapeando, sigue respondiendo.",
   },
 ];
 
@@ -171,7 +171,7 @@ const deliverables = [
 const faqs = [
   {
     q: "¿En qué se diferencia del Radar gratis?",
-    a: "El Radar es un diagnóstico ejecutivo gratis en 48 horas: el punto de partida. El Assessment es la evaluación profunda de 10-14 días — entrevistas con agentes IA al 100% del equipo, mapa operativo vivo, palancas priorizadas y roadmap ejecutable.",
+    a: "El Radar es un diagnóstico ejecutivo gratis en 48 horas: el punto de partida. El Assessment es la evaluación profunda de 10-14 días: entrevistas con agentes IA al 100% del equipo, mapa operativo vivo, palancas priorizadas y roadmap ejecutable.",
   },
   {
     q: "¿Cuánto tiempo le quita a mi equipo?",
@@ -179,7 +179,7 @@ const faqs = [
   },
   {
     q: "¿Y si no encajamos?",
-    a: "Si después de la llamada inicial decidimos que no encajas con el playbook — te lo decimos directamente y no cobramos nada.",
+    a: "Si después de la llamada inicial decidimos que no encajas con el playbook, te lo decimos directamente y no cobramos nada.",
   },
   {
     q: "¿Qué pasa después del Assessment?",
@@ -223,7 +223,7 @@ const FaqItem: React.FC<{ q: string; a: string; open: boolean; onToggle: () => v
    ═══════════════════════════════════════════════════════════════════ */
 const AssessmentLanding = () => {
   useSEO({
-    title: "Sixteam Assessment — Lanza tu transformación con IA con la estrategia correcta",
+    title: "Sixteam Assessment: Lanza tu transformación con IA con la estrategia correcta",
     description:
       "En 10-14 días: mapa operativo vivo, palancas de IA priorizadas y roadmap ejecutable. Agentes IA entrevistan al 100% de tu equipo. $2,500 USD, pago único.",
     noindex: true,
@@ -305,11 +305,11 @@ const AssessmentLanding = () => {
               >
                 El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo
                 opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de
-                IA — y te entregamos el plan ejecutable. Antes de mover una sola pieza.
+                IA, y te entregamos el plan ejecutable. Antes de mover una sola pieza.
               </p>
               <div className="v2-hero-entry mt-9 flex flex-col sm:flex-row gap-3 justify-center" style={{ animationDelay: "290ms" }}>
                 <WaButton source="asm_hero" className="w-full sm:w-auto">
-                  Solicitar Assessment — $2,500
+                  Solicitar Assessment: $2,500
                   <ArrowRight className="h-4 w-4" />
                 </WaButton>
                 <ButtonV2
@@ -356,7 +356,7 @@ const AssessmentLanding = () => {
                 ))}
               </div>
               <p className="v2-reveal v2-d3 font-lato text-[16px] italic text-v2-ink-body text-center mt-8 max-w-[600px] mx-auto leading-[1.65]">
-                "La diferencia no es el modelo. Es cómo decides qué transformar — y en qué orden."
+                "La diferencia no es el modelo. Es cómo decides qué transformar, y en qué orden."
               </p>
             </Container>
           </Section>
@@ -385,7 +385,7 @@ const AssessmentLanding = () => {
                   productivo y la conclusión es que 'la IA no funciona'.
                 </p>
                 <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
-                  La trampa es operar con información parcial — el dueño cree que sabe cómo funciona
+                  La trampa es operar con información parcial: el dueño cree que sabe cómo funciona
                   su empresa, pero la operación real vive distribuida en 15 cabezas y 40
                   herramientas. El Assessment elimina esa ceguera ANTES de mover una sola pieza.
                 </p>
@@ -513,7 +513,7 @@ const AssessmentLanding = () => {
               </div>
 
               <p className="v2-reveal v2-d2 font-lato text-[15px] italic text-white/50 text-center mt-10 max-w-[640px] mx-auto leading-[1.65]">
-                "Lo que cuesta 30x menos y se hace 5x más rápido — porque los agentes IA hacen lo
+                "Lo que cuesta 30x menos y se hace 5x más rápido, porque los agentes IA hacen lo
                 repetitivo, y los humanos hacen lo que solo un humano puede hacer: el criterio."
               </p>
             </Container>
@@ -576,9 +576,9 @@ const AssessmentLanding = () => {
               <div className="v2-reveal v2-d1 mt-8 space-y-5 max-w-[700px]">
                 <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
                   Al terminar el Assessment puedes hacer 3 cosas, sin presión nuestra: (a) Operar el
-                  roadmap con tu equipo interno — te quedas con todo y nos quedamos amigos. (b)
+                  roadmap con tu equipo interno, te quedas con todo y nos quedamos amigos. (b)
                   Contratarnos para construir las primeras palancas como proyecto. (c) Suscribirte a
-                  Ops mensual (promo desde $200/mes; regular $300/mes; Total desde $1,200/mes) y dejamos todo operado.
+                  Ops mensual (promo desde $199/mes; regular $300/mes; Total desde $1,200/mes) y dejamos todo operado.
                 </p>
                 <p className="font-lato text-[17px] text-v2-ink-body leading-[1.7]">
                   Como referencia: ~50% de los clientes que terminan el Assessment continúan con
@@ -588,7 +588,7 @@ const AssessmentLanding = () => {
               </div>
               <div className="v2-reveal v2-d2 mt-10">
                 <WaButton source="asm_decides" className="w-full sm:w-auto">
-                  Solicitar Assessment — $2,500
+                  Solicitar Assessment: $2,500
                   <ArrowRight className="h-4 w-4" />
                 </WaButton>
               </div>
@@ -649,11 +649,11 @@ const AssessmentLanding = () => {
               </h2>
               <p className="v2-reveal v2-d2 font-lato text-[17px] text-white/65 leading-[1.65] mt-7 max-w-[520px] mx-auto">
                 Solicita tu Assessment. Si después de la llamada inicial decidimos que no encajas
-                con el playbook — te lo decimos directamente y no cobramos nada.
+                con el playbook, te lo decimos directamente y no cobramos nada.
               </p>
               <div className="v2-reveal v2-d3 mt-10 flex flex-col sm:flex-row gap-3 justify-center">
                 <WaButton source="asm_final" className="w-full sm:w-auto">
-                  Solicitar Assessment — $2,500
+                  Solicitar Assessment: $2,500
                   <ArrowRight className="h-4 w-4" />
                 </WaButton>
                 <ButtonV2
@@ -681,7 +681,7 @@ const AssessmentLanding = () => {
           <div className="flex items-center gap-2.5">
             <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-6 w-6 object-contain" />
             <span className="font-lato text-[13px] text-v2-ink-muted">
-              © {new Date().getFullYear()} Sixteam.pro — Operamos la tecnología de tu empresa.
+              © {new Date().getFullYear()} Sixteam.pro: Operamos la tecnología de tu empresa.
             </span>
           </div>
           <div className="flex items-center gap-5">

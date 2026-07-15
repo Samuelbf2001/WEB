@@ -165,7 +165,7 @@ export const ChatConciergeV2 = () => {
         <div ref={ref}>
           {/* Section header */}
           <div className="text-center max-w-[640px] mx-auto mb-14 v2-reveal">
-            <Eyebrow variant="teal">Agente Concierge — Capa Consultoría</Eyebrow>
+            <Eyebrow variant="teal">Agente Concierge: Capa Consultoría</Eyebrow>
             <h2
               className="font-poppins font-bold text-white mt-3 leading-[1.1] tracking-[-0.02em]"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
@@ -499,7 +499,7 @@ export const ChatConciergeV2 = () => {
                     size="sm"
                     className="!text-white !border-white/25 !bg-white/5 hover:!bg-white/10 hover:!border-white/40 w-full justify-center"
                   >
-                    Solicitar Diagnóstico — $2,500
+                    Solicitar Diagnóstico: $2,500
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </ButtonV2>
                 </Link>

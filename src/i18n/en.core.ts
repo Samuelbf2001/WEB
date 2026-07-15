@@ -2,7 +2,7 @@ export const enCore: Record<string, string> = {
   "Las tres soluciones": "The three solutions",
   "Assessment · $2,500": "Assessment · $2,500",
   "Transform · desde $1,500": "Transform · from $1,500",
-  "Ops Esencial · desde $200/mes": "Ops Essential · from $200/mo",
+  "Ops Esencial · desde $199/mes": "Ops Essential · from $199/mo",
   "Ops Integral · $499/mes": "Ops Integral · $499/mo",
   "Ops Total · desde $1,200/mes": "Ops Total · from $1,200/mo",
   "Soluciones": "Solutions",

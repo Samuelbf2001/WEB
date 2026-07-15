@@ -25,7 +25,7 @@ const items: ServiceItem[] = [
   {
     icon: Zap,
     title: "Sprint semanal, sin pausa",
-    desc: "Cada semana ajustamos algo del sistema. Pequeño pero constante — RevOps es un músculo, no un proyecto.",
+    desc: "Cada semana ajustamos algo del sistema. Pequeño pero constante: RevOps es un músculo, no un proyecto.",
   },
   {
     icon: HeadphonesIcon,
@@ -63,7 +63,7 @@ const dontList = [
 const stats = [
   { value: "Semanal", label: "sprint sin pausa" },
   { value: "1", label: "punto de contacto dedicado" },
-  { value: "0", label: "tickets — solo Slack" },
+  { value: "0", label: "tickets (solo Slack)" },
 ];
 
 const cardAccents = ["teal", "teal", "blue", "blue", "sand", "sand"] as const;
@@ -230,7 +230,7 @@ const SoporteOperacionesV2 = () => {
                 </h2>
                 <p className="font-lato text-[16px] text-white/70 mt-5 leading-[1.7]">
                   Las herramientas se oxidan si nadie las mantiene. El equipo de Sixteam vive en tu
-                  stack — ajusta, mejora y documenta sin que tengas que pedirlo cada vez.
+                  stack, ajusta, mejora y documenta sin que tengas que pedirlo cada vez.
                 </p>
               </div>
             </div>

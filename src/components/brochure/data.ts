@@ -45,35 +45,30 @@ export const JOURNEY: {
   step: string;
   title: string;
   copy: string;
-  image: string;
   icon: IconType;
 }[] = [
   {
     step: '01',
     title: 'Diagnóstico y contexto',
     copy: 'Aterrizamos objetivos, dolores, procesos actuales y prioridades antes de tocar tecnología. Mapeamos tu operación real, no la ideal.',
-    image: '/brochure/brochure-journey-1.png',
     icon: MapPinned,
   },
   {
     step: '02',
     title: 'Diseño funcional',
     copy: 'Definimos datos, embudos, formularios, vistas y automatizaciones con lógica real para tu equipo. Cada flujo se valida antes de implementarse.',
-    image: '/brochure/brochure-journey-2.png',
     icon: Workflow,
   },
   {
     step: '03',
     title: 'Automatización + IA',
     copy: 'Implementamos workflows, seguimiento, IA conversacional y paneles que aceleran la operación con visibilidad real para gerencia y operación.',
-    image: '/brochure/brochure-journey-3.png',
     icon: Brain,
   },
   {
     step: '04',
     title: 'Capacitación y soporte continuo',
     copy: 'Entrenamos a tu equipo, dejamos guías de uso y acompañamos la adopción con ajustes, soporte y mejora continua mientras el negocio escala.',
-    image: '/brochure/brochure-journey-4.png',
     icon: HeartHandshake,
   },
 ];
@@ -232,24 +227,6 @@ export const STATS: { value: string; label: string; sub: string }[] = [
   { value: '15+', label: 'Plataformas', sub: 'que conectamos sin fricción' },
   { value: '30 días', label: 'En producción', sub: 'desde diagnóstico hasta primer flujo' },
   { value: '100%', label: 'Acompañamiento', sub: 'capacitación, soporte y mejora continua' },
-];
-
-export const MOCKUPS: { src: string; title: string; copy: string }[] = [
-  {
-    src: '/brochure/brochure-mockup-1.png',
-    title: 'Pipeline comercial trazable',
-    copy: 'Cada lead tiene historia, etapa, dueño y próximo paso. Sin spreadsheets paralelos.',
-  },
-  {
-    src: '/brochure/brochure-mockup-2.png',
-    title: 'Inbox omnicanal',
-    copy: 'WhatsApp, email, Instagram y formularios en una sola bandeja, con contexto del cliente.',
-  },
-  {
-    src: '/brochure/brochure-mockup-3.png',
-    title: 'Reportería que se lee sola',
-    copy: 'KPIs, embudos y tendencias listas para gerencia, sin tener que armar reportes a mano.',
-  },
 ];
 
 export const FAQS: { q: string; a: string }[] = [

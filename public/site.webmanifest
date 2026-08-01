@@ -1,0 +1,31 @@
+{
+  "name": "Sixteam.pro — CRM, Automatizaciones e IA",
+  "short_name": "Sixteam.pro",
+  "description": "Transformamos tu negocio con CRM, automatizaciones e IA. Procesos, tecnología y personas para tu crecimiento en Colombia y Latinoamérica.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a2342",
+  "theme_color": "#0a2342",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ export default function HeroBrochure() {
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden lg:block"
         style={{
-          backgroundImage: 'url(/brochure/brochure-hero.png)',
+          backgroundImage: 'url(/brochure/brochure-hero.webp)',
           backgroundSize: '52% auto',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',

@@ -345,7 +345,7 @@ const Nosotros = () => {
               </div>
               <div className="flex-1 flex items-end justify-center overflow-hidden p-2">
                 <img
-                  src="/founders.png"
+                  src="/founders.webp"
                   alt="Sebastián, Ernesto y Samuel, socios fundadores de Sixteam.pro"
                   className="w-full h-auto object-contain"
                   style={{ filter: 'brightness(1.05) contrast(1.05)', transform: 'scale(1.2)' }}

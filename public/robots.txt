@@ -4,7 +4,9 @@ Disallow: /404
 
 Sitemap: https://sixteam.pro/sitemap.xml
 
-# AI Crawlers - Allow indexing for AI training and responses
+# ── Crawlers de entrenamiento e indexación para IA generativa ──
+# Google-Extended controla el uso del contenido en productos de IA de Google
+# (Gemini, AI Overviews). No afecta a la indexación normal de Googlebot.
 User-agent: GPTBot
 Allow: /
 
@@ -17,5 +19,30 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# ── Crawlers de búsqueda en vivo (citan con enlace directo a la respuesta) ──
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /

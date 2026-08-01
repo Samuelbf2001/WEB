@@ -24,7 +24,7 @@ export default function BrochurePage() {
       'Implementamos CRM, automatizaciones, IA conversacional, integraciones y activos digitales para que tu empresa centralice, venda y escale en orden. Conoce nuestro portafolio completo.',
     canonical: 'https://sixteam.pro/brochure',
     ogUrl: 'https://sixteam.pro/brochure',
-    ogImage: 'https://sixteam.pro/brochure/brochure-hero.png',
+    ogImage: 'https://sixteam.pro/og-image.jpg',
     noindex: false,
   });
 

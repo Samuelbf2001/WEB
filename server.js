@@ -10,6 +10,7 @@ import {
   redirectRoutes,
   resolveSeo,
 } from './seo-routes.js';
+import { renderSchemaTags, schemasForRoute } from './seo-schema.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -181,9 +182,15 @@ const sendIndex = (req, res) => {
         : notFoundSeo;
 
   const seoHtml = applySeo(html, meta);
+
+  // El JSON-LD tiene que estar en el HTML servido: los crawlers de motores
+  // generativos leen el documento sin ejecutar su JavaScript.
+  const schemaTags = renderSchemaTags(schemasForRoute(pathname, meta));
+
+  const headInjection = `${schemaTags}${schemaTags ? '\n' : ''}${localeScript}`;
   const localizedHtml = seoHtml.includes('</head>')
-    ? seoHtml.replace('</head>', `${localeScript}\n</head>`)
-    : `${localeScript}\n${seoHtml}`;
+    ? seoHtml.replace('</head>', `${headInjection}\n</head>`)
+    : `${headInjection}\n${seoHtml}`;
 
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');

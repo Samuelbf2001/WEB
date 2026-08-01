@@ -48,6 +48,7 @@ export const seoRoutes = {
     title: 'CRM de Ventas Operado, no solo Instalado | Sixteam.pro',
     description:
       'Pipeline limpio y leads asignados al vendedor correcto. Operamos tu CRM de ventas en GoHighLevel con reportes semanales. Colombia y Latinoamérica.',
+    breadcrumb: 'CRM Ventas',
     canonical: `${SITE_URL}/servicios/crm-ventas`,
     changefreq: 'monthly',
     priority: '0.8',
@@ -57,6 +58,7 @@ export const seoRoutes = {
     title: 'CRM de Atención al Cliente 24/7 en WhatsApp | Sixteam',
     description:
       'WhatsApp, email y chat en una sola bandeja con SLA medible. Automatizamos y operamos tu atención al cliente con CRM e IA. Colombia y Latinoamérica.',
+    breadcrumb: 'CRM Atención al Cliente',
     canonical: `${SITE_URL}/servicios/crm-atencion`,
     changefreq: 'monthly',
     priority: '0.8',
@@ -66,6 +68,7 @@ export const seoRoutes = {
     title: 'CRM de Marketing Conectado al Pipeline | Sixteam.pro',
     description:
       'Campañas, nurturing y atribución conectados a tu CRM real, no a un vacío. Automatizaciones de marketing que sí impactan ventas. Colombia y LatAm.',
+    breadcrumb: 'CRM Marketing',
     canonical: `${SITE_URL}/servicios/crm-marketing`,
     changefreq: 'monthly',
     priority: '0.8',
@@ -75,6 +78,7 @@ export const seoRoutes = {
     title: 'Chatbot con IA que Opera, no solo Responde | Sixteam.pro',
     description:
       'Agentes de IA que califican, agendan y resuelven 24/7 conectados a tu CRM real. Automatización conversacional para empresas en Colombia y LatAm.',
+    breadcrumb: 'Chatbot con IA',
     canonical: `${SITE_URL}/servicios/chatbot-ia`,
     changefreq: 'monthly',
     priority: '0.8',
@@ -84,6 +88,7 @@ export const seoRoutes = {
     title: 'Soporte y Operaciones de tu CRM, Mes a Mes | Sixteam',
     description:
       'El equipo que mantiene vivo tu sistema: sprints semanales de soporte, mejoras y automatizaciones sin pedir permiso. CRM operado, no abandonado.',
+    breadcrumb: 'Soporte y Operaciones',
     canonical: `${SITE_URL}/servicios/soporte-operaciones`,
     changefreq: 'monthly',
     priority: '0.8',
@@ -201,6 +206,7 @@ export const seoRoutes = {
     title: 'CRM para Instituciones Educativas en LatAm | Sixteam.pro',
     description:
       'Más admisiones, menos caos: automatiza seguimiento de prospectos, matrículas y comunicación con padres. CRM e IA para educación en Colombia y LatAm.',
+    breadcrumb: 'Educación',
     canonical: `${SITE_URL}/industrias/educacion`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -210,6 +216,7 @@ export const seoRoutes = {
     title: 'CRM para SaaS B2B: Menos Churn, Más Expansión | Sixteam',
     description:
       'Menos churn, más expansión: CRM y automatizaciones para SaaS B2B que conectan ventas, onboarding y éxito del cliente. Colombia y Latinoamérica.',
+    breadcrumb: 'SaaS B2B',
     canonical: `${SITE_URL}/industrias/saas-b2b`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -219,6 +226,7 @@ export const seoRoutes = {
     title: 'CRM para Retail y E-commerce en Latinoamérica | Sixteam',
     description:
       'Más revenue, menos soporte manual: CRM e IA que automatizan ventas, atención y postventa para retail y e-commerce en Colombia y Latinoamérica.',
+    breadcrumb: 'Retail y E-commerce',
     canonical: `${SITE_URL}/industrias/retail`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -228,6 +236,7 @@ export const seoRoutes = {
     title: 'CRM para Agencias de Viajes en Latinoamérica | Sixteam.pro',
     description:
       'Tu agencia opera como agencia de viajes, no como bandeja de correo. CRM, IA y automatizaciones para cotizar y cerrar reservas más rápido en LatAm.',
+    breadcrumb: 'Agencias de Viajes',
     canonical: `${SITE_URL}/industrias/viajes`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -237,6 +246,7 @@ export const seoRoutes = {
     title: 'CRM para Negocios con Cita Previa en LatAm | Sixteam.pro',
     description:
       'Salud, legal, estético o contable: donde la cita es el producto. Agenda, recordatorios y seguimiento automatizado con CRM e IA de Sixteam.pro.',
+    breadcrumb: 'Servicios con Cita',
     canonical: `${SITE_URL}/industrias/servicios-con-cita`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -246,6 +256,7 @@ export const seoRoutes = {
     title: 'Inmobiliarias: CRM que Convierte Leads en Ventas | Sixteam',
     description:
       'Inmobiliaria que convierte leads en ventas, no en una lista en Excel. Pipeline, integración con portales y recordatorios automáticos de visita.',
+    breadcrumb: 'Inmobiliarias',
     canonical: `${SITE_URL}/industrias/inmobiliarias`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -266,6 +277,7 @@ export const seoRoutes = {
     title: 'Diagnóstico Gratuito | Radar Sixteam | Resultados en 48 Horas',
     description:
       'Diagnóstico gratuito de tu operación comercial. En 48 horas recibes mapa de oportunidades, recomendaciones priorizadas y benchmark competitivo. Sin compromiso.',
+    breadcrumb: 'Diagnóstico Gratuito',
     canonical: `${SITE_URL}/radar/diagnostico-gratis`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -275,6 +287,7 @@ export const seoRoutes = {
     title: '¿Vale la Pena Invertir en CRM? | Radar Sixteam',
     description:
       'El 60% de las implementaciones de CRM fallan sin diagnóstico previo. Antes de comprar, diagnostica. Ahorra hasta un 40% en tu implementación.',
+    breadcrumb: 'Antes de Invertir',
     canonical: `${SITE_URL}/radar/antes-de-invertir`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -284,6 +297,7 @@ export const seoRoutes = {
     title: 'Oportunidades de Venta Perdidas | Radar Sixteam',
     description:
       '¿Cuánto dinero estás perdiendo sin saberlo? Auditamos fugas en tu pipeline, leads sin seguimiento y clientes que no regresan. Diagnóstico gratuito.',
+    breadcrumb: 'Oportunidades Perdidas',
     canonical: `${SITE_URL}/radar/oportunidades-perdidas`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -293,6 +307,7 @@ export const seoRoutes = {
     title: 'CRM para Agencias de Viaje | Sixteam.pro',
     description:
       'CRM, IA y automatizaciones para agencias de viaje en Latam. Responde en 2 minutos, seguimiento automático y convierte más cotizaciones en reservas.',
+    breadcrumb: 'Agencias de Viaje',
     canonical: `${SITE_URL}/industrias/agencias-de-viaje`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -302,6 +317,7 @@ export const seoRoutes = {
     title: 'CRM para Empresas de Servicios | Sixteam.pro',
     description:
       'Pipeline de propuestas, renovaciones automáticas y secuencias de cobro para consultoras y servicios profesionales. Crece un 40% sin contratar más personal.',
+    breadcrumb: 'Empresas de Servicios',
     canonical: `${SITE_URL}/industrias/servicios-generales`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -311,6 +327,7 @@ export const seoRoutes = {
     title: 'Caso de Éxito: Master Viajes | Sixteam.pro',
     description:
       'Cómo Master Viajes organizó su operación comercial, centralizó sus canales de venta y le dio a la gerencia visibilidad total del negocio con Sixteam.pro.',
+    breadcrumb: 'Master Viajes',
     canonical: `${SITE_URL}/casos/master-viajes`,
     changefreq: 'monthly',
     priority: '0.7',
@@ -320,6 +337,7 @@ export const seoRoutes = {
     title: 'Caso de Éxito: Student Travel Center | Sixteam.pro',
     description:
       'Cómo Student Travel Center pasó de operar disperso a tener a Sixteam como partner estratégico integrado en su día a día: CRM, IA, pauta y crecimiento.',
+    breadcrumb: 'Student Travel Center',
     canonical: `${SITE_URL}/casos/student-travel-center`,
     changefreq: 'monthly',
     priority: '0.7',

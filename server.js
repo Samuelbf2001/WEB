@@ -1,7 +1,15 @@
+import compression from 'compression';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import {
+  DEFAULT_OG_IMAGE,
+  normalizePath,
+  notFoundSeo,
+  redirectRoutes,
+  resolveSeo,
+} from './seo-routes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -73,13 +81,109 @@ const buildLocaleScript = ({ locale, country, source }) => `
   window.__SIXTEAM_LOCALE_SOURCE__ = ${JSON.stringify(source)};
 </script>`;
 
+const escapeAttr = (value) =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+/**
+ * Reescribe los metadatos del index.html con los de la ruta pedida.
+ *
+ * Es lo único que ven los crawlers y los scrapers de previews sociales:
+ * ninguno ejecuta el JavaScript de la SPA, así que `useSEO` (que inyecta en
+ * un useEffect) solo sirve para la navegación en cliente. Sin esta reescritura
+ * todas las rutas sirven el title, la description y el canonical de la home.
+ */
+const applySeo = (html, meta) => {
+  const ogImage = meta.ogImage ?? DEFAULT_OG_IMAGE;
+  const replaceTag = (source, pattern, replacement) =>
+    pattern.test(source) ? source.replace(pattern, replacement) : source;
+
+  let out = html;
+
+  out = replaceTag(out, /<title>[\s\S]*?<\/title>/i, `<title>${escapeAttr(meta.title)}</title>`);
+
+  const metaTag = (attr, key, value) =>
+    new RegExp(`<meta\\s+${attr}="${key}"[^>]*>`, 'i');
+
+  out = replaceTag(
+    out,
+    metaTag('name', 'description'),
+    `<meta name="description" content="${escapeAttr(meta.description)}" />`
+  );
+
+  const og = {
+    'og:title': meta.title,
+    'og:description': meta.description,
+    'og:image': ogImage,
+    'og:url': meta.canonical,
+  };
+  for (const [key, value] of Object.entries(og)) {
+    if (!value) continue;
+    out = replaceTag(
+      out,
+      metaTag('property', key),
+      `<meta property="${key}" content="${escapeAttr(value)}" />`
+    );
+  }
+
+  const twitter = {
+    'twitter:title': meta.title,
+    'twitter:description': meta.description,
+    'twitter:image': ogImage,
+  };
+  for (const [key, value] of Object.entries(twitter)) {
+    out = replaceTag(
+      out,
+      metaTag('name', key),
+      `<meta name="${key}" content="${escapeAttr(value)}" />`
+    );
+  }
+
+  if (meta.canonical) {
+    out = replaceTag(
+      out,
+      /<link\s+rel="canonical"[^>]*>/i,
+      `<link rel="canonical" href="${escapeAttr(meta.canonical)}" />`
+    );
+  }
+
+  out = replaceTag(
+    out,
+    metaTag('name', 'robots'),
+    `<meta name="robots" content="${meta.noindex ? 'noindex, nofollow' : 'index, follow'}" />`
+  );
+
+  return out;
+};
+
 const sendIndex = (req, res) => {
   const localeConfig = resolveLocale(req);
   const html = fs.readFileSync(indexPath, 'utf8');
   const localeScript = buildLocaleScript(localeConfig);
-  const localizedHtml = html.includes('</head>')
-    ? html.replace('</head>', `${localeScript}\n</head>`)
-    : `${localeScript}\n${html}`;
+
+  const pathname = normalizePath(req.path);
+  const seo = resolveSeo(pathname);
+  const redirectTarget = redirectRoutes[pathname];
+  const isLegacyV2 = pathname.startsWith('/v2');
+  const isKnownRoute = Boolean(seo) || Boolean(redirectTarget) || isLegacyV2;
+
+  // Las rutas de redirección solo existen para no romper enlaces antiguos:
+  // apuntan su canonical al destino real y no deben indexarse por sí mismas.
+  const meta = seo
+    ? seo
+    : redirectTarget
+      ? { ...resolveSeo(redirectTarget), noindex: true }
+      : isLegacyV2
+        ? { ...resolveSeo('/'), noindex: true }
+        : notFoundSeo;
+
+  const seoHtml = applySeo(html, meta);
+  const localizedHtml = seoHtml.includes('</head>')
+    ? seoHtml.replace('</head>', `${localeScript}\n</head>`)
+    : `${localeScript}\n${seoHtml}`;
 
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -88,8 +192,25 @@ const sendIndex = (req, res) => {
     'Vary',
     'CF-IPCountry, X-Vercel-IP-Country, X-NF-Country, CloudFront-Viewer-Country, X-Country-Code, X-AppEngine-Country, X-Geo-Country, X-Client-Geo-Country, X-Forwarded-Country, Accept-Language'
   );
+
+  // Una URL inexistente debe responder 404, no 200. Sin esto Google indexa
+  // cualquier URL inventada como si fuera contenido válido (soft-404).
+  if (!isKnownRoute) {
+    res.status(404);
+  }
+
   res.send(localizedHtml);
 };
+
+// Compresión de texto. Sin esto, HTML, JS y CSS viajan en crudo: el bundle
+// del entry pasa de ~53 kB a ~164 kB por visita.
+app.use(compression());
+
+// Vite escribe los assets que genera con un hash en el nombre
+// (index-BrHisrD1.js). Solo esos pueden cachearse de forma inmutable: los
+// ficheros copiados tal cual desde public/ conservan su nombre, así que
+// marcarlos immutable serviría versiones obsoletas hasta un año.
+const HASHED_ASSET = /-[A-Za-z0-9_-]{8,}\.[a-z0-9]+$/;
 
 // Servir archivos estáticos con MIME types correctos
 // express.static ya detecta MIME types automáticamente
@@ -100,9 +221,12 @@ app.use(express.static(distPath, {
     if (filePath.endsWith('.html')) {
       // HTML nunca se cachea para que siempre cargue la última versión
       res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    } else {
-      // Assets con hash (JS, CSS, imágenes) se cachean por 1 año
+    } else if (HASHED_ASSET.test(path.basename(filePath))) {
+      // El hash cambia con el contenido: cachear un año es seguro
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else {
+      // Nombre estable (logos, og-image, favicons): un día y revalidación
+      res.setHeader('Cache-Control', 'public, max-age=86400, must-revalidate');
     }
   }
 }));

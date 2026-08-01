@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { translateCopy } from '@/i18n/dictionary';
+import { useDictionaryVersion } from '@/i18n/useDictionaryVersion';
 import { useLocale } from '@/i18n/LocaleContext';
 
 const DEFAULT_OG_IMAGE = 'https://sixteam.pro/og-image.jpg';
@@ -15,6 +16,9 @@ interface SEOProps {
 
 export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex }: SEOProps) => {
   const { locale } = useLocale();
+  // El diccionario en inglés se carga bajo demanda; al llegar, los metadatos
+  // se vuelven a evaluar para que title y description queden traducidos.
+  const dictionaryVersion = useDictionaryVersion();
 
   useEffect(() => {
     const localizedTitle = translateCopy(title, locale);
@@ -69,5 +73,5 @@ export const useSEO = ({ title, description, canonical, ogImage, ogUrl, noindex 
       }
       link.href = canonical;
     }
-  }, [title, description, canonical, ogImage, ogUrl, noindex, locale]);
+  }, [title, description, canonical, ogImage, ogUrl, noindex, locale, dictionaryVersion]);
 };

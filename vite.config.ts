@@ -16,10 +16,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Separar dependencias grandes
+          // Solo dependencias que comparten muchas rutas. Agrupar de más
+          // obliga a descargar código que la ruta no usa.
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['lucide-react'],
-          'carousel-vendor': ['embla-carousel-react']
         }
       }
     },
@@ -27,7 +27,9 @@ export default defineConfig({
     chunkSizeWarningLimit: 600,
     // Usar esbuild en lugar de terser para mejor compatibilidad
     minify: 'esbuild',
-    target: 'es2015',
+    // es2015 obligaba a transpilar sintaxis que todos los navegadores con
+    // soporte de módulos ES entienden de forma nativa, y engordaba el bundle.
+    target: 'es2020',
   },
   // Preload de módulos críticos
   optimizeDeps: {

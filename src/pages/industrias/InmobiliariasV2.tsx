@@ -248,8 +248,8 @@ const InmobiliariasV2 = () => {
   useSEO({
     title: "CRM para Inmobiliarias | Sixteam.pro | Duplica tus Cierres",
     description: "CRM para inmobiliarias con pipeline de venta y arriendo, integración Metrocuadrado y Fincaraíz, recordatorios de visita automáticos. Colombia y Latinoamérica.",
-    canonical: "https://sixteam.pro/industrias/inmobiliarias",
-    ogUrl: "https://sixteam.pro/industrias/inmobiliarias",
+    canonical: "https://sixteam.pro/inmobiliarias",
+    ogUrl: "https://sixteam.pro/inmobiliarias",
   });
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

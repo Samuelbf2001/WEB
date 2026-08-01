@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import RouteSeo from "./components/RouteSeo";
 import WhatsAppButton from "./components/WhatsAppButton";
 import PromoPricingModule from "./components/PromoPricingModule";
 import LocalTranslator from "./i18n/LocalTranslator";
@@ -65,8 +65,6 @@ const LegacyV2Redirect = () => {
   return <Navigate to={`${target}${search}${hash}`} replace />;
 };
 
-const queryClient = new QueryClient();
-
 const v2PromoPaths = new Set([
   "/",
   "/soluciones",
@@ -111,13 +109,13 @@ const LegacyPromoPricingSlot = () => {
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LocaleProvider>
           <LocalTranslator />
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <RouteSeo />
             <Suspense fallback={<div className="min-h-screen bg-[#0a2342]" />}>
               <Routes>
               {/* Web pública */}
@@ -184,7 +182,6 @@ const App = () => {
           </BrowserRouter>
         </LocaleProvider>
       </TooltipProvider>
-    </QueryClientProvider>
   );
 };
 

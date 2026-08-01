@@ -1,6 +1,54 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- charset y viewport primero: el navegador necesita el charset dentro de
+         los primeros 1024 bytes para no reiniciar el parseo del documento. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO. server.js reescribe estas etiquetas por ruta desde seo-routes.js:
+         los valores de aquí son los de la home y el fallback. -->
+    <title>Sixteam.pro: CRM, Automatizaciones e IA para Empresas</title>
+    <meta name="description" content="CRM, automatizaciones e IA operados por expertos humanos. Impulsamos tu crecimiento en Colombia y Latinoamérica con procesos, tecnología y personas." />
+    <link rel="canonical" href="https://sixteam.pro/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Fuentes: preconnect solo a los dos orígenes críticos, y la hoja de
+         estilos en carga asíncrona para no bloquear el render. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Iconos y PWA -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0a2342" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Sixteam.pro: CRM, Automatizaciones e IA para Empresas" />
+    <meta property="og:description" content="CRM, automatizaciones e IA operados por expertos humanos. Impulsamos tu crecimiento en Colombia y Latinoamérica con procesos, tecnología y personas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sixteam.pro" />
+    <meta property="og:image" content="https://sixteam.pro/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sixteam.pro — CRM, Automatizaciones e IA para Empresas" />
+    <meta property="og:url" content="https://sixteam.pro/" />
+    <meta property="og:locale" content="es_CO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sixteam.pro: CRM, Automatizaciones e IA para Empresas" />
+    <meta name="twitter:description" content="CRM, automatizaciones e IA operados por expertos humanos. Impulsamos tu crecimiento en Colombia y Latinoamérica con procesos, tecnología y personas." />
+    <meta name="twitter:image" content="https://sixteam.pro/og-image.jpg" />
+
+    <!-- Terceros: van después de todo lo que afecta al primer render.
+         Se abre conexión anticipada solo a los dominios que sí se piden. -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://assets.apollo.io">
+    <link rel="dns-prefetch" href="https://web.sixteam.pro">
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,55 +56,34 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KSMGDHPL');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia</title>
-    <meta name="description" content="Impulsamos el crecimiento digital de tu negocio con IA y automatización. Combinamos procesos, tecnología y personas para tu transformación digital." />
-    <meta property="og:title" content="Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia" />
-    <meta property="og:description" content="Impulsamos el crecimiento digital de tu negocio con CRM, automatizaciones e IA. Especialistas en GoHighLevel, RevOps y chatbots para empresas en Colombia y Latinoamérica." />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Sixteam.pro" />
-    <meta property="og:image" content="https://sixteam.pro/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Sixteam.pro — CRM, Automatizaciones e IA para Empresas" />
-    <meta property="og:url" content="https://sixteam.pro" />
-    <meta property="og:locale" content="es_CO" />
-    <link rel="canonical" href="https://sixteam.pro" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sixteam.pro — CRM, Automatizaciones e IA para Empresas | Colombia" />
-    <meta name="twitter:description" content="Impulsamos el crecimiento digital de tu negocio con CRM, automatizaciones e IA. Especialistas en GoHighLevel, RevOps y chatbots para empresas en Colombia y Latinoamérica." />
-    <meta name="twitter:image" content="https://sixteam.pro/og-image.jpg" />
-    
-    <!-- DNS prefetch para recursos externos -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://wa.me">
-    <link rel="dns-prefetch" href="https://web.sixteam.pro">
-    
-    <!-- Sixteam Calendar Embed -->
-    <script src="https://web.sixteam.pro/js/form_embed.js" async></script>
 
-    <!-- Apollo Website Tracker -->
-    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-    o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-    o.onload=function(){window.trackingFunctions.onLoad({appId:"6a2b2e60d1d4dc000c256980"})},
-    document.head.appendChild(o)}initApollo();</script>
-    <!-- End Apollo Website Tracker -->
-    
-    <!-- Google Fonts optimizadas - Async loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    
-    <!-- Meta tags para rendimiento -->
-    <meta name="theme-color" content="#0a2342" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <!-- Critical CSS será inyectado aquí por Vite -->
+    <!-- Apollo Website Tracker y el embed de calendario no afectan a la
+         primera vista: se cargan cuando el hilo principal queda libre. -->
+    <script>
+      (function () {
+        var loadDeferredScripts = function () {
+          var tracker = document.createElement('script');
+          tracker.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=' +
+            Math.random().toString(36).substring(7);
+          tracker.async = true;
+          tracker.onload = function () {
+            window.trackingFunctions.onLoad({ appId: '6a2b2e60d1d4dc000c256980' });
+          };
+          document.head.appendChild(tracker);
+
+          var embed = document.createElement('script');
+          embed.src = 'https://web.sixteam.pro/js/form_embed.js';
+          embed.async = true;
+          document.head.appendChild(embed);
+        };
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadDeferredScripts, { timeout: 5000 });
+        } else {
+          window.addEventListener('load', loadDeferredScripts);
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

@@ -16,9 +16,12 @@
     }
     header @css Content-Type "text/css; charset=utf-8"
     
+    # Compresión de texto (HTML, CSS, JS, SVG, JSON)
+    encode zstd gzip
+
     # SPA fallback
     try_files {path} /index.html
-    
+
     file_server
     
     log {

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { translateCopy } from "./dictionary";
+import { loadEnglishDictionary, translateCopy } from "./dictionary";
+import { useDictionaryVersion } from "./useDictionaryVersion";
 import { useLocale } from "./LocaleContext";
 
 const originalText = new WeakMap<Text, string>();
@@ -100,10 +101,19 @@ const translateTree = (root: Node, locale: "es" | "en") => {
 
 export const LocalTranslator = () => {
   const { locale } = useLocale();
+  // El diccionario llega de forma asíncrona: al resolverse, este valor cambia
+  // y el efecto vuelve a recorrer el DOM ya con las traducciones cargadas.
+  const dictionaryVersion = useDictionaryVersion();
 
   useEffect(() => {
     clearLegacyGoogleTranslate();
   }, []);
+
+  useEffect(() => {
+    if (locale !== "es") {
+      void loadEnglishDictionary();
+    }
+  }, [locale]);
 
   useEffect(() => {
     if (typeof document === "undefined") return;
@@ -135,7 +145,7 @@ export const LocalTranslator = () => {
     });
 
     return () => observer.disconnect();
-  }, [locale]);
+  }, [locale, dictionaryVersion]);
 
   return null;
 };

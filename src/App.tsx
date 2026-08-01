@@ -5,11 +5,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import RouteSeo from "./components/RouteSeo";
 import WhatsAppButton from "./components/WhatsAppButton";
-import PromoPricingModule from "./components/PromoPricingModule";
 import LocalTranslator from "./i18n/LocalTranslator";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 
 const NotFound = lazy(() => import('./pages/NotFound'));
+// Solo lo renderizan las rutas legadas: no tiene por qué pesar en el entry.
+const PromoPricingModule = lazy(() => import('./components/PromoPricingModule'));
 const PoliticasPrivacidad = lazy(() => import('./pages/PoliticasPrivacidad'));
 const TerminosCondiciones = lazy(() => import('./pages/TerminosCondiciones'));
 
@@ -104,7 +105,11 @@ const LegacyPromoPricingSlot = () => {
     return null;
   }
 
-  return <PromoPricingModule />;
+  return (
+    <Suspense fallback={null}>
+      <PromoPricingModule />
+    </Suspense>
+  );
 };
 
 const App = () => {

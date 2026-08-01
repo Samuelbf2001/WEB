@@ -31,7 +31,7 @@ const organization = {
   '@type': 'Organization',
   name: 'Sixteam.pro',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo-sixteam.png`,
+  logo: `${SITE_URL}/logo-sixteam-512.png`,
   description:
     'Sixteam.pro implementa y opera CRM, automatizaciones e inteligencia artificial para empresas en Colombia y Latinoamérica. Combina procesos, tecnología y personas bajo la fórmula Process + Technology + People = Growth.',
   areaServed: AREA_SERVED,

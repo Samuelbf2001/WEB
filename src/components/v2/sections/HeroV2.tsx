@@ -41,7 +41,7 @@ export const HeroV2 = () => {
             className="v2-hero-entry mb-8 inline-flex items-center gap-3 bg-white border border-v2-border-subtle rounded-full px-5 py-2.5 shadow-[0_2px_12px_rgba(10,35,66,0.05)]"
             style={{ animationDelay: "0ms" }}
           >
-            <img src="/logo-sixteam.png" alt="Sixteam.pro" className="h-5 w-5 object-contain flex-shrink-0" />
+            <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" className="h-5 w-5 object-contain flex-shrink-0" />
             <span className="w-px h-4 bg-v2-border-subtle flex-shrink-0" aria-hidden />
             <p className="font-lato text-[11px] md:text-[12px] tracking-wide whitespace-nowrap">
               <span className="text-v2-ink-heading font-semibold">Procesos</span>

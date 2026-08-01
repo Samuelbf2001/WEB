@@ -82,6 +82,57 @@ const buildLocaleScript = ({ locale, country, source }) => `
   window.__SIXTEAM_LOCALE_SOURCE__ = ${JSON.stringify(source)};
 </script>`;
 
+/**
+ * Precarga del chunk de la ruta pedida.
+ *
+ * Todas las páginas van detrás de `React.lazy`, así que el navegador no
+ * descubre el chunk de la página hasta que el entry se ha descargado, parseado
+ * y ejecutado: una cascada de dos saltos antes de poder pintar el contenido
+ * principal. Como el servidor ya sabe qué ruta se pidió, puede anunciar ese
+ * chunk en el propio HTML y solaparlo con la descarga del entry.
+ */
+const manifestPath = path.join(distPath, '.vite', 'manifest.json');
+let viteManifest = null;
+
+const getManifest = () => {
+  if (viteManifest === null) {
+    try {
+      viteManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    } catch {
+      // Sin manifiesto simplemente no se precarga nada: la app funciona igual.
+      viteManifest = {};
+    }
+  }
+  return viteManifest;
+};
+
+const buildPreloadTags = (source, html) => {
+  if (!source) return '';
+  const manifest = getManifest();
+  const entry = manifest[source];
+  if (!entry) return '';
+
+  const files = new Set();
+  if (entry.file) files.add(entry.file);
+  (entry.imports ?? []).forEach((key) => {
+    const imported = manifest[key];
+    if (imported?.file) files.add(imported.file);
+  });
+  (entry.css ?? []).forEach((file) => files.add(file));
+
+  // Vite ya anuncia los vendors compartidos en el HTML, y con `crossorigin`.
+  // Repetirlos sin ese atributo haría que el navegador los descargue dos veces,
+  // porque el modo CORS forma parte de la clave de caché.
+  return [...files]
+    .filter((file) => !html.includes(`/${file}`))
+    .map((file) =>
+      file.endsWith('.css')
+        ? `<link rel="preload" as="style" href="/${file}">`
+        : `<link rel="modulepreload" crossorigin href="/${file}">`
+    )
+    .join('\n');
+};
+
 const escapeAttr = (value) =>
   String(value)
     .replace(/&/g, '&amp;')
@@ -187,7 +238,11 @@ const sendIndex = (req, res) => {
   // generativos leen el documento sin ejecutar su JavaScript.
   const schemaTags = renderSchemaTags(schemasForRoute(pathname, meta));
 
-  const headInjection = `${schemaTags}${schemaTags ? '\n' : ''}${localeScript}`;
+  const preloadTags = buildPreloadTags(seo?.source, html);
+
+  const headInjection = [preloadTags, schemaTags, localeScript]
+    .filter(Boolean)
+    .join('\n');
   const localizedHtml = seoHtml.includes('</head>')
     ? seoHtml.replace('</head>', `${headInjection}\n</head>`)
     : `${headInjection}\n${seoHtml}`;

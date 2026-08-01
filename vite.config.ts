@@ -12,6 +12,9 @@ export default defineConfig({
     dedupe: ['react', 'react-dom'],
   },
   build: {
+    // El manifiesto permite a server.js saber qué chunk corresponde a cada
+    // ruta y precargarlo, en vez de esperar a que React.lazy lo descubra.
+    manifest: true,
     // Optimizaciones de build
     rollupOptions: {
       output: {

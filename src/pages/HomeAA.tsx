@@ -1094,7 +1094,7 @@ const HomeAA = () => {
       <footer className="bg-[#0a2342] border-t border-white/5 text-white font-lato">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="mb-10 sm:mb-12">
-            <img src="/logo-sixteam-128.webp" alt="Sixteam" className="h-8 sm:h-10 w-auto mb-4" loading="lazy" />
+            <img src="/logo-sixteam-128.webp" alt="Sixteam" width="128" height="128" className="h-8 sm:h-10 w-auto mb-4" loading="lazy" />
             <p className="text-[#e0e0e0]/70 text-sm max-w-md">Tu equipo de Tecnología & IA, operando 24/7. Implementamos. Operamos. No te dejamos solo.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-6">

@@ -77,6 +77,8 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0" onClick={closeMobile}>
             <img
               src="/logo-sixteam-128.webp"
+              width="128"
+              height="128"
               alt="Sixteam.pro"
               className="h-8 sm:h-9 w-auto"
             />

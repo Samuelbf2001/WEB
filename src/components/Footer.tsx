@@ -17,6 +17,8 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img
                 src="/logo-sixteam-128.webp"
+                width="128"
+                height="128"
                 alt="Sixteam.pro Logo"
                 className="w-8 h-8"
                 loading="lazy"

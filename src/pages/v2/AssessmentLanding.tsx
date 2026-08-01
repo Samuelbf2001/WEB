@@ -259,7 +259,7 @@ const AssessmentLanding = () => {
       <header className="sticky top-0 z-40 bg-v2-surface-alt/90 backdrop-blur border-b border-v2-border-subtle">
         <Container size="wide" className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2.5">
-            <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" className="h-7 w-7 object-contain" />
+            <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" width="128" height="128" className="h-7 w-7 object-contain" />
             <span className="font-poppins font-bold text-[16px] text-v2-ink-heading">
               Sixteam<span className="text-v2-accent-teal-deep">.pro</span>
             </span>
@@ -679,7 +679,7 @@ const AssessmentLanding = () => {
       <footer className="bg-v2-surface-alt border-t border-v2-border-subtle">
         <Container size="wide" className="py-8 pb-24 md:pb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" className="h-6 w-6 object-contain" />
+            <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" width="128" height="128" className="h-6 w-6 object-contain" />
             <span className="font-lato text-[13px] text-v2-ink-muted">
               © {new Date().getFullYear()} Sixteam.pro: Operamos la tecnología de tu empresa.
             </span>

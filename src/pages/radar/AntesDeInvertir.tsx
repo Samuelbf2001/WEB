@@ -144,6 +144,8 @@ const AntesDeInvertir = () => {
             >
               <img
                 src="/logo-sixteam-128.webp"
+                width="128"
+                height="128"
                 alt="Sixteam.pro"
                 className="w-6 h-6"
                 loading="lazy"

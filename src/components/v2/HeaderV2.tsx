@@ -200,7 +200,7 @@ export const HeaderV2 = () => {
     >
       <Container className="flex h-14 items-center justify-between">
         <Link to="/" className="group flex items-center gap-2 shrink-0">
-          <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" className="h-8 w-8 object-contain" />
+          <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" width="128" height="128" fetchPriority="high" className="h-8 w-8 object-contain" />
           <span className="notranslate font-poppins font-bold text-[20px] md:text-[22px] tracking-tight text-v2-ink-heading">
             Sixteam<span className="text-v2-accent-teal">.</span>pro
           </span>

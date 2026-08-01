@@ -80,7 +80,7 @@ const WeeklyCardMockup = () => (
 
       {/* Footer */}
       <div className="flex items-center gap-3 px-6 py-4 border-t border-v2-border-subtle">
-        <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" className="h-7 w-7 object-contain flex-shrink-0" />
+        <img src="/logo-sixteam-128.webp" alt="Sixteam.pro" width="128" height="128" className="h-7 w-7 object-contain flex-shrink-0" />
         <p className="font-lato text-[12px] text-v2-ink-muted leading-tight">
           Operado por{" "}
           <span className="font-semibold text-v2-ink-heading">IA</span>

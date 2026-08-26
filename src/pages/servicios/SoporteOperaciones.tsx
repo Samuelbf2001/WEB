@@ -27,9 +27,9 @@ QUÉ HACEMOS CADA MES:
 - Alineamos ventas, marketing y servicio al cliente
 
 PLANES:
-- Ops Esencial: promo desde $199 USD/mes, 60 créditos, 1 agente IA activo, CRM incluido
-- Ops Integral: $499 USD/mes, 160 créditos, agentes IA multi-canal, integraciones avanzadas
-- Ops Total: desde $1,200 USD/mes, 400+ créditos, PM dedicado, equipo completo
+- Ops Esencial: promo desde $299 USD/mes, 60 créditos, 1 agente IA activo, CRM incluido
+- Ops Integral: $599 USD/mes, 160 créditos, agentes IA multi-canal, integraciones avanzadas
+- Ops Total: desde $1,500 USD/mes, 400+ créditos, PM dedicado, equipo completo
 
 DIFERENCIAL: No somos soporte reactivo. Somos proactivos: cada mes proponemos mejoras, ejecutamos iniciativas y medimos impacto.
 SIN contratos anuales. SLA 4 horas en días hábiles. Urgencias fines de semana.`;
@@ -46,7 +46,7 @@ const WA_BASE = 'https://wa.me/+573004188522?text=';
 const SoporteOperaciones = () => {
   useSEO({
     title: "RevOps y Soporte de Operaciones | Sixteam.pro | Operación CRM Mensual",
-    description: "Operación mensual de tu CRM con mejoras proactivas, agentes IA, reportes ejecutivos y soporte. planes Ops con promo desde $199 USD/mes.",
+    description: "Operación mensual de tu CRM con mejoras proactivas, agentes IA, reportes ejecutivos y soporte. planes Ops con promo desde $299 USD/mes.",
     canonical: "https://sixteam.pro/servicios/soporte-operaciones",
     ogUrl: "https://sixteam.pro/servicios/soporte-operaciones",
   });
@@ -61,7 +61,7 @@ const SoporteOperaciones = () => {
     {
       nombre: 'Ops Esencial',
       horas: '60 créditos/mes',
-      precio: 'promo desde $199 USD/mes',
+      precio: 'promo desde $299 USD/mes',
       horaExtra: 'Sin setup obligatorio',
       descripcion: 'Para activar una operación base con CRM, agente IA y acompañamiento mensual.',
       incluye: [
@@ -77,7 +77,7 @@ const SoporteOperaciones = () => {
     {
       nombre: 'Ops Integral',
       horas: '160 créditos/mes',
-      precio: '$499 USD/mes',
+      precio: '$599 USD/mes',
       horaExtra: 'Onboarding VIP incluido',
       descripcion: 'Para operar agentes IA en CRM, WhatsApp y email con integraciones y automatizaciones avanzadas.',
       incluye: [
@@ -93,7 +93,7 @@ const SoporteOperaciones = () => {
     {
       nombre: 'Ops Total',
       horas: '400+ créditos/mes',
-      precio: 'Desde $1,200 USD/mes',
+      precio: 'Desde $1,500 USD/mes',
       horaExtra: 'Se cotiza según alcance',
       descripcion: 'Para operaciones de mayor volumen con PM dedicado, equipo completo y estrategia continua.',
       incluye: [

@@ -643,7 +643,7 @@ const OpsUsa = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Scale</h3>
                     <div className="flex items-baseline gap-1.5 mt-2 flex-wrap">
-                      <span className="font-poppins font-black text-[30px] text-v2-ink-heading leading-none">From $1,200</span>
+                      <span className="font-poppins font-black text-[30px] text-v2-ink-heading leading-none">From $1,500</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /month</span>
                     </div>
                     <p className="font-lato text-[11px] text-v2-ink-muted mt-1">Quoted to your requirements</p>

@@ -160,7 +160,7 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: primer paso para ordenar la atención y responder más rápido a leads o clientes.',
     highlighted: false,
-    price: 'promo desde $199 USD/mes',
+    price: 'promo desde $299 USD/mes',
     impl: 'Sin setup obligatorio',
   },
   {
@@ -176,7 +176,7 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al pasar de operación manual a gestión con control, trazabilidad y roles definidos.',
     highlighted: true,
-    price: '$499 USD/mes',
+    price: '$599 USD/mes',
     impl: 'Sin setup obligatorio',
   },
   {
@@ -191,7 +191,7 @@ export const PRODUCTS: {
     ],
     moment: 'Cuando conviene: al escalar crecimiento, nutrir demanda y conectar captación con ventas en un solo flujo.',
     highlighted: false,
-    price: 'Desde $1,200 USD/mes',
+    price: 'Desde $1,500 USD/mes',
     impl: 'A cotizar según requerimientos',
   },
 ];

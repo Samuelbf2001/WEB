@@ -17,13 +17,13 @@ Página: /plataforma
 PLATAFORMA: CRM todo-en-uno configurado y operado por Sixteam.pro para empresas en Colombia y Latam.
 
 PLANES DISPONIBLES:
-1. Ops Esencial: promo desde $199 USD/mes
+1. Ops Esencial: promo desde $299 USD/mes
    Incluye: 60 créditos mensuales, 1 agente IA activo, plataforma CRM incluida y wallet de mensajería.
 
-2. Ops Integral: $499 USD/mes
+2. Ops Integral: $599 USD/mes
    Incluye: 160 créditos mensuales, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
 
-3. Ops Total: desde $1,200 USD/mes
+3. Ops Total: desde $1,500 USD/mes
    Incluye: desde 400 créditos mensuales, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 TIEMPO DE IMPLEMENTACIÓN: según alcance del plan y stack actual.
@@ -42,8 +42,8 @@ const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20conocer%20m%
 
 const Plataforma = () => {
   useSEO({
-    title: "Plataforma CRM: Sixteam.pro | Promo desde $199 USD/mes",
-    description: "Planes Ops todo-en-uno con promo desde $199 USD/mes. CRM, agentes IA, automatizaciones y operación mensual para empresas de servicios en Colombia.",
+    title: "Plataforma CRM: Sixteam.pro | Promo desde $299 USD/mes",
+    description: "Planes Ops todo-en-uno con promo desde $299 USD/mes. CRM, agentes IA, automatizaciones y operación mensual para empresas de servicios en Colombia.",
     canonical: "https://sixteam.pro/plataforma",
     ogUrl: "https://sixteam.pro/plataforma",
   });
@@ -107,7 +107,7 @@ const Plataforma = () => {
       tagline: 'Equipo de tecnología permanente',
       desc: 'Capacidad dedicada para operaciones de mayor volumen, con PM, equipo completo y estrategia continua de crecimiento.',
       price: '1,200',
-      impl: 'Desde $1,200 USD/mes',
+      impl: 'Desde $1,500 USD/mes',
       users: '400+ créditos/mes',
       accent: '#00bfa5',
       badge: 'Plataforma completa',

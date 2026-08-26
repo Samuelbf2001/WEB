@@ -48,7 +48,7 @@ const tableRows = [
     label: "Costo mensual",
     interno: "$10K–18K USD",
     freelance: "$3K–5K USD",
-    sixteam: "$499 USD",
+    sixteam: "$599 USD",
     sixteamCheck: false,
   },
   {
@@ -174,7 +174,7 @@ const PreciosV2 = () => {
               </div>
               <div className="w-full sm:w-auto px-6 py-4 text-center bg-v2-surface-teal-mist">
                 <p className="font-lato text-[13px] text-v2-accent-teal-deep font-semibold">Sixteam</p>
-                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $199 /mes · arrancamos en 48h</p>
+                <p className="font-poppins font-black text-[15px] text-v2-accent-teal-deep mt-0.5">desde $299 /mes · arrancamos en 48h</p>
               </div>
             </div>
 

@@ -112,7 +112,7 @@ const Servicios = () => {
       borderColor: 'border-[#1d70a2]/40',
       tag: 'RevOps',
       title: 'Tu equipo de RevOps externo',
-      price: 'promo desde $199 USD/mes',
+      price: 'promo desde $299 USD/mes',
       time: 'Mensual',
       description: 'Sixteam opera tu tecnología de revenue mes a mes, como si fuera tu propio equipo interno. CRM, automatizaciones y procesos alineados para que ventas, marketing y servicio trabajen como uno solo.',
       deliverables: [
@@ -138,7 +138,7 @@ const Servicios = () => {
     {
       icon: Clock,
       title: 'Soporte y operación mensual',
-      price: 'promo desde $199 USD/mes',
+      price: 'promo desde $299 USD/mes',
       description: 'Mantenimiento, actualizaciones, ajustes de flujos y soporte técnico continuo. Tu CRM siempre funcionando de manera óptima con un equipo especializado.',
     },
     {

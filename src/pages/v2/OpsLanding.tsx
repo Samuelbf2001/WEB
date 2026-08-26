@@ -164,8 +164,8 @@ const HeroPromoCard = () => (
         </div>
 
         <p className="mt-2.5 font-poppins font-bold text-[18px] leading-snug text-white">
-          Plan Esencial desde <span className="text-[#00bfa5]">$199</span>{" "}
-          <span className="font-lato text-[13px] font-normal text-white/40 line-through">$300</span>
+          Plan Esencial desde <span className="text-[#00bfa5]">$299</span>{" "}
+          <span className="font-lato text-[13px] font-normal text-white/40 line-through">$399</span>
           <span className="font-lato text-[12px] font-normal text-white/60"> USD/mes</span>
         </p>
 
@@ -262,7 +262,7 @@ const OpsLanding = () => {
   useSEO({
     title: "Sixteam Ops: Tu equipo de tecnología e IA, mes a mes | Sixteam.pro",
     description:
-      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Promo desde $199 USD/mes.",
+      "Humanos expertos + agentes de IA operan tu CRM, WhatsApp, automatizaciones y métricas. Sin contratar personal adicional. Promo desde $299 USD/mes.",
     noindex: true,
   });
 
@@ -644,11 +644,11 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Esencial</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$199</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$299</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
                     <p className="font-lato text-[12px] font-semibold text-v2-accent-teal-deep mt-1">
-                      Promo limitada · regular $300 · 20 cupos · ya se están ocupando
+                      Promo limitada · regular $399 · 20 cupos · ya se están ocupando
                     </p>
                     <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
                       Para emprendedores y negocios pequeños que quieren empezar a trabajar con
@@ -691,7 +691,7 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Integral</h3>
                     <div className="flex items-baseline gap-1.5 mt-2">
-                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$499</span>
+                      <span className="font-poppins font-black text-[38px] text-v2-ink-heading leading-none">$599</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
                     <p className="font-lato text-[13px] text-v2-ink-body leading-relaxed mt-3">
@@ -734,7 +734,7 @@ const OpsLanding = () => {
                     <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                     <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Total</h3>
                     <div className="flex items-baseline gap-1.5 mt-2 flex-wrap">
-                      <span className="font-poppins font-black text-[30px] text-v2-ink-heading leading-none">Desde $1,200</span>
+                      <span className="font-poppins font-black text-[30px] text-v2-ink-heading leading-none">Desde $1,500</span>
                       <span className="font-lato text-[14px] text-v2-ink-muted">USD /mes</span>
                     </div>
                     <p className="font-lato text-[11px] text-v2-ink-muted mt-1">A cotizar según requerimientos</p>

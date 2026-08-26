@@ -43,9 +43,9 @@ CÓMO FUNCIONA (4 pasos):
 4. Post-viaje: encuesta de satisfacción y reactivación para próxima temporada
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
-- Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
-- Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
+- Ops Esencial: promo desde $299 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Integral: $599 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
+- Ops Total: desde $1,500 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 RESULTADOS ESPERADOS: mejora significativa en tasa de conversión de cotización a reserva, reducción drástica del tiempo de respuesta al lead, multiplicar leads atendidos por asesor sin aumentar equipo.
 
@@ -918,7 +918,7 @@ const AgenciasDeViaje = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Esencial</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$199</span>
+                  <span className="font-poppins font-black text-white text-4xl">$299</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -957,7 +957,7 @@ const AgenciasDeViaje = () => {
               <div className="mb-5 mt-1">
                 <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">Ops Integral</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$499</span>
+                  <span className="font-poppins font-black text-white text-4xl">$599</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 160 créditos</p>
@@ -996,10 +996,10 @@ const AgenciasDeViaje = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Total</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$1,200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$1,500</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
-                <p className="text-[#e0e0e0]/40 text-xs">Desde $1,200 USD/mes · a cotizar según requerimientos</p>
+                <p className="text-[#e0e0e0]/40 text-xs">Desde $1,500 USD/mes · a cotizar según requerimientos</p>
               </div>
               <ul className="space-y-2.5 mb-7 flex-1">
                 {[
@@ -1046,7 +1046,7 @@ const AgenciasDeViaje = () => {
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$199 USD promo</p>
+                  <p className="text-white font-poppins font-black text-2xl">$299 USD promo</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button

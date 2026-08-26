@@ -41,9 +41,9 @@ CÓMO FUNCIONA (4 pasos):
 4. Cliente cerrado: activación de recordatorios de renovación y programa de referidos
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
-- Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
-- Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
+- Ops Esencial: promo desde $299 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Integral: $599 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
+- Ops Total: desde $1,500 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 RESULTADOS ESPERADOS: +28% tasa de cierre de propuestas, -60% tiempo administrativo, crecimiento del 40% sin añadir personal, nunca más un seguimiento olvidado.
 
@@ -505,7 +505,7 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Esencial</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$199</span>
+                  <span className="font-poppins font-black text-white text-4xl">$299</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -536,7 +536,7 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Integral</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$499</span>
+                  <span className="font-poppins font-black text-white text-4xl">$599</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Sin setup obligatorio · 160 créditos</p>
@@ -565,7 +565,7 @@ const ServiciosGenerales = () => {
               <div className="mb-6">
                 <p className="text-[#00bfa5] text-xs font-lato font-medium tracking-widest uppercase mb-2">Ops Total</p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$1,200</span>
+                  <span className="font-poppins font-black text-white text-4xl">$1,500</span>
                   <span className="text-[#e0e0e0] text-sm mb-1">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/60 text-xs">Desde · a cotizar según requerimientos</p>

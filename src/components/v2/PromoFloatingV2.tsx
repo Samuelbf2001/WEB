@@ -30,8 +30,8 @@ const PromoFloatingV2 = () => {
         </div>
 
         <p className="mt-2.5 font-poppins text-[17px] font-bold leading-tight text-white">
-          Plan Esencial desde <span className="text-[#00bfa5]">$199</span>{" "}
-          <span className="font-normal text-[13px] text-white/45 line-through">$300</span>
+          Plan Esencial desde <span className="text-[#00bfa5]">$299</span>{" "}
+          <span className="font-normal text-[13px] text-white/45 line-through">$399</span>
           <span className="font-normal text-[13px] text-white/60"> USD/mes</span>
         </p>
 

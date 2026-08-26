@@ -81,7 +81,7 @@ const Soluciones = () => {
               {[
                 { n: "01", label: "Assessment", sub: "$2,500 · único",     cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
                 { n: "02", label: "Transform",  sub: "Desde $1,500 · proyecto", cls: "border-v2-border-medium bg-white text-v2-ink-heading" },
-                { n: "03", label: "Ops ⭐",     sub: "Promo desde $199/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
+                { n: "03", label: "Ops ⭐",     sub: "Promo desde $299/mes",     cls: "border-v2-accent-teal bg-v2-surface-teal-mist text-v2-accent-teal-deep shadow-[0_4px_16px_rgba(0,191,165,0.15)]", bold: true },
               ].map((step, i) => (
                 <div key={step.n} className="flex items-center gap-2">
                   <div className={`flex flex-col items-center px-5 py-3.5 rounded-2xl border transition-transform hover:-translate-y-0.5 duration-200 ${step.cls}`}>
@@ -359,10 +359,10 @@ const Soluciones = () => {
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                   <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Esencial</h3>
                   <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$199</span>
+                    <span className="font-poppins font-black text-[40px] text-v2-ink-heading leading-none">$299</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
-                  <p className="font-lato text-[12px] text-v2-accent-teal-deep font-semibold mt-1">promo limitada · regular $300 · 20 cupos</p>
+                  <p className="font-lato text-[12px] text-v2-accent-teal-deep font-semibold mt-1">promo limitada · regular $399 · 20 cupos</p>
                   <p className="font-lato text-[14px] text-v2-ink-body leading-relaxed mt-3">
                     Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA sin grandes inversiones.
                   </p>
@@ -396,7 +396,7 @@ const Soluciones = () => {
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                   <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Integral</h3>
                   <div className="flex items-baseline gap-1.5 mt-2">
-                    <span className="font-poppins font-black text-[40px] text-v2-accent-teal-deep leading-none">$499</span>
+                    <span className="font-poppins font-black text-[40px] text-v2-accent-teal-deep leading-none">$599</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
                   <p className="font-lato text-[12px] text-v2-ink-muted mt-1">pago mensual · sin permanencia</p>
@@ -430,7 +430,7 @@ const Soluciones = () => {
                   <p className="font-lato text-[10px] font-bold uppercase tracking-widest text-v2-ink-muted mb-1">Plan</p>
                   <h3 className="font-poppins font-bold text-[22px] text-v2-ink-heading">Ops Total</h3>
                   <div className="flex items-baseline gap-1.5 mt-2 flex-wrap">
-                    <span className="font-poppins font-black text-[32px] text-v2-ink-heading leading-none">Desde $1,200</span>
+                    <span className="font-poppins font-black text-[32px] text-v2-ink-heading leading-none">Desde $1,500</span>
                     <span className="font-lato text-[14px] text-v2-ink-muted">/mes</span>
                   </div>
                   <p className="font-lato text-[12px] text-v2-ink-muted mt-1">a cotizar según requerimientos</p>
@@ -468,7 +468,7 @@ const Soluciones = () => {
                 <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-ink-muted text-right w-[110px]">Ops Esencial</span>
                 <span className="font-lato text-[11px] font-bold uppercase tracking-widest text-v2-accent-teal-deep text-right w-[130px]">Ops Integral</span>
               </div>
-              <OpsRow label="Precio mensual"                  base="$199 USD promo"         avanzado="$499 USD" />
+              <OpsRow label="Precio mensual"                  base="$299 USD promo"         avanzado="$599 USD" />
               <OpsRow label="Créditos / mes"                  base="60"               avanzado="160"       highlight />
               <OpsRow label="Agentes de IA"                   base="1 canal"          avanzado="Multi-canal" />
               <OpsRow label="Configuraciones avanzadas"       base="Según créditos"   avanzado="Incluidas" highlight />

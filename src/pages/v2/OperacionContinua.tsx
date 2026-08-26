@@ -82,18 +82,18 @@ const agentPills = ["Aura", "Carlos", "Laura", "Emma", "Daniel", "Diana"];
 const plans = [
   {
     name: "Esencial",
-    price: "$199",
+    price: "$299",
     desc: "Para emprendedores y negocios pequeños que quieren empezar con tecnología e IA.",
   },
   {
     name: "Integral",
-    price: "$499",
+    price: "$599",
     desc: "Operación multi-canal con CRM, automatizaciones, integraciones y agentes IA.",
     featured: true,
   },
   {
     name: "Total",
-    price: "Desde $1,200",
+    price: "Desde $1,500",
     desc: "Capacidad dedicada, PM y estrategia continua para operaciones de mayor volumen.",
   },
 ];

@@ -88,7 +88,7 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
 const HomeAA = () => {
   useSEO({
     title: 'Sixteam | Tu Equipo de Tecnología & IA, Operando 24/7',
-    description: 'Implementación y operación continua de la tecnología e IA de tu negocio: CRM, WhatsApp, automatizaciones, agentes IA, pauta. Promo desde $199 USD/mes.',
+    description: 'Implementación y operación continua de la tecnología e IA de tu negocio: CRM, WhatsApp, automatizaciones, agentes IA, pauta. Promo desde $299 USD/mes.',
     canonical: 'https://sixteam.pro',
     ogUrl: 'https://sixteam.pro',
   });
@@ -1061,7 +1061,7 @@ const HomeAA = () => {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[#e0e0e0]/70 text-base sm:text-lg mb-8 sm:mb-10">
-              Promo desde <strong className="text-white">$199 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong>, porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
+              Promo desde <strong className="text-white">$299 USD/mes</strong>. Diagnóstico de cuña <strong className="text-white">$2,500 USD</strong>, porque llevamos años operando para negocios en Latam y sabemos lo que se rompe.
             </p>
           </Reveal>
           <Reveal delay={200}>

@@ -49,11 +49,11 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
             </div>
 
             <h2 className="mt-5 font-poppins text-[32px] font-black leading-[1.05] tracking-normal text-white sm:text-[42px] lg:text-[52px]">
-              Plan Esencial Sixteam Ops desde $199 USD/mes
+              Plan Esencial Sixteam Ops desde $299 USD/mes
             </h2>
 
             <p className="mt-5 max-w-2xl font-lato text-[17px] leading-[1.7] text-[#e0e0e0] sm:text-[18px]">
-              Precio regular $300 USD/mes. Promoción por cupos limitados desde $199 USD/mes para los primeros 20 clientes. Los cupos ya se están copando.
+              Precio regular $399 USD/mes. Promoción por cupos limitados desde $299 USD/mes para los primeros 20 clientes. Los cupos ya se están copando.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
@@ -91,7 +91,7 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
                 </p>
                 <div className="mt-3 flex items-end gap-2">
                   <span className="font-poppins text-[56px] font-black leading-none text-white sm:text-[68px]">
-                    $199
+                    $299
                   </span>
                   <span className="pb-2 font-lato text-lg font-semibold text-[#e0e0e0]">USD/mes</span>
                 </div>
@@ -99,7 +99,7 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
 
               <div className="text-right">
                 <p className="font-lato text-xs uppercase tracking-[0.16em] text-[#e0e0e0]">Regular</p>
-                <p className="font-poppins text-2xl font-bold text-white/60 line-through">$300</p>
+                <p className="font-poppins text-2xl font-bold text-white/60 line-through">$399</p>
               </div>
             </div>
 

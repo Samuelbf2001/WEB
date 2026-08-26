@@ -1034,7 +1034,7 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$199</span>
+                    <span className="text-3xl font-bold text-white">$299</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
                   <p className="text-gray-500 text-xs">60 créditos IA | 1 agente activo | sin setup obligatorio</p>
@@ -1063,7 +1063,7 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$499</span>
+                    <span className="text-3xl font-bold text-white">$599</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
                   <p className="text-gray-500 text-xs">160 créditos IA | integraciones avanzadas | onboarding VIP</p>
@@ -1092,7 +1092,7 @@ const Index = () => {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-end gap-1 mb-1">
-                    <span className="text-3xl font-bold text-white">$1,200</span>
+                    <span className="text-3xl font-bold text-white">$1,500</span>
                     <span className="text-gray-400 text-sm mb-1">USD/mes</span>
                   </div>
                   <p className="text-gray-500 text-xs">Desde | 400+ créditos IA | PM dedicado</p>

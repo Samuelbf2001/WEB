@@ -37,9 +37,9 @@ SOLUCIONES / FUNCIONALIDADES:
 - Deduplicación automática de leads y reportes por asesor, canal e inmueble
 
 PLANES Y PRECIOS:
-- Ops Esencial: promo desde $199 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
-- Ops Integral: $499 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
-- Ops Total: desde $1,200 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
+- Ops Esencial: promo desde $299 USD/mes. Incluye 60 créditos, 1 agente IA activo, plataforma CRM y wallet de mensajería.
+- Ops Integral: $599 USD/mes. Incluye 160 créditos, agentes IA multi-canal, integraciones y automatizaciones avanzadas.
+- Ops Total: desde $1,500 USD/mes. Incluye desde 400 créditos, PM dedicado, equipo completo y llamadas estratégicas semanales.
 
 IMPLEMENTACIÓN: 2-3 semanas, sin contratos anuales, soporte en español. Se integra con Metrocuadrado y Fincaraíz.`;
 
@@ -814,7 +814,7 @@ const InmobiliariasV2 = () => {
               <div className="mb-5">
                 <span className="text-[#1d70a2] text-[10px] font-bold uppercase tracking-widest">Ops Esencial</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$199</span>
+                  <span className="font-poppins font-black text-white text-4xl">$299</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 60 créditos</p>
@@ -853,7 +853,7 @@ const InmobiliariasV2 = () => {
               <div className="mb-5 mt-1">
                 <span className="text-[#00bfa5] text-[10px] font-bold uppercase tracking-widest">Ops Integral</span>
                 <div className="flex items-end gap-1.5 mt-2 mb-1">
-                  <span className="font-poppins font-black text-white text-4xl">$499</span>
+                  <span className="font-poppins font-black text-white text-4xl">$599</span>
                   <span className="text-[#e0e0e0]/60 text-sm mb-1.5">USD/mes</span>
                 </div>
                 <p className="text-[#e0e0e0]/40 text-xs">Sin setup obligatorio · 160 créditos</p>
@@ -903,7 +903,7 @@ const InmobiliariasV2 = () => {
               </div>
               <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
                 <div>
-                  <p className="text-white font-poppins font-black text-2xl">$199 USD promo</p>
+                  <p className="text-white font-poppins font-black text-2xl">$299 USD promo</p>
                   <p className="text-[#e0e0e0]/45 text-xs sm:text-right">desde / mes</p>
                 </div>
                 <button

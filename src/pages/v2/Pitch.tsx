@@ -116,7 +116,7 @@ const compDimensions = [
 const plans = [
   {
     name: "ESENCIAL",
-    price: "$199",
+    price: "$299",
     period: "/mes",
     target: "Negocios pequeños y equipos en arranque",
     features: ["1 agente IA activo", "60 créditos / mes", "CRM incluido", "Wallet de mensajería"],
@@ -124,7 +124,7 @@ const plans = [
   },
   {
     name: "INTEGRAL",
-    price: "$499",
+    price: "$599",
     period: "/mes",
     target: "Operaciones multi-canal",
     features: ["160 créditos / mes", "Multi-canal", "Integraciones avanzadas", "Bono onboarding VIP"],
@@ -132,7 +132,7 @@ const plans = [
   },
   {
     name: "TOTAL",
-    price: "Desde $1,200",
+    price: "Desde $1,500",
     period: "/mes",
     target: "Operaciones de mayor volumen",
     features: ["Desde 400 créditos / mes", "PM dedicado", "Llamadas semanales", "Acceso al equipo completo"],

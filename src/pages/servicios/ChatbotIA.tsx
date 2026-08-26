@@ -159,7 +159,7 @@ const ChatbotIA = () => {
     'Integración con tu CRM para registro automático de contactos',
     'Escalación a agente humano con contexto preservado',
     'Panel de supervisión y métricas de conversaciones',
-    'Soporte y operación mensual disponible dentro de Ops promo desde $199 USD/mes',
+    'Soporte y operación mensual disponible dentro de Ops promo desde $299 USD/mes',
   ];
 
   const faqs = [
@@ -181,7 +181,7 @@ const ChatbotIA = () => {
     },
     {
       q: '¿El plan mensual es obligatorio después de la implementación?',
-      a: 'No es obligatorio, pero sí muy recomendado. Ops promo desde $199 USD/mes incluye operación mensual, monitoreo, ajustes y soporte técnico según el plan contratado.',
+      a: 'No es obligatorio, pero sí muy recomendado. Ops promo desde $299 USD/mes incluye operación mensual, monitoreo, ajustes y soporte técnico según el plan contratado.',
     },
   ];
 
@@ -225,7 +225,7 @@ const ChatbotIA = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <DollarSign className="w-5 h-5 text-[#1d70a2]" />
-                  <span className="text-white font-semibold">Ops promo desde $199 USD/mes</span>
+                  <span className="text-white font-semibold">Ops promo desde $299 USD/mes</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
                   <Clock className="w-5 h-5 text-[#00bfa5]" />
@@ -400,7 +400,7 @@ const ChatbotIA = () => {
               <div className="text-5xl font-poppins font-black text-white mb-1">Desde $1,500</div>
               <p className="text-gray-300 text-sm mb-1">USD · proyecto Transform</p>
               <div className="mt-4 mb-1">
-                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">Ops promo desde $199/mes</span>
+                <span className="text-2xl font-poppins font-bold text-[#00bfa5]">Ops promo desde $299/mes</span>
               </div>
               <p className="text-gray-400 text-xs mb-6">Operación, actualizaciones y soporte mensual según plan</p>
               <ul className="space-y-3 mb-8">

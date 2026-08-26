@@ -23,7 +23,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "¿Cuánto cuesta operar con ustedes mes a mes?",
-    a: "Después del Diagnóstico, los planes de Ops son Esencial (regular $300 USD/mes, promo desde $199 USD/mes por 20 cupos), Integral ($499 USD/mes) y Total (desde $1,200 USD/mes, a cotizar según requerimientos). Integral tiene precio público y Total se define por alcance. Facturamos mensual y puedes ajustar el plan con 30 días de aviso.",
+    a: "Después del Diagnóstico, los planes de Ops son Esencial (regular $399 USD/mes, promo desde $299 USD/mes por 20 cupos), Integral ($599 USD/mes) y Total (desde $1,500 USD/mes, a cotizar según requerimientos). Integral tiene precio público y Total se define por alcance. Facturamos mensual y puedes ajustar el plan con 30 días de aviso.",
   },
   {
     q: "¿En qué se diferencian de una agencia de marketing o CRM?",

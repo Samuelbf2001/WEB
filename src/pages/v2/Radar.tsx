@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "¿Qué pasa después del Diagnóstico?",
-    a: "Presentamos los hallazgos y te damos dos opciones: continúas con un plan Ops mensual en promo desde $199/mes donde operamos el sistema por ti, o te quedas con el mapa y la plataforma montada y la operas internamente. Sin presión.",
+    a: "Presentamos los hallazgos y te damos dos opciones: continúas con un plan Ops mensual en promo desde $299/mes donde operamos el sistema por ti, o te quedas con el mapa y la plataforma montada y la operas internamente. Sin presión.",
   },
   {
     q: "¿Cuánto tiempo me toma a mí?",

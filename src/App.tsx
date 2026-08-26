@@ -8,6 +8,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import PromoPricingModule from "./components/PromoPricingModule";
 import LocalTranslator from "./i18n/LocalTranslator";
 import { LocaleProvider } from "./i18n/LocaleProvider";
+import { useLocale } from "./i18n/LocaleContext";
 
 const NotFound = lazy(() => import('./pages/NotFound'));
 const PoliticasPrivacidad = lazy(() => import('./pages/PoliticasPrivacidad'));
@@ -55,6 +56,7 @@ const PreciosV2 = lazy(() => import('./pages/v2/Precios'));
 const AssessmentV2 = lazy(() => import('./pages/v2/Assessment'));
 const PitchV2 = lazy(() => import('./pages/v2/Pitch'));
 const OpsLandingV2 = lazy(() => import('./pages/v2/OpsLanding'));
+const OpsUsaLanding = lazy(() => import('./pages/v2/OpsUsa'));
 const AssessmentLanding = lazy(() => import('./pages/v2/AssessmentLanding'));
 
 // Las rutas /v2/* eran el prefijo interno del rediseño; ahora viven en la raíz.
@@ -63,6 +65,13 @@ const LegacyV2Redirect = () => {
   const { pathname, search, hash } = useLocation();
   const target = pathname.replace(/^\/v2/, '') || '/';
   return <Navigate to={`${target}${search}${hash}`} replace />;
+};
+
+// /ops la comparten dos campañas: cold email USA (inglés) y pauta LATAM (español).
+// El locale ya resuelto por LocaleProvider (?lang → manual → IP → navegador) decide cuál se muestra.
+const OpsGate = () => {
+  const { locale } = useLocale();
+  return locale === "en" ? <OpsUsaLanding /> : <OpsLandingV2 />;
 };
 
 const queryClient = new QueryClient();
@@ -88,6 +97,8 @@ const v2PromoPaths = new Set([
   "/assessment",
   "/pitch",
   "/ops",
+  "/ops-en",
+  "/ops-es",
   "/lp/assessment",
   "/industrias",
   "/industrias/educacion",
@@ -140,7 +151,9 @@ const App = () => {
               <Route path="/precios" element={<PreciosV2 />} />
               <Route path="/assessment" element={<AssessmentV2 />} />
               <Route path="/pitch" element={<PitchV2 />} />
-              <Route path="/ops" element={<OpsLandingV2 />} />
+              <Route path="/ops" element={<OpsGate />} />
+              <Route path="/ops-en" element={<OpsUsaLanding />} />
+              <Route path="/ops-es" element={<OpsLandingV2 />} />
               <Route path="/lp/assessment" element={<AssessmentLanding />} />
               <Route path="/industrias" element={<IndustriasV2 />} />
               <Route path="/industrias/educacion" element={<EducacionV2 />} />

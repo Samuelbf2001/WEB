@@ -77,26 +77,44 @@ const HeroAnchorCard = () => (
 );
 
 /* ── Nota del fundador + prueba social (reemplaza el video en la versión USA) ── */
-const FounderNoteCard = () => (
-  <div className="w-full max-w-[320px] mx-auto lg:mr-0 rounded-3xl border border-v2-border-medium bg-white shadow-[0_24px_64px_rgba(10,35,66,0.12)] rotate-[1.5deg] hover:rotate-0 transition-transform duration-300 p-6">
-    <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-teal-deep">
-      A note from Ernesto
-    </p>
-    <p className="font-poppins font-semibold text-[19px] leading-snug text-v2-ink-heading mt-3">
-      “You already invested in HubSpot. The next step is making sure it works as hard as your team
-      does.”
-    </p>
-    <div className="mt-4">
-      <p className="font-lato text-[14px] font-bold text-v2-ink-heading">Ernesto Hernández</p>
-      <p className="font-lato text-[12.5px] text-v2-ink-muted">Co-Founder, Sixteam</p>
+const FounderProofCard = () => (
+  <figure className="w-full max-w-[320px] mx-auto lg:mr-0">
+    <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-v2-border-medium shadow-[0_24px_64px_rgba(10,35,66,0.18)] rotate-[1.5deg] hover:rotate-0 transition-transform duration-300">
+      <div className="absolute inset-0 flex flex-col bg-gradient-to-b from-[#f4ecd8] to-[#e6d9b8]">
+        <img
+          src="/founders-slot.webp"
+          alt="Sixteam founding team"
+          decoding="async"
+          className="absolute bottom-0 inset-x-0 h-[70%] w-full object-cover object-top"
+        />
+        <div className="relative mt-auto px-5 pb-5 pt-16 bg-gradient-to-t from-[#0a2342]/92 via-[#0a2342]/55 to-transparent">
+          <p className="font-poppins font-semibold text-[15px] leading-snug text-white">
+            “You already invested in HubSpot. The next step is making sure it works as hard as your
+            team does.”
+          </p>
+          <p className="font-lato text-[12.5px] font-bold text-white mt-3">Ernesto Hernández</p>
+          <p className="font-lato text-[11.5px] text-white/70">Co-Founder, Sixteam</p>
+        </div>
+      </div>
     </div>
-    <div className="h-px bg-v2-border-subtle my-4" />
-    <p className="font-lato text-[13px] text-v2-ink-muted leading-[1.6]">
-      That is the promise in the email that brought you here. This page shows exactly how we keep
-      it.
-    </p>
-  </div>
+    <figcaption className="font-lato text-[12px] text-v2-ink-muted text-center mt-4">
+      The founding team you will be talking to.
+    </figcaption>
+  </figure>
 );
+
+/* ── Stack de herramientas (logos que ya usan) ───────────────────── */
+const STACK_LOGOS = [
+  { src: "/HubSpot-Logo-500x281.png", alt: "HubSpot", size: "h-9 md:h-10" },
+  { src: "/make-logo.png", alt: "Make", size: "h-7 md:h-8" },
+  { src: "/N8n-logo-new.svg.png", alt: "n8n", size: "h-7 md:h-8" },
+  { src: "/zapier-logo-new.png", alt: "Zapier", size: "h-7 md:h-8" },
+  { src: "/Mailchimp-logo.png", alt: "Mailchimp", size: "h-7 md:h-8" },
+  { src: "/Whatsapp-Business-01-768x269.png", alt: "WhatsApp Business", size: "h-7 md:h-8" },
+  { src: "/ads meta_PNG12.png", alt: "Meta Ads", size: "h-7 md:h-8" },
+  { src: "/Google_Ads_logo.svg.png", alt: "Google Ads", size: "h-7 md:h-8" },
+  { src: "/Logo_Google_Analytics.svg.png", alt: "Google Analytics", size: "h-7 md:h-8" },
+] as const;
 
 /* ── Especialistas + agentes IA (versión inglesa, roles distintos a AgentsBlock ES) ── */
 const US_AGENTS = [
@@ -324,7 +342,7 @@ const OpsUsa = () => {
 
               {/* Nota del fundador + prueba social */}
               <div className="flex flex-col items-center lg:items-end gap-6">
-                <FounderNoteCard />
+                <FounderProofCard />
                 <div className="w-full max-w-[320px] mx-auto lg:mr-0 grid grid-cols-3 gap-2 rounded-2xl border border-v2-border-subtle bg-white/70 backdrop-blur-sm px-4 py-4">
                   {[
                     { icon: <Briefcase className="h-3.5 w-3.5" />, n: "50+", label: "Projects delivered" },
@@ -344,6 +362,33 @@ const OpsUsa = () => {
                 </div>
               </div>
               </div>
+            </Container>
+          </Section>
+
+          {/* ── STACK BAND: credibilidad inmediata después del hero ── */}
+          <Section surface="white" size="compact">
+            <Container size="wide">
+              <div className="text-center v2-reveal">
+                <p className="font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-blue">
+                  The stack you already pay for
+                </p>
+                <h2 className="font-poppins font-bold text-[20px] md:text-[24px] text-v2-ink-heading mt-2">
+                  We work inside your tools, not around them.
+                </h2>
+              </div>
+              <div className="v2-reveal v2-d1 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 mt-8">
+                {STACK_LOGOS.map((logo) => (
+                  <img
+                    key={logo.alt}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={`${logo.size} w-auto object-contain opacity-55 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300`}
+                  />
+                ))}
+              </div>
+              <p className="v2-reveal v2-d2 text-center font-lato text-[12.5px] text-v2-ink-muted mt-7">
+                Plus your listing portals, e-signature, and dialers. If it has an API, we connect it.
+              </p>
             </Container>
           </Section>
 
@@ -406,6 +451,47 @@ const OpsUsa = () => {
                     industry research.
                   </p>
                 </div>
+              </div>
+            </Container>
+          </Section>
+
+          {/* ── IMPACT BAND: ancla oscura de trayectoria ── */}
+          <Section surface="navy-dark" size="compact" className="overflow-hidden">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-32 -left-32 w-[640px] h-[640px] rounded-full"
+              style={{
+                background:
+                  "radial-gradient(circle at 60% 40%, rgba(0,191,165,0.16) 0%, rgba(29,112,162,0.10) 45%, transparent 70%)",
+              }}
+            />
+            <Container size="wide">
+              <div className="relative">
+                <p className="v2-reveal text-center font-lato text-[11px] font-semibold uppercase tracking-[0.18em] text-v2-accent-teal">
+                  Track record
+                </p>
+                <div className="v2-reveal v2-d1 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-6 mt-8">
+                  {[
+                    { n: "50+", label: "Projects delivered" },
+                    { n: "15+", label: "Industries served" },
+                    { n: "98%", label: "Client satisfaction" },
+                  ].map((s, i) => (
+                    <div
+                      key={s.label}
+                      className={`text-center ${i > 0 ? "sm:border-l sm:border-white/10" : ""}`}
+                    >
+                      <p className="font-poppins font-black text-[44px] md:text-[54px] text-white leading-none">
+                        {s.n}
+                      </p>
+                      <p className="font-lato text-[13px] text-white/60 uppercase tracking-wider mt-2">
+                        {s.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="v2-reveal v2-d2 text-center font-lato text-[14px] text-white/70 mt-10 max-w-[620px] mx-auto">
+                  Different industries, same problem: good tools nobody operates.
+                </p>
               </div>
             </Container>
           </Section>
@@ -577,6 +663,44 @@ const OpsUsa = () => {
             </Container>
           </Section>
 
+          {/* ── PROOF: la evidencia que hoy falta ── */}
+          <Section surface="sand-mist" size="compact">
+            <Container size="narrow">
+              <div className="text-center v2-reveal">
+                <Eyebrow variant="teal">Proof</Eyebrow>
+                <h2
+                  className="font-poppins font-bold text-v2-ink-heading mt-3"
+                  style={{ fontSize: "clamp(26px, 3.4vw, 36px)", lineHeight: "1.15" }}
+                >
+                  The pattern repeats in every industry we operate.
+                </h2>
+              </div>
+
+              <div className="v2-reveal v2-d1 mt-10 bg-white border border-v2-border-subtle rounded-2xl p-8 md:p-10">
+                <span aria-hidden className="font-poppins font-black text-[56px] leading-none text-v2-accent-teal/25">
+                  “
+                </span>
+                <p className="font-poppins font-semibold text-[19px] md:text-[22px] leading-[1.45] text-v2-ink-heading mt-2">
+                  I thought I needed to hire a VP of Sales. It turned out I needed to actually operate
+                  the CRM I already had. The ROI was immediate.
+                </p>
+                <div className="flex items-center gap-3 mt-6 pt-6 border-t border-v2-border-subtle">
+                  <div className="w-10 h-10 rounded-full bg-v2-surface-navy-mist border border-v2-accent-blue/25 flex items-center justify-center font-poppins font-bold text-[13px] text-v2-accent-blue">
+                    MA
+                  </div>
+                  <div>
+                    <p className="font-lato text-[14px] font-bold text-v2-ink-heading">María Acevedo</p>
+                    <p className="font-lato text-[12.5px] text-v2-ink-muted">CEO · Student Travel Center</p>
+                  </div>
+                </div>
+                <p className="font-lato text-[12px] text-v2-ink-muted mt-4">
+                  Translated from Spanish. Student Travel Center operates in education travel, not real
+                  estate. The operating problem was identical.
+                </p>
+              </div>
+            </Container>
+          </Section>
+
           {/* ── PRICING ── */}
           <Section id="pricing" surface="alt" size="default" className="scroll-mt-24">
             <Container>
@@ -738,7 +862,7 @@ const OpsUsa = () => {
           </Section>
 
           {/* ── FAQ ── */}
-          <Section surface="default" size="default">
+          <Section surface="default" size="compact">
             <Container size="narrow">
               <div className="text-center v2-reveal">
                 <Eyebrow variant="teal">Frequently asked questions</Eyebrow>
@@ -765,7 +889,7 @@ const OpsUsa = () => {
           </Section>
 
           {/* ── FINAL CTA ── */}
-          <Section surface="navy-dark" size="spacious" className="overflow-hidden">
+          <Section surface="navy-dark" size="spacious" className="overflow-hidden pb-0 md:pb-0">
             <div
               aria-hidden
               className="pointer-events-none absolute -top-32 -right-32 w-[640px] h-[640px] rounded-full"
@@ -819,7 +943,7 @@ const OpsUsa = () => {
           </Section>
 
           {/* ── BOOKING ── */}
-          <Section id="book" surface="default" size="default" className="scroll-mt-24">
+          <Section id="book" surface="default" size="compact" className="scroll-mt-24">
             <Container size="wide">
               <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] gap-10 lg:gap-14 items-start">
                 <div className="v2-reveal lg:sticky lg:top-28">

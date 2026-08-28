@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import type { Locale } from "./countries";
 
-export type LocaleSource = "query" | "manual" | "ip" | "browser" | "default";
+export type LocaleSource = "query" | "path" | "manual" | "ip" | "browser" | "default";
 
 export interface LocaleContextValue {
   locale: Locale;

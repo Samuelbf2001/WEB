@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, Check, ChevronDown, FileText, Mail, Map, TrendingDown, Wrench } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
@@ -109,17 +110,17 @@ const Radar = () => {
             pierdes dinero y la plataforma base ya implementada para arrancar.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Diagnóstico ($2,500)
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
-            </a>
-            <a href="/contacto">
+            </Link>
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">
                 Hablar con Samuel antes
               </ButtonV2>
-            </a>
+            </Link>
           </div>
           <p className="mt-5 font-lato text-[11px] font-medium uppercase tracking-widest text-v2-accent-teal-deep">
             Pago único · 2 semanas · ~50% de los clientes continúan en Ops mensual.
@@ -360,12 +361,12 @@ const Radar = () => {
             $2,500 USD pago único. Mapa de operación, cuantificación de fugas, roadmap priorizado y plataforma base montada. Todo en 14 días.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Diagnóstico ($2,500)
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
-            </a>
+            </Link>
             <a href="mailto:hola@sixteam.pro">
               <ButtonV2
                 variant="outline"

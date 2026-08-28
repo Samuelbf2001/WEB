@@ -1,5 +1,7 @@
 import { Languages } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { useLocale } from "./LocaleContext";
+import { toEnglishPath } from "./countries";
 
 interface LanguageToggleProps {
   compact?: boolean;
@@ -8,13 +10,24 @@ interface LanguageToggleProps {
 
 export const LanguageToggle = ({ compact = false, className = "" }: LanguageToggleProps) => {
   const { locale, setLocale } = useLocale();
+  const { pathname, search, hash } = useLocation();
   const nextLocale = locale === "es" ? "en" : "es";
   const label = locale === "es" ? "English" : "Español";
 
+  // useLocation ya devuelve la ruta sin el basename, así que pathname siempre
+  // es la versión española. Se renderiza como <a> con href real para que el
+  // otro idioma sea rastreable, aunque el click lo maneje setLocale.
+  const targetPath = nextLocale === "en" ? toEnglishPath(pathname) : pathname;
+
   return (
-    <button
-      type="button"
-      onClick={() => setLocale(nextLocale)}
+    <a
+      href={`${targetPath}${search}${hash}`}
+      hrefLang={nextLocale}
+      onClick={(event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+        event.preventDefault();
+        setLocale(nextLocale);
+      }}
       aria-label={locale === "es" ? "Cambiar idioma a inglés" : "Switch language to Spanish"}
       title={locale === "es" ? "Cambiar a inglés" : "Switch to Spanish"}
       className={[
@@ -25,7 +38,7 @@ export const LanguageToggle = ({ compact = false, className = "" }: LanguageTogg
     >
       <Languages className="h-3.5 w-3.5" />
       <span>{compact ? nextLocale.toUpperCase() : label}</span>
-    </button>
+    </a>
   );
 };
 

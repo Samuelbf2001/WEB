@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ArrowRight, BadgePercent, X } from "lucide-react";
 import ButtonV2 from "@/components/v2/ButtonV2";
@@ -45,10 +46,10 @@ const PromoFloatingV2 = () => {
 
         <div className="mt-3.5 flex flex-col items-center gap-2">
           <ButtonV2 asChild size="sm" className="w-full justify-center">
-            <a href="/contacto?promo=esencial-20#agenda">
+            <Link to="/contacto?promo=esencial-20#agenda">
               Tomar la promoción
               <ArrowRight className="h-3.5 w-3.5" aria-hidden />
-            </a>
+            </Link>
           </ButtonV2>
           <a
             href="#ops"

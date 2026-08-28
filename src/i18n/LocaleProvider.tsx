@@ -8,13 +8,16 @@ import {
 import { LocaleContext, type LocaleSource } from "./LocaleContext";
 import {
   isSupportedLocale,
-  localeFromCountry,
-  localeFromNavigator,
+  localeFromPath,
   normalizeCountry,
+  pathForLocale,
   type Locale,
 } from "./countries";
 
 const STORAGE_KEY = "sixteam.locale";
+// El servidor lee esta cookie para no volver a auto-redirigir a quien ya eligió.
+const LOCALE_COOKIE = "sixteam_locale";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 const getQueryLocale = () => {
   if (typeof window === "undefined") return undefined;
@@ -22,43 +25,42 @@ const getQueryLocale = () => {
   return isSupportedLocale(locale) ? locale : undefined;
 };
 
-const getStoredLocale = () => {
+const getCountry = () => {
   if (typeof window === "undefined") return undefined;
-  try {
-    const locale = window.localStorage.getItem(STORAGE_KEY);
-    return isSupportedLocale(locale) ? locale : undefined;
-  } catch {
-    return undefined;
-  }
+  return normalizeCountry(window.__SIXTEAM_COUNTRY__);
 };
 
-const getInjectedLocale = () => {
-  if (typeof window === "undefined") return undefined;
-  return isSupportedLocale(window.__SIXTEAM_LOCALE__) ? window.__SIXTEAM_LOCALE__ : undefined;
-};
-
-const getBrowserLocale = () => {
-  if (typeof navigator === "undefined") return undefined;
-  return localeFromNavigator(navigator.languages?.length ? navigator.languages : [navigator.language]);
-};
-
+// El idioma sale de la URL, no de la IP ni del navegador: /en es inglés y
+// todo lo demás es español. Quien decide a qué árbol entra un visitante nuevo
+// es el servidor, que redirige por IP antes de servir el HTML.
 const resolveInitialLocale = (): { locale: Locale; country?: string; source: LocaleSource } => {
+  if (typeof window === "undefined") return { locale: "es", source: "default" };
+
+  const country = getCountry();
+
+  // ?lang sigue funcionando para previsualizar sin servidor (vite dev).
   const queryLocale = getQueryLocale();
-  if (queryLocale) return { locale: queryLocale, country: normalizeCountry(window.__SIXTEAM_COUNTRY__), source: "query" };
+  if (queryLocale) return { locale: queryLocale, country, source: "query" };
 
-  const storedLocale = getStoredLocale();
-  if (storedLocale) return { locale: storedLocale, country: normalizeCountry(window.__SIXTEAM_COUNTRY__), source: "manual" };
+  return { locale: localeFromPath(window.location.pathname), country, source: "path" };
+};
 
-  const injectedLocale = getInjectedLocale();
-  if (injectedLocale) return { locale: injectedLocale, country: normalizeCountry(window.__SIXTEAM_COUNTRY__), source: "ip" };
+const persistLocale = (locale: Locale) => {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, locale);
+  } catch {
+    // localStorage puede estar bloqueado en modo privado.
+  }
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=${COOKIE_MAX_AGE}; SameSite=Lax`;
+};
 
-  const countryLocale = localeFromCountry(typeof window !== "undefined" ? window.__SIXTEAM_COUNTRY__ : undefined);
-  if (countryLocale) return { locale: countryLocale, country: normalizeCountry(window.__SIXTEAM_COUNTRY__), source: "ip" };
-
-  const browserLocale = getBrowserLocale();
-  if (browserLocale) return { locale: browserLocale, source: "browser" };
-
-  return { locale: "es", source: "default" };
+const forgetLocale = () => {
+  try {
+    window.localStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // Nada más que hacer.
+  }
+  document.cookie = `${LOCALE_COOKIE}=; path=/; max-age=0; SameSite=Lax`;
 };
 
 const applyDocumentLocale = (locale: Locale) => {
@@ -84,29 +86,26 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const queryLocale = getQueryLocale();
-    if (!queryLocale) return;
-    try {
-      window.localStorage.setItem(STORAGE_KEY, queryLocale);
-    } catch {
-      // localStorage can be unavailable in privacy-restricted browsers.
-    }
+    if (queryLocale) persistLocale(queryLocale);
   }, []);
 
+  // Cambiar de idioma es cambiar de árbol de URLs, y el basename del router
+  // se fija al cargar la página: por eso hace falta una navegación completa.
   const setLocale = useCallback((locale: Locale) => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, locale);
-    } catch {
-      // Keep the in-memory preference even if persistence is blocked.
+    persistLocale(locale);
+
+    const { pathname, search, hash } = window.location;
+    const target = pathForLocale(pathname, locale);
+    if (target !== pathname) {
+      window.location.assign(`${target}${search}${hash}`);
+      return;
     }
+
     setState((current) => ({ ...current, locale, source: "manual" }));
   }, []);
 
   const clearManualLocale = useCallback(() => {
-    try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // Nothing else to do.
-    }
+    forgetLocale();
     setState(resolveInitialLocale());
   }, []);
 

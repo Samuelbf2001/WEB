@@ -74,6 +74,14 @@ const OpsGate = () => {
   return locale === "en" ? <OpsUsaLanding /> : <OpsLandingV2 />;
 };
 
+// El sitio en inglés vive bajo /en. React Router lo monta con basename, así que
+// todas las rutas y <Link> de abajo sirven igual para los dos idiomas.
+const EN_PREFIX = "/en";
+const routerBasename =
+  typeof window !== "undefined" && /^\/en(\/|$)/.test(window.location.pathname)
+    ? EN_PREFIX
+    : "/";
+
 const queryClient = new QueryClient();
 
 const v2PromoPaths = new Set([
@@ -128,7 +136,7 @@ const App = () => {
           <LocalTranslator />
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename={routerBasename}>
             <Suspense fallback={<div className="min-h-screen bg-[#0a2342]" />}>
               <Routes>
               {/* Web pública */}

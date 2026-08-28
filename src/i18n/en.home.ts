@@ -61,8 +61,8 @@ export const enHome: Record<string, string> = {
   "Personas": "People",
   "Crecimiento": "Growth",
   "La solución a los": "The solution to your",
-  "dolores tecnológicos": "technology pain points",
-  "de tu negocio.": "business.",
+  "dolores tecnológicos": "business technology",
+  "de tu negocio.": "pain points.",
   "La solución a los dolores tecnológicos de tu negocio.": "The solution to your business technology pain points.",
   "Somos el equipo de tecnología con Inteligencia Artificial que tu empresa todavía no tiene.": "We are the AI-powered technology team your company does not have yet.",
   "Ver cómo funciona": "See how it works",
@@ -90,7 +90,7 @@ export const enHome: Record<string, string> = {
   "Para cada solución existen decenas de herramientas que puedan servir. Pero pocos saben identificar el potencial de cada una para generar soluciones que generen resultados.": "For every solution, there are dozens of tools that could work. Few know how to identify each tool's potential and turn it into outcomes.",
   "Además de que lo usamos, no nos casamos con una herramienta sino con los resultados que genera.": "We use the tools, but we are loyal to the results they create, not to any single platform.",
   " de que lo usamos, no nos casamos con una herramienta sino con los resultados que genera.": " we use the tools, but we are loyal to the results they create, not to any single platform.",
-  "Además": "Also",
+  "Además": "Plus",
   "Entonces qué somos": "So what are we?",
   "Somos el": "We are the",
   "equipo de tecnología": "technology team",
@@ -372,4 +372,18 @@ export const enHome: Record<string, string> = {
   "Dos semanas. Mapeamos tu operación, te entregamos el roadmap y dejamos la plataforma montada. $2,500 USD único. Después decides si quieres que la operemos.": "Two weeks. We map your operation, deliver the roadmap and leave the platform set up. One-time $2,500 USD. Then you decide whether you want us to operate it.",
   "Agendar una llamada antes": "Book a call first",
   "\"Si después de las dos semanas te queda solo el mapa y nos dices que no, nos quedamos amigos.\"": "\"If after the two weeks you only keep the map and tell us no, we stay friends.\"",
+
+  // Copy partido en varios nodos por el markup (negritas, saltos, índices):
+  // el traductor ve cada fragmento por separado y necesita su propia entrada.
+  "Lo que NO somos ·": "What we are NOT ·",
+  "de que implementamos, nos encargamos de que se use lo que montamos.": "we implement, and we make sure what we build actually gets used.",
+  "de que diagnosticamos, ejecutamos lo que recomendamos.": "we diagnose, and we execute what we recommend.",
+  "de que lo usamos, no nos casamos con una herramienta sino con los resultados que genera.": "we use the tools, but we commit to the results they create, not to any single platform.",
+  "Diagnóstico IA": "AI Diagnostic",
+  "Reportes & Analítica": "Reporting & Analytics",
+  ": CRM, funnels, email y automatizaciones. Úsala o trae tus herramientas.": ": CRM, funnels, email and automations. Use it or bring your own tools.",
+  ": Cubrimos tus primeros $30 de SMS, email y llamadas.": ": We cover your first $30 of SMS, email and calls.",
+  "Solicitar Diagnóstico: $2,500": "Request Diagnostic: $2,500",
+  "Sixteam.pro · Colombia & Latam · Hecho con método.": "Sixteam.pro · Colombia & Latam · Built with method.",
 };
+

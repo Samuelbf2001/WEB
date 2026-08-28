@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, Target, MessageSquare, Map, Compass, Sparkles, FileText, Bot, X, Check } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
@@ -118,17 +119,17 @@ export const AssessmentV2 = () => {
             El Assessment de Sixteam entrega la base estratégica en 10–14 días. Mapeamos cómo opera tu empresa con agentes IA en paralelo, identificamos las palancas reales de IA, y te entregamos el plan ejecutable. Antes de mover una sola pieza.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/contacto">
+            <Link to="/contacto">
               <ButtonV2 variant="primary" size="lg">
                 Solicitar Assessment: $2,500
                 <ArrowRight className="h-4 w-4" />
               </ButtonV2>
-            </a>
-            <a href="/contacto">
+            </Link>
+            <Link to="/contacto">
               <ButtonV2 variant="outline" size="lg">
                 Hablar con Samuel antes
               </ButtonV2>
-            </a>
+            </Link>
           </div>
           <p className="mt-5 font-lato text-[11px] font-medium uppercase tracking-widest text-v2-accent-teal-deep">
             10–14 días · 100% cobertura del equipo · Mapa + Palancas + Roadmap + Agente IA persistente
@@ -447,13 +448,13 @@ export const AssessmentV2 = () => {
                 Solicita tu Assessment. Si después de la llamada inicial decidimos que no encajas con el playbook, te lo decimos directamente y no cobramos nada.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="/contacto">
+                <Link to="/contacto">
                   <ButtonV2 variant="primary" size="lg">
                     Solicitar Assessment: $2,500
                     <ArrowRight className="h-4 w-4" />
                   </ButtonV2>
-                </a>
-                <a href="/contacto">
+                </Link>
+                <Link to="/contacto">
                   <ButtonV2
                     variant="outline"
                     size="lg"
@@ -461,7 +462,7 @@ export const AssessmentV2 = () => {
                   >
                     Hablar con Samuel primero
                   </ButtonV2>
-                </a>
+                </Link>
               </div>
               <p className="font-lato text-[13px] italic text-white/40 mt-8">
                 "Si después de los 10 días te quedas con el mapa y nos dices que no, nos quedamos amigos."

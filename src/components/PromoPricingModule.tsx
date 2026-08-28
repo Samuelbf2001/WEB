@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, BadgePercent, CheckCircle2, Clock3, Users2 } from "lucide-react";
 import ButtonV2 from "@/components/v2/ButtonV2";
 import Container from "@/components/v2/Container";
@@ -67,10 +68,10 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonV2 asChild size="lg" className="w-full sm:w-auto">
-                <a href="/contacto?promo=esencial-20#agenda">
+                <Link to="/contacto?promo=esencial-20#agenda">
                   Tomar la promoción
                   <ArrowRight className="h-4 w-4" aria-hidden />
-                </a>
+                </Link>
               </ButtonV2>
               <ButtonV2
                 asChild
@@ -78,7 +79,7 @@ const PromoPricingModule = ({ className }: PromoPricingModuleProps) => {
                 size="lg"
                 className="w-full border-white/30 bg-white/5 text-white hover:bg-white/10 sm:w-auto"
               >
-                <a href="/contacto#agenda">Hablar con un experto</a>
+                <Link to="/contacto#agenda">Hablar con un experto</Link>
               </ButtonV2>
             </div>
           </div>

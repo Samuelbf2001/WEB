@@ -966,8 +966,8 @@ const OpsLanding = () => {
                     src={BOOKING_IFRAME_SRC}
                     id={BOOKING_IFRAME_ID}
                     title="Agenda de Sixteam Ops"
-                    style={{ width: "100%", border: "none", overflow: "hidden" }}
-                    scrolling="no"
+                    style={{ width: "100%", border: "none" }}
+                    scrolling="auto"
                     loading="lazy"
                   />
                 </div>

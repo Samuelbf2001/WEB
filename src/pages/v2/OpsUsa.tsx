@@ -13,7 +13,7 @@ import { gtm } from "@/lib/gtm";
 
 /* ── Acciones de conversión de la landing (inglés, tráfico de cold email USA) ── */
 const BOOKING_IFRAME_SRC = "https://web.sixteam.pro/widget/booking/9Fq9Yo6eGNv9cnc7YRc2";
-const BOOKING_IFRAME_ID = "9Fq9Yo6eGNv9cnc7YRc2_ops_us";
+const BOOKING_IFRAME_ID = "9Fq9Yo6eGNv9cnc7YRc2_1783637690383";
 const FORM_EMBED_SCRIPT_SRC = "https://web.sixteam.pro/js/form_embed.js";
 
 /* ── Primitivas locales ──────────────────────────────────────────── */
@@ -984,8 +984,8 @@ const OpsUsa = () => {
                     src={BOOKING_IFRAME_SRC}
                     id={BOOKING_IFRAME_ID}
                     title="Sixteam Ops booking calendar"
-                    style={{ width: "100%", border: "none", overflow: "hidden" }}
-                    scrolling="no"
+                    style={{ width: "100%", border: "none" }}
+                    scrolling="auto"
                     loading="lazy"
                   />
                 </div>

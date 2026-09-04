@@ -8,6 +8,7 @@ import {
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
+import GhlCalendarEmbed from "@/components/GhlCalendarEmbed";
 import AgentsBlock from "@/components/v2/AgentsBlock";
 import TestimonialsV2 from "@/components/v2/sections/TestimonialsV2";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -18,8 +19,6 @@ import { PROMO_REMAINING_SPOTS } from "@/lib/promo";
 /* ── Acciones de conversión de la landing ─────────── */
 const WA_PHONE = "573004188522";
 const BOOKING_IFRAME_SRC = "https://web.sixteam.pro/widget/booking/9Fq9Yo6eGNv9cnc7YRc2";
-const BOOKING_IFRAME_ID = "9Fq9Yo6eGNv9cnc7YRc2_1783637690382";
-const FORM_EMBED_SCRIPT_SRC = "https://web.sixteam.pro/js/form_embed.js";
 
 const openWhatsApp = (source: string, message: string) => {
   gtm.whatsappClick(source);
@@ -278,17 +277,6 @@ const OpsLanding = () => {
       if (v) utm[k] = v;
     });
     if (Object.keys(utm).length) gtm.push("ops_landing_utm", utm);
-  }, []);
-
-  useEffect(() => {
-    const script = document.querySelector<HTMLScriptElement>(`script[src="${FORM_EMBED_SCRIPT_SRC}"]`);
-    if (script) return;
-
-    const embedScript = document.createElement("script");
-    embedScript.src = FORM_EMBED_SCRIPT_SRC;
-    embedScript.type = "text/javascript";
-    embedScript.async = true;
-    document.body.appendChild(embedScript);
   }, []);
 
   useEffect(() => {
@@ -961,16 +949,11 @@ const OpsLanding = () => {
                   </div>
                 </div>
 
-                <div className="v2-reveal v2-d1 calendar-embed-wrapper bg-white">
-                  <iframe
-                    src={BOOKING_IFRAME_SRC}
-                    id={BOOKING_IFRAME_ID}
-                    title="Agenda de Sixteam Ops"
-                    style={{ width: "100%", border: "none" }}
-                    scrolling="auto"
-                    loading="lazy"
-                  />
-                </div>
+                <GhlCalendarEmbed
+                  src={BOOKING_IFRAME_SRC}
+                  title="Agenda de Sixteam Ops"
+                  className="v2-reveal v2-d1 bg-white"
+                />
               </div>
             </Container>
           </Section>

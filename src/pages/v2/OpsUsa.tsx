@@ -7,14 +7,13 @@ import {
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
+import GhlCalendarEmbed from "@/components/GhlCalendarEmbed";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useSEO } from "@/hooks/useSEO";
 import { gtm } from "@/lib/gtm";
 
 /* ── Acciones de conversión de la landing (inglés, tráfico de cold email USA) ── */
 const BOOKING_IFRAME_SRC = "https://web.sixteam.pro/widget/booking/9Fq9Yo6eGNv9cnc7YRc2";
-const BOOKING_IFRAME_ID = "9Fq9Yo6eGNv9cnc7YRc2_1783637690383";
-const FORM_EMBED_SCRIPT_SRC = "https://web.sixteam.pro/js/form_embed.js";
 
 /* ── Primitivas locales ──────────────────────────────────────────── */
 const CheckItem: React.FC<{ text: React.ReactNode }> = ({ text }) => (
@@ -239,17 +238,6 @@ const OpsUsa = () => {
       if (v) utm[k] = v;
     });
     if (Object.keys(utm).length) gtm.push("ops_us_landing_utm", utm);
-  }, []);
-
-  useEffect(() => {
-    const script = document.querySelector<HTMLScriptElement>(`script[src="${FORM_EMBED_SCRIPT_SRC}"]`);
-    if (script) return;
-
-    const embedScript = document.createElement("script");
-    embedScript.src = FORM_EMBED_SCRIPT_SRC;
-    embedScript.type = "text/javascript";
-    embedScript.async = true;
-    document.body.appendChild(embedScript);
   }, []);
 
   useEffect(() => {
@@ -979,16 +967,11 @@ const OpsUsa = () => {
                   </p>
                 </div>
 
-                <div className="v2-reveal v2-d1 calendar-embed-wrapper bg-white">
-                  <iframe
-                    src={BOOKING_IFRAME_SRC}
-                    id={BOOKING_IFRAME_ID}
-                    title="Sixteam Ops booking calendar"
-                    style={{ width: "100%", border: "none" }}
-                    scrolling="auto"
-                    loading="lazy"
-                  />
-                </div>
+                <GhlCalendarEmbed
+                  src={BOOKING_IFRAME_SRC}
+                  title="Sixteam Ops booking calendar"
+                  className="v2-reveal v2-d1 bg-white"
+                />
               </div>
             </Container>
           </Section>

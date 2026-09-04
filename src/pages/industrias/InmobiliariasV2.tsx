@@ -12,6 +12,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
 import LogoSlider from '@/components/LogoSlider';
+import GhlCalendarEmbed from '@/components/GhlCalendarEmbed';
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
 
@@ -255,21 +256,6 @@ const InmobiliariasV2 = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const heroWords = ['cierres', 'visitas', 'control', 'rentabilidad'];
   const displayText = useTypewriter(heroWords);
-
-  useEffect(() => {
-    const scriptId = 'sixteam-booking-script';
-    if (document.getElementById(scriptId)) return;
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.src = 'https://web.sixteam.pro/js/form_embed.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      const existing = document.getElementById(scriptId);
-      if (existing) existing.remove();
-    };
-  }, []);
 
   const pipeline = [
     { label: 'Portal / Meta Ads / Web', icon: Globe },
@@ -955,14 +941,10 @@ const InmobiliariasV2 = () => {
               Prefiero hablar por WhatsApp primero
             </button>
           </div>
-          <div className="calendar-embed-wrapper">
-            <iframe
-              src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
-              style={{ width: '100%', border: 'none', overflow: 'hidden', display: 'block' }}
-              id="UFdsZhBQURUYkKpV0GEX_inmobiliarias"
-              title="Agenda tu asesoría con Sixteam.pro | Inmobiliarias"
-            />
-          </div>
+          <GhlCalendarEmbed
+            src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
+            title="Agenda tu asesoría con Sixteam.pro | Inmobiliarias"
+          />
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-[#e0e0e0]/45 text-sm">
             {['Sin compromiso', 'Sin tarjeta de crédito', 'Respuesta en menos de 2 horas'].map((t, i) => (
               <span key={i} className="flex items-center gap-1.5">

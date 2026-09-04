@@ -1,46 +1,21 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Mail, MessageCircle } from "lucide-react";
 import LayoutV2 from "@/components/v2/LayoutV2";
 import Container from "@/components/v2/Container";
 import Section, { Eyebrow } from "@/components/v2/Section";
 import ButtonV2 from "@/components/v2/ButtonV2";
+import GhlCalendarEmbed from "@/components/GhlCalendarEmbed";
 
 const BOOKING_WIDGET_SRC = "https://web.sixteam.pro/widget/booking/9Fq9Yo6eGNv9cnc7YRc2";
-const BOOKING_WIDGET_ID = "9Fq9Yo6eGNv9cnc7YRc2_1783637690382";
-const BOOKING_SCRIPT_SRC = "https://web.sixteam.pro/js/form_embed.js";
 
-const BookingEmbed = () => {
-  useEffect(() => {
-    const existingScript = document.querySelector<HTMLScriptElement>(
-      `script[src="${BOOKING_SCRIPT_SRC}"]`
-    );
-
-    if (existingScript) return;
-
-    const script = document.createElement("script");
-    script.src = BOOKING_SCRIPT_SRC;
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
-  }, []);
-
-  return (
-    <div className="overflow-hidden rounded-2xl border border-v2-border-subtle bg-white shadow-[0_16px_48px_rgba(10,35,66,0.08)]">
-      <iframe
-        src={BOOKING_WIDGET_SRC}
-        title="Agenda Sixteam.pro"
-        id={BOOKING_WIDGET_ID}
-        scrolling="no"
-        className="block min-h-[720px] w-full bg-white"
-        style={{ border: "none", overflow: "hidden" }}
-      />
-    </div>
-  );
-};
+const BookingEmbed = () => (
+  <GhlCalendarEmbed
+    src={BOOKING_WIDGET_SRC}
+    title="Agenda Sixteam.pro"
+    framed={false}
+    className="border border-v2-border-subtle bg-white shadow-[0_16px_48px_rgba(10,35,66,0.08)]"
+  />
+);
 
 const channels = [
   {

@@ -8,6 +8,7 @@ import {
 import { useSEO } from '@/hooks/useSEO';
 import ChatWidget from '@/components/ChatWidget';
 import LogoSlider from '@/components/LogoSlider';
+import GhlCalendarEmbed from '@/components/GhlCalendarEmbed';
 
 /* ─── Constants ─── */
 const WA_URL = 'https://wa.me/+573004188522?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20mi%20agencia%20de%20viajes&utm_source=ads&utm_medium=whatsapp&utm_campaign=agencias-viaje';
@@ -59,30 +60,13 @@ const SpotCountdown = () => {
 const GHL_FORM_ID = 'g2YMuZSuHU8ceIBVaTWB';
 
 const GHLFormEmbed = () => (
-  <div className="ghl-form-wrapper">
-    <style>{`
-      .ghl-form-wrapper iframe {
-        width: 100% !important;
-        border: none !important;
-        overflow: hidden;
-        display: block;
-        border-radius: 12px;
-        min-height: 480px;
-      }
-      /* Fondo blanco del iframe integra mejor con el card oscuro */
-      .ghl-form-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        background: #fff;
-      }
-    `}</style>
-    <iframe
-      src={`https://web.sixteam.pro/widget/form/${GHL_FORM_ID}`}
-      id={`${GHL_FORM_ID}_landing_viajes`}
-      scrolling="no"
-      title="Formulario diagnóstico gratuito | Sixteam.pro"
-    />
-  </div>
+  <GhlCalendarEmbed
+    src={`https://web.sixteam.pro/widget/form/${GHL_FORM_ID}`}
+    title="Formulario diagnóstico gratuito | Sixteam.pro"
+    minHeight={480}
+    framed={false}
+    className="!max-w-none !rounded-xl"
+  />
 );
 
 /* ─── Stat Counter ─── */
@@ -199,19 +183,6 @@ const AgenciasDeViajeAds = () => {
       clearInterval(interval);
       if (originalTitle) document.title = originalTitle;
     };
-  }, []);
-
-  // Load calendar script
-  useEffect(() => {
-    const scriptId = 'sixteam-booking-script-ads';
-    if (document.getElementById(scriptId)) return;
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.src = 'https://web.sixteam.pro/js/form_embed.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.getElementById(scriptId)?.remove(); };
   }, []);
 
   const valueItems = [
@@ -891,14 +862,10 @@ FUNCIONALIDADES CLAVE: bandeja omnicanal (WhatsApp, IG, email), bot IA 24/7, seg
           </div>
 
           {/* Calendar embed */}
-          <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(0,191,165,0.15)' }}>
-            <iframe
-              src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
-              style={{ width: '100%', border: 'none', overflow: 'hidden', display: 'block', minHeight: '500px' }}
-              id="UFdsZhBQURUYkKpV0GEX_ads"
-              title="Agenda tu diagnóstico gratuito | Sixteam.pro"
-            />
-          </div>
+          <GhlCalendarEmbed
+            src="https://web.sixteam.pro/widget/booking/UFdsZhBQURUYkKpV0GEX"
+            title="Agenda tu diagnóstico gratuito | Sixteam.pro"
+          />
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-[#e0e0e0]/40 text-sm">
             {[

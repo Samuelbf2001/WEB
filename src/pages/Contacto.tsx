@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { useSEO } from '@/hooks/useSEO';
+import GhlCalendarEmbed from '@/components/GhlCalendarEmbed';
 
 const Contacto = () => {
   useSEO({
@@ -16,14 +17,6 @@ const Contacto = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/+573004188522?text=Hola%2C%20estoy%20listo%20para%20empezar%20la%20transformaci%C3%B3n%20digital%20de%20mi%20negocio', '_blank');
   };
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://web.sixteam.pro/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
 
   return (
     <div className="min-h-screen bg-white font-lato">
@@ -129,25 +122,13 @@ const Contacto = () => {
 
             {/* Formulario GHL */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <iframe
-                  src="https://web.sixteam.pro/widget/form/n7ZRMcX0KMY9l7qAW05T"
-                  style={{ width: '100%', height: '420px', border: 'none', borderRadius: '3px' }}
-                  id="inline-n7ZRMcX0KMY9l7qAW05T"
-                  data-layout='{"id":"INLINE"}'
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Form pagina web sixteam - Copy"
-                  data-height="360"
-                  data-layout-iframe-id="inline-n7ZRMcX0KMY9l7qAW05T"
-                  data-form-id="n7ZRMcX0KMY9l7qAW05T"
-                  title="Formulario de contacto Sixteam.pro"
-                />
-              </div>
+              <GhlCalendarEmbed
+                src="https://web.sixteam.pro/widget/form/n7ZRMcX0KMY9l7qAW05T"
+                title="Formulario de contacto Sixteam.pro"
+                minHeight={460}
+                framed={false}
+                className="!max-w-none border border-gray-100 shadow-xl"
+              />
             </div>
           </div>
         </div>

@@ -675,28 +675,39 @@
   100% { transform: translateX(-50%); }
 }
 
-/* ── Calendario iframe embed ── */
+/* ── Calendario iframe embed ──
+   El alto lo maneja <GhlCalendarEmbed>: escucha el postMessage de
+   iframe-resizer y escribe `height` inline en el iframe. Aca no fijamos
+   ninguna altura ni tope, para que el contenedor crezca con el widget
+   (el calendario pasa de ~700px a ~1300px al abrir las franjas horarias)
+   y nunca lo recorte. */
 .calendar-embed-wrapper {
   width: 100%;
   max-width: 860px;
   margin: 0 auto;
   border-radius: 16px;
-  overflow: auto;
-  box-shadow: 0 18px 60px rgba(10, 35, 66, 0.10), 0 0 40px rgba(0, 191, 165, 0.08);
-  border: 1px solid rgba(0, 191, 165, 0.2);
+  overflow: hidden;
   background: #ffffff;
-  min-height: clamp(880px, 92vh, 1180px);
   -webkit-overflow-scrolling: touch;
 }
 
-/* Altura de respaldo generosa: el script de GoHighLevel redimensiona el iframe
-   por estilo inline (que gana al CSS). Si ese resize no llega, el widget debe
-   caber igual en vez de quedar cortado, porque el calendario con franjas
-   horarias pide bastante mas que los 920px que habia antes. */
+/* Marco por defecto (borde teal + glow). Las paginas que traen su propio
+   chrome usan <GhlCalendarEmbed framed={false} /> y lo definen por clases. */
+.calendar-embed-wrapper--framed {
+  border: 1px solid rgba(0, 191, 165, 0.2);
+  box-shadow: 0 18px 60px rgba(10, 35, 66, 0.10), 0 0 40px rgba(0, 191, 165, 0.08);
+}
+
 .calendar-embed-wrapper iframe {
-  width: 100%;
-  height: clamp(880px, 92vh, 1180px);
-  min-height: 880px;
-  border: none;
   display: block;
+  width: 100%;
+  border: none;
+  /* transicion suave cuando el widget reporta un alto nuevo */
+  transition: height 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendar-embed-wrapper iframe {
+    transition: none;
+  }
 }
